@@ -1,0 +1,70 @@
+{
+  "audit_id": "next-fifteen-31-32-design-reaudit-2026-09-30",
+  "audited_at": "2026-09-30",
+  "auditor_scope": "Focused independent second audit of corrected design-relevant entries #31 HUMAT and #32 FIRMAN. Read current notes, extraction guide/template, HUMAT JASSS primary full text including Appendix A, FIRMAN author full text, and FIRMAN publisher metadata/references. No paper notes edited. Excluded obsolete SocialIntegrationBibliography.json body link from note-level reference checks.",
+  "notes": [
+    {
+      "index": 31,
+      "path": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "verdict": "FAIL",
+      "source_access": "Primary publisher full text and Appendix A accessible at https://www.jasss.org/28/1/4.html.",
+      "checks": {
+        "state": "Mostly correct: note names three motive groups, importances, alternative evaluations/satisfactions, aspiration, dissonance tolerance, previous choice/habit, and direct alters. It correctly says chosen alternatives are initially known. It does not specify that the remaining alter-representation entries (motive values/satisfactions, similarities, persuasion values, etc.) default to 0 and become available through communication (Appendix A Table 3 and Sensing, publisher lines 328-363).",
+        "schedule": "Correct order: at each tick information exchange (Signal/Inquire) precedes attitude formation/Set dissonances; Set dissonances processes agents in random order (Appendix A Process overview and scheduling, lines 364-377, 520). Note gives positive dissonance-strength activation.",
+        "signalling_inquiring": "Action selection is substantially correct: when dissonance strength >0, both dilemma flags yield equal-probability choice; social-only signals; non-social-only inquires; else no exchange (Appendix A Signal or inquire, lines 477-484). The note omits the definitions that set those flags: social dilemma is social evaluation <0 with at least one other motive evaluation >0; non-social dilemma is social evaluation >=0 with at least one other-motive evaluation <0 (Appendix A Identify dilemmas, lines 533-534).",
+        "partner_choice": "The stated broad targets are correct: uncontacted, opposite-choice alter prioritized for signaling, uncontacted, same-choice alter for inquiry, then greatest persuasion; signaling uses the alter most gullible to ego and inquiry uses the alter most persuasive to ego (Appendix A Set alter representations, lines 464-473; Signal/Inquire, lines 485-518; narrative lines 407-414). The note omits that contact history is the first sorting key and that if dissonance remains, the next suitable alter is selected at a later time step (lines 413, 473, 502-518).",
+        "choice_update": "The 10%-of-range staged comparison rule and fallback (random initial choice, otherwise retain habit) are correctly summarized (Appendix A Choose alternative, lines 536-542). The note correctly reports exchange updating evaluations/dissonance/choice, although it simplifies away exact persuasion-weighted equations (Signal/Inquire, lines 486-512).",
+        "initialization": "Importance and dissonance tolerance Normal(.5,.14), aspiration Uniform[0,1], beta satisfaction, and 20%-of-neighbors-within-35-cells network with nearest-neighbor fallback are represented (Appendix A Initialisation, lines 436-463). The note now explicitly records the source conflict: Stochasticity states aspiration from 0 to <3 (lines 417-423), while Create agents/Table 1 give [0,1] (line 441). It also now flags the narrative/procedure choice-rule conflict: Section 2 says new preference replaces habit only if more satisfying and less dissonant (lines 130-132/376-377), whereas procedural Choose alternative uses satisfaction, then dissonance/experiential satisfaction within 10%-of-range thresholds, and otherwise retains habit (lines 536-542). These conflicts are accurately surfaced. Available beta parameter options (α,β)=(12,4),(8,4),(4,4),(4,8),(4,12) are still omitted (Table 4, lines 453-460)."
+      },
+      "findings": [
+        {
+          "severity": "major_mechanism_omission",
+          "location": "Model / How does it work?",
+          "evidence": "Appendix A Identify dilemmas lines 533-534; Table 3 lines 331-363; Set alter representations/Signal/Inquire lines 464-518.",
+          "required_fix": "Add the two dilemma definitions and default/ordering details; optionally list beta parameter choices. Preserve the note’s caveat that source choice/initialization statements conflict.",
+          "finding": "The note still omits the formal sign-based rules that set the social and non-social dilemma flags, the default-zero values for non-choice alter information, and contact-history/next-alter ordering. These affect when and with whom exchanges occur. The two source conflicts (aspiration range and habit-choice condition) are now explicitly recorded accurately."
+        }
+      ],
+      "references": {
+        "current_note_links": 71,
+        "original_captured_refs": 71,
+        "original_order_preserved": true,
+        "bibliography_scope": "Captured reference-array integrity only; this focused audit did not reconcile HUMAT aliases against its full publisher bibliography."
+      },
+      "post_update_recheck": "Current note checked after root edits. Both conflicts are now stated with accurate paired source descriptions; the previous source-conflict-unreported finding is resolved. Remaining FAIL finding concerns incomplete procedural mechanics."
+    },
+    {
+      "index": 32,
+      "path": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "verdict": "PASS_WITH_CAVEATS",
+      "source_access": "Full author preprint https://arxiv.org/pdf/2109.08862; publisher metadata and complete 59-item reference list https://journals.sagepub.com/doi/10.1177/08944393231213960.",
+      "checks": {
+        "equations_and_state": "The corrected note properly distinguishes weighted Manhattan social-identity distance from eligibility; in this one-identity design w=1 and binary SI gives distance 0 or 1 (author PDF pp. 4-5, Eq. 1). The friendship rule is accurate: w_dist <= min(TOx, TOy), num_fx < TCx and num_fy < TCy (Eq. 2, pp. 5-6). Note could explicitly state the paper sets required tie length LT equal to w_dist for homogeneous/heterogeneous dyads (pp. 5-6, Fig. 2), but its inequality is equivalent for eligibility.",
+        "update_and_partner_selection": "Note accurately reports a stochastic initiator/target order, mandatory acceptance when both parties meet eligibility/capacity constraints, and stopping when no more ties can form (Simulation Procedure, pp. 8-9). The article does not provide a probability distribution or further partner-ranking rule; the note appropriately flags this limit.",
+        "parameters_and_conflict": "Correctly reports p=.22, w=1, n=30/300, TC means 3/30 and variance .25, TO Bernoulli(q), and 100 trials for each of six case-scenario cells (Simulation Design/Table 2, pp. 7-9). The unresolved q mismatch is correctly surfaced: Methods/Table 2 use {.2,.5,.8} (pp. 7-9); results narrative reports {.2,.5,.9} and 2.03%, 10.75%, 23.47% heterogeneous-dyad shares (pp. 12-13); p. 12 narrative says strongest segregation at q=.3; Table 3 uses .2/.5/.8 and Table 4 starts with .3, then .5/.8 (pp. 14-15). The note records methods/results/Table 4 values but omits the p. 12 q=.3 strongest-segregation statement. Its core warning that source values conflict is correct.",
+        "results": "Qualitative direction is supported: majority of dyads remain homogeneous; higher reported TO increases heterogeneous dyads; Facebook/offline-scale scenario combinations increase total ties while homogeneous share stays relatively stable; simulated individual same-ethnicity shares resemble empirical Hofstra benchmarks; Facebook-scale scenarios have all agents above the half-capacity satisfaction threshold (Results, pp. 12-16). The note omits useful numeric outcomes and should make explicit that population size n and capacity TC change together between offline and Facebook settings, preventing attribution of their separate effects. Its broad results statement is otherwise supported.",
+        "metadata_and_bibliography": "Publisher title, sole author, DOI and first-online date 2023-11-22 match SAGE metadata. All 59 current reference links were counted and their displayed-title sequence matches the 59 publisher References entries in order (publisher page lines 40-340); obsolete JSON body link excluded. The note’s footnote still describes alias reconciliation as pending, but this audit now confirms the 59-title publisher sequence."
+      },
+      "findings": [
+        {
+          "severity": "minor_results_precision",
+          "location": "Model / What can it answer?",
+          "evidence": "Author PDF Results pp. 12-15 reports heterophilous-dyad shares, ego-alter similarity percentages and empirical ratios; Simulation Design pp. 7-9 changes n and TC jointly.",
+          "required_fix": "Optionally include the main numeric outcome values, note that n and TC move together, and record the q=.3 strongest-segregation statement alongside the already reported parameter conflict."
+        },
+        {
+          "severity": "minor_equation_clarity",
+          "location": "Model / What does it represent?",
+          "evidence": "Author PDF pp. 5-6 says social identity distance determines required tie length and illustrates LT=w_dist; Eq. 2 uses w_dist <= min(TOx,TOy).",
+          "required_fix": "Optionally state explicitly that required tie length LT equals w_dist in this model application, while w_dist is still used as the eligibility quantity in Eq. 2."
+        }
+      ],
+      "metadata": {
+        "publisher_date": "2023-11-22 first online; issue June 2024",
+        "reference_count": 59,
+        "publisher_reference_count": 59,
+        "publisher_order_verified": true
+      }
+    }
+  ]
+}

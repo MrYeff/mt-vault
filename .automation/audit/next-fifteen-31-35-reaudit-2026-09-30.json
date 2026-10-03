@@ -1,0 +1,81 @@
+{
+  "audit_id": "next-fifteen-31-35-reaudit-2026-09-30",
+  "auditor": "independent source re-audit",
+  "audited_at": "2026-09-30",
+  "scope": "Entries 31-35 after corrections; notes were not edited. Full primary texts/publisher records were checked where accessible. Legacy SocialIntegrationBibliography.json body pointer intentionally excluded from acceptance criteria per instruction.",
+  "notes": [
+    {
+      "index": 31,
+      "verdict": "LIMITED",
+      "source_access": "Full JASSS primary text and Appendix A accessible at https://www.jasss.org/28/1/4.html.",
+      "reference_check": "All 71 Metadata/References links match the original captured array exactly and in order; completeness against source bibliography remains explicitly unverified.",
+      "findings": [
+        {
+          "location": "Model > How does it work?; LLM Justification [^r2]",
+          "finding": "The correction substantially repairs the process description: it gives tick order, dilemma-driven Signal/Inquire choice, targets, updates, and choice thresholds. However, it states aspiration is initialized Uniform[0,1] without recording a publisher-text conflict. Appendix A “Stochasticity” (JASSS lines 417–421) says aspiration is a floating-point value from 0 to <3, while “Initialisation/Create agents” (lines 441–442) says uniformly distributed [0,1]. The note silently selects the latter. In addition, the final habit rule is summarized via threshold comparisons, without explicitly retaining the text’s statement that a novel preference replaces the previous habit only if significantly more satisfying and less dissonant; the footnote cites general overview/Sections 2.1–2.4 rather than Appendix A subsections for these implementation details.",
+          "fix": "Flag both aspiration ranges as an internal source conflict instead of selecting Uniform[0,1]. Explicitly state the novel-choice replacement condition or clarify how the described sequential threshold comparison implements it. Update [^r2] to cite Appendix A “Stochasticity,” “Initialisation,” “Signal or inquire,” “Signal,” “Inquire,” “Set dissonances,” and “Choose alternative” (JASSS lines 417–461, 479–535)."
+        }
+      ],
+      "metadata": "Publisher abstract is now verbatim, including “different processes modelled in HUMAT” and “the dynamic theory of social complexity” (JASSS abstract, lines 13–15). Author J. Gareth Polhill, DOI 10.18564/jasss.5611, and publication date 2025-01-31 are correct. Tags use underscore/no-space convention. Core initialization, network rule, outputs, and communication sequence are substantially improved. This limited verdict is due to the unresolved source contradiction and rule/citation precision above.",
+      "path": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "warning_status": "not audited",
+      "reference_count": 71
+    },
+    {
+      "index": 32,
+      "verdict": "PASS",
+      "source_access": "Full author preprint at https://arxiv.org/pdf/2109.08862 and publisher metadata/references at https://journals.sagepub.com/doi/10.1177/08944393231213960.",
+      "reference_check": "The note contains 59 title-linked entries. I checked the complete sequence against the Sage publisher page reference list (lines 42–340): the 59 titles and order match. No frontmatter references were in the original capture; the intentional legacy JSON pointer was excluded from acceptance criteria. Alias equivalence to the article bibliography is explicitly left as a limitation.",
+      "findings": [],
+      "metadata": "Title, author, DOI, first-online date (2023-11-22), and exact publisher abstract match Sage metadata (publisher lines 20–34). The note accurately describes weighted Manhattan social-identity distance as eligibility distance; bilateral TO and TC constraints; termination when no eligible pair remains; and that the initiator/target selection distribution is unspecified (preprint Eqs. 1–2 and Simulation Procedure, pp. 5–9). It preserves the design/results contradiction: methods q={.2,.5,.8} (Table 2, PDF p. 8); Results prose gives a conflicting set and Table 4 includes q=.3 (PDF pp. 12–15; Table 4 at p. 14). Reported design and results are otherwise bounded; no material unsupported claims found. Tags are valid.",
+      "path": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "warning_status": "not audited",
+      "reference_count": 59
+    },
+    {
+      "index": 33,
+      "verdict": "FAIL",
+      "source_access": "Full SAGE PDF and publisher abstract/metadata accessible at https://journals.sagepub.com/doi/pdf/10.1177/0265407518761225 and https://journals.sagepub.com/doi/abs/10.1177/0265407518761225.",
+      "reference_check": "All 32 Metadata/References links match the original captured array exactly and in order; bibliography completeness is explicitly caveated. The intentional legacy JSON pointer is excluded from acceptance criteria.",
+      "findings": [
+        {
+          "location": "Abstract; Audit Log; LLM Justification [^r0] and [^r2]",
+          "finding": "The abstract is still not verbatim. The note says “Hours together was associated with changes in closeness between waves.” Both SAGE publisher abstract (HTML lines 31–32) and SAGE PDF (PDF p. 0, lines 12–14) say “Hours together was associated changes in closeness between waves” (without “with”). The previous audit finding and the current Audit Log’s claim that “with” was copied exactly conflict with both publisher sources.",
+          "fix": "Copy the publisher abstract literally (omit “with”) and correct the Audit Log/process footnote so it accurately records the source wording rather than claiming the added word was a correction."
+        }
+      ],
+      "metadata": "Author, title, DOI, and first-online publication date 2018-03-15 are correct; the note appropriately distinguishes April 2019 issue date. RQs and the empirical/non-simulation characterization match the paper. One failed exact-copy requirement remains.",
+      "path": "vault/Literature/Papers/Entries/How many hours does it take to make a friend.md",
+      "warning_status": "not audited",
+      "reference_count": 32
+    },
+    {
+      "index": 34,
+      "verdict": "PASS",
+      "source_access": "Full ACL Anthology primary PDF accessible at https://aclanthology.org/2023.emnlp-demo.15.pdf.",
+      "reference_check": "All 24 Metadata/References links match the original captured array exactly and in order; alias completeness remains caveated. The intentional legacy JSON pointer is excluded from acceptance criteria.",
+      "findings": [],
+      "metadata": "Title, authors, DOI 10.18653/v1/2023.emnlp-demo.15, conference date 2023-12-06, and abstract match the ACL primary record. The correction adds the documented needs/emotion/closeness state and defaults, recursive day→hour→15-minute planning, plan reconsideration threshold (non-neutral emotion or need ≤3), need decay rates, conversation and per-agent enjoyment/closeness update, demonstrations, and bounded annotation/intervention results (ACL PDF §§3.1–4.2, pp. 168–171; evaluation table at PDF pp. 170–171). Claims about two weekdays/15-minute schedule, 10-turn dialogue cap, and F1 values are supported by the PDF; intervention described as reported results rather than broad validation. Tags use underscores.",
+      "path": "vault/Literature/Papers/Entries/Humanoid Agents- Platform for Simulating Human-like Generative Agents.md",
+      "warning_status": "not audited",
+      "reference_count": 24
+    },
+    {
+      "index": 35,
+      "verdict": "LIMITED",
+      "source_access": "Publisher metadata/abstract at https://journals.sagepub.com/doi/10.1177/0002716214565755 and institutional author page with full-text link/summary at https://www.networkscienceinstitute.org/publications/individual-motivations-and-network-effects-a-multi-level-analysis-of-the-structure-of-online-social-relationships.",
+      "reference_check": "All 36 Metadata/References links match the original captured array exactly and in order; completeness against publisher bibliography is explicitly unverified. The intentional legacy JSON pointer is excluded from acceptance criteria.",
+      "findings": [
+        {
+          "location": "Model description; LLM Justification [^r1] and [^r2]",
+          "finding": "The corrected substantive model summary is accurate at high level: p*/ERGM on Second Life social-behavior logs, individual/attribute and structural terms, reported significance pattern, and no forward agent action/update process. However, footnotes point to the general institutional publication page and broadly say “data/method section” / “model results and discussion,” without page/section-specific location for key modeling claims, despite the correction record and source full text identifying pp. 181–187. This falls short of the extraction rule requiring section/page support for each model claim.",
+          "fix": "Pin [^r1] and [^r2] to the article’s specific data/method and model-specification/results sections and pages 181–187; retain the abstract source for reported predictor findings and keep the cross-sectional/non-agent-model caveat."
+        }
+      ],
+      "metadata": "The title now follows DOI publisher spelling “A Multilevel Analysis”; author, DOI, date 2015-04-09, abstract, and tags are correct. This limited verdict is citation precision only; no substantive mismatch was found in the concise corrected model description.",
+      "path": "vault/Literature/Papers/Entries/Individual Motivations and Network Effects.md",
+      "warning_status": "not audited",
+      "reference_count": 36
+    }
+  ]
+}

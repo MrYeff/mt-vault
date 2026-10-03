@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "scope": "Independent full-source audit of stable entries 73–76",
+  "method": "Read each note and the accessible primary-source full text; compared abstracts and bibliographic metadata, model specification and reported evidence, reference/footnote structure, tags, and warning state. Statuses reflect substantive completeness as required by the extraction rules, not merely absence of false claims.",
+  "entries": [
+    {
+      "entry": 73,
+      "note_path": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "status": "FAIL",
+      "primary_source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+      "source_locations": [
+        "Cambridge article header and abstract, lines 437–500: title, author, online publication date, DOI, and abstract.",
+        "§3.1, lines 572–587: Poisson NNTuck generative model, nonnegative U/V/Y and core tensor G; fitting by maximum likelihood is equivalent to minimizing KL divergence.",
+        "§§3.2–3.3, lines 591–624: interpretation and exact independent/dependent/redundant/SCA constraints; Definition 4 constrains K=C and U=Y.",
+        "§3.4 / Algorithm 2 and lines 634–649: SCA fitting initializes Y,V,G, sets U=Y, then updates V, U, Y; this procedure is not monotone and lacks convergence guarantees.",
+        "§3.5, lines 652–670: tests, regularity problems, use of split-LRT, and explicit caution interpreting SCA tests; lines 702–709 and §4 report CSS applications/results."
+      ],
+      "checks": {
+        "abstract": "PASS; note reproduces the Cambridge abstract.",
+        "metadata": "PASS; title, authors, online date, DOI, and source match Cambridge metadata.",
+        "research_questions": "PASS; accurately condenses the motivating question and stated contribution.",
+        "model": "FAIL; model family and high-level variants are correctly identified, but the testing/fitting account is materially incomplete. The note says nested models are compared with likelihood-ratio tests without stating that ordinary Wilks LRT assumptions fail for this nonidentifiable model and that the paper instead uses split-LRT, with its own caveats and especially weak guarantees for SCA. It describes the SCA fit only as a heuristic update; source Algorithm 2 gives a defining initialization and ordered V→U→Y updates and warns the update is not monotone or guaranteed to converge. These are material parts of the proposed test/model procedure.",
+        "references_and_footnotes": "LIMITED; footnotes r1–r4 are defined and used and their locations cover the stated claims; original snapshot reference-order parity was not checked in this audit.",
+        "tags_and_warning": "PASS; `model` is appropriate for the statistical model and no simulation tag is asserted; warning remains not audited."
+      },
+      "findings": [
+        "Clarify exact inference method: define the split-LRT comparison and its caveats, including SCA-specific caution; do not imply standard LRT validity.",
+        "Expose the SCA update procedure and its limitations, or clearly label it as an approximate fitting procedure with the actual initialization and update order."
+      ]
+    },
+    {
+      "entry": 74,
+      "note_path": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "status": "FAIL",
+      "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+      "source_locations": [
+        "Springer header and abstract, lines 11–55: full metadata and abstract; note abstract matches.",
+        "§3.2, lines 142–169: initial profile dimensions, probability weights, action set, and interest feedback.",
+        "§3.2, lines 171–180: stateless handler interaction, server-side state, feed ranking and visibility conditions, K=3 context, daily churn/growth, stochastic menu and weighted action sampling.",
+        "§3.3, lines 174–180: day schedule, 50-agent initialization, churn-before-growth order, budget/menu execution; Table 4 has calibration parameters.",
+        "§3.4, lines 182–198 and following: five validation measures, 30 independent runs and comparison windows, graph construction and metrics."
+      ],
+      "checks": {
+        "abstract": "PASS; exact Springer abstract is preserved.",
+        "metadata": "PASS; title, 10 authors, published date, source, and DOI match publisher metadata.",
+        "research_questions": "PASS; question is a concise paraphrase of the source's operational-validation aim.",
+        "model": "FAIL; several defining mechanics are either hidden or materially compressed. The procedure says `activate subset`, `offer NONE plus two weighted, distinct actions`, and calibrated churn/growth, but omits the exact turn menu choice process (LLM chooses one of exactly three options, repeatedly until its truncated-Zipf budget is exhausted), action-likelihood weights and calibrated update order; the `feed_window` field omits popularity sorting, recency tie-break, self-post exclusion, and K=3 visible parent items. It omits source-defined interest state updates after read/search/share-link actions and the weighted undirected graph construction used for evaluation. `server_state: ...` hides required state. These details appear in §3.2–3.4 and Table 4, so current helper-level sketch is not sufficient.",
+        "references_and_footnotes": "LIMITED; r1–r6 are defined/used and have relevant section/table locators; snapshot reference-order parity was not checked.",
+        "tags_and_warning": "PASS; model and simulation are separate list tags; warning remains not audited."
+      },
+      "findings": [
+        "Replace ellipsis server state and helper-level daily loop with a compact account of state, sampled action menu/LLM choice loop, activity budget, interest updates, platform feed rules, churn/growth order, and graph/outcome construction; locate Table 4 for calibration parameters."
+      ]
+    },
+    {
+      "entry": 75,
+      "note_path": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "status": "FAIL",
+      "primary_source": "https://arxiv.org/html/2306.02552",
+      "version_checked": "arXiv:2306.02552v3, 2024-02-15; this is the version underlying the current full-text model claims.",
+      "source_locations": [
+        "arXiv v3 header/abstract, lines 18–24: version, author roster, and abstract.",
+        "Results, lines 44–55: profile/memory/action modules, six behaviors, Pareto activity model and formula.",
+        "Methods, lines 144–157: exact embedding similarity/threshold rule, K reinforcement conversion, long-term forgetting function g(M_i), top-N retrieval, all short-term records, and reflection/merging.",
+        "Methods, lines 158–174: four-part prompt framework, input observations and action execution.",
+        "Results, lines 88–115: information-cocoon interventions and conformity experiment sequence/outcomes."
+      ],
+      "checks": {
+        "abstract": "PASS; exact abstract text matches arXiv v3.",
+        "metadata": "FAIL; source is entered as the initial 2023-06-05 preprint but the cited full-text method is the revised v3 dated 2024-02-15; the author roster in the note appears to omit Hao Sun from the v3 author list (source lines 18–20). Verify whether the intended cited version is the original v1 or the v3 used for extraction, and match date/source/authors to that source version.",
+        "research_questions": "PASS; reflects the source's claimed framework and two application studies.",
+        "model": "FAIL; the actions enum (`WATCH | RATE | CHAT | BROADCAST`) is not the source action set. The paper defines six behaviors: search, browse, click, next-page, one-to-one chat, and broadcast (Results lines 48–50). The model also omits the actual forgetting function and its normalized recency/importance parameters, replaces a probability rule with vague prose, and omits the Pareto activity density function/parameters and several prompt/state mechanics. Although K and top-N are identified, values are not fixed in the source and should remain symbolic; other defining formulas and the branch sequence can be stated compactly. Application results are reduced to generic claims rather than exact intervention mechanics (friend counts and recommendation replacement frequencies).",
+        "references_and_footnotes": "LIMITED; r1–r6 are defined and used with section/page locators, but reference-order parity against the snapshot was not checked.",
+        "tags_and_warning": "PASS; model/simulation list tags are separate and warning remains audit failed."
+      },
+      "findings": [
+        "Use action names from the article and include its explicit profile/memory/action update mechanics, forgetting probability, Pareto activity rule, and experiment intervention conditions.",
+        "Resolve the source-version metadata/author roster discrepancy; the currently accessible article is v3 and lists Hao Sun."
+      ]
+    },
+    {
+      "entry": 76,
+      "note_path": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "status": "FAIL",
+      "primary_source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
+      "source_locations": [
+        "Author-hosted chapter, printed pp. 75–102: chapter does not provide a separate abstract; source metadata and chapter scope.",
+        "§§6.5–6.6, printed pp. 88–92, equations 6.1–6.8: Consumat state, needs, satisfaction/uncertainty and decision rules.",
+        "§§6.6–6.7, printed pp. 90–102: action/investment rules, resource/game setup, neural learning, SVO and need-weight experiment conditions, comparison with six earlier lab experiments.",
+        "Chapter references/bibliography, printed pp. 314 onward in book scan? [locator requires verification against the chapter's end matter; note currently contains no entries]."
+      ],
+      "checks": {
+        "abstract": "PASS; ‘No separate abstract in chapter’ is correct; the book-level abstract is not substituted.",
+        "metadata": "LIMITED; chapter title/authors/DOI are plausible, but note publication date is only year 2002 and source is the author-hosted PDF; confirm metadata against book chapter title page/publisher record.",
+        "research_questions": "PASS; source-grounded question appropriately frames the comparison.",
+        "model": "FAIL; current summary states the broad Consumat threshold branches and learning rate but leaves defining model specifications under-specified: needs satisfaction/uncertainty equations and exact lookback window, concrete investment choice for each decision mode, resource return/harvest mapping, neural predictor inputs/architecture and weight update, and tested parameter configurations/social-value orientations. Several helper phrases (‘invest according to decision’, ‘update needs…’) hide rules. The source equations and experimental tables make these available.",
+        "references": "FAIL; Metadata > References is empty although the full chapter has a bibliography and the original import snapshot contains references to preserve. Root separately requested extracting the full bibliography from this NSF/author-hosted source; that remains outstanding.",
+        "footnotes": "LIMITED; r1–r4 are defined/used and page/section/equation locators exist, but r3/r4 ranges are broad and should point to the particular equations, figures/tables for each stated rule/experiment.",
+        "tags_and_warning": "PASS; model and simulation are separate YAML list items, and warning remains audit failed."
+      },
+      "findings": [
+        "Complete the model with the source's actual satisfaction/uncertainty and decision-to-investment rules, learning procedure, and experiment configurations, using equation/table locators.",
+        "Extract and restore the chapter bibliography in source order, replacing the empty References section; do not create placeholders where titles are available."
+      ]
+    }
+  ],
+  "summary": {
+    "PASS": 0,
+    "FAIL": 4,
+    "LIMITED": 0
+  }
+}

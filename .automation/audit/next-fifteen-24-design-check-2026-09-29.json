@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "audit": "independent_higher_cost_design_check",
+  "date": "2026-09-29",
+  "note": "Literature/Papers/Entries/Exploring Trade-Offs for Online Mental Health Matching- Agent-Based Modeling Study.md",
+  "source": "https://formative.jmir.org/2024/1/e58241/PDF",
+  "status": "PASS_WITH_BIBLIOGRAPHY_LIMIT",
+  "checked": [
+    "publisher date 2024-10-01 and DOI",
+    "one-minute arrival/attributes, queue, patience and chat duration",
+    "random baseline choice and exponential decision time lambda 1.25",
+    "deferred-acceptance proposal/hold/reject and seven policies",
+    "90% recommendation and 10% random choice",
+    "random-forest outcome predictors, 80/20 split, rating SMOTE, reported accuracy/F1",
+    "Pearson 0.99 rating and 0.949 blocking validation",
+    "one-chat simulator limitation and 78.35% versus 83.27% match rate",
+    "claimed subgroup and topic results"
+  ],
+  "correction": "Clarified that empirical chat duration is assigned to a matched chat, not a counselor at arrival.",
+  "bibliography_limit": "56 captured links, including 11 unresolved, have not been reconciled to 51 numbered source references.",
+  "source_locations": [
+    "publisher PDF pp. 4-6 simulation assumptions",
+    "pp. 6-8 predictors and validation",
+    "pp. 8-10 virtual experiments",
+    "pp. 10-14 results and discussion"
+  ]
+}

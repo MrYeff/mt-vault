@@ -1,0 +1,89 @@
+{
+  "audit": "Independent re-audit of corrected entries 11-15 against primary source text/records; no paper notes edited.",
+  "date": "2026-09-29",
+  "method": "Read the Papers Template and Construct User Guide for note structure, then checked note claims against the cited primary source. Full-text inaccessible entries were limited to publisher/SSRN record and abstract claims.",
+  "notes": [
+    {
+      "number": 11,
+      "filename": "Antecedents and Effects of Parasocial Relationships- A Meta-Analysis.md",
+      "result": "PASS_WITH_ACCESS_LIMIT",
+      "fulltext_access": "Publisher record/abstract available; article full text not readable in this audit environment. The meta-analysis methods, results tables, and bibliography therefore remain unchecked.",
+      "verified": [
+        "Title, DOI 10.1093/joc/jqaa034, authors, and 2020-11-10 publication date agree with the publisher record.",
+        "Abstract and both research questions are supported by the accessible abstract.",
+        "Model extraction is explicitly skipped because this is a meta-analysis and full-text methods are inaccessible; no abstract-only methods claim is presented as audited."
+      ],
+      "bibliography": "The note correctly says 80 captured links include three unresolved placeholders and that source bibliography completeness could not be verified. The source bibliography itself could not be checked.",
+      "exact_fixes": [],
+      "limits": "PASS applies only to abstract-level content and visible metadata, not full text, methods/results detail, or bibliography. Keep fulltext unavailable and not audited."
+    },
+    {
+      "number": 12,
+      "filename": "Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md",
+      "result": "FAIL",
+      "fulltext_access": "Full 13-page primary PLOS ONE article and its main text accessible; supplementary file not independently reviewed.",
+      "verified": [
+        "Dependent measure is mean daily activity in P2 divided by mean daily activity in P1, notwithstanding the article's shorthand 'change'.",
+        "Authors' labels and directions are correct: 'ego perceived friend' means alter nominates ego (incoming), and 'alter perceived friend' means ego nominates alter (outgoing). Reciprocal and incoming coefficients are positive/significant; outgoing is not significant in Table 1.",
+        "The relevant directionality regression combines Peer See and Peer Reward and omits Control; all three intervention conditions are identified in the note.",
+        "The tie-type classifiers are correctly named: logistic regression uses one feature per task, and Random Forest uses the ten identified SE/SC features; ROC AUC is reported. The note's shorter summary does not misstate these procedures.",
+        "DOI and publication date match the article."
+      ],
+      "bibliography": "The 68 links were preserved from the prior snapshot, but were not title-by-title reconciled against the article's 52 numbered references; several links are unresolved and some may be aliases/duplicates. No completeness caveat appears in the note.",
+      "exact_fixes": [
+        "Add a bibliography provenance caveat stating that the captured 68 links have not been reconciled against the source's 52 references and do not represent a verified complete bibliography.",
+        "Use the source author form 'Alex Pentland' in the bibliographic metadata (the note currently inserts 'Sandy', which is not present in the article byline), unless that is an intentional linked-author display alias documented elsewhere."
+      ],
+      "limits": "Claims about classification and the intervention were checked in the article body; supplementary robustness details were not audited."
+    },
+    {
+      "number": 13,
+      "filename": "Bias Reduction in Social Networks Through Agent-Based Simulations.md",
+      "result": "FAIL",
+      "fulltext_access": "Full 10-page primary arXiv paper accessible; Springer publication metadata was not independently opened in this re-audit.",
+      "verified": [
+        "The paper traces approximately 173,000 users and 1.5 million edges, then focuses the reported feed experience/outcomes on 5,599 central/core users.",
+        "Trait prevalence scenarios are P(X=1) in {0.05, 0.15, 0.50}; 36 hourly ticks, 0.083 activation probability, lognormal tweet count parameters, like probabilities 0.20/0.05, and reset at t=24 match Sections 3.1-3.3.",
+        "Random and reverse-chronological feeds, NCF, Wide & Deep, and greedy MinimizeRho are accurately described. NCF/Wide & Deep retrain each tick for 10 epochs, and MinimizeRho greedily chooses edges that minimize the rho-kx difference.",
+        "The note correctly identifies feed lengths and core-user exposure measures. Its model loop and prose distinguish the large traced network from the 5,599 users whose experience is analyzed.",
+        "Abstract and research questions are supported by the paper."
+      ],
+      "bibliography": "The 28 captured links include unresolved placeholders; their titles/order were preserved from the earlier snapshot, but they were not reconciled against the source bibliography. The note has no explicit completeness caveat.",
+      "exact_fixes": [
+        "Add a bibliography provenance caveat stating that the captured links have not been reconciled against the paper's bibliography and completeness is unverified."
+      ],
+      "limits": "The model-claim audit passed. The listed publication date is identified as the Springer proceedings eBook date in the initial audit, but that metadata was not independently re-opened in this pass."
+    },
+    {
+      "number": 14,
+      "filename": "Birds of a Feather- Homophily in Social Networks.md",
+      "result": "FAIL",
+      "fulltext_access": "Full 30-page primary review PDF accessible and checked, including introduction and reference-list pages.",
+      "verified": [
+        "The abstract is consistent with the article abstract; the two questions accurately summarize the review's coverage of relationship/similarity dimensions and sources of homophily, tie dissolution, and network change.",
+        "The new primary full-text URL is accessible and the former fulltext-unavailable/model-skip text is absent. No single simulation model is presented, so omitting a Model section is appropriate.",
+        "Authors, DOI 10.1146/annurev.soc.27.1.415, and 2001-08-01 date are consistent with the article."
+      ],
+      "bibliography": "The note contains 163 links, including unresolved placeholders; although the article's full reference list is accessible, no title-by-title reconciliation was performed. The note has no bibliography provenance/completeness caveat.",
+      "exact_fixes": [
+        "Add a bibliography provenance caveat stating that the 163 captured links have not been reconciled against the accessible article bibliography and completeness is unverified."
+      ],
+      "limits": "Abstract, framing/questions, model classification, and visible metadata pass. Bibliography links remain unverified."
+    },
+    {
+      "number": 15,
+      "filename": "Bond with Social Bot- A Hidden Markov Model of Parasocial Relationship Dynamics in Human-AI Interaction.md",
+      "result": "PASS_WITH_ACCESS_LIMIT",
+      "fulltext_access": "SSRN record/abstract accessible; direct linked PDF returned an internal error and no full-text text was retrieved. The paper's methods, results, and bibliography cannot be checked.",
+      "verified": [
+        "The abstract and research questions closely track the SSRN record's abstract; no detailed HMM extraction is made from that abstract.",
+        "The model extraction skip explicitly identifies the access limit.",
+        "The References note accurately says no reference links were captured and the source bibliography could not be checked."
+      ],
+      "bibliography": "Caveat is appropriately explicit: zero captured links does not imply that the paper has no bibliography.",
+      "exact_fixes": [],
+      "limits": "PASS applies only to the accessible SSRN abstract and record metadata as summarized in the initial audit. Keep fulltext unavailable and not audited."
+    }
+  ],
+  "overall": "The source-backed corrections in #12-14 are substantively accurate. #12-14 remain FAIL pending explicit bibliography caveats; #12 also has a byline-form metadata discrepancy. #11 and #15 pass only at abstract/record level and remain unaudited for full text."
+}

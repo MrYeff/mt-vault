@@ -1,0 +1,66 @@
+{
+  "audit": "Independent final check of entries 16-20 after the latest correction pass.",
+  "date": "2026-09-29",
+  "scope": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "method": "Read prior initial audit JSON, current notes, and checked corrected claims against accessible primary sources (JASSS articles and MIT Press metadata; Krackhardt PDF text remained unavailable in the browser and its definition was checked from indexed extracts in the initial audit). No paper notes edited.",
+  "notes": [
+    {
+      "number": 16,
+      "filename": "Bounded Confidence Revisited- What We Overlooked- Underestimated- and Got Wrong.md",
+      "result": "PASS",
+      "note_edited": false,
+      "source": "https://www.jasss.org/26/4/11.html",
+      "footnotes": "PASS: definitions are unique (r1-r4), every pre-justification footnote reference has a definition, and the section and equation identifiers in the added definitions are specific.",
+      "abstract": "PASS: abstract was checked against the primary abstract; spacing/punctuation are readable and claims match, including the explicitly conjectural all-start-profile finiteness statement.",
+      "bibliography": "PASS caveat: explicitly says 26 identifiers remain unresolved and title mapping/completeness are unverified.",
+      "audit_log": "Records the initial fail, fixes, and pending re-audit; note retains not audited."
+    },
+    {
+      "number": 17,
+      "filename": "Bridging Systems- Open Problems for Countering Destructive Divisiveness across Ranking- Recommenders- and Governance.md",
+      "result": "PASS",
+      "note_edited": false,
+      "source": "https://arxiv.org/html/2301.09976",
+      "spot_check": "PASS: prior primary-source audit records all 115 ordered reference links matching references 1–115 and correctly treats this as a research agenda with no executable model. Current note contains no model claim to regress.",
+      "re_audit_basis": "Initial audit JSON marks this entry PASS; note left untouched."
+    },
+    {
+      "number": 18,
+      "filename": "Building Successful Online Communities- Evidence-Based Social Design.md",
+      "result": "PASS",
+      "note_edited": false,
+      "source": "https://mitpress.mit.edu/9780262016575/building-successful-online-communities/",
+      "spot_check": "PASS: publication date is 2012-03-23, matching MIT Press metadata. The note preserves fulltext unavailable and its explicit incomplete-bibliography statement.",
+      "limits": "Published full text remains unavailable; audit scope remains publisher/author materials."
+    },
+    {
+      "number": 19,
+      "filename": "Cognitive social structures.md",
+      "result": "PASS",
+      "note_edited": false,
+      "source": "https://www.heinz.cmu.edu/faculty-research/profiles/david-krackhardt/_files/1987-cognitive-social-structures.pdf",
+      "spot_check": "PASS: current LAS text distinguishes row-dominated R′ij=Riji (i reports the dyad) and column-dominated R′ij=Rijj (j reports it) from consensus aggregation across all perceivers, matching §3.2 p.116. The source supports the N×N×N reports and slice summary. Explicit caveat says 17 unresolved reference identifiers leave mapping/completeness unverified.",
+      "limits": "Source PDF text extraction was unavailable in the initial audit; the cited definitions were checked from indexed extracts of that same primary PDF."
+    },
+    {
+      "number": 20,
+      "filename": "Computational Modelling of Trust and Social Relationships.md",
+      "result": "PASS",
+      "note_edited": false,
+      "source": "https://www.jasss.org/15/1/3.html",
+      "spot_check": "PASS: the model now names all four combinations of linear/log increase and linear/log waning, cooperative/defection trust direction, interaction update followed by waning, and identifies logarithmic increase with linear decrease as the best-fitting variant. Sections 3.23 and 4.5–4.10 support these claims. The separate §5.8 global-defection limitation and tercile layer definition remain present.",
+      "exact_issues": [
+        "Non-blocking parameter-detail omission: the note does not state the source’s best-fit waning rate of 0.08, although it correctly identifies log increase with linear waning as the best-fit variant and gives the maximum compression ratio of 10."
+      ],
+      "parameter_context": "The note gives MaxCR=10, MinCR=0, MaxTrust=100 for logarithmic increase. Section 4.11 specifies the best-fit setting as waning rate 0.08 and maximum compression ratio 10; the note does not state the 0.08 value. This is an omitted best-fit setting, not a contradiction of the stated variant comparison.",
+      "bibliography": "PASS caveat: identifies three unresolved identifiers and warns that matching reference count does not establish correct title mapping."
+    }
+  ],
+  "overall": "PASS for entries 16-20: requested corrections are accurate, #17–19 show no substantive regression, and #16 footnotes are unique with a source-matching abstract. One detail is recorded for #20: the paper’s optimal waning rate (0.08) is omitted, though the best-fit variant claim itself is supported."
+}

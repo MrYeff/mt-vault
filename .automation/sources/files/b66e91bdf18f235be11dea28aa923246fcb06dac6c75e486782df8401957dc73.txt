@@ -1,0 +1,642 @@
+ RESEARCH ARTICLE SUMMARY
+
+
+SOCIAL MEDIA
+
+
+Reranking partisan animosity in algorithmic social media                                                                                                             Full article and list of
+feeds alters affective polarization                                                                                                                                  author affiliations:
+                                                                                                                                                                     https://doi.org/10.1126/
+                                                                                                                                                                     science.adu5584
+Tiziano Piccardi*†, Martin Saveski*†, Chenyan Jia†, Jeffrey Hancock, Jeanne L. Tsai, Michael S. Bernstein
+
+
+
+
+INTRODUCTION: Social media algorithms profoundly impact our                               RESULTS: Reranking to change levels of exposure to AAPA content
+lives, yet our understanding of these algorithms’ impact has been                         significantly influenced affective polarization. Increased AAPA
+limited to interventions that the platforms themselves are willing to                     exposure led to colder feelings toward the political outgroup,
+test and publish. In this article, we demonstrate a method for                            whereas decreased AAPA exposure led to warmer feelings. Both
+independent algorithmic reranking experiments in naturalistic                             shifts amounted to more than 2 degrees on a 0- to 100- degree
+settings and at scale. We leverage this method to demonstrate that                        “feeling thermometer.” The impact on affective polarization was
+algorithmic ranking can both raise and lower levels of affective                          consistently detected in both in-­feed and post-experiment surveys,
+political polarization in the United States, with no detectable                           with no evidence of partisan asymmetry. Changes to the feed
+differences across party lines.                                                           algorithm caused in-­feed but not post-experiment changes to
+
+
+
+
+                                                                                                                                                                                                Downloaded from https://www.science.org on November 27, 2025
+                                                                                          participants’ negative emotions.
+RATIONALE: We built a browser extension that intercepted and
+reranked web-­based social media feeds in real time. The extension                        CONCLUSION: This work demonstrates a new method for reranking
+used a large language model (LLM) to score content and then                               social media feeds that enables testing interventions without
+applied these scores to reorder the feed, all without requiring                           platform collaboration. We found that increasing exposure to AAPA
+platform cooperation. Our approach identified content expressing                          posts significantly increases affective polarization and negative
+antidemocratic attitudes and partisan animosity (AAPA) and                                emotions, whereas decreasing exposure reduces them. These
+controlled users’ exposure to such content through reranking.                             changes were comparable in size to 3 years of change in United
+   We conducted a preregistered field experiment with 1256                                States affective polarization. As political polarization and societal
+participants on X, the most widely used social media platform for                         division become increasingly linked to social media activity, our
+political discourse in the United States, during the weeks leading up                     findings provide a potential pathway for platforms to address these
+to the 2024 presidential election. Participants were randomly                             challenges through algorithmic interventions. Together, these
+assigned to two parallel experiments in which their feeds were                            interventions may result in algorithms that not only reduce partisan
+dynamically reranked for 1 week to either up-­or down-­rank AAPA                          animosity but also promote greater social trust and healthier
+posts. We measured the effects of these interventions on affective                        democratic discourse across party lines. 
+polarization (participants’ feelings toward the political outgroup)
+and emotional experience (anger, sadness, excitement, or calm) by
+using both in-­feed and post-experiment surveys. Results were
+                                                                                          *Corresponding author. Email: piccardi@​jhu.​edu (T.P.); msaveski@​uw.​edu (M.S.)
+compared to those of participants in control conditions whose feeds                       †These authors contributed equally to this work. Cite this article as T. Piccardi et al.,
+were not reranked.                                                                        Science 390, eadu5584 (2025). DOI: 10.1126/science.adu5584
+
+
+
+
+                                  Browser extension                           Reranking experiments                       Effect on affective polarization
+
+                                                                                                                               In-feed       Post-experiment
+                                                                                                                                   Colder         Warmer
+
+
+                                                                        Reduced
+                                                                        exposure
+                                                 LLM classifier flags
+                                                   antidemocratic                                                       −5.0     −2.5       0.0       2.5      5.0
+                                                    attitudes and                                                         Change in feeling thermometer degrees
+                                                 partisan animosity
+                                                                                                                                   Colder         Warmer
+
+
+
+                                                                        Increased
+                                                                        exposure
+
+                                                                                                                        −5.0     −2.5       0.0       2.5      5.0
+                                                                                                                          Change in feeling thermometer degrees
+
+
+
+A platform-independent field experiment demonstrates that reranking content expressing antidemocratic attitudes and partisan animosity in social media feeds
+alters affective polarization. A browser extension reranked participants’ social media feeds by reducing or increasing exposure to posts expressing AAPA, which in turn led to
+corresponding decreases or increases in affective polarization.
+
+
+Science 27 November 2025                                                                                                                                                               903
+                                                                                                                                                Research Article
+
+SOCIAL MEDIA                                                                                     This capability allowed us to investigate a pressing question: Can
+                                                                                              feed algorithms cause affective polarization, i.e., hostility toward op-
+Reranking partisan animosity in                                                               posing political parties (19–22)? This concern has grown since the 2016
+                                                                                              US presidential election (23), and the debate remains ongoing after the
+algorithmic social media feeds                                                                2020 and 2024 elections. If social media algorithms are causing affective
+                                                                                              polarization, they might not only bear responsibility for rising political
+alters affective polarization                                                                 incivility online (24), they might also pose a risk to trust in democratic
+                                                                                              institutions (25). In this case, isolating the algorithmic design choices that
+Tiziano Piccardi1*†‡, Martin Saveski2*†, Chenyan Jia3†,                                       cause polarization could offer alternative algorithmic approaches (26).
+Jeffrey Hancock4, Jeanne L. Tsai5, Michael S. Bernstein1                                         A major hypothesized mechanism for how feed algorithms cause
+                                                                                              polarization is a self-­reinforcing engagement loop: users engage with
+Today, social media platforms hold the sole power to study the                                content aligning with their political views, the feed algorithm inter-
+effects of feed-­ranking algorithms. We developed a platform-­                                prets this engagement as a positive signal, and the algorithm exposes
+independent method that reranks participants’ feeds in real                                   even more politically aligned content to users, leading to a polarizing
+time and used this method to conduct a preregistered 10-­day                                  cycle. Some studies support this hypothesis, finding that online inter-
+field experiment with 1256 participants on X during the 2024 US                               actions exacerbate polarization (27), potentially because of the in-
+presidential campaign. Our experiment used a large language                                   creased visibility of hostile political discussions (28), divisive language
+model to rerank posts that expressed antidemocratic attitudes                                 (29–33), and content that reinforces existing beliefs (34). However,
+and partisan animosity (AAPA). Decreasing or increasing AAPA                                  large-­scale field experiments aimed at reducing polarization by inter-
+exposure shifted out-­party partisan animosity by more than                                   vening on the feed algorithm—for example, by increasing exposure to
+2 points on a 100-­point feeling thermometer, with no detectable                              out-­party content—have found both a decrease (35) and an increase
+differences across party lines, providing causal evidence that                                (36) in polarization. Similarly, recent large-­scale experiments on Face­
+exposure to AAPA content alters affective polarization. This                                  book and Instagram found no evidence that reduced exposure to in-­
+
+
+
+
+                                                                                                                                                                               Downloaded from https://www.science.org on November 27, 2025
+work establishes a method to study feed algorithms without                                    party sources or a simpler reverse-­chronological algorithm affected
+requiring platform cooperation, enabling independent                                          polarization and political attitudes (23, 37) during the 2020 US elec-
+evaluation of ranking interventions in naturalistic settings.                                 tion. These mixed results reveal the difficulty in identifying what, if
+                                                                                              any, algorithmic intervention might help reduce polarization, espe-
+                                                                                              cially during politically charged times.
+                                                                                                 We distilled the goals of these prior interventions to a direct hy-
+Social media algorithms profoundly impact our lives: They curate what                         pothesis that we could operationalize through real-­time LLM rerank-
+we see (1) in ways that can shape our opinions (2–4), moods (5–7), and                        ing: that feed algorithms cause affective polarization by exposing users
+actions (8–12). Because of the power that these ranking algorithms                            specifically to content that polarizes. An algorithm that up-ranks con-
+have to direct our attention, the research literature has articulated                         tent reflecting genuine political dialogue is less likely to polarize than
+many theories and results detailing the impact that ranking algorithms                        one that up-ranks demagoguery. This content-­focused hypothesis has
+have on us (13–17). However, validating these theories and results has                        been difficult to operationalize into interventions, making studies that
+remained extremely difficult because the ranking algorithm behavior                           intervene on cross-­partisan exposure and reverse-­chronological rank-
+is determined by the social media platforms, and only the platforms                           ing attractive but more diffuse in their impact and thus more likely to
+themselves can test alternative feed designs and causally assess their                        observe mixed results. However, by connecting our real-­time reranking
+impact. Platforms, however, face political and financial pressures that                       infrastructure with recent advances in LLMs, we could create a rank-
+constrain the kinds of experiments they can launch and share (18).                            ing intervention that more directly targets the focal hypothesis (38)
+Concerns about lawsuits and the need to preserve engagement-­driven                           without needing platform collaboration. We drew, in particular, on a
+revenue further limit what platforms are willing to test, leaving mas-                        recent large-­scale field experiment that articulated eight categories of
+sive gaps in the design space of ranking algorithms that have been                            antidemocratic attitudes and partisan animosity as bipartisan threats
+explored in naturalistic settings and at scale.                                               to the healthy functioning of democracy (39). We operationalized these
+   To address this gap, we present an approach that enables researchers to                    eight categories into an artificial intelligence (AI) classifier that labels
+rerank participants’ social media feeds in real time as they browse, with-                    expressions of these constructs in social media posts, does so with
+out requiring platform permission or cooperation. We built a browser                          accuracy comparable to trained annotators, and produces depolariza-
+extension, a small add-­on to a web browser that modifies how web pages                       tion effects in a lab setting on a fixed feed (40). This real-­time classi-
+appear or behave, similar to an ad blocker. Our extension intercepts and                      fication enabled us to perform a scalable, content-­based reranking
+modifies X’s web-­based feed in real time and reranks the feed using large                    experiment on participants’ own feeds in the field (41).
+language model (LLM)–based rescoring, with only a negligible increase in                         We conducted a preregistered field experiment on X, the most used
+page load time. This web extension allows us to rerank content according                      social media platform for political discourse in the US (42), using our
+to experimentally controlled conditions. The design opens a new paradigm                      extension to dynamically rerank participants’ social media content by
+for algorithmic experimentation: It provides external researchers with a                      either increasing or decreasing exposure to content that expresses
+tool for conducting independent field experiments and evaluating the                          these eight factors of antidemocratic attitudes and partisan animosity
+causal effects of algorithmic content curation on user attitudes and behav-                   (AAPA) over the course of a week. The experiment was conducted
+iors while preserving ecological validity.                                                    during a pivotal moment in the 2024 US election cycle, from July to
+                                                                                              August 2024, an important period for understanding how social media
+1
+                                                                                              feeds impact affective polarization. Major political events during the
+ Department of Computer Science, Stanford University, Stanford, CA, USA. 2Information         study period included the attempted assassination of Donald Trump,
+School, University of Washington, Seattle, WA, USA. 3College of Arts, Media, and Design and
+Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA.                the withdrawal of Joe Biden from the 2024 presidential race, and the
+4
+  Department of Communication, Stanford University, Stanford, CA, USA. 5Department of         nomination of Kamala Harris as the Democratic Party’s candidate.
+Psychology, Stanford University, Stanford, CA, USA. *Corresponding author. Email:             These events allow us to examine the impact of heterogeneous AAPA
+piccardi@​jhu.​edu (T.P.); msaveski@​uw.​edu (M.S.) †These authors contributed equally to
+this work. ‡Present address: Department of Computer Science, Johns Hopkins University,        content on partisan polarization and hostility. We measured the inter-
+Baltimore, MD, USA.                                                                           vention’s effect on affective polarization (43) and emotional experience
+
+Science 27 November 2025                                                                                                                                             1 of 7
+Research Article
+
+(44). Compared with control conditions that did not rerank the feed,                         Experimental design
+decreased AAPA exposure led to warmer feelings toward the political                          We designed two parallel experiments to measure the impact of reduc-
+outgroup, whereas increased AAPA exposure led to colder feelings.                            ing and increasing exposure to AAPA posts (Fig. 1). The first, a “Re­duced
+These changes also affected participants’ levels of negative emotions                        Exposure” experiment, down-ranked all AAPA content, pushing it lower
+(anger and sadness) as measured through in-­feed surveys.                                    in the participants’ feeds. By contrast, the second, an “Increased Expo­
+                                                                                             sure” experiment, up-ranked AAPA posts in their feeds. These posts
+Exposure to antidemocratic attitudes and partisan animosity                                  came from the inventory of posts recommended by X to all participants
+There are many viable theories as to which content, if amplified, could                      with the same political leaning. Both experiments were randomized
+impact affective polarization. In this experiment, we drew specifically                      controlled trials. After providing informed consent and installing our
+on prior work that articulates eight factors as problematic outcomes                         web extension, participants were randomly assigned to one of the two
+for healthy democratic functioning, referred to as AAPA (39): (i) par-                       experiments and then randomly divided into treatment or control
+tisan animosity, (ii) support for undemocratic practices, (iii) support                      conditions for each experiment. The overall experiment spanned 10 days,
+for partisan violence, (iv) support for undemocratic candidates, (v) op-                     with the first 3 days serving as a baseline period, during which no
+position to bipartisanship, (vi) social distrust, (vii) social distance,                     intervention was applied. During the subsequent 7 days, participants
+and (viii) biased evaluation of politicized facts [supplementary ma-                         in the treatment groups received the modified feed (with down-ranked
+terials (SM) section S3.1]. We hypothesized that increased or                                or up-ranked AAPA posts), whereas those in the control groups con-
+decreased exposure to AAPA content causes corresponding changes                              tinued to receive the original, unmodified feed.
+in affective polarization. Our feed-­ranking intervention first identi-                         We assessed outcomes at two different time points: post-experiment
+fied only political content in the feed using a broad definition from                        and in-­feed. To measure post-experiment effects, we administered a
+the Pew Research Center (45) that includes mentions of officials and                         survey asking participants how warmly they feel toward members of
+activists, social issues, news, and current events (SM section S4.3). We                     the opposing party (0 to 100 “degrees” on a feeling thermometer) and
+then scored each political post from zero to eight based on the number                       about the various emotions (e.g., anger, sadness, excitement, or calm)
+of the eight AAPA factors expressed in its text, and we classified a post                    they felt when reading social media over the previous week (five-­point
+
+
+
+
+                                                                                                                                                                              Downloaded from https://www.science.org on November 27, 2025
+as AAPA if it reflected at least four of these eight factors. This scoring                   scale between “never” and “all the time”). We surveyed the participants
+was performed by a large language model (SM section S4.4), which                             both before and after the experiment, enabling us to quantify the
+showed a high correlation with human judgment on identifying these                           impact of the intervention at the end of the week-­long treatment (SM
+eight factors in social media posts (40).                                                    section S1.2).
+
+
+
+
+                              Pre-experiment                                                                                       Post-experiment
+                                  Survey                                               Treatment: Downrank all AAPA content            Survey
+                                                              Reduced
+                                                              exposure
+                                                                                       Control: Original feed
+
+                     A         Out-party feeling
+                                thermometer
+                                                                                                                                     Out-party feeling
+                                                                                                                                      thermometer
+                                                                                       Treatment: Uprank AAPA content
+                                                              Increased
+                                  Emotions                                                                                               Emotions
+                                                              exposure
+                                                                                       Control: Original feed
+
+
+
+                                                    Pre-experiment                        Random in-feed surveys                 Post-experiment
+                                                        survey                                                                        survey
+
+                     B           Timeline
+                                                                       BASELINE                        INTERVENTION
+                                                               Day 0              Day 3                                        Day 10
+
+
+                                                   Original feed               Reranking                        Updated feed
+
+                                             A                            A       Politics                A
+                                             B                            B                               B                       In-feed survey
+                              Reduced
+                              exposure       C                             C       AAPA
+                                             D                            D                               D
+                     C                                                                                                           How would you rate...
+
+                                             A                            A                               A
+
+                              Increased B                                 B                                        AAPA
+                              exposure C                                  C
+                                             D                                                            B
+                                                                                    AAPA
+
+
+
+
+Fig. 1. Overview of the field experiment on X. (A) Participants completed a pre-experiment survey to rate their feelings toward the opposing party and report their
+emotions. Then, they were randomly assigned to one of the two parallel experiments, reduced or increased AAPA content exposure, and further randomized into treatment
+and control groups. After 10 days, they completed a post-experiment survey. (B) Timeline of the experiment. During the first 3 days, no intervention was applied to measure
+the participants’ baseline responses. For the next 7 days, participants in the treatment groups received increased or decreased AAPA exposure. In-­feed surveys were
+periodically shown throughout the baseline and the intervention period. (C) The interventions down-­or up-­ranked AAPA posts in the participants’ feeds depending on their
+treatment assignment.
+
+Science 27 November 2025                                                                                                                                             2 of 7
+                                                                                                                             Research Article
+
+   To measure in-­feed effects, we added posts containing a small survey     giving informed consent, participants installed our web extension. To
+directly in the participant’s feed. These surveys, modeled on ecological     ensure that the participants had enough political content, we used a
+momentary assessments (46), resembled typical social media posts             prescreening task to filter for users whose “For you” feeds contained
+but were colored to stand out and contained a slider survey instru-          at least 5% of posts related to politics or social issues, retaining 73.4%
+ment. Each survey randomly selected one of two outcomes to assess:           of the screened participants. The participants were recruited during
+(i) affective polarization, where participants rated their feelings toward   the US election season, between 7 July and 14 August 2024, and in-
+the opposing party, or (ii) emotional experience, where participants         structed to use X daily only from the web interface.
+reported the extent to which they felt two emotions, one randomly               We preregistered a target of at least 1100 participants to complete
+selected positive emotion (excited or calm) and one randomly selected        the full study (600 in the Reduced Exposure experiment and 500 in
+negative emotion (angry or sad). For both experiments, the in-­feed          the Increased Exposure experiment) based on power analyses per-
+surveys were shown at an equivalent rate and position in the control         formed on data from a pilot experiment (48). Toward this goal, a total
+conditions (SM section S1.2). To reduce fatigue effects, each time par-      of 1662 participants completed the initial survey and qualified for
+ticipants completed the in-­feed survey, they were less likely to receive    inclusion in the study. Participants were randomly assigned to either
+another one on the same day.                                                 the Reduced or Increased Exposure experiment until the preregistered
+                                                                             experiment-­specific quotas were reached. Of the qualified participants,
+Feed reranking                                                               1256 completed the full study by responding to a follow-­up survey
+To administer the interventions, we developed a browser extension for        at the end of the experiment, 727 of which were in the Reduced Exposure
+Google Chrome and Microsoft Edge that reranked participants’ feeds           experiment and 529 of which were in the Increased Exposure ex­
+in real time (41). The extension activated when participants accessed        periment (fig. S1 shows the participant recruitment funnel). Both
+the “For you” feed on X. It intercepted the participants’ original feed      treatment and control groups were well balanced across covariates,
+and sent it to a remote backend, which scored and reranked the posts         and there was no evidence of differential attrition between conditions
+(SM section S4). This process added a latency of about three seconds         (SM section S1.3). To maintain a consistent sample across the post-
+when opening the feed for the first time, which was consistent across        experiment and in-­feed analyses, the reported treatment effects are
+
+
+
+
+                                                                                                                                                          Downloaded from https://www.science.org on November 27, 2025
+all experimental conditions. To rerank the original feeds, we first iden-    based on participants who completed both the post-experiment survey
+tified political posts (SM section S4.3), then classified whether and        and at least one in-­feed survey for the corresponding outcome (N =
+how much AAPA the political posts contained.                                 1090). The results are similar when the full population is considered
+   In the Reduced Exposure treatment condition, we down-ranked all           (SM sections S11.1 and S11.2).
+AAPA posts in the participants’ feeds. If participants continued to             Participants received $20 upon completing the study. The sample
+scroll down far enough, e.g., across several incremental loads of more       included 48% women, 50% men, and 2% who identified as another
+content, these posts would appear (fig. S12). Before downranking all         gender. Participants ranged in age from 18 to 81 years (mean = 41.6,
+the AAPA posts, we randomly selected the position of one AAPA post           SD = 14.0). Party affiliation was 66% Democrat and 34% Republican.
+and, if the in-­feed survey was sampled to be included, inserted the post    Educational attainment was as follows: 17 (1%) had less than a high
+with the survey in the next available position (SM section S3.2.1). This     school degree, 158 (13%) were high school graduates, 267 (21%) had
+survey position was consistent across treatment and control condi-           some college but no degree, 145 (12%) held an associate degree, 419
+tions. Thus, participants in the control condition saw AAPA posts and        (33%) held a bachelor’s degree, 189 (15%) held a master’s degree,
+the in-­f eed survey, whereas participants in the treatment condi-           30 (2%) held a professional degree (e.g., JD, MD), and 31 (2%) held a
+tion saw the survey in the position where the first AAPA post used to        doctoral degree. Participants reported their race or ethnicity and were
+be, but all AAPA posts were placed further down. The survey was              allowed to choose multiple responses. Overall, 945 (75%) identified
+limited to only a few times per day to avoid participant fatigue (SM         as white, 183 (15%) identified as Black or African American, 153 (12%)
+section S1.2). In the Increased Exposure experiment, because we lacked       identified as Hispanic or Latino, 66 (5%) identified as East Asian,
+access to the platform’s full post inventory, we sourced AAPA posts          34 (3%) identified as South Asian, 28 (2%) identified as American
+from the inventory of all posts in the “For you” feeds of other study        Indian or Alaska Native, 5 (<1%) identified as Middle Eastern, and 9
+participants with the same political leaning. We selected a random           (<1%) identified as other.
+position in the original feed and up-ranked a random AAPA post to               On average, participants viewed 154 posts per day (median = 92)
+that position. The post containing the survey, if included, was inserted     and spent 24.1 min (median = 13.1 min) per day with a browser tab in
+in the next available position. In the control condition, the survey was     the foreground on their X feed. During the baseline period, an average
+still added in the randomly sampled position, but no post was up-            of 31.6% of the posts that participants viewed were related to politics
+ranked. As in the Reduced Exposure experiment, the survey was placed         or social issues. Of these posts, 32% were classified as AAPA, which
+consistently in the treatment and control conditions. During continu-        comprised an average of 10.1% of the total feed content.
+ous scrolling sessions, this process repeated approximately every 30            The interventions had the intended effects (fig. S9). During the base-
+posts (SM section S3.2.2).                                                   line period, participants across all experimental conditions were
+   The Reduced Exposure treatment down-ranked 85.4 AAPA posts on             exposed to a similar fraction of AAPA posts. However, after the inter-
+average (median = 22) per user per day, and the Increased Exposure           vention began, participants in the treatment condition of the Reduced
+up-ranked 10.9 AAPA posts on average (median = 5.43) per user per            Exposure experiment experienced a substantial decrease in exposure
+day (SM section S3.2.3). To avoid excessive exposure to polarizing           to such posts (treatment, 1.04% AAPA posts of all feed exposures;
+content, we up-ranked fewer but higher-­scoring AAPA posts. Despite          control, 10% AAPA posts of all feed exposures; 89.6% relative reduction),
+the difference in the number of posts affected by the two interventions,     whereas those in the treatment condition of the Increased Exposure
+the average AAPA score of the feed consumed during treatment days            experiment were exposed to more AAPA posts (treatment, 13.4% AAPA
+exhibited symmetric changes across the two experiments (fig. S11).           posts of all feed exposures; control, 10.6% AAPA posts of all feed expo-
+                                                                             sures; 26.4% relative increase).
+Results                                                                         Over the full 10 days of the experiment, participants answered an
+We recruited participants from two online survey platforms:                  average of 13 (median = 9) in-­feed affective polarization questions in
+CloudResearch and Bovitz (47). We targeted participants who                  the Reduced Exposure experiment and 14.7 (median = 11) in the
+used X, were age 18 or older, resided in the United States, and self-­       Increased Exposure experiment. Similarly, they answered an average
+identified as either Democrats or Republicans (SM section S5). After         of 13.2 (median = 9) in-­feed emotion surveys in the Reduced Exposure
+
+Science 27 November 2025                                                                                                                         3 of 7
+Research Article
+
+experiment and 15.0 (median = 12) in the Increased Exposure experi-                results are consistent with recent studies finding that changes in af-
+ment, with each survey asking them to rate two emotions.                           fective polarization are not necessarily linked to changes in antidemo-
+   In the post-experiment survey, we asked participants whether the                cratic attitudes (39, 50).
+browser extension had impacted their experience on X. Across condi-
+tions, most participants reported that they did not notice any impact              Emotions
+on their online experience (74.2%), whereas others guessed changes                 Changes to the feed algorithm caused in-­feed but not post-experiment
+that were not part of the intervention (SM section S11.4). These results           changes to participants’ negative emotions (Fig. 3). Reduced Exposure
+indicate a limited awareness of the experimental feed-­ranking inter-              caused a change of –5.05 points [95% CI: –7.68, –2.42; adjusted P (Padj) =
+vention, reducing the likelihood that the observed results were due to             0.002] for “angry” and –3.68 points (95% CI: –6.42, –0.94; Padj = 0.024)
+demand effects.                                                                    for “sad.” Likewise, in the Increased Exposure, participants reported a
+                                                                                   symmetric increase in negative emotions: 5.13 points (95% CI: 2.05, 8.22;
+Affective polarization                                                             Padj = 0.013) for “angry” and 4.38 points (95% CI: 1.00, 7.76; Padj = 0.036)
+Exposure to AAPA significantly influenced affective polarization                   for “sad.” Neither intervention had an effect on the positive emotions
+(Fig. 2). Participants in the reduced AAPA exposure experiment re-                 “calm” and “excited.” Post-experiment emotion effects were not signifi-
+ported a significant post-experiment effect corresponding to an out-­              cant, suggesting that the effects were likely short-­lived.
+party warmth increase of 2.11 degrees [95% confidence interval (CI):
+0.15, 4.06; P = 0.035]. Conversely, participants in the Increased                  Engagement
+Exposure experiment exhibited a symmetric reduction in affective                   We tested whether our interventions impacted platform engagement
+warmth toward the opposing party of –2.48 degrees (95% CI: –4.79,                  (SM section S9). Neither experiment observed differential attrition
+–0.17; P = 0.036). We did not observe any significant heterogeneity in             rates across conditions.
+treatment effects across the preregistered moderators (SM section                     In the Reduced Exposure experiment, participants in the treatment
+S8), including party identification, indicating that the effect was con-           group had a similar number of daily sessions (estimate, –0.06; 95% CI:
+sistent and bipartisan. Similar to other studies (49), we contextualize            –0.16, 0.04) but spent –4.71 fewer minutes per day (95% CI: –8.22, –1.20)
+
+
+
+
+                                                                                                                                                                      Downloaded from https://www.science.org on November 27, 2025
+these effects against the rising levels of partisan animosity in American          compared with that of participants in the control group. Over the
+society over time: Our effects correspond to a decrease and increase               7-­d ay intervention period, they viewed –169.52 fewer posts (95%
+in affective polarization equivalent to 3 and 3.6 years, respectively. We          CI: –325.48, –13.56), liked –24.06 fewer posts (95% CI: –39.53, –8.59), but
+observed even stronger effects with the in-­f eed assessment, with                 reposted a similar number of posts (estimate, –4.18; 95% CI: –9.89, 1.53).
+Reduced Exposure causing an out-group warmth increase of 3.24 de-                  On the other hand, they engaged with the posts they viewed at higher
+grees (95% CI: 1.21, 5.27; P = 0.002) and Increased Exposure causing               rates, with a 0.61% higher like rate (95% CI: 0.11%, 1.12%) and a 0.058%
+a cooling of –2.56 degrees (95% CI: 4.53, –0.59; P = 0.011). Supplementary         higher repost rate (95% CI: 0.009%, 0.11%). Although the per-­view en-
+exploratory analysis reweighting our sample to match the population                gagement rates increased, these findings suggest that down-ranking
+of X users reduced our statistical power but replicated our results,               AAPA content comes at the cost of slightly reduced engagement overall.
+indicating substantial robustness (SM section S10). The only exception                In the Increased Exposure experiment, we did not find any signifi-
+was the posttreatment effects in the Reduced Exposure experiment,                  cant differences in engagement between the treatment and control
+which had a similar point estimate but were not statistically significant.         groups. Participants in the treatment group had a similar number of
+   In an exploratory analysis, we investigated which types of AAPA                 daily sessions (estimate, –0.04; 95% CI: –0.16, 0.08) and spent a compa-
+content were predictive of changes in affective polarization. Spe­                 rable amount of time on the platform (estimate, –1.76 min per day; 95%
+cifically, a higher proportion of posts supporting partisan animosity              CI: –6.17, 2.66). They also viewed (estimate, –132.3; 95% CI: –292.5,
+(95% CI: –13.49, –2.61; P = 0.003), opposition to bipartisan cooperation           27.94), liked (estimate, 10.25; 95% CI: –5.23, 25.74), and reposted (es-
+(95% CI: –26.55, –4.40; P = 0.006), and biased evaluation of politicized           timate, 3.38; 95% CI: –0.06, 6.82) a similar number of posts and liked
+facts (95% CI:–12.83, –2.21; P = 0.005) predicted a colder feeling toward          and reposted the posts they viewed at similar rates (effect on like rate,
+the opposing party by the end of the study (fig. S22).                             0.22%; 95% CI: –0.57%, 1.01%; effect on repost rate, –0.052%; 95% CI:
+   In addition to affective polarization (or partisan animosity), we also          –0.17%, 0.066%).
+surveyed participants about their attitudes toward the remaining
+seven AAPA factors. We found that, although reduced and increased                  Discussion
+exposure to AAPA content impacted affective polarization, it had no                          This study demonstrates a deployable framework for conducting re-
+significant effects on these other outcomes (SM section S7). These                           ranking field experiments on social media feeds without requiring
+                                                                                                           direct involvement from the platforms. We developed a
+                                                                                                           browser extension infrastructure that enables real-­time
+                                                                                                           manipulation of what consenting users see in their feed,
+                                                                                                           using LLM-­based classifiers to dynamically assess and
+                                                                                                           rerank posts based on a custom ranking function. This
+ Reduced Exposure                                                                                          approach opens new avenues for auditing, evaluating,
+                                                                                                           and prototyping alternative feed-­ranking strategies in
+                                                                                                           real-­world settings.
+                                                                                                              Our specific experimental findings demonstrate that
+Increased Exposure
+                                                                                                           repeated exposure to AAPA posts, particularly during
+                       colder                       warmer          colder                       warmer    heightened political tensions such as the months lead-
+                      −5 −4 −3 −2 −1 0     1   2  3   4   5        −5 −4 −3 −2 −1 0      1  2  3   4  5    ing up to the 2024 US election, significantly influences
+                                                                                                           users’ affective polarization and emotional responses.
+                                                                                                           A feed-­ranking algorithm that controls exposure to such
+Fig. 2. Effects of reducing and increasing exposure to AAPA content in participants’ feeds on their        content produces measurable changes, equivalent to ~3
+feeling toward the out-­party relative to the corresponding control group. (Left) Participants were        years of affective polarization, over the period it was
+surveyed within the feed during the intervention and (right) off-­platform after the experiment. The       deployed. Notably, our results indicate that the inter-
+feeling thermometer scale was between 0 (cold) and 100 (warm). The error bars represent 95% CIs.           vention does not disproportionately impact any specific
+
+Science 27 November 2025                                                                                                                                    4 of 7
+                                                                                                                                              Research Article
+
+                                                                                                                  assessment (46). To mitigate the risk of demand effects
+                   Angry                                                                                          associated with the close proximity of the assessment,
+                        Sad                                                                                       we followed best practices in designing the experiment
+Reduced Exposure
+                     Excited                                                                                      (55), providing only essential information about the
+                       Calm                                                                                       study’s purpose. Post-experiment survey responses to
+                      Angry                                                                                       an open-­ended question about participants’ experiences
+                        Sad                                                                                       during the study suggest that these precautions were
+Increased Exposure
+                     Excited                                                                                      effective, as they did not report any impact on their ex­
+                       Calm                                                                                       perience attributable to their assigned condition (SM
+                                 −8 −6 −4 −2 0       2   4    6    8   −0.3 −0.2 −0.1      0.0   0.1  0.2    0.3  section S11.4).
+                                                                                                                     Describing the causal relation between social media
+                                                                                                                  and polarization as a unified phenomenon remains
+Fig. 3. Effects of reducing and increasing exposure to AAPA content in participants’ feeds on                     challenging: Platforms are complex sociotechnical sys-
+their experiences of emotion compared with that of the corresponding control group. (Left)                        tems, and small variations in design or exogenous factors
+Participants were surveyed within the feed during the intervention [scale ranged from 0 (“none at all”)           can lead to different outcomes (56). Future longitudinal
+to 100 (“extremely”)] and (right) off-­platform after the experiment [scale ranged from 1 (“never”) to 5          research should investigate the impact of sustaining the
+(“all the time”)]. The filled circles represent statistical significance (Padj < 0.05, adjusted for multiple      intervention over longer periods of time—especially on
+hypothesis testing), and the error bars represent 95% CIs.                                                        long-­term metrics, such as user retention (57) and news
+                                                                                                                  knowledge—and evaluate the efficacy of feed reranking
+                                                                                                                  across different platforms and cultural settings. For ex-
+political leaning or demographic group, suggesting that the approach ample, open questions remain about how our approach can be ex-
+is bipartisan. The success of this method shows that it can be inte- tended to the broader online information ecosystem and whether our
+grated into social media AI to mitigate harmful personal and societal findings hold true in different political systems with specific cultural
+
+
+
+
+                                                                                                                                                                              Downloaded from https://www.science.org on November 27, 2025
+consequences. At the same time, our engagement analyses indicate a contexts or party structures. In addition, future research can move
+practical trade-­off: Interventions that down-­rank AAPA may reduce beyond the initial eight factors related to antidemocratic attitudes,
+short-­term engagement volume, posing challenges for engagement-­ operationalize new factors grounded in other social science theories
+driven business models and supporting the hypothesis that content (38), and measure how this content can impact other experiences
+that provokes strong reactions generates more engagement.                                         online, such as mental health, trust in institutions, civic engagement,
+                                                                                                  or the quality of democratic discourse. By using a design similar to
+Methodological advances and policy implications                                                   that of our study, these future investigations can also examine different
+Our work opens the door to conducting large-­scale causal inference time horizons, from immediate reactions captured through in-­feed
+on social media feed algorithms without requiring “independence by surveys to long-­term impacts assessed through follow-­up surveys con-
+permission” (51) from platforms. Although prior work made important ducted days or even months later.
+advances through randomized controlled trials on the Facebook and                                    As political polarization and societal division become increasingly
+Instagram algorithms (23, 37), these experiments could only proceed linked to social media activity, our findings provide a potential path-
+with negotiated support from Meta’s executives, an arrangement that way for platforms to address these challenges through algorithmic
+may limit the scope and independence of scientific work. Our approach interventions. Together, these interventions may result in algorithms
+enables scientists to test a much broader set of interventions beyond that not only reduce partisan animosity but also promote greater social
+those that platforms might agree to test, fostering a more robust eco- trust and healthier democratic discourse across party lines (38, 40).
+system for independent social media research.
+                                                                                       Materials and methods summary
+Limitations and future directions                                                      Participant recruitment
+Our study focused on a sample of partisan US users restricted to the                   We recruited participants through two online platforms, CloudResearch
+web version of X during the months leading up to a US presidential                     and Bovitz, targeting US residents over 18 years old who self-­identified
+election. This context, marked by a high volume of political content                   as either Republican or Democrat and were active users of X (SM sec-
+and emotional engagement, enabled us to test interventions effectively                 tion S1.1). Qualified individuals were invited to complete a screening
+but may limit the generalizability of the findings beyond a period of                  task, which included installing a browser extension that analyzed their
+heightened political activity (52, 53). Our population was limited to X                X feed. To ensure the interventions could have a meaningful impact
+users with at least 5% of political content, but we intentionally selected             on participants’ feeds, only those with at least 5% of posts related to
+this group to ensure that the interventions were viable.                               politics or social issues were invited to participate. Figure S1 summa-
+   Additionally, the experiment examines short-­term effects—immediate                 rizes the recruitment funnel, including the number of individuals at
+in-­feed responses and post-experiment survey responses measured                       each stage of the process. Participants were not instructed to use X in
+soon after the experiment—but does not address whether these effects                   any particular way, but they received daily reminders if they had not
+persist over time. In additional analysis examining the variation of the               used the platform that day.
+treatment effects by experiment day and the time gap between the end
+of the experiment and when the participants started the post-experiment                Surveys
+survey, we did not find any evidence for immediate decay of the observed               Participants were required to complete a pre-experiment survey that
+effects (SM section S11.5). We also note that in scenarios where this ranking          included questions about their demographics, personal values, affec-
+approach is integrated into the feed algorithm, the intervention would                 tive experiences on social media, and political attitudes (SM section S1.2).
+be continuously applied, and any effects may dissipate once it is turned               At the end of the study, they were asked to complete a post-experiment
+off. Other technical limitations of our approach include the difficulty in             survey with a similar structure but without questions on demographics
+performing cluster-­randomized experiments testing for social influence                or personal values. The surveys took about 20 and 10 min to complete,
+(54) and the inability to collect the full feed inventory for a given user.            respectively. The section of the survey measuring political attitudes
+   Our reliance on in-­f eed surveys to assess immediate responses                     included a question related to our primary outcome, assessing partici-
+to stimuli follows established practices of ecological momentary                       pants’ feelings toward out-­partisans, while the section on affective
+
+Science 27 November 2025                                                                                                                                            5 of 7
+Research Article
+
+experiences on social media included questions related to our second-        REFERENCES AND NOTES
+ary outcomes, measuring how often participants felt angry, sad, ex-          1. E. Bakshy, S. Messing, L. A. Adamic, Political science. Exposure to ideologically diverse
+cited, and calm.                                                                 news and opinion on Facebook. Science 348, 1130–1132 (2015). doi: 10.1126/science.
+                                                                                 aaa1160; pmid: 25953820
+   Throughout the experiment, we also inserted short surveys into
+                                                                             2. W. J. Brady et al., Overperception of moral outrage in online social networks inflates beliefs
+participants’ feeds to measure their feelings in the moment. Each in-­           about intergroup hostility. Nat. Hum. Behav. 7, 917–927 (2023). doi: 10.1038/
+feed survey included either one question about participants’ feelings            s41562-­023-­01582-­0; pmid: 37037990
+toward members of the out-­party or two questions asking how much            3. C. Lee, J. Shin, A. Hong, Does social media use really make people politically polarized?
+they felt one positive emotion (excited or calm) and one negative emo-           Direct and indirect effects of social media use on political polarization in South Korea.
+tion (angry or sad), randomly selected. To minimize survey fatigue,              Telemat. Inform. 35, 245–254 (2018). doi: 10.1016/j.tele.2017.11.005
+once a participant answered a question, they were not shown the same         4. J. T. Feezell, J. K. Wagner, M. Conroy, Exploring the effects of algorithm-­driven news
+                                                                                 sources on political behavior and polarization. Comput. Human Behav. 116, 106626
+type of question for the next 10 minutes and were subsequently less
+                                                                                 (2021). doi: 10.1016/j.chb.2020.106626
+likely to receive that question again.                                       5. A. D. Kramer, J. E. Guillory, J. T. Hancock, Experimental evidence of massive-­scale
+                                                                                 emotional contagion through social networks. Proc. Natl. Acad. Sci. USA. 111, 8788–8790
+Feed reranking implementation                                                    (2014). doi: 10.1073/pnas.1320040111; pmid: 24889601
+To administer the interventions, we developed a browser extension            6. W. J. Brady, K. McLoughlin, T. N. Doan, M. J. Crockett, How social learning amplifies moral
+that intercepted the participants’ original X feeds, sent the posts to a         outrage expression in online social networks. Sci. Adv. 7, eabe5641 (2021). doi: 10.1126/
+remote backend for real-­time analysis, and displayed the reranked               sciadv.abe5641; pmid: 34389534
+                                                                             7. H. Allcott, L. Braghieri, S. Eichmeyer, M. Gentzkow, The welfare effects of social media. Am.
+feeds (SM section S3.2). The backend used a fast, custom-­built classifier
+                                                                                 Econ. Rev. 110, 629–676 (2020). doi: 10.1257/aer.20190658
+to detect political posts (SM section S4.3), and OpenAI’s GPT-­3.5 Turbo     8. R. M. Bond et al., A 61-­million-­person experiment in social influence and political
+model to score the political posts on the eight AAPA dimensions                  mobilization. Nature 489, 295–298 (2012). doi: 10.1038/nature11421; pmid: 22972300
+(SM section S4.4). The reranking process took approximately 3 sec-           9. Z. Tufekci, Twitter and tear gas: The power and fragility of networked protest (Yale Univ. Press, 2017).
+onds and was consistent across all experimental conditions. The              10. J. T. Jost et al., How social media facilitates political protest: Information, motivation, and
+extension also administered in-­feed surveys and logged participants’            social networks. Polit. Psychol. 39 (S1), 85–118 (2018). doi: 10.1111/pops.12478
+
+
+
+
+                                                                                                                                                                                           Downloaded from https://www.science.org on November 27, 2025
+engagement with the feed, including which posts they viewed, liked,          11. L. G. E. Smith et al., Digital traces of offline mobilization. J. Pers. Soc. Psychol. 125,
+                                                                                 496–518 (2023). doi: 10.1037/pspa0000338; pmid: 36780273
+and reposted.
+                                                                             12. M. Zuckerberg, J. Dorsey, S. Pichai, US House Hearing on “Disinformation Nation: Social
+                                                                                 Media’s Role in Promoting Extremism and Misinformation” (2021).
+Experimental design                                                          13. T. Rose-­Stockwell, Outrage machine: How tech amplifies discontent, disrupts democracy—
+We used Bernoulli randomization to assign participants to either the             And what we can do about it (Hachette, 2023).
+Reduced or Increased Exposure experiment, and subsequently to treat-         14. P. Lorenz-­Spreen, L. Oswald, S. Lewandowsky, R. Hertwig, A systematic review of worldwide
+ment and control groups with equal probability (SM section S1.3).                causal and correlational evidence on digital media and democracy. Nat. Hum. Behav. 7,
+Owing to differences in how the two interventions were operational-              74–101 (2023). doi: 10.1038/s41562-­022-­01460-­1; pmid: 36344657
+ized, each experiment had its own control group. To determine the            15. J. A. Tucker, A. Guess, P. Barbera, C. Vaccari, A. Siegel, S. Sanovich, D. Stukal, B. Nyhan,
+                                                                                 Social media, political polarization, and political disinformation: A review of the scientific
+sample size, we conducted a power analysis based on data from a pilot
+                                                                                 literature, SSRN (2018); https://dx.doi.org/10.2139/ssrn.3144139.
+experiment with 70 participants that followed the same experimental          16. V. Oldemburgo de Mello, F. Cheung, M. Inzlicht, Twitter (X) use predicts substantial
+design and analysis procedure. We chose target quotas that enabled               changes in well-­being, polarization, sense of belonging, and outrage. Commun. Psychol. 2,
+us to detect effects of at least two degrees on the feeling thermometer          15 (2024). doi: 10.1038/s44271-­024-­00062-­z; pmid: 39242975
+scale for affective polarization with 95% power. We used randomiza-          17. M. A. Beam, M. J. Hutchens, J. D. Hmielowski, “Facebook news and (de) polarization:
+tion inference to test for imbalances in participants’ characteristics,          Reinforcing spirals in the 2016 US election” in Digital media, political polarization and
+differential attrition rates, and differential attrition patterns between        challenges to democracy (Routledge, 2020), pp. 26–44. doi: 10.4324/9780429243912-­3
+                                                                             18. J. Haidt, C. Bail, Social media and political dysfunction: A collaborative review (ongoing);
+the treatment and control groups in each experiment. We found no
+                                                                                 https://heystacks.com/doc/1185/social-­media-­and-­political-­dysfunction.
+evidence of covariate imbalance or differential attrition.                   19. S. Iyengar, Y. Lelkes, M. Levendusky, N. Malhotra, S. J. Westwood, The origins and
+                                                                                 consequences of affective polarization in the United States. Annu. Rev. Polit. Sci. 22,
+Analysis                                                                         129–146 (2019). doi: 10.1146/annurev-­polisci-­051117-­073034
+As preregistered, to estimate the effects of the interventions on the        20. L. Boxell, M. Gentzkow, J. M. Shapiro, Cross-­country trends in affective polarization. Rev.
+post-experiment outcomes, we used ordinary least squares, regressing             Econ. Stat. 106, 557–565 (2024). doi: 10.1162/rest_a_01160
+the outcome variable on the treatment assignment indicator, the par-         21. S. Iyengar, M. Krupenkin, The strengthening of partisan affect. Polit. Psychol. 39 (S1),
+                                                                                 201–218 (2018). doi: 10.1111/pops.12487
+ticipant’s response to the same question on the pre-experiment survey,
+                                                                             22. M. Saveski, N. Gillani, A. Yuan, P. Vijayaraghavan, D. Roy, Perspective-­taking to reduce
+and a recruitment platform indicator (SM section S1.4). To estimate              affective polarization on social media, in Proceedings of the International AAAI
+the effects on the outcomes measured with in-­feed surveys, we used              Conference on Web and Social Media, vol. 16 (2022), pp. 885–895. doi: 10.1609/
+linear mixed-­effects models to account for the multiple observations            icwsm.v16i1.19343
+per participant. We regressed the outcome on the treatment assign-           23. B. Nyhan et al., Like-­minded sources on Facebook are prevalent but not polarizing. Nature
+ment, the participant’s average response on the same question dur-               620, 137–144 (2023). doi: 10.1038/s41586-­023-­06297-­w; pmid: 37500978
+ing the 3-­day baseline period, and the recruitment platform indicator.      24. J. A. Frimer et al., Incivility is rising among American politicians on Twitter. Soc. Psychol.
+                                                                                 Personal. Sci. 14, 259–269 (2023). doi: 10.1177/19485506221083811
+To estimate heterogeneous treatment effects, we used the same model
+                                                                             25. J. N. Druckman, D. P. Green, S. Iyengar, Does Affective Polarization Contribute to
+specifications but included an interaction between the treatment as-             Democratic Backsliding in America? Ann. Am. Acad. Pol. Soc. Sci. 708, 137–163 (2023).
+signment and the moderator, running one regression per moderator                 doi: 10.1177/00027162241228952
+(SM section S8). As preregistered, we considered party identification,       26. J. Stray, Designing recommender systems to depolarize. arXiv:2107.04953 [cs.IR] (2021).
+party strength, and the proportion of political content in the partici-      27. M. Barnidge, Exposure to political disagreement in social media versus face-­to-­face and
+pant’s feed during the baseline period as primary moderators, and                anonymous online settings. Polit. Commun. 34, 302–321 (2017).
+gender, race, age, income, and socioeconomic ladder as secondary                 doi: 10.1080/10584609.2016.1235639
+                                                                             28. A. Bor, M. B. Petersen, The psychology of online political hostility: A comprehensive,
+moderators. To account for testing multiple hypotheses, we applied
+                                                                                 crossnational test of the mismatch hypothesis. Am. Polit. Sci. Rev. 116, 1–18 (2022).
+false discovery rate adjustment (SM section S6). Finally, to appropri-           doi: 10.1017/S0003055421000885
+ately model the nature of the outcomes, we used quasi-­Poisson regres-       29. A. Banks, E. Calvo, D. Karol, S. Telhami, # polarizedfeeds: Three experiments on
+sion to estimate the effects on engagement volume and Beta regression            polarization, framing, and social media. Int. J. Press/Polit. 26, 609–634 (2021).
+to estimate the effects on engagement rates (SM section S9).                     doi: 10.1177/1940161220940964
+
+
+Science 27 November 2025                                                                                                                                                        6 of 7
+                                                                                                                                                                       Research Article
+
+30. S. Rathje, J. J. Van Bavel, S. van der Linden, Out-­group animosity drives engagement on       49. E. Santoro, D. E. Broockman, The promise and pitfalls of cross-­partisan conversations for
+    social media. Proc. Natl. Acad. Sci. USA. 118, e2024292118 (2021). doi: 10.1073/                   reducing affective polarization: Evidence from randomized experiments. Sci. Adv. 8,
+    pnas.2024292118; pmid: 34162706                                                                    eabn5515 (2022). doi: 10.1126/sciadv.abn5515; pmid: 35731881
+31. J. J. Van Bavel, S. Rathje, E. Harris, C. Robertson, A. Sternisko, How social media shapes     50. E. Finkel, A. Landry, J. Druckman, J. Van Bavel, R. Hoyle, Partisan Antipathy and the Erosion
+    polarization. Trends Cogn. Sci. 25, 913–916 (2021). doi: 10.1016/j.tics.2021.07.013;               of Democratic Norms (Northwestern Institute for Policy Research, 2024).
+    pmid: 34429255                                                                                 51. M. W. Wagner, Independence by permission. Science 381, 388–391 (2023). doi: 10.1126/
+32. E. Suhay, E. Bello-­Pardo, B. Maurer, The polarizing effects of online partisan criticism:         science.adi2430; pmid: 37499031
+    Evidence from two experiments. Int. J. Press/Polit. 23, 95–115 (2018).                         52. C. Budak, B. Nyhan, D. M. Rothschild, E. Thorson, D. J. Watts, Misunderstanding the harms
+    doi: 10.1177/1940161217740697                                                                      of online misinformation. Nature 630, 45–53 (2024). doi: 10.1038/s41586-­024-­07417-­w;
+33. J. W. Kim, A. Guess, B. Nyhan, J. Reifler, The distorting prism of social media: How self          pmid: 38840013
+    selection and exposure to incivility fuel online comment toxicity. J. Commun. 71, 922–946      53. D. Eckles, Testimony before the Senate Subcommittee on Communications, Media, and
+    (2021). doi: 10.1093/joc/jqab034                                                                   Broadband: Algorithmic transparency and assessing effects of algorithmic ranking
+34. J. Cho, S. Ahmed, M. Hilbert, B. Liu, J. Luu, Do search algorithms endanger democracy? An          (2022); https://www.commerce.senate.gov/services/files/62102355-DC26-4909-BF90-
+    experimental investigation of algorithm effects on political polarization. J. Broadcast.           8FB068145F18.
+    Electron. Media 64, 150–172 (2020). doi: 10.1080/08838151.2020.1757365                         54. D. Eckles, B. Karrer, J. Ugander, Design and analysis of experiments in networks: Reducing
+35. R. Levy, Social media, news consumption, and polarization: Evidence from a field                   bias from interference. J. Causal Inference 5, 20150021 (2017). doi: 10.1515/jci-­2015-­0021
+    experiment. Am. Econ. Rev. 111, 831–870 (2021). doi: 10.1257/aer.20191777                      55. D. J. Zizzo, Experimenter demand effects in economic experiments. Exp. Econ. 13, 75–98
+36. C. A. Bail et al., Exposure to opposing views on social media can increase political               (2010). doi: 10.1007/s10683-­009-­9230-­z
+    polarization. Proc. Natl. Acad. Sci. USA. 115, 9216–9221 (2018). doi: 10.1073/                 56. M. Yarchi, C. Baden, N. Kligler-­Vilenchik, Political polarization on the digital sphere: A
+    pnas.1804840115; pmid: 30154168                                                                    crossplatform, over-­time analysis of interactional, positional, and affective polarization on
+37. A. M. Guess et al., How do social media feed algorithms affect attitudes and behavior in an        social media. Polit. Commun. 38, 98–139 (2021). doi: 10.1080/10584609.2020.1785067
+    election campaign? Science 381, 398–404 (2023). doi: 10.1126/science.abp9364;                  57. A. Moehring et al., Better Feeds: Algorithms That Put People First (Knight-­Georgetown
+    pmid: 37498999                                                                                     Institute, 2025); https://kgi.georgetown.edu/research-and-commentary/better-feeds/.
+38. M. Bernstein et al., Embedding Societal Values into Social Media Algorithms. J. Online         58. T. Piccardi et al., Reranking partisan animosity in algorithmic social media feeds alters
+    Trust Saf. 2, 1 (2023). doi: 10.54501/jots.v2i1.148                                                affective polarization, Dryad (2025); https://doi.org/10.5061/dryad.hmgqnk9tj.
+39. J. G. Voelkel et al., Megastudy testing 25 treatments to reduce antidemocratic attitudes
+                                                                                                   ACKNOWLEDGMENTS
+
+
+
+
+                                                                                                                                                                                                             Downloaded from https://www.science.org on November 27, 2025
+    and partisan animosity. Science 386, eadh4764 (2024). doi: 10.1126/science.adh4764;
+    pmid: 39418366                                                                                 We thank P. Barbera, D. Eckles, M. Gentzkow, D. Ong, J. Pan, S. Pentland, J. Ugander, R. Willer,
+40. C. Jia, M. S. Lam, M. C. Mai, J. T. Hancock, M. S. Bernstein, Embedding democratic values      and the anonymous reviewers for helpful feedback and discussions. M.B. discloses an
+    into social media AIs via societal objective functions. Proc. ACM Hum. Comput. Interact. 8,    additional affiliation as a cofounder of Simile AI, Inc., which builds AI human behavioral
+                                                                                                   simulations. Funding: This work was supported in part by the National Science Foundation
+    163 (2024).
+                                                                                                   under awards IIS-­2403433, IIS-­2403434, IIS-­2403435, and BCS-­2214203; the Swiss National
+41. T. Piccardi et al., Reranking Social Media Feeds: A Practical Guide for Field Experiments.     Science Foundation under award P500PT-­206953; and a Hoffman-­Yee grant from the
+    arXiv:2406.19571 [cs.SI] (2024).                                                               Stanford Institute for Human-­Centered Artificial Intelligence. Author contributions:
+42. C. McClain, M. Anderson, R. Gelles-­Watnick, How Americans Navigate Politics on TikTok,        Conceptualization: T.P., M.S., C.J., J.T., J.H., M.B.; Methodology: T.P., M.S., C.J., J.T., J.H., M.B.;
+    X, Facebook and Instagram (2024); https://www.pewresearch.org/internet/2024/06/12/             Software: T.P.; Validation: T.P., M.S.; Formal analysis: T.P., M.S.; Investigation: T.P., M.S.;
+    how-­americans-­navigate-­politics-­on-­tiktok-­x-­facebook-­and-­instagram/.                  Resources: T.P., M.S., C.J.; Data curation: T.P., M.S.; Writing – original draft: T.P., M.S., C.J.,
+43. S. Iyengar, G. Sood, Y. Lelkes, Affect, not ideology: A social identity perspective on         M.B.; Writing – review & editing: T.P., M.S., C.J., J.H., J.T., M.B.; Supervision: J.T., J.H., M.B.;
+    polarization. Public Opin. Q. 76, 405–431 (2012). doi: 10.1093/poq/nfs038                      Project administration: T.P., M.S., C.J., M.B.; Funding acquisition: M.S., C.J., J.H., M.B.
+                                                                                                   Competing interests: The authors declare that they have no competing interests. Data and
+44. J. A. Russell, A circumplex model of affect. J. Pers. Soc. Psychol. 39, 1161–1178 (1980).
+                                                                                                   materials availability: The repository associated with the manuscript, containing
+    doi: 10.1037/h0077714                                                                          aggregated data and code required to reproduce the paper results, is available at Dryad (58).
+45. S. Bestvater, S. Shah, G. River, A. Smith, Politics on twitter: One-­third of tweets from us   The preregistration of the study is available at OSF (48). License information: Copyright ©
+    adults are political (2022); https://www.pewresearch.org/politics/2022/06/16/                  2025 the authors, some rights reserved; exclusive licensee American Association for the
+    politics-­on-­twitter-­one-­third-­of-­tweets-­from-­u-­s-­adults-­are-­political/.            Advancement of Science. No claim to original US government works. https://www.science.
+46. S. Shiffman, A. A. Stone, M. R. Hufford, Ecological momentary assessment. Annu. Rev.           org/about/science-­licenses-­journal-­article-­reuse
+    Clin. Psychol. 4, 1–32 (2008). doi: 10.1146/annurev.clinpsy.3.022806.091415;
+    pmid: 18509902                                                                                 SUPPLEMENTARY MATERIALS
+47. M. N. Stagnaro et al., Representativeness versus response quality: Assessing nine opt-­in      science.org/doi/10.1126/science.adu5584
+                                                                                                   Methods and Materials; Ethical Considerations; Supplementary Text; Figs. S1 to S24;
+    online survey samples. OSF Preprints 2 (2024).
+                                                                                                   Tables S1 to S32; References (59–81); MDAR Reproducibility Checklist
+48. T. Piccardi et al., Do Feed Rankings Promoting or Demoting Political Distrust and Animosity
+    Impact Affective Experience and Polarization?, OSF (2024); https://doi.org/10.17605/           Submitted 21 November 2024; resubmitted 14 August 2025; accepted 29 September 2025
+    OSF.IO/QY9AX.                                                                                                                                                          10.1126/science.adu5584
+
+
+
+
+Science 27 November 2025                                                                                                                                                                           7 of 7
+

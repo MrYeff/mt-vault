@@ -1,0 +1,85 @@
+{
+  "audit": "Independent final check of entries 21-25 after latest corrections.",
+  "date": "2026-09-29",
+  "scope": [
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "method": "Reviewed the initial and re-audit records, current notes, and primary source text/metadata; focused source checks on #21 bibliography caveat and #24 status-quo rule, predictors/validation, recommendation randomization, and replication limitation. No paper notes edited.",
+  "notes": [
+    {
+      "number": 21,
+      "filename": "Construct User Guide.md",
+      "result": "PASS",
+      "note_edited": false,
+      "primary_source": "https://www.cmu.edu/casos-center/publications/cmu-s3d-24-105.pdf",
+      "verified": [
+        "The current note adds a visible caveat that the 47 captured links have not been reconciled item-by-item against the source References section; the caveat makes no source-completeness claim.",
+        "Re-audit checks of the five-phase execution sequence (Think, Update, Intercept, Communicate, Clean Up), synchronous phase barrier, and Standard Interaction Model network distinctions/partner selection are source-supported by the CMU report.",
+        "Footnotes r1-r4 identify source sections/pages for guide description, networks, program flow, and Standard Interaction Model."
+      ],
+      "exact_issues": [],
+      "limits": "The 47 links remain unmapped against the source bibliography, as the note explicitly states."
+    },
+    {
+      "number": 22,
+      "filename": "Contact Patterns in a High School- A Comparison between Data Collected Using Wearable Sensors- Contact Diaries and Friendship Surveys.md",
+      "result": "PASS",
+      "note_edited": false,
+      "primary_source": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0136497&type=printable",
+      "verified": [
+        "Carry-forward re-audit confirms article abstract, empirical comparisons, date, DOI, and publisher PDF source.",
+        "Five unresolved references are explicitly stated as unreconciled with the primary References section."
+      ],
+      "exact_issues": [],
+      "limits": "Bibliography item mapping remains pending; carry-forward status is PASS_WITH_BIBLIOGRAPHY_CAVEAT."
+    },
+    {
+      "number": 23,
+      "filename": "Dunbar-s Number in Motion- Agent-Based Simulations of Friendship Formation.md",
+      "result": "PASS_WITH_ACCESS_LIMIT",
+      "note_edited": false,
+      "primary_source": "https://orb.binghamton.edu/nejcs/vol6/iss1/7/",
+      "verified": [
+        "Abstract-level summary, research questions, publication metadata, and explicit model-extraction skip agree with the accessible journal record/abstract.",
+        "The note states that bibliography verification is unavailable because the PDF could not be accessed; this is not a claim that no bibliography exists."
+      ],
+      "exact_issues": [],
+      "limits": "Full paper, implementation rules, and bibliography were not accessible; this is abstract-only PASS as already audited."
+    },
+    {
+      "number": 24,
+      "filename": "Exploring Trade-Offs for Online Mental Health Matching- Agent-Based Modeling Study.md",
+      "result": "PASS",
+      "note_edited": false,
+      "primary_source": "https://formative.jmir.org/2024/1/e58241/PDF",
+      "verified": [
+        "Status-quo rule is accurately stated: counselors choose randomly from the available seeker queue, with choice-time modeled exponentially at λ=1.25 (Methods, PDF p.6).",
+        "Alternative policies use applicant-proposing deferred acceptance; counselors accept the policy recommendation with probability 0.90 and make a random choice with probability 0.10. The seven named policies are correct (PDF pp.8-10).",
+        "Predictor summary is accurate: random forests use gender, birth year, and topic; rating prediction reports 0.72 accuracy/F1 with 80/20 split and SMOTE-balanced training, while blocking prediction reports 0.91 accuracy/F1 with an 80/20 split (PDF pp.7-8).",
+        "Validation reports Pearson correlations of 0.99 for rating distributions and 0.949 for blocking distributions; these and the model distribution comparisons are accurately summarized (PDF pp.7-8).",
+        "The replication permits one chat at a time for seekers and counselors, while the live platform permits counselors multiple simultaneous chats; the authors cite this as a likely reason simulated matching is lower (78.35% vs 83.27%) (PDF p.8).",
+        "Topic-based recommendation in the Where Does it Apply / What Can it Answer summary and outcome measures remain appropriately framed as simulation results. Footnotes r3-r6 now point to specific source procedures/pages."
+      ],
+      "exact_issues": [],
+      "limits": "No material predictor, validation, status-quo, recommendation randomization, or replication-limit issue remains in the corrected note."
+    },
+    {
+      "number": 25,
+      "filename": "Exposure to opposing views on social media can increase political polarization.md",
+      "result": "PASS",
+      "note_edited": false,
+      "primary_source": "https://dlab.epfl.ch/teaching/spring2019/cs718/papers/bail2018exposure.pdf",
+      "verified": [
+        "Carry-forward audit confirms abstract, research questions, title/authors/date/DOI, experiment summary, and correct omission of a model section.",
+        "Bibliography caveat correctly says 61 links including three unresolved do not reconcile with the primary article’s 47 numbered references and mapping is pending."
+      ],
+      "exact_issues": [],
+      "limits": "Links remain individually unreconciled; caveat is adequate. Result carried forward from prior re-audit."
+    }
+  ],
+  "overall": "PASS: #21, #22, #24, and #25 pass; #23 passes with its existing abstract-only access limit. The #21 bibliography caveat accurately states the mapping limitation, and all specified #24 corrections are supported by the primary publisher PDF."
+}

@@ -1,0 +1,21 @@
+{
+  "audited_at": "2026-09-30",
+  "auditor": "root",
+  "entry": 42,
+  "note_path": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+  "status": "PASS with documented source conflicts",
+  "source_read": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+  "source_access": "Full PDF read locally, mathematical text visually checked on rendered pages.",
+  "source_locations": [
+    "§2.1 equations1–2: simultaneous updates, convergence parameter",
+    "§2.2 and Figure1: conflicting population counts",
+    "§3: local square lattice",
+    "§4.1 pp9–10 PDF: binary vectors, Hamming distance, probabilistic persuasion, threshold wording conflict"
+  ],
+  "findings": [
+    "Corrected note now preserves continuous and binary-vector mechanisms; prior claims excluding binary opinions and μ=.5 were incorrect.",
+    "Paper has N=1000 prose versus N=2000 Figure1 caption.",
+    "Vector rule has agreement≥m−d versus parenthetical disagreement≤d−1; both preserved without silently resolving the conflict."
+  ],
+  "remaining": "Notation compacting must preserve these verified rules; source conflicts must stay visible."
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-30",
+  "task": "Presentation-only formatting for case-sensitive Python sorted entry indices 67–80 (paths[66:80]).",
+  "changed_files": [
+    {
+      "path": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "presentation_change": "Split a long model-results paragraph into concise bullets; preserved wording and the source footnote."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+      "presentation_change": "Converted model-rule prose to concise bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "presentation_change": "Split a long model-caveat bullet into shorter bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "presentation_change": "Formatted model-rule and notation-caveat paragraphs as bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "presentation_change": "Formatted model scope and payoff description as bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Value-based large language model agent simulation for mutual evaluation of trust and interpersonal closeness.md",
+      "presentation_change": "Formatted experiment description as concise bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "presentation_change": "Split the model-update caveat into concise bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Why Does Facebook Fail to Catalyze Diverse Friendship Formations.md",
+      "presentation_change": "Formatted the source conflict and design description as separate bullets; preserved wording and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "presentation_change": "Split the demonstration description into concise bullets; preserved wording and citations."
+    }
+  ],
+  "audit_status": "No source audit performed. Existing read statuses, warning flags, abstracts, references, metadata, model mechanisms, conflicts, and footnote definitions were left unchanged."
+}

@@ -1,0 +1,699 @@
+{
+  "date": "2026-09-30",
+  "auditor": "strong_review_41_53",
+  "method": "Full primary source read, current claims and footnotes checked; own corrections remain failed pending independent re-audit. No withdrawn cheap reports treated as evidence.",
+  "papers": [
+    {
+      "index": 67,
+      "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "source_url": "https://arxiv.org/pdf/2112.00626",
+      "source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+      "source_sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4",
+      "full_source_read": true,
+      "claim_matrix": [
+        {
+          "claim": "metadata/abstract",
+          "source_passage": "ICWSM publisher landing page authors/date/DOI/abstract; manuscript v1 abstract differs but note explicitly distinguishes versions",
+          "result": "supported"
+        },
+        {
+          "claim": "schema/BCM/EPI/schedule",
+          "source_passage": "§§3–4, Algorithm 1 and Eqs. 1–2: 4 successful interactions; rejected recs do not advance interaction count; listener-only update",
+          "result": "supported"
+        },
+        {
+          "claim": "initialization/recommenders",
+          "source_passage": "§§3.3,4.1: LFR, eta/μ grid, scores with standardization; DJI variable and OBA denominator source defects explicitly disclosed",
+          "result": "supported"
+        },
+        {
+          "claim": "experimental constants/outputs/limits",
+          "source_passage": "§§4–6, figures, NCI/RWC, paired null, interventions, 500 runs",
+          "result": "supported"
+        },
+        {
+          "claim": "footnotes r1–r8",
+          "source_passage": "Each cited passage verified across full source and publisher abstract",
+          "result": "supported"
+        }
+      ],
+      "model_status": "pass",
+      "whole_file_status": "failed",
+      "findings": [
+        "Full bibliography read; existing unresolved links have no target notes. They cannot establish a complete source-reference mapping.",
+        "No model correction needed; retain warning for bibliography."
+      ],
+      "final_note_sha256": "e8e5392c7ba72e1c86da58e3a1044d3f2985cc24bab08ffb8c7d7a89f4105b98"
+    },
+    {
+      "index": 68,
+      "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "source_url": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf",
+      "source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d.pdf",
+      "source_sha256": "a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d",
+      "full_source_read": true,
+      "claim_matrix": [
+        {
+          "claim": "metadata/abstract",
+          "source_passage": "PDF cover, printed p1015: Scott L. Feld, March1981; abstract OCR errors corrected by visually reading original",
+          "result": "corrected"
+        },
+        {
+          "claim": "research questions/constructs",
+          "source_passage": "pp1015–1019 foci/activity/interaction/sentiment and explanatory problem",
+          "result": "supported"
+        },
+        {
+          "claim": "mechanism/propositions",
+          "source_passage": "pp1019–1028 all 5 basic, transitivity, bridging, density propositions and Fig2; missing feedback and density factors restored",
+          "result": "corrected"
+        },
+        {
+          "claim": "empirical claims/limits",
+          "source_passage": "pp1028–1031 Tables1–2, three best friends, 57% vs17%; illustrative not critical tests",
+          "result": "corrected"
+        },
+        {
+          "claim": "scope",
+          "source_passage": "pp1031–1034 structural theory; non-focal ties and overriding mechanisms restored",
+          "result": "corrected"
+        },
+        {
+          "claim": "footnotes r1–r4",
+          "source_passage": "All passages visually verified; r3 locator expanded to actual formal definitions/propositions",
+          "result": "corrected"
+        }
+      ],
+      "model_status": "corrected_pending_independent_reaudit",
+      "whole_file_status": "failed",
+      "findings": [
+        "All 22 PDF pages visually read including cover and full bibliography.",
+        "Original references preserved; source bibliography missing/mismapped current entries, including The Human Group and Network Density among Urban Families. Original also includes PartII role structures not in source bibliography.",
+        "Own corrections require independent re-audit."
+      ],
+      "final_note_sha256": "e29fe0c54277954f8681c13e791d7876299545d2707b037a67b74a2b63545cc7"
+    },
+    {
+      "index": 70,
+      "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+      "source_url": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf",
+      "source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534.pdf",
+      "source_sha256": "6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534",
+      "full_source_read": true,
+      "claim_matrix": [
+        {
+          "claim": "metadata/abstract",
+          "source_passage": "Title/author block and abstract p0 verified; source identifies paper year2017. Exact month/day and existing DOI10.21307/joss-2018-002 were not independently established from this PDF.",
+          "result": "partially_verified"
+        },
+        {
+          "claim": "schema/actual vs perceived knowledge",
+          "source_passage": "pp4–7, K-bit schemas; fixedvisible groups, personal/group/global hierarchy",
+          "result": "supported"
+        },
+        {
+          "claim": "lookup/activation/forgetting",
+          "source_passage": "pp6,15–16, visual Eqs1–2: exact single-interaction bound restored, no universal repeated update specified",
+          "result": "corrected"
+        },
+        {
+          "claim": "experiment1",
+          "source_passage": "pp8–9 Table2 all144×10 factors/constants plus initialization and binary task definition",
+          "result": "corrected"
+        },
+        {
+          "claim": "experiment2",
+          "source_passage": "p10 Table3, pp15–17 memory analysis/runtime: 8×10,4populations,365turns",
+          "result": "supported"
+        },
+        {
+          "claim": "results/scope/footnotes r1–r5",
+          "source_passage": "pp11–19 and stylized facts tables1,6; groupuniversality, fixedvisibility, groupnumber assumptions",
+          "result": "supported"
+        }
+      ],
+      "model_status": "corrected_pending_independent_reaudit",
+      "whole_file_status": "failed",
+      "findings": [
+        "Full 23-page PDF read and equation page visually checked.",
+        "Original references preserved but unresolved placeholders and source mapping not established; whole-file remains failed.",
+        "Own additions require independent re-audit.",
+        "Specified actual knowledge as K-bit vector and restored binary classification competence measurement.",
+        "Metadata follow-up: existing publication day2017-01-01 and DOI require authoritative registry/publisher verification; do not claim them independently verified from PDF."
+      ],
+      "final_note_sha256": "6571ee09ad129714e7965d229f9b080a60650e73f2dfd5858a21b63033a6f027"
+    },
+    {
+      "index": 71,
+      "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
+      "source_url": "https://arxiv.org/pdf/2603.19626",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5.html",
+          "sha256": "a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922.txt",
+          "sha256": "29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872.txt",
+          "sha256": "28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Read full main article and bibliography; appendix prose and classifier prompt through section7.1, and tablesS1–S7 plus beginningS8. TablesS8 remainder–S21 and final appendices not completed. No changes and no pass claim.",
+      "claim_matrix": [],
+      "findings": [
+        "Source URL without version resolves to arxiv2603.19626v2 dated2026-08-18; current note reflects earlier version. Version/abstract/author changes must be reconciled before pass.",
+        "Main article and appendix differ in some sampling/treatment details; study methods available in full appendix for follow-up."
+      ],
+      "final_note_sha256": "0585a3da4d7f1abaee3d84b671916fea606209ce064e0bd98bb96607571663a9"
+    },
+    {
+      "index": 72,
+      "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
+      "source_url": "https://www.cambridge.org/core/journals/behavioural-public-policy/article/contact-hypothesis-reevaluated/142C913E7FA9E121277B29E994124EC5",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216.html",
+          "sha256": "1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8.txt",
+          "sha256": "aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f.txt",
+          "sha256": "084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Downloaded/cached source available; no completed independent full-source audit in this task.",
+      "claim_matrix": [],
+      "findings": [
+        "Audit warning retained; deferred at user-requested wrap-up."
+      ],
+      "final_note_sha256": "3eaf312a3e9299c3a9ba407c68413ed9fba926cbbf164d3df199ff3590aa0727"
+    },
+    {
+      "index": 73,
+      "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "source_url": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html",
+          "sha256": "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt",
+          "sha256": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt",
+          "sha256": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Downloaded/cached source available; no completed independent full-source audit in this task.",
+      "claim_matrix": [],
+      "findings": [
+        "Audit warning retained; deferred at user-requested wrap-up."
+      ],
+      "final_note_sha256": "391077b7e17c14266818579ab1da97b59245a3d19026b74a4a25dfe826b77902"
+    },
+    {
+      "index": 74,
+      "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "source_url": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+          "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab.html",
+          "sha256": "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e.html",
+          "sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+          "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Downloaded/cached source available; no completed independent full-source audit in this task.",
+      "claim_matrix": [],
+      "findings": [
+        "Audit warning retained; deferred at user-requested wrap-up."
+      ],
+      "final_note_sha256": "3c8698c945deeca0c77ddab2b1cff3cc9189cc33513e58fc6ec4ed7844ef08a6"
+    },
+    {
+      "index": 76,
+      "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "source_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc.png",
+          "sha256": "87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8.png",
+          "sha256": "4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652.png",
+          "sha256": "94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6.pdf",
+          "sha256": "54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b.txt",
+          "sha256": "732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Downloaded/cached source available; no completed independent full-source audit in this task.",
+      "claim_matrix": [],
+      "findings": [
+        "Audit warning retained; deferred at user-requested wrap-up."
+      ],
+      "final_note_sha256": "e2c2d881335227dcb2f11bb28ff3f85191265bc1e4285d4c1b9b2e8e94ac3904"
+    },
+    {
+      "index": 78,
+      "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "source_url": "https://www.jasss.org/26/3/9.html",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705.html",
+          "sha256": "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d.txt",
+          "sha256": "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d.txt",
+          "sha256": "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Downloaded/cached source available; no completed independent full-source audit in this task.",
+      "claim_matrix": [],
+      "findings": [
+        "Audit warning retained; deferred at user-requested wrap-up."
+      ],
+      "final_note_sha256": "5d5463c41d1f8e3f7ae5a81f9942c94b4a6309d29b16ee185ad7eb7600931786"
+    },
+    {
+      "index": 80,
+      "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "source_url": "https://arxiv.org/pdf/2408.00818",
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96.html",
+          "sha256": "b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+          "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+          "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32"
+        }
+      ],
+      "full_source_read": false,
+      "model_status": "unfinished",
+      "whole_file_status": "failed",
+      "actual_coverage": "Downloaded/cached source available; no completed independent full-source audit in this task.",
+      "claim_matrix": [],
+      "findings": [
+        "Audit warning retained; deferred at user-requested wrap-up."
+      ],
+      "final_note_sha256": "e22f471c37d953b5534db3243855b96c2c03798d2489c4ce9dbf838ed40a4e59"
+    }
+  ],
+  "checkpoint": "User requested wrap-up; remaining source audits deferred. Coverage is explicitly partial for 71 and not completed for 72,73,74,76,78,80. No audit flag cleared.",
+  "required_guides_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md",
+    "vault/Literature/Papers/Template.md"
+  ],
+  "source_inventory": [
+    {
+      "index": 67,
+      "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "primary_url": "https://arxiv.org/pdf/2112.00626",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+          "bytes": 4691522,
+          "sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+          "bytes": 75559,
+          "sha256": "53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60"
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "primary_url": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d.pdf",
+          "bytes": 2056521,
+          "sha256": "a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/ddaf6072011c8b22992fd52acc953b742c630bbc4af67f17b989640a3684a515.txt",
+          "bytes": 22,
+          "sha256": "ddaf6072011c8b22992fd52acc953b742c630bbc4af67f17b989640a3684a515"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7cbc00db5d08fd068d18262dc7aa4751a2f826cb52d0de9807444d8d79f87eff.png",
+          "bytes": 93337,
+          "sha256": "7cbc00db5d08fd068d18262dc7aa4751a2f826cb52d0de9807444d8d79f87eff"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/1edd5552127d19647ece87d6b4d87239aa70e17c63ea3d1573a97196130149ab.png",
+          "bytes": 305714,
+          "sha256": "1edd5552127d19647ece87d6b4d87239aa70e17c63ea3d1573a97196130149ab"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/48e7e69e81ce84657a35918097b5141a3b62f00adca1a72b641b8c62fa19588d.png",
+          "bytes": 317899,
+          "sha256": "48e7e69e81ce84657a35918097b5141a3b62f00adca1a72b641b8c62fa19588d"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/c4509f6ddf657b550c024feaf47b2bfe957b3341af1162fbdcd34bdfe70fa0d8.png",
+          "bytes": 336993,
+          "sha256": "c4509f6ddf657b550c024feaf47b2bfe957b3341af1162fbdcd34bdfe70fa0d8"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b8c97ad0f6d20d792ca3c1072efb3e12734cf726779fc3767ffb2f8b7f36b1ef.png",
+          "bytes": 311435,
+          "sha256": "b8c97ad0f6d20d792ca3c1072efb3e12734cf726779fc3767ffb2f8b7f36b1ef"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/39885cd64dfd0772c7fa3f6dc6eee039c4af9b2a168972fa4be0795e8d0a2d73.png",
+          "bytes": 300322,
+          "sha256": "39885cd64dfd0772c7fa3f6dc6eee039c4af9b2a168972fa4be0795e8d0a2d73"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/ae05e916ca31a986892e8a94f3b5af9b00a55c73410263a516db377f6382aa1c.png",
+          "bytes": 321916,
+          "sha256": "ae05e916ca31a986892e8a94f3b5af9b00a55c73410263a516db377f6382aa1c"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/895b8fdaad96728151111472d293a3de35e2f70f17d7cbf547b40a7fd9a0b27b.png",
+          "bytes": 280560,
+          "sha256": "895b8fdaad96728151111472d293a3de35e2f70f17d7cbf547b40a7fd9a0b27b"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/649d03f92f3dac3d399c71bb53f4af890348d89915e715fdc48c50ceef7f749f.png",
+          "bytes": 299249,
+          "sha256": "649d03f92f3dac3d399c71bb53f4af890348d89915e715fdc48c50ceef7f749f"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/3bf6ec241b245fd6575c5d6eb13a6ddb7842049d697b69b525160d3b590b7617.png",
+          "bytes": 310536,
+          "sha256": "3bf6ec241b245fd6575c5d6eb13a6ddb7842049d697b69b525160d3b590b7617"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/3426f39850dfae0e7111f50037e25826aa8c3e284c845400b21b45f5e2c9b77c.png",
+          "bytes": 321364,
+          "sha256": "3426f39850dfae0e7111f50037e25826aa8c3e284c845400b21b45f5e2c9b77c"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0aeb28c5b5c294506506e813efdbb5818a2a9eb6f93f41fa1394234508897be4.png",
+          "bytes": 298221,
+          "sha256": "0aeb28c5b5c294506506e813efdbb5818a2a9eb6f93f41fa1394234508897be4"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0d94cc1702a6d5b1b00e1acdc519e1c94b205c7f24cb2e5be9a2eee7f4c8405b.png",
+          "bytes": 195372,
+          "sha256": "0d94cc1702a6d5b1b00e1acdc519e1c94b205c7f24cb2e5be9a2eee7f4c8405b"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/f912813e31888a6db2d80d96459475d968d726292616aa9b21d615ae7fa9a483.png",
+          "bytes": 260813,
+          "sha256": "f912813e31888a6db2d80d96459475d968d726292616aa9b21d615ae7fa9a483"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/2fda2460869405d91bbff9de678258977b892d5995a3158ff8b6487e10b237d1.png",
+          "bytes": 300043,
+          "sha256": "2fda2460869405d91bbff9de678258977b892d5995a3158ff8b6487e10b237d1"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9a662e2338019697b4454f6bd38803117fd7be3b61b13ed090575385c99b878a.png",
+          "bytes": 231164,
+          "sha256": "9a662e2338019697b4454f6bd38803117fd7be3b61b13ed090575385c99b878a"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/25345a1a5b445f19727564cbe470c45ed6c6d18d3819fcffa3dad20bc7391720.png",
+          "bytes": 282399,
+          "sha256": "25345a1a5b445f19727564cbe470c45ed6c6d18d3819fcffa3dad20bc7391720"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/71190941efa3e11928229452b36165e09c7ed8b6614201476f1a43b3152be35d.png",
+          "bytes": 319488,
+          "sha256": "71190941efa3e11928229452b36165e09c7ed8b6614201476f1a43b3152be35d"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9e6cc7866768be806bbd370fc0fd86153ba8be2c3019c68d8753d1f4badfa312.png",
+          "bytes": 343410,
+          "sha256": "9e6cc7866768be806bbd370fc0fd86153ba8be2c3019c68d8753d1f4badfa312"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/8f3df68650e2caccb92383be53cd59f615e264ed89d2439df8f8a54ab55cb618.png",
+          "bytes": 314148,
+          "sha256": "8f3df68650e2caccb92383be53cd59f615e264ed89d2439df8f8a54ab55cb618"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/86e5c063fba7c381026c464fc26cf90929e357378e435bad74a897163fd63377.png",
+          "bytes": 303849,
+          "sha256": "86e5c063fba7c381026c464fc26cf90929e357378e435bad74a897163fd63377"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/74e60895eedff625b76eba7247949bd7aa6b761c27226bec4f509c7e8f17f726.png",
+          "bytes": 279796,
+          "sha256": "74e60895eedff625b76eba7247949bd7aa6b761c27226bec4f509c7e8f17f726"
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+      "primary_url": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534.pdf",
+          "bytes": 420291,
+          "sha256": "6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543.txt",
+          "bytes": 63022,
+          "sha256": "1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/83ec3778e1081e7e810c852543b7c0901f86c8a4a0e09e2aa1096164d78aefae.png",
+          "bytes": 337447,
+          "sha256": "83ec3778e1081e7e810c852543b7c0901f86c8a4a0e09e2aa1096164d78aefae"
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
+      "primary_url": "https://arxiv.org/pdf/2603.19626",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872.txt",
+          "bytes": 153800,
+          "sha256": "28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5.html",
+          "bytes": 645767,
+          "sha256": "a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922.txt",
+          "bytes": 160667,
+          "sha256": "29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922"
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
+      "primary_url": "https://www.cambridge.org/core/journals/behavioural-public-policy/article/contact-hypothesis-reevaluated/142C913E7FA9E121277B29E994124EC5",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f.txt",
+          "bytes": 102473,
+          "sha256": "084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216.html",
+          "bytes": 1209367,
+          "sha256": "1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8.txt",
+          "bytes": 113814,
+          "sha256": "aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8"
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "primary_url": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt",
+          "bytes": 135128,
+          "sha256": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html",
+          "bytes": 1859944,
+          "sha256": "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt",
+          "bytes": 135128,
+          "sha256": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "primary_url": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+          "bytes": 79169,
+          "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab.html",
+          "bytes": 213853,
+          "sha256": "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e.html",
+          "bytes": 491828,
+          "sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+          "bytes": 79169,
+          "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f"
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "primary_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc.png",
+          "bytes": 258036,
+          "sha256": "87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652.png",
+          "bytes": 227397,
+          "sha256": "94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8.png",
+          "bytes": 273953,
+          "sha256": "4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6.pdf",
+          "bytes": 235931,
+          "sha256": "54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b.txt",
+          "bytes": 84978,
+          "sha256": "732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b"
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "primary_url": "https://www.jasss.org/26/3/9.html",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d.txt",
+          "bytes": 99437,
+          "sha256": "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705.html",
+          "bytes": 154474,
+          "sha256": "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d.txt",
+          "bytes": 99437,
+          "sha256": "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d"
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "primary_url": "https://arxiv.org/pdf/2408.00818",
+      "files": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+          "bytes": 113920,
+          "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96.html",
+          "bytes": 292665,
+          "sha256": "b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+          "bytes": 113920,
+          "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32"
+        }
+      ]
+    }
+  ]
+}

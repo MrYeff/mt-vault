@@ -1,0 +1,26 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "type": "text",
+    "link": "text",
+    "topics": "multitext",
+    "publication date": "date",
+    "is milestone": "checkbox",
+    "depends_on": "multitext",
+    "fit_score": "number",
+    "reason": "multitext",
+    "quick note": "multitext",
+    "created": "date",
+    "date": "date",
+    "attendees": "multitext",
+    "authors": "multitext",
+    "read status": "text",
+    "source": "multitext",
+    "pdf": "text",
+    "import date": "date",
+    "refs": "multitext",
+    "⚠️": "multitext"
+  }
+}

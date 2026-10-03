@@ -1,0 +1,168 @@
+---
+title: "Social Simulacra: Creating Populated Prototypes for Social Computing Systems"
+tags:
+  - social_computing
+  - llm_simulation
+authors:
+  - "[[Literature/Authors/Joon-Sung Park|Joon-Sung Park]]"
+  - "[[Literature/Authors/Lindsay Popowski|Lindsay Popowski]]"
+  - "[[Literature/Authors/Carrie Jun Cai|Carrie Jun Cai]]"
+  - "[[Literature/Authors/Meredith Ringel Morris|Meredith Ringel Morris]]"
+  - "[[Literature/Authors/Percy Liang|Percy Liang]]"
+  - "[[Literature/Authors/Michael S. Bernstein|Michael S. Bernstein]]"
+publication date: 2022-10-28 
+source: "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf"
+doi: 10.1145/3526113.3545616
+  - "model"
+  - "simulation"
+read status: Todo
+⚠️:
+  - audit failed
+---
+
+## Abstract
+
+Social computing prototypes probe the social behaviors that may arise in an envisioned system design. This prototyping practice is currently limited to recruiting small groups of people. Unfortunately, many challenges do not arise until a system is populated at a larger scale. Can a designer understand how a social system might behave when populated, and make adjustments to the design before the system falls prey to such challenges? We introduce social simulacra, a prototyping technique that generates a breadth of realistic social interactions that may emerge when a social computing system is populated. Social simulacra take as input the designer’s description of a community’s design—goal, rules, and member personas—and produce as output an instance of that design with simulated behavior, including posts, replies, and anti-social behaviors. We demonstrate that social simulacra shift the behaviors that they generate appropriately in response to design changes, and that they enable exploration of “what if?” scenarios where community members or moderators intervene. To power social simulacra, we contribute techniques for prompting a large language model to generate thousands of distinct community members and their social interactions with each other; these techniques are enabled by the observation that large language models’ training data already includes a wide variety of positive and negative behavior on social media platforms. In evaluations, we show that participants are often unable to distinguish social simulacra from actual community behavior and that social computing designers successfully refine their social computing designs when using social simulacra.
+
+## Research Questions
+> Research Questions extracted via LLM
+- Can large language models populate a social-computing prototype with diverse people and plausible social interactions?[^r1]
+- How do generated behaviors respond to design changes, and can the prototypes help designers explore interventions?[^r1]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+A prototype generator takes a community goal/rules and seed member personas, then produces many synthetic personas and textual posts/replies, including prosocial and antisocial behaviors. SimReddit is the demonstrated Reddit implementation.[^r3]
+
+```yml
+Design:
+  goal: str
+  rules: [str]
+  seed_personas: [Persona]
+  moderator_interventions: [str]
+
+Simulacrum:
+  personas: [Persona]
+  posts_and_replies: [Interaction]
+```
+
+### How does it work?
+An ordered GPT-3 prompt chain first expands designer-provided seed personas into a larger diverse population. It then generates posts and replies conditioned on the community goal, rules, personas and moderator interventions. Changing design inputs supports what-if comparisons; the paper evaluates plausibility and design usefulness, not calibrated prediction of a real future community.[^r3]
+
+```
+generate(design: Design) -> Simulacrum:
+  personas = expand_personas(design.seed_personas, design.goal, design.rules)
+  out = generate_threads(personas, design.goal, design.rules,
+                         design.moderator_interventions)
+```
+
+### What can it answer?
+It supports exploration of possible interactions under design alternatives. Evaluation includes a technical comparison across 50 subreddits and a study with 16 social-computing designers; those evaluations do not establish predictive accuracy for future populations.[^r4]
+
+### Where does it apply?
+It applies to early-stage social-computing design exploration. Generated content depends on GPT-3 prompts and supplied context; the method does not specify deterministic agent transition rules.[^r3]
+
+## Metadata
+### References
+- [[ParadigmShiftTheNewPromiseOfInformationTechnology]]
+- [[Building Successful Online Communities- Evidence-Based Social Design]]
+- [[ProceedingsOfThe24thInternationalConferenceOnMachineLearning]]
+- [[ExperimentalEvidenceOfMassiveScaleEmotionalContagionThroughSocialNetworks]]
+- [[AnIterativeDesignMethodologyForUserFriendlyNaturalLanguageOfficeInformationApplications]]
+- [[Sauron]]
+- [[Silk]]
+- [[AutomaticIdentificationOfPersonalInsultsOnSocialNewsSites]]
+- [[TheRiseAndDeclineOfAnOpenCollaborationSystem]]
+- [[TheReflectivePractitionerHowProfessionalsThinkInAction]]
+- [[PiggybackPrototyping]]
+- [[ReflectivePhysicalPrototypingThroughIntegratedDesignTestAndAnalysis]]
+- [[TrollingInAsynchronousComputerMediatedCommunicationFromUserDiscussionsToAcademicDefinitions]]
+- [[TheTroubleWithSocialComputingSystemsResearch]]
+- [[DesignAsExploration]]
+- [[DesignGalleries]]
+- [[Voyant]]
+- [[FromInfrastructureToCulture]]
+- [[HeSaysSheSays]]
+- [[AuthoringSensorBasedInteractionsByDemonstrationWithDirectManipulationAndPatternRecognition]]
+- [[PaperPrototypingWhatIsItGoodFor]]
+- [[AugmentingInteractiveTablesWithMiceKeyboards]]
+- [[Designscape]]
+- [[TheIntellectualChallengeOfCscwTheGapBetweenSocialRequirementsAndTechnicalFeasibility]]
+- [[ExperimentalStudyOfInequalityAndUnpredictabilityInAnArtificialCulturalMarket]]
+- [[CyberbullyingVictimizationAmongTurkishOnlineSocialUtilityMembers]]
+- [[GraphClusterRandomization]]
+- [[AnEmpiricalMethodologyForWritingUserFriendlyNaturalLanguageComputerApplications]]
+- [[PrototypingForTinyFingers]]
+- [[TrustworthyOnlineControlledExperiments]]
+- [[UnresolvedReferenceBC85C9AA9F9CAFED]]
+- [[ExperiencePrototyping]]
+- [[InformedConsentAndTheFacebookEmotionalManipulationStudy]]
+- [[ThisPostWillJustGetTakenDown]]
+- [[TheToastboard]]
+- [[AnyoneCanBecomeATroll]]
+- [[TheBagOfCommunities]]
+- [[LearningVisualImportanceForGraphicDesignsAndDataVisualizations]]
+- [[YouCanTStayHere]]
+- [[RevisitingTheRiseAndDeclineInAPopulationOfPeerProductionProjects]]
+- [[RedditRulesCharacterizingAnEcosystemOfGovernance]]
+- [[TheInternetSHiddenRules]]
+- [[TheFightFor15TheRightWageForAWorkingAmerica]]
+- [[PreventingHarassmentAndIncreasingGroupParticipationThroughSocialNormsIn2190OnlineScienceDiscussions]]
+- [[UnresolvedReferenceF86C5559DE311E16]]
+- [[UnexpectedExpectationsPublicReactionToTheFacebookEmotionalContagionStudy]]
+- [[ContextsOfUninhibitedOnlineBehavior]]
+- [[TheImpliedTruthEffectAttachingWarningsToASubsetOfFakeNewsHeadlinesIncreasesPerceivedAccuracyOfHeadlinesWithoutWarnings]]
+- [[FantasticallyOrderedPromptsAndWhereToFindThemOvercomingFewShotPromptOrderSensitivity]]
+- [[StudyingRedditASystematicOverviewOfDisciplinesApproachesMethodsAndEthics]]
+- [[GenlineAndGenformTwoToolsForInteractingWithGenerativeLanguageModelsInACodeEditor]]
+- [[TwitterManipulatesYourFeedEthicalConsiderations]]
+- [[PromptmakerPromptBasedPrototypingWithLargeLanguageModels]]
+- [[ProceedingsOfThe24thAnnualConferenceOnComputerGraphicsAndInteractiveTechniquesSiggraph97]]
+- [[PrototypingToolsAndTechniques]]
+- [[SurvivingAnEternalSeptember]]
+- [[MeasuringThePrevalenceOfAntiSocialBehaviorInOnlineCommunities]]
+- [[Chi11ExtendedAbstractsOnHumanFactorsInComputingSystemsVancouverBcCanadaChiEa11]]
+- [[UnresolvedReference6CFE671E65DE740A]]
+- [[LanguageModelsAreFewShotLearnersAdvancesInNeuralInformationProcessingSystems33]]
+- [[ProceedingsOfTheInternationalAaaiConferenceOnWebAndSocialMediaVol96170]]
+- [[HowHateGroups]]
+- [[DesignCulturalProbesInteractions61]]
+- [[UnresolvedReference47AC906B236E25A7]]
+- [[UnresolvedReferenceA2B99F20B4CD350B]]
+- [[UnresolvedReference8DBCC7B93D7A4105]]
+- [[WhatDoPrototypesPrototypeInHandbookOfHumanComputerInteraction]]
+- [[UnresolvedReference6D99E1056ADB44F8]]
+- [[UnresolvedReferenceB334C6A568FDD7F9]]
+- [[TrustworthyOnlineControlledExperimentsFivePuzzlingOutcomesExplainedKdd12]]
+- [[UnresolvedReferenceFA1F1736A5DF429A]]
+- [[UnresolvedReferenceA47D2B6ADB58ECA8]]
+- [[UnresolvedReference80E63E50C1937FA7]]
+- [[TowardACriticalMass]]
+- [[StudyingRedditASystematicOverviewOfDisciplinesApproachesMethodsAndEthicsSocialMediaSociety72]]
+- [[ProlificQuicklyFindResearchParticipantsYouCanTrustHttpsWwwProlificCo]]
+- [[LanguageModelsAreUnsupervisedMultitaskLearnersOpenaiBlog18]]
+- [[UnresolvedReference04E1A688A28BD79A]]
+- [[ProceedingsOfThe38thInternationalConferenceOnMachineLearning]]
+- [[UnresolvedReferenceC5CF670488AFE490]]
+- [[DilemmasInAGeneralTheoryOfPlanningPolicySciences42]]
+- [[ExperimentalStudyOfInequalityAndUnpredictabilityInAnArtificialCulturalMarketScience3115762]]
+- [[UnresolvedReferenceE99C3C37FC0AA48E]]
+- [[UnresolvedReferenceDC1A24B0DE03DCDE]]
+- [[AGeneralInductiveApproachForAnalyzingQualitativeEvaluationDataAmericanJournalOfEvaluation27]]
+- [[TheStateOfOnlineHarassment]]
+- [[SuperglueAStickierBenchmarkForGeneralPurposeLanguageUnderstandingSystemsAdvancesInNeuralInformationProcessingSystems32]]
+- [[UnresolvedReferenceE28988A297021D88]]
+- [[UnresolvedReference18DF4963971B7A73]]
+- [[UnresolvedReference1299C9340D451A1C]]
+- [[Retrieved]]
+- [[DefendingAgainstNeuralFakeNewsAdvancesInNeuralInformationProcessingSystems32]]
+- [[InternationalConferenceOnMachineLearningPmlrPmlr1269712706]]
+
+## Audit Log
+- Initial independent audit: failed on missing model mechanisms, abstract fidelity, or source-access reporting; see `vault/.automation/audit/next-forty-54-66-initial-2026-09-30.json`. Revisions added source-located model detail; independent re-audit remains pending.
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://arxiv.org/abs/2208.04024. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: Park et al., §4.2 prompt chains and SimReddit generation; §§5–6 evaluation procedure. Source: https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf.
+[^r4]: Park et al., §§5–6: 50-community technical evaluation and 16-designer study; limitations/discussion §7.1. Source: https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf.

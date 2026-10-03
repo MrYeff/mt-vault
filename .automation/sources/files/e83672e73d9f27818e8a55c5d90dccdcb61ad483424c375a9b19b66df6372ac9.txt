@@ -1,0 +1,664 @@
+
+
+
+
+
+
+
+Social Agents?
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Home > 26 (2), 6
+                        
+
+
+
+
+Javascript is disabled in your browser.  This page will look and function better with Javascript.
+
+Social Agents? A Systematic Review of Social Identity Formalizations
+                        
+Geeske Scholza
+, Nanda Wijermansb
+, Rocco Paolilloc
+, Martin Neumanna
+, Torsten Massond
+, Émile Chappina
+, Anne Templetone
+ and Geo Kocherilf
+
+aDelft University of Technology, Netherlands; bStockholm University, Sweden; cConstructor University, Germany; dUniversität Leipzig, Germany; eThe University of Edinburgh, United Kingdom; fUniversity of Bremen, Germany
+
+                        
+                        
+Other articles by these authors
+In JASSS
+From Google
+
+
+Journal of Artificial
+                        Societies and Social Simulation 26 (2) 6
+                        <https://www.jasss.org/26/2/6.html>
+DOI: 10.18564/jasss.5066
+
+Save citation...
+Text
+HTML
+BibTex
+Ref. Manager
+EndNote
+ProCite
+
+
+ Received: 06-May-2022
+                           Accepted: 15-Mar-2023
+                           Published: 31-Mar-2023
+                        
+
+
+Abstract
+                        Simulating collective decision-making and behaviour is at the heart of many agent-based models (ABMs). However, the representation of social context and its influence on an agent's behaviour remains challenging. Here, the Social Identity Approach (SIA) from social psychology offers a promising explanation, as it describes how people behave while being part of a group, how groups interact and how these interactions and ingroup norms can change over time. SIA is valuable for diverse application domains while being challenging to formalise. To address this challenge and enable modellers to learn from existing work, we take stock of ABM formalisations of SIA and present a systematic review of SIA in ABMs. Our results show a diversity of application areas and formalisations of (parts of) SIA without any converging practice towards a default formalisation. Models range from simple to (cognitively) rich, with a group of abstract models in the tradition of opinion dynamics employing SIA to specify group-based social influence. We also found some complex cognitive SIA formalisations incorporating contextual behaviour. Looking at the function of SIA in the models, representing collectives, modelling group-based social influence, and unpacking contextual behaviour stood out. Our review was also an inventory of the formalisation challenge attached to using a very promising social-psychological theory in ABMs, revealing a tendency for reference to domain-specific theories to remain vague.
+                        
+
+Keywords:
+                        Formalization, Social Identity, Review, Social Context, Self-Categorization, Theory
+
+Other articles with these keywords
+In JASSS
+From Google
+
+
+
+This article is part of a special section on “Social Identity Modelling”, guest-editors: Nanda Wijermans, Geeske Scholz, Martin Neumann, Rocco Paolillo, and Anne Templeton.
+
+
+
+
+
+
+
+
+Introduction
+
+The maturing social simulation community is in a situation where it needs to develop standards and methods for selecting and implementing behavioural theories when modelling human behaviour (Schlüter et al. 2017). While standards for the documentation of agent-based models (ABMs) (Grimm et al. 2006, 2010; Müller et al. 2013) have been developed and platforms for model exchange exist (e.g., http://comses.net), the community is only starting to address the challenge of developing a set of formalised theories suitable for various situations in which human behaviour is modelled. While the Social Sciences, and Social Psychology in particular, offer numerous theories to explain human behaviour in specific contexts, these theories are typically not specified on a level that can easily be formalised into a computer code and sometimes neglect important processes by focusing on static "snapshots" of reality. Consequently, the challenges in translating such theories into the behaviour of interacting agents, include the logical gaps in the theories themselves and the lack of precise descriptions of the interdependent processes that constitute these complex phenomena (Sawyer 2004). On the other hand, the modellers who design and implement ABMs are faced with difficulties of their own: (a) they are often not familiar with and/or lack the expertise to adequately represent the many explanatory theories and (b) some of the theories require complex programming using advanced algorithms from AI and cognitive science. Therefore, the hurdles involved in finding and formalising a reasonable theory and implementing it in an ABM are high (Schlüter et al. 2017).
+
+One particular need is formalising human behaviour and decision-making within its social context – representing how people decide what to do within a specific context and social-physical situation (Edmonds 2017). Furthermore, collective decision-making and behaviour is vital for many relevant phenomena studied with social simulations, such as conflict, polarisation, or collective action. The Social Identity Approach (SIA, Reicher et al. 2010), referring to the combination of Social Identity Theory (Tajfel & Turner 1979) and Self-Categorization Theory (Turner et al. 1987), is a well-developed, rich approach to study many topics related to ‘sociality’ and human behaviour in its social context. Essentially, SIA investigates how and when individuals feel, think and act as group members rather than as unique individuals. People may define themselves on different levels of social categories, ranging from individual-level self-definitions (personal self, ‘I’) to collective-level self-definitions (social identity, ‘we’). When people self-categorise as members of a specific group (e.g., sex, ethnic group, sports team), they accentuate ingroup similarities and outgroup differences. Self-categorisation as a group member is therefore a fundamental basis for collective behaviour. Research based on SIA has been applied to, for example, understanding intergroup relations, how collective action and social change begin and develop over time, the perception of people’s group membership occurs and varies depending on context, the extent and constraints of social influence and how social realities are constructed (for a review of SIA, see Reicher et al. 2010).
+
+Several modellers have recognised the richness and applicability of SIA (see earlier qualitative reviews Kopecky et al. 2010; Scholz et al. 2021). These models address issues such as inter-ethnic conflicts, environmental sustainability, or political behaviour, while only a few of them attempt to use SIA in its explanatory breath within their formulations. In a systematic review of crowd modelling, Templeton et al. (2015) note that at the time of the review, models rarely included social identities while this is, in crowd research, an essential explanation for dynamic group behaviour. By providing a comprehensive theory of how individuals behave in a social context, SIA appears to be valuable for various model applications, while also being difficult to specify and formalise (Scholz et al. 2021). Furthermore, while SIA is increasingly implemented in ABMs, a systematic review of different implementations of SIA is so far missing. To fill this gap, we present a systematic review of papers that formalise (parts of) SIA in agent-based social simulation models conducted with a team of SIA psychologists and ABM modellers. By providing an inventory, across domain niches, of ABMs that formalise a promising social-psychological approach, we hope to enable others to build on existing work and further advance the formalisation of SIA. To achieve this, we noted the state of the art and prevalence of SIA in agent-based social simulation: e.g., which parts of SIA have been used for which purpose (what does SIA explain in the model) and in what kind of models? We further aimed to identify any converging ways to formalise SIA, as well as inspiring examples. Lastly, we wanted to use this systematic review to show the state of the art of formalising a relevant theory from social psychology for use in ABMs, and enable learning for formalising theory in ABMs at a more general level.
+
+The remainder of this paper is structured as follows: we start with motivating the use of SIA in ABMs and giving an overview of the main theoretical concepts. The methods section describes the protocol we adopted to gather, filter, and code papers. Next, we present our findings. We also provide summaries of selected examples and a short discussion on closely related concepts used in ABMs. In the subsequent discussion, we reflect on the uncertainties and ambiguities of the process as well as further learnings. We end with conclusions and an outlook for future research.
+
+Sociality through Social Groups? The Social Identity Approach
+
+Humans are social animals operating in and sensitive to a complex social environment (Fiske 2018). This sociality enables trust and cooperation and to collectively act against an outside threat - an essential survival mechanism of our species. Consequently, humans are equipped with biases and stereotypes to ‘sort’ unknown others quickly as insider/outsider and adapt their behaviour to different social situations. These (often subconscious) abilities and mechanisms are essential to consider when explaining, understanding or anticipating social phenomena such as polarisation, trends, conflict, or helping behaviour. However, this ambition is a key challenge for modelling human behaviour in agents. Artificial Human Sociality stresses to integrate this evolutionary ingrained need and ability to be part of groups, and thus that agents should be able to sense and be affected differently by others (see Hofstede et al. 2021). We consider SIA as one promising theoretical basis to represent sociality in ABMs, as it theorises on self in both social and personal terms, and thus allows us to represent the complex relationship between the individual’s identity and the social situation they inhabit.1
+
+SIA proposes that people derive a significant part of their self-concept from the social groups they belong to (Tajfel 1969; Tajfel & Turner 1979, 1986; Turner et al. 1987). Groups may help people to satisfy basic psychological motivations, such as the need for self-esteem, the desires for inclusion (or belonging) and distinctiveness, or the need for certainty or control (Easterbrook & Vignoles 2012). For example, identified group members reported higher levels of belongingness (Jetten et al. 2014), perceived support (Haslam et al. 2005), and control (Greenaway et al. 2015; Relke et al. 2022). SIA can further help to explain how social context affects the salience of specific identities and how this, in turn, affects which behaviours are perceived as normative. Although collectives are, of course, made up of individuals, social psychological research shows that people think and act differently depending on whether they think of themselves as individual persons ("I") or as a collective ("we"). SIA suggests that when a social identity is salient and people self-categorise in terms of this social identity, their group membership becomes an important factor in their beliefs and behaviour. In this case, what is considered important for the group becomes important for the individual.
+
+Groups have their own social norms and expected behaviour, so when a particular social identity is salient, group members should be motivated to adhere to those norms to enact their social identity. For instance, thinking as members of collectives or groups changes perceptions of what constitutes a threat, as a threat to the group signifies a threat to the individual (Fritsche et al. 2018; Louis et al. 2007). For example, experimental evidence shows that salient social identities affect acceptance of anthropogenic climate change (Unsworth & Fielding 2019). Specifically, a salient political identity (vs student identity) decreased respondents’ belief in anthropogenic climate change and their acceptance of climate-protective policies among self-identified right-wingers. In contrast, salience of political identity did not change the acceptance of anthropogenic climate change when the political ingroup was perceived as supportive of climate-protective policies (i.e., for left-wingers).
+
+Here, we describe the core aspects of the SIA. Figure 1 places the different aspects of SIA in a context and in relation to each other from a modeller’s perspective. Note that to engage deeper with the approach, there are some excellent descriptions of SIA (Abrams & Hogg 1990; Ellemers et al. 2002; Reicher et al. 2010; Tajfel & Turner 1986).
+
+Figure 1. The SIA from a modeller’s perspective (adapted and revised from Wijermans & Templeton 2022)
+
+
+The SIA describes that people have a personal identity as well as multiple social identities (Kang & Bodenhausen 2015; Turner et al. 1987). Social identity describes one’s belonging to a group. To determine which social identity is the one that is most likely to affect behaviour etc. at a given time, self-categorisation and salience are needed (Turner et al. 1994). Individuals self-categorise in terms of a specific social identity (e.g., gender, ethnic group, sports team) when a person’s identity as a group member becomes salient in a particular context (Tajfel & Turner 1986). Salience is the extent to which a social identity is cognitively focal at a particular time (Turner et al. 1987). Social identities can become salient in various social contexts, often through comparisons of stimuli. People have multiple social identities that can become salient depending on the social context (Kang & Bodenhausen 2015; Roccas & Brewer 2002), and therefore as self-categorisations change, so too does who is seen as being a fellow member (ingroup members) or as someone outside of the group (outgroup members; Oakes et al. 1991; Roccas & Brewer 2002).
+
+The social identity approach describes how people categorise others into social groups by assessing comparative and normative fit (Oakes et al. 1991). Comparative fit refers to the meta-contrast principle, stating that the salience of an identity can increase when the perceiver views members of their ingroup to have fewer differences between one another compared to the differences between the members of the ingroup and an outgroup (Turner et al. 1994). Normative fit describes the extent to which stimuli (e.g., the perceived behaviour or opinion of someone) align with the perceived norms of the group. For example, if someone acts in line with a group’s social norms, they are likely to be categorised as a group member. Previous research has made social identities salient in participants by getting them to consider what it means to be a part of that group (e.g., common habits, strengths of the group, see Haslam et al. 1999; Levine et al. 2005; Reicher et al. 2016) or bring attention to stereotypes associated with their social identity (e.g., Gresky et al. 2005). Yet processes of social identification are not solely determined by situational affordances but also by personal factors. The cognitive accessibility of specific group membership, and, consequently, readiness to enact the social identity, is influenced by personal factors, such as chronic group identification (or strength of group identification) or chronic needs (e.g., belonging, control) (Turner et al. 1994 p. 455).
+
+When a social identity is salient, people cognitively represent themselves as group members, accentuating ingroup similarities and outgroup differences (i.e., self-stereotyping; Tajfel 1969; Turner 1985). Different consequences of a salient social identity can occur, including increased ingroup bias (e.g., to maintain positive distinctiveness); a stronger focus on collective (vs personal) goals; increased adherence to the norms of the ingroup (group-based social influence; Turner 1991); or experience of collective emotions (e.g., collective guilt about ingroup’s past wrongdoing; Masson & Barth 2019). Group membership becomes a vital driver for beliefs and behaviour: when a social identity is salient, the group member is motivated to act in the interests of the group, in part because it is also beneficial for them as a part of the group. For example, research on the social identity approach to leadership suggests that effective leaders are those who are seen to be acting in the interests of the group (e.g., see Knippenberg & Hogg 2003; Steffens et al. 2016). Similarly, research on the social identity approach applied to mass emergencies suggests that individuals will stay in dangerous situations (even returning to unsafe areas) to help others when they feel the others are part of their group (Drury et al. 2009).
+
+Method
+
+Systematic reviews are a valuable tool to map specific literature’s state of the art and draw conclusions to support research. However, systematic reviews in social simulation often need to include a more precise methodological approach (Achter et al. 2022). To ensure an adequate systematic approach, we set eligibility criteria to select papers and procedures to analyse results (Gough et al. 2012; Moher et al. 2009). To obtain a dataset of ABMs using SIA, we searched Scopus, Web of Science, and JSTOR for papers, book chapters and proceedings containing the term "social identity" or "self categori* theory" or "self-categori* theory" and "agent based model" or "agent-based model" or "ABM" in English language. We further used a crawler from ‘Publish or Perish’ (Harzing 2007) to search Google Scholar that we limited to producing 1000 records, i.e., the cut-off criteria for free data extraction. These records included many publications that did not meet our inclusion criteria: an agent-based model formalising SIA. Hence, we carried out a fast screening of them. After merging the results of all searches and removing duplicates, 927 records remained, which we scanned for two eligibility criteria: i) is there an agent-based model?, and ii) if yes, does it include/formalise (aspects of) SIA? If both answers were positive, the paper was included for a complete reading. We complemented the papers with relevant papers identified in a previous qualitative review (Scholz et al. 2021). We further considered whether any authors of relevant doctoral dissertations identified had already published a journal paper on their model. If several versions of a model were published, we picked the newest and/or more detailed one. In total, 83 papers were included for the complete reading.
+
+In the next step, we assessed whether the records built upon the SIA and substantiated it in actual code. We consider this a relevance or quality assessment (Gough et al. 2012) to ensure the relevance of the records for the research focus of our systematic review. Some papers referred to social identity once, but then focused on cultural identity or other constructs of identity or group belonging that fell beyond our SIA focus. These papers were excluded from the review. However, we point to some closely related research at the end of the results section. This step led to the further exclusion of records, leaving us with 43 papers which were included in the data extraction for analysis (a list of those 43 papers is included in the Appendix). Figure 2 displays the protocol we followed towards the final sample of papers that were analysed in the form of an adapted PRISMA2 flowchart.
+
+Figure 2. PRISMA flowchart of our systematic review
+
+
+To analyse the papers, we defined deductive categories (Xiao & Watson 2019) that reflect SIA and its use in ABMs. In deductive approaches to coding, categories are developed in advance based on theoretical knowledge. As the purpose of this review article is to investigate what (and how) elements of SIA are integrated into agent-based models, we follow the deductive approach by relying on the theoretical concepts of SIA (see, e.g., Reicher et al. 2010) as our categories. For instance, we ask: is the theoretical concept of salience included in the model? The process of consolidating the set of categories that reflect SIA was challenging as SIA is very broad and required an intense and iterative process of test reviews and discussions that relied heavily on our interdisciplinary strength as an author team. While we aimed at drawing an overall picture of the use of SIA in ABMs, we had to compromise between social psychological theory - often described at the level of variables and correlations - and ABM logic (see, e.g., Macy & Willer 2002; Wijermans et al. 2022). We agreed to develop the categories from an ABM perspective while striving to be as complete as possible from a social-psychological perspective. The subset of the final categories relating to SIA is displayed in Table 1. Additionally, we included categories on the aim of the paper, research domain, what SIA was used for, and model specific categories (e.g., availability of documentation).
+
+Table 1:The SIA related categories used to code the models and the frequency of their appearance in the models sample we analysed (43 models). A table displaying which papers included which categories is provided in the Appendix.
+
+
+SIA category
+Description
+# of models
+
+
+
+
+Personal identity
+How is the personal identity conceptualised in the model?
+15
+
+
+
+Social identity
+How is the social identity conceptualised in the model?
+38
+
+
+
+Multiple social identities?
+Can the agent have different social identities?
+20
+
+
+
+Social identity motives
+Is social identity a means to satisfy psychological motives/needs (e.g., self-esteem, certainty, control, existence)?
+8
+
+
+
+Prototypical aspects associated with social identity
+Does the model specify prototypical characteristics for the social identities (e.g., norms, behaviours, attitudes, appearances, characteristics)?
+20
+
+
+
+Salience
+The extent to which a social identity is cognitively present at a particular time - how a particular group membership is activated given a certain context.
+10
+
+
+
+Strength of social identification
+How strongly does an agent identify with a certain social identity?
+14
+
+
+
+Comparative fit
+Based on the meta-contrast principle, the level of context-specific comparative (dis)similarity that the self and others have in respect to group members. A group of people can be categorised as being in the same group if the differences between them are less than their differences with another group.
+7
+
+
+
+Normative fit
+The extent to which stimuli align with the perceived norms of the group. For example, if someone acts in line with a group’s social norms then they are likely to be categorised as a member of that group.
+6
+
+
+
+Consequences of a salient social identity (self-categorisation) - what does it change?
+For example: increased ingroup bias; a stronger focus on collective (vs. personal) goals; increased adherence to the norms of the ingroup (group-based social influence); accentuation/increased meta-contrast; self-stereotyping (the process whereby individuals define their self in terms of their social identity and act in line with the group’s social norms’).
+25
+
+
+
+Self-Categorisation to a new social identity, or changes/evolvement of existing social identities
+Self-description as a member of a group that the agent did not have yet; or changes in the prototypical aspects of social identities.
+12
+
+
+
+
+The identified categories were used for the actual data extraction. The coding of papers with the categories was conducted in pairs of two, consisting of one co-author with a sufficient background in SIA and one with a background in modelling. After coding a paper, the coding teams met to discuss and agree on their codes. If the members of the pairs did not initially align on a category, the decision was made jointly after discussion (see also Xiao & Watson 2019; Udall et al. 2021). Our categories remained somewhat open since SIA is used in many ways. Hence, we saw the danger of coding teams drifting apart in their coding by developing their understanding of the categories. To address this concern, we recombined the pairs in between to maintain coherence in coding and held regular (about bi-weekly) meetings of the whole team. For the analysis, we further simplified the coding and grouped results under names such as "set of characteristics". A simplified overview of all papers and SIA categories is provided in the Appendix.
+
+Results
+
+The results show a diversity in application domains and a broad spectrum of formalisations, ranging from very abstract and simple to elaborate and detailed cognitive models. Like expected, the literature is scattered over diverse research domains. SIA is furthermore frequently combined with other theories or approaches. Only 14 of the 43 papers provided access to source code and/or documentation, and only 23 mentioned the framework or programming language they used to implement the model (NetLogo being the most prevalent with 13/43 occurrences). In most models, agents represented individuals, with exceptions in which agents represented a group of actors or households.
+
+The main pattern we observed in the models is a large group of abstract opinion dynamic models integrating SIA to specify group-based social influence. Another result that stood out for us was that the self-categorisation process, as well as salience, has been integrated into only 16/43 models (see Figure 3 for a stylised reflection of the prevalence of different SIA aspects in the ABMs reviewed).
+
+Figure 3. Stylised overview of the prevalence of different SIA aspects in the model sample. Category counts are displayed in Table 1. [Grey: incorporated in < 15 models (out of 43), black standard: 16 to 28 models, bold: incorporated in > 28 models. In comparison to ‘Interpretation’ has not been coded and is hence removed from this figure. The display of the prevalence of context has been linked to the prevalence of saliency & fit.]
+
+
+In the remainder of this section, we describe the kind of models and research domains SIA has been used in, and for what purpose it was integrated in the model. We then analyse which aspects of SIA have been used, and how they have been formalised. Lastly, to enable learning from examples, we provide summaries of a selection of SIA models and a short outreach on relevant related research.
+
+SIA - In what kind of models and for what purpose?
+
+The 43 SIA models cover diverse research domains (see Figure 4 for an overview). Most prevalent are models in opinion dynamics (11 models; including polarisation, party identification, and diffusion of innovation), followed by conflict research (8).
+
+Figure 4. Overview and count of SIA ABMs in the different research domains. “Misc” entails gender research, social networks, norms, and minority influence.
+
+
+When looking at the ‘function’ of SIA in the model (what does it add or specify), we identified four main themes in the papers: 1) representing collectives and their dynamics, 2) incorporating group-based social influence (i.e., ingroup favouritism and/or outgroup aversion), 3) unpacking contextual behaviour, and 4) simulating expectation-building in the dynamic perception of others. While those four themes are overlapping and not always easy to tell apart, they provide an overview of common usages of SIA in ABMs:
+
+
+Models that use SIA to represent collectives and their dynamics (18 models). SIA is used to unpack what it means to be a group member (having a salient social identity that influences behaviour), how people become a group member, and the emergence of groups. Examples are collective action, group-based behaviour, collaboration, team dynamics, the formation of groups, and inter-group influence. Hence, the models that use SIA to represent collectives stress that actions come forth from identifying oneself as a group member.
+
+Models using SIA to incorporate group-based social influence (i.e., ingroup favouritism and/or outgroup aversion) (17 models). These models typically represent social identity with a tag or opinion. The most straightforward representation of group-based influence only needs a "tag" to represent social identity and inclusion of group-based social influence within the agents’ decision rules.
+
+Models using SIA to unpack contextual or situated behaviour (4), e.g., to identify with an organisation via the fit or to enhance social realism in virtual agents’ behaviours. When unpacking contextual or situational behaviour, SIA is used to describe under what situations a social identity becomes salient and thereby influences behaviour, enabling for models with multiple social identities that, at different times, different social identities influence behaviour.
+
+Models using SIA to specify expectation-building (3). Here SIA comes in to formalise how agents form expectations about others, such as for processes of stereotyping or to ascribe an identity to others.
+
+
+One model did not fit into any of those themes as it takes a specific approach to grow SIA from recurrent networks (van Roy 2012). Figure 5 connects the four functions of SIA to the respective research domains. What immediately stands out is the group of abstract opinion dynamic models that integrate SIA to specify group-based social influence. Furthermore, models in the domain of conflict research tend to use SIA to represent collectives and their dynamics.
+
+Figure 5. Sorting of papers reviewed into the ‘function’ of SIA in the model (what does it add or specify) and research domains of application. Please note that the grouping of papers fuelled discussions and should be seen as a general indication rather than a quantitative count.
+
+
+We noticed that some models unpack the individual level, e.g., by representing the process by which social identity becomes salient. In contrast, most models keep the individual-level mechanisms and representations to a minimum (e.g., endowing agents with a social identity tag that is directly connected to a relevant behaviour). To better understand our results, we differentiate the models based on one of the most well-known distinctions in agent-based research, i.e., the continuum from less to more complex models. The principle of generating complex patterns from simple, highly abstract models is most prominently denoted by the expression "keep it simple, stupid", the so-called KISS principle (Axelrod 1997). Complex models often follow the idea to "keep it descriptive, stupid", the so-called KIDS approach to modelling (Edmonds & Moss 2004) to understand and explain a case in as much detail as possible. Finally, the so-called EROS principle: ‘Enhancing the realism of simulation’ (initially coined by Rosaria Conte, see Jager 2017), attempts to increase the construct validity of agent-based models by an explicit and detailed foundation of model assumptions on theories.3
+
+All three of these modelling approaches are found in the models reviewed: descriptively rich models (e.g., a model of the emergence of riots by Pires & Crooks (2017) including a GIS map of a Nigerian city) as well as models that utilise SIA simply for classifying groups (KISS principle). Often, models in the tradition of opinion dynamics modelling follow a KISS approach and employ SIA to specify group-based social influence. For instance, in Bravo & Yantseva (2020) model of ethnocentric cooperation and xenophobia, reference to SIA is made to distinguish between groups, represented by tags attached to the agents. In contrast, the model of Dimas & Prada (2014) follows the EROS modelling style. In this model, sophisticated formalisations of numerous elements of social identity theory are implemented to simulate the emergence of social groups, which are predetermined by the tags in Bravo and Yantseva’s model (putting the emphasis on the macro phenomenon).
+
+Appearance and formalisation of categories
+
+To take stock of what has been done and which SIA categories have been most prominently used, we analysed the different categories for how they have been interpreted into formalisations and whether patterns of categories relating to each other appear. The different aspects of SIA vary in how frequently they are represented in the model sample (see Table 1 for an overview of all SIA categories and their frequency in the models). To enable our readers to identify relevant work, we provide a table sorting all papers reviewed to the respective SIA categories in the Appendix. We now provide an overview of the state of the art for each SIA category.
+Identity representation and prototypical aspects
+
+Thirty-eight out of the 43 models specified a social identity and about half (20/43) included more than one social identity. We observed two dominant means of formalising social identity: i.e., as a single attribute or as a set of attributes. The most common way of formalising social identity (26 out of 43) was by a single attribute that functions as a tag. This "tag" signals membership to (at least one) social group that is somehow stored (e.g., as type, number, name, etc.). Such tags appeared both as abstract (e.g., group A, group B) and specific (gender, rioter) representations of identities. Furthermore, social identity was modelled as an opinion and as an implicit knowledge base. The second largest group of papers formalised social identity via a set of attributes, reflecting a bundle of characteristics or traits associated with a social identity (9 out of 43).4 Sometimes social and personal attributes overlapped or were even the same. Three models used the identification with a social identity to model belonging to it without an additional attribute. Sometimes (5/43), the formalisation details of social identity were unclear or implicit (but included in the overall count), while for other models (5/43), no social identity could be identified.
+
+Compared to social identity, personal identity was specified less often (15 out of 43 models). When included, personal identity was mostly modelled as a set of characteristics or traits (9 out of 43). Three models included a private opinion as (an aspect of the) personal identity, two used self-esteem to integrate and formalise the personal identity. The formalisation of personal identity often remained unclear or implicit, e.g., as personal preference structure or knowledge base (7 out of 15 models including personal identity). Figure 6 provides an overview of the count of different combinations of identity representations in the models that included at least one social identity.
+
+Figure 6. How identities have been represented in the 38 models that explicitly entailed at least one social identity.
+
+
+20 out of the 43 models specified prototypical aspects associated with a social identity, ranging from complex sets of characteristics (e.g., values, norms, interests, goals, behaviour) to the abstract representation of an opinion (single attribute). Overall, the specification of a prototypical behaviour was most associated with a social identity (7 out of 43 models), followed by norms (5 out of 43). But also, opinions, beliefs, stereotypes, and values have been prototypically connected to a social identity in the model sample.
+Self-categorisation, salience, and fit
+
+The majority of models did not include salience or fit (27 out of 43). This is notable since it means that one aspect of SIA, the Self-Categorisation theory, has not been taken up by most models. Of those 16 models that did include some form of salience and/or fit, 5 included only salience and 4 only the comparative fit. A combination of all three aspects, as well as salience & comparative fit, and normative fit on its own, were each present in 2 models. Furthermore, 12 of the 43 models included the ability of agents to self-categorise in terms of a new social identity (not previously present in this agent) or changes/evolvements of existing social identities. See Figure 7 for an overview of the prevalence of salience and fit in the papers reviewed.
+
+Figure 7. Overview of the appearance of salience, comparative, and normative fit in the 43 models we reviewed.
+
+
+Overall, 14 models specified some form of social identification with the social identity(ies) integrated. One of them specified the concept of emotional valence, whereas 7 models used some form of (sometimes dynamic) weight or parameter, and 6 used a (sometimes rather implicit) calculation to determine the current level of social identification (e.g., including the frequency of interaction and information, the strength of network ties, or a valuation of personal and team decisions). There is a large overlap between models that include salience and/or some kind of fit and those that integrate a measure of social identification. Again, a diversity of specific interpretations and formalisations became obvious.
+Influence of a salient social identity - what does it change?
+
+Out of the 43 papers, 25 specified the consequences of a salient social identity. Note that it was not a precondition that salience had been included in the model, but only some form of a social identity that, when activated, influences behaviour. We identified groups of papers focusing on different consequences, while the boundaries of those groups largely overlapped, and some models did not fit our grouping. The four consequences of a salient social identity that stood out to us were: a shift to prototypical aspects (6) of the ingroup, such as e.g., party identification, a group opinion, values, norms, or goals; social influence (6), i.e., ingroup favouritism and/or outgroup aversion (specified as e.g., level of certainty, the strength of influence, or decision on whether to adopt a new technology); some form of collective action (5) (e.g., participation in a social movement or intergroup violence/outgroup derogation); and cooperation with ingroup members (3) (e.g., decide on whether to extract resources, self-restraint, or strategy selection in a prisoner’s dilemma).
+Identity motives
+
+8 out of the 43 models included some form of formalisation of social identity motives. Three models implemented self-esteem as a motive, and two models (one building upon the other) included the desire for inclusion and distinctiveness. Status (which can be related to self-esteem and control), as well as group reward for conforming to group opinion (which could implicitly be interpreted as targeting the belonging motive) both appeared once.
+
+Selected examples and related research
+
+SIA models are scattered over diverse research domains with scarce references to each other. The only SIA formalisation in our review sample that has been re-used by another author is from Salzarulo (2006), taken up in Metz (2011). To facilitate learning from previous research, we provide an overview of all models and the SIA categories they entail in the Appendix. To enable more inspiration and learning by example, we summarise a selection of models that take a unique approach or, from our point of view, advance the formalisation of SIA in ABMs in Table 2. We selected KISS and EROS-type models to do justice to the breadth of model styles and applications.
+
+Table 2:Summary of selected examples that we consider significant contributions or inspiring examples for formalising (parts of) SIA. We start with the more complex EROS models in the first lines and move towards the simpler KISS models at the bottom of the table. A simplified overview of all models is included in the Appendix.
+
+
+Model(s)
+Brief summary of contribution to formalising SIA
+
+
+
+
+Dimas & Prada (2014)
+EROS model (Dynamic Identity Model for Agents (DIMA)) in the domain of virtual believable agents with an elaborated conceptualisation of many aspects of SIA. DIMA reflects agents that are adaptive and affected by the social situations they are in, which results in the formalisation of agents with multiple identities. It unpacks the self-categorisation process to a level where categorisation according to a changed context is possible. No implementation.
+
+
+
+Skarin (2014)
+Extensive EROS model where agents decide between collective and individual strategies to enhance their self-esteem. The model incorporates SIA strategies (e.g., derogating the outgroup or glorifying the own group) depending on permeability of boundaries as well as individuation/deindividuation. Conceptualisations partly unclear.
+
+
+
+Pires & Crooks (2017)
+EROS model with a very detailed reference to theories and empirical data that combines SIA with identity theory to a “Unified theory of identity”: a comparison of activities with role identity expectations produces feedback on self-esteem that may lead towards joining a "rioter" identity (SIA) and engaging in riots. Maslow’s theory of needs as well as identity-based homophily are also incorporated.
+
+
+
+van Roy (2012)
+Model that “grows” SIA out of recurrent networks. Agents are represented as a combination of nodes and weights that processes inflow information, interacts, and learns. They compare in-flow information with the information associated with the personal and social self and act depending on which association is stronger (personal identity or prototypical for its social group).
+
+
+
+Salzarulo (2006), Metz (2011)
+Salzarulo (2006) proposes an opinion dynamic model formalising the meta contrast principle (comparative fit) and the self-categorisation process. Metz (2011) builds upon these formulas to simulate multilayer party identification, specified with a nested identification process. While both models tend towards KISS, the nested approach of Metz’s formalisation adds a descriptive more complex component.
+
+
+
+Akhmad et al. (2018)
+KISS model simulating intergroup stereotypes and conflict dynamics. The interaction of two agents in a conflict- and a non-conflict scenario with different group cooperation strategies leads to a positive or negative stereotype and an according adjustment to the agents’ belief function.
+
+
+
+Smaldino et al. (2017)
+KISS model of innovation diffusion both in an analytical and in a spatially bounded agent-based model, studying the effect of group aversion on the decision to shift to an innovation (i.e., avoiding products adopted by outgroups), along with a structural demographic skew and local or global interaction of agents. Social identity is used both for signalling of new products as part of a group identity as well as for group identification.
+
+
+
+Cioroianu (2020)
+KISS model that extends the Axelrod and Hammond (2003) model of ethnocentrism. Agents are provided with two identities modelled as colour and shape and strategies of cooperation or defection in a prisoner’s dilemma game. Salience is integrated as two independent probabilities for colour and shape in the cooperation decision.
+
+
+
+
+We also wanted to enable learning from related research as there are many phenomena and models that are closely related to SIA and which might interest modellers turning towards SIA. For instance, political identity is closely related to social identity. A main difference to social identity is that political identity can only be conceived with its counterpart identity politics. Thus, political identity involves different actor groups which are differentiated by power differentials. One of the earliest models of conflict and stability is the PS-I model of Lustick (2002), which investigates theories of institutionalisation. While political psychology explicitly refers to social identity theory, since then, a growing number of agent-based models have been developed which use the concept of identity for political science research without referring explicitly to SIA.
+
+Some concepts are either closely related to SIA, or overlap in parts. An example and prominent research field within the agent-based modelling community is the concept of social norms. Norms belong to the fundamental concepts in sociology to explain human behaviour, and present well-established categories in agent-based modelling going back to the 1990s (e.g.,Shoham & Tennenholtz 1992; see Chopra et al. 2018 for an overview). The sociologist Gibbs provided the definition that “a norm is a belief shared to some extent by members of a social unit as to what conduct ought to be in particular situations or circumstances” (Gibbs 1981 p. 7), revealing an individual component (belief) as well as a social component (belief is shared by a social unit). How close both theory traditions are intertwined can be seen by the fact that the notion of group norms is a central concept of social identity theory.
+
+In psychological theory, the concept of identity is also not restricted to social identity but includes identity theories originating from, e.g., developmental psychology (Erikson 1968) or sociological identity research (Burke & Stets 2009). For example, role identity theory (Stryker 1980) or place identity theory (Droseltis & Vignoles 2010), but also research on action-based personal (pro-environmental) identities (van Der Werff et al. 2013) have been the subject of psychological research, showing a growing diversity of identity-related psychological research.
+
+Discussion
+
+In this paper, we systematically reviewed the implementation of the social identity approach (SIA) in ABMs. We started with high expectations of the advancement in SIA formalisations in ABMs, especially when finding many articles dealing with SIA and ABM. This expectation was not met as many papers place a link between SIA and relevant phenomena without operationalising it. Those models that implemented (parts of) SIA mostly did not label them using the original SIA terminology nor specified them clearly. Hence, our coding involved many interpretations and assumptions on implicit and unclear formalisations. When analysing the coding, we then interpreted the data for meaningful patterns and results. Obviously, this process entailed various uncertainties, leaving us with two lessons: i) the task of systematically trying to understand how theory is used in ABMs is vital to improve the rule base of our simulations, and ii) this task is far from trivial and needs plenty of time and resources from an interdisciplinary team of theory-experts and modellers, and even with this provided, progress is slow.
+
+The breadth of examples of SIA models ranging from models targeting the increase in human behavioural realism (EROS) to attempts at keeping the model as simple as possible (KISS), demonstrates SIA’s broad applicability and potential. This review does not intend to classify certain approaches to modelling SIA as "good" and disqualifying others. Rather the formalisation should be about the research question, regarding theoretical assumptions in the model as a "lens" which makes certain aspects of a phenomenon visible. For instance, for studying macro-level social polarisation, it might be sufficient to formalise social identity as a tag. Such models clearly show that identities foster polarisation dynamics which are threatening current democracies. On the other hand, studying the dynamics of self-categorisation calls for a much more fine-grained formalisation which contributes to theory building in social psychology. In essence, modellers pick what they need from a theory, not more. However, to ensure model quality and enable learning from and re-using each other’s work, we consider it crucial to give sufficient detail on formalisations and the reasoning behind them.
+
+An explanatory-rich approach, such as SIA, can be challenging to formalise due to the concurrency and interrelation of different aspects - SIA entails multiple interconnected and dynamic concepts. For example, if one wants to incorporate contextual behaviour, multiple identities, salience, and fit are needed. In specifying this further, identification will play in at different times, and memory and context representation need to be considered (or thoughtfully excluded). Now, social identification is important for both the salience of a social identity and its influence on behaviour. Chronic identification can influence salience; i.e., if one strongly identifies with a specific group (e.g., student group) this group is more likely to become salient across different social situations. However, the strength of identification also influences how much a salient social identity affects behaviour, e.g., group members should conform more strongly to ingroup norms if they are highly (vs. less) identified with their group. The challenge of formalising such strongly connected and dynamic concepts that are also (partly) not clearly specified in the disciplinary literature call for interdisciplinary team science, sufficient time, sound argumentation and comparisons of different formalisations.
+
+When zooming into specific SIA aspects, we further observed conceptual ambiguity in SIA itself, which we identified through widely varying interpretations of specific SIA notions. A diversity of specific interpretations and formalisations became obvious (e.g., for the specification of social identification). For some aspects, we also could not identify domain-specific research specifying the concepts to the amount that would be needed for an ABM; e.g., how much influence a salient identity has on behaviour (e.g., is this continuous, a step-function, \(\dots\)). While vague conceptualisations may lead to questionable models and, in turn, simulation results, implementing theory in a model inevitably entails a formal specification of the theoretical concepts. This points to the role that models can play in theorising within psychology: i.e., advancing SIA together in laying bare gaps, developing testable theories, and comparing competing explanations. Hence, the great variety of formalisations found in the models demonstrates the variety of interpretations of the verbal concepts in the psychological literature, providing a means for further interdisciplinary research among modelling and domain experts for further clarifying theory in the notion of: if you didn’t formalise, you didn’t theorise.
+
+Conclusions and Directions for Further Research
+
+In this review, we considered the prevalence of SIA in agent-based social simulation. We started our review of SIA in ABMs with the impression that the approach lends itself well to modelling human behaviour in diverse decision-making situations. SIA is a multilevel process explanation describing how behaviour changes over time, within and between individuals and groups. While we do not falter in our conviction about the value of SIA in ABMs, doing this review made the challenges of translating rich psychological theories of human behaviour into formal agents even more evident.
+
+From an extensive collection of papers mentioning SIA, only a few were included in the final categorisation, as we limited ourselves to models that built upon/included (parts of) SIA. In many papers, SIA was used rather anecdotally without engaging more profoundly with the theory. This could point towards a general tendency in social simulation that reference to domain-specific theories remains vague (see also Jager 2017). In the papers reviewed, no widely used convergent SIA formalisation could be identified, nor did we encounter a practice of building upon each other’s work. This might be because of the many ways in which even simple things such as ingroup bias apply. Another reason might be the scattered literature, as there are different lines of research not citing each other. One reason for this review is to make a step towards avoiding what O’Sullivan et al. (2016) denoted as the YAAWN syndrome: ‘yet another agent-based model \(\dots\) whatever \(\dots\) nevermind’. With our review, we hope to address this issue by providing future SIA modellers with an overview of current modelling practices and inspiring examples.
+
+The breadth of approaches (from EROS to KISS type) and a diverse set of research domains in the papers reviewed demonstrate the wide applicability of SIA for social simulation ABMs, bridging the scale from the micro to macro level. A large group of models in the tradition of opinion dynamics employ SIA to specify group-based social influence. Consequently, most models did not include salience and fit, and hence, did not incorporate the Self-Categorisation theory. Those models that did include self-categorisation have multiple identities and a large overlap with those incorporating social identification. Of all SIA aspects, the implementation of a social identity and its influence on behaviour were the most prevalent. However, there were also elaborate complex cognitive SIA representations. Looking at what SIA has been used for, i.e., the "function" of SIA in the model, we identified representing collectives, group-based social influence, contextual behaviour, and expectation-building, with representing collectives and modelling group-based social influence having the largest share.
+
+By reviewing models that formalised the social identity approach, we also gained insights into lessons for theorists in the areas of social identity and self-categorisation theory. First, the definitions and functions of theoretical terms are not always clear to people from other disciplines. To ensure research is accessible for multidisciplinary audiences, future work could clarify how terms are operationalised, such as how the meta-contrast principle operates and is measured. Various interpretations exist in the social identity approach literature, such as whether social identification refers to the strength of identification or a social identity becoming salient. Clearly defining concepts and their use will assist modellers in formalising the theoretical principles more accurately in their work. Second, models provide an exciting environment for theorists to test and specify their hypotheses. The computer model environments allow researchers to set up scenarios where independent variables can be manipulated and tested on dependent variables in ways that would be difficult in the laboratory or a field study.
+
+These aspects also lead to insights for social simulation modellers. Firstly, being transparent about what our criteria are for being satisfied with formalisations/ interpretations of theory; justifying the in- or exclusion of theory (parts); and connecting to the work of other modellers if possible is important to improve proper use of theory. Secondly, modellers can take the lead as the formalisation of SIA requires an interdisciplinary process. Modelling can stimulate discussions and further the specification of the missing or unclear parts of the theory. In interdisciplinary team science, comparing, contrasting or integrating different interpretations of (parts) of the theory is feasible.
+
+Doing this systematic review allowed for looking at the state of the art of formalising a relevant theory from social psychology for use in ABMs. It forced us to understand-by-doing about the impact of dealing with ambiguity/unspecificity in formalising social theories. We would like to stress how crucial it is to realise how theory is understood and implemented. Even subtly different assumptions in formalising human behaviour may result in very different model results (Dressler et al. 2019; Wijermans et al. 2020). Here, we see several steps ahead: learning by examples (such as in this special section); engaging more in-depth with the review data (which was beyond the scope of a single article) to also qualitatively disentangle and compare different formalisations; replicating and re-using SIA models, possibly with variations of their formalisations; employing an interdisciplinary team science approach including social-psychologists, thereby reserving sufficient time to discuss methodology and terminology; and to establish and further engage in an active exchange of modellers using SIA in ABMs (such as in the SIAM network: www.siam-network.online). While all of this is time-consuming, we believe that those nitty-gritty-detail discussions as well as embracing the manifold amBIGuity of formalising theory are needed to bring the integration (and furthering) of psychological theory in ABMs to the next level.
+ 
+
+Acknowledgements
+
+The scientific network which allowed us to engage in this interdisciplinary team science project was funded by the Deutsche Forschungsgemeinschaft (DFG- 432516175). Rocco Paolillo received funding as doctoral student at the Bremen International Graduate School of Social Sciences, Constructor University, on the programme EU COFUND BIGSSS-departs, Marie Skłodowska-Curie grant agreement no. 713639. Nanda Wijermans received funding from the Swedish Research Council Formas (Project Grant No. 2018-00401). Anne Templeton’s time was funded by the UKRI grant reference MR/V023748/1’. Many thanks to the members of the SIAM network for constructive discussions as well as to everybody that provided comments to earlier versions of this manuscript.
+
+Appendix
+
+Tables showing overviews of all models and the SIA categories they entail can be found here: https://www.jasss.org/26/2/6/6appendix.pdf
+
+Notes
+
+
+
+The wider field of work on identity is vast. Identities are usually theorised about by assuming people have a multiplicity of personal, relational (interpersonal) and social identities or self-aspects (McConnell 2011). These identities can be difficult to integrate into a person’s self-concept (e.g., in multicultural contexts) and can affect intergroup relations (Brown 2000). There are different traditions of identity theory, including computational models/ABMs of identity (see Owens et al. 2010 for a review). We focus on identity in the context of situated interaction based upon SIA - the family of theories that depart from Tajfel and Turner’s social identity theory and social categorisation theory (Reicher et al. 2010).↩︎
+
+
+PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) is a protocol checklist used to standardise procedures to assure the quality of systematic reviews. While it was developed for systematic reviews in healthcare (Moher et al. 2009), it can be applied to other research fields and tailored to their needs. It was updated in 2015 (Moher et al. 2015) and 2020 (Page et al. 2020).↩︎
+
+
+As models that include elements of SIA depart, at least in this aspect, from a merely descriptive account to modelling as propagated by the KIDS approach, the most crucial distinction is between KISS and EROS.↩︎
+
+
+Some models used more than one of the discussed features; hence, the numbers can add up to more than 43.↩︎
+
+
+	
+	
+
+	
+References
+	
+	
+ABRAMS, D. and Hogg, M. A. (1990) An introduction to the social identity approach. In: Abrams, Dominic and Hogg, Michael A., eds. Social Identity Theory: Constructive and Critical Advances. Harvester-Wheatsheaf, London, pp. 1-9 
+
+ACHTER, S., Borit, M., Cottineau, C., Müller, B., Polhill, G., Radchuk, V., & Meyer, M. (2022). Conducting systematic reviews of agent-based models. Slides presented at the Social Simulation Conference 2022 Milan, Italy. 
+
+AKHMAD, M., Chang, S., & Deguchi, H. (2018). Agent-based model of negative outgroup stereotype in intergroup conflict setting. Joint 10th International Conference on Soft Computing and Intelligent Systems (SOS) and 19th International Symposium on Advanced Intelligent Systems (ISIS). [doi:10.1109/scis-isis.2018.00202]
+
+AXELROD, R. (1997). Advancing the art of simulation in the social sciences. In R. Conte, R. Hegselmann, & P. Terna (Eds.), Simulating Social Phenomena (pp. 21–40).  Berlin Heidelberg: Springer. [doi:10.1007/978-3-662-03366-1_2]
+
+HAMMOND, R. A., & Axelrod, R. (2006). The Evolution of Ethnocentrism. Journal of Conflict Resolution, 50(6), 926–936Springer. [doi:10.1177/0022002706293470]
+
+BRAVO, G., & Yantseva, V. (2020). Cooperation and conflict in segregated populations. Social Science Computer Review, 38(4), 405–421. [doi:10.1177/0894439318821687]
+
+BROWN, R. (2000). Social identity theory: Past achievements, current problems and future challenges. European Journal of Social Psychology, 30(6), 745–778. [doi:10.1002/1099-0992(200011/12)30:6<745::aid-ejsp24>3.0.co;2-o]
+
+BURKE, P., & Stets, J. (2009). Identity Theory. Oxford: Oxford University Press. 
+
+CHOPRA, A., van der Torre, L., Verhagen, H., & Villata, S. (2018). Handbook of Normative Multiagent Systems. Rickmansworth: College Publications. 
+
+CIOROIANU, I. (2020). An agent-based model of cooperation with cross-cutting identity dimensions. Journal of Computational Social Science, 4(1), 49–75. [doi:10.1007/s42001-020-00065-w]
+
+DIMAS, J., & Prada, R. (2014). Dynamic identity model for agents. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 8235 LNAI, 37-52. [doi:10.1007/978-3-642-54783-6_3]
+
+DRESSLER, G., Groeneveld, J., Buchmann, C. M., Guo, C., Hase, N., Thober, J., Frank, K., & Müller, B. (2019). Implications of behavioral change for the resilience of pastoral systems - Lessons from an agent-based model. Ecological Complexity, 40, 100710. [doi:10.1016/j.ecocom.2018.06.002]
+
+DROSELTIS, O., & Vignoles, V. L. (2010). Towards an integrative model of place identification: Dimensionality and predictors of intrapersonal-level place preferences. Journal of Environmental Psychology, 30(1), 23–34. [doi:10.1016/j.jenvp.2009.05.006]
+
+DRURY, J., Cocking, C., & Reicher, S. D. (2009). Everyone for themselves? A comparative study of crowd solidarity among emergency survivors. British Journal of Social Psychology, 48(3), 487–506. [doi:10.1348/014466608x357893]
+
+EASTERBROOK, M., & Vignoles, V. L. (2012). Different groups, different motives: Identity motives underlying changes in identification with novel groups. Personality and Social Psychology Bulletin, 38(8), 1066–1080. [doi:10.1177/0146167212444614]
+
+EDMONDS, B. (2017). The room around the elephant: Tackling context-Dependency in the social sciences. In J. Johnson, A. Nowak, P. Ormerod, B. Rosewell, & Y. C. Zhang (Eds.), Non-Equilibrium Social Science and Policy (pp. 195–208). Berlin Heidelberg: Springer. [doi:10.1007/978-3-319-42424-8_13]
+
+EDMONDS, B., & Moss, S. (2004). From KISS to KIDS – An ’anti-simplistic’ modelling approach. In P. Davidsson, B. Logan, & K. Takadama (Eds.), International Workshop on Multi-Agent Systems and Agent-Based Simulation (pp. 130–144). Berlin Heidelberg: Springer. [doi:10.1007/978-3-540-32243-6_11]
+
+ELLEMERS, N., Spears, R., & Doosje, B. (2002). Self and social identity. Annual Review of Psychology, 53(1), 161–186. [doi:10.1146/annurev.psych.53.100901.135228]
+
+ERIKSON, E. H. (1968). Identity: Youth and Crisis. New York, NY: W. W. Norton & Company. 
+
+FISKE, S. T. (2018). Social Beings: Core Motives in Social Psychology. Hoboken, NJ: John Wiley & Sons. 
+
+FRITSCHE, I., Barth, M., Jugert, P., Masson, T., & Reese, G. (2018). A social identity model of proenvironmental action (SIMPEA). Psychological Review, 125, 245–269. [doi:10.1037/rev0000090]
+
+GIBBS, J. P. (1981). Norms, Deviance and Social Control: Conceptual Matters. New York, NY: Elsevier. 
+
+GOUGH, D., Oliver, S., & Thomas, J. (2012). An Introduction to Systematic Reviews. Thousand Oaks, CA: Sage. 
+
+GREENAWAY, K. H., Haslam, S. A., Cruwys, T., Branscombe, N. R., Ysseldyk, R., & Heldreth, C. (2015). From "we" to "me": Group identification enhances perceived personal control with consequences for health and well-being. Journal of Personality and Social Psychology, 109(1), 53–74. [doi:10.1037/pspi0000019]
+
+GRESKY, D. M., Eyck, L. L. T., Lord, C. G., & McIntyre, R. B. (2005). Effects of salient multiple identities on women’s performance under mathematics stereotype threat. Sex Roles, 53(9), 703–716. [doi:10.1007/s11199-005-7735-2]
+
+GRIMM, V., Berger, U., Bastiansen, F., Eliassen, S., Ginot, V., Giske, J., Goss-Custard, J., Grand, T., Heinz, S. K.,  Huse, G., Huth, A., Jepsen, J. U., Jø rgensen, C., Mooij, W. M., Müller, B., Pe’er, G., Piou, C., Railsback, S. F., Robbins, A. M., Robbins, M. M., Rossmanith, E., Rüger, N., Strand, E., Souissi, S., Stillman, R. A., Vabø, R., Visser, U. & DeAngelis, D. L.  (2006). A standard protocol for describing individual-based and agent-based models. Ecological Modelling, 198(1–2), 115–126. [doi:10.1016/j.ecolmodel.2006.04.023]
+
+GRIMM, V., Berger, U., DeAngelis, D. L., Polhill, J. G., Giske, J., & Railsback, S. F. (2010). The ODD protocol: A review and first update. Ecological Modelling, 221(23), 2760–2768. [doi:10.1016/j.ecolmodel.2010.08.019]
+
+HARZING, A. W. (2007). Publish or perish. Available at: https://harzing.com/resources/publish-or-perish. 
+
+HASLAM, S. A., Oakes, P. J., Reynolds, K. J., & Turner, J. C. (1999). Social identity salience and the emergence of stereotype consensus. Personality and Social Psychology Bulletin, 25(7), 809–818. [doi:10.1177/0146167299025007004]
+
+HASLAM, S. A., O’Brien, A., Jetten, J., Vormedal, K., & Penna, S. (2005). Taking the strain: Social identity, social support, and the experience of stress. British Journal of Social Psychology, 44, 355–370. [doi:10.1348/014466605x37468]
+
+HOFSTEDE, G. J., Frantz, C., Hoey, J., Scholz, G., & Schröder, T. (2021). Artificial sociality manifesto. Review of Artificial Societies and Social Simulation, 8th Apr 2021. Available at: https://rofasss.org/2021/04/08/artsocmanif/. 
+
+JAGER, W. (2017). Enhancing the realism of simulation (EROS): On implementing and developing psychological theory in social simulation. Journal of Artificial Societies and Social Simulation, 20(3), 14. [doi:10.18564/jasss.3522]
+
+JETTEN, J., Haslam, C., Haslam, S. A., Dingle, G., & Jones, J. M. (2014). How groups affect our health and well-being: The path from theory to policy. Social Issues and Policy Review, 8(1), 103–130. [doi:10.1111/sipr.12003]
+
+KANG, S. K., & Bodenhausen, G. V. (2015). Multiple identities in social perception and interaction: Challenges and opportunities. Annual Review of Psychology, 66, 547–557. [doi:10.1146/annurev-psych-010814-015025]
+
+KNIPPENBERG, D. van, & Hogg, M. A. (2003). A social identity model of leadership effectiveness in organisations. Research in Organisational Behavior, 25, 243–295. 
+
+KOPECKY, J., Bos, N., & Greenberg, A. (2010). Social identity modeling: Past work and relevant issues for sociocultural modeling. Proceedings of the 19th Conference on Behavior Representation in Modeling and Simulation Charleston, S. C.. 
+
+LEVINE, M., Prosser, A., Evans, D., & Reicher, S. (2005). Identity and emergency intervention: How social group membership and inclusiveness of group boundaries shape helping behaviour. Personality and Social Psychology Bulletin, 34(4), 443–453. [doi:10.1177/0146167204271651]
+
+LOUIS, W. R., Duck, J. M., Terry, D. J., Schuller, R. A., & Lalonde, R. N. (2007). Why do citizens want to keep refugees out? Threats, fairness and hostile norms in the treatment of asylum seekers. European Journal of Social Psychology, 37(1), 53–73. [doi:10.1002/ejsp.329]
+
+LUSTICK, I. (2002). PS-I: A user-Friendly agent-based modeling platform for testing theories of political identity and political stability. Journal of Artificial Societies and Social Simulation, 5(3), 7. 
+
+MACY, M. W., & Willer, R. (2002). From factors to actors: Computational sociology and agent-based modeling. Annual Review of Sociology, 28(1), 143–166. [doi:10.1146/annurev.soc.28.110601.141117]
+
+MASSON, T., & Barth, M. (2019). Solving the paradox - (further) evidence for a quadratic relationship between ingroup centrality and group‐based guilt. British Journal of Social Psychology, 58(4), 917–937. [doi:10.1111/bjso.12310]
+
+MCCONNELL, A. R. (2011). The multiple self-aspects framework: Self-concept representation and its implications. Personality and Social Psychology Review, 15(1), 3–27. [doi:10.1177/1088868310371101]
+
+METZ, T. (2011). A multilevel model of party identification. 10th Dutch-Flemish Politicologenetmaal, Session. 
+
+MOHER, D., Liberati, A., Tetzlaff, J., Altman, D. G., & The PRISMA Group. (2009). Preferred reporting items for systematic reviews and meta-Analyses: The PRISMA statement. PLoS Med, 6(7), e1000097. [doi:10.1371/journal.pmed.1000097]
+
+MOHER, D., Shamseer, L., Clarke, M., Ghersi, D., Liberati, A., Petticrew, M., Shekelle, P., Stewart, L. A., & PRISMA-P Group. (2015). Preferred reporting items for systematic review and meta-analysis protocols (PRISMA-P). Systematic Reviews, 4(1), 1–9. [doi:10.1186/2046-4053-4-1]
+
+MÜLLER, B., Bohn, F., Dressler, G., Groeneveld, J., Klassert, C., Martin, R., Schlüter, M., Schulze, J., Weise, H., & Schwarz, N. (2013). Describing human decisions in agent-based models - ODD + D, an extension of the ODD protocol. Environmental Modelling & Software, 48, 37–48. 
+
+OAKES, P. J., Turner, J. C., & Haslam, S. A. (1991). Perceiving people as group members: The role of fit in the salience of social categorizations. British Journal of Social Psychology, 30, 125–144. [doi:10.1111/j.2044-8309.1991.tb00930.x]
+
+O’SULLIVAN, D., Evan, T., Manson, S., Metcalf, S., Ligmann-Zielinska, A., & Bone, C. (2016). Strategic directions for agent-based modelling: Avoiding the YAAWN syndrom. Journal of Land Use Science, 11(2), 177–187. [doi:10.1080/1747423x.2015.1030463]
+
+OWENS, T. J., Robinson, D. T., & Smith-Lovin, L. (2010). Three faces of identity. Annual Review of Sociology, 36, 477–499. [doi:10.1146/annurev.soc.34.040507.134725]
+
+PAGE, M. J., Moher, D., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M., Hróbjartsson, A., & Lalu, M. (2020). PRISMA 2020 explanation and elaboration: Updated guidance and exemplars for reporting systematic reviews. BMJ, 372(160). [doi:10.31222/osf.io/gwdhk]
+
+PIRES, B., & Crooks, A. T. (2017). Modeling the emergence of riots: A geosimulation approach. Computers, Environment and Urban Systems, 61, 66–80. [doi:10.1016/j.compenvurbsys.2016.09.003]
+
+REICHER, S. D., Spears, R., & Haslam, S. A. (2010). The social identity approach in social psychology. In M. Wetherell & C. Talpade Mohanty (Eds.), The SAGE Handbook of Identities (pp. 45–62). London: Sage. [doi:10.4135/9781446200889.n4]
+
+REICHER, S. D., Templeton, A., Neville, F., Ferrari, L., & Drury, J. (2016). Core disgust is attenuated by ingroup relations. Proceedings of the National Academy of Sciences, 113(10), 2631–2635. [doi:10.1073/pnas.1517027113]
+
+RELKE, S., Fritsche, I., Masson, T., Kleine, A. K., Thien, K., von Glahn, L., Leuteritz, K., & Richter, D. (2022). Personal condition but social cure: Agentic ingroups elevate well-being in chronically ill patients through perceptions of personal control. British Journal of Health Psychology, 27(3), 666-690. [doi:10.1111/bjhp.12567]
+
+ROCCAS, S., & Brewer, M. (2002). Social identity complexity. Personality and Social Psychology Review, 6(2), 88–106. [doi:10.1207/s15327957pspr0602_01]
+
+SALZARULO, L. (2006). A continuous opinion dynamics model based on the principle of meta-Contrast. Journal of Artificial Societies and Social Simulation, 9(1), 13. 
+
+SAWYER, R. K. (2004). Social explanation and computational simulation. Philosophical Explorations, 7, 219–231. [doi:10.1080/1386979042000258321]
+
+SCHLÜTER, M., Baeza, A., Dressler, G., Frank, K., Groeneveld, J., Jager, W., Janssen, M. A., McAllister, R. R. J., Müller, B., Orach, K., Schwarz, N., & Wijermans, N. (2017). A framework for mapping and comparing behavioural theories in models of social-ecological systems. Ecological Economics, 131, 21–35. 
+
+SCHOLZ, G., Eberhard, T., Ostrowski, R., & Wijermans, N. (2021). Social identity in agent-based models - exploring the state of the art. Proceedings of the 15th Social Simulation Conference 59-64. [doi:10.1007/978-3-030-61503-1_6]
+
+SHOHAM, Y., & Tennenholtz, M. (1992). On the synthesis of useful social laws for artificial agent societies (preliminary report). Proceedings of the 10th National conference on artificial intelligence (AAAI’92), 12–16 July 1992 AAAI. [doi:10.1016/0004-3702(94)00007-n]
+
+SKARIN, B. (2014).  Social Identity Simulation System (SISTEM). APTIMA Human-Centred Engineering Report No. DRDC-RDDC-2014-C139. 
+
+SMALDINO, P. E., Janssen, M. A., Hillis, V., & Bednar, J. (2017). Adoption as a social marker: Innovation diffusion with outgroup aversion. Journal of Mathematical Sociology, 41(1), 26–45. [doi:10.1080/0022250x.2016.1250083]
+
+STEFFENS, N. K., Mols, F., Haslam, S. A., & Okimoto, T. G. (2016). True to what we stand for: Championing collective interests as a path to authentic leadership. The Leadership Quarterly, 27(5), 726–744. [doi:10.1016/j.leaqua.2016.04.004]
+
+STRYKER, S. (1980). Symbolic Interactionism: A Social Structural Version. Benjamin Cummings. 
+
+TAJFEL, H. (1969). Cognitive aspects of prejudice. Journal of Social Issues, 25(4), 79–97. [doi:10.1111/j.1540-4560.1969.tb00620.x]
+
+TAJFEL, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict. In W. G. Austin & S. Worchel (Eds.), The Social Psychology of Intergroup Relations (pp. 33–47). Brooks/Cole. 
+
+TAJFEL, H., & Turner, J. C. (1986). The social identity theory of intergroup behaviour. In S. Worchel & W. G. Austin (Eds.), Psychology of Intergroup Relations (pp. 7–24). Nelson-Hall. [doi:10.4324/9780203505984-16]
+
+TEMPLETON, A., Drury, J., & Philippides, A. (2015). From mindless masses to small groups: Conceptualising collective behavior in crowd modeling. Review of General Psychology, 19(3), 215–229. [doi:10.1037/gpr0000032]
+
+TURNER, C. J. (1991). Social Influence. Brooks/Cole. 
+
+TURNER, J. C. (1985). Social categorisation and the self-concept: A social cognitive theory of group behavior. In E. J. Lawler (Ed.), Advances in Group Processes (pp. 77–122). JAI Press. 
+
+TURNER, J. C., Hogg, M. A., Oakes, P. J., Reicher, S. D., & Wetherell, M. S. (1987). Rediscovering the Social Group: A Self-Categorisation Theory. Basil Blackwell. 
+
+TURNER, J. C., Oakes, P. J., Haslam, S. A., & McGarty, C. (1994). Self and collective: Cognition and social context. Personality and Social Psychology Bulletin, 20(5), 454–463. [doi:10.1177/0146167294205002]
+
+UDALL, A. M., de Groot, J. I. M., de Jong, S. B., & Shankar, A. (2021). How I see me - A meta-Analysis investigating the association between identities and pro-environmental behaviour. Frontiers in Psychology, 12, 58242. [doi:10.3389/fpsyg.2021.582421]
+
+UNSWORTH, K. L., & Fielding, K. S. (2019). It’s political: How the salience of one’s political identity changes climate change beliefs and policy support. Global Environmental Change, 27, 131–137. [doi:10.1016/j.gloenvcha.2014.05.002]
+
+VAN Der Werff, E., Steg, L., & Keizer, K. (2013). The value of environmental self-identity: The relationship between biospheric values, environmental self-identity and environmental preferences, intentions and behaviour. Journal of Environmental Psychology, 34, 55–63. [doi:10.1016/j.jenvp.2012.12.006]
+
+VAN Roy, D. (2012). A connectionist ABM of social categorisation processes. Advances in Complex Systems, 15, 6. 
+
+WIJERMANS, N., Boonstra, W. J., Orach, K., Hentati-Sundberg, J., & Schlüter, M. (2020). Behavioural diversity in fishing - Towards a next generation of fishery models. Fish and Fisheries, 21(5), 872–890. [doi:10.1111/faf.12466]
+
+WIJERMANS, N., Scholz, G., Paolillo, R., Schröder, T., Chappin, E., Craig, T., & Templeton, A. (2022). Models in social psychology and agent-based social simulation - An interdisciplinary conversation on similarities and differences. Review of Artificial Societies and Social Simulation. Available at: https://rofasss.org/2022/10/04/models-in-spabss/. [doi:10.18564/jasss.5066]
+
+WIJERMANS, N., & Templeton, A. (2022). Towards more realism in pedestrian behaviour models: First steps and considerations in formalising social identity. Advances in Social Simulation: Proceedings of the 16th Social Simulation Conference, 20–24 September 2021 (p. 53). [doi:10.1007/978-3-030-92843-8_5]
+
+XIAO, Y., & Watson, M. (2019). Guidance on conducting a systematic literature review. Journal of Planning Education and Research, 39(1), 93–112. [doi:10.1177/0739456x17723971]
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+---
+title: "Bridging Systems: Open Problems for Countering Destructive Divisiveness across Ranking, Recommenders, and Governance"
+tags:
+  - conceptual_framework
+  - research_agenda
+authors:
+  - "[[Literature/Authors/Aviv Ovadya|Aviv Ovadya]]"
+  - "[[Literature/Authors/Luke Thorburn|Luke Thorburn]]"
+publication date: 2023-01-24
+source: https://arxiv.org/html/2301.09976
+doi:
+read status: Todo
+⚠️: []
+---
+## Abstract
+
+Divisiveness appears to be increasing in much of the world, leading to concern about political violence and a decreasing capacity to collaboratively address large-scale societal challenges. In this working paper we aim to articulate an interdisciplinary research and practice area focused on what we call bridging systems: systems which increase mutual understanding and trust across divides, creating space for productive conflict, deliberation, or cooperation. We give examples of bridging systems across three domains: recommender systems on social media, collective response systems, and human-facilitated group deliberation. We argue that these examples can be more meaningfully understood as processes for attention-allocation (as opposed to "content distribution" or "amplification") and develop a corresponding framework to explore similarities - and opportunities for bridging - across these seemingly disparate domains. We focus particularly on the potential of bridging-based ranking to bring the benefits of offline bridging into spaces which are already governed by algorithms. Throughout, we suggest research directions that could improve our capacity to incorporate bridging into a world increasingly mediated by algorithms and artificial intelligence.
+
+## Research Questions
+> Research Questions extracted via LLM
+- How can systems across ranking, recommenders, collective response, and deliberative governance be designed to support bridging across divides?[^r1]
+- How can bridging be framed as attention allocation, and what research questions follow from connecting these system domains?[^r2]
+
+## Metadata
+### References
+- [[Eigenmorality]]
+- [[RecommenderSystems]]
+- [[TowardAConnectedSociety]]
+- [[AnalysisOfFacebookSWidelyViewedContentReportQ42021Q12022Accessed202304162022]]
+- [[HowCommunitiesAreExploitedOnOurPlatformsAFinalLookAtTheTrollFarmPagesDocumentLeakedFromFacebookAccessed202304162019]]
+- [[StandardsForEducationalAndPsychologicalTesting]]
+- [[PeekingIntoTheOtherHalfOfTheGlassHandlingPolarizationInRecommenderSystems2017]]
+- [[ParisPolarizationAwareRecommenderInteractiveSystem]]
+- [[PrcpPreRecommendationCounterPolarization]]
+- [[BreakingTheSocialMediaPrismHowToMakeOurPlatformsLessPolarizing]]
+- [[Exposure to opposing views on social media can increase political polarization]]
+- [[StewardshipOfGlobalCollectiveBehavior]]
+- [[FineTuningLanguageModelsToFindAgreementAmongHumansWithDiversePreferences]]
+- [[EmergenceOfPolarizedIdeologicalOpinionsInMultidimensionalTopicSpaces]]
+- [[WhatSRightAndWhatSWrongWithOptimizingForEngagement]]
+- [[EuclideanPreferences]]
+- [[ConflictTransformationADebateOverSemanticsOrACrucialShiftInTheTheoryAndPracticeOfPeaceAndConflictStudies]]
+- [[CrossCountryTrendsInAffectivePolarization]]
+- [[EstimatingTheEffectSizeOfMoralContagionInOnlineNetworksAPreRegisteredReplicationAndMetaAnalysis]]
+- [[UnderstandingPolarizationMeaningsMeasuresAndModelEvaluation]]
+- [[LanguageModelsAreFewShotLearners]]
+- [[AreFilterBubblesReal]]
+- [[ApplyingConflictResolutionInsightsToTheHyperPolarizedSocietyWideConflictsThreateningLiberalDemocracies]]
+- [[CharacterizingManipulationFromAiSystems2023]]
+- [[EstimatingAndPenalizingInducedPreferenceShiftsInRecommenderSystems]]
+- [[FacilitatingPublicDeliberations2020]]
+- [[ControllingPolarizationInPersonalizationAnAlgorithmicFramework]]
+- [[HowToTellWhetherATwitterUserIsProChoiceOrProLifeWithoutReadingAnyOfTheirTweets]]
+- [[AlgorithmicSystemsDesignedToReducePolarizationCouldHurtDemocracyNotHelpIt2022]]
+- [[TakingComplexSystemsSeriouslyVisualizingAndModelingTheDynamicsOfSustainablePeace]]
+- [[AnOverviewOfBilevelOptimization]]
+- [[TheFunctionsOfSocialConflict]]
+- [[CitizensAssembliesForReferendumsAndConstitutionalReformsIsThereAnIrishModelForDeliberativeDemocracy]]
+- [[DeepNeuralNetworksForYoutubeRecommendations]]
+- [[ConflictsProductiveAndDestructive]]
+- [[TheCrisisOfDemocracyAndTheScienceOfDeliberation]]
+- [[PolarizationConceptsMeasurementEstimation]]
+- [[FormsOfMiniPublicsAnIntroductionToDeliberativeInnovationsInDemocraticPractice]]
+- [[2020H2InReviewDiversePositiveMotifsCanImproveCivicConversations]]
+- [[MsiMetricChangesFor2020H1]]
+- [[NewsFeedResearchLookingBackOnH22020]]
+- [[BigDataAndDemocraticSpeechPredictingDeliberativeQualityUsingMachineLearningTechniques]]
+- [[CultivatingDeliberationForDemocracy]]
+- [[PublicWisdom]]
+- [[RewardReportsForReinforcementLearning]]
+- [[CoConstructionInDeliberativeDemocracyLessonsFromTheFrenchCitizensConventionForClimate2022]]
+- [[SocialMediaAndPoliticalDysfunctionAReview2021]]
+- [[ArchetypesOfPolarizationOnSocialMedia]]
+- [[InMeta2018]]
+- [[VtaiwanAnEmpiricalStudyOfOpenConsultationProcessInTaiwan]]
+- [[SubprimeAttentionCrisisAdvertisingAndTheTimeBombAtTheHeartOfTheInternet]]
+- [[NetworkPolarizationFilterBubblesAndEchoChambersAnAnnotatedReviewOfMeasuresModelsAndCaseStudies]]
+- [[AlgorithmicDiplomacyImplementingMediationTechniquesInYoutubeSRecommenderSystem2018]]
+- [[AReviewAndProvocationOnPolarizationAndPlatforms]]
+- [[LectureIGoverningTheAlgorithmicCityObertCTannerLectureOnAiAndHumanValuesStanfordUniversity2023]]
+- [[LectureIiCommunicativeJusticeAndTheDistributionOfAttentionObertCTannerLectureOnAiAndHumanValuesStanfordUniversity2023]]
+- [[TheLittleBookOfConflictTransformation]]
+- [[ASystematicReviewOfWorldwideCausalAndCorrelationalEvidenceOnDigitalMediaAndDemocracy]]
+- [[PolarizationAndTippingPoints]]
+- [[CategorizingVariantsOfGoodhartSLaw]]
+- [[OnCompromiseAndRottenCompromises]]
+- [[MeasuringAndModeratingOpinionPolarizationInSocialNetworks]]
+- [[TowardATheoryOfPerniciousPolarizationAndHowItHarmsDemocraciesComparativeEvidenceAndPossibleRemediesPublisherSagePublicationsInc]]
+- [[FacebookFeedAiSystem2023]]
+- [[TwitterSAlgorithmAmplifyingAngerAnimosityAndAffectivePolarization2023]]
+- [[DeliberativeDemocracyOrAgonisticPluralism]]
+- [[HowToQuantifyPolarizationInModelsOfOpinionDynamics2021]]
+- [[HowToRecognizeAiSnakeOilPrincetonUniversity2019]]
+- [[GenerativeCiThroughCollectiveResponseSystems2023]]
+- [[BridgingBasedRanking2022]]
+- [[HoldingPlatformsAccountableIsNotEnoughWeNeedACompassForSocialTechnologies]]
+- [[MetaRanAGiantExperimentInGovernanceNowItSTurningToAi]]
+- [[RestrictingClusteringTo25GroupsImpactsGroupAwareInformedConsensusAndCommentRouting]]
+- [[TowardsPlatformDemocracyPolicymakingBeyondCorporateCeosAndPartisanPressure2021]]
+- [[Definitions]]
+- [[RecentAdvancesInIntergroupContactTheory]]
+- [[TheComputationalDemocracyProject]]
+- [[BridgingOrBreakingTheStoriesWeTellWillCreateTheFutureWeInhabit]]
+- [[OvercomingToxicPolarizationLessonsInEffectiveBridging]]
+- [[FightingFireWithFireUsingAntidoteDataToImprovePolarizationAndFairnessOfRecommenderSystems]]
+- [[FilteringForSerendipityExtremismFilterBubblesAndSurprisingValidatorsAccessed202304162012]]
+- [[FromFreedomOfSpeechAndReachToFreedomOfExpressionAndImpressionAccessed20230416]]
+- [[MethodAndApparatusForAnIdeaAdoptionMarketplacePublicDomainUSPatent20040186738A1Sep1969]]
+- [[TheAugmentedWisdomOfCrowdsRateTheRatersAndWeightTheRatingsAccessed202304162018]]
+- [[HighConflictWhyWeGetTrappedAndHowWeGetOut]]
+- [[SimclustersCommunityBasedRepresentationsForHeterogeneousRecommendationsAtTwitter]]
+- [[ARoadmapForCollaborationOnTechnologyAndSocialCohesion2023]]
+- [[TheCaseForDesigningTechForSocialCohesionTheLimitsOfContentModerationAndTechRegulation]]
+- [[ProtectingAndRestoringNzSBiodiversity2019]]
+- [[BridgingDifferencesPlaybook]]
+- [[FullTranscriptTimVanGelder]]
+- [[PolisScalingDeliberationByMappingHighDimensionalOpinionSpaces]]
+- [[DesigningRecommenderSystemsToDepolarize]]
+- [[TheAlgorithmicManagementOfPolarizationAndViolenceOnSocialMedia]]
+- [[BreakingUpTheEcho]]
+- [[PolarizationVersusDemocracy]]
+- [[HealthByAssociationSocialCapitalSocialTheoryAndThePoliticalEconomyOfPublicHealth]]
+- [[TheCaseForDesigningTechForSocialCohesionHttpsTechandsocialcohesionOrgWpContentUploads202302DigitalTechSocialcohesionExecsummaryPdf2023]]
+- [[HowPlatformRecommendersWork]]
+- [[RelationMetrics]]
+- [[ErrorInTheEuclideanPreferenceModel2023]]
+- [[HowToMeasureTheEffectsOfRecommenders]]
+- [[WhatDoesItMeanToGiveSomeoneWhatTheyWantTheNatureOfPreferencesInRecommenderSystems]]
+- [[WhatWillAmplificationMeanInCourt]]
+- [[NoteRanking]]
+- [[Overview]]
+- [[TowardsArgumentMiningForSocialGoodASurvey]]
+- [[MegastudyIdentifyingSuccessfulInterventionsToStrengthenAmericansDemocraticAttitudes2022]]
+- [[HowCivilWarsStart]]
+- [[WhyIAmAPluralist]]
+- [[StandOutOfOurLightFreedomAndResistanceInTheAttentionEconomy]]
+- [[BirdwatchCrowdWisdomAndBridgingAlgorithmsCanInformUnderstandingAndReduceTheSpreadOfMisinformation]]
+- [[OurviewFoundationLtd]]
+- [[ThePerceptionGapHowFalseImpressionsArePullingAmericansApart]]
+- [[MinimizingPolarizationAndDisagreementInSocialNetworksViaLinkRecommendation]]
+
+
+## LLM Justification
+
+[^r1]: Ovadya & Thorburn (2023), Sections 2–4: examples across recommender systems, collective response, and group deliberation; https://arxiv.org/html/2301.09976.
+[^r2]: Ovadya & Thorburn (2023), Sections 1 and 5: attention-allocation framing and proposed research directions; https://arxiv.org/html/2301.09976.

@@ -1,0 +1,35 @@
+{
+  "audit_id": "next-fifteen-33-35-focused-reaudit-2026-09-30",
+  "audited_at": "2026-09-30",
+  "auditor_scope": "Focused independent second audit of #33 abstract exactness and #35 model-footnote precision, following corrections by another agent. Read current notes and primary ACL Anthology PDF for #33; read #35 note, SAGE publisher record/abstract and accessible author-uploaded full text. No notes edited.",
+  "notes": [
+    {
+      "index": 33,
+      "path": "vault/Literature/Papers/Entries/Humanoid Agents- Platform for Simulating Human-like Generative Agents.md",
+      "verdict": "PASS",
+      "source_access": "Primary ACL Anthology PDF accessible: https://aclanthology.org/2023.emnlp-demo.15.pdf.",
+      "check": "The complete note Abstract matches the paper abstract (PDF p. 167) verbatim, including the phrasing “as supported with empirical experiments”, the three demonstrated settings, Unity WebGL/dashboard, and platform/code URLs. Publisher PDF lines 13-31 support this transcription. The abstract footnote points to the primary PDF, p. 167. No abstract correction needed.",
+      "limitations": "Scope was limited to literal abstract exactness, as requested; remaining model/content was not re-audited."
+    },
+    {
+      "index": 35,
+      "path": "vault/Literature/Papers/Entries/Individual Motivations and Network Effects.md",
+      "verdict": "PASS_WITH_MINOR_CAVEAT",
+      "source_access": "Publisher title/abstract available at https://journals.sagepub.com/doi/10.1177/0002716214565755; full author-uploaded paper accessible at ResearchGate, with printed pagination 180-190.",
+      "checks": {
+        "abstract": "The note abstract is exact against the SAGE abstract (publisher page; author full-text printed p. 180), including tie result wording and insignificant predictors.",
+        "method_and_claim_fit": "The model paragraph accurately identifies p*/ERGM on Second Life logged relationships, the predictor categories and significant/non-significant results. Author full text identifies p*/ERGM and the factor levels on printed pp. 181-186; Table 1 and results on p. 187 show only total time online and balance significant, while physical proximity, online tenure, age/gender homophily and preferential attachment are unsupported. This agrees with the note.",
+        "footnotes": "[^r1] gives printed pp. 181-187 for data, ERGM specification and results; this range supports the whole model paragraph. The published abstract on the DOI page directly backs the significance summary. Research question wording is explicitly marked paraphrase and backed by publisher abstract. [^r2] gives a more focused results/discussion locator (printed pp. 184-187) but is currently not called in the body; this is a minor unused-footnote cleanup opportunity, not a claim-support failure."
+      },
+      "findings": [
+        {
+          "severity": "minor_editorial",
+          "location": "LLM Justification [^r2]",
+          "finding": "[^r2] is not referenced in the note body, although the result claim is already supported by [^r1] and the publisher abstract.",
+          "required_fix": "Optionally attach [^r2] to the results sentence or remove the unused note."
+        }
+      ],
+      "metadata": "Source article pagination in the note is printed pages 181-187, which matches the full article pagination (pp. 180-190 overall); no page-location mismatch found."
+    }
+  ]
+}

@@ -1,0 +1,698 @@
+{
+  "source_file": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html",
+  "source_sha256": "4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d",
+  "entries": [
+    {
+      "index": 1,
+      "source_id": "bib.bib1",
+      "blocks": [
+        "Bilsky, W., Janik, M. & Schwartz, S. H. (2011).",
+        "The Structural Organization of Human Values-Evidence from Three Rounds of the European Social Survey (ESS).",
+        "Journal of Cross-Cultural Psychology, 42(5), 759–776.",
+        "doi:10.1177/0022022110362757 URL http://dx.doi.org/10.1177/0022022110362757"
+      ],
+      "citation": "Bilsky et al. (2011) Bilsky, W., Janik, M. & Schwartz, S. H. (2011). The Structural Organization of Human Values-Evidence from Three Rounds of the European Social Survey (ESS). Journal of Cross-Cultural Psychology, 42(5), 759–776. doi:10.1177/0022022110362757 URL http://dx.doi.org/10.1177/0022022110362757",
+      "title_candidate": "The Structural Organization of Human Values-Evidence from Three Rounds of the European Social Survey (ESS)",
+      "status": "requires source verification"
+    },
+    {
+      "index": 2,
+      "source_id": "bib.bib2",
+      "blocks": [
+        "Bourdieu, P. (1977).",
+        "Outline of a theory of practice, vol. 16.",
+        "Cambridge University Press URL papers://cfc50b6a-2d9e-4feb-87e5-d6012043bd5a/Paper/p2118"
+      ],
+      "citation": "Bourdieu (1977) Bourdieu, P. (1977). Outline of a theory of practice, vol. 16. Cambridge University Press URL papers://cfc50b6a-2d9e-4feb-87e5-d6012043bd5a/Paper/p2118",
+      "title_candidate": "Outline of a theory of practice, vol. 16",
+      "status": "requires source verification"
+    },
+    {
+      "index": 3,
+      "source_id": "bib.bib3",
+      "blocks": [
+        "Cass, N. & Faulconbridge, J. (2016).",
+        "Commuting practices: New insights into modal shift from theories of social practice.",
+        "Transport Policy, 45, 1–14.",
+        "doi:10.1016/j.tranpol.2015.08.002 URL http://dx.doi.org/10.1016/j.tranpol.2015.08.002"
+      ],
+      "citation": "Cass & Faulconbridge (2016) Cass, N. & Faulconbridge, J. (2016). Commuting practices: New insights into modal shift from theories of social practice. Transport Policy, 45, 1–14. doi:10.1016/j.tranpol.2015.08.002 URL http://dx.doi.org/10.1016/j.tranpol.2015.08.002",
+      "title_candidate": "Commuting practices: New insights into modal shift from theories of social practice",
+      "status": "requires source verification"
+    },
+    {
+      "index": 4,
+      "source_id": "bib.bib4",
+      "blocks": [
+        "Castelfranchi, C. (1997).",
+        "Modeling social action for AI agents.",
+        "IJCAI International Joint Conference on Artificial Intelligence, 2(c), 1567–1576.",
+        "doi:10.1016/S0004-3702(98)00056-3 URL http://dx.doi.org/10.1016/S0004-3702(98)00056-3"
+      ],
+      "citation": "Castelfranchi (1997) Castelfranchi, C. (1997). Modeling social action for AI agents. IJCAI International Joint Conference on Artificial Intelligence, 2(c), 1567–1576. doi:10.1016/S0004-3702(98)00056-3 URL http://dx.doi.org/10.1016/S0004-3702(98)00056-3",
+      "title_candidate": "Modeling social action for AI agents",
+      "status": "requires source verification"
+    },
+    {
+      "index": 5,
+      "source_id": "bib.bib5",
+      "blocks": [
+        "Chen, L., Nugent, C. D. & Wang, H. (2012).",
+        "A Knowledge-Driven Approach to Activity Recognition in Smart Homes.",
+        "IEEE Transactions on Knowledge and Data Engineering, 24(6), 961–974.",
+        "doi:10.1109/TKDE.2011.51 URL http://dx.doi.org/10.1109/TKDE.2011.51"
+      ],
+      "citation": "Chen et al. (2012) Chen, L., Nugent, C. D. & Wang, H. (2012). A Knowledge-Driven Approach to Activity Recognition in Smart Homes. IEEE Transactions on Knowledge and Data Engineering, 24(6), 961–974. doi:10.1109/TKDE.2011.51 URL http://dx.doi.org/10.1109/TKDE.2011.51",
+      "title_candidate": "A Knowledge-Driven Approach to Activity Recognition in Smart Homes",
+      "status": "requires source verification"
+    },
+    {
+      "index": 6,
+      "source_id": "bib.bib6",
+      "blocks": [
+        "Davidov, E., Schmidt, P. & Schwartz, S. H. (2008).",
+        "Bringing values back in: The adequacy of the European social survey to measure values in 20 countries.",
+        "Public Opinion Quarterly, 72(3), 420–445.",
+        "doi:10.1093/poq/nfn035 URL http://dx.doi.org/10.1093/poq/nfn035"
+      ],
+      "citation": "Davidov et al. (2008) Davidov, E., Schmidt, P. & Schwartz, S. H. (2008). Bringing values back in: The adequacy of the European social survey to measure values in 20 countries. Public Opinion Quarterly, 72(3), 420–445. doi:10.1093/poq/nfn035 URL http://dx.doi.org/10.1093/poq/nfn035",
+      "title_candidate": "Bringing values back in: The adequacy of the European social survey to measure values in 20 countries",
+      "status": "requires source verification"
+    },
+    {
+      "index": 7,
+      "source_id": "bib.bib7",
+      "blocks": [
+        "Dechesne, F., Di Tosto, G., Dignum, V. & Dignum, F. (2012).",
+        "No Smoking Here: Values, Norms and Culture in Multi-Agent Systems.",
+        "Artificial Intelligence and Law, 21(1), 79–107.",
+        "doi:10.1007/s10506-012-9128-5 URL http://dx.doi.org/10.1007/s10506-012-9128-5"
+      ],
+      "citation": "Dechesne et al. (2012) Dechesne, F., Di Tosto, G., Dignum, V. & Dignum, F. (2012). No Smoking Here: Values, Norms and Culture in Multi-Agent Systems. Artificial Intelligence and Law, 21(1), 79–107. doi:10.1007/s10506-012-9128-5 URL http://dx.doi.org/10.1007/s10506-012-9128-5",
+      "title_candidate": "No Smoking Here: Values, Norms and Culture in Multi-Agent Systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 8,
+      "source_id": "bib.bib8",
+      "blocks": [
+        "Digmun, V. (2004).",
+        "A model for organizational interaction: based on agents, founded in logic.",
+        "SIKS"
+      ],
+      "citation": "Digmun (2004) Digmun, V. (2004). A model for organizational interaction: based on agents, founded in logic. SIKS",
+      "title_candidate": "A model for organizational interaction: based on agents, founded in logic",
+      "status": "requires source verification"
+    },
+    {
+      "index": 9,
+      "source_id": "bib.bib9",
+      "blocks": [
+        "Dignum, F. (1999).",
+        "Autonomous agents with norms.",
+        "Artificial Intelligence and Law, 7(1), 69–79.",
+        "doi:10.1023/A:1008315530323 URL http://dx.doi.org/10.1023/A:1008315530323"
+      ],
+      "citation": "Dignum (1999) Dignum, F. (1999). Autonomous agents with norms. Artificial Intelligence and Law, 7(1), 69–79. doi:10.1023/A:1008315530323 URL http://dx.doi.org/10.1023/A:1008315530323",
+      "title_candidate": "Autonomous agents with norms",
+      "status": "requires source verification"
+    },
+    {
+      "index": 10,
+      "source_id": "bib.bib10",
+      "blocks": [
+        "Dignum, F., Morley, D., Sonenberg, E. A. & Cavedon, L. (2000).",
+        "Towards socially sophisticated BDI agents.",
+        "Proceedings - 4th International Conference on MultiAgent Systems, ICMAS 2000, (pp. 111–118).",
+        "doi:10.1109/ICMAS.2000.858442 URL http://dx.doi.org/10.1109/ICMAS.2000.858442"
+      ],
+      "citation": "Dignum et al. (2000) Dignum, F., Morley, D., Sonenberg, E. A. & Cavedon, L. (2000). Towards socially sophisticated BDI agents. Proceedings - 4th International Conference on MultiAgent Systems, ICMAS 2000, (pp. 111–118). doi:10.1109/ICMAS.2000.858442 URL http://dx.doi.org/10.1109/ICMAS.2000.858442",
+      "title_candidate": "Towards socially sophisticated BDI agents",
+      "status": "requires source verification"
+    },
+    {
+      "index": 11,
+      "source_id": "bib.bib11",
+      "blocks": [
+        "Dignum, F., Prada, R. & Hofstede, G. (2014).",
+        "From Autistic to Social Agents.",
+        "In Proceedings of the 2014 international conference on Autonomous Agents and Multi-Agent Systems, (pp. 1161–1164) URL http://dl.acm.org/citation.cfm?id=2617431"
+      ],
+      "citation": "Dignum et al. (2014) Dignum, F., Prada, R. & Hofstede, G. (2014). From Autistic to Social Agents. In Proceedings of the 2014 international conference on Autonomous Agents and Multi-Agent Systems, (pp. 1161–1164) URL http://dl.acm.org/citation.cfm?id=2617431",
+      "title_candidate": "From Autistic to Social Agents",
+      "status": "requires source verification"
+    },
+    {
+      "index": 12,
+      "source_id": "bib.bib12",
+      "blocks": [
+        "Dignum, V. & Dignum, F. (2015).",
+        "Contextualized Planning Using Social Practices.",
+        "In A. Ghose, N. Oren, P. Telang & J. Thangarajah (Eds.), Coordination, Organizations, Institutions, and Norms in Agent Systems, (pp. 36–52). Cham: Springer International Publishing"
+      ],
+      "citation": "Dignum & Dignum (2015) Dignum, V. & Dignum, F. (2015). Contextualized Planning Using Social Practices. In A. Ghose, N. Oren, P. Telang & J. Thangarajah (Eds.), Coordination, Organizations, Institutions, and Norms in Agent Systems, (pp. 36–52). Cham: Springer International Publishing",
+      "title_candidate": "Contextualized Planning Using Social Practices",
+      "status": "requires source verification"
+    },
+    {
+      "index": 13,
+      "source_id": "bib.bib13",
+      "blocks": [
+        "Felli, P., Miller, T., Muise, C., Pearce, A. R. & Sonenberg, L. (2014).",
+        "Artificial social reasoning: Computational mechanisms for reasoning about others.",
+        "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 8755, 146–155.",
+        "doi:10.1007/978-3-319-11973-1{\\_}15 URL http://dx.doi.org/10.1007/978-3-319-11973-1{_}15"
+      ],
+      "citation": "Felli et al. (2014) Felli, P., Miller, T., Muise, C., Pearce, A. R. & Sonenberg, L. (2014). Artificial social reasoning: Computational mechanisms for reasoning about others. Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), 8755, 146–155. doi:10.1007/978-3-319-11973-1{\\_}15 URL http://dx.doi.org/10.1007/978-3-319-11973-1{_}15",
+      "title_candidate": "Artificial social reasoning: Computational mechanisms for reasoning about others",
+      "status": "requires source verification"
+    },
+    {
+      "index": 14,
+      "source_id": "bib.bib14",
+      "blocks": [
+        "Fontaine, J. R. J., Poortinga, Y. H., Delbeke, L. & Schwartz, S. H. (2008).",
+        "Structural Equivalence of the Values Domain Across Cultures: Distinguishing Sampling Fluctuations From Meaningful Variation.",
+        "Journal of Cross-Cultural Psychology, 39(October), 345–365.",
+        "doi:10.1177/0022022108318112 URL http://dx.doi.org/10.1177/0022022108318112"
+      ],
+      "citation": "Fontaine et al. (2008) Fontaine, J. R. J., Poortinga, Y. H., Delbeke, L. & Schwartz, S. H. (2008). Structural Equivalence of the Values Domain Across Cultures: Distinguishing Sampling Fluctuations From Meaningful Variation. Journal of Cross-Cultural Psychology, 39(October), 345–365. doi:10.1177/0022022108318112 URL http://dx.doi.org/10.1177/0022022108318112",
+      "title_candidate": "Structural Equivalence of the Values Domain Across Cultures: Distinguishing Sampling Fluctuations From Meaningful Variation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 15,
+      "source_id": "bib.bib15",
+      "blocks": [
+        "Gardner, B., De Bruijn, G. J. & Lally, P. (2011).",
+        "A systematic review and meta-analysis of applications of the self-report habit index to nutrition and physical activity behaviours.",
+        "Annals of Behavioral Medicine, 42(2), 174–187.",
+        "doi:10.1007/s12160-011-9282-0 URL http://dx.doi.org/10.1007/s12160-011-9282-0"
+      ],
+      "citation": "Gardner et al. (2011) Gardner, B., De Bruijn, G. J. & Lally, P. (2011). A systematic review and meta-analysis of applications of the self-report habit index to nutrition and physical activity behaviours. Annals of Behavioral Medicine, 42(2), 174–187. doi:10.1007/s12160-011-9282-0 URL http://dx.doi.org/10.1007/s12160-011-9282-0",
+      "title_candidate": "A systematic review and meta-analysis of applications of the self-report habit index to nutrition and physical activity behaviours",
+      "status": "requires source verification"
+    },
+    {
+      "index": 16,
+      "source_id": "bib.bib16",
+      "blocks": [
+        "Giddens, A. (1984).",
+        "The constitution of society: Outline of the theory of structuration.",
+        "Cognitive Therapy and Research, 12(4), 448.",
+        "doi:10.1007/BF01173303 URL http://dx.doi.org/10.1007/BF01173303"
+      ],
+      "citation": "Giddens (1984) Giddens, A. (1984). The constitution of society: Outline of the theory of structuration. Cognitive Therapy and Research, 12(4), 448. doi:10.1007/BF01173303 URL http://dx.doi.org/10.1007/BF01173303",
+      "title_candidate": "The constitution of society: Outline of the theory of structuration",
+      "status": "requires source verification"
+    },
+    {
+      "index": 17,
+      "source_id": "bib.bib17",
+      "blocks": [
+        "Goleman, D. (2011).",
+        "Social Intelligence.",
+        "Random House"
+      ],
+      "citation": "Goleman (2011) Goleman, D. (2011). Social Intelligence. Random House",
+      "title_candidate": "Social Intelligence",
+      "status": "requires source verification"
+    },
+    {
+      "index": 18,
+      "source_id": "bib.bib18",
+      "blocks": [
+        "Gräbner, C. (2018).",
+        "How to Relate Models to Reality? An Epistemo- logical Framework for the Validation and Veri- fication of Computational Models.",
+        "Journal of Artificial Societies and Social Simulation, 21(3) URL http://jasss.soc.surrey.ac.uk///////.html"
+      ],
+      "citation": "Gräbner (2018) Gräbner, C. (2018). How to Relate Models to Reality? An Epistemo- logical Framework for the Validation and Veri- fication of Computational Models. Journal of Artificial Societies and Social Simulation, 21(3) URL http://jasss.soc.surrey.ac.uk///////.html",
+      "title_candidate": "How to Relate Models to Reality? An Epistemo- logical Framework for the Validation and Veri- fication of Computational Models",
+      "status": "requires source verification"
+    },
+    {
+      "index": 19,
+      "source_id": "bib.bib19",
+      "blocks": [
+        "Hoffmann, C., Abraham, C., White, M. P., Ball, S. & Skippon, S. M. (2017).",
+        "What cognitive mechanisms predict travel mode choice? A systematic review with meta-analysis.",
+        "Transport Reviews, 0(0), 1–22.",
+        "doi:10.1080/01441647.2017.1285819 URL http://dx.doi.org/10.1080/01441647.2017.1285819"
+      ],
+      "citation": "Hoffmann et al. (2017) Hoffmann, C., Abraham, C., White, M. P., Ball, S. & Skippon, S. M. (2017). What cognitive mechanisms predict travel mode choice? A systematic review with meta-analysis. Transport Reviews, 0(0), 1–22. doi:10.1080/01441647.2017.1285819 URL http://dx.doi.org/10.1080/01441647.2017.1285819",
+      "title_candidate": "What cognitive mechanisms predict travel mode choice? A systematic review with meta-analysis",
+      "status": "requires source verification"
+    },
+    {
+      "index": 20,
+      "source_id": "bib.bib20",
+      "blocks": [
+        "Hofstede, G. J. (2017).",
+        "GRASP agents: social first, intelligent later.",
+        "AI and Society, 0(0), 1–9.",
+        "doi:10.1007/s00146-017-0783-7 URL http://dx.doi.org/10.1007/s00146-017-0783-7"
+      ],
+      "citation": "Hofstede (2017) Hofstede, G. J. (2017). GRASP agents: social first, intelligent later. AI and Society, 0(0), 1–9. doi:10.1007/s00146-017-0783-7 URL http://dx.doi.org/10.1007/s00146-017-0783-7",
+      "title_candidate": "GRASP agents: social first, intelligent later",
+      "status": "requires source verification"
+    },
+    {
+      "index": 21,
+      "source_id": "bib.bib21",
+      "blocks": [
+        "Holtz, G. (2014).",
+        "Generating Social Practices.",
+        "Journal of Artificial Societies and Social Simulation, 17(1), 17"
+      ],
+      "citation": "Holtz (2014) Holtz, G. (2014). Generating Social Practices. Journal of Artificial Societies and Social Simulation, 17(1), 17",
+      "title_candidate": "Generating Social Practices",
+      "status": "requires source verification"
+    },
+    {
+      "index": 22,
+      "source_id": "bib.bib22",
+      "blocks": [
+        "Horrocks, I. (2007).",
+        "Description Logic : A Formal Foundation for Ontology Languages and Tools"
+      ],
+      "citation": "Horrocks (2007) Horrocks, I. (2007). Description Logic : A Formal Foundation for Ontology Languages and Tools",
+      "title_candidate": "Description Logic : A Formal Foundation for Ontology Languages and Tools",
+      "status": "requires source verification"
+    },
+    {
+      "index": 23,
+      "source_id": "bib.bib23",
+      "blocks": [
+        "Jager, W., Janssen, M. A., De Vries, H. J. M., De Greef, J. & Vlek, C. A. J. (2000).",
+        "Behaviour in commons dilemmas: Homo economicus and Homo psychologicus in an ecological-economic model.",
+        "Ecological Economics, 35(3), 357–379.",
+        "doi:10.1016/S0921-8009(00)00220-2 URL http://dx.doi.org/10.1016/S0921-8009(00)00220-2"
+      ],
+      "citation": "Jager et al. (2000) Jager, W., Janssen, M. A., De Vries, H. J. M., De Greef, J. & Vlek, C. A. J. (2000). Behaviour in commons dilemmas: Homo economicus and Homo psychologicus in an ecological-economic model. Ecological Economics, 35(3), 357–379. doi:10.1016/S0921-8009(00)00220-2 URL http://dx.doi.org/10.1016/S0921-8009(00)00220-2",
+      "title_candidate": "Behaviour in commons dilemmas: Homo economicus and Homo psychologicus in an ecological-economic model",
+      "status": "requires source verification"
+    },
+    {
+      "index": 24,
+      "source_id": "bib.bib24",
+      "blocks": [
+        "Jonker, C. M. & Treur, J. (1999).",
+        "Formal Analysis of Models for the Dynamics of Trust based on Experiences.",
+        "In European Workshop on Modelling Autonomous Agents in a Multi-Agent World, vol. 1647, (pp. 221–231). Berlin: Springer.",
+        "doi:10.1007/3-540-48437-X URL http://dx.doi.org/10.1007/3-540-48437-X"
+      ],
+      "citation": "Jonker & Treur (1999) Jonker, C. M. & Treur, J. (1999). Formal Analysis of Models for the Dynamics of Trust based on Experiences. In European Workshop on Modelling Autonomous Agents in a Multi-Agent World, vol. 1647, (pp. 221–231). Berlin: Springer. doi:10.1007/3-540-48437-X URL http://dx.doi.org/10.1007/3-540-48437-X",
+      "title_candidate": "Formal Analysis of Models for the Dynamics of Trust based on Experiences",
+      "status": "requires source verification"
+    },
+    {
+      "index": 25,
+      "source_id": "bib.bib25",
+      "blocks": [
+        "Kumar, S., Huber, M. J., Cohen, P. R. & McGee, D. R. (2002).",
+        "Toward a formalism for conversation protocols using joint intention theory.",
+        "Computational Intelligence, 18(2), 174–228.",
+        "doi:10.1111/1467-8640.00187 URL http://dx.doi.org/10.1111/1467-8640.00187"
+      ],
+      "citation": "Kumar et al. (2002) Kumar, S., Huber, M. J., Cohen, P. R. & McGee, D. R. (2002). Toward a formalism for conversation protocols using joint intention theory. Computational Intelligence, 18(2), 174–228. doi:10.1111/1467-8640.00187 URL http://dx.doi.org/10.1111/1467-8640.00187",
+      "title_candidate": "Toward a formalism for conversation protocols using joint intention theory",
+      "status": "requires source verification"
+    },
+    {
+      "index": 26,
+      "source_id": "bib.bib26",
+      "blocks": [
+        "Kurz, T. & Gardner, B. (2015).",
+        "Habitual behaviors or patterns of practice? Explaining and changing repetitive climate‐relevant actions.",
+        "Wiley Interdisciplinary Reviews: Climate Change, 6(1), 113–128.",
+        "doi:10.1002/wcc.327 URL http://dx.doi.org/10.1002/wcc.327"
+      ],
+      "citation": "Kurz & Gardner (2015) Kurz, T. & Gardner, B. (2015). Habitual behaviors or patterns of practice? Explaining and changing repetitive climate‐relevant actions. Wiley Interdisciplinary Reviews: Climate Change, 6(1), 113–128. doi:10.1002/wcc.327 URL http://dx.doi.org/10.1002/wcc.327",
+      "title_candidate": "Habitual behaviors or patterns of practice? Explaining and changing repetitive climate‐relevant actions",
+      "status": "requires source verification"
+    },
+    {
+      "index": 27,
+      "source_id": "bib.bib27",
+      "blocks": [
+        "Lally, P., Van Jaarsveld, C. H. M., Potts, H. W. W. & Wardle, J. (2010).",
+        "How are habits formed: Modelling habit formation in the real world.",
+        "European Journal of Social Psychology, 40(6), 998–1009.",
+        "doi:10.1002/ejsp.674 URL http://dx.doi.org/10.1002/ejsp.674"
+      ],
+      "citation": "Lally et al. (2010) Lally, P., Van Jaarsveld, C. H. M., Potts, H. W. W. & Wardle, J. (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. doi:10.1002/ejsp.674 URL http://dx.doi.org/10.1002/ejsp.674",
+      "title_candidate": "How are habits formed: Modelling habit formation in the real world",
+      "status": "requires source verification"
+    },
+    {
+      "index": 28,
+      "source_id": "bib.bib28",
+      "blocks": [
+        "Latour, B. (1996).",
+        "On actor-network theory: A few clarifications.",
+        "doi:10.2307/40878163 URL http://dx.doi.org/10.2307/40878163"
+      ],
+      "citation": "Latour (1996) Latour, B. (1996). On actor-network theory: A few clarifications. doi:10.2307/40878163 URL http://dx.doi.org/10.2307/40878163",
+      "title_candidate": "On actor-network theory: A few clarifications",
+      "status": "requires source verification"
+    },
+    {
+      "index": 29,
+      "source_id": "bib.bib29",
+      "blocks": [
+        "Mercuur, R. (2015).",
+        "Interventions on Contextualized Decision Making : an Agent-Based Simulation Study.",
+        "Ph.D. thesis, Utrecht University URL https://dspace.library.uu.nl/handle/1874/323482"
+      ],
+      "citation": "Mercuur (2015) Mercuur, R. (2015). Interventions on Contextualized Decision Making : an Agent-Based Simulation Study. Ph.D. thesis, Utrecht University URL https://dspace.library.uu.nl/handle/1874/323482",
+      "title_candidate": "Interventions on Contextualized Decision Making : an Agent-Based Simulation Study",
+      "status": "requires source verification"
+    },
+    {
+      "index": 30,
+      "source_id": "bib.bib30",
+      "blocks": [
+        "Mercuur, R., Dignum, V. & Jonker, C. (2017).",
+        "Modeling Social Preferences with Values.",
+        "In The Proceedings of the 3nd International Workshop on Smart Simulation and Modelling for Complex Systems @ IJCAI, (pp. 17–28)"
+      ],
+      "citation": "Mercuur et al. (2017) Mercuur, R., Dignum, V. & Jonker, C. (2017). Modeling Social Preferences with Values. In The Proceedings of the 3nd International Workshop on Smart Simulation and Modelling for Complex Systems @ IJCAI, (pp. 17–28)",
+      "title_candidate": "Modeling Social Preferences with Values",
+      "status": "requires source verification"
+    },
+    {
+      "index": 31,
+      "source_id": "bib.bib31",
+      "blocks": [
+        "Mercuur, R., Larsen, J. B. & Dignum, V. (2018).",
+        "Modelling the Social Practices of an Emergency Room to Ensure Staff and Patient Wellbeing.",
+        "In 30th Benelux Conference on Artificial Intelligence, (p. (in press)). Den Bosch"
+      ],
+      "citation": "Mercuur et al. (2018) Mercuur, R., Larsen, J. B. & Dignum, V. (2018). Modelling the Social Practices of an Emergency Room to Ensure Staff and Patient Wellbeing. In 30th Benelux Conference on Artificial Intelligence, (p. (in press)). Den Bosch",
+      "title_candidate": "Modelling the Social Practices of an Emergency Room to Ensure Staff and Patient Wellbeing",
+      "status": "requires source verification"
+    },
+    {
+      "index": 32,
+      "source_id": "bib.bib32",
+      "blocks": [
+        "Metzinger, T. & Gallese, V. (2003).",
+        "The emergence of a shared action ontology: Building blocks for a theory.",
+        "Consciousness and Cognition, 12(4), 549–571.",
+        "doi:10.1016/S1053-8100(03)00072-2 URL http://dx.doi.org/10.1016/S1053-8100(03)00072-2"
+      ],
+      "citation": "Metzinger & Gallese (2003) Metzinger, T. & Gallese, V. (2003). The emergence of a shared action ontology: Building blocks for a theory. Consciousness and Cognition, 12(4), 549–571. doi:10.1016/S1053-8100(03)00072-2 URL http://dx.doi.org/10.1016/S1053-8100(03)00072-2",
+      "title_candidate": "The emergence of a shared action ontology: Building blocks for a theory",
+      "status": "requires source verification"
+    },
+    {
+      "index": 33,
+      "source_id": "bib.bib33",
+      "blocks": [
+        "Moors, A. & De Houwer, J. (2006).",
+        "Automaticity: a theoretical and conceptual analysis.",
+        "Psychological bulletin, 132(2), 297–326.",
+        "doi:10.1037/0033-2909.132.2.297 URL http://dx.doi.org/10.1037/0033-2909.132.2.297"
+      ],
+      "citation": "Moors & De Houwer (2006) Moors, A. & De Houwer, J. (2006). Automaticity: a theoretical and conceptual analysis. Psychological bulletin, 132(2), 297–326. doi:10.1037/0033-2909.132.2.297 URL http://dx.doi.org/10.1037/0033-2909.132.2.297",
+      "title_candidate": "Automaticity: a theoretical and conceptual analysis",
+      "status": "requires source verification"
+    },
+    {
+      "index": 34,
+      "source_id": "bib.bib34",
+      "blocks": [
+        "Musen, M. A. (2015).",
+        "The protégé project: a look back and a look forward.",
+        "{AI}Matters, 1(4), 4–12.",
+        "doi:10.1145/2757001.2757003 URL http://dx.doi.org/10.1145/2757001.2757003"
+      ],
+      "citation": "Musen (2015) Musen, M. A. (2015). The protégé project: a look back and a look forward. {AI}Matters, 1(4), 4–12. doi:10.1145/2757001.2757003 URL http://dx.doi.org/10.1145/2757001.2757003",
+      "title_candidate": "The protégé project: a look back and a look forward",
+      "status": "requires source verification"
+    },
+    {
+      "index": 35,
+      "source_id": "bib.bib35",
+      "blocks": [
+        "Narasimhan, K., Roberts, T., Xenitidou, M. & Gilbert, N. (2017).",
+        "Using ABM to Clarify and Refine Social Practice Theory.",
+        "In W. Jager (Ed.), Advances in Social Simulation 2015, vol. 528. Springer International Publishing AG 2017.",
+        "doi:10.1007/978-3-319-47253-9 URL http://dx.doi.org/10.1007/978-3-319-47253-9"
+      ],
+      "citation": "Narasimhan et al. (2017) Narasimhan, K., Roberts, T., Xenitidou, M. & Gilbert, N. (2017). Using ABM to Clarify and Refine Social Practice Theory. In W. Jager (Ed.), Advances in Social Simulation 2015, vol. 528. Springer International Publishing AG 2017. doi:10.1007/978-3-319-47253-9 URL http://dx.doi.org/10.1007/978-3-319-47253-9",
+      "title_candidate": "Using ABM to Clarify and Refine Social Practice Theory",
+      "status": "requires source verification"
+    },
+    {
+      "index": 36,
+      "source_id": "bib.bib36",
+      "blocks": [
+        "Okeyo, G., Chen, L. & Wang, H. (2014).",
+        "Combining ontological and temporal formalisms for composite activity modelling and recognition in smart homes.",
+        "Future Generation Computer Systems, 39, 29–43.",
+        "doi:10.1016/j.future.2014.02.014 URL http://dx.doi.org/10.1016/j.future.2014.02.014"
+      ],
+      "citation": "Okeyo et al. (2014) Okeyo, G., Chen, L. & Wang, H. (2014). Combining ontological and temporal formalisms for composite activity modelling and recognition in smart homes. Future Generation Computer Systems, 39, 29–43. doi:10.1016/j.future.2014.02.014 URL http://dx.doi.org/10.1016/j.future.2014.02.014",
+      "title_candidate": "Combining ontological and temporal formalisms for composite activity modelling and recognition in smart homes",
+      "status": "requires source verification"
+    },
+    {
+      "index": 37,
+      "source_id": "bib.bib37",
+      "blocks": [
+        "Polhill, J. G. (2015).",
+        "Extracting OWL Ontologies from Agent-Based Models: A Netlogo Extension.",
+        "Journal of Artificial Societies and Social Simulation, 18(2), 15.",
+        "doi:10.18564/jasss.2810 URL http://dx.doi.org/10.18564/jasss.2810"
+      ],
+      "citation": "Polhill (2015) Polhill, J. G. (2015). Extracting OWL Ontologies from Agent-Based Models: A Netlogo Extension. Journal of Artificial Societies and Social Simulation, 18(2), 15. doi:10.18564/jasss.2810 URL http://dx.doi.org/10.18564/jasss.2810",
+      "title_candidate": "Extracting OWL Ontologies from Agent-Based Models: A Netlogo Extension",
+      "status": "requires source verification"
+    },
+    {
+      "index": 38,
+      "source_id": "bib.bib38",
+      "blocks": [
+        "Reckwitz, A. (2002).",
+        "Toward a theory of social practices: A development in culturalist theorizing.",
+        "European Journal of Social Theory, 5(2), 243–263.",
+        "doi:10.1177/13684310222225432 URL http://dx.doi.org/10.1177/13684310222225432"
+      ],
+      "citation": "Reckwitz (2002) Reckwitz, A. (2002). Toward a theory of social practices: A development in culturalist theorizing. European Journal of Social Theory, 5(2), 243–263. doi:10.1177/13684310222225432 URL http://dx.doi.org/10.1177/13684310222225432",
+      "title_candidate": "Toward a theory of social practices: A development in culturalist theorizing",
+      "status": "requires source verification"
+    },
+    {
+      "index": 39,
+      "source_id": "bib.bib39",
+      "blocks": [
+        "Schatzki, T. R. (1996).",
+        "Social Practices. A Wittgensteinian approach to human activity and the social.",
+        "Cambridge University Press"
+      ],
+      "citation": "Schatzki (1996) Schatzki, T. R. (1996). Social Practices. A Wittgensteinian approach to human activity and the social. Cambridge University Press",
+      "title_candidate": "Social Practices. A Wittgensteinian approach to human activity and the social",
+      "status": "requires source verification"
+    },
+    {
+      "index": 40,
+      "source_id": "bib.bib40",
+      "blocks": [
+        "Schulze, J., Müller, B., Groeneveld, J. & Grimm, V. (2017).",
+        "Agent-based modelling of social-ecological systems: Achievements, challenges, and a way forward.",
+        "Jasss, 20(2).",
+        "doi:10.18564/jasss.3423 URL http://dx.doi.org/10.18564/jasss.3423"
+      ],
+      "citation": "Schulze et al. (2017) Schulze, J., Müller, B., Groeneveld, J. & Grimm, V. (2017). Agent-based modelling of social-ecological systems: Achievements, challenges, and a way forward. Jasss, 20(2). doi:10.18564/jasss.3423 URL http://dx.doi.org/10.18564/jasss.3423",
+      "title_candidate": "Agent-based modelling of social-ecological systems: Achievements, challenges, and a way forward",
+      "status": "requires source verification"
+    },
+    {
+      "index": 41,
+      "source_id": "bib.bib41",
+      "blocks": [
+        "Schwartz, S. H. (2012).",
+        "An Overview of the Schwartz Theory of Basic Values.",
+        "Online Readings in Psychology and Culture, 2, 1–20.",
+        "doi:http://dx.doi.org/http://dx.doi.org/10.9707/2307-0919.1116 URL http://dx.doi.org/http://dx.doi.org/http://dx.doi.org/10.9707/2307-0919.1116"
+      ],
+      "citation": "Schwartz (2012) Schwartz, S. H. (2012). An Overview of the Schwartz Theory of Basic Values. Online Readings in Psychology and Culture, 2, 1–20. doi:http://dx.doi.org/http://dx.doi.org/10.9707/2307-0919.1116 URL http://dx.doi.org/http://dx.doi.org/http://dx.doi.org/10.9707/2307-0919.1116",
+      "title_candidate": "An Overview of the Schwartz Theory of Basic Values",
+      "status": "requires source verification"
+    },
+    {
+      "index": 42,
+      "source_id": "bib.bib42",
+      "blocks": [
+        "Schwartz, S. H., Cieciuch, J., Vecchione, M., Davidov, E., Fischer, R., Beierlein, C., Ramos, A., Verkasalo, M., Lönnqvist, J.-E., Demirutku, K., Dirilen-Gumus, O. & Konty, M. (2012).",
+        "Refining the theory of basic individual values.",
+        "Journal of Personality and Social Psychology, 103(4), 663–688.",
+        "doi:10.1037/a0029393 URL http://dx.doi.org/10.1037/a0029393"
+      ],
+      "citation": "Schwartz et al. (2012) Schwartz, S. H., Cieciuch, J., Vecchione, M., Davidov, E., Fischer, R., Beierlein, C., Ramos, A., Verkasalo, M., Lönnqvist, J.-E., Demirutku, K., Dirilen-Gumus, O. & Konty, M. (2012). Refining the theory of basic individual values. Journal of Personality and Social Psychology, 103(4), 663–688. doi:10.1037/a0029393 URL http://dx.doi.org/10.1037/a0029393",
+      "title_candidate": "Refining the theory of basic individual values",
+      "status": "requires source verification"
+    },
+    {
+      "index": 43,
+      "source_id": "bib.bib43",
+      "blocks": [
+        "Searle, J. (1995).",
+        "The Construction of Social Reality"
+      ],
+      "citation": "Searle (1995) Searle, J. (1995). The Construction of Social Reality",
+      "title_candidate": "The Construction of Social Reality",
+      "status": "requires source verification"
+    },
+    {
+      "index": 44,
+      "source_id": "bib.bib44",
+      "blocks": [
+        "Shove, E., Pantzar, M. & Watson, M. (2012).",
+        "The Dynamics of Social Practice: Everyday Life and How it Changes.",
+        "London: SAGE Publications.",
+        "doi:10.4135/9781446250655.n1 URL http://dx.doi.org/10.4135/9781446250655.n1"
+      ],
+      "citation": "Shove et al. (2012) Shove, E., Pantzar, M. & Watson, M. (2012). The Dynamics of Social Practice: Everyday Life and How it Changes. London: SAGE Publications. doi:10.4135/9781446250655.n1 URL http://dx.doi.org/10.4135/9781446250655.n1",
+      "title_candidate": "The Dynamics of Social Practice: Everyday Life and How it Changes",
+      "status": "requires source verification"
+    },
+    {
+      "index": 45,
+      "source_id": "bib.bib45",
+      "blocks": [
+        "Storf, H., Becker, M. & Riedl, M. (2009).",
+        "Rule-based activity recognition framework: Challenges, technique and learning.",
+        "Proceedings of the 3d International ICST Conference on Pervasive Computing Technologies for Healthcare.",
+        "doi:10.4108/ICST.PERVASIVEHEALTH2009.6108 URL http://dx.doi.org/10.4108/ICST.PERVASIVEHEALTH2009.6108"
+      ],
+      "citation": "Storf et al. (2009) Storf, H., Becker, M. & Riedl, M. (2009). Rule-based activity recognition framework: Challenges, technique and learning. Proceedings of the 3d International ICST Conference on Pervasive Computing Technologies for Healthcare. doi:10.4108/ICST.PERVASIVEHEALTH2009.6108 URL http://dx.doi.org/10.4108/ICST.PERVASIVEHEALTH2009.6108",
+      "title_candidate": "Rule-based activity recognition framework: Challenges, technique and learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 46,
+      "source_id": "bib.bib46",
+      "blocks": [
+        "Taylor, C. (1973).",
+        "Interpretation and the Sciences of Man.",
+        "In Explorations in Phenomenology, vol. 25, (pp. 47–101). Philosophy Education Society Inc.",
+        "doi:10.1007/978-94-010-1999-6{\\_}3 URL http://dx.doi.org/10.1007/978-94-010-1999-6{_}3"
+      ],
+      "citation": "Taylor (1973) Taylor, C. (1973). Interpretation and the Sciences of Man. In Explorations in Phenomenology, vol. 25, (pp. 47–101). Philosophy Education Society Inc. doi:10.1007/978-94-010-1999-6{\\_}3 URL http://dx.doi.org/10.1007/978-94-010-1999-6{_}3",
+      "title_candidate": "Interpretation and the Sciences of Man",
+      "status": "requires source verification"
+    },
+    {
+      "index": 47,
+      "source_id": "bib.bib47",
+      "blocks": [
+        "Thorndike, E. (1920).",
+        "Intelligence and its uses.",
+        "Harper’s Magazine, 140, 227–235"
+      ],
+      "citation": "Thorndike (1920) Thorndike, E. (1920). Intelligence and its uses. Harper’s Magazine, 140, 227–235",
+      "title_candidate": "Intelligence and its uses",
+      "status": "requires source verification"
+    },
+    {
+      "index": 48,
+      "source_id": "bib.bib48",
+      "blocks": [
+        "van Kasteren, T., Noulas, A., Englebienne, G. & Kröse, B. (2008).",
+        "Accurate activity recognition in a home setting.",
+        "Proceedings of the 10th international conference on Ubiquitous computing - UbiComp ’08, (p. 1).",
+        "doi:10.1145/1409635.1409637 URL http://dx.doi.org/10.1145/1409635.1409637"
+      ],
+      "citation": "van Kasteren et al. (2008) van Kasteren, T., Noulas, A., Englebienne, G. & Kröse, B. (2008). Accurate activity recognition in a home setting. Proceedings of the 10th international conference on Ubiquitous computing - UbiComp ’08, (p. 1). doi:10.1145/1409635.1409637 URL http://dx.doi.org/10.1145/1409635.1409637",
+      "title_candidate": "Accurate activity recognition in a home setting",
+      "status": "requires source verification"
+    },
+    {
+      "index": 49,
+      "source_id": "bib.bib49",
+      "blocks": [
+        "Verplanken, B. (2005).",
+        "Habits and implementation intentions.",
+        "In The ABC of behavioural change., (pp. 99–109). Oxford, UK: Elsevier URL http://opus.bath.ac.uk/9438/"
+      ],
+      "citation": "Verplanken (2005) Verplanken, B. (2005). Habits and implementation intentions. In The ABC of behavioural change., (pp. 99–109). Oxford, UK: Elsevier URL http://opus.bath.ac.uk/9438/",
+      "title_candidate": "Habits and implementation intentions",
+      "status": "requires source verification"
+    },
+    {
+      "index": 50,
+      "source_id": "bib.bib50",
+      "blocks": [
+        "Verplanken, B. & Orbell, S. (2003).",
+        "Reflections on Past Behavior: A Self-Report Index of Habit Strength.",
+        "Journal of Applied Social Psychology, 33(6), 1313–1330.",
+        "doi:10.1111/j.1559-1816.2003.tb01951.x URL http://dx.doi.org/10.1111/j.1559-1816.2003.tb01951.x"
+      ],
+      "citation": "Verplanken & Orbell (2003) Verplanken, B. & Orbell, S. (2003). Reflections on Past Behavior: A Self-Report Index of Habit Strength. Journal of Applied Social Psychology, 33(6), 1313–1330. doi:10.1111/j.1559-1816.2003.tb01951.x URL http://dx.doi.org/10.1111/j.1559-1816.2003.tb01951.x",
+      "title_candidate": "Reflections on Past Behavior: A Self-Report Index of Habit Strength",
+      "status": "requires source verification"
+    },
+    {
+      "index": 51,
+      "source_id": "bib.bib51",
+      "blocks": [
+        "Weide, T. v. d. (2011).",
+        "Arguing to motivate decisions.",
+        "SIKS Dissertation Series URL http://www.narcis.nl/publication/Language/EN/id/170/RecordID/oai:dspace.library.uu.nl:1874/210788"
+      ],
+      "citation": "Weide (2011) Weide, T. v. d. (2011). Arguing to motivate decisions. SIKS Dissertation Series URL http://www.narcis.nl/publication/Language/EN/id/170/RecordID/oai:dspace.library.uu.nl:1874/210788",
+      "title_candidate": "Arguing to motivate decisions",
+      "status": "requires source verification"
+    },
+    {
+      "index": 52,
+      "source_id": "bib.bib52",
+      "blocks": [
+        "Weisberg, M. (2012).",
+        "Simulation and similarity: Using models to understand the world.",
+        "Oxford University Press"
+      ],
+      "citation": "Weisberg (2012) Weisberg, M. (2012). Simulation and similarity: Using models to understand the world. Oxford University Press",
+      "title_candidate": "Simulation and similarity: Using models to understand the world",
+      "status": "requires source verification"
+    },
+    {
+      "index": 53,
+      "source_id": "bib.bib53",
+      "blocks": [
+        "Wilensky, U. (1999).",
+        "Netlogo itself URL http://ccl.northwestern.edu/netlogo/"
+      ],
+      "citation": "Wilensky (1999) Wilensky, U. (1999). Netlogo itself URL http://ccl.northwestern.edu/netlogo/",
+      "title_candidate": "Netlogo itself URL http://ccl.northwestern.edu/netlogo/",
+      "status": "requires source verification"
+    },
+    {
+      "index": 54,
+      "source_id": "bib.bib54",
+      "blocks": [
+        "Wood, W. & Neal, D. T. (2007).",
+        "A new look at habits and the habit-goal interface.",
+        "Psychological review, 114(4), 843–863.",
+        "doi:10.1037/0033-295X.114.4.843 URL http://dx.doi.org/10.1037/0033-295X.114.4.843"
+      ],
+      "citation": "Wood & Neal (2007) Wood, W. & Neal, D. T. (2007). A new look at habits and the habit-goal interface. Psychological review, 114(4), 843–863. doi:10.1037/0033-295X.114.4.843 URL http://dx.doi.org/10.1037/0033-295X.114.4.843",
+      "title_candidate": "A new look at habits and the habit-goal interface",
+      "status": "requires source verification"
+    },
+    {
+      "index": 55,
+      "source_id": "bib.bib55",
+      "blocks": [
+        "Woodruff, G. (1978).",
+        "Premack and Woodruff : Chimpanzee theory of mind.",
+        "Behavioral and Brain Sciences, (1978), 515–526"
+      ],
+      "citation": "Woodruff (1978) Woodruff, G. (1978). Premack and Woodruff : Chimpanzee theory of mind. Behavioral and Brain Sciences, (1978), 515–526",
+      "title_candidate": "Premack and Woodruff : Chimpanzee theory of mind",
+      "status": "requires source verification"
+    }
+  ]
+}

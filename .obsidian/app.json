@@ -1,0 +1,14 @@
+{
+  "spellcheck": true,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "propertiesInDocument": "visible",
+  "userIgnoreFilters": [
+    ".*\\.png"
+  ],
+  "attachmentFolderPath": "_Attachments",
+  "newLinkFormat": "shortest",
+  "readableLineLength": true,
+  "showUnsupportedFiles": false
+}

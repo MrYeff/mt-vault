@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-09-30",
+  "checks": {
+    "notes": 80,
+    "frontmatter_parsed": true,
+    "allowed_frontmatter_fields": true,
+    "snapshot_reference_parity_checked": true,
+    "source_content_audit": "pending for corrected batches"
+  },
+  "issues": []
+}

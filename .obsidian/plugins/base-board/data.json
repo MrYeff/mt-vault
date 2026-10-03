@@ -1,0 +1,20 @@
+{
+  "columnConfigs": {
+    "::View::status": {
+      "columns": [
+        "Waiting Dependency",
+        "Todo",
+        "Done",
+        "Waiting Extern"
+      ]
+    },
+    "Issues::View::status": {
+      "columns": [
+        "Waiting Dependency",
+        "Waiting Extern",
+        "Todo",
+        "Done"
+      ]
+    }
+  }
+}

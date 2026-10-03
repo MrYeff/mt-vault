@@ -1,0 +1,2967 @@
+
+
+
+
+    
+    
+    
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            margin: 1.5em 0 0.5em 0;
+            color: #222;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin: 1.2em 0 0.5em 0;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .wi-authors {
+            margin: 1em 0 1.5em 0;
+        }
+
+        .al-authors-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .al-author-name {
+            display: block;
+        }
+
+        .al-author-name > .linked-name {
+            display: none;
+        }
+
+        .al-author-info-wrap {
+            display: block !important;
+            position: static !important;
+            background: none;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        .info-card-author {
+            padding: 0.75em 1em;
+            background: #f8f8f8;
+            border-left: 3px solid #0066cc;
+            margin: 0;
+        }
+
+        .info-card-name {
+            font-weight: bold;
+            font-size: 1.05em;
+            color: #222;
+            margin-bottom: 0.25em;
+        }
+
+        .info-card-footnote {
+            font-weight: normal;
+            font-size: 0.9em;
+        }
+
+        .info-card-affilitation {
+            font-size: 0.95em;
+            color: #555;
+            margin: 0.25em 0;
+        }
+
+        .info-card-affilitation .aff {
+            margin: 0.15em 0;
+        }
+
+        .info-card-affilitation .aff * {
+            display: inline;
+            white-space: normal;
+        }
+
+        .info-card-affilitation .label {
+            display: none;
+        }
+
+        .info-author-correspondence {
+            font-size: 0.9em;
+            color: #555;
+            margin: 0.25em 0;
+        }
+
+        .info-author-correspondence .label {
+            display: none;
+        }
+
+        .info-card-search-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 0.5em;
+            margin-bottom: 0.25em;
+        }
+        
+        .delimiter-margin-left {
+            display: none;
+        }
+
+        .info-card-search {
+            display: inline-block;
+            font-size: 0.85em;
+            margin-right: 0.75em;
+        }
+
+        .info-card-search a {
+            color: #0066cc;
+        }
+
+        .ref-list {
+            margin-top: 1em;
+        }
+
+        .js-splitview-ref-item {
+            margin-bottom: 1em;
+            padding-left: 2em;
+            text-indent: -2em;
+        }
+
+        .ref-content {
+            line-height: 1.5;
+        }
+
+        .mixed-citation,
+        .mixed-citation p,
+        .mixed-citation .person-group,
+        .mixed-citation .name,
+        .mixed-citation .string-name,
+        .mixed-citation .surname,
+        .mixed-citation .given-names,
+        .mixed-citation .year,
+        .mixed-citation .article-title,
+        .mixed-citation .source,
+        .mixed-citation .volume,
+        .mixed-citation .fpage,
+        .mixed-citation .lpage,
+        .mixed-citation .publisher-name,
+        .mixed-citation .publisher-loc,
+        .mixed-citation .collab,
+        .mixed-citation .comment {
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+
+        .citation-links {
+            display: block;
+            margin-top: 0.25em;
+            font-size: 0.85em;
+        }
+
+        .citation-links > div,
+        .citation-links > p {
+            display: inline;
+            margin-right: 0.5em;
+        }
+    
+
+
+
+
+    
+
+    
+
+        
+
+
+    
+
+    
+        
+
+    Journal Article
+            
+
+
+    
+
+                
+
+                    
+
+                        Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics
+Open Access                    
+
+                
+                
+
+                    
+
+        
+
+            Bao Tran Truong
+                , 
+            
+
+
+    
+
+        
+
+    Bao Tran Truong
+            
+
+
+    
+
+    
+
+        
+
+Observatory on Social Media, Indiana University, 
+1015 E 11th St, Bloomington, IN 47408, 
+USA
+    
+
+    
+
+        
+To whom correspondence should be addressed: Email: baotruon@iu.edu
+    
+    
+
+        
+              https://orcid.org/0000-0001-8072-5463
+        
+    
+    
+
+        Search for other works by this author on:
+    
+
+
+
+    Oxford Academic
+
+
+    
+
+        Google Scholar
+    
+            
+
+        
+        
+
+            Xiaodan Lou
+                , 
+            
+
+
+    
+
+        
+
+    Xiaodan Lou
+
+
+    
+
+    
+
+        
+
+Observatory on Social Media, Indiana University, 
+1015 E 11th St, Bloomington, IN 47408, 
+USA
+    
+
+    
+
+        Search for other works by this author on:
+    
+
+
+
+    Oxford Academic
+
+
+    
+
+        Google Scholar
+    
+            
+
+        
+        
+
+            Alessandro Flammini
+                , 
+            
+
+
+    
+
+        
+
+    Alessandro Flammini
+
+
+    
+
+    
+
+        
+
+Observatory on Social Media, Indiana University, 
+1015 E 11th St, Bloomington, IN 47408, 
+USA
+    
+
+    
+
+        Search for other works by this author on:
+    
+
+
+
+    Oxford Academic
+
+
+    
+
+        Google Scholar
+    
+            
+
+        
+        
+
+            Filippo Menczer
+            
+
+
+    
+
+        
+
+    Filippo Menczer
+
+
+    
+
+    
+
+        
+
+Observatory on Social Media, Indiana University, 
+1015 E 11th St, Bloomington, IN 47408, 
+USA
+    
+
+    
+
+        
+              https://orcid.org/0000-0003-4384-2876
+        
+    
+    
+
+        Search for other works by this author on:
+    
+
+
+
+    Oxford Academic
+
+
+    
+
+        Google Scholar
+    
+            
+
+        
+
+
+                            
+
+                                
+
+    
+
+        
+
+
+Competing Interest: The authors declare no competing interest. 
+    
+                                
+                                Author Notes
+                            
+                    
+                
+
+
+
+        
+
+            
+PNAS Nexus, Volume 3, Issue 7, July 2024, pgae258, https://doi.org/10.1093/pnasnexus/pgae258
+        
+        
+
+            
+
+                
+Published:
+                
+29 June 2024
+            
+                
+                    Article history
+                
+                    
+            
+
+                
+
+                    
+Received:
+                    
+26 April 2024
+                
+                
+
+                    
+Accepted:
+                    
+18 June 2024
+                
+                
+
+                    
+Published:
+                    
+29 June 2024
+                
+                
+
+                    
+Corrected and typeset:
+                    
+11 July 2024
+                
+        
+        
+    
+
+
+
+
+ 
+    
+
+    
+
+    
+
+    
+
+        
+
+    
+
+
+
+
+
+
+                    
+Abstract
+
+Social media, seen by some as the modern public square, is vulnerable to manipulation. By controlling inauthentic accounts impersonating humans, malicious actors can amplify disinformation within target communities. The consequences of such operations are difficult to evaluate due to the challenges posed by collecting data and carrying out ethical experiments that would influence online communities. Here we use a social media model that simulates information diffusion in an empirical network to quantify the impacts of adversarial manipulation tactics on the quality of content. We find that the presence of hub accounts, a hallmark of social media, exacerbates the vulnerabilities of online communities to manipulation. Among the explored tactics that bad actors can employ, infiltrating a community is the most likely to make low-quality content go viral. Such harm can be further compounded by inauthentic agents flooding the network with low-quality, yet appealing content, but is mitigated when bad actors focus on specific targets, such as influential or vulnerable individuals. These insights suggest countermeasures that platforms could employ to increase the resilience of social media users to manipulation.                    
+
+
+
+
+Significance Statement
+
+We show that social media users are vulnerable to adversarial manipulation tactics, through which bad actors can amplify exposure to content that threatens, for example, democratic elections and public health. While tactics such as flooding the network with low-quality yet appealing content are damaging, getting users to follow inauthentic accounts has the most detrimental impact. Bad actors can increase harm by maximizing coverage rather than targeting particular individuals, such as influential ones. The varying degrees of harm associated with these tactics highlight tradeoffs and specific areas on which platforms could focus as they develop deterrence strategies against manipulation.                    
+Introduction
+
+The vision of social media as the modern public square has been challenged as users have become victims of manipulation by astroturf (1, 2), trolling (3), impersonation (4), and misinformation (5–7). False news have been reported to spread virally—similarly to reliable information (8) or even more (9) depending on operational definitions. These kinds of manipulation exploit a complex interplay of socio-cognitive (10, 11), ideological (7), and algorithmic (12, 13) biases. The exploitation is enabled or greatly facilitated by inauthentic accounts that impersonate people with malicious intent. Many such accounts can be coordinated by a single entity (14). If this is done through software, such accounts are commonly referred to as social bots (15, 16). Inauthentic and/or coordinated accounts have been observed to amplify disinformation (8), influence public opinion (14, 17–19), commit financial fraud (14, 20), infiltrate vulnerable communities (3, 21, 22), and disrupt communication (23, 24).
+Can social media be manipulated to the point that they no longer function as a public square? Under what conditions? It is difficult to carry out empirical experiments and analyzes in the real world to explore these questions (25, 26). One challenge is the limited size of experiments in the wild, stemming from both costs and ethical concerns about the potentially harmful nature of content from bad actors. A second difficulty is the limited data from social media platforms available to researchers (27), exacerbated by recent events such as changes at Twitter/X. These difficulties have led, for example, to conflicting accounts about whether disinformation campaigns on social media can sway elections (28–33). Evidence suggests that these operations mainly impact specific vulnerable communities (34, 35). However, we lack a comprehensive quantitative understanding of how coordinated inauthentic tactics can disrupt online communities. This prevents the informed design of moderation or regulatory policies to protect the online public square from manipulation.
+Here we introduce SimSoM, a minimalistic model of a generic social media platform. The model allows us to explore scenarios in which an information-sharing network is manipulated by malicious actors controlling inauthentic accounts, and to measure the consequences of such information operations. We assume that bad actors aim to spread low-quality information. While there are different kinds of low-quality content in reality—disinformation, conspiracy theories, malware, or other harmful messages—our model uses an abstract definition of low-quality content that encompasses these different types. The impact of the manipulation is measured in terms of the quality of information to which users are exposed in the network.
+We find that the presence of manipulation is sufficient to suppress quality information, driving low-quality content to spread virally in the network. We also examine network vulnerabilities that may amplify the effects of manipulation, and evaluate the overall information quality as a result of different malicious tactics. We focus on four well-documented tactics commonly employed in influence operations across various platforms (36): (i) infiltrating a community, for example through social bots (6, 37), follow trains (38), or by impersonating news outlets (36, 37); (ii) generating deceptively appealing content, such as novel narratives (9) or emotional messages (39); (iii) flooding the network with high volumes of content by posting at high frequency to artificially inflate popularity/engagement indicators (8, 37, 40), and possibly deleting content to avoid detection (41); and (iv) targeting specific users, such as influential (8) or vulnerable individuals (6). Insights from analyzes of these tactics are instrumental in developing countermeasures to increase the resilience of social media and their users against manipulation. We discuss mitigation steps that platforms could take and the issues that arise from regulations aimed at protecting human speech from suppression.                    
+Results
+
+We model information diffusion in a social media platform such as Twitter/X, Instagram, or Mastodon. The information system is a directed network with nodes representing accounts and links representing follower relations. Similar to real-world platforms, content circulates through messages that appear in news feeds. Agents can post new messages or reshare messages from their feeds, generated by their friends, i.e. the accounts they follow. The information diffusion process is illustrated in Fig. 1. Messages represent information that could take the form of text, links, hashtags, images, or other media. An agent can introduce a new message into the system or, alternatively, select a message from their news feed to reshare. Messages created and reshared by an agent then appear on the news feeds of their followers.                    
+
+
+
+
+Fig. 1.
+
+Illustration of the SimSoM model. Each agent has a limited-size news feed, containing messages posted or reposted by friends. Dashed arrows represent follower links; messages propagate from agents to their followers along solid links. At each time step, an active agent (colored node) either posts a new message (here, m20) or reposts one of the existing messages in their feed, selected with probability proportional to their appeal a, social engagement e, and recency r (here, m2 is selected). The message spreads to the node’s followers and shows up on their feeds.
+Open in new tabDownload slide
+Even though people prefer quality content (42), their sharing behavior is mediated by other factors such as laziness (43) and message appeal. To account for this, each message m in the model has two intrinsic and independent attributes, appeal  am and quality  qm⁠. Everything else being equal, messages with higher appeal are more likely to be reshared (Fig. 1). Quality, on the other hand, represents objective, desirable properties of content such as the originality of an idea or the accuracy of a claim. Here we naively represent quality and appeal as scalar values. Deceptive posts may have low quality yet high appeal. For example, false news and junk science articles have low quality—most people would not share them knowingly. Yet such low-quality content may be even more likely to spread virally than high-quality information (9). Low-quality content may be novel, clickbait, ripped from headlines, and/or may appeal to people’s political, emotional, or conspiratorial bias. Worse yet, bad actors can employ generative AI to produce such content at scale (37).
+The model captures bias towards appeal as well as two other ingredients that are prioritized by the ranking algorithms of social media platforms, namely social engagement and recency (44). An agent selects a message to reshare from the news feed, which is an inventory of distinct messages recently shared by the agent’s friends. The message is selected with probability proportional to: (i) its appeal; (ii) its social engagement, defined as the number of times it has been shared by the agent’s friends; and (iii) its recency, which decreases with time in the feed (see details in Methods).
+Unlike authentic agents, whose intention is to consume and share high-quality information, we define inauthentic agents as accounts that are controlled by bad (adversarial) actors to spread low-quality content among authentic agents. We refer to these accounts as “bad actors” or “inauthentic agents” throughout this paper. Such accounts may be controlled by humans (trolls), software (social bots), or a mixture (cyborgs). The model has three parameters to model manipulation tactics by bad actors: infiltration, deception, and flooding, explained next.
+Infiltration describes how bad actors amplify exposure to their messages by getting authentic accounts to follow them (Fig. 2a). Bad-actor infiltration of the social network is modeled by a parameter γ, the probability that each bad actor is followed by each authentic agent. Unless otherwise stated, we assume that authentic agents follow bad actors uniformly at random. Figure 2b illustrates the effective suppression of information quality when γ is high.                    
+
+
+
+
+Fig. 2.
+
+Subnetworks modeling authentic accounts (purple nodes) and bad actors (yellow nodes). a) Illustration of the follower link structure. Solid links indicate follower relations within each subnetwork. Both subnetworks have hub and clustering structure that mimics or derives from online social networks. Dashed links represent authentic accounts following bad actors, according to the infiltration parameter γ, which represents the probability that an authentic node follows any given bad actor. When γ=0 there is no infiltration and bad actors are isolated, therefore harmless; the opposite extreme γ=1 indicates complete infiltration, such that bad actors are followed by all authentic accounts. b) Effects of bad-actor infiltration γ on the quality of messages in synthetic networks with 103 authentic agents and 100 inauthentic agents. For illustration purposes, both the authentic and inauthentic subnetworks in this panel are generated with the same method used for the inauthentic subnetworks in our experiments (see Methods). Node size represents the number of followers. The darker an authentic agent node, the lower the quality of messages in their feed.
+Open in new tabDownload slide
+The quality q and appeal a of messages originating from authentic accounts are drawn independently from two distinct distributions, reflecting empirical evidence that these messages tend to have high quality and low appeal (see Supplementary material). In contrast, we assume that bad actors can manipulate information in the network by creating messages with low quality (⁠q=0⁠) and deceptively high appeal. The appeal differential of content from bad actors is modeled by the deception parameter ϕ. In the absence of deception (⁠ϕ=0⁠), the appeal of bad-actor messages is drawn from the same distribution as those from authentic accounts. If ϕ>0⁠, it represents the probability that bad-actor content has a=1⁠, making it irresistible (see details in Methods).
+Flooding is another tactic inauthentic accounts can use to amplify their influence, by crowding out high-quality information. To model this, the parameter θ is defined as a boost of engagement for bad-actor content (see Methods).
+SimSoM lets us explore information diffusion on social media, including the properties of authentic accounts that might render them vulnerable to adversarial attacks and the effects of different manipulation tactics. In the next sections, we present the results from simulations of the model on online communities derived from an empirical follower network (⁠N≈104 Twitter accounts). The network has both scale-free structure (hubs) and high clustering (triangles), structural characteristics that are ubiquitous in socio-technical networks. It also has a realistic community structure, with two well-separated clusters of accounts capturing political polarization (see Methods).
+Once the system reaches a steady state, in which the message quality across the network has stabilized (see Methods), we record the mean quality of the messages in the feeds of authentic agents. These measurements are further averaged across simulation runs with the same parameters but different random seeds. We simulate the information diffusion process in networks with different structures to explore whether social network features render communities vulnerable to bad-actor tactics. Similarly, we evaluate the impact of these tactics by evaluating the model with varying levels of bad-actor infiltration (γ), deception (ϕ), flooding (θ), and targeting specific types of accounts. We report on the relative quality, defined as the ratio of the average quality of authentic agents to that of a baseline without bad actors (see Methods).                    
+Network vulnerabilities
+
+Key structural features of the social network may play a role in amplifying our vulnerability to manipulation by bad actors. The empirical network has two features that are ubiquitous in social media: the presence of hubs and highly clustered communities. We can explore how overall quality is affected by these features through three alternative networks constructed by shuffling links while preserving hubs, cluster structure, or neither (see Methods). Figure 3 shows that the presence of clusters does not significantly affect the overall quality (purple vs. blue) because we assume that agents in each cluster are equally likely to follow bad actors. On the other hand, having hubs makes a network more vulnerable to manipulation: the relative system quality is significantly lower in the presence of hubs, both when there are clusters (purple vs. green, p<10−3⁠) and not (blue vs. orange, p<10−3⁠). This is because node in-degrees and out-degrees are highly correlated (Spearman correlation 0.9, p<10−4⁠) in the empirical network. Therefore, when authentic followers are concentrated among hubs, high-quality content is also concentrated among those hubs. This implies that high-quality content has more competition and becomes obsolete more quickly compared to the case in which this content is uniformly distributed among authentic nodes. The same does not apply to content from bad actors because this content spreads uniformly among authentic users. (The scenario in which content from bad actors mostly concentrates among hubs is explored later.)                    
+
+
+
+
+Fig. 3.
+
+Impacts of different network structural features on the average information quality, relative to the scenario without bad actors. The original network (“hubs + clusters”) is visualized along with shuffled networks in which links from the original network are rewired while preserving clusters, hubs, or neither (“random”). Node size and color represent, respectively, the number of followers of an account and their political leaning ranging from liberal to conservative (red to blue, see Methods). Yellow nodes are bad actors. Pairwise statistical significance is calculated using the Mann–Whitney U test (*** for p<10−3⁠); only significant differences are reported.
+Open in new tabDownload slide                    
+Infiltration, deception, and flooding tactics
+
+Bad actors may maximize their message spread by combining various manipulation tactics. We systematically quantify the effects of these tactics through simulations varying the parameters for infiltration (⁠10−4≤γ≤10−1⁠), deception (⁠0≤ϕ≤1⁠), and flooding (⁠1≤θ≤64⁠). See Methods for further details. Figure 4a,b,c illustrates the effects of individual malicious tactics on the overall quality of information spreading through the network, compared to a baseline scenario without bad actors. We observe that infiltration is the most harmful manipulation tactic: when authentic agents have a γ=10% probability of following each bad actor, the average quality in the system is reduced to less than half. Flooding and deception have smaller effects. When low-quality content has θ=64 times more exposure than authentic content, quality is reduced to less than 70%. When bad actors generate content with maximum appeal exclusively (⁠ϕ=1⁠), quality is reduced to about 70%.                    
+
+
+
+
+Fig. 4.
+
+Effects of individual and combined tactics by bad actors on the system’s message quality, relative to the scenario without bad actors. a) Varying infiltration γ, without flooding (⁠θ=1⁠) or deception (⁠ϕ=0⁠). Shading represents 95% confidence intervals across runs in panels a–c. b) Varying flooding θ with infiltration γ=0.01 and no deception (⁠ϕ=0⁠). c) Varying deception ϕ with infiltration γ=0.01 and no flooding (⁠θ=1⁠). d) Joint infiltration and flooding with no deception. e) Joint infiltration and deception with no flooding. f) Joint deception and flooding with infiltration γ=0.01⁠.
+Open in new tabDownload slide
+Similarly, Figure 4d,e,f shows the effects of pairs of tactics combined. Infiltration is dominant, but more harm can be done in combination with flooding or deception: the average quality is reduced to 40% when γ=0.1 and θ=64 (Fig. 4d) or ϕ=1 (Fig. 4e). Combining flooding and deception (⁠θ=64,ϕ=1⁠, Fig. 4f) only results in marginal loss of quality (below 70%). With all three tactics combined (⁠γ=0.1,θ=64,ϕ=1⁠, not shown), bad actors can further reduce the quality to 30%.                    
+Reshare and exposure cascades
+
+Empirical evidence has shown that among fact-checked claims, low-quality content (debunked claims) tends to have larger retweet cascades than high-quality content (confirmed claims) (9, 45). SimSoM allows us to examine how different factors may contribute to such a virality pattern. Figure 5 illustrates the effects of bad-actor tactics on the size of reshare cascades for content generated by both authentic agents (“high-quality”) and inauthentic agents (“low-quality”). We observe that low-quality cascade size is boosted by appeal. This is in line with the hypothesis that factors like novelty make false news more viral (9). However, low-quality cascades can be boosted most effectively through high bad-actor infiltration. Importantly, empirical analyses that do not reconstruct actual cascades from the data may underestimate intermediary amplification by inauthentic accounts, even when those accounts are removed as originators (cascade tree roots). On the other hand, our model lets us reconstruct the likely reshare cascades that include intermediary amplification by inauthentic accounts (see Methods).                    
+
+
+
+
+Fig. 5.
+
+Complementary cumulative distributions of reshare cascade sizes for low- and high-quality content, generated by inauthentic and authentic agents, respectively. The plots are based on 10 simulations. a) Effect of bad-actor infiltration γ, with no flooding (⁠θ=1⁠) or deception (⁠ϕ=0⁠). b) Effect of flooding θ, with low infiltration (⁠γ=10−3⁠) and no deception (⁠ϕ=0⁠). c) Effect of deception ϕ, with low infiltration (⁠γ=10−3⁠) and no flooding (⁠θ=1⁠).
+Open in new tabDownload slide
+To date, empirical data from social media platforms has allowed researchers to measure reshare cascades, but not exposure. As a result, few studies focus on exposure (46). Using the SimSoM model, it is possible to reconstruct not only likely reshare networks but also exposure networks, thus estimating how many accounts are exposed to (i.e. view) a message even if they do not reshare it (see Methods). Figure 6 compares the sizes of reshare and exposure cascades. In general, reshares underestimate exposures by roughly one order of magnitude. Excluding the smallest cascades and the largest ones (to avoid finite-size effects), we observe that exposure networks grow sub-linearly with reshare networks: sv∼srν where sv and sr are the exposure and reshare cascade sizes, respectively, and ν<1 is the scaling exponent. This means that as messages go viral, exposures grow more slowly than reshares. The exponent is higher for low-quality (⁠ν≈0.8⁠) than for high-quality content (⁠ν≈0.6⁠), suggesting that for each extra reshare, messages posted by inauthentic agents gain more views.                    
+
+
+
+
+Fig. 6.
+
+Scaling between reshare and exposure cascade sizes. a) Scaling for low-quality messages (posted by inauthentic agents). b) Scaling for high-quality messages (posted by authentic agents). The exposure cascade size is averaged across messages with the same reshare cascade size, based on 10 simulations. The dashed lines provide a linear scaling reference, while the solid lines show the slopes (exponents) ν of power-law fits for reshare cascades of size between 10 and 1,000, yielding ν=0.80±0.01 (low-quality messages) and ν=0.56±0.01 (high-quality messages). The largest reshare and exposure cascades (corresponding to the circles in panels a and b) are also visualized for c) low-quality and d) high-quality messages, based on one simulation. Node colors are the same as in Fig. 3; node size represents out-degree, or influence. Here we use θ=1,ϕ=0,γ=10−2⁠; the results are similar for other γ values.
+Open in new tabDownload slide                    
+Targeting tactics
+
+The above results show that bad actors can use inauthentic accounts to infiltrate and disrupt an online public square. We have thus far assumed that all authentic agents have the same probability of following inauthentic ones, reflecting a scenario in which bad actors do not focus their efforts on specific potential followers. However, those interested in manipulating the network may want to maximize the spread of low-quality content through the community by targeting certain groups of accounts.
+As an example, an adversary might target influentials based on the assumption that having such followers can multiply their impact—a message reshared by an influential account has a higher chance of going viral. Targeting influentials is well within the capability of bad actors and even automated accounts; the number of followers, often used as a proxy for influence (47), is public information on all social media platforms. A bad actor can easily interact with accounts having many followers by mentioning and/or following them (38, 48); other ploys include retweeting, quoting, and/or liking their tweets. There is empirical evidence of preferential targeting by bad actors that spread misinformation (1, 8). Targeting politically active accounts or habitual misinformation spreaders are also conceivable tactics.
+An important question, then, is whether tactics targeting specific authentic accounts do in fact increase the manipulative power of bad actors. To explore this question, the model can be extended to account for various features of social media users. Here we consider five features that are available in the empirical data: number of followers (hubs tactic), propensity to share misinformation (misinformation tactic), political partisanship (partisanship tactic), or specific political leaning (liberal and conservative tactic). We then introduce a preferential targeting tactic for adversarial actors, according to which authentic agents have different probabilities of following inauthentic ones, proportional to one of these features. See Methods for details.
+Figure 7 shows the impact of these targeting tactics on information quality. Counterintuitively, preferential targeting is less harmful than random targeting: the distribution of quality is uneven so that the targeted population is worse off, but other parts of the community are spared. Targeting tactics therefore tend to backfire if we assume that bad actors intend to maximize the spread of their content across the full community.                    
+
+
+
+
+Fig. 7.
+
+Effects of targeting tactics. a) Average information quality resulting from each tactic, as well as the default random targeting, relative to the scenario without bad actors. We highlight significant differences calculated using The Mann–Whitney U test (**** for p<10−4⁠). b) Suppression of quality in the empirical network when bad actors specifically target influential accounts (hubs), and when they target politically left- (liberal) and right-leaning (conservative) accounts. The network has 103 authentic agents (purple nodes) and 50 inauthentic agents. Node size represents the number of followers. The darker an authentic agent node, the lower the quality of messages in their feed. Significant changes due to targeting tactics are only observed when bad-actor infiltration is sufficiently high, therefore we use γ=10−1 in experiments for both panels.
+Open in new tabDownload slide
+Targeting hubs, for example, results in a network with significantly higher average quality (⁠p<10−4⁠). The amplification power of an influential is counterbalanced by the concentration of low-quality content, which has fewer chances to be reshared; the majority of other agents are left relatively free from manipulation. Note that this is analog to the reason why the presence of hubs leads to high-quality content being forgotten more quickly when hubs are not targeted by bad actors, as seen earlier.
+The harm of manipulation through the network also diminishes when bad actors target accounts sharing a lot of misinformation or with specific political leaning (⁠p<10−4⁠). The echo-chamber structure of the empirical network (Fig. 7b) helps interpret the latter finding: low-quality messages get shared and become obsolete rapidly within one densely connected partisan cluster, sparing the rest of the network.                    
+Discussion
+
+Social media platforms have enhanced the so-called attention economy, in which abundant content must compete for our scarce attention (49). But how to ensure that accurate, relevant, timely information wins this competition? To date, the policies that govern social media have been mainly guided by the concept of a free marketplace of ideas, rooted in John Milton’s centuries-old reasoning that truth prevails in a free and open encounter of opinions (50). In an ideal world, the wisdom of the crowd (51) would realize this vision by combining the opinions of many users (52). Unfortunately, several aspects of modern social media challenge the illusion of a public square or marketplace in which wise crowds access and select quality information (53, 54). First, information production is affected by information consumption (55), creating incentives to produce appealing but not necessarily high-quality content. Second, social influence undermines the wisdom of crowds because the information and opinions to which we are exposed online may be inauthentic, correlated through coordination (56, 57), or dominated by few influential individuals (58). Third, confirmation bias (59) can increase vulnerability to misinformation in social media (11, 60). Finally, the structure of information flow networks can distort perceptions and increase vulnerability to malicious actors (61, 62).
+Exploration using SimSoM quantifies how manipulation by bad actors can prevent social media from functioning as a public town square. Simulations of the model reveal that making low-quality content highly appealing plays a lesser role compared to other harmful tactics by inauthentic accounts. This suggests that novelty, for example, may not provide the primary explanation for the virality of fake news, as previously hypothesized (9). Tactics that inflate engagement indicators, such as flooding, can erode the system’s quality just as well. More importantly, we find that infiltrating the network is a dominant harmful tactic available to bad actors—these accounts can drastically suppress quality by inducing only a small fraction of the community into following them.
+A wealth of previous models and experiments have focused on information diffusion and popularity. Several studies have investigated the role played by network mechanisms affecting the popularity of individual posts, including exogenous and endogenous bursts of attention (63, 64), memory (65), novelty (66, 67), and position bias (68, 69). This literature considers the popularity of pieces of information in isolation. Market-like environments in which many messages compete for limited attention have received less consideration. Exceptions have considered the cost of learning about quality (70), distortions of quality assessments that result from aggregate knowledge of peer choices (56), and confirmation bias in the spread of misinformation (71). The SimSoM model proposed here extends the model of Weng et al. (72), who demonstrated that some posts inevitably achieve viral popularity irrespective of quality in the presence of competition among networked agents with limited attention. The model was formalized as a critical branching process and studied analytically, predicting that the popularity of posts follows a power-law distribution with heavy tails (73–75).
+The current SimSoM model has several limitations. First, it neglects many mechanisms of actual online social media that may contribute to message exposure, such as search, personalization, and other details of secret platform algorithms. For example, increasingly popular feed ranking algorithms are based less on what is shared by social connections and more on out-of-network recommendations. Bad-actor tactics could be affected differently by such algorithmic changes (see Supplementary material). While the present model captures several universal criteria of feed algorithms (appeal, social engagement, recency), future work should investigate the vulnerability of different algorithmic affordances. Second, real user behaviors are driven by complex cognitive processes. Beyond finite attention, such cognitive aspects of information sharing are not explored here. Instead, the model assumes that all authentic agents follow a simple probabilistic rule in selecting the content to be shared. Large language models have recently been proposed as a way to model agents with more realistic behaviors (76). In addition, SimSoM models information diffusion through simple contagion. While this approach is in line with prior modeling (77), theoretical (45), and empirical (78) studies, complex contagion (25) can also play a role in the spread of certain types of harmful information (26). Despite these limitations, the current model’s predictions are consistent with empirical findings about the difference in virality between low- and high-quality information on Twitter (8, 9). This suggests a reasonable balance between model realism and generality.
+We can think of inauthentic accounts as zealots, a minority of agents committed to a particular view. Opinion dynamics models have shown that a critical minority of active zealots can quickly drive a system to consensus toward their opinion (79–82). In our social media model, we only explore the capacity to suppress information quality rather than to drive consensus to a particular opinion.
+While the structure of online social networks evolves over time, the follower network used in our experiments provides a more realistic setting than synthetic networks to run our simulations. In particular, it captures features of real social networks—hubs, clustering, and political homophily structure—that have been observed consistently over the years and across platforms (83–85) and that are known to play key roles in information diffusion (86–88). Furthermore, our sampling procedure captures a community of accounts that are both active and vulnerable to misinformation, as needed to study manipulation tactics that target such communities. Finally, the assumption that the follower network is static during an information-spreading simulation is consistent with observations that the dynamics of unfollowing are slow (89).
+Our results suggest that, surprisingly, inauthentic accounts do not need to target hubs (influentials); they can do more damage by connecting to random accounts. Future research should focus on whether the strategic placement of bad actors within/across polarized online communities can sway users toward a particular outcome, for example by distorting popularity perceptions (61, 62). Further work is also needed to characterize the effects of strategic targeting when the attacker has limited resources.
+The insights gained from the present findings suggest several countermeasures to increase the resilience of social media to manipulation. The first lesson is that we must make it more difficult for bad actors to infiltrate the network. Platform efforts to detect and take down deceptive accounts must be strengthened, especially as tactics to hack follower networks get more sophisticated (38).
+Recent models show that caps on the depth and/or breadth of diffusion networks can decrease the ratio of distorted messages received by social media users (90). While these models assume that distortions occur randomly, SimSoM demonstrates how adversarial actors can exploit vulnerabilities by flooding our news feeds, thereby crowding out quality information. A countermeasure would be to challenge accounts that post at very high rates to prove that they are human. Users could also be warned when they follow accounts that post low-quality content and/or when friend accounts are suspended or take suspicious actions, such as changing names/handles (14) or posting and deleting large volumes of content (41).
+Our findings suggest that a winning tactic for malicious accounts is to target all social media users, and not only the most influential, if their goal is to spread harm widely across the network. Literacy programs may provide some protection against disinformation. This is also suggested by a binary agreement model that assumes each agent may be committed to truth or disinformation (91). Social media platforms could lead by educating users about their vulnerability to manipulation and deception. The simplest version of this is through accuracy reminders, which can improve content quality during both posting (92) and resharing (93). Flooding reduces the effectiveness of such accuracy interventions (94). Our model could be extended to explore ways to combine friction and accuracy nudges by, e.g. lowering the probability that low-quality messages are reshared by agents after they are exposed to warnings.
+Given that inauthentic accounts can be used to suppress human speech, granting them (or any entity that controls them) unlimited free-speech rights would seem to lead to a logical contradiction (95). Yet, ironically, efforts by social media platforms to moderate abusive accounts and even research on social bot detection have been assailed by some with charges of censorship (96). These questions may have significant repercussions on regulations designed to protect the online public square (53).                    
+Methods
+                    
+Social media diffusion model
+
+SimSoMa is a parsimonious agent-based model inspired by the long tradition of representing the spread of ideas as an epidemic process where messages are passed along the edges of a network (97). The model simulates a directed follower network, as in Twitter/X, Mastodon, or Threads. Nodes represent agents (users) and links represent follower relations, which may or may not be reciprocal. The direction of a link goes from the follower to the followed (friend) account, capturing the flow of attention; when a friend’s post is reshared by a follower, information spreads in the opposite direction. In line with previous work (45, 77, 78), the diffusion process is modeled as simple contagion, where each exposure to a message results in the same resharing probability. We assume that the structure of the network is static (no unfollowing/blocking of accounts) during the information-spreading process. In contrast to classical epidemiological models, new messages are continuously introduced into the system in an exogenous fashion.
+At each time step, an agent i produces a new message with probability μ or chooses one of the messages in their news feed to be reshared with probability 1−μ (Fig. 1). The new or reshared message is then added to the news feeds of i’s followers. We set μ=0.5⁠, reflecting the empirical average ratio for English-language tweets (98). Based on empirical data, agents are assumed to have limited-size inventories: only the most recent σ=15 messages are retained in each news feed (see Supplementary material). The results are robust for different values of μ and σ (see Fig. S1 in Supplementary Material).
+We assume authentic agents prefer to reshare messages posted by their friends that are appealing, recent, and popular. This is based on empirical evidence that users are more likely to share popular content according to engagement signals (99). The probability that an agent shares a message from their news feed, allowing it to spread, is proportional to the message’s appeal, social engagement, and recency. More explicitly, let Mi be the feed of i (⁠|Mi|=σ⁠). The probability of message m∈Mi being selected is P(m)=amemrm/∑j∈Miajejrj where am is the appeal of message m, em is the social engagement, i.e. the number of times it was (re)shared by i’s friends, and rm is the recency. Message recency decays with time as a stretched exponential function rm(t)=e−0.4t0.4⁠, where t is the “age,” or the time passed since m was first introduced to the agent’s news feed. This decay function is based on empirical online news engagement data (67). To model flooding, bad actors can be more active than authentic agents, sharing a message θ times such that it appears to have higher engagement than authentic content.                    
+Quality and appeal
+
+Both the quality q and the appeal a of new messages are defined in the unit interval. Informed by empirical data, q and a for authentic accounts are assumed to be independent (see Fig. S2 in Supplementary Material). For authentic accounts, quality q is drawn from an exponential distribution P(q)=Ceτq where high-quality information is more common than low-quality information. The term C=τeτ−1 is a normalizing constant such that ∫01P(q)dq=1⁠; the exponent τ=10 is estimated empirically (see Fig. S3 in Supplementary Material). We independently draw appeal from the distribution P(a)=(1+α)(1−a)α⁠, with α>1 (Fig. S4a in Supplementary Material). We set α=4⁠. This choice for the appeal probability density function reproduces a broad distribution of reshares comparable to that observed in real-world information diffusion networks: few messages go viral while the majority do not (Fig. S4b in Supplementary Material).
+On the other hand, we assume that bad actors strictly generate low-quality messages (⁠q=0⁠). The potentially deceptive nature of this content is modeled by the deception parameter ϕ (⁠0≤ϕ≤1⁠), the probability that a bad-actor message is irresistibly appealing. With probability ϕ, we set a=1⁠, and with probability 1−ϕ we draw appeal from the same distribution as for authentic accounts, P(a)=(1+α)(1−a)α⁠. If ϕ=0⁠, bad actors and authentic accounts generate messages with appeal drawn from the same distribution. If ϕ>0⁠, bad-actor messages are more likely to have high appeal; the larger ϕ, the greater the potential virality of low-quality content by bad actors.                    
+Follower network
+
+We run simulations on a follower network derived from empirical Twitter data. This network was constructed from a 10% random sample of public tweets between 2017 June 1 and 30 (100). The data include users (excluding likely automated accounts) that shared at least 10 links to news sources, at least one of which was to a source labeled as low-quality. Only news sources with known political valence were considered. Based on the shared links, most accounts in the dataset have an associated partisanship score (from −1 for left-leaning to +1 for right-leaning) defined as the average political bias of the news sources they share; and a misinformation score defined as the fraction of posts linking to low-credibility sources. Both partisanship and misinformation scores, included in the original network dataset, were based on news source labels from third-party fact-checkers (84).
+From the original dataset, we select nodes with both partisanship and misinformation attributes. We further reduce the size of the network to speed up our simulations. We apply k-core decomposition to select N=10,006 nodes forming the k=94 core. Finally, we remove a random sample of edges to decrease the density of this core while preserving the average in/out-degree (number of friends/followers) of the original network (⁠k=0 core). This results in E=1,809,798 edges; each node has on average approximately 180 friends/followers (Fig. 3, “hubs+clusters” network).                    
+Bad-actor subnetwork
+
+Since the empirical network described above does not include likely inauthentic accounts, we use it to model the subnetwork of authentic accounts. We then add a subnetwork representing inauthentic accounts that infiltrate the system. The ratio between the sizes of the two subnetworks is described by β, i.e. for an authentic agent subnetwork of N nodes, the inauthentic subnetwork is composed of βN nodes (Fig. 2). Since there are many types of inauthentic accounts (trolls, social bots, cyborgs), estimating the percentage of these on social media is a very difficult task. We thus set β=0.05 following a rough estimation of the prevalence of bots on Twitter.b Note that from the perspective of information quality in the model, increasing the prevalence of bad actors is equivalent to increasing their infiltration. Therefore, we focus on the effects of varying γ rather than β.
+The inauthentic account subnetwork is created using a directed variant of the random-walk growth model (101). This captures the presence of hubs and clustering (directed triads). Specifically, the network is initialized with four fully connected nodes. We then add one new node at a time, assuming that each has fixed out-degree kout=3⁠. Once a new node i comes into the network, it links to (follows) a randomly selected target node (friend) j. Each of the remaining kout−1=2 friends are selected as follows: with probability expressed by a parameter p, i follows a random friend of j’s; with probability 1−p⁠, i follows another randomly selected node. Following friends of a friend has the effect of generating closed, directed triads and approximates a preferential attachment process, giving rise to hub nodes with high in-degree. The parameter p thus models both hubs and clustering. We use p=0.5⁠.
+In addition, the bad-actor subnetwork is designed to manipulate information flow and collective attention by spreading certain messages. Therefore, we assume that bad actors get random authentic accounts to follow them: we add a directed link from each authentic node to each bad-actor node with probability γ. (In the next subsection, we present alternatives to this random targeting tactic.) The parameter γ models the degree of infiltration of the network by bad actors (Fig. 2). When γ=0⁠, there is no infiltration and bad actors are isolated, therefore harmless; the opposite extreme γ=1 indicates complete infiltration such that bad actors dominate the network. Because we are not concerned with the quality of messages on bad-actor news feeds, they do not follow or reshare content from authentic agents for the analyzes in this paper.                    
+Bad-actor targeting tactics
+
+In the scheme described above, the authentic agents that follow bad actors do so randomly. We also study scenarios in which bad actors target certain accounts as potential followers (Fig. 7). In all of these scenarios, each bad actor is still followed by γN authentic accounts on average, but these targets are selected according to some criterion, such as whether they are politically active or have many followers.
+Each targeting tactic is modeled by making the probability that an authentic agent i follows bad actors proportional to some feature f(i)⁠. In the hubs tactic, we set f(i)=kin(i)⁠, the number of followers of i. Misinformation and partisanship attributes of authentic accounts in the empirical network allow us to model other targeting scenarios. In the misinformation tactic, f(i) is set to i’s misinformation score, i.e. their propensity to share misinformation. The partisanship score is used in the liberal and conservative tactics, while its absolute value is used in the partisanship tactic.                    
+Overall quality
+
+The effects of manipulation on authentic agents are quantified by the quality of all content in circulation. The overall quality of the information system at time t is measured by the average quality across all the messages visible through the feeds of the authentic agents:
+
+
+Qt=1σN∑i=1N∑m∈Miqi,m,t,
+where qi,m,t is the quality of the message in the mth position in authentic user i’s feed at time t.
+The system’s quality at each time step t is calculated with an exponential moving average Q¯t=ρQ¯t−1+(1−ρ)Qt⁠. As the simulation takes place, some of the messages become obsolete quickly, while others live longer and infect a larger fraction of the network. The simulation ends once the system reaches a steady state in which the difference between two consecutive values of the quality moving average is smaller than a threshold, i.e. |Q¯t−Q¯t−1|/Q¯t−1<ϵ⁠. See Supplementary material for further details about model convergence to a steady state. The average quality reported for all analyzes is calculated at the end of the simulation.                    
+Cascade construction
+
+A reshare cascade is a tree that begins when an agent i (root) posts a new message m. After that, a new link is created when a follower j of i reshares m. We say that i is the parent of j in the tree. Similarly, an agent’s exposure to a message is defined as having that message on their feed while being activated—we assume that an agent who is about to share or reshare a post has seen the content on their feed. A link in the exposure cascade for message m is created between an activated agent with m in their feed and their friend who had shared m. When constructing both reshare and exposure cascades, m may have been reshared by more than one of an agent’s friends. When this occurs, one of them is selected at random to be the parent in the cascade tree. This choice does not affect a cascade tree’s size, but might affect its structure. Other alternatives, such as selecting as parent the friend who most recently shared m, can be explored if one desires to analyze the structure of the reshare or exposure cascades. By definition, reshare cascades can be as small as one and exposure cascades can be as small as zero.
+To capture the complete diffusion cascades, the size distributions plotted in Fig. 5 include only cascades of “extinct” messages, those that have become obsolete and are no longer present in any news feed by the end of simulations.                    
+Simulation framework and parameters
+
+For each set of parameters, we run 10 simulations starting from random conditions; the reported average quality is the average across these runs.
+We explore values of the bad-actor parameters to cover broad ranges of manipulation tactics. The infiltration parameter γ is a probability, and we consider values in the unit interval on a logarithmic scale to focus on more realistic low-probability values. The deception parameter ϕ also represents a probability and we examine the full unit interval. Finally, the flooding parameter θ is a multiplicative factor on the volume of posts, and we explore the range 1–64 on a logarithmic scale to capture the high volumes observed in empirical analyzes (41). In scenarios with bad actors in the system, the default parameters are γ=0.01⁠, ϕ=0⁠, and θ=1⁠. Except for the simulations exploring inauthentic targeting tactics, authentic followers of the bad actors are selected at random.
+The parameters ρ=0.8 and ϵ=0.0001 were tested to ensure that the system’s quality stabilizes at the steady state (see Supplementary material).
+We shuffle the follower network in various ways to derive the scenarios reported in Fig. 3. The “hubs+cluters” network is the original one. In the “hubs” network, we shuffle the original network while preserving the degree distribution and destroying any community clustering. In the “clusters” network, the outgoing endpoint of each edge in the original network is rewired to another node within the same cluster; this preserves the cluster structure and destroys the hub structure. In the “random” shuffle, all edges are rewired at random with uniform probability, destroying all hub and clustering structure.                    
+Notes
+
+a
+
+Code and data to implement the model and reproduce results are available at github.com/osome-iu/SimSoM.
+b
+
+theconversation.com/how-many-bots-are-on-twitter-the-question-is-difficult-to-answer-and-misses-the-point-183425.                    
+Acknowledgments
+
+We are grateful to Marshall Van Alstyne, David Axelrod, Rachith Aiyappa, and Erfan Samieyan for useful discussion and suggestions; to Dimitar Nikolov, Chengcheng Shao, Giovanni Ciampaglia, and Pik-Mai Hui for the data collection used to construct the empirical network; to Kai-Cheng Yang and Christopher Torres-Lugo for the COVID-19 data collection; and to Alireza Sahami Shirazi for data about scrolling session depth on a social media mobile app.                    
+Supplementary Material
+
+Supplementary material is available at PNAS Nexus online.                    
+Funding
+
+This work was carried out in part while X.L. visited the Observatory on Social Media at Indiana University, with support by the China Scholarship Council. B.T.T., A.F., and F.M. were supported in part by the Knight Foundation. B.T.T. was funded in part by the Ostrom Workshop. A.F. and F.M. were funded in part by DARPA (grants W911NF-17-C-0094 and HR001121C0169). F.M. and B.T.T. were supported in part by the Swiss National Science Foundation (Sinergia grant CRSII5_209250). F.M. was supported in part by the Democracy Fund, and Craig Newmark Philanthropies. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the funding agencies.                    
+Author Contributions
+
+F.M. and A.F. formulated the research and developed the methodology. F.M. and B.T.T collected the data. B.T.T and X.L. wrote the code and performed analyses. All authors prepared the manuscript.                    
+Preprints
+
+This manuscript was posted on a preprint at doi.org/10.48550/arXiv.1907.06130.                    
+Data Availability
+
+Code and data to implement the model and reproduce results are available at github.com/osome-iu/SimSoM.                    
+References
+
+
+
+
+
+1
+
+
+Ratkiewicz   
+J, et al.   
+2011. 
+Detecting and tracking political abuse in social media. Proceedings International AAAI Conference on Web and social media (ICWSM). 5(1):297–304.
+
+
+
+2
+
+
+Metaxas   
+PT, 
+Mustafaraj   
+E. 
+2012. 
+Social media and the elections. 
+Science. 
+338(
+6106):
+472–
+473.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+3
+
+
+Stewart   
+LG, 
+Arif   
+A, 
+Starbird   
+K. 
+2018. 
+Examining trolls and polarization with a retweet network. Proceedings ACM WSDM Workshop on Misinformation and Misbehavior Mining on the Web. 70(1):5–11.
+
+
+
+4
+
+
+Arif   
+A, 
+Stewart   
+LG, 
+Starbird   
+K. 
+2018. 
+Acting the part: examining information operations within# BlackLivesMatter discourse. 
+Proc ACM on Hum-Comput Interact. 
+2(
+CSCW):
+1–
+27.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+5
+
+
+Lazer   
+D, et al. 
+2018. 
+The science of fake news. 
+Science. 
+359(
+6380):
+1094–
+1096.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+6
+
+
+Shao   
+C, et al. 
+2018. 
+Anatomy of an online misinformation network. 
+PLoS One. 
+13(
+4):
+e0196087.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+7
+
+
+Grinberg   
+N, 
+Joseph   
+K, 
+Friedland   
+L, 
+Swire-Thompson   
+B, 
+Lazer   
+D. 
+2019. 
+Fake news on Twitter during the 2016 U.S. Presidential election. 
+Science. 
+363(
+6425):
+374–
+378.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+8
+
+
+Shao   
+C, et al. 
+2018. 
+The spread of low-credibility content by social bots. 
+Nat Commun. 
+9(
+1):
+4787.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+9
+
+
+Vosoughi   
+S, 
+Roy   
+D, 
+Aral   
+S. 
+2018. 
+The spread of true and false news online. 
+Science. 
+359(
+6380):
+1146–
+1151.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+10
+
+
+Lin   
+H. 
+2019. 
+The existential threat from cyber-enabled information warfare. 
+Bull Atom Sci. 
+75(
+4):
+187–
+196.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+11
+
+
+Menczer   
+F, 
+Hills   
+T. 
+2020. 
+The attention economy. 
+Sci Am. 
+323(
+6):
+54–
+61.
+
+
+Google Scholar
+PubMed
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+12
+
+
+Ciampaglia   
+GL, 
+Nematzadeh   
+A, 
+Menczer   
+F, 
+Flammini   
+A. 
+2018. 
+How algorithmic popularity bias hinders or promotes quality. 
+Sci Rep. 
+8:
+15951.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+13
+
+
+Nikolov   
+D, 
+Lalmas   
+M, 
+Flammini   
+A, 
+Menczer   
+F. 
+2019. 
+Quantifying biases in online information exposure. 
+J Assoc Inf Sci Technol. 
+70(
+3):
+218–
+229.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+14
+
+
+Pacheco   
+D, et al.   
+2021. 
+Uncovering coordinated networks on social media: Methods and case studies. Proceedings International AAAI Conference on Web and Social Media (ICWSM). 15(1):455–466.
+
+
+
+15
+
+
+Ferrara   
+E, 
+Varol   
+O, 
+Davis   
+C, 
+Menczer   
+F, 
+Flammini   
+A. 
+2016. 
+The rise of social bots. 
+Comm ACM. 
+59(
+7):
+96–
+104.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+16
+
+
+Yang   
+K-C, et al. 
+2019. 
+Arming the public with artificial intelligence to counter social bots. 
+Huma Behav Emerg Technol. 
+1(
+1):
+48–
+61.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+17
+
+
+Bessi   
+A, 
+Ferrara   
+E. 
+2016. 
+Social bots distort the 2016 U.S. Presidential election online discussion. 
+First Mon. 
+21(
+11).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+18
+
+
+Stella   
+M, 
+Cristoforetti   
+M, 
+Domenico   
+MD. 
+2019. 
+Influence of augmented humans in online interactions during voting events. 
+PLoS One. 
+14(
+5):
+1–
+16.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+19
+
+
+Ferrara   
+E. 
+2017. 
+Disinformation and social bot operations in the run up to the 2017 French Presidential election. 
+First Mon. 
+22(
+8).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+20
+
+
+Mirtaheri   
+M, 
+Abu-El-Haija   
+S, 
+Morstatter   
+F, 
+Ver Steeg   
+G, 
+Galstyan   
+A. 
+2019. 
+Identifying and analyzing cryptocurrency manipulations in social media. arXiv:1902.03110.
+
+
+
+21
+
+
+Stella   
+M, 
+Ferrara   
+E, 
+Domenico   
+MD. 
+2018. 
+Bots increase exposure to negative and inflammatory content in online social systems. 
+Proc Natl Acad Sci USA. 
+115(
+49):
+12435–
+12440.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+22
+
+
+Caldarelli   
+G, 
+Nicola   
+RD, 
+Del Vigna   
+F, 
+Petrocchi   
+M, 
+Saracco   
+F. 
+2020. 
+The role of bot squads in the political propaganda on Twitter. 
+Commun Phys. 
+3(
+1):
+81.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+23
+
+
+Abokhodair   
+N, 
+Yoo   
+D, 
+McDonald   
+DW. 
+2015. 
+Dissecting a social botnet: growth, content and influence in twitter. In: Proceedings 18th ACM Conference on Computer Supported Cooperative Work & Social Computing (CSCW). p. 839–851.
+
+
+
+24
+
+
+Suárez-Serrato   
+P, 
+Roberts   
+ME, 
+Davis   
+C, 
+Menczer   
+F. 
+2016. 
+On the influence of social bots in online protests: preliminary findings of a Mexican case study. In: Proceedings 8th International Conference on Social Informatics (SocInfo).
+
+
+
+25
+
+
+Centola   
+D, 
+Becker   
+J, 
+Brackbill   
+D, 
+Baronchelli   
+A. 
+2018. 
+Experimental evidence for tipping points in social convention. 
+Science. 
+360(
+6393):
+1116–
+1119.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+26
+
+
+Mønsted   
+B, 
+Sapieżyński   
+P, 
+Ferrara   
+E, 
+Lehmann   
+S. 
+2017. 
+Evidence of complex contagion of information in social media: an experiment using twitter bots. 
+PLoS One. 
+12(
+9):
+e0184148.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+27
+
+
+Pasquetto   
+IV, et al.   
+2020. 
+Tackling misinformation: what researchers could do with social media data. 
+HKS Misinform Rev. 
+1(
+8).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+28
+
+
+Allcott   
+H, 
+Gentzkow   
+M. 
+2017. 
+Social media and fake news in the 2016 election. 
+J Econ Perspect. 
+31(
+2):
+211–
+236.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+29
+
+
+Jamieson   
+KH. 
+2018. 
+Cyberwar: how Russian hackers and trolls helped elect a president. 
+Oxford University Press.
+
+Google Scholar
+Google Preview
+OpenURL Placeholder Text
+WorldCat
+COPAC 
+
+
+
+30
+
+
+Badawy   
+A, 
+Ferrara   
+E, 
+Lerman   
+K. 
+2018. 
+Analyzing the digital traces of political manipulation: the 2016 Russian interference Twitter campaign. In: Proceedings IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM). p. 258–265.
+
+
+
+31
+
+
+Guess   
+A, 
+Nagler   
+J, 
+Tucker   
+J. 
+2019. 
+Less than you think: prevalence and predictors of fake news dissemination on Facebook. 
+Sci Adv. 
+5(
+1).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+32
+
+
+Garrett   
+RK. 
+2019. 
+Social media’s contribution to political misperceptions in U.S. Presidential elections. 
+PLoS One. 
+14(
+3):
+1–
+16.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+33
+
+
+Ruck   
+DJ, 
+Rice   
+NM, 
+Borycz   
+J, 
+Bentley   
+RA. 
+2019. 
+Internet Research agency twitter activity predicted 2016 U.S. election polls. 
+First Mon. 
+24(
+7).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+34
+
+
+Bail   
+CA, et al. 
+2020. 
+Assessing the Russian Internet Research Agency’s impact on the political attitudes and behaviors of American Twitter users in late 2017. 
+Proc Natl Acad Sci USA. 
+117(
+1):
+243–
+250.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+35
+
+
+Eady   
+G, et al. 
+2023. 
+Exposure to the Russian Internet Research Agency foreign influence campaign on Twitter in the 2016 US election and its relationship to attitudes and voting behavior. 
+Nat Commun. 
+14(
+1):
+62.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+36
+
+
+DiResta   
+R, et al. 
+2019. 
+The Tactics and Tropes of the Internet Research Agency. New Knowledge Report prepared for the United States Senate Select Committee on Russian Interference in the 2016 Election.
+
+
+
+37
+
+
+Yang   
+K-C, 
+Menczer   
+F. 
+2024. 
+Anatomy of an AI-powered malicious social botnet. JQD:DM, Forthcoming. arXiv:2307.16336.
+
+
+
+38
+
+
+Torres-Lugo   
+C, 
+Yang   
+K-C, 
+Menczer   
+F. 
+2022. 
+The manufacture of partisan echo chambers by follow train abuse on Twitter. Proceedings International AAAI Conference on Web and social media (ICWSM). 16(1):1017–1028.
+
+
+
+39
+
+
+Ferrara   
+E, 
+Yang   
+Z. 
+2015. 
+Measuring emotional contagion in social media. 
+PLoS One. 
+10(
+11):
+e0142390.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+40
+
+
+Baribi-Bartov   
+S, 
+Swire-Thompson   
+B, 
+Grinberg   
+N. 
+2024. 
+Supersharers of fake news on twitter. 
+Science. 
+384(
+6699):
+979–
+982.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+41
+
+
+Torres-Lugo   
+C, 
+Pote   
+M, 
+Nwala   
+A, 
+Menczer   
+F. 
+2022. 
+Manipulating Twitter through deletions. Proceedings International AAAI Conference on Web and Social Media (ICWSM). 16(1):1029–1039.
+
+
+
+42
+
+
+Pennycook   
+G, et al. 
+2021. 
+Shifting attention to accuracy can reduce misinformation online. 
+Nature. 
+592(
+7855):
+590–
+595.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+43
+
+
+Pennycook   
+G, 
+Rand   
+DG. 
+2019. 
+Lazy, not biased: susceptibility to partisan fake news is better explained by lack of reasoning than by motivated reasoning. 
+Cognition. 
+188:
+39–
+50.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+44
+
+
+Twitter (
+2023). Twitter’s recommendation algorithm. blog.twitter.com/engineering/en_us/topics/open-source/2023/twitter-recommendation-algorithm.
+
+
+
+45
+
+
+Juul   
+JL, 
+Ugander   
+J. 
+2021. 
+Comparing information diffusion mechanisms by matching on cascade size. 
+Proc Natl Acad Sci USA. 
+118(
+46):
+e2100786118.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+46
+
+
+Budak   
+C, 
+Nyhan   
+B, 
+Rothschild   
+DM, 
+Thorson   
+E, 
+Watts   
+DJ. 
+2024. 
+Misunderstanding the harms of online misinformation. 
+Nature. 
+630(
+8015):
+45–
+53.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+47
+
+
+Cha   
+M, 
+Haddadi   
+H, 
+Benevenuto   
+F, 
+Gummadi   
+KP. 
+2010. 
+Measuring user influence in Twitter: the million follower fallacy. Proceedings International AAAI Conference on Web and Social Media (ICWSM). 4(1):10–17.
+
+
+
+48
+
+
+Chen   
+W, 
+Pacheco   
+D, 
+Yang   
+K-C, 
+Menczer   
+F. 
+2021. 
+Neutral bots probe political bias on social media. 
+Nat Commun. 
+12(
+1):
+5580.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+49
+
+
+Simon   
+H. 
+1971. 
+Designing organizations for an information-rich world. In: Greenberger M, editor. Computers, communication, and the public interest. Baltimore: The Johns Hopkins Press. p. 37–52.
+
+
+
+50
+
+
+Milton   
+J. 
+1644. Areopagitica. Dartmouth’s Milton Reading room. Accessed online at www.dartmouth.edu/∼milton/reading_room/areopagitica/text.shtml.
+
+
+
+51
+
+
+Surowiecki   
+J. 
+2005. 
+The wisdom of crowds. 
+Anchor.
+
+Google Scholar
+Google Preview
+OpenURL Placeholder Text
+WorldCat
+COPAC 
+
+
+
+52
+
+
+Page   
+SE. 
+2008. 
+The difference: how the power of diversity creates better groups, firms, schools, and societies. 
+Princeton University Press.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+Google Preview
+WorldCat
+COPAC 
+
+
+
+53
+
+
+Lin   
+H. 
+2019. 
+On the organization of the U.S. government for responding to adversarial information warfare and influence operations. 
+I/S: J Law Policy Inf Soc. 
+15:
+1–
+43.
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+54
+
+
+Ruffo   
+G, 
+Semeraro   
+A, 
+Giachanou   
+A, 
+Rosso   
+P. 
+2023. 
+Studying fake news spreading, polarisation dynamics, and manipulation by bots: a tale of networks and language. 
+Comput Sci Rev. 
+47:
+100531.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+55
+
+
+Ciampaglia   
+GL, 
+Flammini   
+A, 
+Menczer   
+F. 
+2015. 
+The production of information in the attention economy. 
+Sci Rep. 
+5(
+1):
+9452.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+56
+
+
+Salganik   
+MJ, 
+Dodds   
+PS, 
+Watts   
+DJ. 
+2006. 
+Experimental study of inequality and unpredictability in an artificial cultural market. 
+Science. 
+311(
+5762):
+854–
+856.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+57
+
+
+Lorenz   
+J, 
+Rauhut   
+H, 
+Schweitzer   
+F, 
+Helbing   
+D. 
+2011. 
+How social influence can undermine the wisdom of crowd effect. 
+Proc Natl Acad Sci USA. 
+108(
+22):
+9020–
+9025.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+58
+
+
+Becker   
+J, 
+Brackbill   
+D, 
+Centola   
+D. 
+2017. 
+Network dynamics of social influence in the wisdom of crowds. 
+Proc Natl Acad Sci USA. 
+114(
+26):
+E5070–
+E5076.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+59
+
+
+Nickerson   
+RS. 
+1998. 
+Confirmation bias: a ubiquitous phenomenon in many guises. 
+Rev Gen Psychol. 
+2(
+2):
+175–
+220.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+60
+
+
+Hills   
+TT. 
+2019. 
+The dark side of information proliferation. 
+Perspect Psychol Sci. 
+14(
+3):
+323–
+330.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+61
+
+
+Stewart   
+AJ, et al. 
+2019. 
+Information gerrymandering and undemocratic decisions. 
+Nature. 
+573(
+7772):
+117–
+121.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+62
+
+
+Alipourfard   
+N, 
+Nettasinghe   
+B, 
+Abeliuk   
+A, 
+Krishnamurthy   
+V, 
+Lerman   
+K. 
+2020. 
+Friendship paradox biases perceptions in directed networks. 
+Nat Commun. 
+11(
+1):
+707.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+63
+
+
+Crane   
+R, 
+Sornette   
+D. 
+2008. 
+Robust dynamic classes revealed by measuring the response function of a social system. 
+Proc Natl Acad Sci USA. 
+105(
+41):
+15649–
+15653.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+64
+
+
+Ratkiewicz   
+J, 
+Fortunato   
+S, 
+Flammini   
+A, 
+Menczer   
+F, 
+Vespignani   
+A. 
+2010. 
+Characterizing and modeling the dynamics of online popularity. 
+Phys Rev Lett. 
+105(
+15):
+158701.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+65
+
+
+Bingol   
+H. 
+2008. 
+Fame emerges as a result of small memory. 
+Phys Rev E. 
+77(
+3):
+036118.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+66
+
+
+Huberman   
+BA. 
+2013. 
+Social computing and the attention economy. 
+J Stat Phys. 
+151(
+1-2):
+329–
+339.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+67
+
+
+Wu   
+F, 
+Huberman   
+BA. 
+2007. 
+Novelty and collective attention. 
+Proc Natl Acad Sci USA. 
+104(
+45):
+17599–
+17601.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+68
+
+
+Hodas   
+NO, 
+Lerman   
+K. 
+2012. 
+How limited visibility and divided attention constrain social contagion. In: Proceedings ASE/IEEE International Conference on Social Computing.
+
+
+
+69
+
+
+Kang   
+J-H, 
+Lerman   
+K. 
+2015. 
+VIP: incorporating human cognitive biases in a probabilistic model of retweeting. In: Proceedings International Conference on Social Computing, Behavioral Modeling and Prediction (SBP). p. 101–110.
+
+
+
+70
+
+
+Adler   
+M. 
+1985. 
+Stardom and talent. 
+Am Econ Rev. 
+75(
+1):
+208–
+12.
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+71
+
+
+Del Vicario   
+M, et al. 
+2016. 
+The spreading of misinformation online. 
+Proc Natl Acad Sci USA. 
+113(
+3):
+554–
+559.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+72
+
+
+Weng   
+L, 
+Flammini   
+A, 
+Vespignani   
+A, 
+Menczer   
+F. 
+2012. 
+Competition among memes in a world with limited attention. 
+Sci Rep. 
+2(
+1):
+335.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+73
+
+
+Gleeson   
+JP, 
+Ward   
+JA, 
+O’Sullivan   
+KP, 
+Lee   
+WT. 
+2014. 
+Competition-induced criticality in a model of meme popularity. 
+Phys Rev Lett. 
+112(
+4):
+048701.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+74
+
+
+Gleeson   
+JP, 
+O’Sullivan   
+KP, 
+Baños   
+RA, 
+Moreno   
+Y. 
+2016. 
+Effects of network structure, competition and memory time on social spreading phenomena. 
+Phys Rev X. 
+6(
+2):
+021019.
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+75
+
+
+Notarmuzi   
+D, 
+Castellano   
+C. 
+2018. 
+Analytical study of quality-biased competition dynamics for memes in social media. 
+Europhys Lett. 
+122(
+2):
+28002.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+76
+
+
+Törnberg   
+P, 
+Valeeva   
+D, 
+Uitermark   
+J, 
+Bail   
+C. 
+2023. 
+Simulating social media using large language models to evaluate alternative news feed algorithms. arXiv:2310.05984.
+
+
+
+77
+
+
+Bak-Coleman   
+JB, et al. 
+2022. 
+Combining interventions to reduce the spread of viral misinformation. 
+Nat Hum Behav. 
+6(
+10):
+1372–
+1380.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+78
+
+
+Hodas   
+NO, 
+Lerman   
+K. 
+2014. 
+The simple rules of social contagion. 
+Sci Rep. 
+4(
+1):
+4343.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+79
+
+
+Galam   
+S, 
+Jacobs   
+F. 
+2007. 
+The role of inflexible minorities in the breaking of democratic opinion dynamics. 
+Phys A Stat Mech Appl. 
+381:
+366–
+376.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+80
+
+
+Waagen   
+A, 
+Verma   
+G, 
+Chan   
+K, 
+Swami   
+A, 
+D’Souza   
+R. 
+2015. 
+Effect of zealotry in high-dimensional opinion dynamics models. 
+Phys Rev E. 
+91(
+2):
+022811.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+81
+
+
+Xie   
+J, et al. 
+2011. 
+Social consensus through the influence of committed minorities. 
+Phys Rev E. 
+84(
+1):
+011130.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+82
+
+
+Mistry   
+D, 
+Zhang   
+Q, 
+Perra   
+N, 
+Baronchelli   
+A. 
+2015. 
+Committed activists and the reshaping of status-quo social consensus. 
+Phys Rev E. 
+92(
+4):
+042805.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+83
+
+
+Conover   
+MD, 
+Gonçalves   
+B, 
+Flammini   
+A, 
+Menczer   
+F. 
+2012. 
+Partisan asymmetries in online political activity. 
+EPJ Data Sci. 
+1(
+1):
+6.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+84
+
+
+Nikolov   
+D, 
+Flammini   
+A, 
+Menczer   
+F. 
+2021. 
+Right and left, partisanship predicts (asymmetric) vulnerability to misinformation. 
+HKS Misinform Rev. 
+1(
+7).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+85
+
+
+Cinelli   
+M, 
+De Francisci Morales   
+G, 
+Galeazzi   
+A, 
+Quattrociocchi   
+W, 
+Starnini   
+M. 
+2021. 
+The echo chamber effect on social media. 
+Proc Natl Acad Sci USA. 
+118(
+9):
+e2023301118.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+86
+
+
+Conover   
+M, et al.   
+2011. 
+Political polarization on Twitter. Proceedings International AAAI Conference on Weblogs and Social Media (ICWSM). 5(1):89–96.
+
+
+
+87
+
+
+Weng   
+L, 
+Menczer   
+F, 
+Ahn   
+Y-Y. 
+2013. 
+Virality prediction and community structure in social networks. 
+Sci Rep. 
+3(
+2522).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+88
+
+
+Nematzadeh   
+A, 
+Ferrara   
+E, 
+Flammini   
+A, 
+Ahn   
+Y-Y. 
+2014. 
+Optimal network modularity for information diffusion. 
+Phys Rev Lett. 
+113(
+8):
+088701.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+89
+
+
+Ashkinaze   
+J, 
+Gilbert   
+E, 
+Budak   
+C. 
+2024. 
+The dynamics of (not) unfollowing misinformation spreaders. arXiv:2401.13480.
+
+
+
+90
+
+
+Jackson   
+MO, 
+Malladi   
+S, 
+McAdams   
+D. 
+2022. 
+Learning through the grapevine and the impact of the breadth and depth of social networks. 
+Proc Natl Acad Sci USA. 
+119(
+34):
+e2205549119.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+91
+
+
+Butts   
+DJ, 
+Bollman   
+SA, 
+Murillo   
+MS. 
+2023. 
+Mathematical modeling of disinformation and effectiveness of mitigation policies. 
+Sci Rep. 
+13(
+1):
+18735.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+92
+
+
+Katsaros   
+M, 
+Yang   
+K, 
+Fratamico   
+L. 
+2022. 
+Reconsidering Tweets: intervening during tweet creation decreases offensive content. Proceedings International AAAI Conference on Weblogs and Social Media (ICWSM). 16(1):477–487.
+
+
+
+93
+
+
+Pennycook   
+G, 
+McPhetres   
+J, 
+Zhang   
+Y, 
+Lu   
+JG, 
+Rand   
+DG. 
+2020. 
+Fighting COVID-19 misinformation on social media: experimental evidence for a scalable accuracy-nudge intervention. 
+Psychol Sci. 
+31(
+7):
+770–
+780.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+94
+
+
+Fazio   
+LK. 
+2020. 
+Pausing to consider why a headline is true or false can help reduce the sharing of false news. 
+HKS Misinform Rev. 
+1(
+2).
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+95
+
+
+Van Alstyne   
+MW. 
+2019. 
+A response to fake news as a response to Citizens United. 
+Comm ACM. 
+62(
+8):
+26–
+29.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat 
+
+
+
+96
+
+
+Mervis   
+J. 
+2014. 
+An internet research project draws conservative ire. 
+Science. 
+346(
+6210):
+686–
+687.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+97
+
+
+Daley   
+DJ, 
+Kendall   
+DG. 
+1964. 
+Epidemics and rumours. 
+Nature. 
+204(
+4963):
+1118.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+98
+
+
+Alshaabi   
+T, et al. 
+2021. 
+The growing amplification of social media: measuring temporal and social contagion dynamics for over 150 languages on Twitter for 2009–2020. 
+EPJ Data Sci. 
+10(
+1):
+15.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+PubMed
+WorldCat 
+
+
+
+99
+
+
+Avram   
+M, 
+Micallef   
+N, 
+Patil   
+S, 
+Menczer   
+F. 
+2020. 
+Exposure to social engagement metrics increases vulnerability to misinformation. 
+HKS Misinform Rev. 
+1(
+5):
+1–
+9.
+
+Google Scholar
+OpenURL Placeholder Text
+WorldCat 
+
+
+
+100
+
+
+Nikolov   
+D, 
+Flammini   
+A, 
+Menczer   
+F. 
+2020. Replication data for: Right and left, partisanship predicts vulnerability to misinformation. Harvard Dataverse. https://doi.org/10.7910/DVN/6CZHH5.
+
+
+
+101
+
+
+Vázquez   
+A. 
+2003. 
+Growing network with local rules: preferential attachment, clustering hierarchy, and degree correlations. 
+Phys Rev E. 
+67(
+5):
+056104.
+
+
+Google Scholar
+Crossref
+Search ADS
+ 
+WorldCat     
+    
+
+         
+    
+
+
+
+        
+
+
+        
+                    
+Author notes
+
+
+
+Competing Interest: The authors declare no competing interest.
+© The Author(s) 2024. Published by Oxford University Press on behalf of National Academy of Sciences.
+
+This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (https://creativecommons.org/licenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact reprints@oup.com for reprints and translation rights for reprints. All other permissions can be obtained through our RightsLink service via the Permissions link on the article page on our site—for further information please contact journals.permissions@oup.com.
+
+        
+
+    
+
+
+
+
+
+
+ 
+    
+
+    
+
+
+
+
+
+
+    MathJax = {
+        tex: {
+            inlineMath: [['|$', '$|'], ['\\(', '\\)']]
+        }    };
+
+
+
+

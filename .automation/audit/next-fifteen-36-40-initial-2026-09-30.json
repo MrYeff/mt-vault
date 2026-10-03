@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "audit": "initial_independent_audit",
+  "selection": "Lexicographic entries 36-40",
+  "audited_at": "2026-09-30",
+  "auditor_scope": "Read vault/Guides/LLM Extraction Rules.md. Independently checked each note against its primary article/full text where available, publisher metadata, and vault/.automation/import/next-fifteen-original-2026-09-30.json. Compared current Metadata/References arrays only against original_frontmatter.refs, in order; intentionally excluded the removed legacy SocialIntegrationBibliography.json body link. No paper notes edited.",
+  "overall_status": "FAIL",
+  "notes": {
+    "Literature/Papers/Entries/Interaction data from the Copenhagen Networks Study.md": {
+      "status": "PASS",
+      "source": "https://www.nature.com/articles/s41597-019-0325-x",
+      "source_access": "Open-access primary Scientific Data page and downloadable publisher PDF are accessible. Checked abstract, Background & Summary, dataset description, and publisher metadata.",
+      "claims_checked": {
+        "abstract": "Exact against the publisher abstract: >700 university students, four weeks, Bluetooth proximity, calls, SMS, Facebook friendship, and reuse aim are all represented accurately.",
+        "research_questions": "Paraphrases the stated dataset purpose and data layers. The second is an inferred research question rather than a question explicitly posed by the article, but is framed as an LLM extraction and supported by the channel-specific data description.",
+        "model": "No procedural model is proposed by this data descriptor; omitting a Model section is appropriate.",
+        "metadata": "Title, DOI 10.1038/s41597-019-0325-x, four-author order, and publication date 2019-12-11 match publisher metadata. The author page spells the first surname ‘Sapiezynski’ without diacritic; the note’s ‘Sapieżyński’ is a Polish spelling variant, not a different author. The readable PDF is an author-hosted copy of the same version of record.",
+        "references": "All 78 links exactly match original_frontmatter.refs in order, including unresolved entries. The note explicitly says completeness was not checked against the primary bibliography."
+      },
+      "findings": [],
+      "footnotes": "The abstract and RQ citations point to the relevant publisher abstract and Background & Summary. The bibliography footnote accurately describes provenance and the remaining completeness limitation."
+    },
+    "Literature/Papers/Entries/Introduction to stochastic actor-based models for network dynamics.md": {
+      "status": "FAIL",
+      "source": "https://doi.org/10.1016/j.socnet.2009.02.004 ; https://www.stats.ox.ac.uk/~snijders/SnijdersSteglichVdBunt2009.pdf",
+      "source_access": "Complete 47-page author manuscript is readable and text-extractable; publisher record confirms Social Networks 32(1), 44-60 (January 2010). Checked model assumptions, objective/change functions, joint behavior extension, discussion, abstract, and metadata.",
+      "claims_checked": {
+        "abstract": "Text is otherwise faithful, but the appended ‘Crown Copyright © 2009.’ is a manuscript footer/copyright notice, not part of the publisher abstract. The current abstract therefore is not an exact abstract transcription as labeled.",
+        "research_questions": "Both questions accurately synthesize the tutorial's aims to represent and estimate directed network change, account for structural and covariate tendencies, and jointly model network/behavior dynamics.",
+        "model": "The core state and sequential update account is substantially correct: directed binary ties; continuous-time Markov process observed in discrete waves; one selected ego may change one outgoing tie or remain; probabilities arise from an objective function; behavior/network changes are distinct and non-coordinated. The summary omits that opportunity rates can vary with actor network position and actor covariates, a defining configurable part of the opportunity process. The ‘calls require aggregation’ application statement is not stated by this paper and is too categorical as written.",
+        "metadata": "Title, three authors, DOI 10.1016/j.socnet.2009.02.004, and 2010 publication year match the version of record. The author PDF is a 2009 draft, which explains the copyright line but does not change the published date.",
+        "references": "All 105 links exactly match original_frontmatter.refs in order. Unresolved placeholders remain and bibliography completeness is explicitly unverified."
+      },
+      "findings": [
+        {
+          "severity": "abstract_exactness",
+          "note_location": "Abstract, final sentence",
+          "source_location": "Publisher Abstract; author manuscript PDF p. 1 (abstract ends after ‘sensible rules for model selection’). https://doi.org/10.1016/j.socnet.2009.02.004",
+          "finding": "‘Crown Copyright © 2009.’ is outside the abstract and belongs to the draft manuscript footer. It conflicts with the claim that the whole note text is an exact abstract copy.",
+          "required_fix": "Remove the copyright sentence from Abstract; if retained as provenance, move it outside the abstract and explain that the PDF is a 2009 draft of the 2010 article."
+        },
+        {
+          "severity": "major_model_omission",
+          "note_location": "Model / How does it work? / Opportunity and choice order",
+          "source_location": "Section 2.1, assumptions 5-6, PDF pp. 6-7; Section 4.1 on rate functions, PDF pp. 16-18. https://www.stats.ox.ac.uk/~snijders/SnijdersSteglichVdBunt2009.pdf",
+          "finding": "The note says actor change opportunities follow stochastic rate processes but leaves out a key parameterization fact: actor-specific opportunity rates may depend on network position (for example centrality) and actor covariates (for example age/sex). That can change who gets to choose and how often, and belongs in the core model description.",
+          "required_fix": "State that opportunity rates can depend on actor network position and actor covariates, and cite Section 2.1 and Section 4.1."
+        },
+        {
+          "severity": "unsupported_generalization",
+          "note_location": "Model / Where does it apply? final sentence",
+          "source_location": "Section 2.1, pp. 4-7, describes longitudinal binary states and examples of durable relations; no claim that event ties categorically require aggregation. https://www.stats.ox.ac.uk/~snijders/SnijdersSteglichVdBunt2009.pdf",
+          "finding": "‘Brief event ties such as calls require aggregation’ is not a stated result or rule in the article and overstates what the model assumptions entail.",
+          "required_fix": "Delete the categorical call/aggregation statement or clearly label it as an application inference and limit it to the chosen relation representation and observation interval."
+        }
+      ],
+      "footnotes": "The existing r3 pages/sections are appropriate for the model claims but must be extended to cite the opportunity-rate covariate dependence. The references and RQ citations are adequate."
+    },
+    "Literature/Papers/Entries/LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals.md": {
+      "status": "FAIL",
+      "source": "https://arxiv.org/abs/2411.10109 ; https://arxiv.org/pdf/2411.10109",
+      "source_access": "Current arXiv v3 PDF (86 pages including supplement) is accessible and text-extractable. Checked version history, abstract, agent architecture, evaluation methods, outcome measures, and limitations. The arXiv record shows first submission 2024-11-15 and inspected version revised 2026-06-28; DOI 10.48550/arXiv.2411.10109 is the archive-issued DOI.",
+      "claims_checked": {
+        "abstract": "Exact against the current arXiv v3 abstract, including 1,052 participants and normalized GSS accuracies (83%, 82%, 86%, demographics-only 74%).",
+        "research_questions": "Both questions are faithful concise paraphrases of the stated generalization aim and comparisons across interview, survey, combined, and demographic agent conditions.",
+        "model": "The broad distinction between grounded individual proxies and a social-interaction theory is right. The mechanism summary materially omits that every agent also stores model-generated reflections from four expert perspectives, which are selected and appended at prediction time; it also omits the fixed GPT-4o model, survey-item masking to prevent answer leakage, and the normalized scoring procedure. These are central to how the evaluated agents are built and assessed. The note says scoring details are omitted, but does not disclose the expert-reflection layer.",
+        "metadata": "Title, all 11 authors and order, arXiv DOI/source, and date as first-submission date match the arXiv record. The date should be understood as first online submission, not the latest version date; the note’s r1 footnote correctly records the v3 revision date.",
+        "references": "Original metadata contained zero reference links and the note preserves that empty array exactly. The full paper itself has references; the note correctly flags bibliography completeness as unverified, so its references must not be treated as the paper’s bibliography."
+      },
+      "findings": [
+        {
+          "severity": "major_model_omission",
+          "note_location": "Model / How does it work?",
+          "source_location": "Main paper ‘Using Individuals’ Self-Reports to Create Generative Agents,’ PDF pp. 3-5; especially pp. 4-5 (expert reflections and GPT-4o); Materials and Methods and Supplementary Appendix 3 (prompt details). https://arxiv.org/pdf/2411.10109",
+          "finding": "The note describes injecting interview/survey inputs and querying agents but omits a central architectural layer: four model-generated expert reflections (psychologist, behavioral economist, political scientist, demographer) are stored and selected/appended at prediction time. It also omits the GPT-4o base model and the exclusion of evaluated survey items/category items from survey-agent inputs to reduce answer leakage.",
+          "required_fix": "Add the four expert-reflection layer, GPT-4o, and the evaluated-item masking rule, with the named Methods sections/pages. State that these methods define the tested implementation rather than a model-independent recipe."
+        },
+        {
+          "severity": "major_evaluation_omission",
+          "note_location": "Model / How does it work? and What can it answer?",
+          "source_location": "Main paper ‘Evaluation’ and ‘Predicting Individuals’ Attitudes and Behaviors,’ PDF pp. 4-6; Figure 1, p. 3. https://arxiv.org/pdf/2411.10109",
+          "finding": "The paper’s key outcome scale is not merely unspecified scoring: normalized accuracy is agent accuracy divided by each participant’s own two-week retest accuracy (with normalized correlations for continuous outcomes). The note omits this definition, although it reports comparison to test-retest consistency. This is essential to interpret the abstract’s percentages. The note also fails to name the participant retest at two weeks in the model procedure.",
+          "required_fix": "Define the normalized accuracy/correlation benchmark and the participant two-week retest; identify GSS, Big Five, economic games, and experimental replications as the distinct outcome sets. Cite the Evaluation section/Figure 1."
+        }
+      ],
+      "footnotes": "r3 points to Methods and evaluation sections, but should cite the specified architecture and measurement passages. Current r1 correctly identifies the current abstract version."
+    },
+    "Literature/Papers/Entries/Like-minded sources on Facebook are prevalent but not polarizing.md": {
+      "status": "PASS",
+      "source": "https://www.nature.com/articles/s41586-023-06297-w ; https://pmc.ncbi.nlm.nih.gov/articles/PMC10396953/",
+      "source_access": "Primary Nature article and full PMC text are accessible. Checked abstract, descriptive exposure findings, field experiment and its outcomes, authors/date/DOI, and the November 2023 author correction.",
+      "claims_checked": {
+        "abstract": "Exact against Nature’s published abstract. The spelling, sample size (23,377), reduction magnitude (about one-third), feed outcomes, and eight preregistered attitude nulls are correct.",
+        "research_questions": "Questions summarize the descriptive prevalence and field-experiment aims. They do not state the authors’ explicit question form, but are supported by the Abstract and Methods.",
+        "model": "No simulation model is presented; this is a descriptive measurement plus field experiment, so omitting a Model section is appropriate.",
+        "metadata": "Title, DOI 10.1038/s41586-023-06297-w, author order/count (29), and online date 2023-07-27 match Nature. The note’s expanded author names are consistent with names in the source record; accents on González-Bailón are preserved.",
+        "references": "All 49 links exactly match original_frontmatter.refs in order, including unresolved entries. Bibliography completeness is explicitly unverified. The cited author correction accurately says the CIB ‘strikes’ row was removed from Supplementary Table 36; it does not affect any note claim."
+      },
+      "findings": [],
+      "footnotes": "Abstract and RQ footnotes cite the Nature version of record and are accurate. The correction note is supported by https://www.nature.com/articles/s41586-023-06795-x."
+    },
+    "Literature/Papers/Entries/Making and Breaking Parasocial Relationships with Human and Virtual Influencers- An Experience Sampling Study.md": {
+      "status": "PASS",
+      "source": "https://doi.org/10.1080/15213269.2025.2558029 ; https://www.tandfonline.com/doi/full/10.1080/15213269.2025.2558029",
+      "source_access": "Publisher full-text/PDF record is indexed with the complete article text and is open access. Direct fetch by this web reader returned HTTP 403, so checked the indexed publisher full text and PDF text; no Model claims are present. This is sufficient for the abstract, methods, and RQs currently in the note, though direct page-by-page PDF opening was unavailable.",
+      "claims_checked": {
+        "abstract": "Exact against the publisher abstract, including four-week experience sampling, 185 participants, intensity increase in both conditions, similar stage progression, and no between-condition breakup-intensity difference.",
+        "research_questions": "Both are accurate concise paraphrases of the study aim and outcomes; full-text Method confirms the human-versus-virtual between-subject condition and repeated weekly measures across five points.",
+        "model": "No simulation or procedural model is reported; omitting a Model section is appropriate for this empirical experience-sampling experiment.",
+        "metadata": "Title, authors, DOI 10.1080/15213269.2025.2558029, and online publication date 2025-09-21 match the publisher record. The issue publication is Media Psychology 29(5), 952-980 (2026), which the bibliography-provenance footnote already records.",
+        "references": "All 76 links exactly match original_frontmatter.refs in order, including unresolved entries. Completeness is explicitly unverified."
+      },
+      "findings": [],
+      "footnotes": "Abstract/RQ footnotes cite the publisher record and Methods; the RQs do not overstate findings. Indexed publisher full text source: https://www.tandfonline.com/doi/full/10.1080/15213269.2025.2558029."
+    }
+  }
+}

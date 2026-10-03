@@ -1,0 +1,38 @@
+{
+  "audit": "Independent visual audit of Cognitive social structures against complete scanned primary PDF",
+  "date": "2026-09-29",
+  "note": "Literature/Papers/Entries/Cognitive social structures.md",
+  "result": "PASS",
+  "primary_source": "https://www.heinz.cmu.edu/faculty-research/profiles/david-krackhardt/_files/1987-cognitive-social-structures.pdf",
+  "source_access": "Downloaded 26-page scanned PDF; text layer is empty. Rendered and visually inspected all pages, with detailed checks of printed pp.109–119 for abstract, definitions, aggregations, and case; pp.120–128 for remaining case analysis/conclusion; pp.129–132 appendix matrices; and pp.133–134 complete References section.",
+  "verified": [
+    {
+      "claim": "Abstract and representation",
+      "evidence": "Printed p.109 abstract states CSS is an N×N×N structure, proposes slices, Locally Aggregated Structures (LAS), and Consensus Structures (CS), and illustrates all three with a management team at a small manufacturing firm. Printed p.113 defines R_i,j,k as a perceiver k’s report of directed relation i→j and CSS as the N×N×N collection; p.114 says the data are cognitively reported rather than assumed to match objective ties.",
+      "result": "Supported."
+    },
+    {
+      "claim": "Slice and corrected LAS/CS definitions",
+      "evidence": "Printed p.115 §3.1 holds the perceiver dimension constant for a slice. Printed p.116 §3.2 defines row-dominated LAS R′_ij=R_i,j,i and column-dominated LAS R′_ij=R_i,j,j; text says the reports are supplied by dyad members i and j themselves. Printed p.117 gives optional intersection/union combinations. Printed pp.117–118 §3.3 defines CS from the full vector of perceivers and threshold aggregation.",
+      "result": "The note’s dyad-member LAS distinction and all-perceiver CS distinction are correct."
+    },
+    {
+      "claim": "Model scope, analytical use, and case",
+      "evidence": "Printed pp.115–118 describe the three dimensionality-reduction/aggregation approaches and their purposes. Printed p.118 says the example is a small manufacturing organization; 21 managers/respondents completed the questionnaire. Printed p.119 states the example LAS is the intersection of i’s and j’s advice reports and that CS applies a 0.5 threshold across 21 respondents. Printed pp.123–128 compare centrality and agreement patterns across aggregations; p.128 concludes the demonstration is not exhaustive and notes future work must assess the relation between cognition and behavior.",
+      "result": "The note’s description of this as a measurement/aggregation framework, its case summary, and its limitation against general accuracy claims are supported."
+    },
+    {
+      "claim": "Bibliography scope caveat",
+      "evidence": "The scanned article contains a References section on printed pp.133–134. The note lists 54 captured links, including 17 unresolved identifiers, and explicitly says title mapping and completeness have not been verified. It does not claim the captured list is complete or that the unresolved identifiers are absent from the source.",
+      "result": "Caveat is accurate and appropriately limits the note’s bibliography claim. Individual captured titles/order were not reconciled item by item."
+    },
+    {
+      "claim": "Metadata",
+      "evidence": "The scan’s first page gives Social Networks 9 (1987), pp.109–134, author David Krackhardt, and the title. DOI and June issue date were previously checked against publisher metadata in the initial audit.",
+      "result": "No metadata regression found; this visual scan itself does not display DOI or month."
+    }
+  ],
+  "exact_issues": [],
+  "limits": "All pages were visually inspected, but the scan is low-resolution and has no machine-readable text layer. The aggregation equations and case description on pp.113–119 and the source reference list on pp.133–134 were legible at rendered resolution. The 54 captured links were not reconciled individually against the source bibliography, which the note expressly flags. The note retains ⚠️ not audited pending the prescribed workflow update.",
+  "note_edited": false
+}

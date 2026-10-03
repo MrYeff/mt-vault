@@ -1,0 +1,118 @@
+{
+  "task": "presentation-only formatting scan of case-sensitive sorted entries 1-53",
+  "date": "2026-09-30",
+  "inventory": {
+    "markdown_files_in_entries": 80,
+    "scope_count": 53,
+    "index_41": "Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+    "index_53": "RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md"
+  },
+  "guides_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md",
+    "vault/Literature/Papers/Template.md"
+  ],
+  "changed_paths": [
+    {
+      "path": "vault/Literature/Papers/Entries/A Framework for Sequential Planning in Multi-Agent Settings.md",
+      "reason": "Split the I-POMDP explanation into separate model and other-agent-type bullets, retaining the original definitions and source citation."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/A Schelling model with adaptive tolerance.md",
+      "reason": "Separated update rules, algorithm/prose disagreements, treatment details, and omissions into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/A causal test of the strength of weak ties.md",
+      "reason": "Separated treatment, tie-strength timing/classification, job-tie definition, and scope limitation into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Affect control processes- Intelligent affective interaction using a partially observable Markov decision process.md",
+      "reason": "Split the state/observation, transition/reward, action-selection, parameter, and reported-result descriptions into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Agent-Based Modeling to Inform Online Community Design- Impact of Topical Breadth- Message Volume- and Discussion Moderation on Member Commitment and Contribution.md",
+      "reason": "Split model mechanisms, experiment design, reported outcomes, and validation limitations into shorter cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/AgentSociety 2- An Integrated Research Environment for Executable Social Science.md",
+      "reason": "Split benchmark and scale results into concise cited bullets; retained reported values."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/AgentSociety- Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society.md",
+      "reason": "Split platform scope, state/action overview, case-study results, and applicability into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/An Agent-Based Model of Social Identity Dynamics.md",
+      "reason": "Separated population assumptions, asynchronous update rules, treatments, reported findings, and omissions into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md",
+      "reason": "Split study design, intervention variables, classifier analysis, and regression findings into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Bias Reduction in Social Networks Through Agent-Based Simulations.md",
+      "reason": "Split network setup, agent activity, feed-policy, and evaluation details into shorter cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Bounded Confidence Revisited- What We Overlooked- Underestimated- and Got Wrong.md",
+      "reason": "Separated the averaging process, epsilon-switch definition, finiteness qualification, and exact-arithmetic requirement into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Cognitive social structures.md",
+      "reason": "Split the perception-slice, local aggregation, consensus, and measurement-scope description into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Computational Modelling of Trust and Social Relationships.md",
+      "reason": "Split model dynamics and output interpretation into concise cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Construct User Guide.md",
+      "reason": "Split framework/network definitions, synchronous phases, and Standard Interaction Model mechanics into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Exploring Trade-Offs for Online Mental Health Matching- Agent-Based Modeling Study.md",
+      "reason": "Split simulation setup, queue process, alternative policies, validation, reported outcomes, and applicability into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "reason": "Split initialization, dilemma rules, information exchange, choice, and source inconsistencies into concise cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "reason": "Split eligibility rules, treatment settings, unresolved parameter inconsistencies, outcomes, and scope into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/How many hours does it take to make a friend.md",
+      "reason": "Split the two study designs, absence of a simulation model, and publication-date note into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Humanoid Agents- Platform for Simulating Human-like Generative Agents.md",
+      "reason": "Split agent state, daily plan/update, conversation, evaluation, and applicability descriptions into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Individual Motivations and Network Effects.md",
+      "reason": "Split sample/model estimation, predictors, findings, and non-dynamic scope into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Introduction to stochastic actor-based models for network dynamics.md",
+      "reason": "Split tie opportunity rates, actor choice, information assumptions, and applicability into cited bullets."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals.md",
+      "reason": "Split agent inputs, prediction setup, evaluation benchmark, normalized metrics, and reported results into cited bullets."
+    }
+  ],
+  "rescan": {
+    "unbulleted_model_paragraphs_over_230_chars": 0,
+    "individual_model_lines_over_500_chars": 0,
+    "exceptions": []
+  },
+  "preservation": {
+    "abstracts_changed": false,
+    "authors_or_references_changed": false,
+    "warning_flags_changed": false,
+    "model_claims_or_source_locators_added": false,
+    "audit_status_changed": false
+  },
+  "audit_note": "Formatting record only; this does not certify claim accuracy or constitute an audit pass. Existing audit conclusions were not used."
+}

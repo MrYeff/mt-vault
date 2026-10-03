@@ -1,0 +1,1108 @@
+                        Social Simulacra: Creating Populated Prototypes
+                                 for Social Computing Systems
+                   Joon Sung Park                                               Lindsay Popowski                                      Carrie J. Cai
+                  Stanford University                                           Stanford University                               Google Research
+                     Stanford, USA                                                 Stanford, USA                               Mountain View, CA, USA
+                joonspk@stanford.edu                                          popowski@stanford.edu                              cjcai@google.com
+
+            Meredith Ringel Morris                                                    Percy Liang                               Michael S. Bernstein
+                   Google Research                                               Stanford University                              Stanford University
+                   Seattle, WA, USA                                                 Stanford, USA                                    Stanford, USA
+                  merrie@google.com                                            pliang@cs.stanford.edu                             msb@cs.stanford.edu
+
+ABSTRACT                                                                                        KEYWORDS
+Social computing prototypes probe the social behaviors that may                                 social computing, prototyping
+arise in an envisioned system design. This prototyping practice
+is currently limited to recruiting small groups of people. Unfortu-                             ACM Reference Format:
+                                                                                                Joon Sung Park, Lindsay Popowski, Carrie J. Cai, Meredith Ringel Morris,
+nately, many challenges do not arise until a system is populated
+                                                                                                Percy Liang, and Michael S. Bernstein. 2022. Social Simulacra: Creating Pop-
+at a larger scale. Can a designer understand how a social system
+                                                                                                ulated Prototypes for Social Computing Systems. In The 35th Annual ACM
+might behave when populated, and make adjustments to the de-                                    Symposium on User Interface Software and Technology (UIST ’22), October
+sign before the system falls prey to such challenges? We intro-                                 29-November 2, 2022, Bend, OR, USA. ACM, New York, NY, USA, 18 pages.
+duce social simulacra, a prototyping technique that generates a                                 https://doi.org/10.1145/3526113.3545616
+breadth of realistic social interactions that may emerge when a so-
+cial computing system is populated. Social simulacra take as input
+the designer’s description of a community’s design—goal, rules, and                             1    INTRODUCTION
+member personas—and produce as output an instance of that design                                How do we anticipate the interactions that will arise when a social
+with simulated behavior, including posts, replies, and anti-social                              computing system is populated [4, 23]? In social computing, design
+behaviors. We demonstrate that social simulacra shift the behaviors                             decisions such as a community’s goal and rules can give rise to
+that they generate appropriately in response to design changes, and                             dramatic shifts in community norms, newcomer enculturation, and
+that they enable exploration of “what if?” scenarios where commu-                               anti-social behavior [45]. Success requires that the designer make
+nity members or moderators intervene. To power social simulacra,                                informed decisions to shape these socio-technical outcomes. Yet,
+we contribute techniques for prompting a large language model                                   despite decades of progress in research and practice, understanding
+to generate thousands of distinct community members and their                                   the effects of these design decisions remains challenging; as a result,
+social interactions with each other; these techniques are enabled by                            designers are regularly surprised by the behaviors that arise when
+the observation that large language models’ training data already                               their spaces are fully populated.
+includes a wide variety of positive and negative behavior on social                                To design pro-social spaces, designers need prototyping tech-
+media platforms. In evaluations, we show that participants are of-                              niques that enable them to reflect on social behaviors that may
+ten unable to distinguish social simulacra from actual community                                result from their design choices, then iterate [69]. Prototypes in
+behavior and that social computing designers successfully refine                                social computing typically take the form of experience prototypes
+their social computing designs when using social simulacra.                                     where the designer recruits a small group of people to use the
+                                                                                                system [7, 22]. However, there remains a large gap between the
+CCS CONCEPTS                                                                                    behaviors that arise in a small set of test users and the behaviors
+• Human-centered computing → Collaborative and social                                           that arise in a socio-technical system when it is fully populated:
+computing systems and tools.                                                                    for example, anti-social behaviors may not arise within a tight-knit
+                                                                                                group [45]; small homogeneous groups overlook the breadth of
+                                                                                                users or content that may arise in the system [24, 42, 74]; rules
+                                                                                                and moderation strategies may not need to be spelled out explicitly
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed           or enforced [41]. Barring actually launching our systems at scale,
+for profit or commercial advantage and that copies bear this notice and the full citation       designers currently have no way of starting to explore these ques-
+on the first page. Copyrights for components of this work owned by others than the              tions to reflect on the social dynamics of their designs. This need
+author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior specific permission   becomes only more urgent as social computing reckons with the
+and/or a fee. Request permissions from permissions@acm.org.                                     harms it can engender [23] at the same time as designers fashion
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                            new computationally-mediated social spaces in forms both famil-
+© 2022 Copyright held by the owner/author(s). Publication rights licensed to ACM.
+ACM ISBN 978-1-4503-9320-1/22/10. . . $15.00                                                    iar (e.g., a new subreddit or Discord server) and novel (e.g., a new
+https://doi.org/10.1145/3526113.3545616                                                         workspace platform).
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                  J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+   In this paper, we introduce social simulacra, a prototyping tech-       Social simulacra provide opportunities beyond generated behav-
+nique that helps bridge this gap by drawing on large language           ior: they can also enable the designer to understand a multiverse
+models to populate a social computing system with a large set of        of possible outcomes and to test intervention strategies. Socio-
+generated social behaviors. Social simulacra take the design of a       technical outcomes are famously impossible to fully predict [66];
+social space (e.g., goal, rules, personas) as input, and generate a     for example, instead of a troll, Maya’s post might be replied to by
+large number of users and textual interactions between those users      another struggling author (“I’m currently going through the same
+to populate the space as output. Their aim is to help the designer      thing with my UIST paper. But I hope that it will get better”) or even
+see beyond the social interactions that they intend their design to     a hustler (“I’m a published author and I know the feeling. I’ve been
+produce, to instead envision a wider range of interactions that the     there. I offer a 1-on-1 coaching service to help you get unstuck and
+design may produce—whether pro- or anti-social—based on the             make progress on your writing goals. Click the link below to learn
+behavior that arises in similar online social spaces.                   more.”). Rather than making a single point prediction, social simu-
+   We contribute techniques for prompting a large language model        lacra can surface a larger space of possible outcomes and enable the
+to create social simulacra. To achieve this, we draw on the insight     designer to explore how design changes might shift them. Likewise,
+that large language models already capture a large variety of social    social simulacra allow a designer to explore “what if?” scenarios
+behaviors in their training data. To generate these behaviors ap-       where they probe how a thread might react if they engaged in a
+propriately and reliably, we introduce prompt chains [80, 81] using     moderation action or replied to one of the comments.
+GPT-3, a large language model [6], that (1) generate a large number         We conduct two evaluations of social simulacra: 1) a technical
+of member personas based on a set of seed personas provided by          evaluation to test whether they produce believable social behaviors
+the designer, then (2) generate from this large set of personas a       on a breadth of previously unseen communities, and 2) a study of
+set of posts and replies that reflect the goals, rules, and moderator   16 social computing designers to understand whether simulacra
+interventions set by the designer. We manifest these techniques in      provide meaningful insights to the designers. In the technical eval-
+SimReddit, a prototyping tool we have created for a Reddit commu-       uation, we sampled 50 subreddits created after the release of GPT-3
+nity (subreddit).                                                       and re-generated them from scratch using only their community
+   Imagine a designer who is creating a new online community, a         goal and rules as input. We then showed participants pairs of one
+Reddit subreddit [11, 17, 57] for a community goal of “helping UIST     real and one generated conversation from each community, and
+authors to stay productive and creative”, and who wants to explore      asked them to identify the real one. Participants performed nearly
+what topics and behaviors might emerge in such a community.             at chance accuracy, misidentifying on average 41% (std=10) of pairs,
+They provide this natural language description of the community         suggesting that social simulacra can create plausible content. In
+goal and a few example member personas as input, and produce a          our designer evaluation, we recruited social computing designers
+social simulacrum that generates thousands of synthetic users and       (N=16) to create and iterate on a new subreddit design that they
+interactions between them, such as this post by Maya Smith, “a new      wanted to create. Even seasoned designers found it overwhelming
+Ph.D. student who is working on a UIST paper” (This font is used for    to envision the possible interactions that could take place in their
+text generated by our system):                                          design, and as a consequence, were in the practice of waiting until
+       I’ve been working on my UIST paper for a few weeks               problems emerged and their communities were damaged to add
+       and I’m feeling really stuck. I’m not sure if my research        rules and interventions. With social simulacra, participants iden-
+       question is interesting enough, or if my approach is the         tified positive use-cases they had not considered (e.g., impromptu
+       right one. Has anyone else gone through this feeling             friend-seeking to go sightseeing in a community for sharing fun
+       before? Does it get better?                                      events around Pittsburgh) and negative behaviors that they had not
+                                                                        accounted for (e.g., Russian trolls shifting the tone of an interna-
+And a response by another synthetic user named Heather Hernan-          tional affairs discussion community). This inspired them to iterate
+dez, “an HCI professor”:                                                on their design by covering more important edge cases in their
+       It’s normal to feel stuck when writing a paper. The best         rules, as well as better scoping and communicating the cultural
+       thing to do is to take a break and come back to it with a        norms in their community goal statement.
+       fresh perspective. Sometimes, it helps to talk to some-              Social simulacra do not aim to predict what is absolutely going
+       one else about your research to get some feedback.               to happen in the future – like many early prototyping techniques,
+       Good luck!                                                       perfect resemblance to reality is not the goal. No model, present
+A troll then interjects:                                                or future, can perfectly capture the nuance and complexity of hu-
+                                                                        man behaviors [66]. However, social simulacra offer designers a
+       You’re just not cut out for this kind of research. Maybe         tool for testing their intuitions about the breadth of possible social
+       you should consider a different field altogether.                behaviors that may populate their community, from model citizen
+The designer, armed with this example and others, iterates by cre-      behaviors to various edge cases that ultimately become the cracks
+ating community rules that make clear an injunctive norm to be          that collapse a community. In so doing, social simulacra, such as
+encouraging in feedback and keep any critiques focused on the           those that we have explored here, expand the role of experience
+writing rather than the person. In response, the simulacrum no          prototypes for social computing systems and the set of tools avail-
+longer generates nearly as many such troll posts, enabling the de-      able for designing social interactions, which inspired the original
+signer to explore other forms of antisocial behavior or norms they      conceptualization of wicked problems [64].
+hope to shape in their community.
+Social Simulacra                                                                                   UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+Content Warning: Please be advised that some of the example                hate speech [15], inflammatory comments [12], and other “undesir-
+social media content in this paper contains offensive language.            able” behaviors [9, 10, 14, 55, 72] can (and will) arise as well, causing
+                                                                           designs to not only become ineffective [45], but also harmful both
+2     RELATED WORK                                                         to the individuals [2, 77] and collectives [13] involved.
+                                                                              Techniques for mitigating these issues by prototyping social
+Our work on social simulacra builds upon prior research in proto-          computing systems remain elusive. A core prototyping goal for
+typing practices in HCI and social computing, as well as generative        social computing systems is to understand how a social system will
+AI models.                                                                 behave when it is populated, long before people actually inhabit the
+                                                                           space. But populating social computing systems, particularly for
+2.1     Prototyping in Design Practice                                     those that are designed to support interactions of a large number of
+What is a prototype, and what are its goals? Beaudouin-Lafon and           people, is often an insurmountable, though necessary, challenge be-
+Mackay define a prototype in HCI as “a concrete representation             cause the emergent behaviors at cold start are different than those
+of part or all of an interactive system” [3]. As opposed to a verbal       when the space hits critical mass [4]. As theorized by Grudin [23],
+description that needs to be interpreted by the readers, a prototype       organically reaching the critical mass of users necessary to study
+presents itself as a tangible and interactive artifact that forces the     the system is hard for most because many of the social comput-
+designers to show how the interaction may unfold [3, 64, 69]. A            ing systems are not useful enough to attract users when there is
+prototype, however, does not need to be perfect or high-fidelity           only a small user population, a problem shared by other interactive
+to be successful. Rather, its aim is to be a flexible artifact that        media [52]. While one may be able to recruit test users through
+is quick and easy to make so that even a non-programmer can                online social media or crowdworking platforms to bootstrap the
+rapidly iterate and answer focused design questions. For instance,         system’s usage and apply strategies such as piggyback prototyping
+a prototype for exploring the flow of interaction could simply be          that utilize existing tools such as Google Docs, text messaging, and
+hand-drawn illustrations of the interface (i.e., a paper prototype) [63,   email in place of a bespoke system [22], getting users to actually
+70, 71], while a prototype of a conversational agent for observing         participate remains challenging. A system that already has a large
+possible conversations between a user and the agent could place a          user population (e.g., Facebook, Twitter) might be able to prototype
+human interlocutor behind the chatbot interface (i.e., a wizard of oz      new features via A/B testing or country comparisons [43, 76, 83],
+prototype) [39, 40]. In some cases, even a brick or a block of wood        but their viability is limited to only a small number of large plat-
+can be used as a prototype for a hand-held hardware device so long         forms, and mostly for minor tweaks on the design after the platform
+as it represents the portion of reality that is central to answering       has launched. Finally, these approaches generally expose untested
+the design question at hand [3, 33].                                       designs to real users who might even be oblivious to the running
+   Ultimately, a successful prototype fuels an effective design pro-       of the prototyping experiments, doing harm to users and eroding
+cess [3, 64]. It augments a designer’s creativity by capturing ideas,      their trust of the platform [18, 19, 25, 44].
+assisting in the exploration of a design space [30], and bringing             As Grevet and Gilbert observed, the number of prototyping
+to the foreground important information about the users and uses           contributions is 20 times smaller in the social computing literature
+of the system that is being designed. It inspires more active com-         than the broader HCI literature [22]. Social simulacra offer a general
+munication between the stakeholders of the system, such as the             technique to address this scarcity of prototyping techniques in
+designers, engineers, and users. And finally, it makes possible early      social computing design, in particular focused on the generation
+evaluations of the system by presenting concrete implementations           of content and replies that might arise in the system, enabling the
+of a design idea that can be tested against benchmarks [3], or used        designer to reflect on the designs their behaviors are prepared to
+as a probe in a qualitative evaluation [20] to elicit guidelines for       handle. We argue that without such means, we will continue to risk
+future design improvements [22].                                           releasing systems that are susceptible to unexpected failures.
+   Prototyping tools help the designer fashion an approximation of
+the envisioned artifact on the assumption that the materialized ver-       2.3    Large Language Models and Human
+sion prompts reflection and insight [69]. In typical interactive sce-
+narios, this includes making low-fidelity prototypes interactive [46],
+                                                                                  Behaviors
+helping explore alternatives [29, 51, 54], or decreasing prototype         Our approach leverages large language models, a class of generative
+development time [16, 27, 28, 67]. Social simulacra draw most from         AI models. Such language models often take in a prompt and gen-
+prototyping tools that help proxy for user behavior [8, 82].               erate a completion. GPT-3 [6], which is the model of focus in this
+                                                                           paper, is one instantiation of this model class. Large language mod-
+                                                                           els can effectively perform a wide range of NLP tasks [5] such as
+2.2     Challenges of Prototyping Social                                   language understanding [6, 32, 60, 78], text classification [36, 50, 86],
+        Computing Systems                                                  and generation [59, 68] without the need for fine-tuning. Further-
+In prototyping social systems, the designer must envision not only         more, prompt design can better elicit the desired model behav-
+a single user’s activities, but a wide range of participants and how       ior [36, 37, 49].
+those participants’ behaviors might influence each other. Such dy-            Social simulacra draw on the observation that these models have
+namics vary widely and introduce many edge cases [73] that the de-         been trained on web data that includes a large corpus of social
+signer of a social computing system often struggles to anticipate and      media behavior [6]. So, large language models trained on a user’s
+prepare for [1, 23]. Anti-social behaviors such as trolling [26, 38],      chat history can predict the user’s future responses with some
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                      J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+accuracy [47, 79], generate realistic action plans that an embodied        algorithm, could feasibly be prototyped by social simulacra but are
+agent might take [34], or elicit a large variety of commonsense            outside the scope of our current system.
+reasoning [48]. Capturing social media behavior creates problematic
+outcomes where the large language model may generate harmful
+outputs [21]. For social simulacra, this ability to replicate troll
+behavior is a feature, not a bug; it allows simulacra to generate          3.2    GENERATE: Generating Social Behaviors
+anti-social behaviors so that designers can reflect on whether their       Social computing designers struggle to envision the breadth of in-
+design is prepared to handle such behavior.                                teractions that their design might facilitate [4, 23]. Generate is the
+                                                                           core feature of our system, and assists the designers by populating
+3     SOCIAL SIMULACRA AND SIMREDDIT                                       a subreddit community with generated users, top-level posts, and
+                                                                           replies to those posts to help them envision the space. SimReddit
+Social simulacra leverage large language models to populate a social
+                                                                           allows the designers to submit the goal, rules, and target population
+computing system with plausible social behaviors. Their aim, like
+                                                                           of the community they are designing, which collectively affect the
+many early prototyping techniques, is to translate a draft design into
+                                                                           interactions that will populate the community.
+a concrete artifact that can help the designers iteratively explore and
+                                                                              Target population: a set of user personas that the designer en-
+reflect on a larger design space. This introduces a new opportunity
+                                                                           visions will populate the system. Personas contain a name and a
+in early prototyping of social computing systems, long out of reach
+                                                                           simple descriptive phrase (e.g., "Yuna Kim" is “a tennis fan rooting
+given the difficulty to recruit a critical mass of users beyond just a
+                                                                           for Roger Federer”, "Jack Kane" is “a struggling musician and a
+few [23]. However, they introduce a new risk of possibly generating
+                                                                           troll”), and affect the topics and behaviors of the generated users at
+behaviors so detached from what might happen that they are not
+                                                                           an individual level (the full names can also be replaced with other
+meaningful to the questions the designer wants to explore.
+                                                                           forms of usernames if our designers want). For instance, in one
+   In this section, we present SimReddit, a web-based prototyping
+                                                                           generation, the “Yuna Kim” persona generated the post, “Roger lost
+tool to help designers create a new subreddit. We take the term
+                                                                           the game last night but it was still such an amazing game...”, while
+designer here to refer to whoever creates and shapes the community
+                                                                           “Jack Kane” generated, “So the Grammy’s are rigged, right?” A large
+structures, which, depending on the community and context, can
+                                                                           and diverse set of personas is important for surfacing how different
+include platform designers, moderators, or community organizers.
+                                                                           personas might interact with each other, as well as their differing
+SimReddit represents a practical implementation of social simu-
+                                                                           intentions within the space. However, manually crafting hundreds
+lacra that aims to help the subreddit designers envision how their
+                                                                           of personas can be labor intensive. With SimReddit, our designers
+space might behave when populated by generating users and their
+                                                                           need to provide only a handful (10, by default) of example personas,
+interactions via GPT-3. We use this system to illustrate the design
+                                                                           and SimReddit uses these seed personas to generate a large num-
+opportunities for juggling the new trade-off that social simulacra
+                                                                           ber of new personas (1,000, by default) that are non-repeating but
+offer and to evaluate their efficacy in practice. Concretely, Sim-
+                                                                           thematically relevant. For example, given designer-provided per-
+Reddit highlights three key features that each represent a design
+                                                                           sonas with outdoor interests such as “bird-watching,” and “hiking,”
+opportunity for social simulacra. Generate focuses on the ability
+                                                                           SimReddit generates ones with interests in “camping,” and “fishing.”
+to generate diverse user personas and interactions. WhatIf demon-
+                                                                              Community goal: a descriptive phrase for the purpose of the
+strates how simulacra can enable designers to explore the effects
+                                                                           social space, for example “modern art aficionados discussing their
+that their interventions, like design changes or replies, may have. Fi-
+                                                                           art interest” or “social commentary and politics.” The community
+nally, Multiverse orients the designer to the inherent uncertainty
+                                                                           goal affects the topic of all generated content. For instance, given the
+of social systems by demonstrating multiple possible outcomes.
+                                                                           community goal about discussing modern art, SimReddit generated
+                                                                           the following post by Jane Emerson, “a fan of Banksy’s art”: “Just
+3.1     System Context                                                     saw an Original Banksy in London’s Waterloo station. OMG! I am so
+Reddit is a popular social networking platform with over 50 million        in love with his art! Hilarious and thought provoking. A true artist!!!”
+daily active users as of 2021, composed of over 100 thousand sub-          But given the same persona, when given the community goal about
+communities called subreddits that inherit a basic set of affordances      social commentary and politics, SimReddit generated the following:
+such as sharing top-level posts and replying to them from the              “Why I like Banksy: His work provokes thought and debate – very
+broader Reddit platform [62]. However, the designers of subreddits         relevant in our climate-of-fear society. Banksy makes people think
+are tasked with making various design choices that differentiate           and question the world around them”
+their communities from others. They need to define the community              Rules: behaviors that are either prescriptive (e.g., “be kind”) or
+goal (e.g., “This is the place for most things Pokémon on Reddit,” “for    restrictive (e.g., “do not post advertisements”). The focus on these
+news about U.S. politics”) and rules (e.g., “Be civil,” “No soliciting”)   types of rules was motivated by prior work performing thematic
+that are explicitly stated in subreddits’ interface, and to determine      analysis of subreddit rules [17]. Like in the real world, SimReddit
+the more implicit policies such as the desired target population (e.g.,    does not enforce that all generated users follow all rules precisely.
+“Pokémon fan,” “politics enthusiasts”) and moderation strategies           Instead, these rules are better interpreted as nudges that would
+at the level of a conversation (e.g., should a moderator intervene         encourage the generated behaviors to trend in the intended direc-
+to cool down a conflict). These elements contribute to shaping the         tion of the designer. For instance, where SimReddit generated “You
+social interactions in the community [11, 17, 53]. The elements that       are totally wrong, impressionist painters are a bunch of melancholic
+cannot be changed by a designer of a subreddit, such as the feed           idiots” for a comment authored by “a bully and a troll,” with the rule,
+Social Simulacra                                                                                 UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+
+
+Figure 1: A) The generated content page of SimReddit styled after that of a subreddit. B) The “About Community” panel
+describing the goal of the community. C) The “Community Rules” panel describing the rules that the members are encouraged
+to follow. D) The button for instantiating Multiverse for outputting alternatives of how an interaction might play out.
+
+
+                                                                            Once a design is submitted, SimReddit returns a populated in-
+                                                                         terface that resembles a subreddit page (shown in Figure 1). The
+                                                                         content on the page embodies the design specifications provided.
+
+
+
+                                                                         3.2.1 Motivating scenario. Sam wants to start a new subreddit
+                                                                         where UIST authors could encourage each other as they try to
+                                                                         meet the paper deadline. But she is unsure what the community
+                                                                         goal or rules should be. She looks at other subreddits to see if
+                                                                         there are similar ones that she can replicate, but finds none exactly
+                                                                         like the one she wants to build. That is expected; after all, Sam
+                                                                         wanted to build a new subreddit because she could not find what
+                                                                         she envisioned.
+                                                                            So Sam instantiates Generate with the community goal, “a place
+                                                                         for UIST warriors” and example member personas such as "Audrey
+                                                                         Tang, a PhD student in HCI who is rushing to finish writing her UIST
+                                                                         paper". For now, she adds no rules. When she runs her generation,
+                                                                         Sam is surprised to find posts that are not only about meeting the
+                                                                         deadline (which is what she wanted), but also about discussing the
+                                                                         conference location and non-paper related logistics. She realizes
+                                                                         that her description of the community goal, "UIST warriors," was too
+                                                                         broad and invited content that is not about the impending deadline.
+                                                                         She refines her community goal to be “a place for UIST warriors to
+                                                                         support each other as they finish writing their papers” and reruns
+Figure 2: A) The interface of an example subreddit. B) A
+                                                                         the generation. She now sees that the discussions are much more
+close up of the “About Community” panel. The content on
+                                                                         focused. However, Sam now recognizes two more challenges; some
+this panel defines the goal and the target population of the
+                                                                         generated users were sharing posts that might be demotivating
+community. C) A close up of the “Rules” panel. The content
+                                                                         for others (e.g., "yay!! i just finished writing THREE papers!"), while
+in this panel defines the rules within the community.
+                                                                         some were making trolling comments ("Wow, it sounds like you’re
+                                                                         really struggling! I can’t believe you’re still working on your paper.").
+                                                                         So she further refines her design by adding restrictive rules that ask
+“be kind,” it generated “I don’t like impressionist painters too much.   people to refrain from announcing that they submitted as others
+But I get why you might like them” for the same persona.                 may still be working, and to be kind to each other.
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                 J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+
+
+Figure 3: Examples of conversations produced by SimReddit’s Generate. The community goals and rules are from the participants
+in our Designer Evaluation. The conversations here were among those we presented to the respective participants.
+
+
+   The resulting community that SimReddit generates reflects one       different types of moderator interventions. Whereas Generate
+that Sam wanted to build. There are still some trollish behaviors      allows a designer to explore the global design specifications that in-
+left, but Sam comes to recognize that rules are never enough to stop   fluence all behaviors in the community, WhatIf helps them explore
+dedicated trolls and that she will have to moderate the community.     how individual conversations might be influenced. It does this by
+Sam decides to push forward with this final design of the community    showing them how an existing conversation could have developed
+and launches a new subreddit with the community goal and rules         if someone else had responded or intervened. For instance, if a troll
+that she used in her last generation. She then advertises her new      hijacked a conversation, how would it get derailed and how can
+community to CHI Meta group on Facebook.                               the designer prepare for such scenarios?
+                                                                           In SimReddit’s interface, the designer can instantiate WhatIf
+                                                                       by choosing an utterance in either a generated conversation (Fig-
+3.3     WHATIF: Exploring Alternative Scenarios                        ure 4) or a manually seeded conversation as an input. Imagine
+How might we give designers more interactive control over the          that a designer wanted to observe how a troll might respond to
+simulacra? Such controls might allow the designer to explore how       the following post: “I want to get better at drawing. What do I need
+a scenario might change if a different persona replied, or roleplay
+Social Simulacra                                                                               UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+
+
+           Figure 4: The Interface for instantiating WhatIf. The designer can select an utterance to initiate the feature.
+
+
+                                                                       might then generate responses in which Tim might back down (e.g.,
+                                                                       “Sorry, I may have been too harsh”) or escalate (e.g., “That’s offen-
+                                                                       sive? Then why don’t you kick me out already? I’d like to see you do
+                                                                       it LOL”), and again show the results in a new window.
+
+                                                                       3.3.1 Motivating scenario. Ash designed a subreddit where people
+                                                                       can share poems they wrote and receive constructive feedback. But
+                                                                       what should count as constructive and therefore be encouraged?
+                                                                       Ash decides to explore this question by asking how different per-
+                                                                       sonas may respond to the following post: "My poem’s about love,
+                                                                       and it’s called ’Love Conquers All.’ Here it is!" So using SimRed-
+                                                                       dit’s WhatIf, Ash generates how three different personas might
+                                                                       respond. First, an overzealous member noted, "A good poem about
+                                                                       love should have a title that reflects the subject matter more accu-
+                                                                       rately, for example ’Love is the Answer,’ or ’Love is Painful.’ I would
+                                                                       also recommend using a different structure, rhyming scheme, and
+                                                                       language. Overall, it needs more work." A thoughtful editor shared,
+                                                                       "I really like your poem, but I think the title is a bit misleading. Love
+                                                                       doesn’t always conquer all, and I think your poem reflects that. I think
+                                                                       a more accurate title would be ’Love Endures." And finally a troll
+                                                                       commented, "Love doesn’t conquer all, it’s just a feeling. You’re a
+                                                                       terrible poet."
+                                                                          After reading the generations, Ash found the thoughtful editor’s
+                                                                       feedback to be particularly helpful whereas the overly zealous mem-
+                                                                       ber’s feedback was overwhelming and troll’s was simply hurtful. He
+Figure 5: WhatIf can surface how a conversation might have             feels like focusing on one or two most important points was central
+developed if someone else (e.g., a troll) had responded or             to the thoughtful editor’s success. So he modifies the rules to reflect
+intervened (e.g., a moderator).                                        these observations so that people give a few pieces of focused feed-
+                                                                       back and develops a moderation guideline that asks moderators
+                                                                       to be vigilant against trollish comments. Finally, he runs Gener-
+to do?” The designer would instantiate a WhatIf generation and         ate that reflects his improved design to find that the generated
+specify that “a troll” responded to this post. This opens up a new     community aligns well with his vision for the community.
+window populated with the conversation re-generated as specified
+by the designer’s request. In one generation, SimReddit produced
+the following response by Tim Jackson, who is a troll: “All you need
+                                                                       3.4    MULTIVERSE: Exploring Alternate
+to do is buy a how-to-draw book and follow the instructions. If you           Possibilities
+can’t, then you’re just not meant to be an artist.”                    The aim of social simulacra is not to make a single point prediction
+   With WhatIf, the designer can also explore how an interven-         on what will happen in a social space, but rather to provide inductive
+tion might succeed or fail. For example, they might specify that a     insights on what could happen. Multiverse makes this intent
+moderator responded and provide the content of the moderator’s         explicit; it denotes the process of leveraging the probabilistic nature
+comment, e.g., “Such comments could be really hurtful, even if you     of the underlying model to output multiple alternatives of how an
+did not mean it. Let’s all try to be kind and supportive.” SimReddit   interaction might play out in order to help the designer understand
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                    J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+
+
+Figure 6: An illustration of conversations generated through Multiverse for a community for "connecting people moving to Los
+Angeles with locals." The orange lines show how a conversation could have progressed originally.
+
+
+the broader space of possibilities. Unlike the first two features,        did not have to iterate any further. But to make her confidence
+Multiverse is not a function in and of itself; rather, it is a strategy   more robust, Alex used the Multiverse feature of SimReddit to
+to be used in conjunction with Generate and WhatIf.                       re-generate the community. To Alex’s surprise, she found that some
+   The designer can instantiate a Multiverse that is community- or        members were bitterly arguing about what team deserves the Stan-
+conversation-wide. A community-wide Multiverse is instantiated            ley Cup the most, while others went off the rails to talk about why
+by pressing a “re-generate” button presented on the right-hand            they do not like sports in general. Alex realized that the generation
+side of the generated content page (Figure 1). This generates a           had randomness, and that she should explore more to be better
+whole new iteration of how a community might turn out given               prepared for any potential failures in her design.
+the same community design by resampling different combinations
+of personas to converse. The designers can then toggle back and           4     CREATING SIMULACRA USING A LARGE
+forth between any of the generated communities in the multiverse                LANGUAGE MODEL
+to inspect their differences. An utterance-specific Multiverse is
+                                                                          The interactions of SimReddit as described above are powered by
+instantiated through the same interface as WhatIf (Figure 4). This
+                                                                          techniques that control generation from a large language model. In
+generates many alternate paths that a given conversation could
+                                                                          this section, we describe the model and techniques that power our
+have taken by repeatedly re-generating a conversation thread from
+                                                                          implementation of social simulacra.
+the point of the chosen utterance. For instance, consider Suha Has-
+san, a “liberal voter who voted for Hillary Clinton in the presidential
+election,” who responded to a post that asked for why people voted
+                                                                          4.1    Modeling Assumptions
+for who they voted for. Multiverse shows various ways Suha could          Social simulacra make two assumptions about the model used for
+have plausibly responded (e.g., “You can’t vote for Trump though...”      their generations: first, the model needs to be able to generate con-
+and “Clinton definitely had better policies.”).                           tent in the modality relevant to the design space of the system
+                                                                          (e.g., text), and second, it must encode enough knowledge about
+3.4.1 Motivating scenario. Alex used SimReddit to generate a sub-         the world and people so that it can generate content relevant to the
+reddit for people to discuss their favorite hockey teams. As she          design questions that the designer wants to answer. Large language
+was starting her design process, Alex set a broad goal, “a group          models such as GPT-3 are one form of generative model encoding
+for discussing anything hockey” and did not specify any rules that        enough richness to support these assumptions. GPT-3 takes a natu-
+she wanted the community members to follow. However, upon                 ral language prompt as an input and outputs a completion. Even
+studying the generation, Alex realized that all conversations that        without fine-tuning, GPT-3 exhibits generative capabilities such as
+took place were on-topic, and civil. This made Alex wonder if her         the following example. Given a simple prompt,
+design is good enough to be deployed in the real-world and she                  Write an original social media post:
+Social Simulacra                                                                                                  UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+GPT-3 outputs responses such as “I’m considering a career in web de-                      Given this, GPT-3 returns additional lines, each of which contains
+velopment. What are the pros and cons?” and “Looking for a fun and                        a new persona that resembles those in the input prompt in seman-
+unique way to celebrate your next birthday? Why not try a birthday                        tically meaningful manner. For instance, given the prompt above,
+photoshoot!”                                                                              GPT-3 returned personas such as “Leo Yamamura, pursuing a doctor-
+   However, a compelling social media thread is more complex                              ate in international relations with a focus on international economics,”
+than what can be generated with GPT-3 using a barebones prompt.                           and “Maddie Green, IR professor at a state university."
+For instance, if we were to generate many posts with the prompt
+above, we would mostly see generic life-update posts or online                            4.2.2 Generate – Step 2: Generate top-level posts. Current large
+advertisements. But, subreddit threads are structured with top-                           language models such as GPT-3 have a strict character limit to
+level posts that introduce a topic relevant to the community, and                         their input. We must navigate this constraint while embedding the
+replies engage in discussion on the topic while (typically) adhering                      community goal, rules, personas, and headline-like structure in
+to the community rules. Moreover, participants need to maintain                           ways that can be readily picked up on by the large language model.
+consistent yet diverse personas. Embedding these characteristics in                       We also need to know when the comment generation has ended:
+the generated content is critical to creating useful design tools.                        this is often non-obvious, because the language model continues
+                                                                                          to generate tokens well after the intended comment has finished.
+                                                                                          To address these challenges, we leverage the natural language de-
+4.2     Prompting Techniques
+                                                                                          scription of the community and personas, as well as the semantic
+We describe how we incorporated the community description and                             richness of HTML tags that GPT-3 experiences in its training data.
+personas into prompt chains [80, 81] in the context of implementing                       For instance, our prompt for generating a post from “Layla Li” in a
+SimReddit using GPT-3. We start by describing our prompting tech-                         community for “sharing your psychotherapy stories and questions”
+nique for generating a subreddit thread, which backs the Generate                         would look as follows (the bolded texts of the prompt are a part of
+feature of SimReddit. We then explain how this can be extended to                         the prompt template):
+implement SimReddit’s WhatIf and Multiverse.
+
+4.2.1 Generate – Step 1. Expand on personas. To create diverse                                 Layla Li is a college student studying to be a
+behaviors, we embed user personas into the model prompt. These                                 social worker. She shares comments that are not
+personas describe interests (e.g., hobbies, jobs) and personality                              encouraging suicide, not anti-therapy, not
+traits (e.g., kind, bully) in natural language.1 The designers are                             trolling, not incivility, not self-marketing.
+asked to provide SimReddit with only a handful of personas, ten by
+default. This decreases the burden on the designers, but a generation                          Layla posted the following headline to an
+requires a large collective of personas to ensure diversity in its                             online forum for sharing your psychotherapy
+content. So as the first step, we take the personas that our users                             stories and questions: <span
+provided and generate a large number of new ones, one thousand                                 class="headline_reddit" title="comment that
+by default, that thematically match those provided. To achieve this,                           is about psychotherapy, and NOT encouraging
+we provide the designer-authored personas to GPT-3 and ask it to                               suicide, NOT anti-therapy">
+generate additional ones using a few-shot prompt. For instance,                              The first paragraph of the prompt describes Layla Li and the com-
+we used the following list of personas our participant provided to                        munity rules (“not encouraging suicide, not anti-therapy”) in which
+generate new personas for populating a subreddit for “discussing                          she is posting. The second paragraph then suggests that Layla is
+of all events surrounding International Affairs”:                                         posting a headline to the community, followed by an HTML <span>
+      Michael Ross, works as a foreign diplomat                                           tag with class of headline_reddit, and the title that describes the
+      Luis Almerado, PhD student in international                                         topic as well as the rules of the community. This further reinforces,
+      relations                                                                           through repetition, the model’s behavior to ensure that it produces
+      John Gordon, worker in the foreign affairs                                          content that appears like a subreddit post that might appear in
+      department                                                                          this community. Given the prompt above, GPT-3 generates the fol-
+      of the US government                                                                lowing: “My experience with therapy has been amazing and I would
+      Joe Hawkins, travels often                                                          encourage everyone to give it a try!</span>” Because we are using a
+      Harry Chang, international relations professor                                      <span> tag to encapsulate the comment that is being generated, we
+      Catherine Xiao, political science major in college                                  stop the generation when GPT-3 produces the closure tag </span>:
+      Laney Kumar, foreign policy expert for a newspaper                                  following HTML convenstions, </span> signals that the comment
+      Laura Wilson, planning to go to college in an                                       block has finished.
+      IR-related discipline
+      Ali Samarneh, interest in foreign policy                                            4.2.3 Generate – Step 3: Generate replies. For every post, we itera-
+      Sam Thompson, international affairs student in                                      tively generate replies to it. To ensure that the length of a conversa-
+      college                                                                             tion varies as it does in real subreddits, we pick a reply probability
+                                                                                          𝑝 for each thread from 𝑟 ∈ 𝑁 (.65, 𝑠𝑡𝑑𝑒𝑣) and iteratively generate
+1 Our model is able to accept gender and race information for user personas but our
+                                                                                          an additional reply with a coin flip with probability 𝑝. Additionally,
+interface does not support this use, as per recent literature on personas that suggests   we stop the process if the length of the conversation has reached
+using behavioral rather than demographic personas to avoid stereotyping [84].             more than 8 replies to make sure that a conversation is not too
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                    J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+long for the designers to consume. When creating a new comment,           4.3    GPT-3 Settings
+we select a new persona at the rate of 50%, or choose one who             The GPT-3 API provides tunable parameters such as the model
+has already participated in the conversation otherwise (unless the        engine and the degree of randomness. For all our study, we used the
+persona contributed the latest utterance). Finally, we slightly mod-      davinci engine, which was initially released on June 11, 2020. Since
+ify the prompt above to offer the prior conversation as a part of         then, new variants of the davinci engines were also made available.
+the context, as well as the persona of the new participant. Because       Because these models became available after the start of our study,
+GPT-3 has a limit to how long the input prompt can be, we truncate        we used the base davinci engine. This model does not know world
+from the first post if we run out of space in the input prompt. An        events that has happened around or after this date, such as the
+example prompt in which “Tom Cheng” replies to Layla Li’s post            COVID-19 pandemic. When prompted with “Q: What is COVID-
+above is as follows:                                                      19,” the model returned, “COVID-19 is the 19th Amendment to the
+     Current responder:                                                   Constitution of the Federated States of Brazil”). We used the default
+     [Tom Cheng] is a recovering addict who likes to                      settings except for the increase in temperature when implementing
+     spot bad therapists. He shares comments that are                     Multiverse.
+     not encouraging suicide, not anti-therapy, not
+     trolling, not incivility, not self-marketing.
+                                                                          5     TECHNICAL EVALUATION
+     The following thread was posted on online social                     Social simulacra aim to demonstrate relevant and plausible sce-
+     media for sharing your psychotherapy stories and                     narios that can inspire the designer to reflect and iterate on their
+     questions.                                                           social computing design. So what would signal social simulacra’s
+     Thread:                                                              success? First, the topics and behaviors that arise in the generations
+     [Layla Li]: <span class="comment">                                   need to match well enough with what might actually happen if the
+     "Antidepressants made me so unhappy that I                           design of the social system were deployed. Completely generic or
+     wanted to die without them."</span>                                  irrelevant generations would benefit the designers no more than
+     [Tom Cheng]: <span class="comment                                    Lorem Ipsum. Second, social simulacra need to be able to inspire
+     max_200_words" title="comment that is NOT                            the designers to reflect and make well-reasoned improvements to
+     encouraging suicide, NOT anti-therapy, NOT                           their designs. Does observing these generations help the designers
+     trolling, NOT incivility, NOT self-marketing">"                      make their ideas more concrete, and anticipate topics and behaviors
+   The first paragraph of this prompt is intentionally similar in         they were not expecting otherwise? Does it aid in their iterative
+form to the first paragraph of the one above, describing Tom and          design process that makes their design a better facilitator of their
+reiterating the community rules. Given this prompt, GPT-3 gen-            community?
+erated the following reply: “I’m sorry to hear that you felt that way.       We evaluate social simulacra in two stages to match the criteria
+I think it can be really helpful for people who are struggling with de-   above. First, in this section, we validate the realism of SimRed-
+pression."</span>”                                                        dit’s outputs by repopulating 50 subreddits that were created after
+                                                                          the GPT-3 model was trained and test whether participants can
+4.2.4 WhatIf. We leverage the prompting technique described for           distinguish real conversations in those subreddits from the con-
+generating replies to inject a new persona in a conversation to           versations generated by SimReddit. Then, in the next section, we
+explore “what if” scenarios. However, we alter the persona of the         investigate SimReddit’s impact on the designer’s process via a study
+current replier to match the designer’s request. For instance, if the     where social computing designers use SimReddit to design a new
+designer wanted to see what a troll might have said in response to        subreddit.
+Layla Li’s comment above, we would replace Tom Cheng’s persona
+in the prompt with the following:
+     [Troll] shares trolling comments.                                    5.1    Evaluation Subreddits
+     ...                                                                  We often prototype in unexplored contexts. Given this, we sampled
+     [Troll]: <span class="comment max_200_words"                         50 subreddits created on or after GPT-3’s release date as our eval-
+     title="comment that is trolling">"                                   uation subreddits to ensure that the model cannot simply repeat
+For this prompt, GPT-3 generated the following reply: “Antidepres-        what it has seen in its training data. We used frontpagemetrics.com,
+sants are the work of the devil and anyone who takes them is a pa-        which documents all subreddits’ date of creation and number of
+thetic coward."</span>” We also used this prompt chain to ask how         current subscribers, to inspect the top five largest subreddits cre-
+this troll may respond to a moderator’s intervention.                     ated on each date starting from June 11, 2020. As GPT-3 operates
+                                                                          in English text, we chose only the subreddits whose commonly
+4.2.5 Multiverse. GPT-3 can produce multiple different outputs            used language is English. Finally, to check whether our evaluation
+given one input prompt. For implementing Multiverse, we accen-            subreddits cover a wide array of topics, we manually labeled each
+tuate this feature of GPT-3 by increasing the default temperature         of the these subreddits by the ten top-level topic categories that
+value, the parameter that controls randomness in generation where         appear in r/ListOfSubreddits as suggested in prior work [55]. We
+0 suggests deterministic outputs and 1 highly random outputs, from        find that our set of evaluation subreddits covers all topic categories
+0.7 to 0.8. The prompts are the same as the above steps.                  that are documented by r/ListOfSubreddits.
+Social Simulacra                                                                                    UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+5.2     Study Procedure                                                      5.3    Participants
+We ran a between-subjects study in which we asked participants               All our participants were recruited through Prolific, a crowdsourc-
+whether they can distinguish a synthetic conversation generated              ing platform for recruiting study participants [58]. They had to
+by either human crowdworkers or SimReddit from a real one that               be in the U.S., fluent in English, and older than 18 years old, and
+actually took place on the subreddit. We presented pairs of one              they were paid at the rate of $15.00 per hour [65]. The participants
+real and one synthetic conversation for each subreddit sampled for           provided consent by agreeing to a consent form that was approved
+our evaluation. The pairs were accompanied by the name and the               by our institution’s IRB.
+goal of the target subreddit and a hyperlink to its main page. We               For generating crowdworker conversations, we recruited 50 par-
+asked participants to browse up to the first two pages of the target         ticipants whose participation lasted around 10 minutes. Their mean
+subreddit (roughly 20 posts) to observe its ground-truth topics and          age score of our participants was 4.38 (SD=1.28; 3=“18-24 years old,”
+behaviors before they proceeded to determine which of the pair of            4=“25-34 years old”), with 28 of them identifying themselves as
+conversations they believed was the real one. We repeated this task          female and 32 as male. 9 participants held a bachelor’s degree, 3 a
+twice per subreddit, for a total of 100 comparisons.                         higher degree, 13 an associate’s, and the rest a high school diploma
+    We randomly assigned our participants into one of the four study         or some high school-level education. Finally, 88% of our participants
+conditions. The only difference between these conditions was the             identified as Caucasian, 6% as Hispanic, 4% as Asian, 6% as African
+way the synthetic conversations were gathered. The crowdworker               American, and 4% as other (multiple could be selected).
+condition is our baseline condition that uses crowdturfing via Pro-             For our technical evaluation, we recruited 50 participants per
+lific to create content. SimReddit without community description,            condition, a total of 200 participants, whose participation lasted
+SimReddit without personas, and SimReddit conditions all explored            around 60 minutes. The number of participants was determined
+whether the participants can distinguish between the real and Sim-           through a power analysis based on our pilot study results with
+Reddit’s generations, while testing the prompting techniques for             alpha=0.05 and power of 80%. Their mean age score of our partici-
+social simulacra in the manner of an ablation study.                         pants was 4.22 (SD=1.03; 3=“18-24 years old,” 4=“25-34 years old”),
+    Finally, the conversations used in our study – the real, and four        and 118 of them identified themselves as female, 74 as male, 4 as
+types of synthetic conversations that represent each of the study            non-binary, and one as agender, while one opted to not disclose. 55
+conditions – were gathered as follows:                                       of the participants held a bachelor’s degree, 25 held a higher degree,
+                                                                             23 an associate’s degree, and the rest a high school diploma or
+      • Real. We searched for threads that were at least 200 posts be-       some high school-level education. Finally, 69.5% of our participants
+        hind the latest and did not appear in the top posts feed so that     identified as Caucasian, 10.5% as Hispanic, 2.5% as Asian, 16.5% as
+        our participants would not come across the conversations             African American, and 4.5% as other.
+        used in the study to verify that the conversation actually
+        took place. Furthermore, we chose those that only contained          5.4    Analysis
+        text (e.g., the post was not image-based) and had at least
+        three responses. If the conversation continued on for longer         We conducted a one-way ANOVA followed by Tukey’s HSD post-
+        than five responses, we truncated the conversation and only          hoc test between the study conditions to determine how our partic-
+        used the first five that were posted in the chronological order      ipants’ performance differed based on the four study conditions.
+        in a single thread within the conversation.                             In addition, the first author conducted an inductive analysis [75]
+      • Crowdworker. We recruited crowdworkers who were located              to understand how the conversations produced by the human par-
+        in the U.S. and fluent in English to generate conversations.         ticipants differed from SimReddit’s generated conversations. In
+        For each of the 50 subreddits, we prepared a Google Docs             particular, we conducted qualitative open coding [31] for these
+        document that contained the community goal and rules at              conversations in two phases. In the first phase, we focused on
+        the top – the same input that SimReddit uses. We randomly            generating codes that closely reflected the characteristics of the
+        assigned 10 unique participants to each of the documents and         sentences in the prompt, resulting in codes such as “not desirable
+        tasked them to contribute to it by adding either an original         behavior” and “hard to envision social interaction.” In the next
+        post (if there is no post yet, or if the current post has at least   phase, we synthesized the resulting codes from the first phase to
+        5 comments) or a comment on a previous post as though                extract higher-level themes such as “challenges of cold starts” and
+        they were conversing on a subreddit.                                 “bad emergent behaviors” We used these themes to compare and
+      • SimReddit. We used SimReddit’s generations with the com-             contrast the different types of conversations used in our study.
+        munity goal and rules that were copied from the target sub-
+        reddit’s page. These conversations represent the generations         5.5    Results
+        created with the full implementation of SimReddit.                   If our participants could perfectly distinguish between the real
+      • SimReddit without community description. We used SimRed-             and synthetic conversations, their error rate would be 0%; if they
+        dit’s generations but we withheld the community goal and             were guessing at random, it would be 50%. We found that when
+        rules by removing these details from the input prompt.               distinguishing between the real and SimReddit conversations, their
+      • SimReddit without personas. Once again, we used SimRed-              error rate was 41% (std=10%) on average. In other words, partici-
+        dit’s generations but instead of specifying the personas of          pants correctly guessed the generated content only slightly more
+        the participants, we numbered the users without further              often than they got it wrong. Participants outperformed random
+        description of them.                                                 guessing by only a small margin, indicating that they could often
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                    J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+Table 1: SimReddit significantly outperformed the crowd-                        an exact match to the circulating flu viruses. Why put a
+worker baseline and all ablations (𝑝 < .01). Results from                       shot in your arm when you really don’t need one?
+one-way ANOVA of participants’ error rate in the Technical
+                                                                         Though the model is not aware of COVID-19, it infers from the
+Evaluation, followed by Tukey’s HSD post hoc test. *** p <
+                                                                         phrase “COVID vaccination” in the community description that
+0.001; ** p < 0.01; * p < 0.05
+                                                                         COVID is a virus one needs to be vaccinated for. It can then sur-
+                                                                         face potentially problematic behaviors such as members with anti-
+                           Error Rate                                    vaccination sentiment convincing others from getting vaccinated.
+                          F(3,196)=22.49                                    Of course, this did not mean these generations were always plau-
+                             p < 0.001                                   sible. Sometimes, it started a conversation in an unexpected manner:
+                          Reviews                                 p      “Did I really just share that article on my Facebook wall? That wasn’t
+                              vs. SimReddit w/o description      ***     me. I had been drugged.” In other instances, it became clear that
+       Crowdworker
+                               vs. SimReddit w/o personas                the model is lacking the domain knowledge as it was not present
+      M=32%; SD=13%
+                                       vs. SimReddit             **      in its training data, such as the case of“sharing experience about
+                                     vs. Crowdworker             ***     being a covidlonghaulers,” which unlike the case of COVID vacci-
+  SimReddit w/o description
+                               vs. SimReddit w/o personas        ***     nation above, did not give the system enough information about
+      M=21%; SD=15%
+                                       vs. SimReddit             ***     what COVID is to produce a meaningful generation on the topic:
+                                     vs. Crowdworker                     “Anyone else have an abnormal echo after two years? I now have
+   SimReddit w/o personas
+                              vs. SimReddit w/o description      ***     trace regurgitation in pulmonic and tricuspid valves and mild dilation
+      M=34%; SD=10%
+                                       vs. SimReddit              *      in left atrium. This was all normal in 2020.” Finally, generations in the
+                                     vs. Crowdworker             **      ablation conditions often generated content that were generic or
+        SimReddit
+                              vs. SimReddit w/o description      ***     simply off-topic, such as this one by SimReddit without community
+      M=41%; SD=10%
+                               vs. SimReddit w/o personas         *      description for the covidlonghaulers above: “What happens when
+                                                                         you let a bunch of children run a country?”
+
+
+not distinguish between SimReddit posts and real content. SimRed-        6     DESIGNER EVALUATION
+dit conversations were even more plausible than the crowdworker          Do social simulacra help the designers iterate and improve on their
+conversations, where the error rate was only 32% (std=13%).              designs? In this section, we present an evaluation in which we
+   Our prompting techniques boosted performance and made gen-            explore how the insights provided by SimReddit materialize into
+erations more plausible. Misidentification error rates in the ablation   concrete inspirations for social computing designers as they are
+conditions were significantly lower than that of the SimReddit con-      tasked to design a new subreddit.
+dition. In the SimReddit without community description condition,
+our participants’ error rate was 21% (std=15%) and its pairwise com-     6.1    Study Procedure
+parison between the SimReddit condition was significant (𝑝 < 0.01).      With the aid of SimReddit, participants designed a new subreddit
+And in the SimReddit without personas condition, our participants’       community that they wished existed. They drafted and iterated on
+error rate was 33% (std=10%) and its pairwise comparison between         a community description, set of rules, and intervening comments
+the SimReddit condition was significant (𝑝 < 0.01). An omnibus           against a troll.
+ANOVA test confirms that these error rates are significantly dif-           Our method consisted of a screener, a pre-interview design task,
+ferent from each other (𝐹 (3, 196) = 22.49, 𝑝 < 0.001), and posthoc      and an interview over a video call. We first distributed a five minute
+Tukey tests between conditions confirmed that SimReddit signifi-         screener to online social media and a mailing list for social com-
+cantly outperformed all other conditions (Table 1).                      puting designers. In the screener, participants shared which online
+   We find that the generated content, at its best, can leverage rich    social spaces they have designed or moderated in the past, and what
+domain-specific knowledge in the underlying model and recon-             community they might wish to create in the study. A follow-up
+stitute them in social contexts. For instance, SimReddit generated       email contained the pre-interview design task. The task asked the
+this post for the video game Cyberpunk 2077, demonstrating its           participants to design a new subreddit around their topic of interest
+knowledge about the game and how it might fit into a social con-         from the screener (e.g., for a participant who was interested in “AI
+text: "Considering how hard it is to design a world as believable and    generated art,” the task was to “design a subreddit community that
+immersive as Witcher 3, I am looking forward to seeing how CDPR
+                                                                         can help you and others share and discuss AI generated art”). This
+makes Cyberpunk 2077." Furthermore, SimReddit can at times gen-
+                                                                         task produced a draft design of the subreddit community: its goal
+erate plausible conversations even on topics that the model has          statement, rules, and personas. Additionally, participants crafted
+not seen before, such as COVID-19. For instance, in a community          one hypothetical original post that might populate their commu-
+for “talking about COVID vaccination and vaccines,” SimReddit            nity (e.g., “What software do people like to use nowadays for AI
+generated the following:                                                 generated art?”).
+       User 1: Do you recommend the COVID vaccine, or is it                 The interview started by probing the challenges our participants
+       better to get flu vaccinations first?                             faced in designing and moderating online social spaces prior to the
+       User 2: If it were up to me, I’d say just drop the vac-           study. We then discussed their subreddit designs and what topics
+       cines altogether. Each year, the new flu vaccine is not           and behaviors they were trying to inspire. After this, we showed
+Social Simulacra                                                                               UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+them their SimReddit generation based on their draft design, and        6.4.1 Challenges of designing during cold start. All participants had
+tasked them to take 5 to 10 minutes to read through as much of the      design or moderation experience for communities such as subred-
+generated conversations as they could, engaging in a think aloud        dits (n=5), Discord servers (n=2), Slack channels (n=4), mailing lists
+protocol to share any topics or behaviors that they did not expect.     (n=4), and others (n=7). Despite this, most of them (n=13) noted that
+We then asked our participants to revise their design based on what     it was “daunting” (P2) to envision what design success and failure
+they saw. If they made any changes, we took those changes as new        might look like. For instance, P1 mentioned that they were not sure
+inputs to SimReddit and re-generated based on them.                     if they wanted their community to be “playful rather than dry,”
+   While we were waiting for the new generation to complete, we         while P2 explained that “I can’t really think of many adversarial sit-
+visited the hypothetical post that our participants drafted in the      uations so I couldn’t come up with any rules.” P11 summarized this
+design task. We presented to them three generations via WhatIf          challenge: “When you’re creating something from scratch, it can
+and Multiverse to demonstrate how a troll, a common source              get overwhelming as everything is in my head, so having something
+of anti-social behavior in online spaces, in the community might        concrete in front of me would be very reassuring.”
+respond to their original post. We probed whether the troll’s be-           However, they faced a dilemma. To many (n=9), simply releasing
+haviors surprised the participants, and what they might do as a         the untested design to real users and observing what takes place
+moderator in order to intervene in the conversation. We asked them      was ethically problematic. P1 noted: “messing up with real people
+to write out their intervening comment and generated, again via         is kind of the last option for me. . . Once you mess up when trying
+WhatIf and Multiverse, three of the troll’s potential responses to      to start an online community, and then it doesn’t go well with real
+that intervention. We discussed what their course of action might       people, then it feels much worse.” Furthermore, there was additional
+be given these responses. Finally, we presented to our participants     concern that iterating the goals and rules of a live community would
+the new generation based on their revised design. Once again, we        erode the community’s trust in the community management and
+gave them 5 to 10 minutes to read through the generated conversa-       turn subsequent design changes less effective: “... there is no A/B
+tions via a think aloud protocol focused on how the new generation      testing with subreddits. If you’re changing the rules all the time and
+differed from the original one and if the community had improved.       experimenting, they’re going to see it as a sign of a poorly managed
+We ended with a high-level discussion on how social simulacra may       community. They are going to be like, the rules are changing so
+influence the process of designing social computing systems.            much. How can I be expected to follow them?” (P24)
+                                                                            In the absence of no better alternatives, however, some (n=3)
+6.2     Participants                                                    recalled from their prior experience that “basically, all the rules
+We recruited 16 participants who had prior experience designing or      are set in reaction to the dumpster fire. . . after fragmenting people
+moderating online social spaces through social media and mailing        and killing our community for a while” (P8). Such a reactionary
+lists. Our study took 90 to 120 minutes spread across multiple days.    approach to designing social systems was discomforting, as noted
+Given this, we paid our participants $50.00 for their participation.    by P1: “[I] would feel a sense of security if I could try different
+The participants provided consent through the consent form that         iterations of establishing norms and how to fix things beforehand.”
+was approved by our institution’s IRB before participating. The
+mean age score of our participants was 3.5 (SD=0.71; 3=“18-24 years     6.4.2 Generations offer concrete design insights. After inspecting
+old,” 4=“25-34 years old”), and 7 of them identified themselves as      the initial generations from SimReddit, all participants reported
+female, 9 as male. Five of the participants held a bachelor’s degree,   interesting and unexpected insights. Some were positive and inspir-
+5 held a higher degree, and the rest a high school diploma or some      ing: For instance, in P1’s community for “sharing and discussing
+high school-level education. Finally, the sample was 25% Caucasian,     fun events around Pittsburgh,” the participant had originally ex-
+6.25% Hispanic, and 68.75% Asian. For brevity of our presentation,      pected to only find content that is a list of various events going
+we will refer to the participants with “P,” followed by a unique        on around Pittsburgh. However, in addition to such content, the
+identifying number (e.g., P4).                                          generated community showed instances where its members were
+                                                                        engaged in friend-seeking behaviors to attend these events (e.g., one
+6.3     Inductive Analysis of the Interview and                         posted, "Pittsburgh, I need a friend to see the sights with,” to which
+                                                                        another responded, “I’d be more than happy to make your tour of
+        Participants’ Designs
+                                                                        the Cathedral of Learning happen!”). P1 found this to be unexpected
+We followed the same inductive analysis procedure as the one in         but desirable and realized that this community could be of value
+our technical evaluation study. In the first phase, we generated        especially for students living around Pittsburgh.
+codes that closely reflected the characteristics of the sentences in       Meanwhile, some content was negative and prompted reflection
+the prompt such as “desirable generated behaviors” and “design          on rules and moderation. P5, for instance, wanted to create a sub-
+change: rule added” In the next phase, we synthesized the resulting     reddit for “discussing all events surrounding International Affairs,”
+codes into higher-level themes such as “unexpected content or           hoping there to be fruitful and informative conversations on the
+behavior” and “improvements resulting from design changes.”             topic. To P5’s dismay, however, the generated user posted, “Russian
+                                                                        Troops Come To Ukraine, No One Seems To Care Except Ukraine.”
+6.4     Results                                                         P5 had included rules that stated that there should be “no misin-
+We summarize the challenges our participants faced in their design      formation or heavily biased content” in the original design of the
+process prior to the study, the insights they found helpful, and the    community but looking at this post, P5 realized that “Russian troll
+way they iterated on their subreddit design.                            farms, and stuff” could still happen in the community. P5 noted,
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                     J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+“[such trolling behavior] is kind of what I would expect from a post             Original post: Hi everyone, I’m very new to this. I just
+about the Ukraine conflict. . . ” This alerted P5 that moderators of             learned Python two months ago. I’d like to know more
+an international affairs community need to be particularly vigilant.             about ML, but not sure where to start. How did you
+    And still other content was borderline, causing internal debates             guys start?
+within participants. For instance, P13, who was designing a subred-              Troll: You’re kidding, right? This is a Machine Learning
+dit for “sharing apt/home pics and receiving constructive design                 forum. Nobody here is going to take you seriously if you
+feedback” wondered if posts such as “Opinion on the living room?”                just learned Python two months ago.
+were much too vague to inspire productive and targeted conversa-          In response to the troll’s comment, P11 tested out the message, “This
+tions, and therefore should be not allowed. P13 laid out the pros         comment is not helpful; if you continue to post such comments,
+and cons of keeping such posts, ultimately deciding that “I think         we will have to block you from this community,” and received the
+it’d be nice to see a more targeted question, but it’s still reasonable   following three potential replies from the troll:
+and I wouldn’t like forbid this kind of content.”                             • I was trying to be helpful. I’m sorry if I came across as a troll.
+                                                                              • Whatever, this community is a joke anyways.
+6.4.3 Iteration improves the community. The initial generations
+                                                                              • But I was only speaking the truth!
+prompted all but one of our 16 participants to revise their origi-
+nal design. These revisions aimed to achieve different goals. Some        To P11, each of these responses presented a different scenario that
+aimed to prevent more failure cases in the communities (n=15)             would affect how the moderation should proceed from here on.
+such as “no business-promotional” content in a subreddit for “con-        P11 suggested that if the troll responded with the first comment,
+necting people moving to Los Angeles with locals” (P19) and “no           the troll could remain in the community for the moment as “this
+inciting conflicts or complaints” in a subreddit for “sharing tips        person is at least trying to apologize.” But if the troll responded with
+and finding buddies for global adventure travel.” While others tried      the second comment, it would be more problematic and warrant a
+to inspire certain culture and norms such as being “happy” in a           permanent banning of the troll, whereas the last comment would
+subreddit for “helping writers stay productive” (P2) and “without         warrant a temporary banning. P11 noted, “it’s nice to plan some of
+being creepy” in a subreddit for “sharing tips and finding buddies        these things out. I could even share this with other moderators.”
+for global adventure travel” (P3).                                        6.4.5 Role in the design process. Many remarked that the gener-
+   Our participants were largely pleased with the changes to the          ations were generally realistic (n=14). P26 noted, “it all felt really
+content of the new generations brought by these revisions (n=10).         realistic. . . like the way they each spoke felt real. I’m assuming that
+They reflected on how their understanding had shifted, and con-           someone (humans) actually wrote these, right?” P18 highlighted
+nected these positive changes to their new design. For example,           that they were pleasantly surprised by the details that were im-
+P27 explained, “I have a better idea of what to include and exclude       bued in the generations after witnessing the generated members
+in terms of [rules],” and that “going from the first iteration to the     naming famous sites to visit in Pittsburgh in a community for “shar-
+second, having updated the parameters that I had in my community,         ing and discussing about fun events around Pittsburgh,” while P24
+that majorly shifted how close to my vision the community was.”           even wanted to join the generated community for “learning about
+                                                                          and creating AI generated art”, sharing that “this seems like a nice
+6.4.4 WhatIf helps reflect on possible courses of actions. Partici-       community. I’d probably subscribe to this community.”
+pants were not surprised to see troll responses to their original             But this did not mean that our participants looked past the cracks
+post (n=15). P4 shared, “Yeah, I wasn’t really thinking about it,         in the generations’ realism. They shrewdly noticed that certain
+but I can definitely see these things happen” (P4). But seeing the        aspects of the generated posts and conversations were not likely
+troll’s potential responses helped make their understanding of the        (n=15) as P12 did: “I think this first one generally looks good, but
+categories of trolling that are relevant to their communities more        it’s a bit unrealistic in that I don’t feel like people would actually
+concrete. For instance, P27 was presented with the following three        use a long paragraph to say something about other humans.” They
+troll responses in response to his post, “I just watched the recent       understood that “any tool is going to necessarily have limitations. I
+Blast premier event. Team Liquid really choked their lead” in a           don’t know how much I would trust that this would actually predict
+community for “discussing Professional Counter Strike”:                   things that are likely to happen when I change this or that rule, just
+     • Team Liquid is the worst team in the world. They are all a         because humans are so unpredictable.”
+       bunch of noobs.                                                        Despite this, all 16 participants echoed that SimReddit adds to
+     • You’re just mad because you’re a f*****.                           how they think about and craft their social designs. P5 noted, “I
+     • What can you expect from a team that is full of a bunch of         definitely think [the generations] add value to how you design. . .
+       washed up old farts who can’t even hit their shots anymore.        I’m impressed that just with the rules and the topic like these, it’s
+After observing these examples, P27 shared, “I should definitely          generating exactly what I’d expect to see.” Even P13, who started
+have a rule for not calling other players noobs or washed up. Espe-       off skeptical in what the generations had to offer, shared, “This
+cially noobs, people say that a lot in gaming. Maybe even ban that        is actually more helpful than I expected!” But this was not be-
+word. . . Also, swearing.”                                                cause they believed that the generations predicted what is going to
+   For many, seeing the troll’s responses to a moderator’s interven-      happen. Rather, they highlighted the tool’s ability to ground their
+tion helped ground their moderation plans. Consider P11, who was          assumptions about the community. P24 noted, “Sensemaking is a
+presented with the following exchange:                                    real challenge as a moderator. . . So [the generations] would give
+                                                                          a good point of view to help you make sense of the unstructured
+Social Simulacra                                                                                   UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+barrage of comments that are coming and potentially become aware           checklists, simulacra may cue this recall more effectively. Addi-
+of things that seem to be in violation of [the community’s rules].”        tionally, we believe that social simulacra can augment the existing
+Finally, the participants remarked on how SimReddit could supple-          practices such as participatory design by providing grounded ex-
+ment the ongoing efforts to form a better community. Some noted            amples of potentially problematic behaviors that require nuanced
+that these generations could be used to spark discussions between          description (e.g., “racial epithet” is easy to explain in a checklist and
+moderators about what content should be allowed (P8, P5), and              imagine a design response, but “context-specific micro-aggression”
+aid communication between the moderators and other community               is not) to facilitate more effective discussions amongst the designers
+members by using the generated conversations as examples of what           and members of the community.
+violates the community norms and rules (P13, P5).                             One implication of this work is a turn towards proactive, instead
+                                                                           of reactive, design for social computing systems. Many of our in-
+6.4.6 Social simulacra for marginalized groups. An important theme         terviewees commented on the negatives of only fixing mistakes
+that arose in our designer evaluation was the social simulacra’s           once they already caused harm, and wished for opportunities to
+role in designing for the marginalized groups in the community.            evaluate their designs ahead of deployment. They noticed flaws in
+Our evaluation included designers who identified as a member of            the design largely by recognizing instances of harm to users, and
+marginalized groups during the study, including women of color             then backtracking to find the underlying cause or coming up with
+(n=5) as well as religious and ethnic minorities (n=3) who experienced—    a missing mitigation strategy. Such reactive strategies thus require
+and discussed in our interviews—misogyny, racism, and religious            harm to users and communities to improve; prototyping tools like
+discrimination online. For both the designers from and outside             ours can minimize the need for these strategies.
+marginalized groups, they used social simulacra to help them iden-
+tify and describe the types of minority-targeting harassment that          7.1.1 False negatives. Social simulacra present additional trade-
+could arise in their designs. For instance, P9, a member of an ethnic      offs. Even with a multiverse, social simulacra are unlikely to present
+minority designing a space for discussing non-fiction books, recog-        an exhaustive list of possible outcomes in a social system. Given this,
+nized from the simulacra community that one could send hateful             the insights our designers get from social simulacra could have blind
+messages against non-English speaking members by sharing lit-              spots that are salient but not generated and thus not observed. This
+erature with white supremacist themes. Meanwhile, P25, a male              is analogous to the implied truth effect [56], where a tool to help
+participant designing a space for urban exploration, learned from          identify possible issues falsely increases confidence that there are
+the simulacra community that comments taunting those weary                 not other issues. On the other hand, owing to the breadth encoded
+of visiting dangerous places could readily turn misogynistic. Ob-          in the training data of the large language model, prototyping via
+servations such as these encouraged our participants to add rules          social simulacra is likely to produce more breadth than what any
+explicitly geared towards protecting these marginalized groups. In         small collectives of test users would be able to provide.
+this context, GPT-3’s ability to generate harmful or bias content
+worked in our designers’ favor as it could surface a large variety of      7.2    Limitations and Future Work
+such behavior that might target the designed community, beyond             As with any prototyping techniques, there are several limitations
+what the designers originally thought to protect against.                  as well as future directions that are worth pointing out:
+                                                                           7.2.1 Social simulacra will not predict the future. Social dynamics
+7     DISCUSSION                                                           of socio-technical system are complex and unpredictable [66]. And
+In this section, we reflect on our contributions, ethical considera-       owing to this, regardless of how powerful the underlying model
+tions, limitations, and opportunities for future work.                     becomes, social simulacra will never have the ability to make a
+                                                                           single point prediction on how a social system will develop. This
+7.1     Designing With Social Simulacra                                    might be viewed as a fundamental limitation of this approach, but
+                                                                           we argue that this opens up a design space: our work presents one
+As defined in the paper, the aim of social simulacra is to translate
+                                                                           vision in the form of presenting many outcomes. But this design
+an idea for social design into a concrete set of plausible social inter-
+                                                                           space is wide open for future interpretations.
+actions that might populate the design. There is enough realism in
+them to make them compelling and we can easily imagine that they           7.2.2 Generalizing social simulacra beyond SimReddit. Social sim-
+might happen in the future. But social simulacra make no promises          ulacra is a general technique for leveraging generative models to
+of perfect prescience. So why did our designers find them to be            prototype new social spaces. We focused on Reddit as an example,
+helpful aids as they envisioned and revised their social designs?          but we can use the technique to prototype any similar space (e.g.,
+   Social simulacra fulfill the role that many of the early proto-         Facebook groups). Our implementation does not yet support some
+typing techniques fulfill outside of social computing design: they         common features on social networks such as retweets, upvotes,
+push the designer to question their assumptions, and through this,         likes, or shares; however, we can produce simulacra of many of
+inspire them to consider a broader design space. Like any prototyp-        these (e.g., likes, shares, etc.) using GPT-3 given its ability to clas-
+ing tool, social simulacra must be coupled with designer expertise:        sify (e.g., “will a Federer fan *like* a post about Federer winning
+designers must discern which behaviors are probable and important          Wimbledon?”). This allows us to also prototype algorithms that
+enough for them to proactively act on. Our designer evaluation sug-        rely on engagement metrics. Finally, we expect the generalizability
+gests that simulacra cue recall, with generated behaviors triggering       of the approach to expand as newer multi-modal models become
+recollections of what designers had seen in real life. Compared to         available (e.g., DALL-E [61] to prototype Instagram-like spaces).
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                       J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+7.2.3 Technical limitations. There are a number of technical lim-         8    CONCLUSION
+itations represented in our implementation of social simulacra,           In this paper, we present social simulacra, an approach enabling
+SimReddit. Many of these will likely be surmountable. For instance,       social computing designers to envision social behaviors that might
+GPT-3 currently only accepts input prompts that are shorter than          occur in their space when populated. In this spirit, we created a
+roughly 8,000 characters [35]. In our implementation, this restric-       SimReddit community dedicated to reviewing UIST papers. Here
+tion occasionally means we must truncate earlier parts of a conver-       is what our generated reviewers had to say about our paper when
+sation, and that we could not feed the model a broader set of posts       given its abstract. Unfortunately R2, "a cynical reviewer inclined to
+to convey overall norms in the space. Furthermore, SimReddit is           reject the paper," reported:
+currently text-only; however, in the future, if multi-modal gener-
+                                                                                  The idea of social simulacra is interesting, but the pa-
+ative models become more powerful, we can imagine opening up
+                                                                                  per is poorly written and does not provide enough con-
+the types of content generated to include even multimodal posts
+                                                                                  crete detail about the technique.
+(e.g., text and video) that are common on most social platforms
+today. Finally, SimReddit is limited to English language—and thus         But R1, "a social computing researcher who is thrilled about the
+specific cultural contexts—because GPT-3 mostly operates in Eng-          paper," had a different view and responded:
+lish. Future work could actively try to leverage new models to help               This is an excellent paper. The authors have developed
+designers bridge cultural gaps.                                                   a technique that will be of great use to designers of so-
+                                                                                  cial computing systems. The paper is well-written and
+                                                                                  the technique is clearly described and illustrated with
+                                                                                  examples. I believe this paper makes a significant con-
+                                                                                  tribution to the field of social computing.
+7.3     Ethical and Societal Impact
+                                                                          And last but not least, AC, "a senior faculty member who didn’t
+Beyond the limitations covered above, there are important ethical         have time to write a full review," noted:
+considerations to cover in regards to social simulacra. At an individ-
+ual level, the generated content can be biased and problematic [21].              This is a thought-provoking paper. The idea of social
+In some sense, within our prototyping use-case, this behavior is an               simulacra is intriguing and the paper provides a de-
+asset to our tool; by replicating the bigoted and hateful behavior                tailed description of the technique. However, I would
+that has occurred online in the past, we allow designers to antic-                have liked to see more discussion of the potential ben-
+ipate this behavior in their own contexts so they can design to                   efits and limitations of the approach.
+account for these problems. However, this also means that social          We sincerely thank the (generated) reviewers for their invaluable
+simulacra will expose designers to upsetting or triggering content.       time, comments and suggestions.
+This is a delicate trade-off; in practice, communities often choose to
+accept this as the alternative may expose harmful content to both         ACKNOWLEDGMENTS
+the designers and the community.                                          We thank Michael Terry and Mitchell L. Gordon for their insights
+   At a societal level, there is a risk that this work may inspire        and comments on drafts of this paper. We also thank the Stan-
+tools for astroturfing, large-scale harassment attacks, and propa-        ford Human-Centered AI Institute (HAI), Google Research, the
+ganda into the hands of malicious actors [5, 85]. Given this, we          Hasso Plattner Design Thinking Research Program (HPDTRP), and
+advocate the following principles for releasing social simulacra.         OpenAI for their funding support.
+First, social simulacra should be usable only by vetted social com-
+puting designers. Second, one should centrally host and log the           REFERENCES
+content that simulacra generate, so that their output can be audited      [1] Mark S. Ackerman. 2000. The Intellectual Challenge of CSCW: The Gap between
+to understand whether harmful attacks are being generated via the             Social Requirements and Technical Feasibility. Human-Computer Interaction 15,
+tool. Particularly, these systems should regularly sample from their          2 (sep 2000), 179–203. https://doi.org/10.1207/S15327051HCI1523_5
+                                                                          [2] Yavuz Akbulut, Yusuf Levent Sahin, and Bahadir Eristi. 2010. Cyberbullying
+generations and perform web searches to flag users who may be                 victimization among Turkish online social utility members. Journal of Educational
+exporting this content en masse outside of prototyping scenarios.             Technology & Society 13, 4 (2010), 192–201.
+                                                                          [3] Michel Beaudouin-Lafon and Wendy Mackay. 2002. Prototyping Tools and Tech-
+   Social simulacra are also likely to replicate biases in who partici-       niques. L. Erlbaum Associates Inc., USA, 1006–1031.
+pates in online social spaces. Women and minoritized groups, for          [4] Michael S. Bernstein, Mark S. Ackerman, Ed H. Chi, and Robert C. Miller. 2011.
+example, are often silenced in online spaces, and models such as              The Trouble with Social Computing Systems Research. In CHI ’11 Extended
+                                                                              Abstracts on Human Factors in Computing Systems (Vancouver, BC, Canada) (CHI
+GPT-3 may have learned these patterns and replicate them. This is             EA ’11). Association for Computing Machinery, New York, NY, USA, 389–398.
+problematic if it causes designers to then overlook these peoples’            https://doi.org/10.1145/1979742.1979618
+needs in design. In our prototypes, we mitigated this risk by en-         [5] Rishi Bommasani, Drew A Hudson, Ehsan Adeli, Russ Altman, Simran Arora,
+                                                                              Sydney von Arx, Michael S Bernstein, Jeannette Bohg, Antoine Bosselut, Emma
+suring a broad range of seed personas; this could become a more               Brunskill, et al. 2021. On the opportunities and risks of foundation models. arXiv
+explicit test in future versions of our system. Social simulacra can-         preprint arXiv:2108.07258 (2021).
+                                                                          [6] Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan,
+not and should not replace actual participatory engagement with               Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda
+users. There is a risk that designers may overrely on simulacra,              Askell, et al. 2020. Language models are few-shot learners. Advances in neural
+which can lead to issues downstream. To mitigate this risk, proto-            information processing systems 33 (2020), 1877–1901.
+                                                                          [7] Marion Buchenau and Jane Fulton Suri. 2000. Experience prototyping. In Pro-
+typing via simulacra should be introduced in the broader context              ceedings of the 3rd conference on Designing interactive systems: processes, practices,
+of human-centered design, which centers direct engagement.                    methods, and techniques. 424–433.
+Social Simulacra                                                                                                        UIST ’22, October 29-November 2, 2022, Bend, OR, USA
+
+
+ [8] Zoya Bylinskii, Nam Wook Kim, Peter O’Donovan, Sami Alsheikh, Spandan                      //doi.org/10.1145/1622176.1622204
+     Madan, Hanspeter Pfister, Fredo Durand, Bryan Russell, and Aaron Hertzmann.           [30] Björn Hartmann, Loren Yu, Abel Allison, Yeonsoo Yang, and Scott R. Klem-
+     2017. Learning visual importance for graphic designs and data visualizations. In           mer. 2008. Design as Exploration: Creating Interface Alternatives through Par-
+     Proceedings of the 30th Annual ACM symposium on user interface software and                allel Authoring and Runtime Tuning. In Proceedings of the 21st Annual ACM
+     technology. 57–69.                                                                         Symposium on User Interface Software and Technology (Monterey, CA, USA)
+ [9] Stevie Chancellor, Zhiyuan (Jerry) Lin, and Munmun De Choudhury. 2016. "This               (UIST ’08). Association for Computing Machinery, New York, NY, USA, 91–100.
+     Post Will Just Get Taken Down": Characterizing Removed Pro-Eating Disorder                 https://doi.org/10.1145/1449715.1449732
+     Social Media Content. In Proceedings of the 2016 CHI Conference on Human              [31] Björn Hartmann, Loren Yu, Abel Allison, Yeonsoo Yang, and Scott R. Klem-
+     Factors in Computing Systems (San Jose, California, USA) (CHI ’16). Association            mer. 2008. Design as Exploration: Creating Interface Alternatives through Par-
+     for Computing Machinery, New York, NY, USA, 1157–1162. https://doi.org/10.                 allel Authoring and Runtime Tuning. In Proceedings of the 21st Annual ACM
+     1145/2858036.2858248                                                                       Symposium on User Interface Software and Technology (Monterey, CA, USA)
+[10] Eshwar Chandrasekharan, Umashanthi Pavalanathan, Anirudh Srinivasan, Adam                  (UIST ’08). Association for Computing Machinery, New York, NY, USA, 91–100.
+     Glynn, Jacob Eisenstein, and Eric Gilbert. 2017. You can’t stay here: The efficacy         https://doi.org/10.1145/1449715.1449732
+     of reddit’s 2015 ban examined through hate speech. Proceedings of the ACM on          [32] Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn
+     Human-Computer Interaction 1, CSCW (2017), 1–22.                                           Song, and Jacob Steinhardt. 2020. Measuring massive multitask language under-
+[11] Eshwar Chandrasekharan, Mattia Samory, Shagun Jhaver, Hunter Charvat, Amy                  standing. arXiv preprint arXiv:2009.03300 (2020).
+     Bruckman, Cliff Lampe, Jacob Eisenstein, and Eric Gilbert. 2018. The Internet’s       [33] Stephanie Houde and Charles Hill. 1997. What do prototypes prototype? In
+     Hidden Rules: An Empirical Study of Reddit Norm Violations at Micro, Meso,                 Handbook of human-computer interaction (second ed.). Elsevier, 367–381.
+     and Macro Scales. Proc. ACM Hum.-Comput. Interact. 2, CSCW, Article 32 (nov           [34] Wenlong Huang, Pieter Abbeel, Deepak Pathak, and Igor Mordatch. 2022. Lan-
+     2018), 25 pages. https://doi.org/10.1145/3274301                                           guage Models as Zero-Shot Planners: Extracting Actionable Knowledge for Em-
+[12] Eshwar Chandrasekharan, Mattia Samory, Anirudh Srinivasan, and Eric Gilbert.               bodied Agents. arXiv preprint arXiv:2201.07207 (2022).
+     2017. The bag of communities: Identifying abusive behavior online with preex-         [35] Rohan Jagtap. 2021. GPT-3 Explained. Retrieved March 2, 2005 from https:
+     isting internet data. In Proceedings of the 2017 CHI Conference on Human Factors           //towardsdatascience.com/gpt-3-explained-19e5f2bd3288
+     in Computing Systems. 3175–3187.                                                      [36] Ellen Jiang, Kristen Olson, Edwin Toh, Alejandra Molina, Aaron Donsbach,
+[13] Justin Cheng, Michael Bernstein, Cristian Danescu-Niculescu-Mizil, and Jure                Michael Terry, and Carrie J Cai. 2022. PromptMaker: Prompt-based Prototyping
+     Leskovec. 2017. Anyone Can Become a Troll: Causes of Trolling Behavior in                  with Large Language Models. In CHI ’22 Extended Abstracts on Human Factors in
+     Online Discussions. In Proceedings of the 2017 ACM Conference on Computer Sup-             Computing Systems.
+     ported Cooperative Work and Social Computing (Portland, Oregon, USA) (CSCW            [37] Ellen Jiang, Edwin Toh, Alejandra Molina, Aaron Donsbach, Carrie J Cai, and
+     ’17). Association for Computing Machinery, New York, NY, USA, 1217–1230.                   Michael Terry. 2021. Genline and genform: Two tools for interacting with gen-
+     https://doi.org/10.1145/2998181.2998213                                                    erative language models in a code editor. In The Adjunct Publication of the 34th
+[14] Justin Cheng, Cristian Danescu-Niculescu-Mizil, and Jure Leskovec. 2015. Antiso-           Annual ACM Symposium on User Interface Software and Technology. 145–147.
+     cial behavior in online discussion communities. In Proceedings of the International   [38] Joseph M Kayany. 1998. Contexts of uninhibited online behavior: Flaming in
+     AAAI Conference on Web and Social Media, Vol. 9. 61–70.                                    social newsgroups on Usenet. Journal of the American Society for Information
+[15] Joan Donovan. 2019. How hate groups’ secret sound system works. The Atlantic               Science 49, 12 (1998), 1135–1141.
+     17 (2019). https://doi.org/10.1145/1188913.1188915                                    [39] John F Kelley. 1983. An empirical methodology for writing user-friendly natu-
+[16] Daniel Drew, Julie L Newcomb, William McGrath, Filip Maksimovic, David Mellis,             ral language computer applications. In Proceedings of the SIGCHI conference on
+     and Björn Hartmann. 2016. The toastboard: Ubiquitous instrumentation and                   Human Factors in Computing Systems. 193–196.
+     automated checking of breadboarded circuits. In Proceedings of the 29th Annual        [40] John F Kelley. 1984. An iterative design methodology for user-friendly natural
+     Symposium on User Interface Software and Technology. 677–686.                              language office information applications. ACM Transactions on Information
+[17] Casey Fiesler, Joshua McCann, Kyle Frye, Jed R Brubaker, et al. 2018. Reddit               Systems (TOIS) 2, 1 (1984), 26–41.
+     rules! characterizing an ecosystem of governance. In Twelfth International AAAI       [41] Charles Kiene, Andrés Monroy-Hernández, and Benjamin Mako Hill. 2016. Sur-
+     Conference on Web and Social Media.                                                        viving an" Eternal September" How an Online Community Managed a Surge
+[18] Susan T Fiske. 2022. Twitter manipulates your feed: Ethical considerations.                of Newcomers. In Proceedings of the 2016 CHI Conference on Human Factors in
+[19] Catherine Flick. 2016. Informed consent and the Facebook emotional manipula-               Computing Systems. 1152–1156.
+     tion study. Research Ethics 12, 1 (2016), 14–28.                                      [42] Aniket Kittur, Bongwon Suh, Bryan A. Pendleton, and Ed H. Chi. 2007. He Says,
+[20] Bill Gaver, Tony Dunne, and Elena Pacenti. 1999. Design: cultural probes. inter-           She Says: Conflict and Coordination in Wikipedia. In Proceedings of the SIGCHI
+     actions 6, 1 (1999), 21–29.                                                                Conference on Human Factors in Computing Systems (San Jose, California, USA)
+[21] Samuel Gehman, Suchin Gururangan, Maarten Sap, Yejin Choi, and Noah A.                     (CHI ’07). Association for Computing Machinery, New York, NY, USA, 453–462.
+     Smith. 2020. RealToxicityPrompts: Evaluating Neural Toxic Degeneration in                  https://doi.org/10.1145/1240624.1240698
+     Language Models. CoRR abs/2009.11462 (2020). arXiv:2009.11462 https://arxiv.          [43] Ron Kohavi, Alex Deng, Brian Frasca, Roger Longbotham, Toby Walker, and Ya
+     org/abs/2009.11462                                                                         Xu. 2012. Trustworthy Online Controlled Experiments: Five Puzzling Outcomes
+[22] Catherine Grevet and Eric Gilbert. 2015. Piggyback prototyping: Using existing,            Explained (KDD ’12). Association for Computing Machinery, New York, NY, USA,
+     large-scale social computing systems to prototype new ones. In Proceedings of the          786–794. https://doi.org/10.1145/2339530.2339653
+     33rd Annual ACM Conference on Human Factors in Computing Systems. 4047–4056.          [44] Adam DI Kramer, Jamie E Guillory, and Jeffrey T Hancock. 2014. Experimental
+[23] Jonathan Grudin. 1994. Groupware and social dynamics: Eight challenges for                 evidence of massive-scale emotional contagion through social networks. Pro-
+     developers. Commun. ACM 37, 1 (1994), 92–105.                                              ceedings of the National Academy of Sciences 111, 24 (2014), 8788–8790.
+[24] Aaron Halfaker, R Stuart Geiger, Jonathan T Morgan, and John Riedl. 2013. The         [45] Robert E Kraut and Paul Resnick. 2012. Building successful online communities:
+     rise and decline of an open collaboration system: How Wikipedia’s reaction                 Evidence-based social design. MIT Press.
+     to popularity is causing its decline. American Behavioral Scientist 57, 5 (2013),     [46] James A. Landay. 1996. SILK: Sketching Interfaces like Krazy. In Conference
+     664–688.                                                                                   Companion on Human Factors in Computing Systems (Vancouver, British Columbia,
+[25] Blake Hallinan, Jed R Brubaker, and Casey Fiesler. 2020. Unexpected expectations:          Canada) (CHI ’96). Association for Computing Machinery, New York, NY, USA,
+     Public reaction to the Facebook emotional contagion study. New Media & Society             398–399. https://doi.org/10.1145/257089.257396
+     22, 6 (2020), 1076–1094.                                                              [47] Mike Lewis, Denis Yarats, Yann N Dauphin, Devi Parikh, and Dhruv Batra. 2017.
+[26] Claire Hardaker. 2010. Trolling in asynchronous computer-mediated commu-                   Deal or no deal? end-to-end learning for negotiation dialogues. arXiv preprint
+     nication: From user discussions to academic definitions. Journal of Politeness             arXiv:1706.05125 (2017).
+     Research 6 (2010), 215J242.                                                           [48] Jiacheng Liu, Alisa Liu, Ximing Lu, Sean Welleck, Peter West, Ronan Le Bras,
+[27] Björn Hartmann, Leith Abdulla, Manas Mittal, and Scott R Klemmer. 2007. Au-                Yejin Choi, and Hannaneh Hajishirzi. 2021. Generated knowledge prompting for
+     thoring sensor-based interactions by demonstration with direct manipulation                commonsense reasoning. arXiv preprint arXiv:2110.08387 (2021).
+     and pattern recognition. In Proceedings of the SIGCHI conference on Human factors     [49] Pengfei Liu, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, and Gra-
+     in computing systems. 145–154.                                                             ham Neubig. 2021. Pre-train, prompt, and predict: A systematic survey of prompt-
+[28] Björn Hartmann, Scott R Klemmer, Michael Bernstein, Leith Abdulla, Brandon                 ing methods in natural language processing. arXiv preprint arXiv:2107.13586
+     Burr, Avi Robinson-Mosher, and Jennifer Gee. 2006. Reflective physical proto-              (2021).
+     typing through integrated design, test, and analysis. In Proceedings of the 19th      [50] Yao Lu, Max Bartolo, Alastair Moore, Sebastian Riedel, and Pontus Stenetorp. 2021.
+     annual ACM symposium on User interface software and technology. 299–308.                   Fantastically ordered prompts and where to find them: Overcoming few-shot
+[29] Björn Hartmann, Meredith Ringel Morris, Hrvoje Benko, and Andrew D. Wilson.                prompt order sensitivity. arXiv preprint arXiv:2104.08786 (2021).
+     2009. Augmenting Interactive Tables with Mice & Keyboards. In Proceedings             [51] J. Marks, B. Andalman, P. A. Beardsley, W. Freeman, S. Gibson, J. Hodgins, T. Kang,
+     of the 22Nd Annual ACM Symposium on User Interface Software and Technology                 B. Mirtich, H. Pfister, W. Ruml, K. Ryall, J. Seims, and S. Shieber. 1997. Design
+     (Victoria, BC, Canada) (UIST ’09). ACM, New York, NY, USA, 149–152. https:                 Galleries: A General Approach to Setting Parameters for Computer Graphics and
+UIST ’22, October 29-November 2, 2022, Bend, OR, USA                                                            J.S. Park, L. Popowski, C.J. Cai, M. Morris, P. Liang, M.S. Bernstein
+
+
+     Animation. In Proceedings of the 24th Annual Conference on Computer Graphics and               information processing systems 32 (2019).
+     Interactive Techniques (SIGGRAPH ’97). ACM Press/Addison-Wesley Publishing                [79] Laura Weidinger, John Mellor, Maribeth Rauh, Conor Griffin, Jonathan Uesato,
+     Co., USA, 389–400. https://doi.org/10.1145/258734.258887                                       Po-Sen Huang, Myra Cheng, Mia Glaese, Borja Balle, Atoosa Kasirzadeh, et al.
+[52] M. Lynne Markus. 1987. Toward a “Critical Mass” Theory of Interactive Media.                   2021. Ethical and social risks of harm from Language Models. arXiv preprint
+     Communication Research 14 (1987), 491 – 511.                                                   arXiv:2112.04359 (2021).
+[53] Nathan J. Matias. 2019. Preventing harassment and increasing group participation          [80] Tongshuang Wu, Ellen Jiang, Aaron Donsbach, Jeff Gray, Alejandra Molina,
+     through social norms in 2,190 online science discussions. Proceedings of the                   Michael Terry, and Carrie J Cai. 2022. PromptChainer: Chaining Large Language
+     National Academy of Sciences 116, 20 (2019), 9785–9789.                                        Model Prompts through Visual Programming. arXiv preprint arXiv:2203.06566
+[54] Peter O’Donovan, Aseem Agarwala, and Aaron Hertzmann. 2015. Designscape:                       (2022).
+     Design with interactive layout suggestions. In Proceedings of the 33rd annual             [81] Tongshuang Wu, Michael Terry, and Carrie J Cai. 2021. AI Chains: Transparent
+     ACM conference on human factors in computing systems. 1221–1224.                               and Controllable Human-AI Interaction by Chaining Large Language Model
+[55] Joon Sung Park, Joseph Seering, and Michael S. Bernstein. 2022. Measuring the                  Prompts. arXiv preprint arXiv:2110.01691 (2021).
+     Prevalence of Anti-Social Behavior in Online Communities. Proceedings of the              [82] Anbang Xu, Shih-Wen Huang, and Brian Bailey. 2014. Voyant: generating struc-
+     ACM on Human-Computer Interaction CSCW (2022).                                                 tured feedback on visual designs using a crowd of non-experts. In Proceedings
+[56] Gordon Pennycook, Adam Bear, Evan T Collins, and David G Rand. 2020. The                       of the 17th ACM conference on Computer supported cooperative work & social
+     implied truth effect: Attaching warnings to a subset of fake news headlines                    computing. 1433–1444.
+     increases perceived accuracy of headlines without warnings. Management Science            [83] Ya Xu, Nanyu Chen, Addrian Fernandez, Omar Sinno, and Anmol Bhasin. 2015.
+     66, 11 (2020), 4944–4957.                                                                      From infrastructure to culture: A/B testing challenges in large scale social net-
+[57] Nicholas Proferes, Naiyan Jones, Sarah Gilbert, Casey Fiesler, and Michael                     works. In Proceedings of the 21th ACM SIGKDD International Conference on Knowl-
+     Zimmer. 2021.           Studying Reddit: A Systematic Overview of Disci-                       edge Discovery and Data Mining. 2227–2236.
+     plines, Approaches, Methods, and Ethics.              Social Media + Society 7,           [84] Indi Young. 2016. Describing Personas. Retrieved July 19, 2022 from https:
+     2 (2021), 20563051211019004.          https://doi.org/10.1177/20563051211019004                //medium.com/inclusive-software/describing-personas-af992e3fc527
+     arXiv:https://doi.org/10.1177/20563051211019004                                           [85] Rowan Zellers, Ari Holtzman, Hannah Rashkin, Yonatan Bisk, Ali Farhadi,
+[58] Prolific. 2022. Prolific: Quickly find research participants you can trust. https:             Franziska Roesner, and Yejin Choi. 2019. Defending against neural fake news.
+     //www.prolific.co/                                                                             Advances in neural information processing systems 32 (2019).
+[59] Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever,          [86] Zihao Zhao, Eric Wallace, Shi Feng, Dan Klein, and Sameer Singh. 2021. Calibrate
+     et al. 2019. Language models are unsupervised multitask learners. OpenAI blog                  before use: Improving few-shot performance of language models. In International
+     1, 8 (2019), 9.                                                                                Conference on Machine Learning. PMLR, PMLR, 12697–12706.
+[60] Jack W Rae, Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann,
+     Francis Song, John Aslanides, Sarah Henderson, Roman Ring, Susannah Young,
+     et al. 2021. Scaling language models: Methods, analysis & insights from training
+     gopher. arXiv preprint arXiv:2112.11446 (2021).
+[61] Aditya Ramesh, Mikhail Pavlov, Gabriel Goh, Scott Gray, Chelsea Vos, Alec Rad-
+     ford, Mark Chen, and Ilya Sutskever. 2021. Zero-Shot Text-to-Image Generation.
+     Proceedings of the 38th International Conference on Machine Learning (2021).
+[62] Reddit. 2021. Reddit by the Numbers. https://www.redditinc.com/
+[63] Marc Rettig. 1994. Prototyping for tiny fingers. Commun. ACM 37, 4 (1994),
+     21–27.
+[64] Horst WJ Rittel and Melvin M Webber. 1973. Dilemmas in a general theory of
+     planning. Policy sciences 4, 2 (1973), 155–169.
+[65] David Rolf. 2015. The fight for $15: The right wage for a working America. New
+     Press, The.
+[66] Matthew J. Salganik, Peter Sheridan Dodds, and Duncan J. Watts. 2006. Experi-
+     mental Study of Inequality and Unpredictability in an Artificial Cultural Mar-
+     ket. Science 311, 5762 (2006), 854–856. https://doi.org/10.1126/science.1121066
+     arXiv:https://www.science.org/doi/pdf/10.1126/science.1121066
+[67] Valkyrie Savage, Colin Chang, and Björn Hartmann. 2013. Sauron: embedded
+     single-camera sensing of printed physical user interfaces. In Proceedings of the
+     26th annual ACM symposium on User interface software and technology. 447–456.
+[68] Timo Schick and Hinrich Schütze. 2020. Few-shot text generation with pattern-
+     exploiting training. arXiv preprint arXiv:2012.11926 (2020).
+[69] D.A. Schön. 1984. The Reflective Practitioner: How Professionals Think In Action.
+     Basic Books, Vol. 5126. Basic Books.
+[70] Reinhard Sefelin, Manfred Tscheligi, and Verena Giller. 2003. Paper prototyping-
+     what is it good for? A comparison of paper-and computer-based low-fidelity
+     prototyping. In CHI’03 extended abstracts on Human factors in computing systems.
+     778–779.
+[71] Carolyn Snyder. 2003. Paper prototyping: The fast and easy way to design and
+     refine user interfaces. Morgan Kaufmann.
+[72] Sara Owsley Sood, Elizabeth F. Churchill, and Judd Antin. 2012. Automatic
+     Identification of Personal Insults on Social News Sites. J. Am. Soc. Inf. Sci. Technol.
+     63, 2 (feb 2012), 270–285. https://doi.org/10.1002/asi.21690
+[73] Don Tapscott and Art Caston. 1992. Paradigm shift: The new promise of information
+     technology. McGraw-Hill, Inc.
+[74] Nathan TeBlunthuis, Aaron Shaw, and Benjamin Mako Hill. 2018. Revisiting"
+     The rise and decline" in a population of peer production projects. In Proceedings
+     of the 2018 CHI Conference on Human Factors in Computing Systems. 1–7.
+[75] David Thomas. 2006. A General Inductive Approach for Analyzing Qualitative
+     Evaluation Data. American Journal of Evaluation 27 (2006).
+[76] Johan Ugander, Brian Karrer, Lars Backstrom, and Jon Kleinberg. 2013. Graph
+     cluster randomization: Network exposure to multiple universes. In Proceedings of
+     the 19th ACM SIGKDD international conference on Knowledge discovery and data
+     mining. 329–337.
+[77] Emily A Vogels. 2021. The state of online harassment. Pew Research Center 13
+     (2021).
+[78] Alex Wang, Yada Pruksachatkun, Nikita Nangia, Amanpreet Singh, Julian Michael,
+     Felix Hill, Omer Levy, and Samuel Bowman. 2019. Superglue: A stickier bench-
+     mark for general-purpose language understanding systems. Advances in neural
+

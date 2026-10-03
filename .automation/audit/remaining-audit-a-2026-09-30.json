@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "auditor": "independent source auditor",
+  "scope": "Independent full-source audit of lexicographic entries 41–53 in vault/Literature/Papers/Entries",
+  "rules_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md",
+    "vault/Literature/Papers/Template.md"
+  ],
+  "result": "INVALIDATED",
+  "entries": [
+    {
+      "index": 41,
+      "path": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "7dbfc9208879ee502945b8b3cf3b7b66af3758b2482b42dcd4c1781e69483b6b",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html; arXiv HTML §§2–5, §7",
+      "findings": "Abstract matches arXiv 1908.05437; verified six tested candidates, Null/Baseline/GroundEvent/PA/LinkPrediction/Bayesian distinctions, S3D separate extension, model constants/selection details and event-count conflict. Abstract/source and DOI retained; references/authors unchanged.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html",
+          "sha256": "575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "path": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "b91f10879862c7a472ebe541636e808c70c3478de5c30dac3caf993ba686251c",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1.pdf; §§2.1–4.2, visual check pp.4,9–10",
+      "findings": "Verified continuous bounded-confidence equations and pair/network variants, binary Hamming-distance extension, and both source conflicts (N=1000 vs figure N=2000; m-d vs d-1 threshold wording). Abstract, source version, citations and references retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1.pdf",
+          "sha256": "a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "path": "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "69566197a7db41c6d9987634c7674d7f2f1181dde46f1c40c685b046d242cd49",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888.html; JASSS §§3–4, equations (4)–(5), jury application",
+      "findings": "Verified EPA state, actor/reciprocity rules, directed network eligibility, object selection variants, event-deflection objective, discrete behavior lists and jury settings. Date matches article header (2021-10-31); source abstract retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888.html",
+          "sha256": "ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "path": "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "3b203309b0aca6b0abd0bedf3992bbc983c378920b98ed4a4ef9ae8e27f57846",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c.html; chapter §§11.3–11.4, Fig. 11.1, Table 11.1 and results",
+      "findings": "Verified initialization, fixed tick sequence, status/feedback direction, sender memory, linear recency weights, memory reset and learning variants, probabilistic exit and measurement. Reported satisfaction range/normalization mismatch and unspecified numerical rules explicitly; abstract/date match chapter source.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c.html",
+          "sha256": "eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "path": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "8f38932e043309f5d3d8e37c5d2e43db7721c0c71e21af407ed3143df3e526e7",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html; arXiv v1 §§4–5, model/UML constraints",
+      "findings": "Verified the static SoPrA schema, association types/strengths, separate personal/shared beliefs, allOf/partOf semantics, tree constraints, parent inheritance and transitive same relation; note correctly avoids inferring an execution order or loop. Abstract/version and references/authors retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html",
+          "sha256": "4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "path": "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "98eb8c909a2ec3faac6f28e7f758faafc3b6d1bdfc4fbcfd178fc89b6b12f4ed",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa.html and /home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d.docx; article Methods, Appendix equations (1)–(7), strategy and objective sections",
+      "findings": "Verified populations, cycle/generation setup, strategies and search/relationship update equations, fitness components/selection. Source notation and prose conflicts for resource/risk naming, stress direction, FtM and waning are disclosed rather than reconciled. Abstract, source version, references/authors retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa.html",
+          "sha256": "5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d.docx",
+          "sha256": "d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "path": "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "e7a35f67ec845c4ba5065e35888ff941d49eeeb7334c5b772259c0c8495562f6",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39.html; arXiv HTML §3, Appendices D.3 and experiment sections",
+      "findings": "Verified architecture/timing, activation and action space, X and Reddit ranking equations, recommendation refresh, experiment controls and metrics. Configurable behaviors are identified as experiment inputs. Abstract/version/DOI/date and references/authors retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39.html",
+          "sha256": "7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "path": "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "c0c0045c7db10f504431119978f8199679d1bf3d5913c0f28202d536ee1f5656",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html; arXiv HTML §§3–5, profile/action/memory and experiment sections",
+      "findings": "Verified dataset-derived traits, memory/reflection, page-by-page actions and exit/interview, item/recommender construction, thresholds and experimental page cap. Source HTML is available; stale prior PDF-inaccessibility note removed. Abstract restored to the arXiv source version; references/authors retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html",
+          "sha256": "bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "path": "vault/Literature/Papers/Entries/On and Off the -Net- Scales for Social Capital in an Online Era.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "f6b017f8fc4d551edd519fae6089efab36e44265a3e3b2225a321a88a3105f76",
+      "source_evidence": "Wiley article page, title/header/abstract; first-published metadata",
+      "findings": "Abstract matches the publisher record; first publication date is 2006-08-09. Note contains no simulation/model claims. DOI, author and source are correct; prior audit log confirms no fictitious study-section citations remain.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [],
+      "source_cache_limit": "Primary publisher page reviewed through web access; no local cache file was present."
+    },
+    {
+      "index": 50,
+      "path": "vault/Literature/Papers/Entries/Parasocial Interaction and Parasocial Relationship- Conceptual Clarification and a Critical Assessment of Measures.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "52a435514a9fb344369fc447520bbc004a6009f046a6826622b28f9620233713",
+      "source_evidence": "Wiley article page, title/header/abstract",
+      "findings": "Abstract matches publisher record; first publication date is 2015-03-17. Note contains no simulation/model claims. DOI, authors and source match; prior unused footnote was removed.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [],
+      "source_cache_limit": "Primary publisher page reviewed through web access; no local cache file was present."
+    },
+    {
+      "index": 51,
+      "path": "vault/Literature/Papers/Entries/Persistence of social signatures in human communication.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "3f3d9f28fdbfb68661150013e9efbcc9a8cc3d73cf9d9e25333a5533231cff0c",
+      "source_evidence": "PNAS article page; Abstract, Materials and Methods, publication history",
+      "findings": "Abstract matches publisher record; online publication is 2014-01-06 (issue date 2014-01-21). Methods support the 18-month phone-call/survey dataset description. Note contains no model claims; DOI/authors retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [],
+      "source_cache_limit": "Primary publisher page reviewed through web access; no local cache file was present."
+    },
+    {
+      "index": 52,
+      "path": "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "1bd0c1f8f60471d7277f27988052ad841136b07d66766b6dc272129becb98bf3",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0.html; PNAS Nexus Methods: social media diffusion, quality/appeal, network, adversary tactics, simulation parameters",
+      "findings": "Verified feed state and sampling, independent quality/appeal distributions, posting/resharing and recency rules, bad-actor construction/tactics, target modes, network sampling/controls and outcome/convergence measures. Abstract/version/date/DOI retained; references/authors unchanged.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0.html",
+          "sha256": "b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "path": "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "status": "AUDIT_INVALIDATED",
+      "sha256": "57a2bb8e4add1c8f8e2b9d50e65d5fa40f1a5ecd672a3b4757d2fbc7c5500c7f",
+      "source_evidence": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html; arXiv HTML §§3.1–3.4, §4.3",
+      "findings": "Verified factored Markov/DBN state and current/previous dependencies, entity/behavior/story interfaces, runtime and inference/learning scope, specific §3.3 user example and distinct §4.3 provider example. Reported provider-boost prose tension is preserved without selecting an implementation. Abstract/version/date/DOI and references/authors retained.",
+      "warning_cleared": false,
+      "full_text_available": true,
+      "source_caches": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html",
+          "sha256": "99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f"
+        }
+      ]
+    }
+  ],
+  "additional_batch": {
+    "scope": "Five further notes requested by parent; source claims checked only to the extent the published full text was accessible. Full model, methods, and bibliography are unaudited wherever full text is inaccessible. Keep both fulltext unavailable and not audited on all five.",
+    "entries": [
+      {
+        "path": "vault/Literature/Papers/Entries/Antecedents and Effects of Parasocial Relationships- A Meta-Analysis.md",
+        "status": "PARTIAL_AUDIT_PENDING",
+        "sha256": "47d5c78800cdaf93945979304407354778f98c8f53de39563b9b2b67ade25e7c",
+        "source_url": "https://academic.oup.com/joc/article-abstract/70/6/868/5964783",
+        "source_checks": "Oxford Academic title, authors, date, DOI and abstract: k=120; no significant relation between social deficiencies and PSRs; reported correlations and PSR/PSI distinctions match. No full article cache; model/method claims remain unaudited.",
+        "warnings_retained": [
+          "fulltext unavailable",
+          "not audited"
+        ],
+        "full_model_audit": "unavailable/incomplete; do not clear not audited",
+        "source_caches": []
+      },
+      {
+        "path": "vault/Literature/Papers/Entries/Bond with Social Bot- A Hidden Markov Model of Parasocial Relationship Dynamics in Human-AI Interaction.md",
+        "status": "PARTIAL_AUDIT_PENDING",
+        "sha256": "df685f31277d8a74885647910d5f82189dd1f5abf93e17e0718d62f5c9497c45",
+        "source_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7023798",
+        "source_checks": "SSRN record title/authors, July 21 2026 posted date, DOI and abstract match the note’s HMM, Grok panel, response effects and design-simulation claims. Linked PDF download returned HTTP 403; full model/method/bibliography remain unaudited.",
+        "warnings_retained": [
+          "fulltext unavailable",
+          "not audited"
+        ],
+        "full_model_audit": "unavailable/incomplete; do not clear not audited",
+        "source_caches": []
+      },
+      {
+        "path": "vault/Literature/Papers/Entries/Building Successful Online Communities- Evidence-Based Social Design.md",
+        "status": "PARTIAL_AUDIT_PENDING",
+        "sha256": "cd685a196c1494fe5bd336d884e039663479ad77ea59e7bad932810f84f09c47",
+        "source_url": "https://mitpress.mit.edu/9780262016575/building-successful-online-communities/",
+        "source_checks": "MIT Press metadata confirms March 23 2012, title/authors and publisher abstract including five design challenges; author-hosted pre-copyedited introduction supports the evidence-to-design description and community design topics. The downloaded intro is explicitly a chapter draft; the published book/full bibliography remain unavailable.",
+        "warnings_retained": [
+          "fulltext unavailable",
+          "not audited"
+        ],
+        "full_model_audit": "unavailable/incomplete; do not clear not audited",
+        "source_caches": [
+          {
+            "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a6849d17c5b549df1b9ca08177fca9d5c326c1a2626f41b3be7acd84510b19f6.pdf",
+            "sha256": "a6849d17c5b549df1b9ca08177fca9d5c326c1a2626f41b3be7acd84510b19f6",
+            "version_note": "Author-hosted pre-copyedited introduction chapter draft, not published full book."
+          }
+        ]
+      },
+      {
+        "path": "vault/Literature/Papers/Entries/Dunbar-s Number in Motion- Agent-Based Simulations of Friendship Formation.md",
+        "status": "PARTIAL_AUDIT_PENDING",
+        "sha256": "374ec813b558968eaa5c0594f236dd5c7ec81641461ad7485f51f097135548ea",
+        "source_url": "https://orb.binghamton.edu/nejcs/vol6/iss1/7/",
+        "source_checks": "Publisher abstract, title, authors, 2024 year and DOI match; verified Lévy flight/random walk comparison, one-year horizon, attribute/time-budget framing, Dunbar circles, stated hypothesis and random-walk result. Publisher PDF inaccessible; implementation/bibliography remain unaudited.",
+        "warnings_retained": [
+          "fulltext unavailable",
+          "not audited"
+        ],
+        "full_model_audit": "unavailable/incomplete; do not clear not audited",
+        "source_caches": []
+      },
+      {
+        "path": "vault/Literature/Papers/Entries/From Individual to Society- A Survey on Social Simulation Driven by Large Language Model-based Agents.md",
+        "status": "PARTIAL_AUDIT_PENDING",
+        "sha256": "0979b86e9f6047e871ccc21bfe6cb7e7541be452880f25c3a85ab29a3ece6082",
+        "source_url": "https://arxiv.org/html/2412.03563v1 ; https://dl.acm.org/doi/10.1145/3800683",
+        "source_checks": "arXiv v1 HTML §§3–5, 6–8/Figure 1 confirms individual/scenario/society taxonomy and survey dimensions. ACM version abstract/metadata checked via Paperity preview; v1 abstract ends with datasets/benchmarks and trends while version-of-record adds tools/risks/challenges. The note marks taxonomy as preprint-based. Published ACM full text remains unavailable. No local primary-source cache; arXiv full HTML was read through web access.",
+        "warnings_retained": [
+          "fulltext unavailable",
+          "not audited"
+        ],
+        "full_model_audit": "unavailable/incomplete; do not clear not audited",
+        "source_caches": []
+      }
+    ],
+    "result": "Partial source checks completed; all five remain pending full independent audit because the published full texts are unavailable."
+  },
+  "validity": "WITHDRAWN: auditor admitted spot checks and reliance on prior reports; full independent audit not completed before clearing flags."
+}

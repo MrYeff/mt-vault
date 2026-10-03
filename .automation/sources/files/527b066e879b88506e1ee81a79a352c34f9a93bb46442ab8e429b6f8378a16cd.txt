@@ -1,0 +1,2328 @@
+                                                Reciprocal Recommender Systems: Analysis of State-of-Art Literature,
+                                                    Challenges and Opportunities towards Social Recommendation
+
+                                                    Iván Palomaresa,, Carlos Porcela , Luiz Pizzatob , Ido Guyc , Enrique Herrera-Viedmaa
+                                        a
+                                            Andalusian Research Institute on Data Science and Computational Intelligence (DaSCI), University of Granada, Spain
+                                                                      b
+                                                                        AI Labs, Commonwealth Bank of Australia, Sydney, Australia
+                                                                                     c
+                                                                                       eBay Research, Netanya, Israel
+
+
+
+
+                                        Abstract
+arXiv:2007.16120v2 [cs.SI] 2 Nov 2020
+
+
+
+
+                                        There exist situations of decision-making under information overload in the Internet, where people have
+                                        an overwhelming number of available options to choose from, e.g. products to buy in an e-commerce
+                                        site, or restaurants to visit in a large city. Recommender systems arose as a data-driven personalized
+                                        decision support tool to assist users in these situations: they are able to process user-related data,
+                                        filtering and recommending items based on the user’s preferences, needs and/or behaviour. Unlike
+                                        most conventional recommender approaches where items are inanimate entities recommended to the
+                                        users and success is solely determined upon the end user’s reaction to the recommendation(s) re-
+                                        ceived, in a Reciprocal Recommender System (RRS) users become the item being recommended to
+                                        other users. Hence, both the end user and the user being recommended should accept the “match-
+                                        ing” recommendation to yield a successful RRS performance. The operation of an RRS entails not
+                                        only predicting accurate preference estimates upon user interaction data as classical recommenders
+                                        do, but also calculating mutual compatibility between (pairs of) users, typically by applying fusion
+                                        processes on unilateral user-to-user preference information. This paper presents a snapshot-style anal-
+                                        ysis of the extant literature that summarizes the state-of-the-art RRS research to date, focusing on
+                                        the algorithms, fusion processes and fundamental characteristics of RRS, both inherited from conven-
+                                        tional user-to-item recommendation models and those inherent to this emerging family of approaches.
+                                        Representative RRS models are likewise highlighted. Following this, we discuss the challenges and
+                                        opportunities for future research on RRSs, with special focus on (i) fusion strategies to account for
+                                        reciprocity and (ii) emerging application domains related to social recommendation.
+                                        Keywords: Reciprocal Recommender Systems, Preference Fusion, Preference Prediction, Online
+                                        Dating, Social Media, User matching
+
+
+
+                                            Email addresses: ivanpc@ugr.es (Iván Palomares), cporcel@decsai.ugr.es (Carlos Porcel), pizzato@acm.org
+                                        (Luiz Pizzato), idoguy@acm.org (Ido Guy), viedma@decsai.ugr.es (Enrique Herrera-Viedma)
+
+
+
+                                        Preprint submitted to arXiv                                                                        November 29, 2021
+1. Introduction
+
+In the last two decades, Recommender Systems (RS) have gained a lot of popularity as an effective
+information processing and personalized decision support tool to filter relevant information or resources
+to users in Internet platforms. They are used to assist people in decision-making situations under
+contexts of “information overload”, which are common not only in e-commerce sites, but also in
+entertainment portals like Spotify and Netflix, social media sites, tourism portals and any other
+services where optimizing the user’s experience in terms of their interaction with the system, becomes
+imperative [4, 18, 35, 60]. In essence, an RS gathers and analyzes users’ interaction data with items
+in the system to build knowledge about their preferences, whereby the system predicts items (e.g.
+products, services, media, things to see or do, etc.) that the user is likely to be interested in. Most
+RS learn users’ preferences from user-item ratings to undertake this predictive task.
+   The repertoire of RS approaches has amply expanded since the late 90s, with content-based –
+“recommending similar content to what the user liked” [51]–, collaborative filtering–“recommending
+what similar people to the user liked” [17]–and context-aware–“recommending items that suit the user’s
+current context” [3]–being popular approaches [131]. Likewise, there are RS models that provide group
+recommendations by aggregating members’ preferences or individually recommended items [46], as well
+as RS that integrate user information across multiple domains to build more insight about their taste
+or needs [26]. Besides, similar to multi-criteria decision-making scenarios [147] where humans naturally
+tend to judge options according to multiple criteria, in a multi-criteria RS a user may often prefer to
+rate items (e.g. hotels) using several criteria (e.g. food, cleanliness, service), hence these systems were
+proposed to exploit such ratings [100].
+   An emerging family of RS approaches arose in the last decade, Reciprocal RS (RRS) [109, 116], in
+which: (i) users become the item being recommended to other users, and (ii) success is determined not
+only by the end user who requested recommendations, but also by the user(s) being recommended,
+hence mutual preference or compatibility (reciprocity) needs to be measured. In other words, a vital
+requirement in any RRS is that both users should reciprocate, i.e. both of them should indicate positive
+feedback on the suggestion to connect with each other in order to deem the matching recommendation
+as successful. This requisite adds an additional layer of complexity in RRS with respect to the majority
+of conventional RS, the latter of which typically only seek satisfying the end user preferences. RRS
+are popular in dating [112], recruitment [11], online learning environments [120], and social media
+platforms [61, 107] where reciprocity can yield better matchings between people [109].
+   Research into classical item-to-user RS has expanded to a sheer range of techniques, algorithms and
+
+
+                                                    2
+application areas [4, 18, 38, 100, 131, 146]. Notwithstanding, although several of the most widespread
+families of RS algorithms have been translated into a reciprocal recommendation setting, the problem
+of personalized people-to-people recommendation via RRS is still comparatively less represented in the
+literature, hence it still largely poses a number of challenges and unanswered research questions that
+deserve further exploration. The most obvious complexity found relates to the reciprocity requirement.
+In this sense, fusion processes are a crucial and distinctive task in most RRS for determining the level
+of reciprocity or mutual compatibility between two users, predicated on unilateral preferences or rec-
+ommendations. Various approaches have been adopted in the RRS literature for fusing unidirectional
+information between (pairs of) users into reciprocal information [78, 153, 105], with the most salient
+ones relying on aggregation functions, e.g. harmonic or weighted means between unidirectional user-
+to-user preferences, for this end [15]. Other well-known examples of ongoing challenges in the research
+area include: balancing users’ different levels of popularity to prevent biased recommendations [78],
+an accentuated presence of the data sparsity and user cold-start problems [53], the relative shortage
+of publicly available datasets to incentivise user studies, owing to privacy concerns. On another note,
+even though most RRS along the last decade have been developed for a limited range of applications,
+namely online dating, recruitment, learning and social media, there exist other social matching prob-
+lems where they could play a very important role and exert significant impact to promote sociability
+and, ultimately, to contribute to social good. This opportunity goes in parallel with the increasing
+abundance of new social media platforms and apps built with more specific goals, e.g. house-share,
+skill-sharing, professional collaboration, and so on [37, 42, 107].
+The aforesaid challenges and identifiable opportunities for future research on RRS, along with the
+increase in the developments made on RRS models witnessed in the literature in the last years and
+the growing spectrum of consolidated (or potential) real-world applications of RRS, motivate the need
+for a comprehensive analysis of RRS literature and an elaborated discussion on the current state of
+affairs in the field. Accordingly, this paper provides a fourfold contribution:
+
+  1. A formal characterization of RRS with respect to other RS families and the definition of a general
+      RRS conceptual model for RRS guided by preference fusion processes (Section 2).
+  2. An outline of the algorithmic, fusion and evaluation aspects underlying RRS (Section 3).
+  3. An exhaustive analysis of existing state-of-the-art studies in the RRS literature, with a triple ob-
+      jective: (i) signaling the key characteristics of existing RRS methodologies and studies conducted
+      in several application domains; (ii) highlighting the recommendation techniques and fusion pro-
+      cesses utilized to integrate reciprocity; and (iii) analyzing some representative models in further
+
+
+                                                    3
+        detail (Section 4).
+  4. A discussion of the challenges, research gaps, opportunities and future research directions in the
+        landscape of RRS (Section 5), emphasizing the underlying fusion processes to capture reciprocity
+        and emerging application areas of RRS.
+
+Following these contributions, Section 6 summarizes the lessons learnt and concludes the paper.
+
+
+2. Reciprocal Recommender Systems: Characterization and Conceptual Model
+
+This section formally introduces the reciprocal recommendation problem, describing the main elements
+of an RRS and its differentiating features with respect to other RS frameworks.
+      People-to-people recommenders have become an important class of RS in a variety of online services
+[22, 75, 112, 114], be it for finding a partner, a job, or simply connecting people with each other. Unlike
+classical item-to-user recommenders, in an RRS there exist two parties that must be satisfied with
+the recommendation to deem it as successful, that is to say, reciprocity is fundamental for a potential
+connection between people to succeed. An RRS is fundamentally different from other two broad classes
+of RS, where reciprocity is not required:
+
+  1. Item-to-User RS : Classical RS approaches concentrate on recommending items that represent
+        products or services, such as movies, books, music, hotels, restaurants, etc., for individuals
+        or groups who may potentially consume the recommendable item(s) [4, 46]. In most of these
+        approaches only the needs and interests of the target user (or group) need to be met, therefore
+        preference relations are unidirectional and they are defined as user-to-item preferences. In these
+        cases, traditional recommendation strategies are often enough to satisfy the users’ needs.
+  2. Nonreciprocal User-to-User RS : These approaches recommend people to one target user, consid-
+        ering only one-sided relevance, i.e. no reciprocity is needed because only the interests/needs of
+        the target user influence the process of recommending people to her/him and the success of the
+        recommendation. Examples include recommending whom to follow on Twitter1 [51, 136, 148].
+
+Pizzato et al. defined in [114] a classical item-to-user RS task as follows.
+
+Definition 2.1. Recommender System [114]. Given a user x ∈ U , a recommender R(x) is a
+system that recommends a list of items R ⊂ I such that the degree of preference px,i by x towards
+
+  1
+      http://twitter.com
+
+
+
+
+                                                     4
+every item i ∈ R is stronger than the preference degree by x towards any item i0 ∈
+                                                                                 / R:
+
+                                      RI (x) = {i : px,i > px,i0 , ∀i ∈ R, ∀i0 ∈
+                                                                               / R}                                   (1)
+
+with R being the list of recommended items for x.
+
+Based on Definition 2.1, we formalize two classes of user-to-user recommender. An overview that
+emphasizes unidirectional user recommendation in social media was conducted in [56].
+
+Definition 2.2. Unidirectional user-to-user RS. Let x ∈ U be a user. An unidirectional (nonre-
+ciprocal) user-to-user recommender RU (x) is a system that recommends users y such that:
+
+   i) y ∈ R ⊂ U and y 6= x, for every y ∈ R.
+  ii) The degree of preference or interest by x for every y in R, denoted px,y , is stronger than her/his
+         preference degree towards any other user y 0 6= x not belonging to R.
+
+                                     RU (x) = {y : px,y > px,y0 , ∀y ∈ R, ∀y 0 ∈
+                                                                               / R}                                   (2)
+
+In an item-to-user RS (see Equation 1) the set of all recommendable items is I. By contrast, in a
+nonreciprocal user-to-user recommender (see Equation 2) we generally have that, for every target user
+x ∈ U the set of recommendable entities are also users in U .
+
+Definition 2.3. Reciprocal Recommender System. Given two users x, y ∈ U , x 6= y, let x be
+the subject user who accesses a system to obtain recommendations, and let y be an object user 2 who
+is susceptible to being recommended to x. A reciprocal recommender, denoted by RRU (x) is a system
+whose output combines two unidirectional user-to-user recommenders RU (x) and RU (y), intending to
+simultaneously satisfy the interests of both x and any y ∈ RR(x).
+
+              RRU (x) = {y : y ∈ RU (x) and x ∈ RU (y)} = {y : px↔y > px↔y0 , ∀y ∈ R, ∀y 0 ∈
+                                                                                           / R}                       (3)
+
+where px↔y is a level of mutual preference or compatibility (reciprocity) between x and y, frequently
+obtained by using an aggregation or combination function φ, i.e. px↔y = φ(px,y , py,x )[15].
+
+Users y can only be recommended to a subject user x if a sufficient level of reciprocity is predicted
+in terms of mutual interest. Such reciprocity is measured by combining RU (x) and RU (y), often
+aggregating x’s preferences score for y and vice versa. This conceptual model is visually represented
+
+   2
+       In RRS literature, recommendable users are sometimes referred to as items, to distinguish them from the target user
+x. Notwithstanding, the inherent requirement in RRS of jointly meeting both users’ interests is still kept.
+
+
+                                                             5
+in Figure 1. As we can observe, two preference scores are predicted: one denoted px,y that represents
+how much x would be interested in y (e.g. for starting a relationship) and one that represents how
+much y would be interested in x, denoted py,x . The subsequent aggregation step is a fundamental
+principle of most RRS in the literature. The choice of how to fuse information from both sides is a
+crucial aspect in RRS research to date [106, 105], albeit having still received little attention to date.
+Intuitively, if y is recommended to x, then x would be also likely to become a recommendation for y.
+Regardless of who the subject user is, the recommendation is successful if both parties respond to it
+positively.
+
+
+
+
+                                   Fig. 1: General RRS conceptual model.
+
+With the rise of Internet and mobile app services aimed at connecting people, the range of application
+domains where RRS research can be implemented has subtly increased in recent years. Some of these
+applications motivate us to subdivide the previous RRS definition into two variants, depending on
+whether or not the set of all users U is homogeneous or not. These two variants are introduced below.
+
+Definition 2.4. Single-class RRS. Let x, y and RRU (x) be as introduced in Definition 2.3. If any
+user x ∈ U can be recommended any other user y ∈ U \ {x}, then RRU (x) is a single-class RRS.
+
+Definition 2.5. Two-class RRS. Let x, y and RRU (x) be as introduced in Definition 2.3. If U is
+partitioned into two disjoint user sets UX and UY , such that if x ∈ UX then y ∈ UY and vice versa,
+then RRU (x) is a two-class RRS.
+
+In a two-class RRS, users are divided in two classes, e.g. male and female, job seeker and recruiter,
+etc., such that the subject user and object user cannot belong to the same class of users in order
+to be eligible for mutual recommendation. Interestingly, this has been by far the most investigated
+
+                                                    6
+            Table 1: Differences between RRSs and other frameworks for item and user recommendation.
+
+  Recommender framework             Features
+  Traditional item-to-user recom-   - The user receives recommendations consisting in items i (products, services, etc.)
+  mender                            from an item set I.
+                                    - An item can be generally recommended to multiple users separately, subject to its
+                                    availability.
+                                    - The target user is the only entity determining the success of the recommendation
+                                    (except for multi-stakeholder RS [168]).
+                                    - Users/items might continue being part of the system after a successful recommen-
+                                    dation takes place.
+                                    Applications: e-commerce, leisure, tourism, food, retail, etc.
+  Nonreciprocal user-to-user        - The user receives recommendations consisting in other users.
+  recommender                       - A user can be recommended to multiple users, all of whom can simultaneously
+                                    accept the recommendation.
+                                    - The target user is the only entity determining the success of the recommendation.
+                                    - Users might continue being part of the system after a successful recommendation
+                                    takes place.
+                                    Applications: social media (e.g. following Twitter users).
+  Reciprocal Recommender (RRS)      - The subject user x receives recommendations consisting in object users y, some of
+                                    whom might in turn be recommended the subject user.
+                                    - In some application areas, if the two users agree to connect with each other, then
+                                    they are no longer available for being recommended to anyone else. Besides, in some
+                                    contexts users may no longer need using the system after a successful recommenda-
+                                    tion.
+                                    - Both x and y must be satisfied with the recommendation in order to deem it as
+                                    successful.
+  Single-class RRS                  - The user set U is homogeneous: any two others are potentially recommendable to
+                                    each other.
+                                    Applications: social media (connecting user profiles), homosexual dating, finding
+                                    friends, online learning, shared economy, skill share platforms.
+  Two-class RRS                     - The user set U is divided into two classes of users: only pairs of users from a
+                                    different class each can be mutually recommended.
+                                    Applications: heterosexual dating, recruitment, student-supervisor matching.
+
+
+
+type of RRS, largely due to the prevalence of heterosexual online dating and recruiting as the most
+investigated application domains for RRS approaches. Table 1 extends the discussion on differences
+between traditional and reciprocal recommenders provided in [114], by summarizing the distinctive
+features of RRSs with respect to the other related frameworks formalized above.
+
+
+                                                           7
+Remark 2.1. It is worth highlighting the difference between RRSs and another type of recommender
+that has attained importance in the last years: multi-stakeholder RS [2, 1, 168]. Unlike RRS where
+both parties involved are users seeking recommendations, in a multi-stakeholder recommender not only
+the interests of the target user(s) are sought, but also those from other parties seeking other forms of
+benefit e.g. sellers of a product, providers of a service, advertisers, etc. A multi-stakeholder RS is a
+broader generalization of an RRS. Our overview focuses its scope on RRS-related studies solely.
+
+
+3. Algorithms, Fusion Approaches and Evaluation Methods for RRS
+
+This section examines the methodologies, processes and common evaluation practices in the devel-
+opment of reciprocal recommendation models. It starts by providing a broad categorization of the
+algorithmic approaches underlying existing literature (Section 3.1) followed by a summary of fusion
+approaches frequently employed to integrate reciprocity (Section 3.2). The section concludes providing
+a bird’s-eye view of evaluation methods used to validate reciprocal recommenders (Section 3.3).
+
+3.1. Taxonomy of Algorithms for Reciprocal Recommendation
+In line with traditional RS, most of the RRS literature distinguishes between several families of
+algorithms to produce reciprocal recommendations, many of which are used to guide the preference
+prediction process depicted in Figure 1: content-based, memory-based collaborative filtering, model-
+based collaborative filtering and hybrid methods. Each of these families of algorithms encompasses
+in turn a number of specific techniques employed under their core principles. Accordingly, a two-
+level categorization of algorithms underlying RRS is shown in Table 2. An additional class, Other,
+is included to classify some approaches that are comparatively less common within the general RS
+landscape or they do not closely abide to the principles behind the other classes. It is worth highlighting
+that the list of works shown in Table 2 (“Representative works” column) is merely a representative
+example of RRS models featuring the use of the listed algorithms. Consequently, this list is not
+intended to be exhaustive: an exhaustive overview including these and other RRS works is provided
+in Section 4, divided into several application domains.
+   To better understand each of the main families of algorithms within the scope of reciprocal user-
+to-user recommendation, their basic principles are outlined below:
+
+  1. Content-based (CB) Reciprocal Recommendation: Algorithms under this category in-
+      tend to (i) recommend similar users y to those liked by the subject user x, while (ii) ensuring
+      reciprocity in recommendations from the viewpoint of y’s interests. The two core pieces of in-
+      formation are user profiles and user preferences. User preferences can be explicit, e.g. users
+
+                                                    8
+                         Table 2: Taxonomy of algorithms used in RRS literature
+
+ RS family       Algorithms/techniques                                   Representative works
+                 Preference-to-profile similarity                        [111, 113, 153, 155]
+ Content-based   Profile-to-profile similarity                           [92, 93]
+ (CB)            Multi-criteria matching                                 [76, 120, 151, 169]
+                 Deep Learning                                           [144]
+                 Graph embedding                                         [141]
+                 Markov Models                                           [9]
+                 Binary classification, regression                       [37, 72, 91]
+                 Preference learning, e.g. Latent Dirichlet Allocation   [69, 149]
+                 Stable matching                                         [134, 158]
+                 Clustering of similar users                             [13, 30, 31, 32, 150]
+ Memory-based    Neighbourhood-based                                     [22, 117, 153, 162, 167]
+ CF              Probabilistic neighbourhood-based                       [24]
+                 Social network/graph analysis                           [7, 45, 82, 84, 89, 124, 143]
+                 Friend-of-friend mechanisms                             [28, 44]
+                 Instance-based learning                                 [102]
+ Model-based     Learning classifiers e.g. SVM, AdaBoost, etc.           [78, 101, 170]
+ CF              Factorization / latent factor models                    [83, 106, 145]
+                 Association rules                                       [5, 79]
+                 Collaborative filtering and Markov Models               [8, 10]
+ Hybrid
+                 Word embeddings                                         [107]
+                 Semantic or knowledge-based matching                    [133, 165]
+                 Context-aware matrix factorization                      [157]
+                 Multi-objective optimization                            [123, 152]
+ Other
+                 Genetic algorithms                                      [138]
+                 Image processing                                        [90]
+
+
+
+
+  may indicate the attributes sought in other users [92, 108] or, as occurs in most approaches,
+  they are implicitly learnt from user activity in the system, namely user-user interactions such
+  as expressions of interest, viewed user profiles or messaged users [113, 144]. By observing user
+  x’s interactions with other users, it is possible to build a representation of her/his interests or
+  preferred attributes in other users. Then, an unilateral preference value from x to y is usu-
+  ally predicted based on the matching between this preference representation and the properties
+  (typically the profile) of any recommendable user y unknown to x.
+2. Collaborative Filtering-based (CF) Reciprocal Recommendation: In classical recom-
+  mendation, CF boils down to producing recommendations for x guided by the identification of
+
+
+                                                        9
+      users with similar behavior or interests to those of x. In a user-to-user setting, the goal is to
+      observe the preferences of users who interact similarly as x with other users in the system. User
+      profile information is less relevant in CF, where the task typically concentrates on analyzing the
+      dynamics of user-user interactions and identifying users z with similar interactions to x [153],
+      thereby recommending to x “unknown” users y with whom z has interacted in a way that in-
+      dicates positive interest from z to y. Intuitively, an additional requirement would be to meet
+      reciprocity from y’s side. Similar to classical RS, the CF process can be done by operating on
+      the raw data directly (memory-based CF) or by training a model upon the data at hand [106]
+      and using it to make predictions of users’ interests in unknown users to them (model-based
+      CF). Two popular approaches used in various CF-RRS are based on interest similarity and
+      attractiveness similarity [22, 153], which are illustrated and compared against CB in Figure 2:
+
+          • Interest similarity is determined by active user interaction. Assuming a two-class RRS
+            scenario, if two users x, z in the same class initiate positive interactions with several users
+            yj in common, x and z have similar taste.
+
+          • Attractiveness similarity is determined by passive user interaction. If x, z receive positive
+            interactions from various users yj in common, x and z have similar attractiveness.
+
+   3. Hybrid: This category considers approaches that adopt the principles from two or more families
+      of recommendation approaches. This may include models that combine CB and CF e.g. combin-
+      ing user profile and neighborhood information [5], incorporating knowledge-based mechanisms
+      in CB or CF [133], integrating contextual awareness in CF [157], etc (see Table 2).
+
+
+
+
+Fig. 2: Predicting unilateral preferences in (a) CB, (b) CF under interest similarity, and (c) CF under attractiveness
+similarity, in an online dating example.
+
+
+
+                                                         10
+  Table 3: Summary of fusion methods utilized for reciprocity integration and some representative RRS using them
+
+           Fusion approach                                              Representative RRS models/studies
+
+           Harmonic mean                                                Pizzato et al.[111, 113], Prabhakar et al. [121], Xia
+                                                                        et al. [153], Potts et al. [120]
+           Harmonic mean combined with sum                              Sudo et al. [141]
+           Sum of similarities/distances                                Almalis et al. [11], Yu et al. [161]
+           Product operator                                             Ting et al. [145], Li and Li [89]
+           Weighted mean                                                Kleinermann et al. [78], Xia et al. [152]
+           Multiple averaging and uninorm aggregation func-             Neve and Palomares [105, 106]
+           tions
+           Matrix multiplication                                        Jacobsen and Spanakis [69]
+           Set intersection of recommendable users                      Yacef and McLaren [155], Kutty et al. [83]
+           Aggregation (union) of probabilities                         Pizzato and Silvertrini [118]
+           Average similarity between x and previous successful         Liu et al. [93]
+           interactions with y
+           AND-like verification of both preference-profile sim-        Chen and Nayak [30], Kunegis et al. [82]
+           ilarities
+           Community-level matching                                     Alsaleh et al. [12, 13]
+           Inverse product between recommendation ranks                 Mine et al. [99]
+
+
+
+
+3.2. Fusion Approaches for capturing Reciprocity
+
+As stated earlier, analyzing whether potential reciprocal interest exists or not between users is a funda-
+mental requirement in any RRS: without fulfilling this reciprocity requirement, little guarantees would
+exist for the “matching recommendation” to be a success. Fusion methods, such as the aggregation
+of unilateral preferences into bidirectional preferences, constitute a common necessary step towards
+generating reciprocal recommendations. Table 3 provides a summary of different fusion methods that
+have been used in RRS to account for the reciprocity requirement inherent to this family of RS.
+   Some of the existing fusion methods are interpretable enough to give an easily observable indicator
+of the level of mutual compatibility between the subject user x and an object user y. This is the case
+of preference aggregation strategies. As discussed in earlier sections, preference aggregation is the
+most traditional approach to measure the level of mutual preference between two users x and y. It
+boils down to aggregating the two unilateral preferences degrees by one user for the other:
+
+
+                                                     px↔y = φ(px,y , py,x )
+
+with φ : [0, 1]×[0, 1] → [0, 1] an aggregation function [15]. This approach has been adopted by the most
+popular RRS models [113, 153], mainly by using the harmonic mean operator over two aggregation
+
+
+                                                                   11
+inputs [106, 120, 155]:
+                                                                        2
+                                   px↔y = φH (px,y , py,x ) =
+                                                                   p−1     −1
+                                                                    x,y + py,x
+
+   Rather than arbitrarily, the choice of the harmonic mean operator φH to combine preference scores
+into mutual preference indicators [113, 114], is motivated by its tendency to provide aggregated results
+closer to the minimum of its inputs. In practice, this property largely reflects a core requirement in
+any RRS: both users should be (predicted as) sufficiently interested in one another, in order to
+produce recommendations that are likely to succeed. In [105], the performance of an RRS under
+                                                                        px,y + py,x
+other mean operators, namely the arithmetic mean φA (px,y , py,x ) =                and geometric mean
+                                                                             2
+                   √
+φG (px,y , py,x ) = px,y · py,x , was compared and experimentally proved as inferior. This arguably goes
+in line with the higher optimism exhibited by the arithmetic and geometric means, which in the RRS
+domain translates into a relaxation of the aforesaid requirement between users’ preferences for each
+other. Generally, it holds that φH (·) ≤ φG (·) ≤ φA (·).
+   The cross-ratio uninorm [156] is a mixed-behavior aggregation function that was also analyzed in
+the comparative studies made in [105, 106], leading to interesting results. Its behavior can shift between
+optimistic, pessimistic and neutral depending on the actual aggregation inputs px,y , py,x ∈ [0, 1] being
+higher or lower than an intermediate or neutral value of 0.5, Given two unilateral preference scores
+px,y and py,x their aggregated value obtained by the cross-ratio function is given by:
+
+                                                              px,y · py,x
+                            U(px,y , py,x ) =                                                          (4)
+                                                px,y · py,x + (1 − px,y ) · (1 − py,x )
+
+The performance of the cross-ratio aggregation was analyzed in two collaborative filtering-based RRS
+models [106, 153], being reported as comparable or slightly superior to that of the harmonic mean
+in [153], under some concrete settings. Further research would be needed to find more improvements
+e.g. by using weighted versions of these operators and analyzing the rationale behind the behavior of
+these operators under the scope of the whole RRS pipeline.
+   Other works have considered simpler fusion strategies such as a sum or product of unidirectional
+preferences [11, 145]. These fusion approaches fail to yield a reciprocity indicator that is representative
+of the two inputs. Besides, calculating px↔y as a sum of unidirectional preference values presents the
+limitation of not being able to discriminate between different pairs of inputs that may lead to the same
+aggregation result. For example, px↔y = q could be the result of either (i) aggregating two balanced
+or equal unidirectional preference values q = q/2 + q/2, or (ii) aggregating two inputs one of which
+represents total lack of interest from one user for the other, i.e. q = q + 0. Thus, the semantics and
+interpretability of the fusion results are lost.
+
+
+                                                         12
+   Beyond aggregation functions or other fusion operators that yield a quantifiable indicator of mutual
+preference, some studies used less common fusion strategies to reflect reciprocity, for instance: (i)
+logical connectives [82], (ii) set intersection operations between the two users’ recommendation lists
+[155], (iii) set intersections between similar users to x and those reciprocally liked by potential matches
+y, or (iv) aggregating the ranking positions of x and y in each other’s recommendation lists [99]:
+
+
+                                                        1
+                                  px↔y =                                                               (5)
+                                           rank(Rx (y)) · rank(Ry (x))
+In the latter case of ranking fusion, px↔y should not be interpreted as a degree of mutual preference,
+but rather as an aggregated ranking estimate, with its value - and consequently the potential positions
+of x and y in each other’s recommendation lists - being highly dependent on the other users being
+recommended in both lists and their ranked positions.
+   Some gaps and areas for improvement, mainly related to the use of aggregation functions in
+RRS [15] are discussed along with other RRS challenges in Section 5. To summarize, we argue that
+aggregation functions to combine preference scores and fusion methods for unilateral recommendation
+lists or rankings, would constitute two promising directions for further study of RRS models from a
+reciprocity and fusion viewpoint.
+
+3.3. RRS Evaluation Methods
+
+There are a number of metrics that are used to evaluate recommender systems of diverse nature, with
+RRS being no exception. For instance, as described in [34], one could use metrics used to evaluate
+information retrieval systems such as precision, recall, F1, Mean Reciprocal Rank (MRR), Mean
+Average Precision (MAP), Spearman Rank Correlation Coefficient (SPRCC), Normalized Discounted
+Cumulative Gain (nDCC), and coverage; as well as metrics used in machine learning systems such
+as Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and Area Under Curve (AUC).
+Similarly, it can also be important to measure recommender systems on characteristics related to the
+user experience such as trust, novelty, serendipity and fairness; as well as metrics such as real-time
+performance, scalability and robustness are used to measure how system can be applied from an
+engineering perspective [16].
+   It is important that during the development of a recommender system developers may optimise
+their system towards the metrics that are important for their business objective. For instance: a
+recommender for related legal documents should have high recall, while advertisements strive for
+high precision. These metrics can mostly be used in offline experiments, but also when measuring
+performance when experiments are done online with real users.
+
+                                                    13
+                      Target User                           Recommended User
+            Success   Actioned On Recommendation            Accepted Contact
+             Failed   Not Actioned on Recommendation        N/A
+             Failed   Actioned on Recommendation            Rejected Contact
+          Unknown     Actioned on Recommendation            Not read contact request
+             Failed   Actioned on Recommendation            Read contact and ignored after N days
+
+                            Table 4: Common success and failure indicators in RRS.
+
+
+   When implementing RRS, one may need to look beyond the evaluation metrics of traditional
+recommender systems. Although most of the metrics above are relevant to RRS implementations,
+RRS have the extra complexity that a truly successful recommendation can only be defined once it is
+both (1) accepted by the user who received the recommendation and (2) accepted by other user who
+was the subject of the recommendation.
+   Under the RRS scenario, recommendations need an action from two parties, hence becoming
+necessary to define metrics that capture success and/or failure indicators [112] evidenced by historical
+interaction data, some of which are listed in Table 4. Examples of such metrics are:
+
+  1. Precision: Given a recommendation list of size n, precision at n (P @n) accounts for the pro-
+      portion of successful recommendations:
+                                                       #successf ul
+                                              P @n =                                                  (6)
+                                                           n
+  2. Success rate: The success rate at n (S@n) accounts for both successful and failed recommen-
+      dations. It is given by the ratio of the number of successful recommendations and the known
+      (both successful and failed) recommendations in a list of size n:
+                                                     #successf ul
+                                        S@n =                                                         (7)
+                                                 #successf ul + #f ailed
+  3. Failure rate: This metric, denoted F @n, tells use whether the recommendation strategy helps
+      minimizing negative responses, thus being important for evaluating user satisfaction:
+                                                       #f ailed
+                                       F @n =                                                         (8)
+                                                 #successf ul + #f ailed
+  4. Recall : This measure, denoted R@n, indicates how close a recommendation list of size n is to
+      including all known successful interactions, hence it is used to assess reliability:
+                                                    #successf ul
+                                    R@n =                                                             (9)
+                                            #known successf ul interactions
+Similarly, based on the notion of successful and failed interactions, other information retrieval measures
+e.g. ranking measures, mean reciprocal rank, etc., can be adapted to an RRS context.
+
+                                                     14
+4. Analysis of State-of-the-Art RRS literature and Representative Models
+
+In this section, we describe the state-of-the-art research done so far on RRSs. The current solutions
+available to reciprocal recommendation are summarized by highlighting some of data/information
+types and techniques used to predict user preferences. Different examples of fusion processes utilized
+to calculate mutual compatibility are likewise highlighted. Firstly, we provide a broad snapshot of
+extant RRS literature, structured by the main application domains addressed (Section 4.1). We
+secondly analyze a small number of representative RRS models with the purpose of illustrating in
+more detail the use of different recommendation strategies, prediction and fusion techniques in RRS
+(Section 4.2).
+
+4.1. A snapshot of RRS literature
+
+We firstly overview models and related studies in online dating, which is the most widespread
+application of RRS research (Section 4.1.1), followed by recruitment (Section 4.1.2), online learning
+(Section 4.1.3), social networks (Section 4.1.4), and other domains (Section 4.1.5).
+
+4.1.1. Reciprocal Recommendation in Online Dating
+Online dating platforms, where people attempt to date another person or find a partner via the
+Internet, have become the most popular area where innovations in RRS research have emerged [5,
+106, 117, 153]. One of the earliest studies on RS for online dating was published in 2007 [20], without
+practical considerations for reciprocity but hinting at the necessity of capturing this requirement
+in later research. Although the first subsequent approaches in this domain were prominently CB
+solutions, the trend in recent years shows a gentle shift towards improved models based on CF and
+hybrid methods. This subsection offers a panoramic view of RRS for online dating highlighting both
+theoretical and user-centered studies (Table 5) and implemented models (Table 6).
+   The earliest comprehensive analysis of RRS for online dating can be attributed to Pizzato et
+al. in [114], who coined the first definition of RRS, identified the key personalization challenges
+against conventional RS and proposed a number of techniques to address them. Specific requirements
+were identified in domains other than dating that would also benefit from reciprocity, e.g. expertise
+matching [132] and job-candidate matching [94, 159]. In [112] the authors conducted an online dating
+case study predicated on diverse success and evaluation metrics, whereas in [115] they investigated the
+sensitivity of three different RRS to detect scammers, namely dubious users who can be potentially
+harming to other users and the system itself due to their likelihood of becoming popular. The study
+shows that CB approaches seem more robust against such dubious users.
+
+
+                                                  15
+                 Table 5: Summary of theoretical studies and analyses related to RRS in online dating.
+
+      Authors                          Aspects investigated
+      Pizzato et al. [112, 114]        Earliest definition of RRS and identification of domain-specific challenges.
+                                       Comprehensive case studies in online dating.
+      Pizzato et al. [115]             Investigates sensitivity of RRS models to scammers, assessing their impact on
+                                       various CB and CF-based approaches.
+      Xia et al. [154]                 Analyzes temporal behavior, messaging and replying patterns, and user cor-
+                                       relations under different attributes. Investigates how implicitly inferred pref-
+                                       erences from behavior deviate from explicitly stated preferences.
+      Akehurst et al. [6]              Differences between implicit and explicit user preferences in online dating.
+      Felmlee & Kreager [47]           Finding “invisible communities” from messaging graph data. Attributes like
+                                       relationship homophily and attractiveness can clearly characterize clusters.
+      Li et al. [90]                   Facial attractiveness information from user pictures as a means to overcome
+                                       the sparsity problem when mining graphical data.
+      Su & Hu [140]                    Gender attribute differences in the processes of selecting a potential partner.
+      Vitale et al. [150]              Computational complexity analyses with synthetic and real-world data.
+
+
+
+
+   The study in [6] investigates the difference between explicit and implicit user preferences in online
+dating. Explicit preferences are given by desired features in a dating partner, whereas implicit pref-
+erences are learnt upon user activity in the system. Besides implicit preferences being reported as a
+much better predictor, it is also hinted that users could benefit from a suitable presentation of their
+implicit preferences, using them to compare against explicit preferences and adjusting them accord-
+ingly. The temporal behavior and preferences of users in dating sites were analyzed in [154] based
+on messaging and replying patterns, discovering among other facts that males tend to seek younger
+females and females prioritize socio-economic status or education level of male users. Another study
+[140] focuses on gender attribute differences in the processes of selecting a potential partner, showing
+that female users tend to be the only ones who consider how a male user suits their preferences, and
+what his requirements would in turn be like. From a sociological perspective, in [47] graph data about
+message exchanges are mined to identify clusters of users who tend to interact with each other in
+dating sites. Evidence suggests that ”invisible communities” are created, with attributes like relation-
+ship homophily and attractiveness being useful to characterize them. In [90], facial attractiveness is
+inferred from user photos to overcome the sparsity problem by mining graphical data. Despite the
+effectiveness of using image data in producing accurate and diverse recommendations, the approach is
+subject to privacy concerns. Lastly, the performance of online dating RRS has been explored in [150],
+analyzing the computational complexity via experiments with synthetic and real data.
+
+
+                                                            16
+Table 6: Summary of existing RRS models in online dating. Citations in bold are analyzed in detail in Section 4.2
+
+RS family         Authors                          Key features
+                  Pizzato et al.       [111],      Preferences are modeled as frequency distributions on attributes’
+                  [113]                            values. First models introducing the harmonic mean to aggregate
+Content-based
+                                                   unidirectional preference scores into reciprocal preference scores.
+                  Alanazi & Bain [9]               HMMs to predict user-user interactions based on past interactions.
+                  Sudo et al. [141]                Graph embedding for mapping feature vectors in different domains
+                                                   into a common representation space.
+                  Tu et al. [149]                  Latent Dirichlet Allocation to learn preferences from messaging be-
+                                                   havior and profile features.
+                  Otakore and Ugwu [108]           Preferences explicitly inferred from questionnaires.
+                  Tay et al. [144]                 Deep learning approach upon text data in widespread social media
+                                                   platforms e.g. Twitter. Explainability in RRS.
+                  Zheng et al. [169]               Multi-criteria utility framework to account for algorithmic fairness.
+                  Pizzato et al. [118]             Probabilistic neighborhood-based. Popularity-aware
+Collaborative     Al-Zeyadi et al. [7]             Graph analysis on past movement patterns.
+filtering         Cai et al. [22, 23, 24]          Attractiveness and interest similarity in neighborhood-based CF.
+                  Chen et al. [30, 31, 32, 33],    Clustering of similar users. Community-level matching.
+                  Alsaleh et al. [12, 13]
+                  Kleinermann et al. [77], [78]    AdaBoost classifier to predict recommended user’s response.
+                                                   Popularity-aware. Explainability in RRS.
+                  Kunegis et al. [82]              Dual preferences modelled by complex numbers.
+                  Kutty et al. [83, 84]            Tensor model of user attributes-interactions. Popularity-aware.
+                  Li & Li [89]                     Bipartite network. Compatibility as product of predicted ratings.
+                  Nayak et al. [102, 101]          Instance-based learning, assigning weights to profile criteria.
+                  Neve & Palomares [105, 106]      Two Latent Factor Models, one for each user class. Effects of dif-
+                                                   ferent aggregation operators in calculating reciprocal preferences.
+                  Qu et al. [123]                  Optimization considering clicks and reciprocated interactions.
+                  Ting et al. [145]                Transfer learning. Compatibility as product of predicted ratings.
+                  Xia et al. [153]                 Multiple neighborhood and similarity functions. Harmonic mean.
+                  Yu, Zhao et al. [162, 167]       Reciprocal bipartite network. Attractiveness and interest similarity.
+                  Alanazi & Bain [8, 10]           HMMs to predict interactions, preceded by CF
+                  Akehurst et al. [5], Koprinska   Determining interaction groups for x based on CB and CF.
+Hybrid
+                  & Yacef [79]
+                  Ramanathan al. [127]             Matrix factorization. Incorporating dislike information.
+                  Rodrı́guez et al. [133]          Integration of knowledge-based approach in CB filtering.
+                  Yu et al. [160, 161]             Community detection to address user cold-start problem.
+                  Zhang et al. [163]               Incorporates influence of facial features.
+
+
+
+
+                                                        17
+      Content-based RRS (CB-RRS) have been amply investigated in the online dating domain, where
+it is more frequent to find available user profile metadata explicitly describing users’ features and
+interests than in conventional RS domains such as e-commerce. RECON [111, 113], analyzed in detail
+in Section 4.2, is one of the best known CB-RRS for online dating, with numerous models being based
+on it. Tu et al. [149] developed an RRS framework founded on a Latent Dirichlet Allocation model,
+where user preferences are learnt by observing correlated user profile features with reply actions.
+Experiments with real data from the Baihe.com dating site show that these learnt preferences are
+better predictors of success than explicitly stated interests, however the model assumes that px,y and
+py,x are symmetric and equivalent, hence reciprocity is not analyzed. Meanwhile, the RRS in [108]
+provides a unique example in the literature, being based on questionnaires in which users express
+their preferences about a potential partner and they also indicate how important each question is to
+them. This is one of the few systems that rely exclusively on explicit information supplied by users
+to estimate reciprocal preferences, without taking user-user interactions into consideration.
+      Alanazi and Bain investigated RRS models for dating that incorporate temporal features and
+dynamic preference modelling. Their first solution in [9] relies on Hidden Markov Models (HMM)
+to dynamically generate recommendations, by observing the temporal evolution of user behavioral
+patterns. The recommendation problem is represented as a bipartite graph of nodes representing
+female and male users, such that new edges (potential matches) are predicted given a known sequence
+of past interactions. With a nearly 50% success rate, these models achieved a comparably higher
+success rate than other CB-RRS that existed so far. Further approaches from the same authors were
+later proposed in [8, 10], including a hybrid RRS based on HMMs, called CFHMM-HR (CF Hidden
+Markov Models Hybrid Recommender ) that extends the one in [9] by introducing an initial CF stage
+to devise a candidate list of recommendations by using known algorithms such as ProCF [24]. The
+top N recommendations are then fed into the content-based HMM model. CFHMM-HR outperforms
+its content-based counterpart by drastically improving the success rate from under 50% to 60-70%.
+      Among recent CB-RRS models for online dating, a framework based on multi-criteria utility theory
+has been proposed in [169] to account for the notion of algorithmic fairness and promote efficient and
+equitable recommendation decisions. Multi-criteria ratings on attractiveness, sincerity, fun, etc., are
+inferred to estimate users’ preferences by fusing them using a weighted averaging strategy in which
+the weights are learnt by optimization. An exploratory analysis on the Speed-Dating Experiment
+dataset3 , shows that a reasonable trade-off between optimizing utilities and recommender performance
+
+  3
+      Speed Dating Experiment dataset: https://www.kaggle.com/annavictoria/speed-dating-experiment
+
+
+
+                                                     18
+is achieved. In [141], graph embedding is utilized for mapping feature vectors from multiple data
+sources into a common representation space. Lastly, the COUPLENET deep learning model [144]
+bets on recommending potential couples based on text data in widespread social media platforms e.g.
+Twitter, instead of relying on dedicated dating sites. COUPLENET is also able to provide explainable
+recommendations.
+   Given the ample variety of classical RS models based on Collaborative Filtering [17, 41, 43,
+110], it is not surprising that some popular CF techniques like neighborhood-based methods, matrix
+factorization, graph and neural network-based approaches have been used as the foundation to build
+RRS solutions. Some of these CF approaches for online dating are briefly outlined below, whereas
+three representative CF-RRS models are featured in detail in Section 4.2: RCF [153] and the two
+recent approaches RWS [78] and LFRR [106].
+   An early study that sat some bases for further CF-RRS research is attributed to Cai et al. [22].
+They propose SocialCollab, a neighborhood-based algorithm that predicts potential users a given user
+may like to contact by considering the dual notion of attractiveness and interest-based similarity later
+considered in other works [153]. This work defines some key principles for CF-RRS in dating: (i)
+if people with similar preferences to x like y, then x will like y, (ii) if x likes people with similar
+attractiveness to y, x will like y. SocialCollab was tested against two traditional CF approaches
+in which object users are merely modeled as items, showing clear improvements despite the notion
+of reciprocity is still not fully considered in this work: y is recommended to x based on similarity
+indicators found between x and neighbor users of y, but not vice versa. A closely related study
+from the same authors [23] investigates the problem of reciprocal link prediction between users from
+disjoint classes, namely predicting the sign of a link in heterogeneous user networks considering not only
+positive preference indicators but also negative ones. Based on [23], the computational efficiency issue
+is later addressed by the authors in [24] by defining an asymmetric similarity based on probabilities of
+acceptance or rejection of recommendations. This sits the bases for a probabilistic RRS model called
+ProCF that reported an improved performance, tractable computational complexity, and the ability
+to prevent biased results by highly popular users.
+   Classical approaches for people recommendation in social networks [87] do not apply to bilateral
+and bipartite social network structures, which are often used in two-class RRS. CF models for re-
+ciprocal recommendation in bipartite social networks [167, 162] typically consider both users’ taste
+and attractiveness, with strong mutual matches being typically predicted when both aspects co-occur.
+In [89] local and global reciprocal utilities, which capture users’ mutual preferences and the overall
+reciprocal network quality, are modelled by bipartite networks. A mutual relevance score is calculated
+
+                                                   19
+as the product of two unidirectional relevance metrics to filter recommendations for x. Similarly,
+RecoMPA [7] is an RRS based on movement patterns and graph analysis to predict future user-user
+interactions based on past ones. Frequently occurring movement patterns are detected to produce
+recommendations: users y who appear in frequent movement patterns where similar users to x have
+taken part, are likely to be recommended to x. The graph-theoretical approach in [82] introduces a
+representation based on complex numbers that jointly captures likeness and similarity between users,
+both in a dual positive-negative scale. Performance results are independent of the users’ class (gender),
+which makes this model directly applicable to homosexual online dating.
+   Forming communities in large and sparse social networks helps reducing the number of users that
+an RRS would need to analyze and overcoming the new-user cold-start problem [12]. Based on this
+principle, a repertoire of studies on RRS for dating, predominantly CF-driven, have been undertaken
+[12, 13, 30, 31, 32, 83, 84, 33, 102, 101]. These include: (i) clustering-based methodologies [31, 32, 33],
+where users are clustered based on potential dates whom neighbor users in x cluster have contacted; (ii)
+follow-up approaches [30] that fully incorporate the notion of reciprocity by checking that x preferences
+align with y profile and vice versa in a nearest-neighbor model that applies feature weighting; (iii) an
+instance-based learning algorithm [102] that assigns weights to profile criteria (height, body type, etc.)
+depending on their frequency of appearance, extended in [101] by using Support Vector Machines in
+the prediction task; (iv) a hybrid system [12, 13] that applies a different clustering strategy depending
+on the class of the subject user, e.g. for a male subject user x, male users are clustered based on their
+attributes, whereas female users are grouped predicated on preferences for male users; (v) a tensor
+Space-based approach [83] that jointly models user attributes and interactions in user networks, with
+promising results in terms of efficiency; and (vi) a Social Network Analysis approach [84] on bipartite
+graphs to identify communities of recommendable users around popular ones so as to reduce popularity
+bias. Besides [84], another another popularity-aware solution from different authors [118] combines CF
+and stochastic matching - a class of stable matching algorithms - ensuring that every user receives as
+many recommendations as those in which they have been recommended to others, thereby preventing
+that popular users are overly recommended and unpopular ones are neglected.
+   Regarding CF-RRS that train a learning model upon data (model-based approaches) [106], the
+Reciprocal Ranking (RRK) model was proposed in [123] with the aim of jointly considering unilateral
+feedback e.g. clicks made by a user, and bilateral feedback e.g. reciprocated interaction. RRK op-
+timizes an objective function via matrix factorization that incorporates both aspects of feedback to
+predict mutual preference. The probability of a match is determined upon the products of latent fea-
+ture vectors of both users, after which a gradient descent method is employed to optimize them. The
+
+                                                    20
+model was tested on real user data from a Czech dating site combined with synthetically generated
+data, demonstrating improvements of up to 14-17% with respect to existing methods IBCF [81] and
+CSVD [145], as well as an adapted baseline of the nonreciprocal Learning to Rank algorithm in [128].
+A transfer-learning based CF model was also proposed by [145] by extending Collective Matrix Fac-
+torization [139]. The recommender only relies on ratings and like/dislike clicks to predict preferences,
+with data from the Libimseti dating site.
+   Finally, there exist a few more examples of hybrid RRS in online dating besides the previously
+outlined ones [10, 12, 13]. Following their previous work [162], Yu et al. in [160] concentrate on the
+problem of learning from experienced users to produce successful recommendations for new users.
+For this, they detect communities of likeminded users employing an analogous preference modelling
+procedure to the one in RECON [113]. Subsequently, in [161] the authors describe a more compre-
+hensive case study using real-world data from an US dating site and hint at various directions for
+future work, e.g. investigating the effect of using different community detection algorithms. Mean-
+while, the RRS in [163] extracts user preferences from bipartite reciprocal networks combined with
+various classifiers, studying the influence of facial features in recommendation results. A more recent
+approach [133] combines CB and knowledge-based recommendation in the BlindDate model, where
+a similarity matrix is built from a multi-graph conceptual model. Knowledge integration through a
+semantic weighted similarity measure contributes to a higher precision than non-hybrid baselines, yet
+the nature of the model makes it less generalizable. Lastly, Ramanathan et al. [127] suggest encoding
+(previously neglected) ’dislikes’ and ’matches’ alongside ’likes’ information to learn better user latent
+representations. Based on this, they combine a suite of matrix factorization, learning-to-rank and
+neural network algorithms with a profile metadata-driven strategy to cope with cold users.
+
+4.1.2. Reciprocal Recommendation in Recruitment
+Recommending people to people in the recruitment domain largely pertains scenarios where a job
+seeker looks for potential job recommendations, and both job seekers and recruiters’ interests need
+to align. Despite the smaller number of works in this application compared to online dating, cur-
+rent literature covers RRS approaches based on diverse recommendation strategies. Further, besides
+general-purpose job recommenders, some approaches have been made specifically for graduate stu-
+dents’ recruitment.
+   Among the experimental findings with implications on RRS for recruitment, the study in [27] intro-
+duces a methodology for characterizing online recruitment services and monitoring the demand-offer
+of employment via preference elicitation, showing great variations in demand/offer ratios across pro-
+
+
+                                                   21
+                      Table 7: Summary of existing RRS models and studies in recruitment.
+
+  RS family       Authors                        Key features
+                  Cardoso et al. [27]            Characterization of employment offer and demand.
+  Theoretical     Kille et al. [73]              Analyzes correlation between explicit and implicit feedback on jobs.
+  studies         Reusens et al. [129, 130]      Identifies best indicators of job seekers’ preferences. Analyzes the
+                                                 impact of reciprocity versus non-reciprocity.
+                  Almalis et al. [11]            Minkowski-based distances. Centered on organizations’ needs.
+                  Ding et al. [40]               Graduate student recruitment. Analyzes past successful graduates.
+  Content-based
+                  Jacobsen & Spanakis [69]       Latent Dirichlet Allocation model on students’ curricula.
+                  Lian et al. [91]               Binary classification to predict clicks on jobs.
+                  Liu et al. [92, 93]            Graduate student recruitment. Employers modelled by recently
+                                                 hired graduates. Employer-oriented and graduate-oriented models.
+                  Saini et al. [134]             Privacy-oriented stable matching.
+                  Yu et al. [159]                Matching employer preferences with candidates’ attributes.
+  Collaborative   Ozçan et al. [170]            Multiple classifiers driven by job applications made by similar can-
+  filtering                                      didates.
+                  Cakir et al. [25]              Deep matrix factorization.
+                  Hong et al. [66, 67, 68]       Mobile app implementation. Combining profiles and similar users’
+  Hybrid/other
+                                                 access history to job/candidate profiles
+                  Mine et al. [99]               Bidirectional feedback patterns. Reciprocity by inverse product of
+                                                 ranks.
+                  Xia et al. [152]               Walrasian Equilibrium multi-objective optimization. Fairness in
+                                                 RRS.
+
+
+
+
+fessional areas. Correlations between explicit and implicit job feedback are analyzed in [73] to identify
+cases in which a candidate shows interest in a recommendation. Although clicks are a more frequent
+indicator of preference, it is concluded that replies can predict better whether a recommendation is
+relevant. Meanwhile, in [129] it is revealed that implicit feedback is a more powerful indicator of users’
+broad interests. The same authors suggest in [130] that classical RS tend to predict better from the
+job seeker viewpoint, but more attention should be paid to reciprocity from the recruiter side.
+   There are several studies that investigate RRS for recruitment using CB approaches. The so-
+lution in [159] matches recruiters and candidates based on inferring implicit preferences on com-
+panies/recruiters, with similarities being determined by considering a vector representation of such
+preferences and resume information. By contrast, the method in [11] accounts for recruiter needs in
+the process of job recommendation, and in [91] the preferences of the job seeker are matched to the
+characteristics of the job ad, casting the recommendation task as a binary classification problem to
+
+
+
+                                                        22
+predict whether the job seeker may click on an advertised job. A mobile system called iHR+ [67] was
+developed upon a hybrid approach [66] where the job seeker and recruiter provide self-description and
+explicit preferences. Meanwhile, the approach proposed in [134] is formulated as a stable matching
+problem between multiple candidates and multiple jobs in a centralized manner, such that the output
+is a set of matching pairs M = {(xi , yj ), xi ∈ X, yj ∈ Y }. Its use in recommendation tasks is, therefore,
+severely limited to single-recommendation scenarios where |X| = |Y |. An RRS for graduates recruit-
+ment was presented in [40], where graduate job seekers’ profiles are collated with profiles from past
+graduated who were previously hired. A more recent RRS for graduates recruitment [69], operates by
+extracting topic distributions and using a probabilistic topic model (Latent Dirichlet Allocation) to
+build a common latent representation space. This results in two matrices, describing student courses
+and jobs, respectively. This model was validated both offline and through user study involving 28
+graduates. An employer-oriented RRS [93] was built to help recruiting graduates in situations such
+as job fairs, modelling an employer as a set of recently hired graduates. The authors later shift their
+focus toward graduate-oriented recommendation in the rating prediction method proposed in [92].
+   There are still few CF approaches for RRS in the recruitment domain. The work in [170] im-
+plements different classification methods fed by job applications of similar candidates to the target
+user and their preferences for jobs, showing that Support Vector Machine classifiers provide the most
+promising results.
+   Regarding hybrid approaches, prior to the above discussed system iHR+ [67], the same authors
+presented iHR [66], which combines traditional CB and CF with reciprocal filtering, applying a product
+operator to calculate reciprocity. A real case study in Xiamen Talent Service Center where iHR is
+deployed shows that most users prefer the results yielded by considering reciprocity. Another hybrid
+RRS for recruitment was introduced in Hong et al. [68]. It groups users based on their activity level in
+the system by using a clustering algorithm. Depending on the cluster the user belongs to, a different
+filtering approach is applied: whilst some users might have registered enough activity in the system
+to rely on a CF process, most passive users would benefit more from CB recommendations. The job
+matching recommender in [99] relies on bidirectional feedback patterns, that is, actions performed
+by a job seeker (resp. recruiter) coupled with the response given by the other party to the action.
+Reciprocity is only analyzed after the generation of unidirectional recommendation lists for both
+parties, by calculating the inverse of the product between x rank in y’s recommendation list, and vice
+versa (see Eq. (5) in Section 3.2).
+   A recent model called WE-Rec (Walrasian Equilibrium-based recommendation) [152] attempts to
+address the scarcely investigated problem of social fairness in reciprocal recommendation, namely to
+
+                                                    23
+protect vulnerable groups from discrimination, mistreatment and inequality issues. WE-Rec defines
+the reciprocal recommendation task as a multi-objective optimization problem according to three
+fairness criteria, using the economic notion of Walrasian equilibrium.
+      Lastly, in a recent study [25], deep neural network-based matrix factorization is applied in a model
+that, although not inherently reciprocal, motivates the need for RRS research based on deep learning.
+
+4.1.3. Reciprocal Recommendation in Online Learning
+Online learning platforms allow teachers and learners to educate - and be educated - without the
+necessity of meeting in a physical classroom. These platforms have similar connectivity features as
+social networks, often presenting a large and diverse body of learners [86, 121, 155]. The continuous
+growth of Internet capabilities, the demand for professional learners to access flexible and ubiquitous
+learning resources, or even the appearance of unprecedented circumstances in which social distancing
+becomes inevitable, constitute various reasons that led different education systems to adopt partial
+or fully online learning as their norm [49]. Interestingly, RRS applications in online learning are pre-
+dominantly based on CB approaches where learners and teachers’ profile information are exploited.
+Existing works show a variety of specific learning scenarios to tackle via reciprocal recommenda-
+tion: peer matching in MOOCs and university courses, group formation, learner-question matching
+in forums and student-supervisor matching. Unlike online dating where preferences can be implicitly
+inferred from interaction data, in learning platforms, specially massive ones, learners generally provide
+information themselves and, depending on the application, they might state explicit preferences on
+the attributes of users they would like to learn with [121]: interests, age group, location, etc.
+      Various MOOC (Massively Open Online Course) incentivise group activities, in which learners form
+groups to study or do homework together. In this sense, one of the existing studies addressing the
+problem of matching pairs of learners in MOOCs [121] is inspired by the ideas implemented in RECON
+[113]. As opposed to other classical RS engines in MOOCs where actual courses are recommended,
+in [121] reciprocity is deemed as an inherent requisite for recommending peers to study with. The
+authors use student data released by MITx and HarvardX courses4 . In essence, the algorithm builds a
+similarity matrix of compatibility scores between users, by observing user x interests in attribute values
+exhibited by other users y. A reciprocal score is calculated upon the number of user x preferences that
+match y attributes and vice-versa. The model is validated using both accuracy measures (precision and
+
+  4
+      HarvardX Person-Course Academic Year 2013 De-Identified dataset, version 3.0: https://dataverse.harvard.edu/
+dataset.xhtml?persistentId=doi:10.7910/DVN/26147
+
+
+
+
+                                                        24
+                         Table 8: Summary of existing RRS models in online learning.
+
+    RS family       Authors                     Key features
+    Theoretical     Labarthe et al. [85, 86],   Effects of peer recommendations in MOOCs in learner engagement.
+    studies         Bouchet et al. [19]         Study of different recommendation strategies in MOOCs.
+                    Prabhakar et al. [121]      Peer matching in learning platforms. Inspired by RECON [113]
+    Content-based
+                    Rajagopal et al. [126]      Dissimilarity to recommend complementary learning peers.
+                    Potts et al. [120]          Peer matching, based on compatibility criteria.
+                    Mitchell & Dragon [76]      Student group formation, based on performance criteria.
+                    Yacef & McLaren [155]       Inspired by RECON and CCR [5]. Group formation, via optimiza-
+                                                tion from individual recommendation lists.
+                    Yang et al. [157]           Context-aware matrix factorization. Learner marching in forums.
+    Hybrid
+                    Zhang et al. [165]          CB-CF for recommending student-supervisor allocations.
+
+
+
+
+recall) and ranking quality measures (an adapted version of NDCG), showing drastic improvements
+in accuracy but only slight improvements in rankings, with respect to a non-reciprocal baseline.
+   Several RRS approaches and analyses for peer learner recommendation in MOOCs have been
+introduced in [19, 85, 86]. In [85, 86] a controlled user study was conducted during a MOOC, showing
+that for a subgroup of users who utilized a peer RRS, completion and engagement rates improved.
+Recommendations were generated using data from a questionnaire. In [19], the authors conduct a
+comparative study about the impact of using different peer recommendation strategies. Approaches
+to compare include one using socio-demographic information of learners and one based on progress
+made in the MOOC, with the former hinting at better results. RiPPLE, a course-level platform
+for reciprocal peer recommendation [120], defines compatibility as a function of learners’ requests,
+competencies, availability and preferences, all of which are specified by the learner. A mixture of
+Gaussian and logistic functions parameterized by the aforesaid criteria (particularly competency), are
+used together with the harmonic mean aggregation to measure learner compatibility. Other works
+[126] focus on the notion of dissimilarity to recommend learning peers’ that could complement each
+other well, based on their understanding of a topic. They define a symmetric matching mechanism
+that measures similarity between users’ interests and how dissimilarly they interpret those interests.
+   Learning in groups has numerous pedagogical benefits, but MOOC platforms generally do not pro-
+vide RRS-based tools for small group collaboration by forming tailored groups predicated on learners’
+interests and goals. The first effort to investigate this issue under a reciprocal recommendation view-
+point can be found in [155], inspired by prior studies [5, 113]. The proposed model identifies relevant
+learner features (cognitive, problem-solving strategies, social and demographic information, past inter-
+
+
+                                                        25
+actions, etc.). An optimization approach then takes individual recommendation lists as an input, and
+creates groups in which necessary skill-sets are combined. The study addresses the very scarcely inves-
+tigated problem of reciprocal group formation, yet it lacks an actual implementation and evaluation.
+A similar idea is formulated in [76] for recommending groups based on students’ conceptual under-
+standing, where instructors request student group suggestions based on performance and assessment
+criteria.
+Among the comparatively fewer RRS for learning based on hybrid strategies, the question recom-
+mender in [157] utilizes context-aware matrix factorization to predict learners’ interest in questions
+posted in MOOC discussion forums, modelling their expertise and capacity as constraints and using
+constrained optimization for matching learners with questions they would be interested in answering.
+Their optimization approach is flexibly designed to be adapted to other state-of-the-art techniques. In
+[165], a CB-CF framework is proposed to recommend supervisors to higher education students, which
+is fundamental for students’ success. The framework takes into account indirect relevance with previ-
+ously supervised students by the supervisor and the mutual matching between student and supervisor
+thinking styles.
+
+4.1.4. Reciprocal Recommendation in Social Networks
+    Social network sites (SNSs, also commonly referred to as OSNs: online social networks) have
+emerged at the second half of the 2000s as a means for Web users to connect and share information
+with one another. Generally speaking, there are two types of SNSs [56]: the first is a symmetric
+(confirmed) SNS, which is based on bi-directional relationships that have to be confirmed by both
+sides. Typically, one user sends an invitation and the other has to accept the invitation for the
+connection to form. This type of SNSs includes Facebook and LinkedIn. The second type is an
+asymmetric SNS, in which one use can connect or follow another user, without a requirement for their
+confirmation. This type of SNSs includes Twitter and Instagram. The network structure created over
+time in each of the two SNS types is rather different [56]: the asymmetric type naturally renders a
+much more skewed degree distributions, with some celebrities having over a hundred million followers.
+    RRS are relevant for the first type of SNSs, which is based on symmetric, or reciprocated con-
+nections (whereas the asymmetric type is based on uni-directional ties [71]). Early studies of RRS in
+such SNSs were among the first of people recommendation on the Web and showed great success in
+growing the number and density of connections within SNSs [28, 60]. The fried-of-the-friend (FOAF)
+approach, which recommends individuals with most common friends, showed good performance and
+was the baseline approach adopted by leading symmetric SNSs. Yet, approaches that aggregated
+
+
+                                                  26
+                  Table 9: Summary of existing RRS studies and models in symmetric social networks.
+
+    RS family           Authors                       Key features
+    Theoretical         Chen et al. [28]              Effect of aggregating of relationship information for recommmenda-
+    studies                                           tion in social networks.
+                        Guy et al. [58, 60, 63]       Role of explanations in the success of people recommendation. Rec-
+                                                      ommendation of unfamiliar people (strangers).
+                        Guy et al. [57, 59, 61,       People recommendation in enterprise settings: expertise location,
+                        62], Jacovi et al. [71]       social stream consumption, Reputation inference, ’liking’ activity.
+                        Daly et al. [36]              Effects of global network structural characteristics (distribution,
+                                                      centrality, etc.).
+                        Du et al. [44]                Friend recommendation in university campuses.
+    Models
+                        Eirinaki et al.       [45],   Trust and reputation-based.
+                        Nepal et al. [103]
+                        Grob et al. [55]              Community-aware method for group formation.
+                        Quercia & Capra [124]         Friend recommendation using mobile phones. Proximity-driven link
+                                                      prediction.
+                        Samanthula       &   Jiang    Privacy-aware friend recommendation.
+                        [135]
+                        Symeonidis et al. [143]       Link prediction in SNS with positive/negative links.
+                        Silva et al. [138]            Genetic algorithm and graph-based.
+                        Zhang et al. [164]            Trust and ranking-based model. Studies factors than influence trust
+                                                      and probability of friendship.
+
+
+
+
+information across a variety of sources showed to outperform the FOAF method [28]. Aggregation is
+conducted by collecting collaboration and social interaction signals from multiple social media sources,
+e.g. indicators of co-authoring wiki pages with someone, commenting or being commented in a blog,
+co-edited shared docs, and so forth [125]. These signals reflect familiarity relationships, rather than
+shared similarities. The aggregation approach also has benefits in coping with the cold start problem
+for new SNS users [50]. Interviews with users who used RRS for inviting people to connect, indicated
+that the entry barrier to accept such recommendations is high, since they not only have to consider
+the recommended person, but also their reaction to the invite and whether or not they will accept [60]
+Explanations played a key role in such RRS, showing the “evidence” for the recommendation and
+making people more comfortable sending invitations when such evidence was provided [60].
+   Later studies examined the long-term effects and dynamics of RRSs in symmetric SNSs. One
+aspect was that over time, users exhausted the list of recommended individuals and connected to
+most of their potential ties. Since the network is symmetric, most connections are performed with
+
+
+                                                               27
+familiar people [56, 64]. The recommendations suggested by RRSs therefore became less effective and
+were frequently ignored. To complement this, recommendation of unfamiliar people, often complete
+strangers, has been suggested [63, 58]. Aside from the effect on the individual users, the global network
+effects were also studied [36]. It was found that different algorithms for RRS render over time very
+different network structures, in terms of characteristics such as degree distribution and betweenness
+centrality. For instance, the FOAF algorithm has a strong rich-get-richer tendency, rendering a diverse
+degree distribution with high centrality. RRSs were also found to play key role in expertise location,
+social stream consumption, reputation inference, and ‘liking’ activity [57, 59, 61, 62, 70].
+   More recent work expanded the usage scenarios for RRS in confirmed/symmetric social networks.
+Recommendations at events, such as academic conferences, for people to meet at the venue, commonly
+provided using mobile devices, have become popular [14, 124, 135, 137]. Recommendation in networks
+with multiple types of connections, sometimes positive and negative, have also emerged, often ap-
+plying different graph-based approaches [45, 143, 138]. Recommendations within online groups and
+university campuses also employed RRS to connect people within smaller communities [44, 103, 164].
+An interesting more complex RRS scenario proposed contacts to address as a group, e.g., ‘univer-
+sity colleagues’, ‘coworkers’, ‘family’, or ‘friends’ [55]. This kind of RRS facilitates communication in
+groups (as in WhatsApp) and can can save a considerable amount of time in the group initialization
+process on a mobile device.
+
+4.1.5. Reciprocal Recommendation in other Domains
+Existing works for recommending people in domains beyond dating, recruitment, learning and social
+networks, generally produce recommendations from a single end user perspective [65, 136, 148, 166].
+However, some approaches have emerged in very recent years to incorporate reciprocity in inno-
+vative application areas, including: socializing, skill sharing, shared economy, mentoring and aca-
+demic/scientific collaboration.
+   There are early studies that do not consider reciprocity but sit some bases for RRS in social
+applications, such as: an approach that combines data mining and and referral processes for exper-
+tise recommendation inspired by yellow-pages services [132], a Web system called Twittomender for
+profiling users and recommending whom to follow in Twitter in order to relationships between users
+[65], and a community-based approach to user recommendation in social media sites like Twitter and
+Weibo [166] where matrix factorization allows to extract latent characteristics at community level.
+Moreover, in [151] database query results are used as input for an RRS that inherently considers
+reciprocity in the process of building such vectors upon queries. This study shows a real life scenario
+
+
+                                                   28
+                      Table 10: Summary of existing RRS models in other application domains.
+
+
+
+
+  RRS domain         Authors                         Key features
+  Socializing        Wenzel & Kiebling [151]         Similarity vectors built upon queries.
+                     Kim et al. [74]                 Interpersonal, socio-spatial and environmental psychology aspects.
+                     Mayer et al. [95, 96, 97, 98]   Context-aware RRS for social matching.
+                     Yin et al. [158]                Social event organization. Stable matching.
+  Skill-sharing      Neve & Palomares [107]          Integrates user-to-user preferences and user-to-item preferences on
+                                                     content shared by other users. Single-class RRS.
+  Shared economy     Goswami et al. [54]             Heuristic optimization approach for maximizing compatibility in
+                                                     two-sided markets.
+                     Chen et al. [29]                Single-class RRS for co-production activities.
+                     Doryab et al. [42]              Context-aware expertise matching in P2P systems.
+                     Jung et al. [72]                Text mining and regression to predict interests in timebanking.
+  Mentoring          Li [88]                         Learning-to-rank for mentor-mentee matching.
+  Science/academia   Daud et al. [37]                Citation-driven scientific collaboration prediction.
+
+
+
+
+on OutdoorActive5 , a platform for undertaking outdoor social activities.
+      An insightful analysis with potential implications in socializing context requiring reciprocal rec-
+ommendation, is provided in [74] by investigating interpersonal and socio-spatial aspects alongside
+ideas from environmental psychology to explain the dynamics of serendipitous interactions, recom-
+mending new people to interact with nearby based on predicting interaction willingness. A recent
+study [158] applies a variant of Gale-Shapley stable matching algorithm for social event organization
+in order to meet the interest of potential attendees and event organizers themselves. This is done by
+capturing user profiling for event selection and event rules for attender selection. The recommender
+can effectively predict the event invitation and acceptance to a high extent.
+      There are also various contributions for addressing the contextual data challenges for improving
+social matching [95, 96, 97, 98], laying strong foundations for context-aware RRS devised as social
+matching systems. One of these contributions presents a mobile system, Encount’r [95], based on
+passive context-awareness.
+In the context of skill-sharing platforms, one of the latest hybrid approaches to reciprocal recom-
+mendation is HRRS (Hybrid RRS ), presented in [107]. HRSS is a single-class RRS for facilitating
+user matching in skill sharing platforms where connections between users, public content shared by
+
+  5
+      OutdoorActive: https://www.outdooractive.com/en/
+
+
+
+
+                                                         29
+Fig. 3: Illustration of the HRRS model [107], envisaged for skill-sharing or content-sharing platforms where users can
+share contents and like other users’ content
+
+
+users and user-to-content preference indicators coexist. The model was implemented and evaluated in
+the recipe sharing social network Cookpad 6 , where users interact with each other to post, follow and
+share recipes. The hybridization in this model lies in combining reciprocal preferences between users
+(reciprocal matching in Figure 3), and similarities on the grounds of content items commonly liked by
+them (nonreciprocal matching in Figure 3).
+       In the area of shared economy, [54] investigates the characteristics of reciprocal relationships in
+two-sided markets and present an heuristic approach for recommender design, primarily aimed at
+calculating optimal compatibility scores between pairs of agents. The impact of context-awareness on
+Peer-to-Peer Variable Service Transaction systems (P2P-VST) to foster user engagement has been
+explored in [42]. Even less active users are more likely to accept a recommended transaction if it
+is convenient in terms of location and time, thereby showing the importance of designing context-
+aware RRS in this domain. The concept of timebanking has also received some attention from an
+RRS viewpoint [72], with a model for P2P marketplaces where peers provide services to each other
+in exchange for tokens. Their algorithm uses text mining and regression to predict interests in offers,
+requests and user profiles. The complimentarity between users’ skills and needs versa is observed
+to produce matchings. A subsequent study [29] proposes removing the distinction that exists in [72]
+between service providers and recipients, thus advocating single-class RRS. They introduce WithShare,
+a mobile app for recommending people to engage with to create synergies in coproduction activities.
+       A recent contribution [88] analyzes the mentor-mentee matching problem in the live platform
+Codementor, with a learning-to-rank approach that aims at predicting, for a mentee x, the mentor
+willingness to assist x and the mentee’s likelihood of acceptance of the recommended mentor y. This
+
+   6
+       Cookpad Inc.: https://www.cookpadteam.com
+
+
+
+
+                                                         30
+is the first effort to explore personalized mentor-to-mentee recommendation with views on reciprocity.
+In a similar but more scientific context, there are studies with clear implications for reciprocal rec-
+ommendation in academia, for instance [37] where a supervised learning framework is proposed to
+find researchers who have cited each other and predict potential reciprocal links, thereby fostering
+collaborations. They perform experiments on CiteSeer data, showing a 96% prediction accuracy with
+author-related features being a better predictor than paper-related features.
+
+4.2. Analysis of Representative RRS Models
+
+This subsection describes several RRS systems in more detail, which are either well-known foundation
+models or selected examples of state-of-the-art solutions in the area. These models were initially
+conceived for online dating, although some of them have been later extended into other domains:
+RECON [113], RCF [153], RWS [78], LFRR [106] and CCR [5].
+
+4.2.1. RECON: REciprocal CONtent-based recommender for online dating
+RECON [113] is one of the best-known CB-RRS in the literature. It was designed in accordance
+with the general properties of reciprocal recommenders (Figure 1). The system builds upon two
+studies: a method focused on learning implicit preferences from users’ past contacts history [111],
+and the standalone RECON model that incorporates the implicit preference learning method [113].
+The proposed method in [111] learns implicit user preferences by modelling messages sent/exchanged
+between users as indicators of preference. It predicts users’ preference values towards attributes shown
+by other users (e.g. being tall, non-smoker, having brown eyes, etc.) by observing their interaction
+history with other users, for example messages exchanged with people who exhibited certain attributes.
+Formally, let Ax = {vx,a , ∀a ∈ A} be the profile of user x, with A a finite set of user attributes a, e.g.
+eye color, and vx,a the value exhibited by user x for attribute a ∈ A, e.g. brown, in her profile. Thus,
+Ax is utilized as the “content” features of the user. Preferences are then inferred using statistical
+methods. Let m be the number of times x indicated preference towards a user y with attribute value
+vy,a on the attribute a. The preferences px,a of x towards the different values of an attribute a, V(a),
+are given by the following distribution:
+
+
+                               px,a = {(v, m) : ∀ unique values v ∈ V(a)}                             (10)
+
+Based on this modelling of user preferences, the full RECON model [113] predicts unidirectional
+preference scores (how much a user x likes a user y) by collating one user’s preference distribution px,a
+with the attribute values in other users’ profile. Unidirectional preference values are then aggregated
+
+
+                                                    31
+into a bidirectional indicator of mutual preference, px↔y , using the harmonic mean. Algorithm 1
+summarizes the procedure followed by RECON to recommend the top-N users to a subject user x,
+with Compat.(Px , Ay ) calculated as shown in Figure 4.
+
+
+
+
+       Fig. 4: RECON calculates preferences px,y as compatibility degrees between preferences of x and profile of y.
+
+
+Algorithm 1 Function ReciprocalRecommender(x, N ) in RECON (adapted from [113])
+      Input: User x, number of recommendations N
+      Output: List of scored recommendations R = {(y1 , s1 ), . . . , (yN , sN ))}
+
+ 1: Find user x preferences: Px = {px,a , ∀a ∈ A}
+ 2: R = {(y, sy ), ∀ users y not messaged by x}
+
+ 3: for all users y ∈ R do
+
+ 4:      sy ←Compat.(Px , Ay )
+ 5:      if sy > 0 then
+ 6:         Find user y preferences Py
+ 7:        Calculate reciprocal preference score using the harmonic mean:
+                                         2
+ 8:        sy ← px↔y =
+                         ((sy )−1 + (Compat.(Py , Ax )−1 ))
+ 9:      end if
+10: end for
+
+11: Sort users in R by reciprocal score: R ← {(y1 , s1 ), (y2 , s2 ) . . . (yK , sK ) : syi ≥ syi+1 }
+
+12: Return {(y1 , s1 ), . . . , (yN , sN )}
+
+
+Through offline evaluation experiments conducted in an Australian dating site, the authors demon-
+strated that RECON outperformed a baseline guided by manual user search, as well as nonreciprocal
+user-to-user recommenders [52]. Moreover, RECON contributed to alleviating the user cold-start
+problem [53], as per a cross-validation in which it delivered successful recommendations for numerous
+
+                                                              32
+users whom actually received an expression of interest by the end user, according to ground-truth
+data. By contrast, RECON showed a few areas needing improvement:
+
+  1. Preferences are modeled as discrete distributions on attribute values, hence continuous numerical
+     attributes like age need to be discretized, which might results in loss of valuable information.
+  2. It is sensitive to bias caused to highly popular users, some of whom can end up being recom-
+     mended to an unduly high number of users in the opposite gender. On the contrary, new and
+     less popular users may be unlikely to appear in recommendations. A few subsequent RRS have
+     focused on addressing this popularity issue [78, 152].
+
+4.2.2. RCF: Reciprocal Collaborative Filtering
+Xia et al. [153] presented a configurable RRS model that can be instantiated into several CB and
+CF algorithms, of which the main contribution is the earliest memory-based CF solution for online
+dating fully relying on reciprocity, later termed as RCF for Reciprocal CF in [78]. RCF introduces
+a nearest-neighbour based strategy combined with a similarity measure, to eventually estimate the
+compatibility or mutual preference between users in a dating site. The preference of user x for user
+y, px,y , is determined as the similarity between the behavioral patterns (either in terms of interest or
+attractiveness) of x and those of users z 6= x who have had positive historical interactions with y. The
+authors introduce two views of similarity between users in the same class (e.g. same gender):
+
+  (i) Interest similarity between user x and user z. It describes preference similarity, whereby if two
+     users sent an expression of interest (EoI) to the same user, then they share common interests.
+     Xia et al. define the interest similarity between x and z as:
+
+                                                 EoIf rom (x) ∩ EoIf rom (z)
+                                   sim(x, z) =                                                      (11)
+                                                 EoIf rom (x) ∪ EoIf rom (z)
+
+     where the set EoIf rom (x) is determined as,
+
+                              EoIf rom (x) = {y : y has received an EoI from x}                     (12)
+
+     This Jaccard Index-based similarity measure determines the likelihood that x will like y, thereby
+     being used as the estimator for px,y .
+
+ (ii) Attractiveness similarity between x and z, calculated on the grounds that if two users receive
+     an EoI from the same user in the opposite class, then they have common attractiveness:
+
+                                                    EoIto (x) ∩ EoIto (z)
+                                      sim(x, z) =                                                   (13)
+                                                    EoIto (x) ∪ EoIto (z)
+
+                                                    33
+In addition to similarity between users in the same class, assuming the representation of users in a
+two-class RRS and interactions between them as a bipartite graph, RCF incorporates two functions to
+determine the neighborhood of user y. Unlike the previous similarity measures, the neighborhood of y
+in this context is a set of users who had some form of interaction with x, in other words, N eighbor(y)
+returns a set of users z in the opposite class (gender) to that of y. Two possible ways to define this
+function are introduced: N eighbor(y) = EoIf rom (y) and N eighbor(y) = EoIto (y). RCF can employ
+different combinations of similarity measures and neighboring functions to deliver recommendations,
+which results in a flexible and versatile framework, with algorithms that may behave differently.
+The general RCF procedure to calculate reciprocity between two users is described in Algorithm 2,
+and illustrated in Figure 5. After initializing the two unidirectional preference scores (lines 1-2), in
+lines 3-8 a function N eighbor1 (y) is used to identify the set of most similar users or neighbour users
+of y, and their similarities with x are calculated and then normalized to estimate px,y . The function
+sim(x, z) in line 4 can be instantiated as either the interest similarity or attractiveness similarity
+defined above. A similar procedure is followed to calculate py,x (lines 9-14), after which the harmonic
+mean is finally used to return the reciprocal preference.
+    Similarly as RECON in CB-RRS literature [113], RCF has been often used as benchmark for
+comparison against recent solutions. RCF has the advantages of not requiring a pre-trained data
+model, having a relatively easy-to-understand set of principles, and outperforming prior CB approaches
+in terms of accuracy metrics. Given its memory-based nature, its main shortcoming is its difficulty
+to scale well into larger datasets containing millions of users, as experimentally demonstrated in later
+CF approaches such as [106].
+
+
+
+
+Fig. 5: RCF procedure for determining reciprocal preference between x and y upon interaction with other users (neigh-
+borhood) and similarity to users in the same class (adapted from [153]).
+
+
+
+                                                          34
+Algorithm 2 Reciprocal score calculation in the RCF algorithms (adapted from [153])
+      Input: subject user x, object user y
+      Output: reciprocal preference score
+
+ 1: px,y ← 0.0
+ 2: py,x ← 0.0
+
+ 3: for all users z ∈ N eighbor1 (y) do
+
+ 4:      px,y ← px,y + sim(x, z)
+ 5: end for
+ 6: if |N eighbor1 (y)| > 0 then
+                        px,y
+ 7:      px,y ←
+                  |N eighbor1 (y)|
+ 8: end if
+
+ 9: for all users v ∈ N eighbor2 (x) do
+10:      py,x ← py,x + sim(y, v)
+11: end for
+
+12: if |N eighbor2 (x)| > 0 then
+                        py,x
+13:      py,x ←
+                  |N eighbor2 (x)|
+14: end if
+
+15: if px,y > 0 and py,x > 0 then
+                                      2
+16:      Return px↔y =
+                            (px,y )−1 + (px,y )−1
+17: else
+18:      Return 0.0
+19: end if
+
+
+4.2.3. RWS: Reciprocal Weighted Score
+In [78] Kleinermann et al. developed RWS. This model adopts some ideas from RCF [153] and extends
+them into a model-based approach. The main innovation of RWS is its approach to adequately bal-
+ance pairwise recommendations based on the differences between user popularity levels. The authors
+discuss the importance of user popularity in RRS research. Specially in the online dating domain, a
+popular user who receives a high number of EoIs (some of them, intuively, as a result of reciprocal
+recommendations) might lead her/him to ending up overwhelmed, whereas less popular users might
+struggle to find suitable matches or end up leaving the system if they only try to interact with highly
+popular ones who normally will not reciprocate. Accordingly, RWS relies on an optimization process
+to compute an importance weight αx associated to x. This weight indicates her/his degree of influence
+in successful interactions with other users. The value for αx is determined by observing the user’s
+interaction history, namely the relative influence of px,y with respect to py,x in past successful inter-
+
+
+
+                                                    35
+actions with other users y. Importantly, RWS computes the two unidirectional preference estimates
+differently: it applies RCF to calculate x’s potential interest in y, px,y , after which it trains an Ad-
+aBoost classification model to predict the likelihood of response by y towards x, hence the prediction
+task for py,x is formulated as a likelihood estimate. The reciprocal score is calculated as:
+
+
+                                       px↔y = αx · px,y + (1 − α) · py,x                            (14)
+
+Experiments show that RWS succeeds in better balancing recommendation load between popular users
+and less popular ones. Albeit it does not outperform RCF in providing appealing recommendations,
+RWS shows improvements in terms of accuracy, achieving a better balanced recommendations that
+were more likely to satisfy both parties regardless of their popularity. A parallel study was conducted
+by the same authors in [77], focused on investigating user reactions to explanations provided for their
+recommendations. The study found that providing users with reciprocity-driven explanations for
+their recommendations was influential in their decision to accept the recommendation or not, thereby
+suggesting that explainability in RRS is a research direction deserving further study.
+
+4.2.4. LFRR: Latent Factor Reciprocal Recommender
+Neve and Palomares recently presented LFRR [106], a model that extrapolates latent attributes from
+a preference matrix using matrix factorization. Focused on heterosexual online dating, LFRR con-
+siders two preference matrices: one representing female user preference towards male users, and one
+describing male user preference for female users. Matrix factorization is used to train two latent factor
+models, one for each of the two matrices. To do this, the likelihood that user x may be interested in
+user y is defined as the dot product between x’s preference vector (a row px in one of the preference
+matrices) and y’s attribute vector qy , which describes y’s traits based on other users’ known prefer-
+ences towards her (a column in the same preference matrix). These two latent vectors with smaller
+dimension than rows/columns in the original matrices, are calculated by LFRR using the matrix of
+known ratings R = (rx,y ) as a training set, a regularization parameter λ and the following function
+error to be minimized by Stochastic Gradient Descent (SGD):
+
+                                     X
+                             min              (rx,y − qTy px )2 + λ(||qy ||2 + ||px ||2 )           (15)
+                              q,p
+                                    rx,y ∈R
+
+Thus, LFRR uses SGD to calculate latent factor matrices that could be used to predict preference
+values more efficiently when the original number of users - i.e. the matrix dimensionality - is very
+large. The LFRR recommendation process is illustrated in Figure 6.
+
+
+                                                           36
+                             Fig. 6: Visual overview of the LFRR model (source: [106])
+
+
+      LFRR was tested against a large-scale real dataset from Pairs, a popular dating site in Japan
+owned by Eureka Ltd 7 , to which millions of users are subscribed. The model was validated for
+various settings of time intervals for which user interaction data were gathered to build the initial
+preference matrices. LFRR showed similarly promising performance metrics to the baseline model
+RCF [153], in both precision, recall and F1 scores. However, for larger datasets, LFRR managed to
+generate recommendations in real time, in scenarios where RCF showed to be intractable, significantly
+outperforming it in terms of computational efficiency under similar accuracy results. In short, LFRR
+maintained a similar effectiveness to state-of-the-art solutions, combined with the added advantage of
+a much higher efficiency. The study is accompanied by an evaluation of the effect of using different
+aggregation operators for the fusion of unidirectional preferences between users, suggesting that both
+the widely adopted harmonic mean and uninorm operators (a class of mixed-behavior aggregation
+function [156]) contribute to better predictions. A more comprehensive study of the effect of different
+aggregation strategies in RRS is provided by the same authors in [105].
+
+4.2.5. CCR: Content Collaborative Reciprocal Recommender
+The first hybrid RRS combining the strengths of multiple RS families was presented by Akehurst et
+al. [5], and further illustrated by Koprinska and Yacef in [79]. Their model integrates distance metrics
+for CB and CF in the recommendation process. For its CB part, CCR calculates the distance between
+two users’ content attributes, e.g. age and location information in the user profile. For its CF part,
+the underlying principles are that “similar people like and dislike similar people”, and “similar people
+
+  7
+      Eureka Ltd website: https://eure.jp/en/about/
+
+
+                                                        37
+are liked or disliked by similar people”. The most distinctive aspect of CCR consists in determining
+interaction groups for every subject user, predicated on the two aferosaid principles and by using
+the interaction history data of similar users, i.e. looking at the users whom x liked and liked by x.
+Some characteristics of the interaction-based process to predict preferences between users are briefly
+discussed below:
+
+   • Given a user x and data describing EoI-like interactions from/to x, several interaction groups
+     can be defined: users whom x likes, users whom x is liked by, users whom x dislikes, users whom
+     x is disliked by, and users whom x is reciprocally liked by. Noticeably, the latter of these groups
+     is the intersection of the first two.
+
+   • The two RS approaches in the hybrid method are applied sequentially. The content-based
+     process is conducted first to find a set of users Sx who have similar profile to x. Secondly, the
+     interactions of users in Sx are analyzed. Concretely, for every user in Sx , the list of all users that
+     she/he has had reciprocal interest with is extracted, thereby producing several lists of candidate
+     recommendations for x, one from each similar user in Sx . The support of each candidate user
+     in these lists is calculated to finally rank all candidates into the final list for x.
+
+The evaluation of CCR was conducted on a dataset of an online dating site, against a baseline approach
+in which random neighbor users were utilized without looking at profile similarity. The results reported
+a success rate of nearly 70%, which was twice as high as that of the baseline. Success was measured as
+the proportion of recommended users who received or sent an EoI from/to the test user x and resulted
+in a positive response, compared to those which did not. The effectiveness against other coetaneous
+RRS approaches had not been investigated in [5]. One advantage of the model is its ability to alleviate
+the cold start problem by providing new users with recommendations purely based on their profiles.
+Given the memory-based nature of its CF similarity computations, this model may also suffer from
+limitations when scaling it up to larger datasets, specially under the presence of numerous interaction
+groups, due to the computational complexity underlying the calculation of distances across groups.
+
+
+5. Challenges and Research Opportunities in Reciprocal Recommendation
+
+Following the analysis of RRS literature and representative models, this section is devoted to unad-
+dressed - or insufficiently explored - challenges in the topic. In line with these challenges, we propose
+opportunities and directions for future research to address them. Different fusion strategies for deter-
+mining reciprocity and application domains of RRS research are firstly highlighted. The research area
+
+                                                    38
+is still at an earlier stage of development than classical RS, hence we consider it particularly important
+at this stage to identify new application domains where RRS could bring promising advances and to
+summarize the state of affairs and limitations in current methodologies. The discussion is organized
+under five perspectives, as illustrated in Figure 7.
+
+
+
+
+                            Fig. 7: Challenges and opportunities for RRS research
+
+
+
+5.1. Perspective A: Fusion Strategies and Reciprocity
+
+A1. Exploring aggregation and weighting strategies. As explained in Section 3.2, a remark-
+ably important aspect in the design of a reciprocal recommendation scheme is the method adopted for
+aggregating unidirectional preference or recommendation information between two users into a bidi-
+rectional result reflecting the extent of mutual interest that may exist between them. Accordingly, in
+spite of the various fusion strategies adopted in RRS literature, a worthwhile line of research would be
+to exhaustively analyze the significantly wider spectrum existing of aggregation operators with diverse
+behavior and properties [15]. Furthermore, weighted aggregation may need to take into proper ac-
+count the importance of each user being matched according to multiple criteria: popularity, influence,
+level of commitment, etc. Supervised learning methods can be utilized to learn from data about the
+importance of users in a holistic manner. Furthermore, results from recent studies [105] suggest that
+performing elaborated sensitivity analyses in existing models by exploring new aggregation functions
+and parameters could lead to new performance insights.
+
+
+                                                     39
+A2. Fusion methods beyond reciprocity. Given the strongly social character of any RRS, a
+possible research line to be pursued in relation to preference fusion methods is the analysis of the social
+environment surrounding the user. This implies exploiting existing information about user connections
+in a social network, their trust and influence with other users, popularity with a specific type of users,
+etc. Considerations on investigating different fusion methods to aggregate user preferences should not
+be limited to calculating reciprocal preference scores only. Instead, in domains pervaded by multiple
+views of user data, it may be interesting to explore multi-criteria aggregation processes [15, 156]
+that meaningfully combine information from several dimensions [122], be it for instance to consider
+various criteria of similarity between users, to aggregate positive and negative preference information as
+recent studies hint [127], to combine multiple preference values px,y regarding attractiveness, common
+interests, contextual convenience, etc., into one, or to weigh aggregation inputs based on multiple
+aspects like popularity, user profile reliability, etc.
+
+5.2. Perspective B: Emerging Applications
+
+B1. Science and academia: As pointed out in the analysis of RRS literature, academic and scientific
+collaboration has still been very scarcely investigated from the viewpoint of reciprocal recommendation
+[37]. The same occurs with the student-supervisor matching problem, as briefly outlined in the analysis
+of RRS for learning [165], hence more research is needed in these domains by defining new models and
+hybrid strategies, incorporating unstructured and social relationship data as suggested in [119], and
+modelling the academic priorities of students, researchers and professors more holistically.
+B2. Professional collaboration & knowledge-transfer: In the landscape of RRS for professional
+purposes, there is an increasing demand for tools that not only recommend someone to hire, but also
+foster collaborative participation in joint projects, for instance based on the crowdfunding paradigm.
+In this way, creative and entrepeneur users may contact each other by virtue of these tools, thereby
+initiating common projects to work on. There exists a recent initiative in this line that still does
+not considers the incorporation of a dedicated recommender engine: the precipita 8 initiative by the
+FECYT Spanish federation, aimed at connecting researchers and citizens to promote the dissemination
+of science through crowdfunding.
+B3. Politics and democracy: Another practical application in high demand for solutions that
+could involve integrating RRS-based services, is in public contexts such as politics, e.g. by developing
+models that estimate the reciprocity between citizens’ and politicians’ interests. Reciprocity in this
+
+  8
+      https://www.precipita.es
+
+
+
+                                                      40
+context needs to consider, for instance, the level of interest or concern by a politician in a group of
+people with the characteristics exhibited by the user in question. This would make it possible to
+recommend what/whom to vote for a particular participatory democracy problem, helping citizens in
+these - often important and complex - decision making events with an increasingly larger number of
+alternatives to choose from. Research opportunities are therefore open at the intersection between
+RRS and collective decision-making at large-scale [39].
+B4. Electronic administration: An specially interesting possibility in the public domain is that
+of electronic administration. In current times we are witnessing a dramatic sociological shift in which
+the use of technology is more paramount than ever. This shift demands that most administrative
+platforms need to evolve in the sense of being merely a tool to undertake bureaucratic processes
+electronically. Instead, these platforms should adopt a much more active role in which collaborative
+citizen participation plays a fundamental role. Given the reciprocity characteristics of RRS, it may
+be useful to recommend like-minded citizens to each other in the process of leveraging electronic
+administration tools oriented towards citizen collaboration, for making decisions that affect the wider
+population. This kind of tool could create relevant social matching recommendations that lead to
+improved decision-making results at a collaborative level, hence potentially leading to positive steps
+forwards from a societal viewpoint and increased citizen satisfaction.
+B5. Same-gender dating: Inclusiveness, equality and diversity considerations in favor of minority
+communities, such as LGBTQ groups, are a topic of increasing significance everywhere [142], with
+the landscape of AI and information systems being no exception. This prompts the importance of
+investigating these considerations within the scope of RRS, where numerous online dating approaches
+for opposite-gender relationships have been proposed, but none of these studies has been extended
+to homosexual dating nor other contexts where people exhibit different sexual orientation or identity.
+Additionally, more and more online dating firms provide services for non-heterosexual dating across
+different countries. We therefore argue that single-class RRS can be investigated to adapt existing
+RRS solutions for online dating [77, 106, 113, 153] into same-gender dating scenarios where both
+users belong to the same class. Multi-class RRS can be also taken into consideration for reciprocal
+recommendation-based dating services that accommodate multiple sexual orientations.
+B6. Recommend whom to date and where: Another interesting direction in the scope of online
+dating would be not only to recommend a user to date with, but also incorporate mutual preference
+and contextual factors to recommend a suitable venue (cafe, pub, eateries, etc.) to meet. Put another
+way, devising recommendations on “meeting person y in place l” would bring together the strengths
+of RRS and classic RS for suggesting places to visit.
+
+                                                  41
+B7. Group reciprocal recommendation and group formation: RRS research so far focused
+on one-to-one matching, but the increasing use of online interest group platforms like Meetup and
+OutdoorActive, as well as group online learning, raises the need for reciprocal models at group level.
+Example situations that motivate this challenge include recommending a Meetup group to a user,
+recommending a group to all members of another group, or forming new groups of like-minded users
+[76, 155], based on compatibility between their existing and potential members. Extending current
+RRS models into many-to-one or many-to-many frameworks clearly requires incorporating aggregation
+strategies (see challenge A2), particularly inspired by group decision making frameworks [39].
+B8. Other unexplored areas: house-share, loneliness prevention and travel: There exist
+other areas that could benefit from incorporating RRS research which, to the best of our knowledge,
+have not done so as of yet. One of them is house-share, i.e. finding a housemate/roommate or a
+group of them in the house rental market. Depending on the specifics of the problem, both existing
+one-to-one RRS and group-level ideas (see B7 above) can be developed for matching compatible people
+to share accommodation. Loneliness is another critical problem in nowadays society that puts people
+welfare at risk, specially among elderly and vulnerable groups, hence we stress the potential impact
+that much of the advances made on RRS research could have if they are oriented towards this societal
+challenge through loneliness prevention. Lastly, although many RS have been developed in the tourism
+domain [18, 35], solo travel has become a popular trend in the last years. Despite solo travel poses
+attractive factors such as freedom and flexibility, travellers also tend to benefit from meeting other
+similar people, both fellow travellers or locals alike, e.g. to go out together or to learn from the local
+culture. Therefore, there is room for interesting applications of single-class and two-class RRS to
+suggest matches between travellers, or between travellers and locals, respectively.
+
+5.3. Perspective C: Recommendation Approaches
+
+C1. Prevalance of CB-RRS. In classical RS literature, CF and hybrid models tend to outperform
+CB models, specially with regards to prediction accuracy [4, 21]. This trend is also observed in
+evaluations made between with CB-RRS and CF-RRS, as shown throughout the analysis in Section
+4. In spite of this, RRS research as of its current state still shows a predominance of CB models,
+specially in recruitment and online learning [11, 121, 67, 159], suggesting that more attention should
+be paid to other approaches.
+C2. Knowledge-based strategies. As outlined earlier, despite the sheer abundance of advanced and
+specialized techniques that have been developed in classical RS contexts, there are still less significant
+progress in RRS beyond CB, CF and hybrid strategies. Therefore, we argue that at this stage there
+
+
+                                                   42
+is still a long way ahead in studying and applying latest innovative RS techniques by adapting them
+to the particular requirements inherent to RRS. A possible starting point would be put a higher
+focus on knowledge-based systems such as [133], which might specially useful in cases where rating
+information is particularly limited and other families of techniques perform poorly by themselves. An
+RRS that incorporates knowledge-based principles would generate recommendations based on explicit
+statements of what the user is looking for, along with rules representing knowledge about the domain
+in question. With these characteristics at hand, hybrid models integrating knowledge management
+could be a suitable approach from the perspective of reciprocal recommendation, as systems usually
+do not have much rating history of prior user evaluations of other users.
+C3. Context-aware strategies. In some domains, aspects like temporal or location data can play
+a key role in the success of the recommendations produced. In fact, context-aware RS [3] incorporate
+contextual factors like time or location in the recommendation process. These aspects clearly have
+a direct impact when extrapolated to the scope of RRS, as users’ preferences towards other people
+undoubtedly evolve over the time [10], or they greatly depend on the time and location. In dating and
+socializing, for instance, we might be interested in meeting one kind of person or another depending
+on our current circumstances. This applies to both romantic relationships, friendships, professional
+partnerships, collaborations, etc. Since such circumstances change over the time, so do people interests
+regarding other people to connect with. The same occurs with location, depending on which people
+might be interested in meeting different kinds of people (in town, on a trip, etc.).
+C4. Social network-driven strategies. Given the distinctive characteristics exhibited by RRS,
+another problem deserving further attention relates to techniques which have demonstrated success in
+social RS [56, 136]. These systems have succeeded in generating unidirectional recommendations upon
+data extracted via social network analysis, such as information inherent to the network structure or
+data describing influence, popularity or trust between users. Consequently, the key proposed idea is to
+take these social network features into account for defining new RRS strategies whose mutual matching
+recommendations are perceived as more useful. In the same line, another interesting challenge lies
+in investigating new RRS techniques based on sentiment analysis or similarly extracted information
+from social media, e.g. microblogs, comments posted by users, etc.
+C5. Cross-domain reciprocal recommendation. Some e-commerce sites like eBay and Amazon
+utilize user preferences and feedback information from multiple domains, which can result in better
+recommendations richly informed by data from various environments [26, 48]. RS following this
+approach are known as cross-domain reciprocal recommenders. The challenge of sparsity, cold start
+and lack of sufficient user information has been evident in RRS domains. For this reason, an encouraged
+
+                                                  43
+research direction to explore refers to cross-domain solutions for reciprocal recommendation, whereby
+users’ information can be aggregated and integrated from their (often multiple) profiles in diverse
+online platforms and social media.
+C6. Managing unstructured data. Most CB-RRS assume the existence of structure user profile
+metadata, yet they are limited to deal with unstructured data such as unrestricted text written by users
+to describe themselves and the type of users they are interested in. In the context of online dating,
+experiments conducted in industrial settings - e.g. by OkCupid9 - reported physical attractiveness as
+an attribute shown not only in users’ text profiles, but most importantly in their pictures. These are
+clearly two examples of relevant unstructured data in this domain for predicting interest in other users:
+text and images. The latter are used infrequently owing to their remarkable difficulty of being factored
+into recommendation processes. In various nonreciprocal user recommendation domains, these data
+are usually removed from public datasets for privacy reasons. Additionally, photos and text submitted
+by users are generally unlabelled and therefore harder to train prediction models on them. Despite the
+expounded limitations, new solutions to make use of unstructured data without compromising users’
+privacy might need to be investigated in order to foster significant advances in content-based RRS.
+C7. Social dimension for preference prediction: Another fundamental aspect to consider in
+the design of reciprocal recommendation models pertains the adoption of an appropriate prediction
+strategy to estimate preference values. For this reason, it is crucial is to deepen into the social
+dimension of preference modelling and working on techniques that infer implicit communities [12, 47],
+measure user popularity [78, 80], their social influence level in social media contexts to investigate the
+propagation level of such influence, and estimating the extent of its propagation when users are not
+connected [119] through link prediction strategies.
+
+5.4. Perspective D: Evaluation and reproducibility
+
+D1. Evaluation metrics: As a result of the literature analysis conducted, we have identified that
+most proposed RRS so far have been validated using offline techniques, with very few studies including
+real user evaluation. Albeit offline evaluation helps measuring various aspects of model performance,
+it solely considers the system effectiveness at the time of generating recommendations. In nowadays
+society where putting the technology at the forefront of services to aid users in virtually any situation,
+it is paramount to use and propose new evaluation metrics that are more user-centered and reciprocity-
+aware. Aspects including satisfaction, utility, usability, serendipity, etc., need to be reformulated for
+
+  9
+      https://www.gwern.net/docs/psychology/okcupid/weexperimentonhumanbeings.html
+
+
+
+                                                      44
+their implantation and validation in RRS, based on real user interaction.
+D2. User studies: On another note, users are sometimes reluctant to interact with systems during
+their trial, specially when these systems require personal information about themselves. Rather than
+as an obstacle to the realistic validation of RRS, this should be viewed as an opportunity to investigate
+alternative approaches that facilitate and incentivise these interaction-based studies.
+D3. Measuring success: Success in an RRS is typically measured in terms of whether the two
+users being recommended to one another signal a positive reaction to such recommendation to the
+system. This can occur explicitly, e.g. both users give positive feedback in a job matching app, or
+implicitly, e.g. they start a relationship and hence they stop using a dating app. Nevertheless, current
+research has paid little attention to the interaction between success from the users perspective, and
+other success factors concerning the provider of the service. For instance, in platforms where some of
+its users pay for “premium” services and some others do not, it might sometimes happen that optimal
+recommendations for pairs of users might result in otherwise avoidable revenue losses if both users top
+paying such premium fees. Albeit this topic may open up dilemmas, it is worth considering aspects
+like balancing user satisfaction, business revenue for the RRS service provider, and an ethical balance
+between both. The exploration of multi-stakeholder approaches is likewise needed [2, 1], specially to
+consider scenarios where other actors beyond the two users being recommended are influenced by the
+recommender performance from the system side.
+D4. Data availability and reproducibility: An ample majority of experimental evaluations of
+RRS rely on corporate data, which is in most case private and not shareable across the scientific
+community. Although there are some exceptions to this rule, e.g. Kaggle’s speed dating experiment
+data and meetups data from meetup.com 10 , it is clearly necessary to promote (where possible) more
+validation of models through public data and, most importantly, to increase efforts in making new
+forms of non-sensitive and high-quality available data for encouraging reproducible research.
+
+5.5. Perspective E: Fairness, Explainability and Ethical Considerations
+
+Popularity bias has been identified as a major challenge to consider in RRS, and several studies have
+already proposed different strategies to deal with this issue [24, 80, 83, 118], hence their significance
+in upcoming RRS models has been justified. Fairness [152] is a related concept and sometimes
+a consequence of poorly managing popularity biases, which should receive much more attention in
+domains like recruitment and learning to ensure equal opportunities for everyone [169]. Explainable
+
+ 10
+      Kaggle meetup data: https://www.kaggle.com/sirpunch/meetups-data-from-meetupcom
+
+
+
+                                                     45
+recommendations in a reciprocal setting [77] also need further research, as this aspect has still been
+barely investigated in RRS, deserving more importance: explanations would have an impact on two
+users instead of one end user in these contexts [60], therefore it should be intimately linked to the notion
+of reciprocity, being always generated at the intersection of both parties’ interests and characteristics.
+Ethical considerations clearly play an important role in RRS where people personal data are more
+exploited than in most other RS. Besides, scenarios where users are not always truthful when publishing
+profile information constitute another challenge in CB approaches. In online services aimed at socially
+connecting users, some users tend to be deceptive in order to attract attention, specially new users
+in the system. Profiles may be a successful predictor for initial expression of preference towards the
+user. However, they might fail to predict the consequences of an actual match between users, e.g. a
+friendship or relationship, unless veracity of user profile information could be effectively analyzed and
+determined. More research seems necessary in identifying dubious users in online dating [104] and
+other RRS applications.
+
+
+6. Conclusions and Lessons Learnt
+
+Reciprocal recommenders aiming at “matching people with the right people” have attained recent
+attention by researchers and practitioners to develop personalized user match recommendations.This
+paper introduced and formally characterized the concept of Reciprocal Recommender Systems (RRS),
+highlighting its differentiating characteristics from other recommender approaches. The primary con-
+tributions include a thorough literature analysis of the state-of-the-art research on RRS to date and its
+main application domains, discussing the underlying recommendation approaches utilized to integrate
+reciprocity in the recommendation process, and describing in detail a number of representative mod-
+els. Following our literature analysis, we identified and discussed a number of relevant challenges and
+opportunities for future research on RRS. Amongst the various lessons learnt throughout this study,
+we emphasize: (1) the attention paid to a small number of application areas to date, with numerous
+emerging applications in online social matching not having been sufficiently investigated yet; (2) the
+opportunities to study novel fusion and recommendation strategies for combining user-user prefer-
+ences still not applied in this context; (3) the potential implications of considering multiple sources of
+data; and (4) the possibilities of extending RRS principles for people-to-people recommendation at a
+collective level.
+
+
+
+
+                                                    46
+Acknowledgement
+
+   We appreciate the financial support of Spanish State Research Agency - Ministry of Science and
+Innovation Grant PID2019-103880RB-I00.
+
+
+References
+
+ [1] Abdollahpouri, H., Adomavicius, G., Burke, R. D., Guy, I., Jannach, D., Kamishima, T., Krasnodebski, J.,
+    & Pizzato, L. (2020). Multistakeholder recommendation: Survey and research directions. User Modeling
+    and User-Adapted Interaction, 30 , 127 – 158.
+ [2] Abdollahpouri, H., & Burke, R. (2019). Multi-stakeholder recommendation and its connection to multi-
+    sided fairness. In RMSE workshop at ACM RecSys’19 .
+ [3] Adomavicius, G., & Tuzhilin, A. (2015). Context-aware recommender systems. In F. R. et al. (Ed.),
+    Recommender Systems Handbook (2nd Ed.). Springer.
+ [4] Aggarwal, C. C. (2016). Recommender Systems: The textbook . (1st ed.). Springer International Publishing.
+ [5] Akehurst, J., Koprinska, I., Yacef, K., Pizzato, L., Kay, J., & Rej, T. (2011). Ccr - a content-collaborative
+    reciprocal recommender for online dating. In Proceedings of the 22nd International Joint Conference on
+    Artificial Intelligence, IJCAI .
+ [6] Akehurst, J., Koprinska, I., Yacef, K., Pizzato, L., Kay, J., & Rej, T. (2011). Explicit and implicit user
+    preferences in online dating. In Proceedings of the 15th International Conference on New Frontiers in
+    Applied Data Mining PAKDD’11 (p. 15–27).
+ [7] Al-Zeyadi, M., Coenen, F., & Lisitsa, A. (2017). User-to-user recommendation using the concept of
+    movement patterns: A study using a dating social network. In Proceedings of 9th International Joint
+    Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management. KDIR.
+ [8] Alanazi, A. (2016). A Probabilistic Reciprocal Recommender with Temporal Dynamics. Ph.D. thesis
+    University of New South Wales Sydney, Australia.
+ [9] Alanazi, A., & Bain, M. (2013). A people-to-people content-based reciprocal recommender using hidden
+    markov models. In Proceedings of the 7th ACM Conference on Recommender Systems, Recsys’13 (pp.
+    303–306). ACM.
+[10] Alanazi, A., & Bain, M. (2016). A scalable people-to-people hybrid reciprocal recommender using hid-
+    den markov models. In Proceedings of 2nd International Workshop on Machine Learning Methods for
+    Recommender Systems, in conjunction with 16th SIAM International Conference on Data Mining.
+[11] Almalis, N. D., Tsihrintzis, G. A., & Karagiannis, N. (2014). A content based approach for recommending
+    personnel for job positions. In IISA 2014, The 5th International Conference on Information, Intelligence,
+    Systems and Applications (pp. 45–49).
+[12] Alsaleh, S., Nayak, R., & Xu, Y. (2011). Finding and matching communities in social networks using
+    data mining. In 2011 International Conference on Advances in Social Networks Analysis and Mining (pp.
+    389–393).
+
+
+                                                      47
+[13] Alsaleh, S., Nayak, R., Xu, Y., & Chen, L. (2011). Improving matching process in social network using
+    implicit and explicit user information. In X. Du, W. Fan, J. Wang, Z. Peng, & M. A. Sharaf (Eds.),
+    Web Technologies and Applications - 13th Asia-Pacific Web Conference, APWeb 2011. Proceedings (pp.
+    313–320). Springer volume 6612 of Lecture Notes in Computer Science.
+[14] Bao, J., Zheng, Y., Wilkie, D., & Mokbel, M. F. (2013). A survey on recommendations in location-based
+    social networks. ACM Transaction on Intelligent Systems and Technology, .
+[15] Beliakov, G., Pradera, A., & Calvo, T. (2007). Aggregation Functions: A Guide for Practitioners. Studies
+    in Fuzziness and Soft Computing (1st ed.). Springer International Publishing.
+[16] Bellogı́n, A., & Said, A. (2018). Offline and online evaluation of recommendations. In S. Berkovsky,
+    I. Cantador, & D. Tikk (Eds.), Collaborative Recommendations - Algorithms, Practical Challenges and
+    Applications (pp. 295–328). WorldScientific.
+[17] Bokde, D., Girase, S., & Mukhopadhyay, D. (2015). Matrix factorization model in collaborative filtering
+    algorithms: A survey. Procedia Computer Science, 49 , 136–146.
+[18] Borrás, J., Moreno, A., & Valls, A. (2014). Intelligent tourism recommender systems: a survey. Expert
+    Systems with Applications, 41(16), 7370–7389.
+[19] Bouchet, F., Labarthe, H., Yacef, K., & Bachelet, R. (2017). Comparing peer recommendation strategies in
+    a mooc. In Adjunct Publication of the 25th Conference on User Modeling, Adaptation and Personalization
+    UMAP ’17 (p. 129–134). Association for Computing Machinery.
+[20] Brozovsky, L., & Petricek, V. (2007). Recommender system for online dating service. arXiv preprint,
+    arXiv:cs/0703042v1 .
+[21] Burke, R. (2002). Hybrid recommender systems: Survey and experiments. User Modelling and User-
+    Adapted Interaction, 12 , 331–370.
+[22] Cai, X., Bain, M., Krzywicki, A., Wobcke, W., Kim, Y. S., Compton, P., & Mahidadia, A. (2010). Collab-
+    orative filtering for people to people recommendation in social networks. In J. Li (Ed.), AI 2010: Advances
+    in Artificial Intelligence - 23rd Australasian Joint Conference. Proceedings (pp. 476–485). Springer volume
+    6464 of Lecture Notes in Computer Science.
+[23] Cai, X., Bain, M., Krzywicki, A., Wobcke, W., Kim, Y. S., Compton, P., & Mahidadia, A. (2012).
+    Reciprocal and heterogeneous link prediction in social networks. In P.-N. Tan, S. Chawla, C. K. Ho,
+    & J. Bailey (Eds.), Advances in Knowledge Discovery and Data Mining (pp. 193–204). Springer Berlin
+    Heidelberg.
+[24] Cai, X., Bain, M., Krzywicki, A., Wobcke, W., Kim, Y. S., Compton, P., & Mahidadia, A. (2013).
+    Procf: Probabilistic collaborative filtering for reciprocal recommendation. In J. Pei, V. S. Tseng, L. Cao,
+    H. Motoda, & G. Xu (Eds.), Advances in Knowledge Discovery and Data Mining (pp. 1–12). Springer
+    Berlin Heidelberg.
+[25] Çakir, M., Ögüdücü, S. G., & Tugay, R. (2019). A deep hybrid model for recommendation systems. In
+    M. Alviano, G. Greco, & F. Scarcello (Eds.), AI*IA 2019 - Advances in Artificial Intelligence - XVIIIth
+
+
+
+
+                                                     48
+    International Conference of the Italian Association for Artificial Intelligence, Proceedings (pp. 321–335).
+    Springer volume 11946 of Lecture Notes in Computer Science.
+[26] Cantador, I., Fernández-Tobı́as, I., Berkovsky, S., & Cremonesi, P. (2015). Cross-domain recommender
+    systems. In F. Ricci, L. Rokach, & B. Shapira (Eds.), Recommender Systems Handbook (pp. 919–959).
+    Springer.
+[27] Cardoso, A., Mourão, F., & Rocha, L. (2019). A characterization methodology for candidates and re-
+    cruiters interaction in online recruitment services. In Proceedings of the 25th Brazillian Symposium on
+    Multimedia and the Web (p. 333–340).
+[28] Chen, J., Geyer, W., Dugan, C., Muller, M., & Guy, I. (2009). Make new friends, but keep the old:
+    Recommending people on social networking sites. In Proceedings of the SIGCHI Conference on Human
+    Factors in Computing Systems CHI ’09 (p. 201–210).
+[29] Chen, J., Hanrahan, B. V., & Carroll, J. M. (2019). Withshare: A mobile application to support com-
+    munity coproduction activities. IJMHCI , 11 , 40–61.
+[30] Chen, L., & Nayak, R. (2013). A reciprocal collaborative method using relevance feedback and feature
+    importance. In 2013 IEEE/WIC/ACM International Joint Conferences on Web Intelligence (WI) and
+    Intelligent Agent Technologies (IAT) (pp. 133–138). volume 1.
+[31] Chen, L., Nayak, R., & Xu, Y. (2010). Improving matching process in social network. In 2010 IEEE
+    International Conference on Data Mining Workshops (pp. 305–311).
+[32] Chen, L., Nayak, R., & Xu, Y. (2011). A recommendation method for online dating networks based on
+    social relations and demographic information. In 2011 International Conference on Advances in Social
+    Networks Analysis and Mining (pp. 407–411).
+[33] Chen, L., Nayak, R., & Xu, Y. (2012). A common neighbour based two-way collaborative recommendation
+    method. In Proceedings of the 27th Annual ACM Symposium on Applied Computing SAC ’12 (p. 214–215).
+[34] Chen, M., & Liu, P. (2017). Performance evaluation of recommender systems. International journal of
+    performability engineering, 13 , 1246–1256.
+[35] Chiang, H., & Huang, T. (2015). User-adapted travel planning system for personalized schedule recom-
+    mendation. Inf. Fusion, 21 , 3–17.
+[36] Daly, E. M., Geyer, W., & Millen, D. R. (2010). The network effects of recommending social connections.
+    In Proceedings of the Fourth ACM Conference on Recommender Systems RecSys ’10 (pp. 301–304).
+[37] Daud, A., Ahmed, W., Amjad, T., Nasir, J. A., Aljohani, N. R., Abbasi, R. A., & Ahmad, I. (2017). Who
+    will cite you back? reciprocal link prediction in citation networks. Libr. Hi Tech, 35 , 509–520.
+[38] Defazio, A., & Caetano, T. (2012). A graphical model formulation of collaborative filtering neighbourhood
+    methods with fast maximum entropy training. In Proceedings of the 29th International Conference on
+    Machine Learning (ICML’12) (pp. 555–562).
+[39] Ding, R., Palomares, I., Wang, X., Yang, G., Liu, B., Dong, Y., Herrera-Viedma, E., & Herrera, F.
+    (2020). Large-scale decision-making: Characterization, taxonomy, challenges and future directions from
+    an artificial intelligence and applications perspective. Inf. Fusion, 59 , 84–102.
+
+
+                                                      49
+[40] Ding, Y., Zhang, Y., Li, L., Xu, W., & Wang, H. (2016). A reciprocal recommender system for graduates’
+    recruitment. In 2016 8th International Conference on Information Technology in Medicine and Education
+    (ITME) (pp. 394–398).
+[41] Dong, X., Yu, L., Wu, Z., Sun, Y., Yuan, L., & Zhang, F. (2017). A hybrid collaborative filtering model
+    with deep structure for recommender systems. In AAAI .
+[42] Doryab, A., Bellotti, V., Yousfi, A., Wu, S., Carroll, J. M., & Dey, A. K. (2017). If it’s convenient:
+    Leveraging context in peer-to-peer variable service transaction recommendations. Proceedings of the
+    ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, 1 , 1 – 28.
+[43] Dou, Y., Yang, H., & Deng, X. (2016). A survey of collaborative filtering algorithms for social recom-
+    mender systems. In 2016 12th International Conference on Semantics, Knowledge and Grids (SKG) (pp.
+    40–46).
+[44] Du, Z., Hu, L., Fu, X., & Liu, Y. (2014). Scalable and explainable friend recommendation in campus social
+    network system. In S. Li, Q. Jin, X. Jiang, & J. J. J. H. Park (Eds.), Frontier and Future Development
+    of Information Technology in Medicine and Education (pp. 457–466). Springer Netherlands volume 269
+    of Lecture Notes in Electrical Engineering.
+[45] Eirinaki, M., Louta, M., & Varlamis, I. (2014). A trust-aware system for personalized user recommenda-
+    tions in social networks. Systems, Man, and Cybernetics: Systems, IEEE Transactions on, 44 , 409–421.
+[46] Felfernig, A., Boratto, L., Stettinger, M., & Tkalčič, M. (2018). Group recommender systems: An intro-
+    duction. Springer.
+[47] Felmlee, D., & Kreager, D. (2017). The invisible contours of online dating communities: A social network
+    perspective. J. Soc. Struct., 18 .
+[48] Fernández-Tobı́as, I., & Cantador, I. (2015). On the use of cross-domain user preferences and personality
+    traits in collaborative filtering. In F. Ricci, K. Bontcheva, O. Conlan, & S. Lawless (Eds.), User Modeling,
+    Adaptation and Personalization - 23rd International Conference, UMAP 2015. Proceedings (pp. 343–349).
+    Springer volume 9146 of Lecture Notes in Computer Science.
+[49] Forum,      W.     E.   (2020).       The     covid-19   pandemic   has   changed     education    forever.
+    this    is   how.           Accessed   July,     2020:      https://www.weforum.org/agenda/2020/04/
+    coronavirus-education-global-covid19-online-digital-learning/.
+[50] Freyne, J., Jacovi, M., Guy, I., & Geyer, W. (2009). Increasing engagement through early recommender
+    intervention. In Proceedings of the Third ACM Conference on Recommender Systems RecSys ’09 (pp.
+    85–92).
+[51] Garcı́a, R., & Amatriain, X. (2010). Weighted content based methods for recommending connections in
+    online social networks. In Geyer, W., Freyne, J., Mobasher, B., Anand, S. S. (eds.), Proceedings of the
+    2nd ACM RecSys’10 Workshop on Recommender Systems and the Social Web (p. 68–71).
+[52] Gebremeskel, G. G., & de Vries, A. P. (2016). Recommender systems evaluations : Offline, online, time
+    and a/a test. In 2016 Conference Labs and Evaluation Forum, CLEF .
+
+
+
+
+                                                       50
+[53] Gope, J., & Jain, S. K. (2017). A survey on solving cold start problem in recommender systems. In 2017
+    International Conference on Computing, Communication and Automation (ICCCA) (pp. 133–138).
+[54] Goswami, A., Hedayati, F., & Mohapatra, P. (2014). Recommendation systems for markets with two
+    sided preferences. In 2014 13th International Conference on Machine Learning and Applications (pp.
+    282–287).
+[55] Grob, R., Kuhn, M., Wattenhofer, R., & Wirz, M. (2009). Cluestr: Mobile social networking for enhanced
+    group communication. In Proceedings of the ACM 2009 International Conference on Supporting Group
+    Work GROUP ’09 (pp. 81–90).
+[56] Guy, I. (2018). People recommendation on social media. (pp. 570–623).
+[57] Guy, I., Avraham, U., Carmel, D., Ur, S., Jacovi, M., & Ronen, I. (2013). Mining expertise and interests
+    from social media. In Proceedings of the 22Nd International Conference on World Wide Web WWW ’13
+    (pp. 515–526).
+[58] Guy, I., Jacovi, M., Perer, A., Ronen, I., & Uziel, E. (2010). Same places, same things, same people?: Min-
+    ing user similarity on social media. In Proceedings of the 2010 ACM Conference on Computer Supported
+    Cooperative Work CSCW ’10 (pp. 41–50).
+[59] Guy, I., Levin, R., Daniel, T., & Bolshinsky, E. (2015). Islands in the stream: A study of item rec-
+    ommendation within an enterprise social stream. In Proceedings of the 38th International ACM SIGIR
+    Conference on Research and Development in Information Retrieval SIGIR ’15 (pp. 665–674).
+[60] Guy, I., Ronen, I., & Wilcox, E. (2009). Do you know?: Recommending people to invite into your social
+    network. In Proceedings of the 14th International Conference on Intelligent User Interfaces IUI ’09 (pp.
+    77–86).
+[61] Guy, I., Ronen, I., Zwerdling, N., Zuyev-Grabovitch, I., & Jacovi, M. (2016). What is your organization
+    ‘like’ ? a study of liking activity in the enterprise. In Proceedings of the SIGCHI Conference on Human
+    Factors in Computing Systems CHI ’16. New York, NY, USA: ACM.
+[62] Guy, I., Steier, T., Barnea, M., Ronen, I., & Daniel, T. (2012). Swimming against the streamz: Search and
+    analytics over the enterprise activity stream. In Proceedings of the 21st ACM International Conference
+    on Information and Knowledge Management CIKM ’12 (pp. 1587–1591).
+[63] Guy, I., Ur, S., Ronen, I., Perer, A., & Jacovi, M. (2011). Do you want to know?: Recommending strangers
+    in the enterprise. In Proceedings of the ACM 2011 Conference on Computer Supported Cooperative Work
+    CSCW ’11 (pp. 285–294).
+[64] Guy, I., Zwerdling, N., Carmel, D., Ronen, I., Uziel, E., Yogev, S., & Ofek-Koifman, S. (2009). Personal-
+    ized recommendation of social software items based on social relations. In Proceedings of the Third ACM
+    Conference on Recommender Systems RecSys ’09 (pp. 53–60).
+[65] Hannon, J., Bennett, M., & Smyth, B. (2010). Recommending twitter users to follow using content
+    and collaborative filtering approaches. In Proceedings of the Fourth ACM Conference on Recommender
+    Systems RecSys ’10 (p. 199–206).
+[66] Hong, W., Li, L., Li, T., & Pan, W. (2013). Ihr: An online recruiting system for xiamen talent service
+
+
+                                                      51
+    center. In Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and
+    Data Mining KDD ’13 (p. 1177–1185).
+[67] Hong, W., Yiwei, C., Jianwei, Q., & Yin, H. (2015). ihr+: A mobile reciprocal job recommender system.
+    In 2015 10th International Conference on Computer Science Education (ICCSE) (pp. 492–495).
+[68] Hong, W., Zheng, S., Wang, H., & Shi, J. (2013). A job recommender system based on user clustering.
+    Journal of Computers, 8 .
+[69] Jacobsen, A., & Spanakis, G. (2019). It’s a match! reciprocal recommender system for graduating students
+    and jobs. In M. C. Desmarais, C. F. Lynch, A. Merceron, & R. Nkambou (Eds.), Proceedings of the 12th
+    International Conference on Educational Data Mining.
+[70] Jacovi, M., Guy, I., Kremer-Davidson, S., Porat, S., & Aizenbud-Reshef, N. (2014). The perception
+    of others: Inferring reputation from social media in the enterprise. In Proceedings of the 17th ACM
+    Conference on Computer Supported Cooperative Work and Social Computing CSCW ’14 (pp. 756–766).
+[71] Jacovi, M., Guy, I., Ronen, I., Perer, A., Uziel, E., & Maslenko, M. (2011). Digital traces of interest:
+    Deriving interest relationships from social media interactions. In Proceedings of the 12th European Con-
+    ference on Computer Supported Cooperative Work, 24-28 September 2011, Aarhus Denmark ECSCW ’11
+    (pp. 21–40). Springer London.
+[72] Jung, H., Bellotti, V., Doryab, A., Leitersdorf, D., Chen, J., Hanrahan, B. V., Lee, S., Turner, D., Dey,
+    A. K., & Carroll, J. M. (2016). “masterful” matchmaking in service transactions: Inferred abilities, needs
+    and interests versus activity histories. In Proceedings of the 2016 CHI Conference on Human Factors in
+    Computing Systems CHI ’16 (p. 1644–1655).
+[73] Kille, B., Abel, F., Hidasi, B., & Albayrak, S. (2015). Using interaction signals for job recommendations.
+    In MobiCASE .
+[74] Kim, T., Lee, D., Hyun, S. J., & Doh, Y. Y. (2019). Urbansocialradar: A place-aware social matching
+    model for estimating serendipitous interaction willingness in korean cultural context. Int. J. Hum. Comput.
+    Stud., 125 , 81–103.
+[75] Kim, Y. S., Mahidadia, A., Compton, P., Cai, X., Bain, M., Krzywicki, A., & Wobcke, W. (2010). People
+    recommendation based on aggregated bidirectional intentions in social network site. In B.-H. Kang, &
+    D. Richards (Eds.), Knowledge Management and Acquisition for Smart Systems and Services (pp. 247–
+    260).
+[76] Kimmich Mitchell, E., & Dragon, T. (2018). Intelligent group suggestions based on students’ conceptual
+    understanding: (abstract only). In Proceedings of the 49th ACM Technical Symposium on Computer
+    Science Education SIGCSE ’18 (p. 274). Association for Computing Machinery.
+[77] Kleinerman, A., Kraus, S., Rosenfeld, A., & Ricci, F. (2018). Providing explanations for recommenda-
+    tions in reciprocal environments. In Proceedings of the 12th ACM Conference on Recommender Systems,
+    Recsys’18 (pp. 22–30). ACM.
+[78] Kleinerman, A., Rosenfeld, A., Ricci, F., & Kraus, S. (2018). Optimally balancing receiver and recom-
+
+
+
+
+                                                     52
+    mended users’ importance in reciprocal recommender systems. In Proceedings of the 12th ACM Conference
+    on Recommender Systems, Recsys’18 (pp. 131–139). ACM.
+[79] Koprinska, I., & Yacef, K. (2015). People-to-people reciprocal recommenders. In Recommender Systems
+    Handbook .
+[80] Krzywicki, A., Wobcke, W., Cai, X., Bain, M., Mahidadia, A., Compton, P., & Kim, Y. S. (2012). Using a
+    critic to promote less popular candidates in a people-to-people recommender system. In M. P. J. Fromherz,
+    & H. Muñoz-Avila (Eds.), Proceedings of the Twenty-Fourth Conference on Innovative Applications of
+    Artificial Intelligence. AAAI.
+[81] Krzywicki, A., Wobcke, W., Cai, X., Mahidadia, A., Bain, M., Compton, P., & Kim, Y. S. (2010).
+    Interaction-based collaborative filtering methods for recommendation in online dating. In L. Chen, P. Tri-
+    antafillou, & T. Suel (Eds.), Web Information Systems Engineering - WISE 2010 - 11th International
+    Conference. Proceedings (pp. 342–356). Springer volume 6488 of Lecture Notes in Computer Science.
+[82] Kunegis, J., Gröner, G., & Gottron, T. (2012). Online dating recommender systems: the split-complex
+    number approach. In RSWeb ’12, Proceedings.
+[83] Kutty, S., Chen, L., & Nayak, R. (2012). A people-to-people recommendation system using tensor space
+    models. In Proceedings of the 27th Annual ACM Symposium on Applied Computing SAC ’12 (p. 187–192).
+[84] Kutty, S., Nayak, R., & Chen, L. (2014). A people-to-people matching system using graph mining
+    techniques. World Wide Web, 17 , 311–349.
+[85] Labarthe, H., Bachelet, R., Bouchet, F. R., & Yacef, K. (2016). Increasing mooc completion rates through
+    social interactions: a recommendation system. In European Multistakeholder MOOCs summit.
+[86] Labarthe, H., Bouchet, F., Bachelet, R., & Yacef, K. (2016). Does a Peer Recommender Foster Students’
+    Engagement in MOOCs? In I. E. D. M. S. (IEDMS) (Ed.), 9th International Conference on Educational
+    Data Mining (pp. 418–423).
+[87] Leskovec, J., Huttenlocher, D., & Kleinberg, J. (2010). Predicting positive and negative links in online
+    social networks. In Proceedings of the 19th International Conference on World Wide Web WWW ’10 (p.
+    641–650).
+[88] Li, C.-T. (2019). Mentor-spotting: recommending expert mentors to mentees for live trouble-shooting in
+    codementor. Knowledge and Information Systems, (pp. 1–22).
+[89] Li, L., & Li, T. (2012). Meet: a generalized framework for reciprocal recommender systems. In Proceedings
+    of the 21st ACM international conference on Information and knowledge management, CIKM ’12 .
+[90] Li, Z., Song, Y., & Xu, X. (2019). Incorporating facial attractiveness in photos for online dating recom-
+    mendation. Electronic Commerce Research, 19 , 285–310.
+[91] Lian, J., Zhang, F., Hou, M., Wang, H., Xie, X., & Sun, G. (2017). Practical lessons for job recommen-
+    dations in the cold-start scenario. In Proceedings of the Recommender Systems Challenge 2017 RecSys
+    Challenge ’17. Association for Computing Machinery.
+[92] Liu, R., Ouyang, Y., Rong, W., Song, X., Tang, C., & Xiong, Z. (2016). Rating prediction based job
+    recommendation service for college students. In ICCSA’16, Proceedings.
+
+
+                                                     53
+ [93] Liu, R., Ouyang, Y., Rong, W., Song, X., Xie, W., & Xiong, Z. (2016). Employer oriented recruitment
+      recommender service for university students. In ICIC’16, Proceedings.
+ [94] Malinowski, J., Keim, T., Wendt, O., & Weitzel, T. (2006). Matching people and jobs: A bilateral
+      recommendation approach. In Proceedings of the 39th Annual Hawaii International Conference on System
+      Sciences (HICSS’06) (pp. 137c–137c). volume 6.
+ [95] Mayer, J., & Jones, Q. (2016). Encount’r: Exploring passive context-awareness for opportunistic social
+      matching. In Proceedings of the 19th ACM Conference on Computer Supported Cooperative Work and
+      Social Computing Companion (p. 349–352).
+ [96] Mayer, J. M., Hiltz, S. R., Barkhuus, L., Väänänen, K., & Jones, Q. (2016). Supporting opportunities for
+      context-aware social matching: An experience sampling study. Proceedings of the 2016 CHI Conference
+      on Human Factors in Computing Systems, .
+ [97] Mayer, J. M., Hiltz, S. R., & Jones, Q. (2015). Making social matching context-aware: Design concepts
+      and open challenges. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing
+      Systems (p. 545–554).
+ [98] Mayer, J. M., Jones, Q., & Hiltz, S. R. (2015). Identifying opportunities for valuable encounters: Toward
+      context-aware social matching systems. ACM Trans. Inf. Syst., 34 .
+ [99] Mine, T., Kakuta, T., & Ono, A. (2013). Reciprocal recommendation for job matching with bidirec-
+      tional feedback. In Proceedings of the 2013 Second IIAI International Conference on Advanced Applied
+      Informatics IIAI-AAI ’13 (p. 39–44).
+[100] Monti, D., Rizzo, G., & Morisio, M. (2020). A systematic literature review of multicriteria recommender
+      systems. Artificial Intelligence Review (in press). DOI: 10.1007/s10462-020-09851-4 , (pp. 1–42).
+[101] Nayak, R. (2011). Utilizing past relations and user similarities in a social matching system. In Proceedings
+      of the 15th Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining - Volume Part
+      II PAKDD’11 (p. 99–110).
+[102] Nayak, R., Zhang, M., & Chen, L. (2010). A social matching system for an online dating network: A
+      preliminary study. In 2010 IEEE International Conference on Data Mining Workshops (pp. 352–357).
+[103] Nepal, S., Paris, C., Pour, P., Bista, S., & Freyne, J. (2013). A social trust based friend recommender for
+      online communities. In Collaborative Computing: Networking, Applications and Worksharing (Collabo-
+      ratecom), 2013 9th International Conference Conference on (pp. 419–428).
+[104] Neve, J., & Palomares, I. (2018). Arikui - a dubious user detection system for online dating in japan.
+      2018 IEEE Int. Conf. on Systems, Man, and Cybernetics (SMC), .
+[105] Neve, J., & Palomares, I. (2019). Aggregation strategies in user-to-user reciprocal recommender systems.
+      In 2019 IEEE International Conference on Systems, Man and Cybernetics (SMC’19) (pp. 4031–4036).
+[106] Neve, J., & Palomares, I. (2019). Latent factor models and aggregation operators for collaborative
+      filtering in reciprocal recommender systems. In Proceedings of the 13rd ACM Conference on Recommender
+      Systems, Recsys’19 (pp. 219–227). ACM.
+[107] Neve, J., & Palomares, I. (2020). Hybrid reciprocal recommender systems: Integrating item-to-user
+
+
+                                                       54
+      principles in reciprocal recommendation. In Companion Proceedings of the Web Conference 2020 WWW
+      ’20 (p. 848–854).
+[108] Otakore, O., & Ugwu, C. (2018). Online matchmaking using collaborative filtering and reciprocal recom-
+      mender systems. The International Journal of Engineering and Science, 07 , 07–21.
+[109] Palomares, I. (2020). Reciprocal recommendation: matching users with the right users. In Proceedings of
+      the 43rd ACM SIGIR Conference on Research and Development in Information RetrievaL SIGIR ’20 (p.
+      In press).
+[110] Park, Y., Park, S., Jung, W., & goo Lee, S. (2015). Reversed cf: A fast collaborative filtering algorithm
+      using a k-nearest neighbor graph. Expert Syst. Appl., 42 , 4022–4028.
+[111] Pizzato, L., Chung, T., Rej, T., Koprinska, I., Yacef, K., & Kay, J. (2010). Learning user preferences in
+      online dating. In Proceedings of the Preference Learning (PL-10) Tutorial and Workshop, European Con-
+      ference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML
+      PKDD).
+[112] Pizzato, L., Rej, T., Akehurst, J., Koprinska, I., Yacef, K., & Kay, J. (2014). Recommending people to
+      people: the nature of reciprocal recommenders with a case study in online dating. User Modelling and
+      User Adapted Interaction, 23 , 447–488.
+[113] Pizzato, L., Rej, T., Chung, T., Koprinska, I., & Kay, J. (2010). Recon: A reciprocal recommender for
+      online dating. In Proceedings of the Fourth ACM Conference on Recommender Systems RecSys ’10 (p.
+      207–214).
+[114] Pizzato, L., Rej, T., Chung, T., Yacef, K., Koprinska, I., & Kay, J. (2010). Reciprocal recommenders. In
+      8th Workshop on Intelligent Techniques for Web Personalization and Recommender Systems.
+[115] Pizzato, L. A., Akehurst, J., Silvestrini, C., Yacef, K., Koprinska, I., & Kay, J. (2012). The effect of
+      suspicious profiles on people recommenders. In Proceedings of the 20th International Conference on User
+      Modeling, Adaptation, and Personalization UMAP’12 (p. 225–236).
+[116] Pizzato, L. A., & Bhasin, A. (2013). Beyond friendship: The art, science and applications of recommending
+      people to people in social networks. In Proceedings of the 7th ACM Conference on Recommender Systems
+      RecSys ’13 (p. 495–496).
+[117] Pizzato, L. A., Rej, T., Yacef, K., Koprinska, I., & Kay, J. (2011). Finding someone you will like and who
+      won’t reject you. In Proceedings of the 19th International Conference on User Modeling, Adaption, and
+      Personalization UMAP’11 (p. 269–280).
+[118] Pizzato, L. A., & Silvestrini, C. (2011). Stochastic matching and collaborative filtering to recommend
+      people to people. In Proceedings of the Fifth ACM Conference on Recommender Systems RecSys ’11 (p.
+      341–344).
+[119] Porcel, C., Ching-López, A., Oliveira, G. L., Loia, V., & Herrera-Viedma, E. (2018). Sharing notes:
+      An academic social network based on a personalized fuzzy linguistic recommender system. Engineering
+      Applications of Artificial Intelligence, 75 , 1–10.
+[120] Potts, B. A., Khosravi, H., Reidsema, C., Bakharia, A., Belonogoff, M., & Fleming, M. (2018). Recip-
+
+
+                                                            55
+      rocal peer recommendation for learning purposes. In Proceedings of the 8th International Conference on
+      Learning Analytics and Knowledge LAK ’18 (p. 226–235).
+[121] Prabhakar, S., Spanakis, G., & Zaiane, O. (2017). Reciprocal recommender system for learners in massive
+      open online courses (moocs). In H. Xie, E. Popescu, G. Hancke, & B. Fernández Manjón (Eds.), Advances
+      in Web-Based Learning – ICWL 2017 (pp. 157–167).
+[122] Qian, Y., Zhang, Y., Ma, X., Yu, H., & Peng, L. (2019). EARS: emotion-aware recommender system
+      based on hybrid information fusion. Inf. Fusion, 46 , 141–146.
+[123] Qu, Y., Liu, H., Du, Y., & Wu, Z. (2018). Reciprocal ranking: A hybrid ranking algorithm for reciprocal
+      recommendation. In PRICAI 2018: Trends in Artificial Intelligence - 15th Pacific Rim International
+      Conference on Artificial Intelligence, Proceedings, Part II (pp. 455–463). Springer volume 11013 of
+      Lecture Notes in Computer Science.
+[124] Quercia, D., & Capra, L. (2009). Friendsensing: Recommending friends using mobile phones. In Proceed-
+      ings of the Third ACM Conference on Recommender Systems RecSys ’09 (pp. 273–276).
+[125] Raban, D. R., Danan, A., Ronen, I., & Guy, I. (2012). Impression formation in corporate people tagging.
+      In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems CHI ’12 (p. 569–578).
+      New York, NY, USA: Association for Computing Machinery.
+[126] Rajagopal, K., van Bruggen, J. M., & Sloep, P. B. (2017). Recommending peers for learning: Matching
+      on dissimilarity in interpretations to provoke breakdown. British Journal of Educational Technology, 48 ,
+      385–406.
+[127] Ramanathan, R., Shinada, N. K., & Palaniappan, S. K. (2020). Building a reciprocal recommendation
+      system at scale from scratch: Learnings from one of japan’s prominent dating applications. In Fourteenth
+      ACM Conference on Recommender Systems RecSys ’20 (p. 566–567).
+[128] Rendle, S., Freudenthaler, C., Gantner, Z., & Schmidt-Thieme, L. (2009). Bpr: Bayesian personalized
+      ranking from implicit feedback. In Proceedings of the Twenty-Fifth Conference on Uncertainty in Artificial
+      Intelligence UAI ’09 (p. 452–461). Arlington, Virginia, USA: AUAI Press.
+[129] Reusens, M., Lemahieu, W., Baesens, B., & Sels, L. (2017). A note on explicit versus implicit information
+      for job recommendation. Decis. Support Syst., 98 , 26–35.
+[130] Reusens, M., Lemahieu, W., Baesens, B., & Sels, L. (2018). Evaluating recommendation and search in
+      the labor market. Knowl. Based Syst., 152 , 62–69.
+[131] Ricci, F., Rokach, L., & Shapira, B. (2015). (Eds.) Recommender Systems Handbook (2nd Ed.). Springer.
+[132] Richards, D., Taylor, M., & Busch, P. (2008). Expertise recommendation: A two-way knowledge commu-
+      nication channel. In Fourth International Conference on Autonomic and Autonomous Systems (ICAS’08)
+      (pp. 35–40).
+[133] Rodrı́guez-Garcı́a, M. Á., Valencia-Garcı́a, R., Palacios, R. C., & Gómez-Berbı́s, J. M. (2019). Blinddate
+      recommender: A context-aware ontology-based dating recommendation platform. J. Inf. Sci., 45 .
+[134] Saini, A., Rusu, F., & Johnston, A. (2019). Privatejobmatch: A privacy-oriented deferred multi-match
+
+
+
+
+                                                       56
+      recommender system for stable employment. In Proceedings of the 13th ACM Conference on Recommender
+      Systems RecSys ’19 (p. 87–95).
+[135] Samanthula, B. K., & Jiang, W. (2014). A randomized approach for structural and message based private
+      friend recommendation in online social networks. In State of the Art Applications of Social Network
+      Analysis (pp. 1–34). Springer.
+[136] Sanz-Cruzado, J., & Castells, P. (2019). Information retrieval models for contact recommendation in
+      social networks. In L. Azzopardi, B. Stein, N. Fuhr, P. Mayr, C. Hauff, & D. Hiemstra (Eds.), Advances
+      in Information Retrieval - 41st European Conference on IR Research, ECIR, Proceedings, Part I (pp.
+      148–163). Springer volume 11437 of Lecture Notes in Computer Science.
+[137] Scellato, S., Noulas, A., Lambiotte, R., & Mascolo, C. (2011). Socio-spatial properties of online location-
+      based social networks. ICWSM , 11 , 329–336.
+[138] Silva, N., Tsang, I.-R., Cavalcanti, G., & Tsang, I.-J. (2010). A graph-based friend recommendation
+      system using genetic algorithm. In Evolutionary Computation (CEC), 2010 IEEE Congress on (pp. 1–7).
+[139] Singh, A. P., & Gordon, G. J. (2008). Relational learning via collective matrix factorization. In Proceedings
+      of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining KDD ’08
+      (p. 650–658). Association for Computing Machinery.
+[140] Su, X., & Hu, H. (2019). Gender-specific preference in online dating. EPJ Data Science, 8 , 1–22.
+[141] Sudo, K., Osugi, N., & Kanamori, T. (2019). Numerical study of reciprocal recommendation with domain
+      matching. Japanese Journal of Statistics and Data Science, 2 , 221–240.
+[142] Syed, J., & Ozbilgin, M. (2015). Managing diversity and inclusion: an international perspective. SAGE
+      publishing.
+[143] Symeonidis, P., Tiakas, E., & Manolopoulos, Y. (2010). Transitive node similarity for link prediction
+      in social networks with positive and negative links. In Proceedings of the Fourth ACM Conference on
+      Recommender Systems RecSys ’10 (pp. 183–190).
+[144] Tay, Y., Luu, A. T., & Hui, S. C. (2018). Couplenet: Paying attention to couples with coupled attention
+      for relationship recommendation. Proceedings of 12th International AAAI Conference on Web and Social
+      Media (ICWSM), .
+[145] Ting, C.-H., Lo, H.-Y., & Lin, S.-D. (2016). Transfer-learning based model for reciprocal recommendation.
+      In Proceedings, Part II, of the 20th Pacific-Asia Conference on Advances in Knowledge Discovery and
+      Data Mining - Volume 9652 PAKDD 2016 (p. 491–502).
+[146] Trattner, C., & Elsweiler, D. (2017). Food recommender systems: Important contributions, challenges
+      and future research directions. Cornell University, .
+[147] Triantaphyllou, E. (2000). Multi-criteria Decision Making Methods: A Comparative Study. Springer.
+[148] Tsourougianni, E., & Ampazis, N. (2013). Recommending who to follow on twitter based on tweet contents
+      and social connections. Social Networking, 2 , 165–173.
+[149] Tu, K., Ribeiro, B. F., Jensen, D. D., Towsley, D., Liu, B., Jiang, H., & Wang, X. (2014). Online dating
+
+
+
+
+                                                        57
+     recommendations: matching markets and learning preferences. In C. Chung, A. Z. Broder, K. Shim, &
+     T. Suel (Eds.), 23rd International World Wide Web Conference, WWW ’14 (pp. 787–792). ACM.
+[150] Vitale, F., Parotsidis, N., & Gentile, C. (2018). Online reciprocal recommendation with theoretical
+     performance guarantees. In Proceedings of the 32nd International Conference on Neural Information
+     Processing Systems NIPS’18 (p. 8267–8277). Red Hook, NY, USA: Curran Associates Inc.
+[151] Wenzel, F., & Kießling, W. (2016). A preference-driven database approach to reciprocal user recom-
+     mendations in online social networks. In S. Hartmann, & H. Ma (Eds.), Database and Expert Systems
+     Applications - 27th International Conference, DEXA 2016, Proceedings, Part II (pp. 3–10). Springer
+     volume 9828 of Lecture Notes in Computer Science.
+[152] Xia, B., Yin, J., Xu, J., & Li, Y. (2019). We-rec: A fairness-aware reciprocal recommendation based on
+     walrasian equilibrium. Knowl. Based Syst., 182 .
+[153] Xia, P., Liu, B., Sun, Y., & Chen, C. (2015). Reciprocal recommendation system for online dating. In
+     Proceedings of the 2015 IEEE/ACM International Conference on Advances in Social Networks Analysis
+     and Mining 2015 ASONAM ’15 (p. 234–241).
+[154] Xia, P., Tu, K., Ribeiro, B., Jiang, H., Wang, X., Chen, C. X., Liu, B., & Towsley, D. F. (2014).
+     Characterization of user online dating behavior and preference on a large online dating site. In Social
+     Network Analysis.
+[155] Yacef, K., & McLaren, B. M. (2015). Supporting learners ’ group formation with reciprocal recommender
+     technology. In 3rd Workshop on Intelligent Support for Learning in Groups, held in conjunction with ITS .
+[156] Yager, R. R., & Rybalov, A. (1996). Uninorm aggregation operators. Fuzzy Sets Syst., 80 , 111–120.
+[157] Yang, D., Adamson, D., & Rosé, C. P. (2014). Question recommendation with constraints for massive
+     open online courses. In Proceedings of the 8th ACM Conference on Recommender Systems RecSys ’14 (p.
+     49–56).
+[158] Yin, Z., Xu, T., Zhu, H., Zhu, C., Chen, E., & Xiong, H. (2019). Matching of social events and users: a
+     two-way selection perspective. World Wide Web, 23 , 853–871.
+[159] Yu, H., Liu, C., & Zhang, F. (2011). Reciprocal recommendation algorithm for the field of recruitment.
+     Journal of Information and Computational Science, 8 , 4061–4068.
+[160] Yu, M., Zhang, X., & Kreager, D. (2016). New to online dating? learning from experienced users for a
+     successful match. In R. Kumar, J. Caverlee, & H. Tong (Eds.), 2016 IEEE/ACM International Conference
+     on Advances in Social Networks Analysis and Mining, ASONAM 2016 (pp. 467–470). IEEE Computer
+     Society.
+[161] Yu, M., Zhang, X. L., Lee, D., & Kreager, D. (2018). Community-based recommendation for cold-start
+     problem: A case study of reciprocal online dating recommendation. In M. Kaya, J. Kawash, S. Khoury,
+     & M. Day (Eds.), Social Network Based Big Data Analysis and Applications Lecture Notes in Social
+     Networks (pp. 201–222). Springer.
+[162] Yu, M., Zhao, K., Yen, J., & Kreager, D. (2013). Recommendation in reciprocal and bipartite social
+
+
+
+
+                                                     58
+      networks: A case study of online dating. In Proceedings of the 6th International Conference on Social
+      Computing, Behavioral-Cultural Modeling and Prediction SBP’13 (p. 231–239). Springer-Verlag.
+[163] Zang, X., Yamasaki, T., Aizawa, K., Nakamoto, T., Kuwabara, E., Egami, S., & Fuchida, Y. (2017).
+      You will succeed or not? matching prediction in a marriage consulting service. In 2017 IEEE Third
+      International Conference on Multimedia Big Data (BigMM) (pp. 109–116).
+[164] Zhang, L., Fang, H., Ng, W. K., & Zhang, J. (2011). Intrank: Interaction ranking-based trustworthy
+      friend recommendation. In Trust, Security and Privacy in Computing and Communications (TrustCom),
+      2011 IEEE 10th International Conference on (pp. 266–273).
+[165] Zhang, M., Ma, J., Liu, Z., Sun, J., & Silva, T. (2016). A research analytics framework-supported
+      recommendation approach for supervisor selection. British Journal of Educational Technology, 47 , 403–
+      420.
+[166] Zhao, G., Lee, M. L., Hsu, W., Chen, W., & Hu, H. (2013). Community-based user recommendation in
+      uni-directional social networks. In Proceedings of the 22nd ACM International Conference on Information
+      & Knowledge Management CIKM ’13 (p. 189–198).
+[167] Zhao, K., Wang, X., Yu, M., & Gao, B. (2014). User recommendations in reciprocal and bipartite social
+      networks–an online dating case study. IEEE Intelligent Systems, 29 , 27–35.
+[168] Zheng, Y. (2019). Multi-stakeholder recommendations: Case studies, methods and challenges. In Pro-
+      ceedings of the 13th ACM Conference on Recommender Systems RecSys ’19 (p. 578–579).
+[169] Zheng, Y., Dave, T., Mishra, N., & Kumar, H. (2018). Fairness in reciprocal recommendations: A
+      speed-dating study. In Adjunct Publication of the 26th Conference on User Modeling, Adaptation and
+      Personalization UMAP ’18 (p. 29–34). Association for Computing Machinery.
+[170] Özcan, G., & Ögüdücü, S. G. (2016). Applying different classification techniques in reciprocal job rec-
+      ommender system for considering job candidate preferences. In 2016 11th International Conference for
+      Internet Technology and Secured Transactions (ICITST) (pp. 235–240).
+
+
+
+
+                                                       59
+

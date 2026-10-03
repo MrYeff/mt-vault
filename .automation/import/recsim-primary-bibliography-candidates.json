@@ -1,0 +1,768 @@
+{
+  "source_file": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/c4116160232425b8e2feb62d22a79f6c2aec6b7e9781bb9d0b01b96b0400662a.html",
+  "source_sha256": "c4116160232425b8e2feb62d22a79f6c2aec6b7e9781bb9d0b01b96b0400662a",
+  "entries": [
+    {
+      "index": 1,
+      "source_id": "bib.bib1",
+      "blocks": [
+        "Martín Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard, et al.",
+        "TensorFlow: A system for large-scale machine learning.",
+        "arXiv preprint arXiv:1605.08695, 2016."
+      ],
+      "citation": "Abadi et al. [2016] Martín Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard, et al. TensorFlow: A system for large-scale machine learning. arXiv preprint arXiv:1605.08695, 2016.",
+      "title_candidate": "TensorFlow: A system for large-scale machine learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 2,
+      "source_id": "bib.bib2",
+      "blocks": [
+        "Shipra Agrawal and Navin Goyal.",
+        "Further optimal regret bounds for Thompson sampling.",
+        "In Proceedings of the 16th International Conference on Artificial Intelligence and Statistics, pages 99–107, Scottsdale, AZ, 2013."
+      ],
+      "citation": "Agrawal and Goyal [2013] Shipra Agrawal and Navin Goyal. Further optimal regret bounds for Thompson sampling. In Proceedings of the 16th International Conference on Artificial Intelligence and Statistics, pages 99–107, Scottsdale, AZ, 2013.",
+      "title_candidate": "Further optimal regret bounds for Thompson sampling",
+      "status": "requires source verification"
+    },
+    {
+      "index": 3,
+      "source_id": "bib.bib3",
+      "blocks": [
+        "Qingyao Ai, Keping Bi, Jiafeng Guo, and W. Bruce Croft.",
+        "Learning a deep listwise context model for ranking refinement.",
+        "In Proceedings of the 41st Annual International ACM Conference on Research and Development in Information Retrieval (SIGIR-18), pages 135–144, Ann Arbor, MI, 2018."
+      ],
+      "citation": "Ai et al. [2018] Qingyao Ai, Keping Bi, Jiafeng Guo, and W. Bruce Croft. Learning a deep listwise context model for ranking refinement. In Proceedings of the 41st Annual International ACM Conference on Research and Development in Information Retrieval (SIGIR-18), pages 135–144, Ann Arbor, MI, 2018.",
+      "title_candidate": "Learning a deep listwise context model for ranking refinement",
+      "status": "requires source verification"
+    },
+    {
+      "index": 4,
+      "source_id": "bib.bib4",
+      "blocks": [
+        "Peter Auer, Nicolò Cesa-Bianchi, and Paul Fischer.",
+        "Finite-time analysis of the multiarmed bandit problem.",
+        "Machine Learning, 47(2-3):235–256, 2002."
+      ],
+      "citation": "Auer et al. [2002] Peter Auer, Nicolò Cesa-Bianchi, and Paul Fischer. Finite-time analysis of the multiarmed bandit problem. Machine Learning, 47(2-3):235–256, 2002.",
+      "title_candidate": "Finite-time analysis of the multiarmed bandit problem",
+      "status": "requires source verification"
+    },
+    {
+      "index": 5,
+      "source_id": "bib.bib5",
+      "blocks": [
+        "Marc G. Bellemare, Yavar Naddaf, Joel Veness, and Michael Bowling.",
+        "The Arcade Learning Environment: An evaluation platform for general agents.",
+        "Journal of Artificial Intelligence Research, 47:253–279, 2013."
+      ],
+      "citation": "Bellemare et al. [2013] Marc G. Bellemare, Yavar Naddaf, Joel Veness, and Michael Bowling. The Arcade Learning Environment: An evaluation platform for general agents. Journal of Artificial Intelligence Research, 47:253–279, 2013.",
+      "title_candidate": "The Arcade Learning Environment: An evaluation platform for general agents",
+      "status": "requires source verification"
+    },
+    {
+      "index": 6,
+      "source_id": "bib.bib6",
+      "blocks": [
+        "Irwan Bello, Sayali Kulkarni, Sagar Jain, Craig Boutilier, Ed Chi, Elad Eban, Xiyang Luo, Alan Mackey, and Ofer Meshi.",
+        "Seq2Slate: Re-ranking and slate optimization with RNNs.",
+        "arXiv:1810.02019 [cs.IR], 2018."
+      ],
+      "citation": "Bello et al. [2018] Irwan Bello, Sayali Kulkarni, Sagar Jain, Craig Boutilier, Ed Chi, Elad Eban, Xiyang Luo, Alan Mackey, and Ofer Meshi. Seq2Slate: Re-ranking and slate optimization with RNNs. arXiv:1810.02019 [cs.IR], 2018.",
+      "title_candidate": "Seq2Slate: Re-ranking and slate optimization with RNNs",
+      "status": "requires source verification"
+    },
+    {
+      "index": 7,
+      "source_id": "bib.bib7",
+      "blocks": [
+        "Craig Boutilier, Alon Cohen, Avinatan Hassidim, Yishay Mansour, Ofer Meshi, Martin Mladenov, and Dale Schuurmans.",
+        "Planning and learning with stochastic action sets.",
+        "In International Joint Conference on Artifical Intelligence (IJCAI), pages 4674–4682, Stockholm, 2018."
+      ],
+      "citation": "Boutilier et al. [2018] Craig Boutilier, Alon Cohen, Avinatan Hassidim, Yishay Mansour, Ofer Meshi, Martin Mladenov, and Dale Schuurmans. Planning and learning with stochastic action sets. In International Joint Conference on Artifical Intelligence (IJCAI), pages 4674–4682, Stockholm, 2018.",
+      "title_candidate": "Planning and learning with stochastic action sets",
+      "status": "requires source verification"
+    },
+    {
+      "index": 8,
+      "source_id": "bib.bib8",
+      "blocks": [
+        "Jack S. Breese, David Heckerman, and Carl Kadie.",
+        "Empirical analysis of predictive algorithms for collaborative filtering.",
+        "In Proceedings of the 14th Conference on Uncertainty in Artificial Intelligence, pages 43–52, Madison, WI, 1998."
+      ],
+      "citation": "Breese et al. [1998] Jack S. Breese, David Heckerman, and Carl Kadie. Empirical analysis of predictive algorithms for collaborative filtering. In Proceedings of the 14th Conference on Uncertainty in Artificial Intelligence, pages 43–52, Madison, WI, 1998.",
+      "title_candidate": "Empirical analysis of predictive algorithms for collaborative filtering",
+      "status": "requires source verification"
+    },
+    {
+      "index": 9,
+      "source_id": "bib.bib9",
+      "blocks": [
+        "Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, and Wojciech Zaremba.",
+        "OpenAI gym.",
+        "arXiv:1606.01540 [cs.LG], 2016."
+      ],
+      "citation": "Brockman et al. [2016] Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, and Wojciech Zaremba. OpenAI gym. arXiv:1606.01540 [cs.LG], 2016.",
+      "title_candidate": "OpenAI gym",
+      "status": "requires source verification"
+    },
+    {
+      "index": 10,
+      "source_id": "bib.bib10",
+      "blocks": [
+        "Pablo Samuel Castro, Subhodeep Moitra, Carles Gelada, Saurabh Kumar, and Marc G. Bellemare.",
+        "Dopamine: A research framework for deep reinforcement learning.",
+        "arXiv:1812.06110 [cs.LG], 2018."
+      ],
+      "citation": "Castro et al. [2018] Pablo Samuel Castro, Subhodeep Moitra, Carles Gelada, Saurabh Kumar, and Marc G. Bellemare. Dopamine: A research framework for deep reinforcement learning. arXiv:1812.06110 [cs.LG], 2018.",
+      "title_candidate": "Dopamine: A research framework for deep reinforcement learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 11,
+      "source_id": "bib.bib11",
+      "blocks": [
+        "Yash Chandak, Georgios Theocharous, Blossom Metevier, and Philip S. Thomas.",
+        "Reinforcement learning when all actions are not always available.",
+        "arXiv:1906.01772 [cs.LG], 2019."
+      ],
+      "citation": "Chandak et al. [2019] Yash Chandak, Georgios Theocharous, Blossom Metevier, and Philip S. Thomas. Reinforcement learning when all actions are not always available. arXiv:1906.01772 [cs.LG], 2019.",
+      "title_candidate": "Reinforcement learning when all actions are not always available",
+      "status": "requires source verification"
+    },
+    {
+      "index": 12,
+      "source_id": "bib.bib12",
+      "blocks": [
+        "Olivier Chapelle.",
+        "Modeling delayed feedback in display advertising.",
+        "In The 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, (KDD-14), pages 1097–1105, 2014."
+      ],
+      "citation": "Chapelle [2014] Olivier Chapelle. Modeling delayed feedback in display advertising. In The 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, (KDD-14), pages 1097–1105, 2014.",
+      "title_candidate": "Modeling delayed feedback in display advertising",
+      "status": "requires source verification"
+    },
+    {
+      "index": 13,
+      "source_id": "bib.bib13",
+      "blocks": [
+        "Olivier Chapelle and Lihong Li.",
+        "An empirical evaluation of Thompson sampling.",
+        "In Advances in Neural Information Processing Systems 24 (NIPS-11), pages 2249–2257, 2011."
+      ],
+      "citation": "Chapelle and Li [2011] Olivier Chapelle and Lihong Li. An empirical evaluation of Thompson sampling. In Advances in Neural Information Processing Systems 24 (NIPS-11), pages 2249–2257, 2011.",
+      "title_candidate": "An empirical evaluation of Thompson sampling",
+      "status": "requires source verification"
+    },
+    {
+      "index": 14,
+      "source_id": "bib.bib14",
+      "blocks": [
+        "Li Chen and Pearl Pu.",
+        "Critiquing-based recommenders: survey and emerging trends.",
+        "User Modeling and User-Adapted Interaction, 22(1):125–150, Apr 2012.",
+        "ISSN 1573-1391.",
+        "doi: 10.1007/s11257-011-9108-6.",
+        "URL https://doi.org/10.1007/s11257-011-9108-6."
+      ],
+      "citation": "Chen and Pu [2012] Li Chen and Pearl Pu. Critiquing-based recommenders: survey and emerging trends. User Modeling and User-Adapted Interaction, 22(1):125–150, Apr 2012. ISSN 1573-1391. doi: 10.1007/s11257-011-9108-6. URL https://doi.org/10.1007/s11257-011-9108-6.",
+      "title_candidate": "Critiquing-based recommenders: survey and emerging trends",
+      "status": "requires source verification"
+    },
+    {
+      "index": 15,
+      "source_id": "bib.bib15",
+      "blocks": [
+        "Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, and Ed Chi.",
+        "Top-k off-policy correction for a REINFORCE recommender system.",
+        "In 12th ACM International Conference on Web Search and Data Mining (WSDM-19), pages 456–464, Melbourne, Australia, 2018."
+      ],
+      "citation": "Chen et al. [2018] Minmin Chen, Alex Beutel, Paul Covington, Sagar Jain, Francois Belletti, and Ed Chi. Top-k off-policy correction for a REINFORCE recommender system. In 12th ACM International Conference on Web Search and Data Mining (WSDM-19), pages 456–464, Melbourne, Australia, 2018.",
+      "title_candidate": "Top-k off-policy correction for a REINFORCE recommender system",
+      "status": "requires source verification"
+    },
+    {
+      "index": 16,
+      "source_id": "bib.bib16",
+      "blocks": [
+        "François Chollet et al.",
+        "Keras.",
+        "https://github.com/fchollet/keras, 2015."
+      ],
+      "citation": "Chollet et al. [2015] François Chollet et al. Keras. https://github.com/fchollet/keras, 2015.",
+      "title_candidate": "Keras",
+      "status": "requires source verification"
+    },
+    {
+      "index": 17,
+      "source_id": "bib.bib17",
+      "blocks": [
+        "Konstantina Christakopoulou and Arindam Banerjee.",
+        "Learning to interact with users: A collaborative-bandit approach.",
+        "In Proceedings of the 2018 SIAM International Conference on Data Mining, SDM 2018, May 3-5, 2018, San Diego Marriott Mission Valley, San Diego, CA, USA., pages 612–620, 2018."
+      ],
+      "citation": "Christakopoulou and Banerjee [2018] Konstantina Christakopoulou and Arindam Banerjee. Learning to interact with users: A collaborative-bandit approach. In Proceedings of the 2018 SIAM International Conference on Data Mining, SDM 2018, May 3-5, 2018, San Diego Marriott Mission Valley, San Diego, CA, USA., pages 612–620, 2018.",
+      "title_candidate": "Learning to interact with users: A collaborative-bandit approach",
+      "status": "requires source verification"
+    },
+    {
+      "index": 18,
+      "source_id": "bib.bib18",
+      "blocks": [
+        "Konstantina Christakopoulou, Filip Radlinski, and Katja Hofmann.",
+        "Towards conversational recommender systems.",
+        "In Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD ’16, pages 815–824, New York, NY, USA, 2016. ACM.",
+        "ISBN 978-1-4503-4232-2."
+      ],
+      "citation": "Christakopoulou et al. [2016] Konstantina Christakopoulou, Filip Radlinski, and Katja Hofmann. Towards conversational recommender systems. In Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD ’16, pages 815–824, New York, NY, USA, 2016. ACM. ISBN 978-1-4503-4232-2.",
+      "title_candidate": "Towards conversational recommender systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 19,
+      "source_id": "bib.bib19",
+      "blocks": [
+        "Gabriel Dulac-Arnold, Daniel Mankowitz, and Todd Hester.",
+        "Challenges of real-world reinforcement learning.",
+        "arXiv:1904.12901 [cs.LG], 2019."
+      ],
+      "citation": "Dulac-Arnold et al. [2019] Gabriel Dulac-Arnold, Daniel Mankowitz, and Todd Hester. Challenges of real-world reinforcement learning. arXiv:1904.12901 [cs.LG], 2019.",
+      "title_candidate": "Challenges of real-world reinforcement learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 20,
+      "source_id": "bib.bib20",
+      "blocks": [
+        "Aurelien Garivier and Olivier Cappe.",
+        "The KL-UCB algorithm for bounded stochastic bandits and beyond.",
+        "In Proceeding of the 24th Annual Conference on Learning Theory, pages 359–376, 2011."
+      ],
+      "citation": "Garivier and Cappe [2011] Aurelien Garivier and Olivier Cappe. The KL-UCB algorithm for bounded stochastic bandits and beyond. In Proceeding of the 24th Annual Conference on Learning Theory, pages 359–376, 2011.",
+      "title_candidate": "The KL-UCB algorithm for bounded stochastic bandits and beyond",
+      "status": "requires source verification"
+    },
+    {
+      "index": 21,
+      "source_id": "bib.bib21",
+      "blocks": [
+        "Jason Gauci, Edoardo Conti, Yitao Liang, Kittipat Virochsiri, Yuchen He, Zachary Kaden, Vivek Narayanan, and Xiaohui Ye.",
+        "Horizon: Facebook’s open source applied reinforcement learning platform.",
+        "arXiv:1811.00260 [cs.LG], 2018."
+      ],
+      "citation": "Gauci et al. [2018] Jason Gauci, Edoardo Conti, Yitao Liang, Kittipat Virochsiri, Yuchen He, Zachary Kaden, Vivek Narayanan, and Xiaohui Ye. Horizon: Facebook’s open source applied reinforcement learning platform. arXiv:1811.00260 [cs.LG], 2018.",
+      "title_candidate": "Horizon: Facebook’s open source applied reinforcement learning platform",
+      "status": "requires source verification"
+    },
+    {
+      "index": 22,
+      "source_id": "bib.bib22",
+      "blocks": [
+        "Marjan Ghazvininejad, Chris Brockett, Ming-Wei Chang, Bill Dolan, Jianfeng Gao, Wen-tau Yih, and Michel Galley.",
+        "A knowledge-grounded neural conversation model.",
+        "In Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence (AAAI-18), pages 5110–5117, New Orleans, 2018."
+      ],
+      "citation": "Ghazvininejad et al. [2018] Marjan Ghazvininejad, Chris Brockett, Ming-Wei Chang, Bill Dolan, Jianfeng Gao, Wen-tau Yih, and Michel Galley. A knowledge-grounded neural conversation model. In Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence (AAAI-18), pages 5110–5117, New Orleans, 2018.",
+      "title_candidate": "A knowledge-grounded neural conversation model",
+      "status": "requires source verification"
+    },
+    {
+      "index": 23,
+      "source_id": "bib.bib23",
+      "blocks": [
+        "Sergio Guadarrama, Anoop Korattikara, Oscar Ramirez, Pablo Castro, Ethan Holly, Sam Fishman, Ke Wang, Ekaterina Gonina, Neal Wu, Chris Harris, Vincent Vanhoucke, and Eugene Brevdo.",
+        "TF-Agents: A library for reinforcement learning in tensorflow.",
+        "https://github.com/tensorflow/agents, 2018.",
+        "Accessed 25-June-2019."
+      ],
+      "citation": "Guadarrama et al. [2018] Sergio Guadarrama, Anoop Korattikara, Oscar Ramirez, Pablo Castro, Ethan Holly, Sam Fishman, Ke Wang, Ekaterina Gonina, Neal Wu, Chris Harris, Vincent Vanhoucke, and Eugene Brevdo. TF-Agents: A library for reinforcement learning in tensorflow. https://github.com/tensorflow/agents, 2018. Accessed 25-June-2019.",
+      "title_candidate": "TF-Agents: A library for reinforcement learning in tensorflow",
+      "status": "requires source verification"
+    },
+    {
+      "index": 24,
+      "source_id": "bib.bib24",
+      "blocks": [
+        "Tuomas Haarnoja, Aurick Zhou, Kristian Hartikainen, George Tucker, Sehoon Ha, Jie Tan, Vikash Kumar, Henry Zhu, Abhishek Gupta, Pieter Abbeel, and Sergey Levine.",
+        "Soft actor-critic algorithms and applications.",
+        "arXiv:1812.05905 [cs.LG], 2018."
+      ],
+      "citation": "Haarnoja et al. [2018] Tuomas Haarnoja, Aurick Zhou, Kristian Hartikainen, George Tucker, Sehoon Ha, Jie Tan, Vikash Kumar, Henry Zhu, Abhishek Gupta, Pieter Abbeel, and Sergey Levine. Soft actor-critic algorithms and applications. arXiv:1812.05905 [cs.LG], 2018.",
+      "title_candidate": "Soft actor-critic algorithms and applications",
+      "status": "requires source verification"
+    },
+    {
+      "index": 25,
+      "source_id": "bib.bib25",
+      "blocks": [
+        "Assaf Hallak, Dotan Di Castro, and Shie Mannor.",
+        "Contextual markov decision processes.",
+        "arXiv:1502.02259 [stat.ML], 2015."
+      ],
+      "citation": "Hallak et al. [2015] Assaf Hallak, Dotan Di Castro, and Shie Mannor. Contextual markov decision processes. arXiv:1502.02259 [stat.ML], 2015.",
+      "title_candidate": "Contextual markov decision processes",
+      "status": "requires source verification"
+    },
+    {
+      "index": 26,
+      "source_id": "bib.bib26",
+      "blocks": [
+        "F. Maxwell Harper and Joseph A. Konstan.",
+        "The MovieLens datasets: History and context.",
+        "ACM Transactions on Interactive Intelligent Systems, 5(4):19:1–19:19, 2016."
+      ],
+      "citation": "Harper and Konstan [2016] F. Maxwell Harper and Joseph A. Konstan. The MovieLens datasets: History and context. ACM Transactions on Interactive Intelligent Systems, 5(4):19:1–19:19, 2016.",
+      "title_candidate": "The MovieLens datasets: History and context",
+      "status": "requires source verification"
+    },
+    {
+      "index": 27,
+      "source_id": "bib.bib27",
+      "blocks": [
+        "Ruining He and Julian McAuley.",
+        "Fusing similarity models with Markov chains for sparse sequential recommendation.",
+        "In Proceedings of the IEEE International Conference on Data Mining (ICDM-16), Barcelona, 2016."
+      ],
+      "citation": "He and McAuley [2016] Ruining He and Julian McAuley. Fusing similarity models with Markov chains for sparse sequential recommendation. In Proceedings of the IEEE International Conference on Data Mining (ICDM-16), Barcelona, 2016.",
+      "title_candidate": "Fusing similarity models with Markov chains for sparse sequential recommendation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 28,
+      "source_id": "bib.bib28",
+      "blocks": [
+        "Balázs Hidasi, Alexandros Karatzoglou, Linas Baltrunas, and Domonkos Tikk.",
+        "Session-based recommendations with recurrent neural networks.",
+        "In 4th International Conference on Learning Representations (ICLR-16), San Juan, Puerto Rico, 2016."
+      ],
+      "citation": "Hidasi et al. [2016] Balázs Hidasi, Alexandros Karatzoglou, Linas Baltrunas, and Domonkos Tikk. Session-based recommendations with recurrent neural networks. In 4th International Conference on Learning Representations (ICLR-16), San Juan, Puerto Rico, 2016.",
+      "title_candidate": "Session-based recommendations with recurrent neural networks",
+      "status": "requires source verification"
+    },
+    {
+      "index": 29,
+      "source_id": "bib.bib29",
+      "blocks": [
+        "Henning Hohnhold, Deirdre O’Brien, and Diane Tang.",
+        "Focusing on the long-term: It’s good for users and business.",
+        "In Proceedings of the Twenty-first ACM International Conference on Knowledge Discovery and Data Mining (KDD-15), pages 1849–1858, Sydney, 2015."
+      ],
+      "citation": "Hohnhold et al. [2015] Henning Hohnhold, Deirdre O’Brien, and Diane Tang. Focusing on the long-term: It’s good for users and business. In Proceedings of the Twenty-first ACM International Conference on Knowledge Discovery and Data Mining (KDD-15), pages 1849–1858, Sydney, 2015.",
+      "title_candidate": "Focusing on the long-term: It’s good for users and business",
+      "status": "requires source verification"
+    },
+    {
+      "index": 30,
+      "source_id": "bib.bib30",
+      "blocks": [
+        "Eugene Ie, Vihan Jain, Jing Wang, Sanmit Narvekar, Ritesh Agarwal, Rui Wu, Heng-Tze Cheng, Tushar Chandra, and Craig Boutilier.",
+        "SlateQ: A tractable decomposition for reinforcement learning with recommendation sets.",
+        "In International Joint Conference on Artifical Intelligence (IJCAI), pages 2592–2599, Macau, 2019."
+      ],
+      "citation": "Ie et al. [2019] Eugene Ie, Vihan Jain, Jing Wang, Sanmit Narvekar, Ritesh Agarwal, Rui Wu, Heng-Tze Cheng, Tushar Chandra, and Craig Boutilier. SlateQ: A tractable decomposition for reinforcement learning with recommendation sets. In International Joint Conference on Artifical Intelligence (IJCAI), pages 2592–2599, Macau, 2019.",
+      "title_candidate": "SlateQ: A tractable decomposition for reinforcement learning with recommendation sets",
+      "status": "requires source verification"
+    },
+    {
+      "index": 31,
+      "source_id": "bib.bib31",
+      "blocks": [
+        "Ray Jiang, Sven Gowal, Timothy A. Mann, and Danilo J. Rezende.",
+        "Beyond greedy ranking: Slate optimization via List-CVAE.",
+        "In Proceedings of the Seventh International Conference on Learning Representations (ICLR-19), New Orleans, 2019."
+      ],
+      "citation": "Jiang et al. [2019] Ray Jiang, Sven Gowal, Timothy A. Mann, and Danilo J. Rezende. Beyond greedy ranking: Slate optimization via List-CVAE. In Proceedings of the Seventh International Conference on Learning Representations (ICLR-19), New Orleans, 2019.",
+      "title_candidate": "Beyond greedy ranking: Slate optimization via List-CVAE",
+      "status": "requires source verification"
+    },
+    {
+      "index": 32,
+      "source_id": "bib.bib32",
+      "blocks": [
+        "Thorsten Joachims.",
+        "Optimizing search engines using clickthrough data.",
+        "In Proceedings of the Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD-02), pages 133–142, 2002."
+      ],
+      "citation": "Joachims [2002] Thorsten Joachims. Optimizing search engines using clickthrough data. In Proceedings of the Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD-02), pages 133–142, 2002.",
+      "title_candidate": "Optimizing search engines using clickthrough data",
+      "status": "requires source verification"
+    },
+    {
+      "index": 33,
+      "source_id": "bib.bib33",
+      "blocks": [
+        "Joseph A. Konstan, Bradley N. Miller, David Maltz, Jonathan L. Herlocker, Lee R. Gordon, and John Riedl.",
+        "GroupLens: Applying collaborative filtering to Usenet news.",
+        "Communications of the ACM, 40(3):77–87, 1997."
+      ],
+      "citation": "Konstan et al. [1997] Joseph A. Konstan, Bradley N. Miller, David Maltz, Jonathan L. Herlocker, Lee R. Gordon, and John Riedl. GroupLens: Applying collaborative filtering to Usenet news. Communications of the ACM, 40(3):77–87, 1997.",
+      "title_candidate": "GroupLens: Applying collaborative filtering to Usenet news",
+      "status": "requires source verification"
+    },
+    {
+      "index": 34,
+      "source_id": "bib.bib34",
+      "blocks": [
+        "Nevena Lazic, Craig Boutilier, Tyler Lu, Eehern Wong, Binz Roy, MK Ryu, and Greg Imwalle.",
+        "Data center cooling using model-predictive control.",
+        "In Advances in Neural Information Processing System 31, pages 3818–3827, Montreal, 2018."
+      ],
+      "citation": "Lazic et al. [2018] Nevena Lazic, Craig Boutilier, Tyler Lu, Eehern Wong, Binz Roy, MK Ryu, and Greg Imwalle. Data center cooling using model-predictive control. In Advances in Neural Information Processing System 31, pages 3818–3827, Montreal, 2018.",
+      "title_candidate": "Data center cooling using model-predictive control",
+      "status": "requires source verification"
+    },
+    {
+      "index": 35,
+      "source_id": "bib.bib35",
+      "blocks": [
+        "Lihong Li, Wei Chu, John Langford, and Robert E. Schapire.",
+        "A contextual-bandit approach to personalized news article recommendation.",
+        "In Proceedings of the 19th International Conference on World Wide Web (WWW-10), pages 661–670, 2010."
+      ],
+      "citation": "Li et al. [2010] Lihong Li, Wei Chu, John Langford, and Robert E. Schapire. A contextual-bandit approach to personalized news article recommendation. In Proceedings of the 19th International Conference on World Wide Web (WWW-10), pages 661–670, 2010.",
+      "title_candidate": "A contextual-bandit approach to personalized news article recommendation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 36,
+      "source_id": "bib.bib36",
+      "blocks": [
+        "Shuai Li, Alexandros Karatzoglou, and Claudio Gentile.",
+        "Collaborative filtering bandits.",
+        "In Proceedings of the 39th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR-16), 2016."
+      ],
+      "citation": "Li et al. [2016] Shuai Li, Alexandros Karatzoglou, and Claudio Gentile. Collaborative filtering bandits. In Proceedings of the 39th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR-16), 2016.",
+      "title_candidate": "Collaborative filtering bandits",
+      "status": "requires source verification"
+    },
+    {
+      "index": 37,
+      "source_id": "bib.bib37",
+      "blocks": [
+        "Long-Ji Lin and Tom. M. Mitchell.",
+        "Memory approaches to reinforcement learning in non-Markovian domains.",
+        "Technical Report CS–92–138, Carnegie Mellon University, Department of Computer Science, May 1992."
+      ],
+      "citation": "Lin and Mitchell [1992] Long-Ji Lin and Tom. M. Mitchell. Memory approaches to reinforcement learning in non-Markovian domains. Technical Report CS–92–138, Carnegie Mellon University, Department of Computer Science, May 1992.",
+      "title_candidate": "Memory approaches to reinforcement learning in non-Markovian domains",
+      "status": "requires source verification"
+    },
+    {
+      "index": 38,
+      "source_id": "bib.bib38",
+      "blocks": [
+        "Qianlong Liu, Baoliang Cui, Zhongyu Wei, Baolin Peng, Haikuan Huang, Hongbo Deng, Jianye Hao, Xuanjing Huang, and Kam-Fai Wong.",
+        "Building personalized simulator for interactive search.",
+        "In Proceedings of the Twenty-eighth International Joint Conference on Artificial Intelligence (IJCAI-19), pages 5109–5115, Macau, 2019."
+      ],
+      "citation": "Liu et al. [2019] Qianlong Liu, Baoliang Cui, Zhongyu Wei, Baolin Peng, Haikuan Huang, Hongbo Deng, Jianye Hao, Xuanjing Huang, and Kam-Fai Wong. Building personalized simulator for interactive search. In Proceedings of the Twenty-eighth International Joint Conference on Artificial Intelligence (IJCAI-19), pages 5109–5115, Macau, 2019.",
+      "title_candidate": "Building personalized simulator for interactive search",
+      "status": "requires source verification"
+    },
+    {
+      "index": 39,
+      "source_id": "bib.bib39",
+      "blocks": [
+        "Jordan J. Louviere, David A. Hensher, and Joffre D. Swait.",
+        "Stated Choice Methods: Analysis and Application.",
+        "Cambridge University Press, Cambridge, 2000."
+      ],
+      "citation": "Louviere et al. [2000] Jordan J. Louviere, David A. Hensher, and Joffre D. Swait. Stated Choice Methods: Analysis and Application. Cambridge University Press, Cambridge, 2000.",
+      "title_candidate": "Stated Choice Methods: Analysis and Application",
+      "status": "requires source verification"
+    },
+    {
+      "index": 40,
+      "source_id": "bib.bib40",
+      "blocks": [
+        "Luke Metz, Julian Ibarz, Navdeep Jaitly, and James Davidson.",
+        "Discrete sequential prediction of continuous actions for deep RL.",
+        "arXiv:1705.05035 [cs.LG], 2017."
+      ],
+      "citation": "Metz et al. [2017] Luke Metz, Julian Ibarz, Navdeep Jaitly, and James Davidson. Discrete sequential prediction of continuous actions for deep RL. arXiv:1705.05035 [cs.LG], 2017.",
+      "title_candidate": "Discrete sequential prediction of continuous actions for deep RL",
+      "status": "requires source verification"
+    },
+    {
+      "index": 41,
+      "source_id": "bib.bib41",
+      "blocks": [
+        "Martin Mladenov, Ofer Meshi, Jayden Ooi, Dale Schuurmans, and Craig Boutilier.",
+        "Advantage amplification in slowly evolving latent-state environments.",
+        "In International Joint Conference on Artifical Intelligence (IJCAI), pages 3165–3172, Macau, 2019."
+      ],
+      "citation": "Mladenov et al. [2019] Martin Mladenov, Ofer Meshi, Jayden Ooi, Dale Schuurmans, and Craig Boutilier. Advantage amplification in slowly evolving latent-state environments. In International Joint Conference on Artifical Intelligence (IJCAI), pages 3165–3172, Macau, 2019.",
+      "title_candidate": "Advantage amplification in slowly evolving latent-state environments",
+      "status": "requires source verification"
+    },
+    {
+      "index": 42,
+      "source_id": "bib.bib42",
+      "blocks": [
+        "Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A Rusu, Joel Veness, Marc G Bellemare, Alex Graves, Martin Riedmiller, Andreas K Fidjeland, Georg Ostrovski, et al.",
+        "Human-level control through deep reinforcement learning.",
+        "Nature, 518(7540):529–533, 2015."
+      ],
+      "citation": "Mnih et al. [2015] Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A Rusu, Joel Veness, Marc G Bellemare, Alex Graves, Martin Riedmiller, Andreas K Fidjeland, Georg Ostrovski, et al. Human-level control through deep reinforcement learning. Nature, 518(7540):529–533, 2015.",
+      "title_candidate": "Human-level control through deep reinforcement learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 43,
+      "source_id": "bib.bib43",
+      "blocks": [
+        "Baolin Peng, Xiujun Li, Jianfeng Gao, Jingjing Liu, and Kam-Fai Wong.",
+        "Deep Dyna-Q: Integrating planning for task-completion dialogue policy learning.",
+        "In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL-18), pages 2182–2192, Melbourne, 2018."
+      ],
+      "citation": "Peng et al. [2018] Baolin Peng, Xiujun Li, Jianfeng Gao, Jingjing Liu, and Kam-Fai Wong. Deep Dyna-Q: Integrating planning for task-completion dialogue policy learning. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL-18), pages 2182–2192, Melbourne, 2018.",
+      "title_candidate": "Deep Dyna-Q: Integrating planning for task-completion dialogue policy learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 44,
+      "source_id": "bib.bib44",
+      "blocks": [
+        "Martin Riedmiller.",
+        "Neural fitted Q-iteration—first experiences with a data efficient neural reinforcement learning method.",
+        "In Proceedings of the 16th European Conference on Machine Learning, pages 317–328, Porto, Portugal, 2005."
+      ],
+      "citation": "Riedmiller [2005] Martin Riedmiller. Neural fitted Q-iteration—first experiences with a data efficient neural reinforcement learning method. In Proceedings of the 16th European Conference on Machine Learning, pages 317–328, Porto, Portugal, 2005.",
+      "title_candidate": "Neural fitted Q-iteration—first experiences with a data efficient neural reinforcement learning method",
+      "status": "requires source verification"
+    },
+    {
+      "index": 45,
+      "source_id": "bib.bib45",
+      "blocks": [
+        "M. Rodriguez, C. Posse, and E. Zhang.",
+        "Multiple objective optimization in recommender systems.",
+        "In Proceedings of the sixth ACM conference on Recommender systems, pages 11–18. ACM, 2012."
+      ],
+      "citation": "Rodriguez et al. [2012] M. Rodriguez, C. Posse, and E. Zhang. Multiple objective optimization in recommender systems. In Proceedings of the sixth ACM conference on Recommender systems, pages 11–18. ACM, 2012.",
+      "title_candidate": "Multiple objective optimization in recommender systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 46,
+      "source_id": "bib.bib46",
+      "blocks": [
+        "David Rohde, Stephen Bonner, Travis Dunlop, Flavian Vasile, and Alexandros Karatzoglou.",
+        "RecoGym: A reinforcement learning environment for the problem of product recommendation in online advertising.",
+        "arXiv:1808.00720 [cs.IR], 2018."
+      ],
+      "citation": "Rohde et al. [2018] David Rohde, Stephen Bonner, Travis Dunlop, Flavian Vasile, and Alexandros Karatzoglou. RecoGym: A reinforcement learning environment for the problem of product recommendation in online advertising. arXiv:1808.00720 [cs.IR], 2018.",
+      "title_candidate": "RecoGym: A reinforcement learning environment for the problem of product recommendation in online advertising",
+      "status": "requires source verification"
+    },
+    {
+      "index": 47,
+      "source_id": "bib.bib47",
+      "blocks": [
+        "Ruslan Salakhutdinov and Andriy Mnih.",
+        "Probabilistic matrix factorization.",
+        "In Advances in Neural Information Processing Systems 20 (NIPS-07), pages 1257–1264, Vancouver, 2007."
+      ],
+      "citation": "Salakhutdinov and Mnih [2007] Ruslan Salakhutdinov and Andriy Mnih. Probabilistic matrix factorization. In Advances in Neural Information Processing Systems 20 (NIPS-07), pages 1257–1264, Vancouver, 2007.",
+      "title_candidate": "Probabilistic matrix factorization",
+      "status": "requires source verification"
+    },
+    {
+      "index": 48,
+      "source_id": "bib.bib48",
+      "blocks": [
+        "Jost Schatzmann, Blaise Thomson, Karl Weilhammer, Hui Ye, and Steve Young.",
+        "Agenda-based user simulation for bootstrapping a POMDP dialogue system.",
+        "In Human Language Technologies 2007: The Conference of the North American Chapter of the Association for Computational Linguistics; Companion Volume, Short Papers, pages 149–152, Rochester, New York, April 2007. Association for Computational Linguistics.",
+        "URL https://www.aclweb.org/anthology/N07-2038."
+      ],
+      "citation": "Schatzmann et al. [2007] Jost Schatzmann, Blaise Thomson, Karl Weilhammer, Hui Ye, and Steve Young. Agenda-based user simulation for bootstrapping a POMDP dialogue system. In Human Language Technologies 2007: The Conference of the North American Chapter of the Association for Computational Linguistics; Companion Volume, Short Papers, pages 149–152, Rochester, New York, April 2007. Association for Computational Linguistics. URL https://www.aclweb.org/anthology/N07-2038.",
+      "title_candidate": "Agenda-based user simulation for bootstrapping a POMDP dialogue system",
+      "status": "requires source verification"
+    },
+    {
+      "index": 49,
+      "source_id": "bib.bib49",
+      "blocks": [
+        "Guy Shani, David Heckerman, and Ronen I. Brafman.",
+        "An MDP-based recommender system.",
+        "Journal of Machine Learning Research, 6:1265–1295, 2005."
+      ],
+      "citation": "Shani et al. [2005] Guy Shani, David Heckerman, and Ronen I. Brafman. An MDP-based recommender system. Journal of Machine Learning Research, 6:1265–1295, 2005.",
+      "title_candidate": "An MDP-based recommender system",
+      "status": "requires source verification"
+    },
+    {
+      "index": 50,
+      "source_id": "bib.bib50",
+      "blocks": [
+        "Jing-Cheng Shi, Yang Yu, Qing Da, Shi-Yong Chen, and An-Xiang Zeng.",
+        "Virtual-taobao: Virtualizing real-world online retail environment for reinforcement learning.",
+        "In Proceedings of the Thirty-third AAAI Conference on Artificial Intelligence (AAAI-19), pages 4902–4909, Honolulu, 2019."
+      ],
+      "citation": "Shi et al. [2019] Jing-Cheng Shi, Yang Yu, Qing Da, Shi-Yong Chen, and An-Xiang Zeng. Virtual-taobao: Virtualizing real-world online retail environment for reinforcement learning. In Proceedings of the Thirty-third AAAI Conference on Artificial Intelligence (AAAI-19), pages 4902–4909, Honolulu, 2019.",
+      "title_candidate": "Virtual-taobao: Virtualizing real-world online retail environment for reinforcement learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 51,
+      "source_id": "bib.bib51",
+      "blocks": [
+        "David Silver, Aja Huang, Chris J Maddison, Arthur Guez, Laurent Sifre, George Van Den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, et al.",
+        "Mastering the game of Go with deep neural networks and tree search.",
+        "Nature, 529(7587):484–489, 2016."
+      ],
+      "citation": "Silver et al. [2016] David Silver, Aja Huang, Chris J Maddison, Arthur Guez, Laurent Sifre, George Van Den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, et al. Mastering the game of Go with deep neural networks and tree search. Nature, 529(7587):484–489, 2016.",
+      "title_candidate": "Mastering the game of Go with deep neural networks and tree search",
+      "status": "requires source verification"
+    },
+    {
+      "index": 52,
+      "source_id": "bib.bib52",
+      "blocks": [
+        "Yueming Sun and Yi Zhang.",
+        "Conversational recommender system.",
+        "arXiv:1806.03277 [cs.IR], 2018."
+      ],
+      "citation": "Sun and Zhang [2018] Yueming Sun and Yi Zhang. Conversational recommender system. arXiv:1806.03277 [cs.IR], 2018.",
+      "title_candidate": "Conversational recommender system",
+      "status": "requires source verification"
+    },
+    {
+      "index": 53,
+      "source_id": "bib.bib53",
+      "blocks": [
+        "Peter Sunehag, Richard Evans, Gabriel Dulac-Arnold, Yori Zwols, Daniel Visentin, and Ben Coppin.",
+        "Deep reinforcement learning with attention for slate Markov decision processes with high-dimensional states and actions.",
+        "arXiv:1512.01124 [cs.AI], 2015."
+      ],
+      "citation": "Sunehag et al. [2015] Peter Sunehag, Richard Evans, Gabriel Dulac-Arnold, Yori Zwols, Daniel Visentin, and Ben Coppin. Deep reinforcement learning with attention for slate Markov decision processes with high-dimensional states and actions. arXiv:1512.01124 [cs.AI], 2015.",
+      "title_candidate": "Deep reinforcement learning with attention for slate Markov decision processes with high-dimensional states and actions",
+      "status": "requires source verification"
+    },
+    {
+      "index": 54,
+      "source_id": "bib.bib54",
+      "blocks": [
+        "Yuandong Tian, Qucheng Gong, Wenling Shang, Yuxin Wu, and C. Lawrence Zitnick.",
+        "ELF: an extensive, lightweight and flexible research platform for real-time strategy games.",
+        "In Advances in Neural Information Processing Systems 30 (NIPS-17), pages 2659–2669, Long Beach, CA, 2017."
+      ],
+      "citation": "Tian et al. [2017] Yuandong Tian, Qucheng Gong, Wenling Shang, Yuxin Wu, and C. Lawrence Zitnick. ELF: an extensive, lightweight and flexible research platform for real-time strategy games. In Advances in Neural Information Processing Systems 30 (NIPS-17), pages 2659–2669, Long Beach, CA, 2017.",
+      "title_candidate": "ELF: an extensive, lightweight and flexible research platform for real-time strategy games",
+      "status": "requires source verification"
+    },
+    {
+      "index": 55,
+      "source_id": "bib.bib55",
+      "blocks": [
+        "Oriol Vinyals and Quoc V. Le.",
+        "A neural conversational model.",
+        "arXiv:1506.05869 [cs.CL], 2015."
+      ],
+      "citation": "Vinyals and Le [2015] Oriol Vinyals and Quoc V. Le. A neural conversational model. arXiv:1506.05869 [cs.CL], 2015.",
+      "title_candidate": "A neural conversational model",
+      "status": "requires source verification"
+    },
+    {
+      "index": 56,
+      "source_id": "bib.bib56",
+      "blocks": [
+        "Christopher J. C. H. Watkins and Peter Dayan.",
+        "Q-learning.",
+        "Machine Learning, 8:279–292, 1992."
+      ],
+      "citation": "Watkins and Dayan [1992] Christopher J. C. H. Watkins and Peter Dayan. Q-learning. Machine Learning, 8:279–292, 1992.",
+      "title_candidate": "Q-learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 57,
+      "source_id": "bib.bib57",
+      "blocks": [
+        "Wei Wei, Quoc Le, Andrew Dai, and Jia Li.",
+        "AirDialogue: An environment for goal-oriented dialogue research.",
+        "In Proceedings of 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP-18), pages 3844–3854, Brussels, 2018."
+      ],
+      "citation": "Wei et al. [2018] Wei Wei, Quoc Le, Andrew Dai, and Jia Li. AirDialogue: An environment for goal-oriented dialogue research. In Proceedings of 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP-18), pages 3844–3854, Brussels, 2018.",
+      "title_candidate": "AirDialogue: An environment for goal-oriented dialogue research",
+      "status": "requires source verification"
+    },
+    {
+      "index": 58,
+      "source_id": "bib.bib58",
+      "blocks": [
+        "Mark Wilhelm, Ajith Ramanathan, Alexander Bonomo, Sagar Jain, Ed H. Chi, and Jennifer Gillenwater.",
+        "Practical diversified recommendations on YouTube with determinantal point processes.",
+        "In Proceedings of the 27th ACM International Conference on Information and Knowledge Management (CIKM18), pages 2165–2173, Torino, Italy, 2018."
+      ],
+      "citation": "Wilhelm et al. [2018] Mark Wilhelm, Ajith Ramanathan, Alexander Bonomo, Sagar Jain, Ed H. Chi, and Jennifer Gillenwater. Practical diversified recommendations on YouTube with determinantal point processes. In Proceedings of the 27th ACM International Conference on Information and Knowledge Management (CIKM18), pages 2165–2173, Torino, Italy, 2018.",
+      "title_candidate": "Practical diversified recommendations on YouTube with determinantal point processes",
+      "status": "requires source verification"
+    },
+    {
+      "index": 59,
+      "source_id": "bib.bib59",
+      "blocks": [
+        "Chao-Yuan Wu, Amr Ahmed, Alex Beutel, Alexander J. Smola, and How Jing.",
+        "Recurrent recommender networks.",
+        "In Proceedings of the Tenth ACM International Conference on Web Search and Data Mining (WSDM-17), pages 495–503, Cambridge, UK, 2017."
+      ],
+      "citation": "Wu et al. [2017] Chao-Yuan Wu, Amr Ahmed, Alex Beutel, Alexander J. Smola, and How Jing. Recurrent recommender networks. In Proceedings of the Tenth ACM International Conference on Web Search and Data Mining (WSDM-17), pages 495–503, Cambridge, UK, 2017.",
+      "title_candidate": "Recurrent recommender networks",
+      "status": "requires source verification"
+    },
+    {
+      "index": 60,
+      "source_id": "bib.bib60",
+      "blocks": [
+        "Amy Zhang, Yuxin Wu, and Joelle Pineau.",
+        "Natural environment benchmarks for reinforcement learning.",
+        "arXiv:1811.06032 [cs.LG], 2018."
+      ],
+      "citation": "Zhang et al. [2018] Amy Zhang, Yuxin Wu, and Joelle Pineau. Natural environment benchmarks for reinforcement learning. arXiv:1811.06032 [cs.LG], 2018.",
+      "title_candidate": "Natural environment benchmarks for reinforcement learning",
+      "status": "requires source verification"
+    },
+    {
+      "index": 61,
+      "source_id": "bib.bib61",
+      "blocks": [
+        "Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, and Jiliang Tang.",
+        "Deep reinforcement learning for page-wise recommendations.",
+        "In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys-18), pages 95–103, Vancouver, 2018."
+      ],
+      "citation": "Zhao et al. [2018] Xiangyu Zhao, Long Xia, Liang Zhang, Zhuoye Ding, Dawei Yin, and Jiliang Tang. Deep reinforcement learning for page-wise recommendations. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys-18), pages 95–103, Vancouver, 2018.",
+      "title_candidate": "Deep reinforcement learning for page-wise recommendations",
+      "status": "requires source verification"
+    },
+    {
+      "index": 62,
+      "source_id": "bib.bib62",
+      "blocks": [
+        "Xiangyu Zhao, Long Xia, Zhuoye Ding, Dawei Yin, and Jiliang Tang.",
+        "Toward simulating environments in reinforcement learning based recommendations.",
+        "arXiv:1906.11462 [cs.IR], 2019."
+      ],
+      "citation": "Zhao et al. [2019] Xiangyu Zhao, Long Xia, Zhuoye Ding, Dawei Yin, and Jiliang Tang. Toward simulating environments in reinforcement learning based recommendations. arXiv:1906.11462 [cs.IR], 2019.",
+      "title_candidate": "Toward simulating environments in reinforcement learning based recommendations",
+      "status": "requires source verification"
+    },
+    {
+      "index": 63,
+      "source_id": "bib.bib63",
+      "blocks": [
+        "Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li.",
+        "DRN: A deep reinforcement learning framework for news recommendation.",
+        "In Proceedings of the 2018 World Wide Web Conference (WWW-18), pages 167–176, 2018."
+      ],
+      "citation": "Zheng et al. [2018] Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li. DRN: A deep reinforcement learning framework for news recommendation. In Proceedings of the 2018 World Wide Web Conference (WWW-18), pages 167–176, 2018.",
+      "title_candidate": "DRN: A deep reinforcement learning framework for news recommendation",
+      "status": "requires source verification"
+    }
+  ]
+}

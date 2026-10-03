@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- template 08-07021-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <meta name="description" content="">
+    <title>Reliable and Efficient Agent-Based Modeling and Simulation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/v02/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- article css -->
+    <link rel="stylesheet" type="text/css" href="/styles/tipped.css"> <!-- SD 2021-03-17 -->
+    <link rel="stylesheet" type="text/css" href="/styles/jquery.fancybox.css"> <!-- SD 2021-03-17 -->
+
+    <!-- Custom styles for this template -->
+    <link href="/v02/custom_style.css" rel="stylesheet">
+
+
+    <meta name="robots" content="index,follow" />
+    <!-- Dublin Core tags -->
+    <meta name="DC.Title" content="Reliable and Efficient Agent-Based Modeling and Simulation">
+    <meta name="DC.Creator" content="Alessia Antelmi, Pasquale Caramante, Gennaro Cordasco, Giuseppe D'Ambrosio, Daniele De Vinco, Francesco Foglia, Luca Postiglione and Carmine Spagnuolo">
+    <meta name="DC.Contributor" content="cspagnuolo@unisa.it">
+    <meta name="DC.Subject" content="Agent-Based Model, Agent-Based Simulation Engine, Model Exploration and Optimization, Reliability and  Efficiency, Open-Source">
+    <meta name="DC.Abstract" content="Agent-based models represent a primary methodology to untangle and study complex systems. Over the last decade, the need for more elaborate computing-demanding models gave rise to many frameworks and tools to run ABM simulations. Current state-of-the-art ABM tools either focus on ease of use, performance, or a trade-off between these two elements. Still, efficiency-oriented solutions (required for both large and small-scale simulations) are vulnerable to memory flaws which could invalidate the experiment results. This work aims to merge efficiency, reliability, and safeness under an innovative ABM software framework based on the Rust programming language. Our framework, krABMaga, is an open-source library that offers a high-level environment by exploiting metaprogramming and expandable visualization features. We equipped our library with a dynamic simulation monitoring system and model exploration and optimization capabilities over parallel, distributed, and cloud architectures. After having presented the overall architecture and functionalities of krABMaga, we discuss a performance comparison of our framework against the mostly adopted ABM software and the scalability potential of our simulation engine on a model calibration experiment running over an AWS EC2 virtual cluster machine. All code and examples models are available on GitHub.">
+    <meta name="DC.Publisher" content="JASSS">
+    <meta name="DC.Issued" content="2024-03-31">
+    <meta name="DC.Type" content="Text.Article">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier.URI" content="https://www.jasss.org/27/2/4.html">
+    <meta name="DC.Identifier.DOI" content="10.18564/jasss.5300">
+    <meta name="DC.Source" content="2023:18:2">
+    <meta name="DC.Language" content="en">
+    <meta name="DC.Rights" content="/admin/copyright.html">
+    <!-- Google Scholar tags -->
+    <meta name="citation_journal_title" content="Journal of Artificial Societies and Social Simulation"/>
+    <meta name="citation_issn" content="1460-7425"/>
+    <meta name="citation_author" content="Alessia Antelmi"/>
+			 <meta name="citation_author_email" content="alessia.antelmi@unito.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Torino"/>
+			 <meta name="citation_author" content="Pasquale Caramante"/>
+			 <meta name="citation_author_email" content="p.caramante1@studenti.unisa.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+			 <meta name="citation_author" content="Gennaro Cordasco"/>
+			 <meta name="citation_author_email" content="gennaro.cordasco@unicampania.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+			 <meta name="citation_author" content="Giuseppe D'Ambrosio"/>
+			 <meta name="citation_author_email" content="vitsca@unisa.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+			 <meta name="citation_author" content="Daniele De Vinco"/>
+			 <meta name="citation_author_email" content="ddevinco@unisa.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+			 <meta name="citation_author" content="Francesco Foglia"/>
+			 <meta name="citation_author_email" content="f.foglia9@studenti.unisa.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+			 <meta name="citation_author" content="Luca Postiglione"/>
+			 <meta name="citation_author_email" content="l.postiglione4@studenti.unisa.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+			 <meta name="citation_author" content="Carmine Spagnuolo"/>
+			 <meta name="citation_author_email" content="cspagnuolo@unisa.it"/>
+			 <meta name="citation_author_institution" content="Università degli Studi di Salerno"/>
+
+    <meta name="citation_title" content="Reliable and Efficient Agent-Based Modeling and Simulation"/>
+    <meta name="citation_publication_date" content="2024-03-31"/>
+    <meta name="citation_volume" content="27"/>
+    <meta name="citation_issue" content="2"/>
+    <meta name="citation_doi" content="10.18564/jasss.5300"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_keywords" xml:lang="en" lang="en" content="Agent-Based Model, Agent-Based Simulation Engine, Model Exploration and Optimization, Reliability and  Efficiency, Open-Source"/>
+    <meta name="citation_pdf_url" content="https://www.jasss.org/27/2/4/4.pdf"/>
+    <!-- Twitter card. See https://dev.twitter.com/cards/types/summary -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@JASSSJournal" />
+    <meta name="twitter:title" content="Reliable and Efficient Agent-Based Modeling and Simulation" />
+    <meta name="twitter:description" content="by Alessia Antelmi, Pasquale Caramante, Gennaro Cordasco, Giuseppe D'Ambrosio, Daniele De Vinco, Francesco Foglia, Luca Postiglione and Carmine Spagnuolo" />
+    <meta name="twitter:image" content="https://www.jasss.org/gifs/JASSS400x400.png" />
+    <!-- end of Twitter Card -->
+    <!-- Facebook -->
+    <meta property="fb:app_id" content="1505979489704538" />
+    <meta property="og:title" content="Reliable and Efficient Agent-Based Modeling and Simulation" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="by Alessia Antelmi, Pasquale Caramante, Gennaro Cordasco, Giuseppe D'Ambrosio, Daniele De Vinco, Francesco Foglia, Luca Postiglione and Carmine Spagnuolo" />
+    <meta property="og:url" content="https://www.jasss.org/27/2/4.html" />
+    <meta property="og:image" content="https://www.jasss.org/gifs/JASSS-masthead.gif" />
+    <meta property="og:site_name" content="Journal of Artificial Societies and Social Simulation" />
+    <!-- End of Facebook -->
+
+    <link rel="canonical" href="https://www.jasss.org/27/2/4.html">
+
+    <link rel="alternate" href="/JASSS.xml" type="application/rss+xml" title="rss">
+  </head>
+  <body>
+  <div id="include_header"></div>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-10">
+          <div class="page-content">
+            <div id="article" class="new_style_article"><!-- SD 2021-03-17 -->
+                <!-- Z3988 embedded meta data -->
+                <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=https%3A%2F%2Fwww.jasss.org%2F27%2F2%2F4.html&amp;rft.genre=article&amp;rft.atitle=Reliable+and+Efficient+Agent-Based+Modeling+and+Simulation&amp;rft.jtitle=Journal+of+Artificial+Societies+and+Social+Simulation&amp;rft.stitle=JASSS&amp;rft.issn=1460-7425&amp;rft.date=2024&amp;rft.volume=27&amp;rft.issue=2&amp;rft.pages=4&amp;rft.aufirst=Alessia&amp;rft.aulast=Antelmi&amp;rft.au=Caramante%2C+Pasquale&amp;rft.au=Cordasco%2C+Gennaro&amp;rft.au=D%27Ambrosio%2C+Giuseppe&amp;rft.au=De+Vinco%2C+Daniele&amp;rft.au=Foglia%2C+Francesco&amp;rft.au=Postiglione%2C+Luca&amp;rft.au=Spagnuolo%2C+Carmine"> </span>
+
+                <div class="article-header">
+
+                    <p class="crumb"><a href="/">Home</a> &gt; <a href="/27/2/contents.html">27 (2)</a>, 4
+                        <!-- Twitter and Facebook buttons -->
+                        <div class="addthis_sharing_toolbox social-buttons"></div>
+
+                        <noscript><p class="noscript">Javascript is disabled in your browser.  This page will look and function better with Javascript.</p></noscript>
+                        <h1>Reliable and Efficient Agent-Based Modeling and Simulation
+                        <a class="pdf-icon" href="/admin/get_pdf.php?source=https://www.jasss.org/27/2/4.html"><img src="/gifs/pdf-icon.png" alt="Download PDF"></a></h1>
+
+                        <span class="author" title="<b>Alessia Antelmi</b><br>Alessia Antelmi is an Assistant Professor at the Department of Computer Science of the University of Turin, Italy. She received her MSc and Ph.D. in Computer Science from the University of Salerno (Italy) in 2018 and 2022, respectively. In 2018, Alessia got a student travel grant to visit the Unit for Social Semantics, Data Science Institue (Galway, Ireland), led by Prof. John Breslin, and, in 2023, a research grant to join the NERDS research group at ITU to work on the COCOONS project led by Prof. Luca Maria Aiello. Her research primarily relates to exploiting hypergraphs to study the high-order relationships characterizing real-world phenomena, specifically focusing on online social influence diffusion and collective behavior. More information about Alessia can be found on her homepage https://alessant.github.io.<p>Università degli Studi di Torino<br>Department of Computer Sciences<br>Via Verdi 8<br>Torino<br>10124<br>Italy<br><p>Email: <a href=&quot;mailto:alessia.antelmi@unito.it&quot;>alessia.antelmi@unito.it</a><br>">Alessia Antelmi<sup>a</sup></span>, <span class="author" title="<b>Pasquale Caramante</b><br>Pasquale Caramante is a master student of Cloud computing curriculum at University of Salerno. He is a game enthusiast and he developed the parallel structure for scheduling for krABMaga as part of his &quot;Programmazione concorrente e parallela&quot; course.<p>Università degli Studi di Salerno<br>Dipartimento di Informatica<br>Via Giovanni Paolo II<br>132
+Fisciano<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:p.caramante1@studenti.unisa.it&quot;>p.caramante1@studenti.unisa.it</a><br>">Pasquale Caramante<sup>b</sup></span>, <span class="author" title="<b>Gennaro Cordasco</b><br>Gennaro Cordasco received his Laurea degree (cum laude) in Computer Science from the Università degli Studi di Salerno, Italy, in 2002, discussing a thesis in Distributed algorithms entitled &quot;An optimal mapping algorithm for complete binary trees to parallel memories&quot;. Supervised by Prof. Alberto Negro and Prof. Vittorio Scarano, he got his Ph.D. degree in April 2006, discussing a thesis on Peer to Peer Systems, entitled &quot;On Designing Overlay Networks for P2P Systems&quot;. He is currently an Assistant Professor with the Dipartimento di Psicologia, Facoltà di Psicologia, Università degli studi della Campania Luigi Vanvitelli, Italy, and an Affiliate of the International Institute for Advanced Scientific Studies, Vietri sul Mare, Italy. From March 2005 to November 2005, he was a Research-Scholar with the Theoretical Aspect of Parallel and Distributed Systems (TAPADS) Laboratory, Department of Computer Science, University of Massachusetts at Amherst (MA, USA), doing research activity under the supervision of Distinguished Professor Arnold L. Rosenberg. From May 2006 to March 2011, he was a Postdoctoral fellow (Assegnista di Ricerca) with the Dipartimento di Informatica, Università degli Studi di Salerno, cooperating in the research activity of the ISISLab Laboratory.<p>Università degli Studi di Salerno<br>Dipartimento di Informatica<br>Via Giovanni Paolo II<br>132
+Fisciano<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:gennaro.cordasco@unicampania.it&quot;>gennaro.cordasco@unicampania.it</a><br>">Gennaro Cordasco<sup>b</sup></span>, <span class="author" title="<b>Giuseppe D'Ambrosio</b><br>Giuseppe D&#039;Ambrosio is a Cloud Infrastructure Engineer at Leonardo Cyber &amp; Security Division. He received his MSc and Ph.D. in Computer Science from the University of Salerno in Italy in 2020 and 2024, respectively, both under the supervision of Professor Vittorio Scarano. In 2022, Giuseppe was invited by Professor Sean Luke to visit George Mason University in the United States to enforce their collaboration on the MASON project. His research interests primarily relate to reliability and scalability in Scientific Computing through the use of advanced computing paradigms including Cloud Computing, Parallel, and Distributed Computing.<p>University of Salerno<br>Dept of Computer Science<br>Via Giovanni Paolo II<br>132Fasciano<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:vitsca@unisa.it&quot;>vitsca@unisa.it</a><br>">Giuseppe D'Ambrosio<sup>b</sup></span>, <span class="author" title="<b>Daniele De Vinco</b><br>Daniele De Vinco graduated with full marks in Computer Science at the Università degli Studi di Salerno (Italy) in 2022, under the supervision of Professor Vittorio Scarano. Currently, Daniele is a PhD student at the ISISLab laboratory at the Università degli Studi di Salerno, supervised by Professor Vittorio Scarano, and Dr. Carmine Spagnuolo. His research interests include the optimization of complex systems, exploiting Parallel, Distributed, and Cloud computing paradigms, and the analysis of complex networks with hypergraphs.<p>Università degli Studi di Salerno<br>Dipartimento di Informatica<br>Via Giovanni Paolo II<br>132
+Fisciano<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:ddevinco@unisa.it&quot;>ddevinco@unisa.it</a><br>">Daniele De Vinco<sup>b</sup></span>, <span class="author" title="<b>Francesco Foglia</b><br>Francesco Foglia is a master student of Cloud computing curriculum at University of Salerno. He is a game enthusiast and he developed the core features of the visualization model for krABMaga as part of his thesis.<p>Università degli Studi di Salerno<br>Dipartimento di Informatica<br>Via Giovanni Paolo II<br>132
+Fisciano<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:f.foglia9@studenti.unisa.it&quot;>f.foglia9@studenti.unisa.it</a><br>">Francesco Foglia<sup>b</sup></span>, <span class="author" title="<b>Luca Postiglione</b><br>Luca Postiglione was a fellowship researcher at the ISISLab laboratory at the University of Salerno. His research interest primary relate on the use of advance computing paradigms, such as Cloud, Parallel and Distributed computing. He developed the ML features for krABMaga and contributed to severeal core features. <p>Università degli Studi di Salerno<br>Dipartimento di Informatica<br>Via Giovanni Paolo II<br>132
+Fisciano<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:l.postiglione4@studenti.unisa.it&quot;>l.postiglione4@studenti.unisa.it</a><br>">Luca Postiglione<sup>b</sup></span>
+ and <span class="author" title="<b>Carmine Spagnuolo</b><br>Carmine Spagnuolo got his Master Degree cum laude in Computer Science at the Università degli Studi di Salerno in 2013. In January 2014, he started the Ph.D. program in Computer Science under the supervision of Prof. Vittorio Scarano and Prof. Gennaro Cordasco, has completed it in 2017 with full marks. He is interested in Parallel Algorithms, Distributed Systems, Graph Theory, Social Networks, and Agent-Based Simulations.
+
+In 2012 he got a grant from the Office of Naval Research (ONR) for visiting the George Mason University (GMU). In May 2017 and from October to December 2017, he was a visiting student at the University of Chicago and Argonne National Laboratory, under the supervision of Dott. Jonathan Ozik and exploiting a grant from ANL. In December 2019, he was a visiting researcher at George Mason University (GMU) under the supervision of Prof. Sean Luke.
+
+Currently, he is a Postdoctoral Researcher at Università degli Studi di Salerno, and he is a senior member of ISISLab laboratory. He is co-author of more than 30 papers in international refereed journals and conferences.<p>Università degli Studi di Salerno<br>Dipartimento di Informatica<br>Via Giovanni Paolo II<br>132
+Fisciano SA<br>84084<br>Italy<br><p>Email: <a href=&quot;mailto:cspagnuolo@unisa.it&quot;>cspagnuolo@unisa.it</a><br>Web: <a href=&quot;https://spagnuolocarmine.github.io/&quot;>https://spagnuolocarmine.github.io/</a><br><p><i>Please direct correspondence about this article to Carmine Spagnuolo</i></p>">Carmine Spagnuolo<sup>b</sup></span>
+<p class="artaffil"><sup>a</sup>Università degli Studi di Torino, Italy; <sup>b</sup>Università degli Studi di Salerno, Italy
+
+
+                        <select class="selectandgo" onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="#">Other articles by these authors</option>
+                            <option value="/admin/get_similar_jasss.php?search=author&source=https://www.jasss.org/27/2/4.html">In JASSS</option>
+                            <option value="/admin/get_similar_google.php?search=author&source=https://www.jasss.org/27/2/4.html">From Google</option>
+                        </select>
+
+                        <p class="artlocation"><i>Journal of Artificial
+                        Societies and Social Simulation</i> <b>27</b> (2) 4<a href="https://www.comses.net/resources/open-code-badge/"><img src="/gifs/open-code-badge-html.png" style="float: right; width:120px" alt="The Open Code badge indicates that this article has archived the source code needed to reproduce the reported results in an open access, trusted digital repository."></a><br>
+                        &lt;https://www.jasss.org/27/2/4.html&gt;<br>
+                        <span class="artdoi">DOI: 10.18564/jasss.5300</span>
+
+                        <select class="selectandgo" onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="#">Save citation...</option>
+                            <option value="/admin/export_citation.php?format=plain&source=https://www.jasss.org/27/2/4.html">Text</option>
+                            <option value="/admin/export_citation.php?format=html&source=https://www.jasss.org/27/2/4.html">HTML</option>
+                            <option value="/admin/export_citation.php?format=bibtex&source=https://www.jasss.org/27/2/4.html">BibTex</option>
+                            <option value="/admin/export_citation.php?format=ris&source=https://www.jasss.org/27/2/4.html">Ref. Manager</option>
+                            <option value="/admin/export_citation.php?format=ris&source=https://www.jasss.org/27/2/4.html">EndNote</option>
+                            <option value="/admin/export_citation.php?format=ris&source=https://www.jasss.org/27/2/4.html">ProCite</option>
+                        </select>
+
+                        <p class="artdates"> Received: 27-Jan-2023
+                        &nbsp;&nbsp;&nbsp;Accepted: 13-Feb-2024
+                        &nbsp;&nbsp;&nbsp;Published: 31-Mar-2024
+                        </p>
+                        <div id="abstract"><h3>Abstract</h3>
+                        Agent-based models represent a primary methodology to untangle and study complex systems. Over the last decade, the need for more elaborate computing-demanding models gave rise to many frameworks and tools to run ABM simulations. Current state-of-the-art ABM tools either focus on ease of use, performance, or a trade-off between these two elements. Still, efficiency-oriented solutions (required for both large and small-scale simulations) are vulnerable to memory flaws which could invalidate the experiment results. This work aims to merge efficiency, reliability, and safeness under an innovative ABM software framework based on the Rust programming language. Our framework, krABMaga, is an open-source library that offers a high-level environment by exploiting metaprogramming and expandable visualization features. We equipped our library with a dynamic simulation monitoring system and model exploration and optimization capabilities over parallel, distributed, and cloud architectures. After having presented the overall architecture and functionalities of krABMaga, we discuss a performance comparison of our framework against the mostly adopted ABM software and the scalability potential of our simulation engine on a model calibration experiment running over an AWS EC2 virtual cluster machine. All code and examples models are available on GitHub.
+                        </div>
+
+                        <div id="keywords">Keywords:
+                        <strong>Agent-Based Model, Agent-Based Simulation Engine, Model Exploration and Optimization, Reliability and  Efficiency, Open-Source</strong>
+                        <select class="selectandgo" onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="#">Other articles with these keywords</option>
+                            <option value="/admin/get_similar_jasss.php?search=kw&source=https://www.jasss.org/27/2/4.html">In JASSS</option>
+                            <option value="/admin/get_similar_google.php?search=kw&source=https://www.jasss.org/27/2/4.html">From Google</option>
+                        </select>
+                        </div>
+
+                </div>
+                <div class="article-body">
+                    <hr><!-- SD 2021-03-17 -->
+                    <div id="artbody">
+                    <!-- ======================Insert article text below.  All above created by epress ============================= -->
+<h3 id="sec:introduction">Introduction</h3>
+                    <p id="1.1">A wide range of natural, social and artificial organizations are characterized by many closely interacting components, which give rise to incomprehensible behaviors if we only consider a single component at a time <a href="#ref-Anderson_Science_1972">(Anderson 1972)</a>. Such organizations are commonly referred to as complex systems, and as examples, we could give traffic control, weather forecast, policy-making, or still current epidemic dynamics <a href="#ref-Estrada2023">(Estrada 2023)</a>. Complex systems are analyzed by formulating a model that can imitate the real-world system and are usually the output of the scientific effort of numerous experts from different <a href="#ref-Siegenfeld2020">(Siegenfeld &amp; Bar-Yam 2020)</a>. In this research field, agent-based modelling (ABMs) embodies a solid modelling approach to design the behavior of a complex system from bottom-up, as modelers can define agents and environments to reproduce particular aspects or proprieties of the underlying reality.</p>
+                    <p id="1.2">Over the last decade, the research community has provided many software frameworks and tools to support the development of ABM simulations <a href="#ref-Abar_2017">(Abar et al. 2017)</a>. These instruments are usually available as software libraries for different programming languages and can offer support for specific computational platforms (e.g., CPU, GPU, distributed computing <span><a href="#ref-ROUSSET201627">(Rousset et al. 2016;</a><a href="#ref-10015291"> Andelfinger &amp; Cai 2022)</a></span>) or particular application domains (e.g., traffic modeling <a href="#ref-yun_JASSS_2022">(Yun et al. 2022)</a>, economics <a href="#ref-Alves_furtado_JASSS_2022">(Alves Furtado 2022)</a>, or social sciences <a href="#ref-Retzlaff_JASSS_2022">(Retzlaff et al. 2022)</a>). Generally, the existing ABM simulation engines either share the primary objective of guaranteeing ease of use, performance, or a trade-off between these two elements based on the modelers’ needs and computational requirements of the model to be developed <a href="#ref-Antelmi_APP_2023">(Antelmi et al. 2023)</a>. In this context, it is worth noting that high-performance computing solutions are not only suited for large-scale/fine-grain ABMs, but they are also convenient when small-scale ABMs require huge computational support <a href="#ref-An_EM_2021">(An et al. 2021)</a>. This statement becomes especially true when, for instance, a small-scale ABM simulation model has to undergo alternative modeling phases, such as calibration, verification, validation, sensitivity and uncertainty analysis, and experimentation <a href="#ref-Carrella2021">(Carrella 2021)</a>. Furthermore, simulation runs usually require a significant number of Monte Carlo repetitions. In a scenario of horizontal scaling, these massive Monte Carlo runs can be deployed to and accelerated by high-performance computing resources <a href="#ref-Tang_2010">(Tang &amp; Bennett 2010)</a>. In a scenario of vertical scaling, the only suitable alternative to speed up the overall simulation process is reducing the execution time of the model. From this perspective, handling computation-intensive large/small-scale models and analyses efficiently and supporting the execution of long-running reliable simulations becomes an even more critical requirement.</p>
+                    <p id="1.3">Current state-of-the-art efficiency-oriented ABM tools rely on C++-based solutions <a href="#ref-Antelmi_APP_2023">(Antelmi et al. 2023)</a>. The major drawback of such solutions is their vulnerability to memory flaws, such as memory leaks or stack overflows, that could unexpectedly cause a failure <a href="#ref-Zhang_TSE_2022">(Zhang et al. 2022)</a> in a single simulation run that will eventually jeopardize the overall experiment or any of the cited modeling phases. In the context of ABM development, such scenarios are not so rare, given the intrinsic dynamic behavior of a simulation. In other words, the modeler is never guaranteed that everything will always work out just fine.</p>
+                    <p id="1.4">To address the requirements of simultaneously offering efficiency, reliability, and safeness, we propose krABMaga, a novel tool for developing ABM simulations and supporting the modeler in handling their overall life cycle. krABMaga embraces these requirements as core development goals thanks to the use of Rust as the underlying implementation and model development language. The Rust language is characterized by performance comparable to C, which reduces the running time of a single simulation, and a distinctive programming model, which enables simulation reliability by guaranteeing no memory-related errors in long-running experiments. In particular, our software library follows the <em>Safe Rust</em> specifics <a href="#ref-saferust">(Rust Doc 2023)</a>, which ensure the above reliability requirements.</p>
+                    <p id="1.5">krABMaga particularly suits application scenarios where scaling up (both vertically and horizontally) is not viable or limited. Our simulation engine, therefore, targets small-scale and possibly long-running ABM simulations that require computation-intensive operations. Nonetheless, thanks to its architecture and programming model, krABMaga easily scales up to accommodate distributed computation environments (e.g., cloud-based platforms).</p>
+                    <p id="1.6">Our contributions can be summarized as follows:</p>
+                    <ol type="1">
+                    <li>The description of the architecture of a modern simulation engine for agent-based modeling implemented with the Rust language supporting reliable and efficient long-running simulations.</li>
+                    <li>The implementation of krABMaga, an open-source library for ABMs, written using safe Rust specification. It comprises a simulation engine, a visualization component to allow native and web-based efficient visualization, a set of monitoring tools for guiding the modeler in executing and gathering results of the simulation, and a model exploration and optimization mechanism also supporting parallel, distributed, and cloud executions.</li>
+                    <li>The availability of a series of functionalities (exposed via the Rust meta-programming features) to support the modeler in calibrating, verifying, and validating their ABM model without modifying the underlying model development pipeline. This highly modular design disentangles the pure ABM development phase from the others.</li>
+                    <li>A performance comparison of krABMaga against the most commonly adopted open-source solutions for ABM, and the scalability results of a model calibration experiment running on an Amazon AWS EC2 cluster machine.</li>
+                    </ol>
+                    <p id="1.7">The remainder of the paper is organized as follows. Section 2 first briefly summarizes the key features of the Rust language, offering the reader the appropriate background to capture the peculiarities of our framework, then introduces krABMaga thoroughly describing its main components and functionalities. Section 3 guides us through a step-by-step tutorial to build the multi-agent Wolf, Sheep, and Grass model with krABMaga to describe the process of designing and implementing an ABM with our engine. Section 4 discusses the most common and used frameworks for ABM modeling and simulations. Section 5 presents a performance comparison of krABMaga against the most commonly used open-source solutions for ABM and further shows the scalability potential of our simulation engine. Finally, Section 6 concludes this work and discusses some future directions regarding the development of krABMaga.</p>
+                    <h3 id="sec:krabmaga">The krABMaga ABM simulation tool</h3>
+                    <p id="2.1">This Section introduces the Rust language, giving the reader an overview of the main selling points of the language together with a brief description of its evolution. It further thoroughly describes the krABMaga architecture by detailing its main components, the core functionalities, and the simulation’s workflow.</p>
+                    <h4 id="sec:rust_background">The Rust programming language</h4>
+                    <p id="2.2">Rust is a multi-paradigm system programming language designed by the Mozilla Research Group in 2009 and released as a stable version in 2015. The Rust compiler is free and open-source dual-licensed under the MIT and Apache License 2.0.</p>
+                    <p id="2.3">Rust aims to provide developers safety, speed, and concurrency through its peculiar syntax, combining the expressiveness and usability of high-level languages, like Python and Java, with the efficiency and performance of low-level languages, like C and C++ <a href="#ref-rustlang">(Matsakis &amp; Klock 2014)</a>. The Rust language adopts some of the Object-Oriented Paradigm principles and ensures safe concurrency and memory management thanks to its LLVM-based compiler, which further guarantees efficiency by automatically providing low-level optimizations and performance. The memory management rules, these characteristics, and the lack of a garbage collector make Rust’s performance comparable to C.</p>
+                    <p id="2.4">Recently, Rust’s popularity has risen among companies and developers thanks to its software reliability and safety approach <a href="#ref-rustsupercomputing">(Bychkov &amp; Nikolskiy 2021)</a>. Companies like Firefox, Dropbox, and Cloudflare already use Rust in production, and several significant projects have adopted this language as their primary developing tool. For instance, Linux developers added new features to the existing kernel infrastructure using Rust code, while both Google and Microsoft exploited Rust to reduce memory-related bugs and security flaws in Android and Windows systems.</p>
+                    <p id="2.5">Rust’s peculiarities also increased interest in academia, resulting in several studies considering Rust’s characteristics through a theoretical lens. In particular, <a href="#ref-rustbelt">Jung et al. (2018)</a> provided the first formal and machine-checked proof of Rust safety properties by proving that <em>"a semantically well-typed program is memory and thread-safe: it will never perform any invalid memory access and will not have data races."</em>. Moreover, <a href="#ref-rustformalism">Pearce (2021)</a> formally demonstrated the validity of two basic concepts of Rust: references lifetimes and borrowing.</p>
+                    <p id="2.6">Throughout the manuscript, we refer to certain technical elements of the Rust language. Although this work is self-contained, we refer the reader to the Rust official documentation for more details.<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+                    <h4 id="the-krabmaga-architecture">The krABMaga architecture</h4>
+                    <p id="2.7">krABMaga is a fast, reliable, discrete-event multi-agent simulation toolkit based on the Rust language designed to be a ready-to-use tool for developing ABM simulations. Our selection of Rust as the framework’s development language stems from its inherent principles of performance, reliability, and productivity, which harmonize seamlessly with the fundamental objectives of krABMaga. Still, it is crucial to emphasize that the true potential of our toolkit is unlocked through the fusion of Rust and our expertise in ABM tools, which empowered us to craft an efficient and resilient framework. Specifically, we carefully engineered all the underlying structures and components to maximize efficiency while ensuring ease of use and comprehensibility.</p>
+                    <p id="2.8">krABMaga embraces and re-engineers the architectural concepts of the wide-adopted MASON simulation library <a href="#ref-mason">(Luke et al. 2005)</a>. This design choice provides modelers with a familiar programming environment that decreases the learning curve of our framework while exploiting Rust’s peculiarities and programming model. The name krABMaga is a portmanteau, i.e., a blend from the combination of Krav Maga (a famous martial art) and ABM, which also sounds similar to the crustacean name <em>Crab</em>, the mascot of Rust. This name comes from the original ambition of Krav Maga to be effective and practical; we adopted the same principle in the design of our tool.</p>
+                    <p id="2.9">krABMaga’s architecture is made up by two main software elements: the <em>Engine</em> and the <em>Visualization</em> components. The Engine component comprises all core functionalities to develop and run a simulation model, while the Visualization component exploits the Engine layer to visualize the simulation.</p>
+                    <p id="2.10">Figure <a href="#fig1">1</a> depicts the architecture of krABMaga and highlights the dependencies and connections between its components.</p>
+                    <figure id="fig1">
+                    <a class="fancybox" href="4/4Figure1.png" title="Figure 1. The krABMaga architecture."><img alt="" src="4/4Figure1.png"/></a><figcaption aria-hidden="true"><b>Figure 1. </b>The krABMaga architecture.</figcaption>
+                    </figure>
+                    <h4 id="sec:subsec_engine">The Engine component</h4>
+                    <p id="2.11">The Engine component comprises the definition and implementation of the building blocks of every ABM simulation: <em>(i)</em> the agents, who model the entities of the simulation, <em>(ii)</em> the state of the simulation formed by all fields where the agents interact with each other and retrieve information, and <em>(iii)</em> the scheduler, which manages all simulation events. The absence of unsafe code blocks within the Engine component enhances the framework’s memory and thread safety, which, in turn, bolsters the reliability of krABMaga.</p>
+                    <h5 id="sec:subsubsec_agent">Simulation agents</h5>
+                    <p id="2.12">In krABMaga, an agent is any Rust object that implements the trait <code>Agent</code>. The use of traits helps the developer to specify agents’ behaviors and properties easily by enforcing the implementation of specific functions defining how the agents should be appropriately scheduled (e.g., the method <code>step()</code>, which determines how the agents act in each simulation step). The developer can further specify the implementation of other optional methods to improve agent control and complexity.</p>
+                    <figure id="box1">
+                    <a class="fancybox" href="4/box1.png"><img alt="" src="4/box1"/></a>
+                    </figure>
+                    <p id="2.13">An overview of the methods included in the trait <code>Agent</code> follows.</p>
+                    <ul>
+                    <li><code>function step(state)</code>, mandatory function defining the agent’s behavior. The modeler can access the simulation state through the <code>State</code> input parameter and possibly modify the environment (e.g., simulation fields) or any other global structure;</li>
+                    <li><code>function is_stopped(state)</code>, optional function defining the condition that determines whether the agent must be scheduled in the following simulation step or it can be removed from the simulation. This method allows the developer to manage the agent’s lifecycle;</li>
+                    <li><code>function before_step(state)</code>, optional function defining the agent’s behavior that must be performed before the execution of each simulation step;</li>
+                    <li><code>function after_step(state)</code>, optional function defining an agent’s behavior that must be performed after the execution of each simulation step.</li>
+                    </ul>
+                    <p id="2.14">krABMaga supports the development of multi-agent simulations allowing the specification of different agents within the same model. This feature is achieved by encapsulating an object <code>Agent</code> within the structure <code>AgentImpl</code>, which the scheduler uses in practice.</p>
+                    <figure id="box2">
+                    <a class="fancybox" href="4/box2.png"><img alt="" src="4/box2"/></a>
+                    </figure>
+                    <h5 id="sec:subsubsec_state">Simulation environment</h5>
+                    <p id="2.15">The simulation environment contains the <em>fields</em> where the agents live and act and represents the model’s state. In krABMaga, the agents must update and read their location by interacting with the simulation state, even though they store their location internally. In this way, the state always contains the latest data, and the agents are guaranteed to access up-to-date information.</p>
+                    <p id="2.16">The modeler has to implement the model’s state, which defines the fields where the agents are placed, any global property of the model, and additional actions to perform during the simulation. Further, the modeler must define three mandatory methods, summarized below:</p>
+                    <ul>
+                    <li><code>function init(schedule)</code>, function used to initialize the model, which should include the code for creating agents and fields and initializing the simulation properties at startup;</li>
+                    <li><code>function update(step)</code>, function defining the simulation behavior to run at the end of each simulation step. It must define all the procedures for updating the different structures of the state (including the invocation of the update method for each field);</li>
+                    <li><code>function reset()</code>, function used for resetting the simulation, usually containing the code for a clean initialization of the state structures.</li>
+                    </ul>
+                    The modeler can also define the state behavior at a specific simulation time via the following optional methods:
+                    <ul>
+                    <li><code>function before_step(schedule)</code>, function defining the state’s behavior that must be performed before the execution of each simulation step;</li>
+                    <li><code>function after_step(schedule)</code>, function defining the state’s behavior that must be performed after the execution of each simulation step;</li>
+                    <li><code>function end_condition(schedule)</code>, function defining the condition that determines when the simulation should end.</li>
+                    <li><code>function end_condition(schedule)</code>, function defining the condition that determines when the simulation should end.</li>
+                    </ul>
+                    <p id="2.17"><strong>Simulation fields.</strong> A field is a data structure that represents the environment where the agents act and defines how they can move and interact within it. krABMaga provides three field classes,<a class="footnote-ref" href="#fn2" id="fnref2" role="doc-noteref"><sup>2</sup></a> which cover the fundamental spaces required in an ABM, and specific functionalities for each of them, e.g., placing agents, retrieving agents’ neighborhoods, and managing the simulation’s static elements. Figure <a href="#fig2">2</a> depicts the krABMaga field taxonomy. A detailed description follows.</p>
+                    <figure id="fig2">
+                    <a class="fancybox" href="4/4Figure2.png" title="Figure 2. The krABMaga field taxonomy."><img alt="" src="4/4Figure2.png"/></a><figcaption aria-hidden="true"><b>Figure 2. </b>The krABMaga field taxonomy.</figcaption>
+                    </figure>
+                    <code>Grid2D</code> is a data structure based on a matrix design. In a <code>Grid2D</code> field, agents can move across the matrix cells, and a pair of coordinates identifies their location. krABMaga exposes two types of <code>Grid2D</code> fields: <code>SparseGrid2D</code> and <code>DenseGrid2D</code>. <code>SparseGrid2D</code> is appropriate for low-density fields, where most of the cells are empty, and exploits a HashMap to speed up read and search operations. The <code>DenseGrid2D</code> works better for high-density fields, where most of the cells contain a value, and is based on the Rust object matrix to make write operations as fast as possible. Both fields can be further specialized in:
+                    <ul>
+                    <li>an <code>ObjectGrid2D</code> field, namely a <code>Grid2D</code> field for storing any Rust structures that implements a specific set of traits. Each cell of the field may contain more than one agent.</li>
+                    <li>a <code>NumberGrid2D</code>, a simpler <code>Grid2D</code> field for placing any Rust structure that implements a specific set of traits. This field is optimized to handle primitive types, such as numerical values. In this case, each cell contains only a single agent.</li>
+                    </ul>
+                    This design choice lets the developer optimize their simulation performance by choosing the field that better suits the model.
+                    <code>Field2D</code> is a bi-dimensional (possibly toroidal) continuous space where agents can be placed anywhere within the field. The coordinates of an agent placed in a <code>Field2D</code> field are represented as a <code>Real2D</code> object consisting of a pair of floating-point values.
+                    <code>Network</code> is a graph-shaped field that defines non-spatial relationships between agents. This field permits the definition of directed, undirected, and weighted networks where the nodes represent agents and edges relationships between them. krABMaga also provides the <code>HNetwork</code> field, where the underlying interaction network is modeled as a hypergraph. Specifically, hypergraphs are a generalization of graphs in which every (hyper)edge connects an arbitrary number of nodes.
+                    <p id="2.18"><strong>Field updates.</strong> A crucial feature of krABMaga is the use of the <em>double-buffering</em> technique to manage fields’ memory. Each field uses two data structures to store its values: one structure is read-only (read state), and the other is write-only (write state). At the beginning of each simulation step, the read state contains up-to-date information, while the write state is empty. Any object performing a reading (resp. writing) procedure will thus access the read (resp. write) state. Hence, the two data structures are independent, but the engine automatically synchronizes them at each step’s end. Thanks to the double-buffering technique, krABMaga can perform any read operations concurrently on the read-only data structure, thus, significantly improving the performance of the simulation. On the contrary, writing operations, which change the simulation state, are performed sequentially to avoid data race and contention on the write state.</p>
+                    <p id="2.19">In a nutshell, the double-buffering technique guarantees that when an agent is scheduled, the correct information (e.g., the agent’s neighbors’ location) from the previous simulation step is used.</p>
+                    <p id="2.20">The modeler must define how each simulation field must be updated via either one of the following functions.</p>
+                    <ol type="1">
+                    <li><code>function lazy_update()</code>. This efficient update operation swaps the read and the write states, and it is suggested when the simulation data changes at each step. In this case, the swap approach significantly improves the performance. In practice, this function re-initializes the memory.</li>
+                    <li><code>function update()</code>. This update operation moves all the data from the write state to the read state. This function is computationally intensive and should be used when (part of) the data of the previous simulation step must be preserved.</li>
+                    </ol>
+                    <p id="2.21">The double-buffering mechanism of krABMaga is transparent to the modeler. Still, our framework offers additional methods that enable expert users to optimize their code for specific needs. These methods operate on the write state and are marked as <code>unbuffered</code>. For instance, a user may choose to design the simulation model to use the <code>lazy_update</code> function and, hence, obtain a more efficient execution.</p>
+                    <h5 id="sec:scheduler">Scheduler</h5>
+                    <p id="2.22">The krABMaga scheduler manages all the discrete events happening in the simulation. In other words, it controls when the behavior of an agent (defined in the <code>Agent.step()</code> method) should be run. The scheduler handles the simulation timeline via a priority queue, which sorts the agents according to their scheduling time and priority. During each simulation step, the scheduler selects all agents whose scheduling time matches the current simulation time, pushes them into a helper priority queue associated with the current step (which sorts agents based on their priority), and then calls their <code>step</code> functions.</p>
+                    <p id="2.23">The modeler can access the scheduling functionalities to control the pace of the simulation through the <code>Scheduler</code><a class="footnote-ref" href="#fn3" id="fnref3" role="doc-noteref"><sup>3</sup></a> object. Specifically, krABMaga provides two functions to schedule a new agent, i.e., insert it in the priority queue:</p>
+                    <ul>
+                    <li><code>function schedule_once(agent, time, ordering)</code>. This function schedules a single-time agent, which will be removed from the scheduling queue after the execution of its <code>step</code> function. The parameters include the agent’s current step time and priority;</li>
+                    <li><code>function schedule_repeating(agent, time, ordering)</code>. This function schedules an agent during each next simulation step. The parameters include the agent’s current step time and priority.</li>
+                    </ul>
+                    <p id="2.24">The scheduler also handles the actions to perform before and after each simulation step associated with the agents (see Section 2.9) and simulation state (see Section 2.12). Further, the krABMaga scheduler can manage different types of agents within the same model.</p>
+                    <p id="2.25"><strong>Scheduling process.</strong> The simulation process can be roughly split into three main phases. During the first phase, the scheduler initializes the number of simulation steps and its state to then invoke the state’s behavior that must be performed before the execution of each simulation step (<code>State.before_step</code> function). Soon after, the scheduler selects and removes from the event queue <span class="math inline">\(\mathbb{Q}\)</span> all agents <span class="math inline">\(a\)</span> whose scheduling time <span class="math inline">\(t_a\)</span> matches the current simulation time <span class="math inline">\(T\)</span> and inserts them into the priority queue <span class="math inline">\(\mathbb{E}\)</span> associated with the current simulation step. In the second phase, the scheduler handles the execution of each agent’s behavior (<code>Agent.before_step</code>, <code>Agent.step</code>, <code>Agent.after_step</code> functions) contained in the queue <span class="math inline">\(\mathbb{E}\)</span> according to their priority. The agents are pushed again in the event queue <span class="math inline">\(\mathbb{Q}\)</span> if they need to be scheduled in the next simulation steps. When there are no more events in the queue <span class="math inline">\(\mathbb{E}\)</span>, the scheduler moves to the next phase. In the third and last phase, the scheduler invokes the state’s behavior that must be performed after the execution of each simulation step (<code>State.after_step</code> function) and at the end of each simulation step (<code>State.update</code> function) to update all the <code>State</code>’s data structures. The scheduler will continue processing the events until the maximum number of steps <span class="math inline">\(s\)</span> is reached or an end condition occurs (see Section 2.12). Figure <a href="#fig3">3</a> summarizes the described scheduling process.</p>
+                    <figure id="fig3">
+                    <a class="fancybox" href="4/4Figure3.png" title="Figure 3. krABMaga scheduling flow."><img alt="" src="4/4Figure3.png"/></a><figcaption aria-hidden="true"><b>Figure 3. </b>krABMaga scheduling flow.</figcaption>
+                    </figure>
+                    <h5 id="sec:monitoring">Monitoring tools</h5>
+                    <p id="2.26">The development of an ABM is a complex process that requires the modeler to define each component properly in order to obtain an accurate simulation of the system under study. Further, ABM models usually have stochastic components, which give life to patterns that may be analysed statistically but may not be predicted precisely. For this reason, most models need to be run several times to be able to correctly analyze their behavior. To alleviate these challenges, krABMaga offers a series of declarative macros for verifying the reproducibility of a model <a href="#ref-ZHANG_ESA_2021">(Zhang &amp; Robinson 2021)</a> and tracking simulation data. krABMaga also includes a convenient monitoring tool via a Terminal User Interface (TUI) that allows the modeler to monitor simulation events, create graphs based on tracked data, and check the simulation performance. The TUI provides some default information about the simulation, such as the step number, CPU and memory usage, and the number of steps per second executed. The user can add further information using a simple set of macro exposes by krABMaga. It is worth stressing that none of these features affect the simulation performance and execution since they are managed in a separate thread. A few details about the functions the user can manipulate to run a systematic suite of experiments and personalize the TUI follow.</p>
+                    <ul>
+                    <li><em>Execution-related macros</em>
+                    <ul>
+                    <li><code>simulate!(state, steps, reps)</code>. This macro runs an agent-based simulation for the specified number of <code>steps</code> and repeats the same simulation according to the number of repetitions <code>reps</code>.</li>
+                    <li><code>check_reproducibility!(state, steps, agent)</code>. This macro verifies whether two runs of the same simulation produce exactly the same results having fixed a common seed. The definition of the agents must implement the trait <code>ReproducibilityEq</code> in order to perform the reproducibility control.</li>
+                    </ul></li>
+                    </ul>
+                    <!-- -->
+                    <ul>
+                    <li><em>Graph-related macros</em>
+                    <ul>
+                    <li><code>addplot!("Agents", "X axis", "Y axis", bool)</code>. This macro allows the modeler to create a new tab within the TUI to accommodate a new plot that can be populated using the <code>plot!()</code> macro. The last input parameters regulates whether the newly added plot should be stored locally in csv format.</li>
+                    <li><code>plot!("Agents", "Series", x, y)</code>. This macro adds a new point of the series <code>Series</code> located at coordinates <code>(x,y)</code> to the plot <code>Agents</code>.</li>
+                    </ul></li>
+                    <li><em>Log-related macros</em>
+                    <ul>
+                    <li><code>log!(Info, format!("STEP: {}", step)), bool)</code>. The <code>log!</code> macro allows the modeler to log any information within the TUI using different kinds of messages based on the event type, namely <em>Info</em>, <em>Warning</em>, <em>Critical</em>, and <em>Error</em>. An additional parameter enables saving the logs locally.</li>
+                    </ul></li>
+                    </ul>
+                    <figure id="box3">
+                    <a class="fancybox" href="4/box3.png"><img alt="" src="4/box3"/></a>
+                    </figure>
+                    <h4 id="sec:visualization">The Visualization component</h4>
+                    <p id="2.27">An ABM framework that provides visual feedback of the simulation during its execution results in a significant advantage for the modeler by allowing a better understanding of the system behavior <a href="#ref-Kornhauser_JASSS_2009">(Kornhauser et al. 2009)</a>. For this reason, krABMaga offers an efficient 2D visualization system based on the <em>Bevy</em> engine<a class="footnote-ref" href="#fn4" id="fnref4" role="doc-noteref"><sup>4</sup></a>, which can be run locally or in a web browser thanks to WebAssembly<a class="footnote-ref" href="#fn5" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Moreover, our framework provides a simple control panel to manage the simulation via the <em>egui</em><a class="footnote-ref" href="#fn6" id="fnref6" role="doc-noteref"><sup>6</sup></a> library, which enables the user to pause, stop, and restart the simulation execution and manage its velocity (i.e., step rate). A few details about the Bevy engine and WebAssembly follow.</p>
+                    <em>Bevy Engine.</em> Rust’s combination of low-level control, excellent performance, and modern build tools makes it an exciting choice for game developers and leads to the creation of several game engines. Among these, the Bevy engine arises for its ease of use and efficiency. Bevy is a simple, open-source, data-driven game engine built in Rust that offers a complete 2D and 3D feature set. Bevy is simple to use for new developers but very flexible when used by experts providing a data-oriented modular architecture and high-performance parallelization.<br></br>
+                    <em>WebAssembly</em>. WebAssembly (Wasm) is a binary instruction format for stack-based virtual machines designed as a portable compilation target for any programming language that enables running applications in the browser. Wasm grants excellent performance thanks to its conversion process that does not require parsing or compiling steps to convert the source language into byte code. The result is a small executable that can run on any browser with native performance. <br></br>
+                    In krABMaga, we exploited <em>wasm-pack</em><a class="footnote-ref" href="#fn7" id="fnref7" role="doc-noteref"><sup>7</sup></a> to generate WebAssembly code and <em>webpack</em><a class="footnote-ref" href="#fn8" id="fnref8" role="doc-noteref"><sup>8</sup></a> to bundle the application for its release. <br></br>
+                    <p id="2.28">The krABMaga visualization component is entirely modular and acts as a separate system; thus, the user can either visualize the simulation or not without modifying the underlying model. This component is designed as a wrapper of the simulation model: each primary trait defined in the Engine component has its counterpart in the Visualization sub-system (e.g., the trait <code>Agent</code> is paired with the trait <code>AgentRender</code>). The Visualization component automatically manages the model initialization and the graphical update at each step.</p>
+                    <p id="2.29">A detailed description of the traits exposed follows.</p>
+                    <ul>
+                    <li><code>VisualizationState</code>, trait used to manage the visualization elements’ startup and setup. The object implementing this trait must define how to initialize the graphics and retrieve the agent from the simulation state;</li>
+                    <li><code>AgentRender</code>, trait defining how agents should be drawn. The object implementing this trait must define the sprite representing the agent in the visualization, the agent scale, location, rotation, and how the information coming from the simulation state needs to be managed to update the agent rendering;</li>
+                    <li>The Visualization component provides different traits defining how the field should be drawn based on its type:
+                    <ul>
+                    <li><code>BatchRender</code>, trait designed for fields containing numerical values that have to be visualized as a simple texture. The object implementing this trait must define how the visualization engine will convert the 2D points into pixels. It is worth highlighting that the simplicity of the data structure allows the whole structure to the GPU to be sent in a single batch, hence improving overall performance;</li>
+                    <li><code>RenderObjectGrid2D</code>, trait designed for fields containing an object within each cell (not used for agents). The object implementing this trait must define how the engine will draw the object, including the sprite to use, its scale, rotation, and update method;</li>
+                    <li><code>NetworkRender</code>, trait designed for the network field. The object implementing this trait defines how the visualization engine must draw the edges.</li>
+                    </ul></li>
+                    </ul>
+                    <h4 id="sec:subsec_exp_opt">High performance model exploration and optimization</h4>
+                    <p id="2.30">Calibrating, exploring, and validating ABMs are crucial tasks to obtain reliable results. However, when the number of variables regulating the behavior of an ABM jumps from just a few tens to thousands or more, addressing these tasks may become computationally infeasible due to the high dimensionality of the search space.</p>
+                    <p id="2.31"><a href="#ref-Perrone2012">Perrone et al. (2012)</a> identified a community need for tools that facilitate the model exploration and optimization process. In response to this requirement, the authors developed the Simulation Automation Framework for Experiments (SAFE), which offers support from model construction to output data analysis. SAFE was designed to handle parallel execution on multi-core servers and distributed facilities.</p>
+                    <p id="2.32">In a similar vein, SESSL <a href="#ref-Ewald2014">(Ewald &amp; Uhrmacher 2014)</a> is a Domain-Specific Language (DSL) tailored for experiments and optimization processes, functioning as a distinct layer atop simulation systems. Similarly, the nlrx package <a href="#ref-Salecker2019">(Salecker et al. 2019)</a> serves as an interface between R and the NetLogo framework, enabling self-contained and reproducible analysis of NetLogo models within the R language. It even allows for the utilization of high-performance computing clusters, enabling multiprocessing and the execution of large model simulations.</p>
+                    <p id="2.33">When it comes to high-performance computing techniques, OpenMOLE <a href="#ref-Reuillon2013">(Reuillon et al. 2013)</a> is an example of a workflow engine specifically designed for the distributed exploration of simulation models. It provides a domain-specific language that abstracts users from the technical details required for distributing experiments in a high-performance computing environment.</p>
+                    <p id="2.34">krABMaga effectively meets these needs by providing model exploration and optimization APIs through the use of macros. These macros hide the complexity of the process and can be run in a parallel or distributed environment. Moreover, the framework seamlessly integrates with cloud computing platforms, employing the Function-as-a-Service (FaaS) model. In particular, the parallel mode leverages the Rayon library<a class="footnote-ref" href="#fn9" id="fnref9" role="doc-noteref"><sup>9</sup></a>, enabling data parallelism, while the distributed mode harnesses the MPI (Message Passing Interface) protocol via the rsmpi crate<a class="footnote-ref" href="#fn10" id="fnref10" role="doc-noteref"><sup>10</sup></a>, a Rust-based MPI binding. Additionally, krABMaga extends support to the Amazon AWS platform<a class="footnote-ref" href="#fn11" id="fnref11" role="doc-noteref"><sup>11</sup></a>, facilitating the embedding of simulation execution within an independent function that can be deployed and run in parallel on the cloud.</p>
+                    <p id="2.35">Here, we describe the krABMaga’s model exploration and optimization macros in their sequential version. Each macro is also configurable to exploit different computing back-ends by specifying the optional enum parameter <code>ComputingMode</code>, which can assume the values <code>parallel</code>, <code>distributed</code>, or <code>cloud</code>. By default, each macro is run sequentially in the local environment.</p>
+                    <p id="2.36">For further details, we refer the reader to the official krABMaga documentation<a class="footnote-ref" href="#fn12" id="fnref12" role="doc-noteref"><sup>12</sup></a>.</p>
+                    <h5 id="model-exploration">Model exploration</h5>
+                    <p id="2.37">This process, aka <em>parameters sweeping</em>, consists in analyzing the model sensitiveness by varying the input configurations. Algorithm <a href="#algo1">1</a> reports the pseudo-code of the procedure. For each input configuration <span class="math inline">\(x_i \in \mathcal{X}\)</span> (Line <span class="math inline">\(1\)</span>), the framework runs the simulation <span class="math inline">\(\Phi\)</span> over <span class="math inline">\(s\)</span> computational steps, with a fixed random seed <span class="math inline">\(\epsilon_j\)</span>. This process is repeated <span class="math inline">\(R\)</span> times (Lines <span class="math inline">\(2-3\)</span>). The procedure returns the expected simulation values obtained from each input configuration (Lines <span class="math inline">\(4-5\)</span>).</p>
+                    <figure id="algo1">
+                    <a class="fancybox" href="4/algo1.png"><img alt="" src="4/algo1.png"/></a>
+                    </figure>
+                    <p id="2.38">krABMaga supports the user in generating random values for an input parameter by exposing the macro<br/>
+                    <code>gen_param!(type, min, max, n)</code>, which returns a vector of <span class="math inline">\(n\)</span> uniformly distributed input values in the range <code>min</code> and <code>max</code>. Further, the framework provides the output data <span class="math inline">\(\mathcal{Y}\)</span> within a <code>DataFrame</code> structure, which permits a straightforward analysis of the results and can be easily exported as a CSV data file.</p>
+                    <p id="2.39">krABMaga supports the user in generating random values for an input parameter by exposing the macro<br/>
+                    <code>gen_param!(type, min, max, n)</code>, which returns a vector of <span class="math inline">\(n\)</span> uniformly distributed input values in the range <code>min</code> and <code>max</code>. We chose to implement uniform distributions as our first method, given their widespread use in simulation scenarios. We plan to incorporate additional distributions for creating random parameters in future updates. Furthermore, the framework provides the output data <span class="math inline">\(\mathcal{Y}\)</span> within a <code>DataFrame</code> structure, which permits a straightforward analysis of the results and can easily be exported as a CSV data file.</p>
+                    <h5 id="model-optimization">Model optimization</h5>
+                    <p id="2.40">This process, aka <em>simulation via optimization</em>, exploits a search-based optimization algorithm for finding the best input configuration for the simulation. In krABMaga, we implemented three parameter optimization approaches, accessible via as many Rust macros.</p>
+                    <em>Random search</em>[<code>random_search!(...)</code>] explores the parameter space by using a random searching algorithm, which consists of iteratively computing and evaluating a set of random input configurations until the maximum number of iterations is reached or a desired simulation score/error is achieved. <br></br>
+                    <em>Evolutionary search</em>[<code>evolutionary_search!(...)</code>] optimizes the simulation parameters by adopting an evolutionary searching strategy. Specifically, krABMaga provides a genetic algorithm-based approach <a href="#ref-ga_abm">(Stonedahl &amp; Wilensky 2011)</a>. <br></br>
+                    <em>Bayesian search</em>[<code>bayesian_search!(...)</code>] performs a Bayesian optimization-based searching strategy <a href="#ref-Bayesian">(Jones et al. 1998)</a> for parameter optimization similarly to the evolutionary strategy. <br></br>
+                    <p id="2.41">In krABMaga, each of the above macros implements a modified version of Algorithm <a href="#algo1">1</a>. Specifically, each strategy defines how the set of input configurations <span class="math inline">\(\mathcal{X}\)</span> is defined; then, a goodness or error value is evaluated for each set of expected simulation results to iteratively inform the parameter search space strategy.</p>
+                    <h3 id="sec:wsg">Programming with krABMaga: the Wolf, Sheep, and Grass Model</h3>
+                    <p id="3.1">This Section describes the process of designing and implementing an ABM with krABMaga, using the Wolf, Sheep, and Grass (WSG) model as a use case. This model is a typical example of the effective use of ABMs and has been widely studied <span><a href="#ref-wsg_paper2">(Wilensky &amp; Reisman 1998, 2006)</a></span>.</p>
+                    <h4 id="defining-the-wsg-model">Defining the WSG model</h4>
+                    <p id="3.2">WSG is a model which simulates the population dynamics of predators and prey that coexist in a shared ecosystem. Wolves are the predators eating sheep, their prey, which, in turn, eat the grass. Both wolves and sheep consume energy for each activity; so, food availability dictates the ability to restore energy and survive. Specifically, sheep survival depends on the grass growth rate. If the number of sheep is too high, grass will not grow in time to be eatable. Wolves’ survival relies on sheep’s reproduction rate. If the wolves’ number is too high, they will eat too many sheep, precluding their reproduction.</p>
+                    <p id="3.3">Given its dynamics, the WSG model requires a set of parameters correctly calibrated to realize a stable system. A system is called <em>stable</em> if the agents’ population fluctuates over time but never reaches extinction. Conversely, the system is unstable if all the agents die at any given point.</p>
+                    <h5 id="sec:subsubsec_wsg_agents">WSG agents</h5>
+                    <p id="3.4">The WSG model has three fundamental concepts: wolves, sheep, and grass. Wolves and sheep move and actively interact with the environment, while the grass is stationary and only grows over time. For this reason, wolves and sheep can be represented as agents, while the grass as a numerical value (see Section 3.12). Despite wolves and sheep acting similarly, their interaction with the system is different; thus, these two entities are modeled as separated agents. Regardless of their nature, both agents need to carry some essential information: a unique identifier (id), their current location in the field, and their previous location. Additionally, the WSG model needs specific properties for each agent, such as <em>(i)</em> its current energy, <em>(ii)</em> the energy gained from food, <em>(iii)</em> its reproduction probability, and <em>(iv)</em> its life state: dead or alive. The definition of the Wolf and Sheep agents is illustrated in Figure <a href="#wolf-sheep">4</a>.</p>
+                    <figure id="wolf-sheep">
+                    <a class="fancybox" href="4/wolf-sheep.png" title="Figure 4. Wolf (left) and sheep (right) agent properties."><img alt="" src="4/wolf-sheep.png"/></a><figcaption aria-hidden="true"><b>Figure 4. </b>Wolf (left) and sheep (right) agent properties.</figcaption>
+                    </figure>
+                    <p id="3.5">In krABMaga, each entity representing an agent must implement the trait <em>Agent</em> and define its behavior in the function <code>step()</code>. Wolves and sheep perform three actions: <em>moving</em>, <em>eating</em>, and <em>reproducing</em>.</p>
+                    <p id="3.6"><strong>Moving.</strong> Wolves and sheep randomly move around the landscape. With a given probability <span class="math inline">\(\alpha\)</span> (<code>momentum_probability</code>), the agent moves in the same direction as the previous step; with probability <span class="math inline">\(1-\alpha\)</span>, the agent moves in a random position. Figure <a href="#moving-rule">5</a> depicts the code regulating how sheep move, but the same applies for wolves on the <code>wolf_grid</code> (see Section 3.12).</p>
+                    <figure id="moving-rule">
+                    <a class="fancybox" href="4/moving-rule.png" title="Figure 5. Agents’ moving behavior."><img alt="" src="4/moving-rule.png"/></a><figcaption aria-hidden="true"><b>Figure 5. </b>Agents’ moving behavior.</figcaption>
+                    </figure>
+                    <p id="3.7"><strong>Survival and Reproduction.</strong> After moving, wolves and sheep simulate energy loss by subtracting a fixed value from their energy. If their energy drops below zero, the agent sets its <code>LifeState</code> to <code>Dead</code>. If the agent survives, it tries to reproduce. If it succeeds, it halves its energy and creates a new agent. It is worth noting that agents cannot add new entities to the scheduler within their function <code>step()</code> as only the simulation State object can interact with the scheduler. The <code>new_sheep</code> and <code>new_wolves</code> arrays of the simulation State serve this purpose. Figure <a href="#reproduction">6</a> depicts the code for the sheep agents, but the same applies for wolves using <code>Wolf::new()</code>.</p>
+                    <figure id="reproduction">
+                    <a class="fancybox" href="4/reproduction.png" title="Figure 6. Agents’ reproducing behavior."><img alt="" src="4/reproduction.png"/></a><figcaption aria-hidden="true"><b>Figure 6. </b>Agents’ reproducing behavior.</figcaption>
+                    </figure>
+                    <p id="3.8"><strong>Eating.</strong> The system’s stability depends on the possibility of wolves and sheep eating. After moving to a new location, agents will search for food and eat if certain conditions are met. The implementation of eating behavior differs between wolves and sheep due to the different natures of their food, as wolves eat other agents (sheep) while sheep eat a simpler entity (grass).</p>
+                    <p id="3.9"><em>Eating grass.</em> A sheep can eat grass on its location if it is fully grown and the grass has not been eaten by another sheep in that step. This last requirement is verified using the function <code>get_value_unbuffered()</code> that accesses the write state of the grass field. If the value obtained is <em>not null</em>, another sheep has already eaten the grass since it has been written in the write state structure. If the sheep successfully eats the grass, it sets the grass value on the field to 0 and gains some energy, as depicted in Figure <a href="#eating">7</a>.</p>
+                    <figure id="eating">
+                    <a class="fancybox" href="4/eating.png" title="Figure 7. Eating behavior of sheep agents."><img alt="" src="4/eating.png"/></a><figcaption aria-hidden="true"><b>Figure 7. </b>Eating behavior of sheep agents.</figcaption>
+                    </figure>
+                    <p id="3.10">It is crucial to stress that using the function <code>get_value_unbuffered()</code> allows access to up-to-date information since the updates of the data structures only happen at the end of the simulation step. This approach guarantees that if a sheep eats some grass in a location during a given step and, later on, but in the same step, another sheep moves in the same location, it will correctly see the grass level equal to zero.</p>
+                    <p id="3.11"><em>Eating sheep.</em> A wolf can only eat a sheep on its location if another wolf has not already eaten the prey in that step. This requirement is checked using a dedicated data structure storing eaten sheep (see Figure <a href="#eating-wolves">8</a>). Wolf agents can modify the simulation field since their function <code>step()</code> has access to the state of the simulation. However, no agent can manipulate the scheduler due to the krABMaga safety policy. To overcome this limitation, we followed the same strategy used when introducing new agents: we added the array <code>killed_sheep</code> in the simulation State object to remove the eaten sheep from the scheduler.</p>
+                    <figure id="eating-wolves">
+                    <a class="fancybox" href="4/eating-wolf.png" title="Figure 8. Eating behavior of wolf agents."><img alt="" src="4/eating-wolf.png"/></a><figcaption aria-hidden="true"><b>Figure 8. </b>Eating behavior of wolf agents.</figcaption>
+                    </figure>
+                    <p id="3.12">When a wolf eats a sheep, it sets the <em>LifeState</em> of its prey to <em>Dead</em>, removes the agent from the field, inserts it in the <em>killed_sheep</em> array, and gains some energy. Figure <a href="#eating-wolves">8</a> shows the logic of this process.</p>
+                    <h5 id="sec:subsubsec_wsg_state">WSG state</h5>
+                    <p id="3.13">In krABMaga, the simulation State object, which implements the trait <code>State</code>, initializes the model, defines and updates the data structures regulating the model’s logic, schedules the agents, and controls the pace of the simulation. In this example, the <code>WsgState</code> object defines the (i) simulation fields, (ii) their size, (iii) the current simulation step, (iv) a unique id counter to assign different identifiers to new agents, (v) the number of agents, i.e., sheep and wolves, and (vi) three data structures to support the addition to and removal from the scheduler of agents (see Section 3.3). More specifically, the <code>WsgState</code> object initializes three different fields to manage the three entities of the model: the grass, wolf, and sheep fields. Specifically, the grass field is instantiated as a <em>NumberGrid2D</em> field, where each cell contains a numerical value representing the grass growth state, while the wolf and sheep fields are instantiated as two <em>DenseObjectGrid2D</em> structures. Using two different fields to handle the behavior of wolves and sheep improves the overall performance of the simulation when looking for a specific kind of agent; for instance, if a wolf tries to eat a sheep, the only structure queried will be the sheep field. Lines <span class="math inline">\(1-12\)</span> of Figure <a href="#model-9">9</a> list the above properties.</p>
+                    <p id="3.14"><strong>Initialization phase.</strong> The initialization of the simulation happens in the function <code>init()</code> (Lines <span class="math inline">\(15-20\)</span>). This function populates the three simulation fields by adding grass values, sheep, and wolves. Specifically, the method <code>generate_grass()</code> iterates through the <code>grass_field</code> cells and inserts a value representing the grass available in each cell (Lines <span class="math inline">\(51-59\)</span>). The methods <code>generate_sheep()</code> (Lines <span class="math inline">\(60-69\)</span>) and <code>generate_wolves()</code> (Lines <span class="math inline">\(70-79\)</span>) work similarly: they create the respective agent, place it in a given location the corresponding fields, and add it to the scheduler’s queue via the function <code>schedule_repeating()</code>, which notifies the scheduler that the agents need to be scheduled in all following simulation steps. Here, we emphasize the use of the <code>Box</code> structure, which wraps the newly created agent (either a wolf or a sheep) and enables krABMaga to handle multi-agent simulations.</p>
+                    <p id="3.15"><strong>Updating phase.</strong> The <code>WsgState</code> object handles the update of all fields during each simulation step through the definition of the mandatory method <code>update()</code>. In particular, this method also implements the grass-growing process (Lines <span class="math inline">\(22-29\)</span>), which increases the grass values of all cells in the <code>grass_field</code> via the function <code>apply_to</code> <code>_all_values</code>. The parameter <code>GridOption::READWRITE</code> ensures that the existing information is not overwritten. In more detail, this option allows us to check the WriteState structure before increasing the grass values since a sheep agent could have already written that field’s cell (i.e., eating all grass). In Lines <span class="math inline">\(30-33\)</span>, all simulation fields are updated.</p>
+                    <p id="3.16">In this use case, the <code>State</code> object also implements the method <code>after_step</code> that defines the logic regulating the eating and reproducing behavior of the agents (Lines <span class="math inline">\(35-50\)</span>). After each step, the <code>WsgState</code> object iterates through the <code>new_sheep</code> and <code>new_wolves</code> structures to add agents in the scheduler using the method <code>schedule_repeating()</code> while it iterates over the array <code>killed_sheep</code> to remove dead agents from the scheduling process via the method <code>dequeue()</code>.</p>
+                    <figure id="model-9">
+                    <a class="fancybox" href="4/model.png" title="Figure 9. WSG simulation state."><img alt="" src="4/model.png"/></a><figcaption aria-hidden="true"><b>Figure 9. </b>WSG simulation state.</figcaption>
+                    </figure>
+                    <h5 id="running-and-analyzing-the-wsg-model">Running and analyzing the WSG model</h5>
+                    <p id="3.17">At this point, we have defined all elements of the WSG model. Now, let’s see how to run it and analyze its execution with the TUI.</p>
+                    <p id="3.18"><strong>Running the simulation.</strong> The WSG model includes several parameters influencing the system’s evolution and stability, such as the number of sheep and wolves, the cost of each agent’s step, the energy gained from food, and the grass growth rate. Figure <a href="#main">10</a> shows the <code>main.rs</code> file, which defines these parameters (Lines <span class="math inline">\(1-7\)</span>). Here, the function <code>main()</code> instantiates the simulation State with the required parameters and runs the macro <code>simulate!</code> to launch the simulation.</p>
+                    <figure id="main">
+                    <a class="fancybox" href="4/main.png" title="Figure 10. main.rs file."><img alt="" src="4/main.png"/></a><figcaption aria-hidden="true"><b>Figure 10. </b>main.rs file.</figcaption>
+                    </figure>
+                    <p id="3.19"><strong>Analyzing the simulation.</strong> The krABMaga GUI terminal helps us investigate the stability of the ecosystem predator/prey by creating dynamic plots of the simulation status. These plots are managed within the <code>State</code> object and, hence, have access to all simulation data (see Figure <a href="#tui">11</a>). The structure of each plot is defined within the function <code>init()</code> via the macro <code>add_plot!()</code>, which specifies the plot’s title and labels (Lines <span class="math inline">\(3-14\)</span>). Then, the plot is populated using the macro <code>plot!()</code> called within the function <code>after_step()</code>, which adds a data point after each simulation step (Lines <span class="math inline">\(20-49\)</span>). The code listed in Figure <a href="#tui">11</a> results in two plots: the first shows the trend of the wolf and sheep population (see Figure <a href="#fig12">12</a>), while the second tracks newly born wolf and sheep agents, as well as the number of sheep killed by wolves (see Figure <a href="#fig13">13</a>).</p>
+                    <figure id="tui">
+                    <a class="fancybox" href="4/tui.png" title="Figure 11. Setting the krABMaga TUI interface."><img alt="" src="4/tui.png"/></a><figcaption aria-hidden="true"><b>Figure 11. </b>Setting the krABMaga TUI interface.</figcaption>
+                    </figure>
+                    <h4 id="visualizing-the-wsg-model">Visualizing the WSG model</h4>
+                    <p id="3.20">After having the WSG simulation up and running, we can use the Visualization component of krABMaga to visually monitor the behavior of the developed model. The trait <code>VisualizationState</code> manages the entire visualization model similar to the trait <code>State</code> in the sense that we need to initialize (function <code>on_init()</code>) and update (function <code>update()</code>) the visualization of the grass field and the agents. The function <code>get_agent_render()</code> fetches the data structures defined in the model (<code>grass_field</code>, <code>wolves_grid</code>, <code>sheep_grid</code>).</p>
+                    <p id="3.21">In this specific use case, wolf and sheep agents move in the space, while the grass is a static environmental element. To render the agents’ movement, we let the <code>Wolf</code> and <code>Sheep</code> objects implement the trait <code>AgentRender</code>. Then, we defined how the engine must draw the agent at each step, specifying its position, orientation, and scale in the function <code>update()</code>. The only difference between sheep and wolf agents resides in their representing sprites, specified in the <code>sprite()</code> function. Eaten sheep disappear from the field. In the method <code>before_render()</code>, run before each simulation step, we inform the visualization to render the newly born agents. To graphically represent the growing grass, we implemented the trait <code>BatchRender</code> in the field <code>DenseNumberGrid2D</code>. In more detail, we used the method <code>get_pixel()</code> to specify the color of each cell based on the amount of grass contained (the greener the cell, the higher the grass available).</p>
+                    <p id="3.22">To actually use the visualization component, we need to define a <code>Visualization</code> object within the function <code>main()</code>, which allows us to set up the graphical properties of the visualization and run it.</p>
+                    <p id="3.23">A snapshot of the visualization of the WSG model is depicted in Figure <a href="#fig14">14</a>. The complete code is available on the krABMaga repository<a class="footnote-ref" href="#fn13" id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
+                    <figure id="fig12">
+                    <a class="fancybox" href="4/4Figure4.png" title="Figure 12. Plot describing the trend of the wolf and sheep populations."><img alt="" src="4/4Figure4.png"/></a><figcaption aria-hidden="true"><b>Figure 12. </b>Plot describing the trend of the wolf and sheep populations.</figcaption>
+                    </figure>
+                    <figure id="fig13">
+                    <a class="fancybox" href="4/4Figure5.png" title="Figure 13. Plot depicting the trend of newly born wolves and sheep, as well as killed sheep."><img alt="" src="4/4Figure5.png"/></a><figcaption aria-hidden="true"><b>Figure 13. </b>Plot depicting the trend of newly born wolves and sheep, as well as killed sheep.</figcaption>
+                    </figure>
+                    <figure id="fig14">
+                    <a class="fancybox" href="4/4Figure6.png" title="Figure 14. The GUI interface for the Wolf, Sheep &amp; Grass simulation."><img alt="" src="4/4Figure6.png"/></a><figcaption aria-hidden="true"><b>Figure 14. </b>The GUI interface for the Wolf, Sheep &amp; Grass simulation.</figcaption>
+                    </figure>
+                    <h3 id="sec:related">Related Work</h3>
+                    <p id="4.1">The interest of the research community in ABMs has considerably increased recently thanks to the numerous and various application fields to which the agent paradigm brings considerable advantages. In light of this surge of interest, several tools and frameworks have emerged to facilitate the development, execution, and analysis of ABMs, addressing the needs of different communities of experts. For instance, some platforms, such as MASON and Repast, are close to the computer science world, providing general-purpose libraries and frameworks usable with common programming languages like Java. Other tools, like Netlogo, furnish simplified language specifically designed to make ABM development accessible to non-experts developers instead. In this Section, we outline some of the most important and impactful frameworks for developing and running ABMs to offer the reader an overview of existing literature and, hence contextualize the significance of krABMaga. Here, we focus on general-purpose ABM software used for real applications, with a stable and maintained software version, consistent user base, and associated research works and projects. A more comprehensive survey about ABM tools and software is described in <a href="#ref-Abar_2017">Abar et al. (2017)</a>.</p>
+                    <p id="4.2">Here, we begin our overview with MASON <a href="#ref-mason">(Luke et al. 2005)</a> since its architecture profoundly inspired krABMaga development. <strong>MASON</strong> is an open-source discrete-event simulation toolkit in Java designed to be a general-purpose tool usable for the design, execution, and visualization of ABMs. MASON provides the developer with functionalities and APIs supporting the most common needs of a modeler, including the definition of common agents’ behaviors, environment creation with different fields, and scheduling management. One of MASON’s main advantages is its snapshot system which enables the user to stop and save a simulation to later resuming it on another machine, thanks to the compatibility of the Java Virtual Machine. Moreover, additional features are available in MASON thanks to the existing extension, including the use of GIS data with GeoMASON <a href="#ref-geomason">(Sullivan et al. 2010)</a>, model exploration with ECJ <a href="#ref-ecj">(White 2012)</a>, as well as the possibility of running a simulation on distributed and cloud systems with DistributedMASON <a href="#ref-distributedmason">(Cordasco et al. 2018)</a>.</p>
+                    <p id="4.3"><strong>Agents.jl</strong> <a href="#ref-agentsjl">(Datseris et al. 2022)</a> is a recent framework for agent-based simulations that provides utilities and ad-hoc structures for implementing, running, and visualizing models exploiting the Julia programming language. Agents.jl focuses on performance and ease of use, allowing users to develop models with only a few lines of code. The framework is available as a Julia library and is easily usable with the plethora of analytical tools of the Julia ecosystem. Agents.jl offers the most commonly used fields, like grids, continuous space, and graphs, and supports the use of OpenStreetMap data. This library also provides model exploration functionalities and parallel and distributed computation support.</p>
+                    <p id="4.4">From research that exploit the accessibility of a programming language to provide a usable ABM framework, Mesa <a href="#ref-mesa">(Kazil et al. 2020)</a> is one of the most used and actively supported. <strong>Mesa</strong> is an open-source modular framework for building, analyzing, and visualizing ABMs built upon Python to provide usability and accessibility. The architecture of Mesa is composed of three major elements: model, analysis, and visualization. The model component exposes all the methods to define the agent behavior and the simulation environment. The analysis functionalities include recording, storing, and exporting data from the model. Finally, the visualization component provides a front-end browser-based visualization to design, interact with, and control the model. The main advantage of Mesa resides in its extensibility; the community is, therefore, encouraged to create several extensions to handle, for instance, multi-processor systems or GIS data.</p>
+                    <p id="4.5">The field of ABM simulations is constantly expanding with new software and tools. However, some works represent the pillars of ABM development. Besides MASON, NetLogo <a href="#ref-netlogo">(Wilensky 1999)</a>, Repast <a href="#ref-repast">(North et al. 2013)</a>, Flame <a href="#ref-flame">(Holcombe et al. 2006)</a>, and AnyLogic <a href="#ref-anylogic">(Borshchev et al. 2002)</a> are the most relevant and used tools for simulation design.</p>
+                    <p id="4.6"><strong>NetLogo</strong> is a free agent-based modeling environment implemented in Java/Scala that has become the standard platform for developing ABMs. NetLogo is a robust, powerful, simple-to-learn, and easy-to-use Domain-Specific Language offering a GUI to create and edit components to realize any simulation. The importance and popularity of NetLogo has risen thanks to its community which is constantly providing extensions to enrich NetLogo with new functionalities. Examples of such extensions include GIS data, 3D visualization, and integration with other languages, like Python with PyNetLogo <a href="#ref-pynetlogo">(Jaxa-Rozen &amp; Kwakkel 2018)</a> or Pylogo <a href="#ref-pylogo">(Abbott. &amp; Lim. 2021)</a>, or R with RNetLogo <a href="#ref-rnetlogo">(Thiele 2014)</a>. Other relevant extensions worth to be mentioned are HubNet <a href="#ref-hubnet">(Jiang &amp; Zhao 2009)</a> and BehaviorSpace <a href="#ref-behaviorspace">(Railsback et al. 2017)</a>. HubNet allows the creation of a participatory simulation over a network where users can control and interact with a simulation running on a remote machine. BehaviorSpace includes parameter sweeping capabilities that enable data collection from multiple executions and the exploitation of distributed and parallel techniques.</p>
+                    <p id="4.7"><strong>Repast</strong> is an open-source family of widely used agent-based modeling and simulation platforms, implemented in several programming languages, which include many built-in features for ABM development. Repast Simphony <a href="#ref-repast">(North et al. 2013)</a> is a Java-based modeling system based on a modular plug-in architecture that allows users to replace specific components. This toolkit provides automated methods to perform all the common tasks required in a simulation and supports model visualization in 2D and 3D, GIS Data, a snapshot system, and the capability to run multi-threaded simulations. Further, the Repast Simphony plug-in enables adding a wide range of external tools for any needs, like statistical analysis, data mining, or integration with other languages.</p>
+                    <p id="4.8">RepastHPC <a href="#ref-repasthpc">(Collier &amp; North 2013)</a> is a parallel and distributed C++ implementation of Repast Simphony specific for ABM simulation targeting large-scale distributed computing platforms based on MPI. The newest member of the Repast suite is Repast4Py <a href="#ref-repast4py">(Collier et al. 2020)</a>, a Python-based framework based on RepastHPC to develop distributed ABMs.</p>
+                    <p id="4.9"><strong>FLAME</strong> is a generic agent-based modeling system that provides a formal framework for creating models compatible with any computing platform. The framework is inherently parallel and can automatically optimize performance without user effort. Users can describe a model using the XXML language based on state machines that FLAME will then compile into a C-based application. FLAMEGPU <a href="#ref-flame_gpu">(Richmond &amp; Chimeh 2017)</a> extends FLAME to easily use GPU capabilities without deep knowledge of the CUDA programming language or optimization strategies. Specifically, FLAMEGPU maps the formal XXML specification used in FLAME to the CUDA programming language to produce a parallel and efficient application.</p>
+                    <p id="4.10">We conclude this overview with <strong>AnyLogic</strong>, proprietary software for developing ABMs through a simple user interface, hence, particularly suitable for non-expert developers. The AnyLogic platform includes APIs for modeling agents’ behavior, supporting several environments (e.g., GIS space), and different execution paradigms (e.g., distributed and parallel computation). AnyLogic offers visualization capabilities and a GUI to control any aspect of the simulation during its execution visually. Moreover, a snapshot system allows the user to stop and restore the simulation later. AnyLogic Cloud is an extension of the main platform that permits running ABMs on cloud computing resources.</p>
+                    <p id="4.11">Table  <a href = "#tbl:tab_abm-software">1</a> summarizes the ABM frameworks and tools described, emphasizing whether they provide support for the most relevant features. The last two rows of the table show the declared efficiency and ease of use for each tool as discussed in the survey by <a href="#ref-Antelmi_APP_2023">Antelmi et al. (2023)</a>. Specifically, the term <em>ease of use</em> refers to the effort required for installation and setup procedures, the presence of examples, and the clarity of the documentation provided. The ease of use of a tool is closely tied to the programming language used (higher-level languages are generally easier to approach), the number of available functionalities (the higher, the better), and the availability of a dedicated GUI or a VSL (which can further reduce the need for coding). The term <em>efficiency</em> refers to the capability of the ABM tool to handle large and complex models granting low execution time. The classification of ABM tools according to their efficiency is determined by how the authors position themselves within the state-of-the-art regarding the potential to handle large-scale models and the efficiency in executing them.</p>
+                    <table id="tbl:tab_abm-software">
+                    <caption><b>Table 1:</b>Comparison of ABM framework/software features.</caption>
+                    <tr class="header" style="border-top:medium solid;border-bottom:thin solid">
+                      <th style="text-align: left;"><strong>ABM Tool / Features</strong></th>
+                      <th style="text-align: left;"><strong>MASON <a href="#ref-mason">(Luke et al. 2005)</a></strong></th>
+                      <th style="text-align: left;"><strong>Agents.jl <a href="#ref-agentsjl">(Datseris et al. 2022)</a></strong></th>
+                      <th style="text-align: left;"><strong>Mesa <a href="#ref-mesa">(Kazil et al. 2020)</a></strong></th>
+                      <th style="text-align: left;"><strong>NetLogo <a href="#ref-netlogo">(Wilensky 1999)</a></strong></th>
+                      <th style="text-align: left;"><strong>Repast <a href="#ref-repast">(North et al. 2013)</a></strong></th>
+                      <th style="text-align: left;"><strong>Flame <a href="#ref-flame">(Holcombe et al. 2006)</a></strong></th>
+                      <th style="text-align: left;"><strong>AnyLogic <a href="#ref-anylogic">(Borshchev et al. 2002)</a></strong></th>
+                      <th style="text-align: left;"><strong>krABMaga</strong></th>
+                    </tr>
+                    <tbody>
+                    <tr class="odd">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Programming Language</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Java</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Julia</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Python</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Java and Scala, Python and R with extensions</td>
+                      <td style="text-align: left; border-bottom:thin solid;">C++, Java, and Python, based on version</td>
+                      <td style="text-align: left; border-bottom:thin solid;">C and XXML</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Java</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Rust</td>
+                    </tr>
+                    <tr class="even">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Supported environment fields</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;"></td>
+                      <td style="text-align: left; border-bottom:thin solid;"></td>
+                      <td style="text-align: left; border-bottom:thin solid;"  colspan="4">Grid, Continuous space, Network</td>
+                      <td style="text-align: left; border-bottom:thin solid;"></td>
+                      <td style="text-align: left; border-bottom:thin solid;"></td>
+                    </tr>
+                    <tr class="odd">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Visualization</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D/3D</td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D/3D</td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D/3D with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D/3D</td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D/3D</td>
+                      <td style="text-align: left; border-bottom:thin solid;">3D</td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D/3D</td>
+                      <td style="text-align: left; border-bottom:thin solid;">2D (3D Experimental)</td>
+                    </tr>
+                    <tr class="even">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>GUI</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, limited</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, limited</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, limited</td>
+                    </tr>
+                    <tr class="odd">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>GIS Data</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No (Ongoing)</td>
+                    </tr>
+                    <tr class="even">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Model Exploration</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with Repast Simphony</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, parallel, distributed and cloud computing are also supported</td>
+                    </tr>
+                    <tr class="odd">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Checkpoint and Snapshot</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No (Future Work)</td>
+                    </tr>
+                    <tr class="even">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Parallel In-Model Execution</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No, delegated to the modeler</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with Repast HPC</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, Experimental</td>
+                    </tr>
+                    <tr class="odd">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Distributed In-Model Execution</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with Distributed MASON</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No, delegated to the modeler</td>
+                      <td style="text-align: left; border-bottom:thin solid;">No</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, with extension</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Yes, Experimental</td>
+                    </tr>
+                    <tr class="even">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Declared efficiency</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">High</td>
+                      <td style="text-align: left; border-bottom:thin solid;">High</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Low</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Very low</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                      <td style="text-align: left; border-bottom:thin solid;">High</td>
+                      <td style="text-align: left; border-bottom:thin solid;">High</td>
+                    </tr>
+                    <tr class="odd">
+                      <td style="text-align: left; border-bottom:thin solid;"><strong>Declared ease of use</strong></td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                      <td style="text-align: left; border-bottom:thin solid;">High</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Very high</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Very high</td>
+                      <td style="text-align: left; border-bottom:thin solid;">Medium</td>
+                    </tr>
+                    <tr class="odd" style="border-top:medium solid;border-bottom:thin solid"><td colspan="2"></td></tr>
+                    </tbody>
+                    </table>
+                    <p id="4.12">Current state-of-the-art regarding ABM software includes tools more focused on ease of use, like NetLogo and Mesa, or frameworks more centered on performance and flexibility, like MASON and Repast. With krABMaga, we tried to cover the current open challenges in the ABM field, aiming to provide a valuable tool that can offer good performance and reliable executions while still granting an accessible development experience. To this end, we provide extensive documentation, examples, and functionalities to abstract the ABM development process from the engine-related mechanisms and the specific nuances of the Rust programming language. While a basic familiarity with Rust is beneficial, it is noteworthy to highlight that it is not a prerequisite for using our framework, even though some coding skills are needed. Many implementation details remain transparent to the user, allowing individuals without extensive Rust expertise to utilize our tool effectively.</p>
+                    <h3 id="sec:performance">Performance Evaluation</h3>
+                    <p id="5.1">This Section presents a two-fold performance evaluation of krABMaga: first, we investigated the library’s efficiency in running different ABM simulations against the most adopted ABM tools, then we evaluated the scalability potential of the model optimization module.</p>
+                    <h4 id="model-simulation-experiment">Model simulation experiment</h4>
+                    <p id="5.2">In this experiment, we are interested in showing the performance of krABMaga in running ABM models and comparing it with the most representative ABM tools, namely Agents.jl, MASON, Mesa, NetLogo and Repast.</p>
+                    <p id="5.3"><strong>Models.</strong> As a benchmark, we employed the following ABMs, each with its peculiarities regarding data structures, agents’ behaviors, and environment types.</p>
+                    <ul>
+                    <li><em>Flockers</em>. Developed by Craig Reynolds, this is one of the most famous ABM simulating a flock’s flying behavior. In this model, the agents move within a continuous toroidal space according to a simple set of rules.</li>
+                    <li><em>Schelling</em>. This is a simple segregation model based on a 2D grid in which agents decide whether to move into a new cell based on the status of their neighbors.</li>
+                    <li><em>Wolf, Sheep and Grass</em>. This multi-agent model simulates the population dynamics of predators and prey coexisting in a shared environment.</li>
+                    <li><em>ForestFire</em>. This stochastic spreading model is realized as a cellular automaton to reproduce the fire diffusion in a forest.</li>
+                    </ul>
+                    <p id="5.4">To perform a fair comparison, we benchmarked only official released model for each platforms; still, some differences could exist due to the variance in the frameworks, mainly because of the different programming languages involved. The model and benchmark implementations are available on the krABMaga repository<a class="footnote-ref" href="#fn14" id="fnref14" role="doc-noteref"><sup>14</sup></a></p>
+                    <p id="5.5"><strong>Benchmark configurations.</strong>All experiments have been performed on the same virtual machine running over a VMware Esxi hypervisor and equipped with: Ubuntu 21.10 x86_64 machine, 8 VCPU, 16GB RAM, and 256 storage (on SDD). The performance of each framework has been tested with different models configurations, starting with a field of size <span class="math inline">\(100\times100\)</span>, <span class="math inline">\(1000\)</span> agents, and <span class="math inline">\(200\)</span> steps, while keeping an agent density of <span class="math inline">\(\cong 10 \%\)</span>, calculated as <span class="math inline">\(\frac{\text{width} * \text{height}}{\text{number of agents}}\)</span>. We obtained the other configurations by doubling the number of agents and changing the field dimension to preserve the agent density:</p>
+                    <ol type="1">
+                    <li>Agents: <span class="math inline">\(1000\)</span> - Field size: <span class="math inline">\(100\times100\)</span></li>
+                    <li>Agents: <span class="math inline">\(2000\)</span> - Field size: <span class="math inline">\(141\times141\)</span></li>
+                    <li>Agents: <span class="math inline">\(4000\)</span> - Field size: <span class="math inline">\(200\times200\)</span></li>
+                    <li>Agents: <span class="math inline">\(8000\)</span> - Field size: <span class="math inline">\(282\times282\)</span></li>
+                    <li>Agents: <span class="math inline">\(16000\)</span> - Field size: <span class="math inline">\(400\times400\)</span></li>
+                    <li>Agents: <span class="math inline">\(32000\)</span> - Field size: <span class="math inline">\(565\times565\)</span></li>
+                    <li>Agents: <span class="math inline">\(64000\)</span> - Field size: <span class="math inline">\(800\times800\)</span></li>
+                    <li>Agents: <span class="math inline">\(128000\)</span> - Field size: <span class="math inline">\(1131\times1131\)</span></li>
+                    </ol>
+                    <p id="5.6">Each experiment has been run <span class="math inline">\(10\)</span> times.</p>
+                    <p id="5.7"><strong>Results.</strong> Figure <a href="#fig15">15</a> shows the results of our experiments, focusing on each framework’s average running time (in seconds) when varying the model dimension while keeping the agent density fixed. Such values only keep into account the actual simulation time and exclude the initialization time required by each engine. Overall, krABMaga always performs better than the other platforms, requiring the lowest computational time regardless of the computational load. In only a single scenario, Agents.jl reached the same performance as our platform (see Figure <a href="#fig16">16</a>d) but consumed up to the <span class="math inline">\(90\%\)</span> of the system’s available memory. Figure <a href="#fig16">16</a> refers to the same benchmark, reporting the average number of simulation steps per second. In general, the heavy memory usage of some platforms limited the maximum computational workload tested, as these platforms were unable to simulate larger systems. For that reason, we were unable to assess configurations with a higher computational complexity. It is important to stress that these results come from adequately using different fields, data structures, and methods in each framework since every model exposes different peculiarities that must be appropriately addressed when implementing the corresponding ABM.</p>
+                    <figure id="fig15">
+                    <a class="fancybox" href="4/4Figure7.png" title="Figure 15. Running times of each framework on the four ABMs, varying the computational load by increasing the number of agents while preserving the agent density."><img alt="" src="4/4Figure7.png"/></a><figcaption aria-hidden="true"><b>Figure 15. </b>Running times of each framework on the four ABMs, varying the computational load by increasing the number of agents while preserving the agent density.</figcaption>
+                    </figure>
+                    <figure id="fig16">
+                    <a class="fancybox" href="4/4Figure8.png" title="Figure 16. Simulation steps per second required by each framework on the four ABMs, varying the computational load by increasing the number of agents while preserving the agent density."><img alt="" src="4/4Figure8.png"/></a><figcaption aria-hidden="true"><b>Figure 16. </b>Simulation steps per second required by each framework on the four ABMs, varying the computational load by increasing the number of agents while preserving the agent density.</figcaption>
+                    </figure>
+                    <h4 id="model-calibration-experiment">Model calibration experiment</h4>
+                    <p id="5.8">In this second experiment, we analyzed the scalability of krABMaga when calibrating an ABM via the model optimization functionality offered by our simulation engine. The full code of this experiment is available on the official krABMaga example repository.<a class="footnote-ref" href="#fn15" id="fnref15" role="doc-noteref"><sup>15</sup></a>.</p>
+                    <p id="5.9"><strong>Model.</strong> As a benchmark model, we built an ABM for simulating an epidemic spreading in a population, where agents can get infected via their neighbors in a similar fashion of the work of <a href="#ref-CROOKS_ESA_2014">Crooks &amp; Hailegiorgis (2014)</a>. Specifically, we implemented the Susceptible (S), Infectious (I), Recovered (R) compartmental model, which specifies how agents move from the state <span class="math inline">\(S\)</span> to <span class="math inline">\(I\)</span> (i.e., become infected with a probability <span class="math inline">\(\beta\)</span> proportional to the number of infected neighbors), and from <span class="math inline">\(I\)</span> to <span class="math inline">\(R\)</span> (i.e., recover from the infection with a probability <span class="math inline">\(\gamma\)</span>). The agent contact network follows the Barabási-Albert preferential attachment rule. Some details about the simulation follow.</p>
+                    <p id="5.10">The simulation State, in addition to the network structure, includes the definition of the parameters governing the dynamics of virus spread: <em>(i)</em> the probability that a susceptible node transitions to an infected state, and <em>(ii)</em> the probability that an infected node transitions to a resistant state. The simulation begins with the network containing only one infected node randomly placed within it and continues until either the maximum number of steps is reached, or there are no more infected nodes. Each step corresponds to a day, during which nodes may alter their status. Specifically, susceptible nodes examine the status of their neighbors, and if any neighbor is infected, there’s a chance that the susceptible node becomes infected as well. Infected nodes, on the other hand, make an attempt to recover during each step, changing their status to resistant. In contrast, resistant nodes remain inactive since they are immune to infection and cannot infect others.</p>
+                    <p id="5.11">This sample scenario particularly fits the ABM simulations that krABMaga intends to support. Fitting an epidemic model with actual data and then performing experiments on top of the designed model usually requires (i) exploring the parameter space to calibrate the model’s input parameters, (ii) verifying the model’s correctness, (iii) validating the model’s output, (iv) analyze the sensitivity of the model, and finally (v) run the intended experiments. Since each phase requires running the simulation multiple times, guaranteeing that each run is efficient and reliable is critical. For simplicity, we will only focus on the first listed phase in this use case</p>
+                    <p id="5.12"><strong>Calibration data.</strong> As ground-truth data, we used the Italy’s average number of daily new infections during the SARS-CoV-2 virus pandemic (moving average over seven days). In particular, we focused on a period of <span class="math inline">\(45\)</span> days from December 2021 to January 2022, when the Omicron variant caused a new outbreak. This dataset is available on the official website of the Istituto Superiore di Sanità, the leading public health body in Italy<a class="footnote-ref" href="#fn16" id="fnref16" role="doc-noteref"><sup>16</sup></a>. Models of the like are widely described in the literature <span><a href="#ref-Clara2020">(Clara &amp; Liu 2020;</a><a href="#ref-Hoertel2020"> Hoertel et al. 2020)</a></span>.</p>
+                    <p id="5.13"><strong>Simulation setting.</strong> We simulated <span class="math inline">\(10,000\)</span> agents for <span class="math inline">\(51\)</span> days (three days more than the calibration time window to compute the average of new simulated infections). We normalized the infection data by the size of the Italian population (divided by <span class="math inline">\(60\)</span>M).</p>
+                    <p id="5.14"><strong>Optimization strategy.</strong> To find the input parameter configuration generating outputs that best fit real-world data, we used the evolutionary search approach offered by krABMaga. In more detail, we considered an initial population of <span class="math inline">\(128\)</span> randomly generated individuals, <span class="math inline">\(20\)</span> simulation repetitions for evaluating a single configuration (e.g., individual), and <span class="math inline">\(2000\)</span> optimization loops (e.g., generations). Specifically, each individual comprised two real value genes, representing the infection and recovery probabilities [<span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>]. At each generation, the evolutionary strategy computed the new population by selecting the best <span class="math inline">\(20\)</span>% of individuals and generating the remaining <span class="math inline">\(80\)</span>% using a crossover operation (combining two random individuals from the previous generations). A mutation operator was then applied to change one of the two genes of the individuals randomly. The simulation output represented the average error between simulated and real data.</p>
+                    <p id="5.15">The overall calibration process resulted in about 5 million simulation executions. If all these simulations were carried out sequentially, it would have taken approximately 172 days (this estimate derives from summing the running time of each simulation execution). However, we completed the task in just 45 hours by leveraging distributed computing.</p>
+                    <p id="5.16"><strong>Results.</strong> Figure <a href="#fig17">17</a> shows the infection curves derived from simulated data based on the best configuration computed by the optimization process and the real infection curve. Table <a href="#tab2">2</a> focuses on some statistics comparing a sequential execution of the optimization process against its parallel/distributed version. We performed this comparison on a virtual cluster machine of <span class="math inline">\(16\)</span> nodes running over Amazon AWS EC2, where each node used the <em>c4.2xlarge</em> instance type and was equipped with an Intel Xeon Processor with <span class="math inline">\(8\)</span> virtual CPUs, <span class="math inline">\(15\)</span> GB of memory, and a high-speed network. We analyzed the system’s performance by running the optimization process for one hour and by varying the number of VCPUs and incrementing the number of nodes. We collected the number of computed generations per hour (Gs/h), the time (seconds) for computing a generation (s/G), and the speedup against the sequential execution for each setting. As highlighted in the table, the best performance is achieved in the last distributed setting using <span class="math inline">\(16\)</span> nodes and <span class="math inline">\(128\)</span> VCPU, which is <span class="math inline">\(96\)</span> times faster than the sequential setting. It is worth noting that we only report the simulation speedup to stress krABMaga’s capabilities in scaling up in such scenarios. Given the results from the previous experiment (showing that krABMaga achieves the lowest simulation time when varying the workload), we did not replicate this scenario using other simulation engines.</p>
+                    <figure id="fig17">
+                    <a class="fancybox" href="4/4Figure9.png" title="Figure 17. SIR calibration results."><img alt="" src="4/4Figure9.png"/></a><figcaption aria-hidden="true"><b>Figure 17. </b>SIR calibration results.</figcaption>
+                    </figure>
+                    <table id="tab2">
+                    <caption><b>Table 2:</b>Evaluation of krABMaga’s scalability on an Amazon EC2 virtual cluster machine.</caption>
+                    <tr class="header" style="border-top:medium solid;border-bottom:thin solid">
+                    <th style="text-align: left;"><strong>Backend</strong></th>
+                    <th style="text-align: right;"><strong>#Instances</strong></th>
+                    <th style="text-align: right;"><strong>VCPUs</strong></th>
+                    <th style="text-align: right;"><strong>Gs/h</strong></th>
+                    <th style="text-align: right;"><strong>s/G</strong></th>
+                    <th style="text-align: right;"><strong>Speedup</strong></th>
+                    </tr>
+                    <tbody>
+                    <tr class="odd">
+                    <td style="text-align: left;">Sequential</td>
+                    <td style="text-align: right;">1</td>
+                    <td style="text-align: right;">1</td>
+                    <td style="text-align: right;">0</td>
+                    <td style="text-align: right;">7459</td>
+                    <td style="text-align: right;">1</td>
+                    </tr>
+                    <tr class="even">
+                    <td style="text-align: left;">Parallel</td>
+                    <td style="text-align: right;">1</td>
+                    <td style="text-align: right;">8</td>
+                    <td style="text-align: right;">3.1</td>
+                    <td style="text-align: right;">1149</td>
+                    <td style="text-align: right;">6.5</td>
+                    </tr>
+                    <tr class="odd">
+                    <td style="text-align: left;">Distributed</td>
+                    <td style="text-align: right;">2</td>
+                    <td style="text-align: right;">16</td>
+                    <td style="text-align: right;">6.2</td>
+                    <td style="text-align: right;">579</td>
+                    <td style="text-align: right;">12.9</td>
+                    </tr>
+                    <tr class="even">
+                    <td style="text-align: left;">Distributed</td>
+                    <td style="text-align: right;">4</td>
+                    <td style="text-align: right;">32</td>
+                    <td style="text-align: right;">12.1</td>
+                    <td style="text-align: right;">297</td>
+                    <td style="text-align: right;">25.1</td>
+                    </tr>
+                    <tr class="odd">
+                    <td style="text-align: left;">Distributed</td>
+                    <td style="text-align: right;">8</td>
+                    <td style="text-align: right;">64</td>
+                    <td style="text-align: right;">23.2</td>
+                    <td style="text-align: right;">155</td>
+                    <td style="text-align: right;">48</td>
+                    </tr>
+                    <tr class="even">
+                    <td style="text-align: left;">Distributed</td>
+                    <td style="text-align: right;">16</td>
+                    <td style="text-align: right;">128</td>
+                    <td style="text-align: right;">44.3</td>
+                    <td style="text-align: right;">81</td>
+                    <td style="text-align: right;">92</td>
+                    </tr>
+                    <tr class="odd" style="border-top:medium solid;border-bottom:thin solid"><td colspan="6"></td></tr>
+                    </tbody>
+                    </table>
+                    <h3 id="sec:conclusion">Conclusion and Future Work</h3>
+                    <p id="6.1">ABMs are a powerful approach to unraveling the complexity governing real-world systems. Over the last decade, the need for more elaborate computing-demanding models gave rise to many frameworks and tools to run ABM simulations. The mostly adopted ABM frameworks either focus on the easiness of use by non-expert users, computational efficiency, which requires technical skills, or a trade-off between these two elements. However, scalability and efficiency become critical requirements even when small-scale ABMs need huge computational support. In such cases, having a simulation engine able to strongly improve the running times of a single simulation is the only viable option to enhance the overall ABM model development’s performance without (or only partially) introducing new computational resources. At the same time, guaranteeing the absence of any memory flaws that could invalidate the whole experiment is another fundamental condition.</p>
+                    <p id="6.2">To address the requirements of simultaneously offering efficiency, reliability, and safeness, we presented krABMaga, a modern open-source library for agent-based modeling and simulation written in Safe Rust. Our library offers native support for reliable and efficient long-running ABM simulations. In this paper, we described the architecture of our simulation engine, discussing its main characteristics and functionalities, such as the support for high-performance model exploration and optimization for ABM. The performance evaluation of krABMaga against the most used open-source ABM software demonstrated how our framework could provide optimal performance regardless of the computational load. Our experiments also proved the scalability of krABMaga, thus, its potential in handling large-scale models.</p>
+                    <p id="6.3">We plan to continue the development of krABMaga along two main directions to build a more comprehensive tool over time. The first direction aims to improve the system’s modeling capabilities by introducing the support for <em>(i)</em> 3D simulations (which consists of adapting the current solution of 2D fields in the 3D space and extending the visualization component to support these fields); <em>(ii)</em> in-model parallelization, and <em>(iii)</em> the integration of GIS data (whose visualization with the Bevy engine requires significant effort since it does not offer native support). The second direction focuses on enhancing krABMaga’s support to all ABM model developing phases, including calibration, verification, validation, sensitivity analysis, and experimentation, to fully assist the developer by making these phases as transparent as possible.</p>
+
+                    </div> <!-- artbody -->
+
+                    <!--Acknowledgements here -->
+
+                    <h3> Notes
+                    </h3>
+                    <!--Notes here -->
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="https://www.rust-lang.org/learn">https://www.rust-lang.org/learn</a></p><a class="footnote-back" href="#fnref1" role="doc-backlink">↩︎</a></li>
+<li id="fn2" role="doc-endnote"><p><a href="https://github.com/krABMaga/krABMaga/tree/main/src/engine/fields">https://github.com/krABMaga/krABMaga/tree/main/src/engine/fields</a></p><a class="footnote-back" href="#fnref2" role="doc-backlink">↩︎</a></li>
+<li id="fn3" role="doc-endnote"><p><a href="https://github.com/krABMaga/krABMaga/blob/main/src/engine/schedule.rs">https://github.com/krABMaga/krABMaga/blob/main/src/engine/schedule.rs</a></p><a class="footnote-back" href="#fnref3" role="doc-backlink">↩︎</a></li>
+<li id="fn4" role="doc-endnote"><p>Bevy engine: <a href="https://bevyengine.org/">https://bevyengine.org/</a></p><a class="footnote-back" href="#fnref4" role="doc-backlink">↩︎</a></li>
+<li id="fn5" role="doc-endnote"><p>WebAssembly: <a href="https://webassembly.org/">https://webassembly.org/</a></p><a class="footnote-back" href="#fnref5" role="doc-backlink">↩︎</a></li>
+<li id="fn6" role="doc-endnote"><p>egui - <a href="https://www.egui.rs/">https://www.egui.rs/</a></p><a class="footnote-back" href="#fnref6" role="doc-backlink">↩︎</a></li>
+<li id="fn7" role="doc-endnote"><p>wasm-pack: <a href="https://rustwasm.github.io/">https://rustwasm.github.io/</a></p><a class="footnote-back" href="#fnref7" role="doc-backlink">↩︎</a></li>
+<li id="fn8" role="doc-endnote"><p>webpack: <a href="https://webpack.js.org/">https://webpack.js.org/</a></p><a class="footnote-back" href="#fnref8" role="doc-backlink">↩︎</a></li>
+<li id="fn9" role="doc-endnote"><p><a href="https://github.com/rayon-rs/rayon">https://github.com/rayon-rs/rayon</a></p><a class="footnote-back" href="#fnref9" role="doc-backlink">↩︎</a></li>
+<li id="fn10" role="doc-endnote"><p><a href="https://github.com/rsmpi/rsmpi">https://github.com/rsmpi/rsmpi</a></p><a class="footnote-back" href="#fnref10" role="doc-backlink">↩︎</a></li>
+<li id="fn11" role="doc-endnote"><p><a href="https://aws.amazon.com/lambda">https://aws.amazon.com/lambda</a></p><a class="footnote-back" href="#fnref11" role="doc-backlink">↩︎</a></li>
+<li id="fn12" role="doc-endnote"><p><a href="https://docs.rs/krabmaga/latest/krabmaga/#macros">https://docs.rs/krabmaga/latest/krabmaga/#macros</a></p><a class="footnote-back" href="#fnref12" role="doc-backlink">↩︎</a></li>
+<li id="fn13" role="doc-endnote"><p>WSG model repository: <a href="https://github.com/krABMaga/examples/tree/main/wolfsheepgrass">https://github.com/krABMaga/examples/tree/main/wolfsheepgrass</a></p><a class="footnote-back" href="#fnref13" role="doc-backlink">↩︎</a></li>
+<li id="fn14" role="doc-endnote"><p><a href="https://github.com/krABMaga/ABM-Comparisons">https://github.com/krABMaga/ABM-Comparisons</a></p><a class="footnote-back" href="#fnref14" role="doc-backlink">↩︎</a></li>
+<li id="fn15" role="doc-endnote"><p><a href="https://github.com/krABMaga/examples/tree/main/sir_ga_exploration">https://github.com/krABMaga/examples/tree/main/sir_ga_exploration</a></p><a class="footnote-back" href="#fnref15" role="doc-backlink">↩︎</a></li>
+<li id="fn16" role="doc-endnote"><p><a href="https://covid19.infn.it/iss/">https://covid19.infn.it/iss/</a></p><a class="footnote-back" href="#fnref16" role="doc-backlink">↩︎</a></li>
+</ol>
+                   <!-- SD 2021-03-17 -->
+
+	<div id="refs">
+	<h3>References</h3>
+	<!-- References here -->
+	<p id="ref-Abar_2017">ABAR, S., Theodoropoulos, G. K., Lemarinier, P., &amp; O’Hare, G. M. P. (2017a). Agent based modelling and simulation tools: A review of the state-of-art software. <em>Computer Science Review</em>, <em>24</em>, 13–33. <a class="doi" href="https://doi.org/10.1016/j.cosrev.2017.03.001" target="_blank">[doi:10.1016/j.cosrev.2017.03.001]</a>
+<p id="ref-pylogo">ABBOTT., R., &amp; Lim., J. (2021). <em>PyLogo: A Python reimplementation of (much of) NetLogo</em>. Proceedings of the 11th International Conference on Simulation and Modeling Methodologies, Technologies and Applications - SIMULTECH <a class="doi" href="https://doi.org/10.5220/0010466401990206" target="_blank">[doi:10.5220/0010466401990206]</a>
+<p id="ref-Alves_furtado_JASSS_2022">ALVES Furtado, B. (2022). PolicySpace2: Modeling markets and endogenous public policies. <em>Journal of Artificial Societies and Social Simulation</em>, <em>25</em>(1), 8. <a class="doi" href="https://doi.org/10.18564/jasss.4742" target="_blank">[doi:10.18564/jasss.4742]</a>
+<p id="ref-An_EM_2021">AN, L., Grimm, V., Sullivan, A., Turner II, B. L., Malleson, N., Heppenstall, A., Vincenot, C., Robinson, D., Ye, X., Liu, J., Lindkvist, E., &amp; Tang, W. (2021). Challenges, tasks, and opportunities in modeling agent-based complex systems. <em>Ecological Modelling</em>, <em>457</em>, 109685. <a class="doi" href="https://doi.org/10.1016/j.ecolmodel.2021.109685" target="_blank">[doi:10.1016/j.ecolmodel.2021.109685]</a>
+<p id="ref-10015291">ANDELFINGER, P., &amp; Cai, W. (2022). <em>Advanced tutorial: Parallel and distributed methods for scalable discrete simulation</em>. 2022 Winter Simulation Conference (WSC) <a class="doi" href="https://doi.org/10.1109/wsc57314.2022.10015291" target="_blank">[doi:10.1109/wsc57314.2022.10015291]</a>
+<p id="ref-Anderson_Science_1972">ANDERSON, P. W. (1972). More is different. <em>Science</em>, <em>177</em>(4047), 393–396.
+<p id="ref-Antelmi_APP_2023">ANTELMI, A., Cordasco, G., D’Ambrosio, G., De Vinco, D., &amp; Spagnuolo, C. (2023). Experimenting with agent-Based model simulation tools. <em>Applied Sciences</em>, <em>13</em>(1), 13. <a class="doi" href="https://doi.org/10.3390/app13010013" target="_blank">[doi:10.3390/app13010013]</a>
+<p id="ref-anylogic">BORSHCHEV, A., Karpov, Y., &amp; Kharitonov, V. (2002). Distributed simulation of hybrid systems with AnyLogic and HLA. <em>Future Generation Computer Systems</em>, <em>18</em>(6), 829–839. <a class="doi" href="https://doi.org/10.1016/s0167-739x(02)00055-9" target="_blank">[doi:10.1016/s0167-739x(02)00055-9]</a>
+<p id="ref-rustsupercomputing">BYCHKOV, A., &amp; Nikolskiy, V. (2021). Rust language for supercomputing applications. <em>Communications in Computer and Information Science</em>, <em>1510</em>, 391–403. <a class="doi" href="https://doi.org/10.1007/978-3-030-92864-3_30" target="_blank">[doi:10.1007/978-3-030-92864-3_30]</a>
+<p id="ref-Carrella2021">CARRELLA, E. (2021). No free lunch when estimating simulation parameters. <em>Journal of Artificial Societies and Social Simulation</em>, <em>24</em>(2), 7. <a class="doi" href="https://doi.org/10.18564/jasss.4572" target="_blank">[doi:10.18564/jasss.4572]</a>
+<p id="ref-Clara2020">CLARA, L., &amp; Liu, F. (2020). <em>Effect of control measure on the development of new COVID-19 cases through SIR model simulation</em>. medRxiv. Available at: <a href = "https://www.medrxiv.org/content/10.1101/2020.10.27.20220590v1.full">https://www.medrxiv.org/content/10.1101/2020.10.27.20220590v1.full</a>. <a class="doi" href="https://doi.org/10.1101/2020.10.27.20220590" target="_blank">[doi:10.1101/2020.10.27.20220590]</a>
+<p id="ref-repasthpc">COLLIER, N., &amp; North, M. (2013). Parallel agent-based simulation with repast for high performance computing. <em>Simulation</em>, <em>89</em>(10), 1215–1235. <a class="doi" href="https://doi.org/10.1177/0037549712462620" target="_blank">[doi:10.1177/0037549712462620]</a>
+<p id="ref-repast4py">COLLIER, N. T., Ozik, J., &amp; Tatara, E. R. (2020). <em>Experiences in developing a distributed agent-based modeling toolkit with Python</em>. 2020 IEEE/ACM9th Workshop on Python for High-Performance and Scientific Computing (PyHPC). <a class="doi" href="https://doi.org/10.1109/pyhpc51966.2020.00006" target="_blank">[doi:10.1109/pyhpc51966.2020.00006]</a>
+<p id="ref-distributedmason">CORDASCO, G., Scarano, V., &amp; Spagnuolo, C. (2018). Distributed MASON: A scalable distributed multi-agent simulation environment. <em>Simulation Modelling Practice and Theory</em>, <em>89</em>, 15–34. <a class="doi" href="https://doi.org/10.1016/j.simpat.2018.09.002" target="_blank">[doi:10.1016/j.simpat.2018.09.002]</a>
+<p id="ref-CROOKS_ESA_2014">CROOKS, A. T., &amp; Hailegiorgis, A. B. (2014). An agent-based modeling approach applied to the spread of cholera. <em>Environmental Modelling &amp; Software</em>, <em>62</em>, 164–177. <a class="doi" href="https://doi.org/10.1016/j.envsoft.2014.08.027" target="_blank">[doi:10.1016/j.envsoft.2014.08.027]</a>
+<p id="ref-agentsjl">DATSERIS, G., Vahdati, A. R., &amp; DuBois, T. C. (2022). Agents.jl: A performant and feature-full agent-based modeling software of minimal code complexity. <em>Simulation</em>, <em>0</em>, 003754972110688. <a class="doi" href="https://doi.org/10.1177/00375497211068820" target="_blank">[doi:10.1177/00375497211068820]</a>
+<p id="ref-Estrada2023">ESTRADA, E. (2023). What is a complex system, after all? <em>Foundations of Science</em>, <em>2023</em>.
+<p id="ref-Ewald2014">EWALD, R., &amp; Uhrmacher, A. M. (2014). SESSL: A domain-Specific language for simulation experiments. <em>ACM Transactions on Modeling and Computer Simulation</em>, <em>24</em>(2), 1–25. <a class="doi" href="https://doi.org/10.1145/2567895" target="_blank">[doi:10.1145/2567895]</a>
+<p id="ref-Hoertel2020">HOERTEL, N., Blachier, M., Blanco, C., Olfson, M., Massetti, M., Rico, M. S., Limosin, F., &amp; Leleu, H. (2020). A stochastic agent-based model of the SARS-CoV-2 epidemic in France. <em>Nature Medicine</em>, <em>26</em>(9), 1417–1421. <a class="doi" href="https://doi.org/10.1038/s41591-020-1001-6" target="_blank">[doi:10.1038/s41591-020-1001-6]</a>
+<p id="ref-flame">HOLCOMBE, M., Coakley, S., &amp; Smallwood, R. (2006). <em>A general framework for agent-based modelling of complex systems</em>. Proceedings of the European Conference on Complex Systems.
+<p id="ref-pynetlogo">JAXA-ROZEN, M., &amp; Kwakkel, J. H. (2018). PyNetLogo: Linking NetLogo with Python. <em>Journal of Artificial Societies and Social Simulation</em>, <em>21</em>(2), 4. <a class="doi" href="https://doi.org/10.18564/jasss.3668" target="_blank">[doi:10.18564/jasss.3668]</a>
+<p id="ref-hubnet">JIANG, L., &amp; Zhao, C. (2009). <em>The Netlogo-Based dynamic model for the teaching</em>. 2009 Ninth International Conference on Hybrid Intelligent Systems. <a class="doi" href="https://doi.org/10.1109/his.2009.121" target="_blank">[doi:10.1109/his.2009.121]</a>
+<p id="ref-Bayesian">JONES, D. R., Schonlau, M., &amp; Welch, W. J. (1998). Efficient global optimization of expensive black-box functions. <em>Journal of Global Optimization</em>, <em>13</em>(4), 455–492. <a class="doi" href="https://doi.org/10.1023/a:1008306431147" target="_blank">[doi:10.1023/a:1008306431147]</a>
+<p id="ref-rustbelt">JUNG, R., Jourdan, J.-H., Krebbers, R., &amp; Dreyer, D. (2018). RustBelt: Securing the foundations of the rust programming language. <em>Proceedings of the ACM on Programming Languages</em>, <em>2</em>. <a class="doi" href="https://doi.org/10.1145/3158154" target="_blank">[doi:10.1145/3158154]</a>
+<p id="ref-mesa">KAZIL, J., Masad, D., &amp; Crooks, A. (2020). Utilizing Python for agent-Based modeling: The Mesa framework. In R. Thomson, H. Bisgin, C. Dancy, A. Hyder, &amp; M. Hussain (Eds.), <em>Social, Cultural, and Behavioral Modeling</em> (pp. 308–317). Cham: Springer International Publishing. <a class="doi" href="https://doi.org/10.1007/978-3-030-61255-9_30" target="_blank">[doi:10.1007/978-3-030-61255-9_30]</a>
+<p id="ref-Kornhauser_JASSS_2009">KORNHAUSER, D., Wilensky, U., &amp; Rand, W. (2009). Design guidelines for agent based model visualization. <em>Journal of Artificial Societies and Social Simulation</em>, <em>12</em>(2), 1.
+<p id="ref-mason">LUKE, S., Cioffi-Revilla, C., Panait, L., Sullivan, K., &amp; Balan, G. (2005). MASON: A multiagent simulation environment. <em>Simulation</em>, <em>81</em>(7), 517–527. <a class="doi" href="https://doi.org/10.1177/0037549705058073" target="_blank">[doi:10.1177/0037549705058073]</a>
+<p id="ref-rustlang">MATSAKIS, N., &amp; Klock, J., F. S. (2014). <em>The Rust language</em>. Proceedings of the ACM Conference on High Integrity Language Technology. <a class="doi" href="https://doi.org/10.1145/2663171.2663188" target="_blank">[doi:10.1145/2663171.2663188]</a>
+<p id="ref-repast">NORTH, M. J., Collier, N. T., Ozik, J., Tatara, E. R., Macal, C. M., Bragen, M., &amp; Sydelko, P. (2013). Complex adaptive systems modeling with Repast Simphony. <em>Complex Adaptive Systems Modeling</em>, <em>1</em>(3). <a class="doi" href="https://doi.org/10.1186/2194-3206-1-3" target="_blank">[doi:10.1186/2194-3206-1-3]</a>
+<p id="ref-rustformalism">PEARCE, D. J. (2021). A lightweight formalism for reference lifetimes and borrowing in rust. <em>ACM Transactions on Programming Languages and Systems</em>, <em>43</em>(1), 3. <a class="doi" href="https://doi.org/10.1145/3443420" target="_blank">[doi:10.1145/3443420]</a>
+<p id="ref-Perrone2012">PERRONE, L. F., Main, C. S., &amp; Ward, B. C. (2012). <em>SAFE: Simulation Automation Framework for Experiments</em>. Proceedings of the 2012 Winter Simulation Conference (WSC). <a class="doi" href="https://doi.org/10.1109/wsc.2012.6465286" target="_blank">[doi:10.1109/wsc.2012.6465286]</a>
+<p id="ref-behaviorspace">RAILSBACK, S. F., Ayllón, D., Berger, U., Grimm, V., Lytinen, S., Sheppard, C., &amp; Thiele, J. (2017). Improving execution speed of models implemented in NetLogo. <em>Journal of Artificial Societies and Social Simulation</em>, <em>20</em>(1), 3. <a class="doi" href="https://doi.org/10.18564/jasss.3282" target="_blank">[doi:10.18564/jasss.3282]</a>
+<p id="ref-Retzlaff_JASSS_2022">RETZLAFF, C. O., Burbach, L., Kojan, L., Halbach, P., Nakayama, J., Ziefle, M., &amp; Calero Valdez, A. (2022). Fear, behaviour, and the COVID-19 pandemic: A city-Scale agent-Based model using socio-Demographic and spatial map data. <em>Journal of Artificial Societies and Social Simulation</em>, <em>25</em>(1), 3. <a class="doi" href="https://doi.org/10.18564/jasss.4723" target="_blank">[doi:10.18564/jasss.4723]</a>
+<p id="ref-Reuillon2013">REUILLON, R., Leclaire, M., &amp; Rey-Coyrehourcq, S. (2013). OpenMOLE, a workflow engine specifically tailored for the distributed exploration of simulation models. <em>Future Generation Computer Systems</em>, <em>29</em>(8), 1981–1990. <a class="doi" href="https://doi.org/10.1016/j.future.2013.05.003" target="_blank">[doi:10.1016/j.future.2013.05.003]</a>
+<p id="ref-flame_gpu">RICHMOND, P., &amp; Chimeh, M. K. (2017). <em>FLAME GPU: Complex system simulation framework</em>. International Conference on High Performance Computing Simulation. <a class="doi" href="https://doi.org/10.1109/hpcs.2017.12" target="_blank">[doi:10.1109/hpcs.2017.12]</a>
+<p id="ref-ROUSSET201627">ROUSSET, A., Herrmann, B., Lang, C., &amp; Philippe, L. (2016). A survey on parallel and distributed multi-agent systems for high performance computing simulations. <em>Computer Science Review</em>, <em>22</em>, 27–46. <a class="doi" href="https://doi.org/10.1016/j.cosrev.2016.08.001" target="_blank">[doi:10.1016/j.cosrev.2016.08.001]</a>
+<p id="ref-saferust">RUST Doc. (2023). <em>Rust Doc Lang - Meet safe and unsafe</em>. Available at: <a href = "https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html">https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html</a>.
+<p id="ref-Salecker2019">SALECKER, J., Sciaini, M., Meyer, K. M., &amp; Wiegand, K. (2019). The nlrx R package: A next-generation framework for reproducible NetLogo model analyses. <em>Methods in Ecology and Evolution</em>, <em>10</em>(11), 1854–1863. <a class="doi" href="https://doi.org/10.1111/2041-210x.13286" target="_blank">[doi:10.1111/2041-210x.13286]</a>
+<p id="ref-Siegenfeld2020">SIEGENFELD, A. F., &amp; Bar-Yam, Y. (2020). An introduction to complex systems science and its applications. <em>Complexity</em>, <em>2020</em>, 6105872. <a class="doi" href="https://doi.org/10.1155/2020/6105872" target="_blank">[doi:10.1155/2020/6105872]</a>
+<p id="ref-ga_abm">STONEDAHL, F., &amp; Wilensky, U. (2011). Finding Forms of Flocking: Evolutionary Search in ABM Parameter-Spaces. In T. Bosse, A. Geller, &amp; C. M. Jonker (Eds.), <em>Multi-Agent-Based Simulation XI</em> (pp. 61–75). Berlin Heidelberg: Springer. <a class="doi" href="https://doi.org/10.1007/978-3-642-18345-4_5" target="_blank">[doi:10.1007/978-3-642-18345-4_5]</a>
+<p id="ref-geomason">SULLIVAN, K., Coletti, M., &amp; Luke, S. (2010). <em>GeoMason: Geospatial support for MASON</em>. Available at: <a href = "https://cs.gmu.edu/~eclab/projects/mason/extensions/geomason/">https://cs.gmu.edu/~eclab/projects/mason/extensions/geomason/</a>.
+<p id="ref-Tang_2010">TANG, W., &amp; Bennett, D. A. (2010). The explicit representation of context in agent-Based models of complex adaptive spatial systems. <em>Annals of the Association of American Geographers</em>, <em>100</em>(5), 1128–1155. <a class="doi" href="https://doi.org/10.1080/00045608.2010.517739" target="_blank">[doi:10.1080/00045608.2010.517739]</a>
+<p id="ref-rnetlogo">THIELE, J. C. (2014). R marries NetLogo: Introduction to the RNetLogo package. <em>Journal of Statistical Software</em>, <em>58</em>(2), 1–41. <a class="doi" href="https://doi.org/10.18637/jss.v058.i02" target="_blank">[doi:10.18637/jss.v058.i02]</a>
+<p id="ref-ecj">WHITE, D. R. (2012). Software review: The ECJ toolkit. <em>Genetic Programming and Evolvable Machines</em>, <em>13</em>(1), 65–67. <a class="doi" href="https://doi.org/10.1007/s10710-011-9148-z" target="_blank">[doi:10.1007/s10710-011-9148-z]</a>
+<p id="ref-netlogo">WILENSKY, U. (1999). <em>NetLogo</em>. Available at: <a href = "https://ccl.northwestern.edu/netlogo/">https://ccl.northwestern.edu/netlogo/</a>.
+<p id="ref-wsg_paper2">WILENSKY, U., &amp; Reisman, K. (1998). <em>ConnectedScience: Learning biology through constructing and testing computational theories - An embodied modeling approach</em>. Available at: <a href = "https://ccl.northwestern.edu/1998/ConnectedScience.pdf">https://ccl.northwestern.edu/1998/ConnectedScience.pdf</a>. <a class="doi" href="https://doi.org/10.1207/s1532690xci2402_1" target="_blank">[doi:10.1207/s1532690xci2402_1]</a>
+<p id="ref-wsg_paper1">WILENSKY, U., &amp; Reisman, K. (2006). Thinking like a wolf, a sheep, or a firefly: Learning biology through constructing and testing computational theories - An embodied modeling approach. <em>Cognition and Instruction</em>, <em>24</em>, 171–209. <a class="doi" href="https://doi.org/10.1207/s1532690xci2402_1" target="_blank">[doi:10.1207/s1532690xci2402_1]</a>
+<p id="ref-yun_JASSS_2022">YUN, T.-S., Kim, D., Moon, I.-C., &amp; Bae, J. W. (2022). Agent-Based model for urban administration: A case study of bridge construction and its traffic dispersion effect. <em>Journal of Artificial Societies and Social Simulation</em>, <em>25</em>(4), 5. <a class="doi" href="https://doi.org/10.18564/jasss.4923" target="_blank">[doi:10.18564/jasss.4923]</a>
+<p id="ref-Zhang_TSE_2022">ZHANG, H., Wang, S., Li, H., Chen, T.-H., &amp; Hassan, A. E. (2022). A study of C/C++ code weaknesses on stack overflow. <em>IEEE Transactions on Software Engineering</em>, <em>48</em>(7), 2359–2375. <a class="doi" href="https://doi.org/10.1109/tse.2021.3058985" target="_blank">[doi:10.1109/tse.2021.3058985]</a>
+<p id="ref-ZHANG_ESA_2021">ZHANG, J., &amp; Robinson, D. T. (2021). Replication of an agent-based model using the replication standard. <em>Environmental Modelling &amp; Software</em>, <em>139</em>, 105016. <a class="doi" href="https://doi.org/10.1016/j.envsoft.2021.105016" target="_blank">[doi:10.1016/j.envsoft.2021.105016]</a>
+</div>
+ <!-- refs -->
+                    <!-- ========================================= Insert article text above.  All below is generated by epress ==========================-->
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+            <div id="toc" class="new_style_toc"> <!-- SD 2021-03-17 -->
+            </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+  </main>
+
+  <div id="include_footer"></div>
+
+  <script src="/v02/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/v02/assets/dist/js/jquery-3.5.1.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="/scripts/tipped.js"></script>
+  <script src="/scripts/toc.min.js"></script>
+  <script src="/scripts/jquery.fancybox.pack.js"></script>
+  <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-568ee0f1cb084f8f" async="async"></script>
+  <script src="/v02/custom_js.js"></script>
+
+  <script>
+    $(function() {
+            // create the Table of Contents at the right margin.  From http://projects.jga.me/toc/
+          $('#toc').toc({
+               'selectors': 'h3,h4,h5', //elements to use as headings
+          'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+            return $heading[0].tagName.toLowerCase();
+          }
+          });
+          // give the paragraph numbers a CSS class, paranum
+          $('#artbody p').each(function(){
+              var me = $(this);
+              me.html( '<span class="paranum">' + me.attr('id') + '</span>' + me.html() );
+              });
+           //  Simple image gallery. Uses default settings. From http://fancyapps.com/fancybox/
+          $('.fancybox').fancybox({helpers:{ title : { type : 'outside' } } });
+          // pop up with author biographical details in header From http://www.tippedjs.com/
+          Tipped.create('.author', {maxWidth: 400, close: 'overlap'});
+          //  Pop up for citations and footnote links. From http://www.tippedjs.com/
+          Tipped.create('#artbody a[href^="#"]', function(element) {
+              return $($(element).attr('href')).html();
+              }, {
+              maxWidth: 300,
+              size: 'medium'
+              });
+    });
+
+	</script>
+
+  </body>
+
+</html>

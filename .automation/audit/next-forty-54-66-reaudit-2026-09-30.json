@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-30",
+  "scope": "independent read-only re-audit of current lexicographic entries 54–66",
+  "method": "Read accessible primary full texts (or publisher abstract/metadata if full text blocked), then checked current note claims, source locators, abstract, model/empirical classification, metadata, template, tags, warnings and preserved reference order/count. Source URLs identify the primary source actually inspected. No paper notes were edited during this audit.",
+  "records": {
+    "Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/pdf/1909.04847",
+      "doi": "10.48550/arXiv.1909.04847",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 58,
+        "original_reference_count": 58,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": false,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full arXiv PDF read (§§1.4, 3.1–3.2). Platform is configurable rather than a single behavioral law; model claims and locators are supportable. Reference links retain original order/count. Abstract differs in source capitalization: publisher/arXiv PDF uses “RECSIM”; note has “RecSim”. Minor exact-copy discrepancy. Frontmatter has an orphan `model` list item after doi, so YAML/tag validity fails; verdict FAIL should apply if strict template validity is part of audit."
+    },
+    "Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/pdf/2007.16120v2",
+      "doi": "10.1016/j.inffus.2020.12.001",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 254,
+        "original_reference_count": 254,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full v2 paper and journal metadata read. Conceptual model now includes directed preferences p_x_y and p_y_x plus fusion; matches §2/Fig. 2 and study design. The arXiv v3 page is marked withdrawn, while note source points to arXiv abstract; DOI is the published journal DOI. Reference links in original order. Frontmatter has orphan `model` and `simulation` entries after doi (invalid YAML)."
+    },
+    "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md": {
+      "verdict": "FAIL",
+      "primary_source_read": false,
+      "source_url": "https://www.nature.com/articles/s41586-026-10536-1",
+      "doi": "10.1038/s41586-026-10536-1",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 59,
+        "original_reference_count": 59,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Nature page redirects to institutional login; only publisher abstract/metadata could be checked. Note abstract now matches the accessible abstract and Study Design should be limited to abstract-supported research questions. The final clause claiming full article and extended-data tables are available on Nature is false for this audit; add fulltext unavailable and remove that claim. Do not substitute press/conference sample sizes for the published abstract’s planned sample. Reference order/count preserved."
+    },
+    "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md": {
+      "verdict": "PASS",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/27/2/4/4.pdf",
+      "doi": "10.18564/jasss.5300",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 51,
+        "original_reference_count": 51,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full JASSS PDF read. Abstract spacing is corrected; software/performance study is correctly separated from a substantive behavioral model, with comparison and EC2 calibration summarized. Reference order/count preserved. Metadata and DOI check out."
+    },
+    "Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md": {
+      "verdict": "PASS",
+      "primary_source_read": true,
+      "source_url": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
+      "doi": "10.1126/science.adu5584",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 82,
+        "original_reference_count": 82,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": false,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full Science PDF read. Abstract is exact; study design correctly identifies empirical randomized field experiment, sample, duration, intervention and reported affective-polarization outcome. No simulation model is claimed. Reference order/count and metadata check out."
+    },
+    "Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/html/2311.16586",
+      "doi": "10.1145/3656481",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 63,
+        "original_reference_count": 63,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full arXiv paper read (§§3–5; Table 2). Mechanisms are substantially represented, but type/procedure has mismatched `influence_weight.enabled` versus OMEGA; click-influence mean needs a nonempty-click guard, and note should distinguish the nine available environments from the churn-return boredom mode used in experiments. Frontmatter has orphan model/simulation tags; invalid YAML. Audit warning present."
+    },
+    "Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://par.nsf.gov/servlets/purl/10187146",
+      "doi": "10.1145/3347146.3359106",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": false,
+        "current_reference_count": 26,
+        "original_reference_count": 0,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full primary paper was read from the NSF repository/indexed PDF. Architecture and modeler-configured behaviors are substantially source-located; note incorrectly calls it a four-page description (paper is eight pages). 26 references were added from the paper after the snapshot had none, with this documented in note Audit Log. Existing audit-failed flag should remain until corrected and re-audited."
+    },
+    "Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/26/2/6.html",
+      "doi": "10.18564/jasss.5066",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 77,
+        "original_reference_count": 77,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full JASSS article read. Review design (927 records, 83 full reads, final 43 ABMs; paired coding) is supported. Abstract is not exact: wording/punctuation differs from publisher abstract (“we take stock”, “diverse application domains”, etc.). Reference order/count and metadata check out."
+    },
+    "Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/15/4/3/3.pdf",
+      "doi": "10.18564/jasss.2059",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 62,
+        "original_reference_count": 62,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full JASSS PDF read. Current note now describes nonlinear trust updates/decay, strategy-specific partner search and alternating social/foraging turns; source limitations around probabilities inherited from the prior cited work are properly distinguished. Frontmatter publication date is 2012-01-01, but paper header gives 31 October 2012. Orphan model/simulation tags after doi invalidate YAML."
+    },
+    "Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
+      "doi": "10.1145/3526113.3545616",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 93,
+        "original_reference_count": 93,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full UIST paper read. Current model covers a generation pipeline and evaluation but omits source-defining prompt sequence (persona expansion/profile attributes, then interactions conditioned on community goal/rules/personas); detail is still too generic for §§2.3–3.4. Reference order/count and source metadata check out. Orphan model/simulation tags after doi invalidate YAML."
+    },
+    "Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.nature.com/articles/s41586-022-04997-3.pdf",
+      "doi": "10.1038/s41586-022-04997-3",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 51,
+        "original_reference_count": 51,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": false,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full Nature PDF read. Abstract and empirical design are supported. Note publication date 2022-09-01 does not match online publication 2022-08-01 / issue date 4 August 2022. Reference order/count and DOI check out."
+    },
+    "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
+      "doi": "10.1146/annurev-statistics-060116-054035",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 112,
+        "original_reference_count": 112,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full author-hosted primary PDF read (model discussion §§2–3). Statistical model summary is substantially supported, but type omits actors/time despite procedure references; `ActorId` is not generated by current type. Loop exits when next event exceeds wave_end without advancing time to wave_end. Frontmatter has orphan model tag after doi. This is not a source access limitation; full PDF was accessible."
+    },
+    "Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/pdf/2107.08959",
+      "doi": "10.48550/arXiv.2107.08959",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 62,
+        "original_reference_count": 62,
+        "tags_are_yaml_list": false,
+        "audit_flag_present": true,
+        "abstract_review": "compared with inspected primary source; see findings"
+      },
+      "findings": "Full arXiv paper read (§§3–5). Note captures state separation, configurable user feedback, item/creator variants and loop at useful level; no material model omission found in the reviewed claims. Reference order/count and metadata check out. Orphan model/simulation tags after doi invalidate YAML."
+    }
+  },
+  "summary": {
+    "PASS": 2,
+    "FAIL": 11,
+    "LIMITED": 0,
+    "source_access_limits": [
+      "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md"
+    ]
+  }
+}

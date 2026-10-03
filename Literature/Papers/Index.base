@@ -1,0 +1,33 @@
+filters:
+  and:
+    - file.folder.contains("Literature/Papers/Entries")
+views:
+  - type: table
+    name: Table
+    groupBy:
+      property: read status
+      direction: ASC
+    order:
+      - file.name
+      - title
+      - publication date
+      - authors
+      - tags
+      - ⚠️
+    sort:
+      - property: tags
+        direction: ASC
+      - property: pdf
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 15
+      note.tags: 225
+  - type: kanban
+    name: View
+    groupBy:
+      property: read status
+      direction: ASC
+    order:
+      - file.name

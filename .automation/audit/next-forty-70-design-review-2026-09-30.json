@@ -1,0 +1,18 @@
+{
+  "reviewed_at": "2026-09-30",
+  "paper": "The Power of Social Cognition",
+  "auditor": "root",
+  "source_read": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf",
+  "source_locations": [
+    "pp.5–7 hierarchy/activation",
+    "pp.8–10 Tables2–3 experiments"
+  ],
+  "result": "revision requested",
+  "findings": [
+    "Personal/group/global schema hierarchy and experimental constants agree with the full source.",
+    "Current Model remains dense prose; rewrite using compact type notation and a lookup procedure.",
+    "Do not imply agent knowledge itself is universally a K-bit vector solely because transactive-memory schemas are K-bit; verify representation separately.",
+    "Make group membership assumptions and omitted activation equation explicit rather than inventing an equation."
+  ],
+  "pending": "Independent re-audit of final revised note"
+}

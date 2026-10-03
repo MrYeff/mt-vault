@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "scope": "lexicographic paper entries 11-25",
+  "full_source_audit_passed": [
+    12,
+    13,
+    14,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25
+  ],
+  "abstract_or_publisher_record_only": [
+    11,
+    15,
+    18,
+    23
+  ],
+  "audit_records": [
+    "next-fifteen-11-15-initial-2026-09-29.json",
+    "next-fifteen-11-15-reaudit-2026-09-29.json",
+    "next-fifteen-11-15-final-check-2026-09-29.json",
+    "next-fifteen-16-20-initial-2026-09-29.json",
+    "next-fifteen-16-20-reaudit-2026-09-29.json",
+    "next-fifteen-16-20-final-check-2026-09-29.json",
+    "next-fifteen-19-scan-audit-2026-09-29.json",
+    "next-fifteen-21-25-initial-2026-09-29.json",
+    "next-fifteen-21-25-reaudit-2026-09-29.json",
+    "next-fifteen-21-25-final-check-2026-09-29.json",
+    "next-fifteen-24-design-check-2026-09-29.json"
+  ],
+  "bibliography": "Original reference links preserved in order for all 15. Only #17 fully matched to numbered source references. Others disclose unverified mapping or inaccessible bibliography.",
+  "remaining_work": "Full-text audit of #11, #15, #18, #23 requires readable complete source; bibliography mapping in other notes remains unreconciled."
+}

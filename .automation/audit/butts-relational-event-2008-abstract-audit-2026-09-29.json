@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-29",
+  "note": "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
+  "source": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9531.2008.00203.x",
+  "scope": "Independent audit of abstract-derived Research Questions and the model-extraction skip rationale. The 2008 model claims could not be audited because the published full text was unavailable.",
+  "result": "abstract-level-pass; full-text model audit incomplete",
+  "research_questions": {
+    "result": "pass",
+    "basis": "Publisher abstract supports likelihood-based inference for dependent behavioral mechanisms, parameter estimation with exact event histories or event sequences, and the World Trade Center responder-radio application."
+  },
+  "model_extraction": {
+    "result": "not audited; correctly skipped",
+    "basis": "The accessible abstract does not specify the model rules. Retain the fulltext unavailable status."
+  },
+  "source_access_attempts": [
+    {
+      "source": "Wiley publisher article and PDF/full-text links",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9531.2008.00203.x",
+      "outcome": "Full-text route redirected to the abstract page; publisher page reports the hosted full text unavailable due to technical difficulties."
+    },
+    {
+      "source": "SAGE journal article record",
+      "url": "https://journals.sagepub.com/doi/10.1111/j.1467-9531.2008.00203.x",
+      "outcome": "Restricted access; record exposes abstract and access/purchase options, not readable full text."
+    },
+    {
+      "source": "JSTOR stable PDF and article record",
+      "url": "https://www.jstor.org/stable/pdf/20451153.pdf",
+      "outcome": "PDF request redirected to the article record; no readable full text."
+    },
+    {
+      "source": "Former ETH Zurich PDF mirror",
+      "url": "https://ethz.ch/content/dam/ethz/special-interest/gess/social-networks-dam/documents/goldfish_EUSN2017/Butts_2008.pdf",
+      "outcome": "404 Not Found."
+    }
+  ],
+  "excluded_sources": [
+    {
+      "source": "UC eScholarship 2006 precursor, A Relational Event Model for Social Action, with Application to the World Trade Center Disaster",
+      "url": "https://escholarship.org/uc/item/4hb4s53r",
+      "reason": "Readable full text found, but it is a distinct 2006 precursor and was not treated as the published 2008 paper."
+    },
+    {
+      "source": "Butts and Marcum 2017 chapter, A Relational Event Approach to Modeling Behavioral Dynamics",
+      "reason": "Distinct later chapter; excluded as a substitute for the requested original 2008 paper."
+    }
+  ],
+  "independent_of_extractor": true
+}

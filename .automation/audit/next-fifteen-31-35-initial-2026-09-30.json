@@ -1,0 +1,143 @@
+{
+    "audit_id": "next-fifteen-31-35-initial-2026-09-30",
+    "auditor": "independent source audit",
+    "audited_at": "2026-09-30",
+    "scope": "Entries 31-35; note files were not edited. Primary publisher/author full texts were checked where accessible.",
+    "notes": [
+        {
+            "index": 31,
+            "path": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+            "verdict": "FAIL",
+            "source_access": "Full primary text accessible at https://www.jasss.org/28/1/4.html, including Appendix A ODD description.",
+            "reference_check": "Note has 71 reference links, matching the 71-link original metadata array in vault/.automation/import/next-fifteen-original-2026-09-30.json and preserving their order. The snapshot also records one original body reference link [[SocialIntegrationBibliography.json]], absent from Metadata/References. The note's 'Bibliography completeness not verified' caveat is appropriate until the 71 aliases are checked against the publisher bibliography.",
+            "findings": [
+                {
+                    "location": "Frontmatter authors; publisher article header",
+                    "finding": "The author is listed by JASSS as J. Gareth Polhill; the note links to Gary Polhill. This is a wrong author display/name link.",
+                    "fix": "Use J. Gareth Polhill and the corresponding author-note link, if present. Primary source: JASSS header, https://www.jasss.org/28/1/4.html."
+                },
+                {
+                    "location": "Abstract",
+                    "finding": "The abstract is not an exact copy. It changes 'different processes modelled in HUMAT' to 'different processes that are modelled in HUMAT' and omits 'the' in 'the dynamic theory of social complexity'; the Abstract source also uses the exact wording visible at https://www.jasss.org/28/1/4.html, Abstract.",
+                    "fix": "Replace with the publisher abstract verbatim, preserving 'different processes modelled in HUMAT' and 'the dynamic theory of social complexity'."
+                },
+                {
+                    "location": "Model > How does it work?; LLM Justification [^r2]",
+                    "finding": "This is materially incomplete for reimplementation and reverses the process order. It says agents choose, then interact. Appendix A, 'Process overview and scheduling', says each tick executes information exchange (Signal/Inquire) and then attitude formation/Set dissonances (publisher lines 364-377). Appendix A 'Sensing' says agents know alters' chosen alternatives initially and acquire further alter information through communication (Table 3; lines 401-407, 464-473). The note omits the signal-versus-inquire condition and the selection/update rules.",
+                    "fix": "State that agents initially store alters' choices; per tick, agents with positive dissonance strength select Signal or Inquire (random 50/50 if both dilemmas, Signal for social-only, Inquire for non-social-only, otherwise neither); describe target selection (opposite-choice/more persuadable alter for signalling; same-choice/more persuasive alter for inquiry), the way information updates motive evaluations and dissonance, and final alternative choice. Include that choices optimize satisfaction, minimize dissonance and maximize experiential satisfaction, and a novel choice replaces the previous habit only if significantly more satisfying and less dissonant. Cite Appendix A, 'Process overview and scheduling', 'Sensing', 'Signal or inquire', 'Signal', 'Inquire', 'Set dissonances', and 'Choose alternative' (https://www.jasss.org/28/1/4.html)."
+                },
+                {
+                    "location": "Model > What does it represent? / How does it work?",
+                    "finding": "The summary omits essential initialized state and parameterization: three motive groups (experiential, social, values), per-agent importance, dissonance tolerance, evaluations/satisfaction for alternatives A/B, and the key schedule/initial network. Appendix A Tables 1-2 and 'Initialisation' specify truncated Normal(0.5, 0.14) importances/tolerance, beta-distributed satisfaction, uniform aspiration [0,1]; default network setup chooses 20% of agents within 35 Euclidean cells, with nearest-agent fallback (lines 434-463). Baseline outputs are fraction choosing A/B, mean satisfaction and dissonance per choice, and signal/inquire counts (Observation, lines 424-431); the note blends these with case-dependent outputs.",
+                    "fix": "Add these state variables, baseline initialization/network setup, and baseline measurements, while labeling application-specific extensions/outputs separately. Cite Appendix A Tables 1-4, 'Initialisation', 'Create networks', 'Observation', and Figure 6."
+                },
+                {
+                    "location": "Model > What can it answer?; footnote [^r3]",
+                    "finding": "The note presents heterogeneous segments, sensitivity and tipping points as outputs without distinguishing baseline outputs from possible analyses/application-specific measures. Appendix A 'Observation' lists four core outputs; Section 2.5 and the case studies broaden what can be studied.",
+                    "fix": "Differentiate the core four observed outputs from broader analytical questions and application-specific indicators; cite Appendix A 'Observation' and Section 2.5 separately."
+                }
+            ],
+            "metadata": "Title, DOI 10.18564/jasss.5611 and publication date 2025-01-31 match JASSS primary metadata (published 31-Jan-2025). DOI/source is correct."
+        },
+        {
+            "index": 32,
+            "path": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+            "verdict": "FAIL",
+            "source_access": "Full author preprint accessible at https://arxiv.org/pdf/2109.08862; publisher metadata and bibliography accessible at https://journals.sagepub.com/doi/10.1177/08944393231213960.",
+            "reference_check": "Note has zero Metadata/References bullets, consistent with the captured frontmatter array (zero), but the snapshot includes one body link [[SocialIntegrationBibliography.json]]. More materially, the publisher page lists a bibliography (about 34 entries); the note has not captured it as Obsidian links. The 'completeness not verified' statement does not explain the absent source bibliography.",
+            "findings": [
+                {
+                    "location": "Metadata > References",
+                    "finding": "The original body reference link is missing, and no bibliography links are included despite the publisher article listing its sources (Sage page, References). The note currently implies the original capture simply had no links.",
+                    "fix": "Preserve [[SocialIntegrationBibliography.json]] under Metadata/References and either import the paper's bibliography as links in source order or explicitly state that publisher references have not been imported/verified. Do not represent zero captured frontmatter refs as a complete bibliography."
+                },
+                {
+                    "location": "Model > What does it represent?; footnote [^r1]",
+                    "finding": "'Manhattan-style weighted distance ... is the tie length required for friendship' conflates the model's weighted social identity distance with a tie length. Equation 1 defines w_dist as weighted Manhattan distance across social identity values; Equation 2 uses it as the eligibility distance. A reciprocated tie forms iff w_dist <= min(TOx, TOy) and both nodes are below TC (author preprint pp. 5-6, Eqs. 1-2).",
+                    "fix": "Call it weighted social-identity distance used in the tie eligibility rule, not the tie length itself; cite pp. 5-6, Eqs. 1-2."
+                },
+                {
+                    "location": "Model > What can it answer?; footnote [^r3]",
+                    "finding": "The note omits an internal source contradiction in outreachability q. Simulation design/Table 2 specifies q in {0.2, 0.5, 0.8} (pp. 7-8), while Results prose gives {0.2, 0.5, 0.9} and Table 4 includes q=0.3 (pp. 12-15). The article also has inconsistent ratios/typos in this passage. The note silently reports the design values only.",
+                    "fix": "Record the method/table values and separately flag the Results/Table 4 values as a paper conflict; do not silently choose one. Source: author preprint, Simulation Design/Table 2, Results pp. 12-15/Table 4."
+                },
+                {
+                    "location": "Model > How does it work?; footnote [^r2]",
+                    "finding": "Core eligibility and stopping rule are mostly accurate, but the sentence 'the recipient accepts unless the tie violates their TO or TC' can read as recipient-only eligibility. Eq. 2 and Figure 3 require both endpoints to satisfy both constraints. The initiation/target order is stated only as stochastic in the paper; no particular randomization distribution is provided.",
+                    "fix": "Make bilateral constraints explicit in the prose and note that the procedure repeats until no eligible pair remains (pp. 5-6, Eq. 2; p. 9, Simulation Procedure/Figure 3). Avoid inferring a specific invitation distribution."
+                }
+            ],
+            "metadata": "Title, sole author Firman M. Firmansyah and DOI 10.1177/08944393231213960 are correct. Publisher says first published online 2023-11-22; current date matches. arXiv DOI in the frontmatter source list is a preprint DOI, not the published DOI, and is correctly kept as a source URL only. Abstract agrees with the publisher text. RQs track the two hypotheses and stated purpose. Tags use no spaces."
+        },
+        {
+            "index": 33,
+            "path": "vault/Literature/Papers/Entries/How many hours does it take to make a friend.md",
+            "verdict": "FAIL",
+            "source_access": "Full article PDF accessible via SAGE at https://journals.sagepub.com/doi/pdf/10.1177/0265407518761225; publisher abstract/metadata confirmed through SAGE DOI record.",
+            "reference_check": "Note has 32 reference links, matching the 32-link original metadata array and order. Snapshot also records one original body reference link [[SocialIntegrationBibliography.json]], absent from Metadata/References. Bibliography completeness is appropriately caveated pending comparison to the publisher reference list.",
+            "findings": [
+                {
+                    "location": "Abstract",
+                    "finding": "The abstract is not verbatim: it says 'Hours together was associated changes in closeness between waves'; the source says 'Hours together was associated with changes in closeness between waves.'",
+                    "fix": "Insert the missing 'with' by copying the publisher abstract exactly (SAGE Abstract; https://journals.sagepub.com/doi/abs/10.1177/0265407518761225)."
+                },
+                {
+                    "location": "Metadata > References",
+                    "finding": "The original body reference link [[SocialIntegrationBibliography.json]] was dropped.",
+                    "fix": "Retain the legacy body link under Metadata/References in addition to the 32 ordered bibliography links."
+                }
+            ],
+            "metadata": "Title, author, DOI 10.1177/0265407518761225, and tags are correct. Note date 2019-04-01 represents the issue month; primary SAGE metadata says first online 2018-03-15 and issue published April 2019. If publication date means first publication, change to 2018-03-15 (or record the convention explicitly). Abstract otherwise matches. RQs reflect the explicit RQ1 and the study's activities/talk aim. The non-simulation designation and no-update-rule caveat are accurate."
+        },
+        {
+            "index": 34,
+            "path": "vault/Literature/Papers/Entries/Humanoid Agents- Platform for Simulating Human-like Generative Agents.md",
+            "verdict": "FAIL",
+            "source_access": "Full primary ACL Anthology PDF accessible at https://aclanthology.org/2023.emnlp-demo.15.pdf.",
+            "reference_check": "Note has 24 reference links, matching the original 24-link array and order. Snapshot also records one original body reference link [[SocialIntegrationBibliography.json]], absent from Metadata/References. The completeness caveat should remain pending publisher bibliography comparison.",
+            "findings": [
+                {
+                    "location": "Model > How does it work?; footnote [^r2]",
+                    "finding": "The compressed description omits the defining decision/update procedure and values needed to reproduce it. The paper specifies initialization (seven emotions; five needs on 0-10 scales; defaults 5 except energy=10; relationship closeness 0-30, default 5), full-day planning recursively decomposed into 1-hour then 15-minute plans, action every 15 minutes, and plan reconsideration if emotion is non-neutral or a need is <=3. It specifies need decay and conversation effects: fullness/health -1 per five hours, social/fun -4, energy -5; if each interlocutor judges a conversation enjoyable, their closeness rises by one, otherwise falls by one. The note's 'may be updated' hides these rules. Source: Sections 3.1-3.3, Figure 2, Section 4.2, pp. 168-170.",
+                    "fix": "Add a concise rule sequence with initial state, 15-minute action/planning cycle and threshold, need-decay rates, co-location conversation condition, each-agent enjoyment judgment and +/-1 closeness update. Name that the LLM supplies plans, action choices and judgments; cite the exact sections/pages. State omitted implementation details/LLM dependence."
+                },
+                {
+                    "location": "Model > What can it answer?; footnote [^r3]",
+                    "finding": "The note says experiments test whether features affect actions/conversations but gives no reported evaluation measures or experimental conditions. The paper demonstrates three worlds (Lin's Family, Friends, Big Bang Theory) and runs two weekdays at 15-minute intervals (Section 4.1-4.2); Section 3's user evaluation/experiments should be described as such, not implied to validate general human-like behavior.",
+                    "fix": "Identify the three demonstration worlds and two-day run conditions, then state the specific evaluation reported in Section 3/experiments and its limits. Cite those sections and tables."
+                },
+                {
+                    "location": "Metadata > References",
+                    "finding": "The original body reference link [[SocialIntegrationBibliography.json]] is missing.",
+                    "fix": "Preserve the legacy link under Metadata/References."
+                }
+            ],
+            "metadata": "Title, three authors, DOI 10.18653/v1/2023.emnlp-demo.15, conference date (2023-12-06) and abstract match ACL Anthology. Tags have underscores/no spaces. Research questions are reasonable paraphrases."
+        },
+        {
+            "index": 35,
+            "path": "vault/Literature/Papers/Entries/Individual Motivations and Network Effects.md",
+            "verdict": "FAIL",
+            "source_access": "Primary publisher abstract/metadata accessible at https://journals.sagepub.com/doi/10.1177/0002716214565755; institutional author page accessible at https://www.networkscienceinstitute.org/publications/individual-motivations-and-network-effects-a-multi-level-analysis-of-the-structure-of-online-social-relationships. Full PDF was also readable in the author-uploaded copy indexed at ResearchGate.",
+            "reference_check": "Note has 36 reference links, matching the 36-link original metadata array and order. Snapshot also records one original body reference link [[SocialIntegrationBibliography.json]], absent from Metadata/References. Publisher bibliography is present and should be checked against the preserved aliases before claiming completeness.",
+            "findings": [
+                {
+                    "location": "Frontmatter title",
+                    "finding": "The DOI publisher page title uses 'A Multilevel Analysis'; the note has 'A Multi-Level Analysis'. Institutional author page uses the hyphenated styling, so the title varies across author metadata sources.",
+                    "fix": "Use the publisher's DOI title exactly: 'Individual Motivations and Network Effects: A Multilevel Analysis of the Structure of Online Social Relationships.'"
+                },
+                {
+                    "location": "Model > empirical network modeling description; footnotes [^r1]-[^r2]",
+                    "finding": "The empirical/non-agent-based classification and abstract findings are correct. The summary is very compressed: it omits the p*/ERGM method, actual Second Life interaction-log network, and distinction between individual-level predictors (gender, age, proximity, homophily) and structural terms (balance, preferential attachment). These are needed to understand what the 'integrated model' estimates. The article is cross-sectional ERGM inference, not a longitudinal tie-update simulation.",
+                    "fix": "Name the p*/ERGM network model, the Second Life data/network, and the categories of terms included; retain the caveat that no agent action/update schedule exists. Cite the paper's data/method and model specification sections (full text pages 181-187)."
+                },
+                {
+                    "location": "Metadata > References",
+                    "finding": "The original body reference link [[SocialIntegrationBibliography.json]] was omitted.",
+                    "fix": "Preserve it under Metadata/References."
+                }
+            ],
+            "metadata": "DOI, authors, 2015-04-09 date and abstract match primary metadata. Publisher title is unhyphenated 'Multilevel'; author institute uses 'Multi-Level', so normalize to publisher. Tags are valid. RQs correspond to the integrated model and reported predictors."
+        }
+    ]
+}

@@ -1,0 +1,461 @@
+{
+  "45": [
+    {
+      "source_index": 1,
+      "source_title": "The Structural Organization of Human Values-Evidence from Three Rounds of the European Social Survey (ESS)",
+      "target": "TheStructuralOrganizationOfHumanValuesEvidenceFromThreeRoundsOfTheEuropeanSocialSurveyEss",
+      "link": "[[TheStructuralOrganizationOfHumanValuesEvidenceFromThreeRoundsOfTheEuropeanSocialSurveyEss|The Structural Organization of Human Values-Evidence from Three Rounds of the European Social Survey (ESS)]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 2,
+      "source_title": "Outline of a theory of practice",
+      "target": "OutlineOfATheoryOfPractice",
+      "link": "[[OutlineOfATheoryOfPractice|Outline of a theory of practice]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 3,
+      "source_title": "Commuting practices: New insights into modal shift from theories of social practice",
+      "target": "CommutingPracticesNewInsightsIntoModalShiftFromTheoriesOfSocialPractice",
+      "link": "[[CommutingPracticesNewInsightsIntoModalShiftFromTheoriesOfSocialPractice|Commuting practices: New insights into modal shift from theories of social practice]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 4,
+      "source_title": "Modeling social action for AI agents",
+      "target": "ModelingSocialActionForAIAgents",
+      "link": "[[ModelingSocialActionForAIAgents|Modeling social action for AI agents]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 5,
+      "source_title": "A Knowledge-Driven Approach to Activity Recognition in Smart Homes",
+      "target": "AKnowledgeDrivenApproachToActivityRecognitionInSmartHomes",
+      "link": "[[AKnowledgeDrivenApproachToActivityRecognitionInSmartHomes|A Knowledge-Driven Approach to Activity Recognition in Smart Homes]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 6,
+      "source_title": "Bringing values back in: The adequacy of the European social survey to measure values in 20 countries",
+      "target": "BringingValuesBackInTheAdequacyOfTheEuropeanSocialSurveyToMeasureValuesIn20Countries",
+      "link": "[[BringingValuesBackInTheAdequacyOfTheEuropeanSocialSurveyToMeasureValuesIn20Countries|Bringing values back in: The adequacy of the European social survey to measure values in 20 countries]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 7,
+      "source_title": "No Smoking Here: Values, Norms and Culture in Multi-Agent Systems",
+      "target": "NoSmokingHereValuesNormsAndCultureInMultiAgentSystems",
+      "link": "[[NoSmokingHereValuesNormsAndCultureInMultiAgentSystems|No Smoking Here: Values, Norms and Culture in Multi-Agent Systems]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 8,
+      "source_title": "A model for organizational interaction: based on agents, founded in logic",
+      "target": "AModelForOrganizationalInteractionBasedOnAgentsFoundedInLogic",
+      "link": "[[AModelForOrganizationalInteractionBasedOnAgentsFoundedInLogic|A model for organizational interaction: based on agents, founded in logic]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 9,
+      "source_title": "Autonomous agents with norms",
+      "target": "AutonomousAgentsWithNorms",
+      "link": "[[AutonomousAgentsWithNorms|Autonomous agents with norms]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 10,
+      "source_title": "Towards socially sophisticated BDI agents",
+      "target": "TowardsSociallySophisticatedBDIAgents",
+      "link": "[[TowardsSociallySophisticatedBDIAgents|Towards socially sophisticated BDI agents]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 11,
+      "source_title": "From Autistic to Social Agents",
+      "target": "FromAutisticToSocialAgents",
+      "link": "[[FromAutisticToSocialAgents|From Autistic to Social Agents]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 12,
+      "source_title": "Contextualized Planning Using Social Practices",
+      "target": "ContextualizedPlanningUsingSocialPractices",
+      "link": "[[ContextualizedPlanningUsingSocialPractices|Contextualized Planning Using Social Practices]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 13,
+      "source_title": "Artificial social reasoning: Computational mechanisms for reasoning about others",
+      "target": "ArtificialSocialReasoningComputationalMechanismsForReasoningAboutOthers",
+      "link": "[[ArtificialSocialReasoningComputationalMechanismsForReasoningAboutOthers|Artificial social reasoning: Computational mechanisms for reasoning about others]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 14,
+      "source_title": "Structural Equivalence of the Values Domain Across Cultures: Distinguishing Sampling Fluctuations From Meaningful Variation",
+      "target": "StructuralEquivalenceOfTheValuesDomainAcrossCulturesDistinguishingSamplingFluctuationsFromMeaningfulVariation",
+      "link": "[[StructuralEquivalenceOfTheValuesDomainAcrossCulturesDistinguishingSamplingFluctuationsFromMeaningfulVariation|Structural Equivalence of the Values Domain Across Cultures: Distinguishing Sampling Fluctuations From Meaningful Variation]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 15,
+      "source_title": "A systematic review and meta-analysis of applications of the self-report habit index to nutrition and physical activity behaviours",
+      "target": "ASystematicReviewAndMetaAnalysisOfApplicationsOfTheSelfReportHabitIndexToNutritionAndPhysicalActivityBehaviours",
+      "link": "[[ASystematicReviewAndMetaAnalysisOfApplicationsOfTheSelfReportHabitIndexToNutritionAndPhysicalActivityBehaviours|A systematic review and meta-analysis of applications of the self-report habit index to nutrition and physical activity behaviours]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 16,
+      "source_title": "The constitution of society: Outline of the theory of structuration",
+      "target": "TheConstitutionOfSocietyOutlineOfTheTheoryOfStructuration",
+      "link": "[[TheConstitutionOfSocietyOutlineOfTheTheoryOfStructuration|The constitution of society: Outline of the theory of structuration]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 17,
+      "source_title": "Social Intelligence",
+      "target": "SocialIntelligence",
+      "link": "[[SocialIntelligence|Social Intelligence]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 18,
+      "source_title": "How to Relate Models to Reality? An Epistemological Framework for the Validation and Verification of Computational Models",
+      "target": "HowToRelateModelsToRealityAnEpistemologicalFrameworkForTheValidationAndVerificationOfComputationalModels",
+      "link": "[[HowToRelateModelsToRealityAnEpistemologicalFrameworkForTheValidationAndVerificationOfComputationalModels|How to Relate Models to Reality? An Epistemological Framework for the Validation and Verification of Computational Models]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 19,
+      "source_title": "What cognitive mechanisms predict travel mode choice? A systematic review with meta-analysis",
+      "target": "WhatCognitiveMechanismsPredictTravelModeChoiceASystematicReviewWithMetaAnalysis",
+      "link": "[[WhatCognitiveMechanismsPredictTravelModeChoiceASystematicReviewWithMetaAnalysis|What cognitive mechanisms predict travel mode choice? A systematic review with meta-analysis]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 20,
+      "source_title": "GRASP agents: social first, intelligent later",
+      "target": "GRASPAgentsSocialFirstIntelligentLater",
+      "link": "[[GRASPAgentsSocialFirstIntelligentLater|GRASP agents: social first, intelligent later]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 21,
+      "source_title": "Generating Social Practices",
+      "target": "GeneratingSocialPractices",
+      "link": "[[GeneratingSocialPractices|Generating Social Practices]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 22,
+      "source_title": "Description Logic : A Formal Foundation for Ontology Languages and Tools",
+      "target": "DescriptionLogicAFormalFoundationForOntologyLanguagesAndTools",
+      "link": "[[DescriptionLogicAFormalFoundationForOntologyLanguagesAndTools|Description Logic : A Formal Foundation for Ontology Languages and Tools]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 23,
+      "source_title": "Behaviour in commons dilemmas: Homo economicus and Homo psychologicus in an ecological-economic model",
+      "target": "BehaviourInCommonsDilemmasHomoEconomicusAndHomoPsychologicusInAnEcologicalEconomicModel",
+      "link": "[[BehaviourInCommonsDilemmasHomoEconomicusAndHomoPsychologicusInAnEcologicalEconomicModel|Behaviour in commons dilemmas: Homo economicus and Homo psychologicus in an ecological-economic model]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 24,
+      "source_title": "Formal Analysis of Models for the Dynamics of Trust based on Experiences",
+      "target": "FormalAnalysisOfModelsForTheDynamicsOfTrustBasedOnExperiences",
+      "link": "[[FormalAnalysisOfModelsForTheDynamicsOfTrustBasedOnExperiences|Formal Analysis of Models for the Dynamics of Trust based on Experiences]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 25,
+      "source_title": "Toward a formalism for conversation protocols using joint intention theory",
+      "target": "TowardAFormalismForConversationProtocolsUsingJointIntentionTheory",
+      "link": "[[TowardAFormalismForConversationProtocolsUsingJointIntentionTheory|Toward a formalism for conversation protocols using joint intention theory]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 26,
+      "source_title": "Habitual behaviors or patterns of practice? Explaining and changing repetitive climate‐relevant actions",
+      "target": "HabitualBehaviorsOrPatternsOfPracticeExplainingAndChangingRepetitiveClimaterelevantActions",
+      "link": "[[HabitualBehaviorsOrPatternsOfPracticeExplainingAndChangingRepetitiveClimaterelevantActions|Habitual behaviors or patterns of practice? Explaining and changing repetitive climate‐relevant actions]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 27,
+      "source_title": "How are habits formed: Modelling habit formation in the real world",
+      "target": "HowAreHabitsFormedModellingHabitFormationInTheRealWorld",
+      "link": "[[HowAreHabitsFormedModellingHabitFormationInTheRealWorld|How are habits formed: Modelling habit formation in the real world]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 28,
+      "source_title": "On actor-network theory: A few clarifications",
+      "target": "OnActorNetworkTheoryAFewClarifications",
+      "link": "[[OnActorNetworkTheoryAFewClarifications|On actor-network theory: A few clarifications]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 29,
+      "source_title": "Interventions on Contextualized Decision Making : an Agent-Based Simulation Study",
+      "target": "InterventionsOnContextualizedDecisionMakingAnAgentBasedSimulationStudy",
+      "link": "[[InterventionsOnContextualizedDecisionMakingAnAgentBasedSimulationStudy|Interventions on Contextualized Decision Making : an Agent-Based Simulation Study]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 30,
+      "source_title": "Modeling Social Preferences with Values",
+      "target": "ModelingSocialPreferencesWithValues",
+      "link": "[[ModelingSocialPreferencesWithValues|Modeling Social Preferences with Values]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 31,
+      "source_title": "Modelling the Social Practices of an Emergency Room to Ensure Staff and Patient Wellbeing",
+      "target": "ModellingTheSocialPracticesOfAnEmergencyRoomToEnsureStaffAndPatientWellbeing",
+      "link": "[[ModellingTheSocialPracticesOfAnEmergencyRoomToEnsureStaffAndPatientWellbeing|Modelling the Social Practices of an Emergency Room to Ensure Staff and Patient Wellbeing]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 32,
+      "source_title": "The emergence of a shared action ontology: Building blocks for a theory",
+      "target": "TheEmergenceOfASharedActionOntologyBuildingBlocksForATheory",
+      "link": "[[TheEmergenceOfASharedActionOntologyBuildingBlocksForATheory|The emergence of a shared action ontology: Building blocks for a theory]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 33,
+      "source_title": "Automaticity: a theoretical and conceptual analysis",
+      "target": "AutomaticityATheoreticalAndConceptualAnalysis",
+      "link": "[[AutomaticityATheoreticalAndConceptualAnalysis|Automaticity: a theoretical and conceptual analysis]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 34,
+      "source_title": "The protégé project: a look back and a look forward",
+      "target": "TheProtegeProjectALookBackAndALookForward",
+      "link": "[[TheProtegeProjectALookBackAndALookForward|The protégé project: a look back and a look forward]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 35,
+      "source_title": "Using ABM to Clarify and Refine Social Practice Theory",
+      "target": "UsingABMToClarifyAndRefineSocialPracticeTheory",
+      "link": "[[UsingABMToClarifyAndRefineSocialPracticeTheory|Using ABM to Clarify and Refine Social Practice Theory]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 36,
+      "source_title": "Combining ontological and temporal formalisms for composite activity modelling and recognition in smart homes",
+      "target": "CombiningOntologicalAndTemporalFormalismsForCompositeActivityModellingAndRecognitionInSmartHomes",
+      "link": "[[CombiningOntologicalAndTemporalFormalismsForCompositeActivityModellingAndRecognitionInSmartHomes|Combining ontological and temporal formalisms for composite activity modelling and recognition in smart homes]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 37,
+      "source_title": "Extracting OWL Ontologies from Agent-Based Models: A Netlogo Extension",
+      "target": "ExtractingOwlOntologiesFromAgentBasedModelsANetlogoExtension",
+      "link": "[[ExtractingOwlOntologiesFromAgentBasedModelsANetlogoExtension|Extracting OWL Ontologies from Agent-Based Models: A Netlogo Extension]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 38,
+      "source_title": "Toward a theory of social practices: A development in culturalist theorizing",
+      "target": "TowardATheoryOfSocialPracticesADevelopmentInCulturalistTheorizing",
+      "link": "[[TowardATheoryOfSocialPracticesADevelopmentInCulturalistTheorizing|Toward a theory of social practices: A development in culturalist theorizing]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 39,
+      "source_title": "Social Practices. A Wittgensteinian approach to human activity and the social",
+      "target": "SocialPracticesAWittgensteinianApproachToHumanActivityAndTheSocial",
+      "link": "[[SocialPracticesAWittgensteinianApproachToHumanActivityAndTheSocial|Social Practices. A Wittgensteinian approach to human activity and the social]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 40,
+      "source_title": "Agent-based modelling of social-ecological systems: Achievements, challenges, and a way forward",
+      "target": "AgentBasedModellingOfSocialEcologicalSystemsAchievementsChallengesAndAWayForward",
+      "link": "[[AgentBasedModellingOfSocialEcologicalSystemsAchievementsChallengesAndAWayForward|Agent-based modelling of social-ecological systems: Achievements, challenges, and a way forward]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 41,
+      "source_title": "An Overview of the Schwartz Theory of Basic Values",
+      "target": "AnOverviewOfTheSchwartzTheoryOfBasicValues",
+      "link": "[[AnOverviewOfTheSchwartzTheoryOfBasicValues|An Overview of the Schwartz Theory of Basic Values]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 42,
+      "source_title": "Refining the theory of basic individual values",
+      "target": "RefiningTheTheoryOfBasicIndividualValues",
+      "link": "[[RefiningTheTheoryOfBasicIndividualValues|Refining the theory of basic individual values]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 43,
+      "source_title": "The Construction of Social Reality",
+      "target": "TheConstructionOfSocialReality",
+      "link": "[[TheConstructionOfSocialReality|The Construction of Social Reality]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 44,
+      "source_title": "The Dynamics of Social Practice: Everyday Life and How it Changes",
+      "target": "TheDynamicsOfSocialPracticeEverydayLifeAndHowItChanges",
+      "link": "[[TheDynamicsOfSocialPracticeEverydayLifeAndHowItChanges|The Dynamics of Social Practice: Everyday Life and How it Changes]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 45,
+      "source_title": "Rule-based activity recognition framework: Challenges, technique and learning",
+      "target": "RuleBasedActivityRecognitionFrameworkChallengesTechniqueAndLearning",
+      "link": "[[RuleBasedActivityRecognitionFrameworkChallengesTechniqueAndLearning|Rule-based activity recognition framework: Challenges, technique and learning]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 46,
+      "source_title": "Interpretation and the Sciences of Man",
+      "target": "InterpretationAndTheSciencesOfMan",
+      "link": "[[InterpretationAndTheSciencesOfMan|Interpretation and the Sciences of Man]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 47,
+      "source_title": "Intelligence and its uses",
+      "target": "IntelligenceAndItsUses",
+      "link": "[[IntelligenceAndItsUses|Intelligence and its uses]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 48,
+      "source_title": "Accurate activity recognition in a home setting",
+      "target": "AccurateActivityRecognitionInAHomeSetting",
+      "link": "[[AccurateActivityRecognitionInAHomeSetting|Accurate activity recognition in a home setting]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 49,
+      "source_title": "Habits and implementation intentions",
+      "target": "HabitsAndImplementationIntentions",
+      "link": "[[HabitsAndImplementationIntentions|Habits and implementation intentions]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 50,
+      "source_title": "Reflections on Past Behavior: A Self-Report Index of Habit Strength",
+      "target": "ReflectionsOnPastBehaviorASelfReportIndexOfHabitStrength",
+      "link": "[[ReflectionsOnPastBehaviorASelfReportIndexOfHabitStrength|Reflections on Past Behavior: A Self-Report Index of Habit Strength]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 51,
+      "source_title": "Arguing to motivate decisions",
+      "target": "ArguingToMotivateDecisions",
+      "link": "[[ArguingToMotivateDecisions|Arguing to motivate decisions]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 52,
+      "source_title": "Simulation and similarity: Using models to understand the world",
+      "target": "SimulationAndSimilarityUsingModelsToUnderstandTheWorld",
+      "link": "[[SimulationAndSimilarityUsingModelsToUnderstandTheWorld|Simulation and similarity: Using models to understand the world]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 53,
+      "source_title": "Netlogo itself",
+      "target": "NetlogoItself",
+      "link": "[[NetlogoItself|Netlogo itself]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 54,
+      "source_title": "A new look at habits and the habit-goal interface",
+      "target": "ANewLookAtHabitsAndTheHabitGoalInterface",
+      "link": "[[ANewLookAtHabitsAndTheHabitGoalInterface|A new look at habits and the habit-goal interface]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 55,
+      "source_title": "Premack and Woodruff : Chimpanzee theory of mind",
+      "target": "PremackAndWoodruffChimpanzeeTheoryOfMind",
+      "link": "[[PremackAndWoodruffChimpanzeeTheoryOfMind|Premack and Woodruff : Chimpanzee theory of mind]]",
+      "matching_basis": "new title-derived reference link"
+    }
+  ],
+  "42": [
+    {
+      "source_index": 1,
+      "source_title": "Increasing Returns and Path Dependence in the Economy",
+      "target": "IncreasingReturnsAndPathDependenceInTheEconomy",
+      "link": "[[IncreasingReturnsAndPathDependenceInTheEconomy|Increasing Returns and Path Dependence in the Economy]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 2,
+      "source_title": "Random Economies with Many Interacting Agents",
+      "target": "RandomEconomiesWithManyInteractingAgents",
+      "link": "[[RandomEconomiesWithManyInteractingAgents|Random Economies with Many Interacting Agents]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 3,
+      "source_title": "Rational group decision making: A random field Ising model at T=0",
+      "target": "RationalGroupDecisionMakingARandomFieldIsingModelAtT0",
+      "link": "[[RationalGroupDecisionMakingARandomFieldIsingModelAtT0|Rational group decision making: A random field Ising model at T=0]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 4,
+      "source_title": "Stochastic models for species formation in evolving populations",
+      "target": "StochasticModelsForSpeciesFormationInEvolvingPopulations",
+      "link": "[[StochasticModelsForSpeciesFormationInEvolvingPopulations|Stochastic models for species formation in evolving populations]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 5,
+      "source_title": "Diffusion d’information et valuations squentielles",
+      "target": "DiffusionDinformationEtValuationsSquentielles",
+      "link": "[[DiffusionDinformationEtValuationsSquentielles|Diffusion d’information et valuations squentielles]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 6,
+      "source_title": "Self-Organizing Social Systems: Necessary and Sufficient Conditions for the Emergence of Clustering, Consolidation and Continuing Diversity",
+      "target": "SelfOrganizingSocialSystemsNecessaryAndSufficientConditionsForTheEmergenceOfClusteringConsolidationAndContinuingDiversity",
+      "link": "[[SelfOrganizingSocialSystemsNecessaryAndSufficientConditionsForTheEmergenceOfClusteringConsolidationAndContinuingDiversity|Self-Organizing Social Systems: Necessary and Sufficient Conditions for the Emergence of Clustering, Consolidation and Continuing Diversity]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 7,
+      "source_title": "Révisions des croyances dans un système d’agents en interaction",
+      "target": "RevisionsDesCroyancesDansUnSystemeDagentsEnInteraction",
+      "link": "[[RevisionsDesCroyancesDansUnSystemeDagentsEnInteraction|Révisions des croyances dans un système d’agents en interaction]]",
+      "matching_basis": "new title-derived reference link"
+    },
+    {
+      "source_index": 8,
+      "source_title": "Bayesian Interactions and Collective Dynamics of Opinions: Herd Behavior and Mimetic Contagion",
+      "target": "BayesianInteractionsAndCollectiveDynamicsOfOpinionHerdBehaviorAndMimeticContagion",
+      "link": "[[BayesianInteractionsAndCollectiveDynamicsOfOpinionHerdBehaviorAndMimeticContagion|Bayesian Interactions and Collective Dynamics of Opinions: Herd Behavior and Mimetic Contagion]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 9,
+      "source_title": "Introduction to Percolation Theory",
+      "target": "IntroductionToPercolationTheory",
+      "link": "[[IntroductionToPercolationTheory|Introduction to Percolation Theory]]",
+      "matching_basis": "existing normalized title/target"
+    },
+    {
+      "source_index": 10,
+      "source_title": "Dynamical aspects in the Adoption of Agri-Environmental Measures",
+      "target": "DynamicalAspectsInTheAdoptionOfAgriEnvironmentalMeasures",
+      "link": "[[DynamicalAspectsInTheAdoptionOfAgriEnvironmentalMeasures|Dynamical aspects in the Adoption of Agri-Environmental Measures]]",
+      "matching_basis": "existing normalized title/target"
+    }
+  ]
+}

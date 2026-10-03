@@ -1,0 +1,145 @@
+{
+    "schema_version": 1,
+    "audit": "independent initial audit of entries 26-30",
+    "audited_at": "2026-09-30",
+    "source_snapshot": "vault/.automation/import/next-fifteen-original-2026-09-30.json",
+    "scope": "Read-only review. Paper notes were not edited. Original refs arrays were compared in-order; the obsolete SocialIntegrationBibliography.json body link was intentionally excluded.",
+    "entries": [
+        {
+            "number": 26,
+            "file": "vault/Literature/Papers/Entries/Friendship Dynamics- Modelling Social Relationships through a Fuzzy Agent-Based Simulation.md",
+            "result": "fix",
+            "fulltext_access": "Readable publisher-hosted article PDF copy; DOI and publisher record also checked.",
+            "primary_sources": [
+                "https://onlinelibrary.wiley.com/doi/10.1155/2011/765640",
+                "https://pdfs.semanticscholar.org/2c3b/ef77179d5fdaf4faddee8a632af966cd3ab8.pdf"
+            ],
+            "metadata": "Title, author spellings (including Pav\u00f3n), publication date 2011-09-13, and DOI 10.1155/2011/765640 agree with publisher metadata. Abstract is verbatim and supported by the publisher abstract.",
+            "references": "67/67 links match original_frontmatter.refs in exact order.",
+            "findings": [
+                {
+                    "severity": "major",
+                    "issue": "The research question asks how friendship relationships \u2018dissolve,\u2019 and Model/What does it represent says the paper models relationship maintenance/dissolution. This contradicts the paper: the logistic friendship rule only increases F(t), and the authors explicitly state friendship ties cannot weaken or break once they appear.",
+                    "evidence": "Section 5.2, printed pp. 12-13, Eq. (5.1) and adjacent text; https://pdfs.semanticscholar.org/2c3b/ef77179d5fdaf4faddee8a632af966cd3ab8.pdf",
+                    "fix": "Remove dissolution from the research question/model claims; explicitly state that friendship strength grows monotonically and ties cannot decay or be removed in this model. Mark this as a substantive simplification/limitation."
+                },
+                {
+                    "severity": "major",
+                    "issue": "The central dynamic is omitted despite full text access. It is not merely an unspecified transition rule: Eq. (5.1) gives dF/dt = g F(t)(1-F(t)/K); Eqs. (5.2)-(5.3) set g = R_similarity \u00d7 J and J(R_similarity)=J0 exp(p R_similarity). Note also omits initial friendship value and the example/selected parameters.",
+                    "evidence": "Section 5.2, printed pp. 12-13; Figure 5 parameters p=5.8 and J0=0.001; Figure 4 uses K=1 and F0=0.01. The authors say p and J0 were obtained experimentally. Same PDF URL as above.",
+                    "fix": "Summarize the equations/rules, identify which values are illustrative versus configured/estimated, and state the no-decay rule; cite section, equations and figure/page."
+                },
+                {
+                    "severity": "moderate",
+                    "issue": "The model outcome is described only as something it \u2018can explore\u2019; the actual comparison result is absent. Four model variants cross crisp/fuzzy similarity and crisp/fuzzy friendship, in two friendship configurations. The fuzzy-all version has higher mean couple similarity/friendship in both configurations; ANOVAs report p<.001.",
+                    "evidence": "Sections 6-7, Table 2 and discussion, printed pp. 16-17; same PDF URL.",
+                    "fix": "Add a concise results statement and qualify that these are internal model-comparison outcomes, not empirical validation; the authors describe the logistic assumption as intuitive and unsupported by empirical research."
+                }
+            ]
+        },
+        {
+            "number": 27,
+            "file": "vault/Literature/Papers/Entries/Friendship networks and social status.md",
+            "result": "fix",
+            "fulltext_access": "Readable author PDF and Cambridge article page.",
+            "primary_sources": [
+                "https://arxiv.org/pdf/1205.6822",
+                "https://www.cambridge.org/core/journals/network-science/article/abs/friendship-networks-and-social-status/18CD7D21D1A2852C27C74374BAF22432"
+            ],
+            "metadata": "Title, authors (Brian Ball and M. E. J. Newman), online publication date 2013-04-15, and DOI 10.1017/nws.2012.4 are correct. The note's abstract is an exact copy of the Cambridge abstract.",
+            "references": "31/31 links match original_frontmatter.refs in exact order.",
+            "findings": [
+                {
+                    "severity": "moderate",
+                    "issue": "The note correctly distinguishes this statistical inference procedure from an agent simulation, but its model description omits the defining generative mechanism and estimation procedure. The model uses separate reciprocal and unreciprocated edge processes as rank-difference functions \u03b1 and \u03b2; \u03b1 is symmetric. Latent ranks are inferred with maximum likelihood/EM, with MCMC approximation of the rank posterior. The note's generic \u2018rank likelihood favors\u2019 summary is not enough to reproduce or assess the method.",
+                    "evidence": "Author PDF, pp. 2-4, Eqs. (1)-(11), especially the definitions of S/T and \u03b1/\u03b2 and the iterative EM description at PDF pp. 3-4; https://arxiv.org/pdf/1205.6822",
+                    "fix": "Add the reciprocal/unreciprocated dyad distinction, rank-difference dependence, rank/parameter estimation order, and the fact that reported node ranks are posterior averages from MCMC. State that self-ties are excluded and rank prior is uniform if retaining a procedural summary."
+                },
+                {
+                    "severity": "moderate",
+                    "issue": "The empirical scale and salient results are not given. The study uses 84 AddHealth school networks (over 90,000 students), reports 98% of unreciprocated ties oriented lower-to-higher under minimum-violations ranking, and finds inferred rank correlated with age/grade and total popularity. The abstract and current note mention correlations but not scale or findings beyond that.",
+                    "evidence": "Author PDF, Results, pp. 4-6; https://arxiv.org/pdf/1205.6822",
+                    "fix": "Add sample scale and one or two main results, keeping the authors' interpretation of rank as social status explicitly conjectural."
+                }
+            ]
+        },
+        {
+            "number": 28,
+            "file": "vault/Literature/Papers/Entries/From Individual to Society- A Survey on Social Simulation Driven by Large Language Model-based Agents.md",
+            "result": "limited",
+            "fulltext_access": "Readable complete arXiv v1 PDF; ACM version of record metadata was independently located, but publisher full text/abstract was not compared.",
+            "primary_sources": [
+                "https://arxiv.org/pdf/2412.03563",
+                "https://dl.acm.org/doi/10.1145/3800683"
+            ],
+            "metadata": "ACM DOI 10.1145/3800683 and publication year 2026 are supported by ACM-derived citation metadata (ACM Computing Surveys 58, issue 11, article 280); arXiv v1 is dated 2024-12-04. The note's author order and names match the arXiv title page. Its abstract is verbatim from arXiv v1, as the note discloses.",
+            "references": "233/233 links match original_frontmatter.refs in exact order.",
+            "findings": [
+                {
+                    "severity": "minor",
+                    "issue": "No substantive mismatch found in taxonomy, survey scope, or distinction that this is not one executable model. The Model section accurately treats the three categories as a survey taxonomy and says there is no shared action rule, observation boundary, update order, or parameter set.",
+                    "evidence": "ArXiv title page/abstract; Figure 1 and Section 1, PDF pp. 1-2; Section 3-5 taxonomy; https://arxiv.org/pdf/2412.03563",
+                    "fix": "None required on the evidence reviewed. Keep the provenance disclosure that the copied abstract is from arXiv rather than claiming it was copied from the ACM page."
+                },
+                {
+                    "severity": "limitation",
+                    "issue": "Because the arXiv text is v1 (2024-12-04) and the ACM record is a later 2026 version, this audit cannot confirm that the version-of-record abstract, wording, or any survey details are unchanged.",
+                    "evidence": "ArXiv v1 cover and ACM metadata cited above.",
+                    "fix": "No immediate correction indicated; compare to publisher text if it becomes accessible before claiming version-of-record wording."
+                }
+            ]
+        },
+        {
+            "number": 29,
+            "file": "vault/Literature/Papers/Entries/From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities.md",
+            "result": "fix",
+            "fulltext_access": "Readable complete arXiv PDF v1.",
+            "primary_sources": [
+                "https://arxiv.org/abs/2606.17174",
+                "https://arxiv.org/pdf/2606.17174"
+            ],
+            "metadata": "Title, four authors, arXiv DOI 10.48550/arXiv.2606.17174 and submission date 2026-06-15 match the primary arXiv record. Abstract is copied exactly. The note correctly frames the study as observational rather than agent simulation and avoids claims of sentience or latent attachment.",
+            "references": "38/38 links match original_frontmatter.refs in exact order.",
+            "findings": [
+                {
+                    "severity": "moderate",
+                    "issue": "The applicability/limitations statement is too vague for the central inference. The paper samples an 11-day window of engagement-active threads with 5-150 comments; it explicitly cautions that prevalence/effect magnitudes are not full-platform estimates. It also says repeated interaction is not evidence that durable internal parasocial relationships formed. The note says only \u2018during the sampled period\u2019 and \u2018generalization ... not established.\u2019",
+                    "evidence": "Limitations, PDF p. 10, lines describing the 11-day window and 5-150 comments; https://arxiv.org/pdf/2606.17174. Also Discussion PDF pp. 9-10 distinguishes PSR-consistent recurrence from fully realized PSR.",
+                    "fix": "State the 11-day and 5-150-comment thread inclusion limits and explicitly state that repeated dyadic recurrence does not establish durable internal PSR; keep all effect claims associational, not causal."
+                },
+                {
+                    "severity": "minor",
+                    "issue": "The note's broad results language is supported by the abstract, but the full text shows meaningful method variation: adjusted Any-PSR to OP-participation association is not significant for keyword labels (OR 1.07, CI 0.88-1.30) while few-shot/grouped-context associations are significant. The abstract's aggregate phrasing should not imply all three methods agree on all outcomes.",
+                    "evidence": "Results, Tables 8-10, PDF pp. 7-8; https://arxiv.org/pdf/2606.17174",
+                    "fix": "If reporting adjusted outcomes, distinguish the keyword and LLM-based method results; current copied abstract can remain exact if footnote/context warns that results vary by annotation method."
+                }
+            ]
+        },
+        {
+            "number": 30,
+            "file": "vault/Literature/Papers/Entries/Generative agent-based modeling with actions grounded in physical- social- or digital space using Concordia.md",
+            "result": "fix",
+            "fulltext_access": "Readable complete arXiv PDF v1.",
+            "primary_sources": [
+                "https://arxiv.org/abs/2312.03664",
+                "https://arxiv.org/pdf/2312.03664"
+            ],
+            "metadata": "Title, ten authors, arXiv DOI 10.48550/arXiv.2312.03664 and first-submission date 2023-12-06 match the primary arXiv record. Abstract is exact. No journal/conference publication was identified; arXiv preprint metadata is appropriate.",
+            "references": "114/114 links match original_frontmatter.refs in exact order.",
+            "findings": [
+                {
+                    "severity": "moderate",
+                    "issue": "The note describes the broad agent\u2192Game Master\u2192observation loop, but omits the implementation's key update/turn order and visibility control. In Appendix A, each player interaction first updates GM components and sends player-specific partial_state, then the LLM agent acts, GM updates before-event state, creates an event statement, updates after-event state, and checks termination. Players may act in random initiative order; the clock can advance after each or all players. GM partial_state controls what each player observes. These details are required by the extraction guide's order/observation checks.",
+                    "evidence": "Appendix A, PDF pp. 23-24 (especially A.3 and A.3.1); https://arxiv.org/pdf/2312.03664",
+                    "fix": "Add the configurable player turn/clock modes and concise GM sequence; say player-visible state is supplied by partial_state and may be agent-specific. Keep the existing caveat that components and schedules are builder-selected."
+                },
+                {
+                    "severity": "minor",
+                    "issue": "One sentence compresses component observation and updates in a way that can blur their distinct timing: components receive .observe() whenever observations arrive, while .update() is called at regular configurable intervals; agents may receive several observations before acting.",
+                    "evidence": "Appendix A.1, PDF p. 23; https://arxiv.org/pdf/2312.03664",
+                    "fix": "Separate observation delivery from periodic component updates and mention that an action need not follow each observation."
+                }
+            ]
+        }
+    ]
+}

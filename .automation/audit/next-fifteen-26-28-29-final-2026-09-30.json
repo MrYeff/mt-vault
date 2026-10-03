@@ -1,0 +1,44 @@
+{
+  "audit_id": "next-fifteen-26-28-29-final-2026-09-30",
+  "audit": "independent final re-audit after corrections",
+  "audited_at": "2026-09-30",
+  "scope": "Read-only verification of the latest corrections to entries 26, 28, and 29 against their primary sources and prior audit findings. No notes edited; warnings not cleared.",
+  "entries": [
+    {
+      "number": 26,
+      "file": "vault/Literature/Papers/Entries/Friendship Dynamics- Modelling Social Relationships through a Fuzzy Agent-Based Simulation.md",
+      "status": "PASS",
+      "source_access": "Full article copy checked: https://pdfs.semanticscholar.org/2c3b/ef77179d5fdaf4faddee8a632af966cd3ab8.pdf; publisher record: https://onlinelibrary.wiley.com/doi/10.1155/2011/765640.",
+      "findings": [
+        "The revised results text accurately reports the article’s prose claim that MentatFuzzAll outperforms other variants on couple similarity/friendship, then flags its conflict with Table 2: random-friend RSimilarity is 0.77 for both MentatFuzzSim and MentatFuzzAll. Table 2 marks crisp-friendship cases as all couples being friends, so those are not graded comparisons. Source: Section 6, Table 2 and discussion, printed pp. 16–17 (PDF pp. 15–16).",
+        "The ANOVA p<.001 statement is distinct from the table conflict and supported by the article’s reported tests. Logistic friendship equations/parameters, no-decay limitation, model variants, and internal-comparison caveat were also rechecked and remain accurate (Section 5.2, Eqs. 5.1–5.3, Figures 4–5; Section 6)."
+      ],
+      "metadata_references": "Title, DOI/date, author display and underscore tags check out. All 67 reference links match original_frontmatter.refs in exact order."
+    },
+    {
+      "number": 28,
+      "file": "vault/Literature/Papers/Entries/From Individual to Society- A Survey on Social Simulation Driven by Large Language Model-based Agents.md",
+      "status": "LIMITED",
+      "source_access": "Published abstract and limited first-page metadata/excerpt are visible in Paperity’s ACM preview: https://paperity.org/p/376522331/from-individual-to-society-a-survey-on-social-simulation-driven-by-large-language-model. The full ACM 41-page version remains unavailable. Complete arXiv v1 is readable at https://arxiv.org/pdf/2412.03563.",
+      "findings": [
+        "The date is now 2026-04, matching the ACM excerpt’s ‘Publication date: April 2026’ and bibliographic information: ACM Computing Surveys 58(11), Article 280, DOI 10.1145/3800683.",
+        "The abstract matches the ACM abstract visible in the Paperity preview, including ‘In this article’ and the revised final coverage of datasets, benchmarks, tools, risks and challenges. This differs from arXiv v1’s closing sentences, as the note states.",
+        "Access wording is now precise: it says the abstract and first-page metadata are visible through a Paperity preview, but the complete published text was unavailable; the body taxonomy is attributed to arXiv v1. The frontmatter retains both not audited and fulltext unavailable, as required by the guide for unavailable published full text despite accessible preprint text.",
+        "All 11 authors/order, DOI, tags and 2026-04 date match the visible ACM metadata. All 233 reference links match the original captured array in order."
+      ],
+      "remaining_limit": "Cannot verify revisions to the full ACM article, its procedures, or bibliography from the accessible preview; status remains LIMITED and fulltext unavailable must remain."
+    },
+    {
+      "number": 29,
+      "file": "vault/Literature/Papers/Entries/From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities.md",
+      "status": "PASS",
+      "source_access": "Full arXiv v1 article and record checked: https://arxiv.org/pdf/2606.17174 and https://arxiv.org/abs/2606.17174.",
+      "findings": [
+        "The first author is now spelled Mohammadsadegh Abolhasani exactly as on arXiv’s author line. `vault/Literature/Authors/Mohammadsadegh Abolhasani.md` exists, and the note’s wikilink resolves to that file.",
+        "The 11-day date window and 5–150-comment engagement-active selection match Section 3.1: 2026-01-28 to 2026-02-08 UTC; source explicitly limits interpretation to engagement-active threads rather than full-platform prevalence (PDF pp. 3–4).",
+        "The effect-size caveat matches Table 8: adjusted Any-PSR to OP-participation is nonsignificant for keyword annotation (OR 1.07, 95% CI 0.88–1.30) and significant for few-shot and grouped-context methods (PDF p. 7). Discussion disclaims inference of durable internal relationships; the note’s distinction between repeated observable recurrence and internal attachment is appropriately bounded (PDF pp. 9–10)."
+      ],
+      "metadata_references": "Title, four-author order, arXiv DOI and first-submission date 2026-06-15 match arXiv. Tags use underscores/no spaces. The abstract matches arXiv v1, and all 38 reference links match original_frontmatter.refs in exact order."
+    }
+  ]
+}

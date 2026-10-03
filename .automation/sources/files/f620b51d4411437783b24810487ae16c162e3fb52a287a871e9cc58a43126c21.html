@@ -1,0 +1,787 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html> <head> 
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1">
+<meta name="DC.Title" content="Social Relationships and the Emergence of Social Networks"> 
+<meta name="DC.Creator" content="Alistair Sutcliffe, Di Wang and Robin Dunbar"> 
+<meta name="DC.Creator.Address" content="ags@man.ac.uk"> 
+<meta name="DC.Subject" content="Social Agents, Social Relationships, Trust, Evolution, Social Straegies"> 
+<meta name="DC.Description" content="In complex social systems such as those of many mammals, including humans, groups (and hence ego-centric social networks) are commonly structured in discrete layers. We describe a computational model for the development of social relationships based on agents' strategies for social interaction that favour more less-intense, or fewer more-intense partners. A trust-related process controls the formation and decay of relationships as a function of interaction frequency, the history of interaction, and the agents' strategies. A good fit of the observed layers of human social networks was found across a range of model parameter settings. Social interaction strategies which favour interacting with existing strong ties or a time-variant strategy produced more observation-conformant results than strategies favouring more weak relationships. Strong-tie strategies spread in populations under a range of fitness conditions favouring wellbeing, whereas weak-tie strategies spread when fitness favours foraging for food. The implications for modelling the emergence of social relationships in complex structured social networks are discussed."> 
+<meta name="DC.Publisher" content="JASSS"> 
+<meta name="DC.Date" content="2012-10-31"> 
+<meta name="DC.Type" content="Text.Article"> 
+<meta name="DC.Format" content="text/html"> 
+<meta name="DC.Identifier" content="https://www.jasss.org/15/4/3.html"> 
+<meta name="DC.Source" content="2012:34:2"> 
+<meta name="DC.Language" content="en"> 
+<meta name="DC.Rights" content="JASSS@soc.surrey.ac.uk">
+<title>Social Relationships and the Emergence of Social Networks</title>
+<link rel="stylesheet" href="/styles/jasssarticle.css" type="text/css">
+<link rel="stylesheet" href="/styles/SpryCollapsiblePanel.css" type="text/css">
+<script src="/scripts/SpryCollapsiblePanel.js" type="text/javascript"></script>
+</head> 
+<body>
+<div id="header">
+	<span class="copyright">&copy;<a href="/admin/copyright.html">Copyright JASSS</a></span><p>
+	<a href="../../JASSS.html"><img src="/gifs/JASSSMed.GIF" width="189" height="76" border="0" alt="JASSS logo"></a>
+	<p><img src="/gifs/bar.gif" width="100%" height="3" alt="----"> 
+        <span
+   class="Z3988" 
+   title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=http%3A%2F%2Fjasss.soc.surrey.ac.uk%2F15%2F4%2F3.html&amp;rft.genre=article&amp;rft.atitle=Social+Relationships+and+the+Emergence+of+Social+Networks&amp;rft.jtitle=Journal+of+Artificial+Societies+and+Social+Simulation&amp;rft.stitle=JASSS&amp;rft.issn=1460-7425&amp;rft.date=2012&amp;rft.volume=15&amp;rft.issue=4&amp;rft.pages=3&amp;rft.aufirst=Alistair&amp;rft.aulast=Sutcliffe&amp;rft.au=Wang%2C+Di&amp;rft.au=Dunbar%2C+Robin"> </span>
+	<p class="artauthor"><a href="https://www.jasss.org/15/4/3/sutcliffe.html">Alistair Sutcliffe</a><sup>a</sup>, <a href="https://www.jasss.org/15/4/3/sutcliffe.html">Di Wang</a><sup>b</sup> and <a href="https://www.jasss.org/15/4/3/sutcliffe.html">Robin Dunbar</a><sup>c</sup></a> (2012)<p class="artaffil"><sup>a</sup>University of Manchester, United Kingdom; <sup>b</sup>EBTIC  Khalifa University, United Arab Emirates; <sup>c</sup>University of Oxford, United Kingdom</p>
+<p class="arttitle">
+	Social Relationships and the Emergence of Social Networks
+	<p class="artlocation"><i>Journal of Artificial Societies and Social Simulation</i> <b>15</b> (4)  3<br>
+	&lt;https://www.jasss.org/15/4/3.html&gt;<br><span class="artdoi">DOI: 10.18564/jasss.2059</span></p>
+	<p class="artdates">
+	Received: 22-Mar-2012
+	&nbsp;&nbsp;&nbsp;Accepted: 30-Jun-2012
+	&nbsp;&nbsp;&nbsp;Published: 31-Oct-2012
+<hr>
+</div>
+<div class="content">
+<!-- draws and processes the tools menu for a JASSS article
+	NG 13 April 2011
+-->
+<script language="javascript" type="text/javascript">
+<!--
+
+function validate() {
+	if (document.tellafriend.name.value.length==0) {
+		alert("Please enter your name");
+		document.tellafriend.name.focus();
+		return false;
+	}
+	if (!echeck(document.tellafriend.email.value)) {
+		alert("Please enter your valid email address");
+		document.tellafriend.email.focus();
+		return false;
+	}
+	if (!echeck(document.tellafriend.fmail1.value)) {
+		alert("Please enter a valid colleague's email address");
+		document.tellafriend.fmail1.focus();
+		return false;
+	}
+	document.tellafriend.submit()
+	return true;
+}
+
+function validate1() {
+	if (!echeck(document.alert_confirm.email.value)) {
+		alert("Please enter your valid email address");
+		return false;
+	}
+	document.alert_confirm.submit()
+	return true;
+}
+
+/**
+ * DHTML email validation script. Courtesy of SmartWebby.com (http://www.smartwebby.com/dhtml/)
+ */
+
+function echeck(str) {
+
+		if ((str==null)||(str=="")){
+				return false
+			}
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    return false
+		 }
+
+ 		 return true					
+	}
+
+function resizeText(multiplier) {
+  if (document.body.style.fontSize == "") {
+    document.body.style.fontSize = "1.0em";
+  }
+  document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+  return false;
+}
+
+/* implement the show/hide link for the sidebar panel */
+
+function hidePanel() {
+		var panel = document.getElementById('tools');
+        var icon = document.getElementById('toolsicon');
+        if (panel.style.display=="none") {
+        	panel.style.display = "block";
+        	icon.style.display = "none";
+        }
+        else {
+        	panel.style.display = "none";
+        	icon.style.display = "block";
+        }      	
+}
+
+//-->	
+</script>
+
+<div id="toolsicon" style="display: none;">
+			<a href="#" onClick="hidePanel()">Show<br>tools</a>
+</div>	
+
+<div class="tools" id="tools">
+
+	<div class="menu">
+		
+		<div class="title">
+			<span style="float:right;"><a href="#" onClick="hidePanel()" style="font-size:90%">Hide</a></span><br> 
+			<b>Article Tools</b>
+		</div>
+	
+		<div class="content">
+	
+			<div class="panel">
+				<a href="#" title="Decrease font size" onclick="resizeText(-1)" style="font-size: smaller">Smaller</a>
+				Text
+				<a href="#" title="Increase font size" onclick="resizeText(1)" style="font-size: larger">Bigger</a>
+			</div>  
+			
+			<!-- see http://www.addthis.com/ -->
+			
+			<script type="text/javascript">
+				var addthis_config = {
+	     		ui_cobrand: "JASSS"
+				}
+			</script>
+			
+			<div class="panel">
+				Bookmark: 
+				<div class="addthis_toolbox addthis_default_style" style="padding:5px;">
+					<a class="addthis_button_preferred_1"></a>
+  					<a class="addthis_button_preferred_2"></a>
+  					<a class="addthis_button_preferred_3"></a>
+<!--  				<a class="addthis_button_citeulike"></a> -->
+<!-- 				<a class="addthis_button_delicious"></a> -->
+<!-- 				<a class="addthis_button_digg"></a> -->
+				    <a class="addthis_button_facebook"></a>
+				    <a class="addthis_button_linkedin"></a>
+				    <a class="addthis_button_reddit"></a>
+				    <a class="addthis_button_researchgate"></a>
+				    <a class="addthis_button_stumbleupon"></a>
+				    <a class="addthis_button_xing"></a>
+				    <a class="addthis_button_twitter"></a>
+				    <a class="addthis_button_baidu"></a>
+				    <a class="addthis_button_orkut"></a>
+				</div>
+			</div>
+			
+			<script type="text/javascript" src="http://s7.addthis.com/addthis_widget.js"></script>
+		
+			<div id="CollapsiblePanel1" class="CollapsiblePanel">
+		        <div class="CollapsiblePanelTab"> Export citation</div>       
+		      	<div class="CollapsiblePanelContent">
+					<ul>
+			   		 	<li><a href="/admin/export_citation.php?format=plain&source=https://jasss.org/15/4/3.html">Plain text</a></li>
+			   		 	<li><a href="/admin/export_citation.php?format=html&source=https://jasss.org/15/4/3.html">HTML</a></li>
+			   		 	<li><a href="/admin/export_citation.php?format=bibtex&source=https://jasss.org/15/4/3.html">BibTex</a></li>
+						<li><a href="/admin/export_citation.php?format=ris&source=https://jasss.org/15/4/3.html">Reference Manager</a></li>
+				   		<li><a href="/admin/export_citation.php?format=ris&source=https://jasss.org/15/4/3.html">EndNote</a></li>
+			    		<li><a href="/admin/export_citation.php?format=ris&source=https://jasss.org/15/4/3.html">ProCite</a></li>
+		   		 	</ul>
+		         </div>  
+			</div>    
+			<script type="text/javascript"> var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");</script>
+			
+			
+			<div id="CollapsiblePanel2" class="CollapsiblePanel">
+		        <div class="CollapsiblePanelTab"> Articles with the same author(s)</div>
+		        <div class="CollapsiblePanelContent">
+	  				<ul> 
+		  				<li><a href="/admin/get_similar_jasss.php?search=author&source=https://jasss.org/15/4/3.html">From JASSS</a></li>
+					    <li><a href="/admin/get_similar_google.php?search=author&source=https://jasss.org/15/4/3.html">From Google Scholar</a></li>
+				    </ul>
+	             </div>  
+	 		</div>   
+			<script type="text/javascript"> var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2");</script>
+			
+			<div id="CollapsiblePanel3" class="CollapsiblePanel">
+	        	<div class="CollapsiblePanelTab">Articles with similar keywords</div>
+	          	<div class="CollapsiblePanelContent">
+	          	<ul>
+				    <li><a href="/admin/get_similar_jasss.php?search=kw&source=https://jasss.org/15/4/3.html">From JASSS</a></li>
+				    <li><a href="/admin/get_similar_google.php?search=kw&source=https://jasss.org/15/4/3.html">From Google Scholar</a></li>	
+				 </ul>
+	           </div>  
+	    	</div>    
+			<script type="text/javascript"> var CollapsiblePanel3 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3");</script>
+			
+			<div id="CollapsiblePanel4" class="CollapsiblePanel">
+	        	<div class="CollapsiblePanelTab"> Articles citing this article</div>
+	        	<div class="CollapsiblePanelContent">
+	          		<ul>
+					    <li><a href="/admin/get_similar_jasss.php?search=cite&source=https://jasss.org/15/4/3.html">From JASSS</a></li>
+						<li><a href="/admin/get_similar_google.php?search=cite&source=https://jasss.org/15/4/3.html">From Google Scholar</a></li>
+					</ul>
+	        	</div>  
+	    	</div>  
+			<script type="text/javascript"> var CollapsiblePanel4 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4");</script>
+			
+			<div id="getPDF" class="panel">
+				<a href="/admin/get_pdf.php?source=https://jasss.org/15/4/3.html" >Download this article in PDF format</a>
+	    	</div>  
+			
+			<div id="CollapsiblePanel5" class="CollapsiblePanel">
+	        	<div class="CollapsiblePanelTab">Alert me when this article is cited within JASSS</div>                   			
+         		<div class="CollapsiblePanelContent">
+					<form name="alert_confirm" action="/admin/alert_confirm.php?source=https://jasss.org/15/4/3.html" onSubmit="return validate1()" method="post">
+						Your email:
+						<input size="20" name="email" maxlength="45">
+						<input type=hidden name="refurl" value="/15/4/3.html"> 
+						<center> <input onClick="validate1();" type="button" value="Submit"> </center>
+					</form>
+             	</div>  
+	     	</div> 
+			<script type="text/javascript"> var CollapsiblePanel5 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel5");</script>
+			
+			<div id="CollapsiblePanel6" class="CollapsiblePanel">
+	        	<div class="CollapsiblePanelTab">Send a link to this article to a colleague</div>
+				<div class="CollapsiblePanelContent">
+					<form name="tellafriend" action="/admin/tellafriend.php?source=https://jasss.org/15/4/3.html" onSubmit="return validate()" method="post">
+						Your name:<br>
+						<input size="20" name="name" maxlength="45"><br>
+						Your email:<br>
+						<input size="20" name="email" maxlength="45"><br>
+						Your colleague&rsquo;s email:<br>
+						<input size="20" name="fmail1" maxlength="50"><br>
+						<input type=hidden name="refurl" value="/15/4/3.html"> 
+						<center> <input onClick="validate();" type="button" value="Submit"> </center>
+					</form>
+				</div>  
+	    	</div>   
+			<script type="text/javascript"> var CollapsiblePanel6 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel6");</script>
+	
+		</div>	<!-- content -->
+	</div> <!-- menu -->
+</div> <!-- tools -->
+              
+
+
+
+    <div class="article">
+<h3><img src="/gifs/bullet.gif" alt="* ">Abstract</h3>
+<dl><dt><dd>
+In complex social systems such as those of many mammals, including humans, groups (and hence ego-centric social networks) are commonly structured in discrete layers. We describe a computational model for the development of social relationships based on agents' strategies for social interaction that favour more less-intense, or fewer more-intense partners. A trust-related process controls the formation and decay of relationships as a function of interaction frequency, the history of interaction, and the agents' strategies. A good fit of the observed layers of human social networks was found across a range of model parameter settings. Social interaction strategies which favour interacting with existing strong ties or a time-variant strategy produced more observation-conformant results than strategies favouring more weak relationships. Strong-tie strategies spread in populations under a range of fitness conditions favouring wellbeing, whereas weak-tie strategies spread when fitness favours foraging for food. The implications for modelling the emergence of social relationships in complex structured social networks are discussed.
+<p><dt><b>Keywords:</b><dd>
+Social Agents, Social Relationships, Trust, Evolution, Social Straegies
+</dl><hr noshade>
+<h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* "> Introduction
+</h3><dl compact>
+
+
+<dt><b><a name="1.1">1.1</a></b><dd>Socio-psychological theories of social relationships range from relationship formation based on exchange and expectations of reciprocity (<a href="#brown2009">Brown &amp; Brown 2009</a>) to explanations of human attitudes towards groups and the relationship between individual and group in terms of social identity (<a href="#reicher1995">Reicher et al. 1995</a>; <a href="#tajfel1979">Tajfel &amp; Turner 1979</a>), and from group socialisation (<a href="#moreland1982">Moreland &amp; Levine 1982</a>) to wide-ranging frameworks encompassing success criteria for groups with models of their structure, and short-term evolution from formation to dissolution (<a href="#arrow2000">Arrow et al. 2000</a>; <a href="#tuckman1965">Tuckman 1965</a>). In contrast, evolutionary theories of human social behaviour vary from cultural hypotheses which propose that social behaviour is a product of imitation, social learning and acquired norms of group behaviour (<a href="#boyd1988">Boyd &amp; Richerson 1988</a>; <a href="#tooby1989">Tooby &amp; Cosimides 1989</a>) to cognitive mechanisms grounded in plausible genetic origins (for example generalisation of kin recognition and altruistic behaviour predisposition from kin to intimate friendships: <a href="#akerman2007">Akerman et al. 2007</a>, <a href="#madsen2007">Madsen et al. 2007</a>). 
+
+
+<p><dt><b><a name="1.2">1.2</a></b><dd>Hamilton's theory of inclusive fitness (<a href="#hamilton1964">1964</a>) first demonstrated the generic basis for social cooperation among kin based on the survival payoff of related genes; however, why cooperation should evolve among unrelated individuals was intuitively less obvious. Subsequently, theoretical models of social behaviour among unrelated individuals have demonstrated the evolution of cooperative behaviour and altruism (<a href="#nowak1998">Nowak &amp; Sigmund 1998</a>, <a href="#nowak2005">2005</a>; <a href="#roberts2003">Roberts &amp; Renwick 2003</a>), where reciprocal rewards accruing from social relationships outweigh the costs of social interaction, thereby providing the incentive to invest in cooperation. Cooperative behaviour spreads strongly when there is a payoff from repeated encounters with individuals within a population, as demonstrated in many models based on the repeated prisoner's dilemma (RPD) paradigm (<a href="#yamagashi1998">Yamagashi et al. 1998</a>). Cooperative strategies with strong reciprocity compete effectively with non-social defectors in social dilemma games across a wide range of models and frameworks (<a href="#rosasa2010">Rosasa 2010</a>), so it appears that reciprocity, which is a key attribute of trust in human social relationships (<a href="#oswald2004">Oswald et al. 2004</a>), underpins cooperative behaviour. Cooperative behaviour spreads when memory of previous encounters with specific individuals is present, i.e. direct reciprocity is possible. Furthermore, cooperation also spreads when simpler reputation memory of an individual's previous cooperative acts is visible as that individual's 'image score' (<a href="#nowak1998">Nowak &amp; Sigmund 1998</a>). The effect of trust in promoting the development of social relationships was demonstrated by Nowak and Sigmund's (<a href="#nowak1998">1998</a>, <a href="#nowak2005">2005</a>) studies on reputation (the 'image scoring') in a coalitional version of the prisoner's dilemma game, showing that cooperation and altruism are likely to be widely adopted in populations where reputations are publicly visible. Hardy and Van Vugt (<a href="#hardy2006">2006</a>) also proposed that reputation systems are a necessary prerequisite of evolutionarily stable cooperation in large groups; furthermore, Roberts and Renwick (<a href="#roberts2003">2003</a>) demonstrated, in both experimental studies and computer simulations, that individual reputation based on histories of collaboration leads to the formation of social relationships. Hruschka and Henrich's (<a href="#hruschka2006">2006</a>) model produced emergent social structures and preferential social relationships when agents possessed strategies favouring known collaborators, and social preference strategies ('cliquers') spread in populations across a range of cost/benefit ratios and defect rates. However, their model depended on a memory constraint, so only a limited number (10) of stronger relationships could be developed. Given that cooperation is reasonably well established as a foundation of social relationships in behavioural (<a href="#baumeister1995">Baumeister &amp; Leary 1995</a>; <a href="#brown2009">Brown &amp; Brown 2009</a>; <a href="#oswald2004">Oswald et al. 2004</a>) and evolutionary (<a href="#boyd1988">Boyd &amp; Richerson 1988</a>) terms, the question arises about what patterns of social relationships might emerge from cooperative behaviour and how these might relate to the observed patterns of structure found in real-life social networks. 
+
+
+<p><dt><b><a name="1.3">1.3</a></b><dd>Stratification of human social relationships into bands of best/close friends and less intimate casual friends is well established in the literature on friendship (<a href="#baumeister1995">Baumeister &amp; Leary 1995</a>; <a href="#brown2009">Brown &amp; Brown 2009</a>; <a href="#hays1989">Hays 1989</a>) and in empirical studies on relationships in a variety of societies (<a href="#hill2003">Hill &amp; Dunbar 2003</a>; <a href="#wellman2001">Wellman et al. 2001</a>, <a href="#wellman2006">2006</a>; <a href="#zhou2005">Zhou et al. 2005</a>). Nearly all studies of human friendship and social relationships report at least two bands of intensity (e.g. strong vs. weak ties: <a href="#granovetter1973">Granovetter 1973</a>, <a href="#granovetter1985">1985</a>; close vs. casual relationships: <a href="#hays1989">Hays 1989</a>, <a href="#wellman1990">Wellman &amp; Wortley 1990</a>; core vs. peripheral ties: <a href="#mcpherson2006">McPherson et al. 2006</a>), so there appears to be a close agreement about intimacy layers being a key determinant of structure in human ego networks. It appears that people tend to 'favour the few' at the expense of the many in friendship. More importantly, a virtually identical layering of relationships with a similar scaling ratio to that found in humans has been reported for a range of other mammalian taxa that live in complex multi-level social systems (including elephants and many primates) (<a href="#hill2008">Hill et al. 2008</a>). These social relationship patterns support the Social Brain Hypothesis (SBH), an evolutionary psychological theory which relates brain size evolution to social group size within primates (<a href="#dunbar1998">Dunbar 1998</a>). 
+
+
+<p><dt><b><a name="1.4">1.4</a></b><dd>Based on a general relationship for social group size and brain volume in primates, SBH predicts a typical group (or community) size for humans of ~150 individuals (<a href="#dunbar1993">Dunbar 1993</a>, <a href="#dunbar1998">1998</a>). Different intimacy levels emerge from the fact that social time is inevitably limited (<a href="#lu2009">Lu et al. 2009</a>), creating a selection pressure that might favour individuals focusing their social interactions on a few more intense relationships at the expense of many, more diffuse ones. In humans, the innermost two layers have been identified as the support clique (<a href="#dunbar1995">Dunbar &amp; Spoors 1995</a>; <a href="#stiller2007">Stiller &amp; Dunbar 2007</a>) and the sympathy group (<a href="#buys1979">Buys &amp; Larson 1979</a>; <a href="#stiller2007">Stiller &amp; Dunbar 2007</a>), followed by an affinity group of 50 and an active network of 150 individuals. If the tenets of SBH are true, evolution should have produced a predisposition towards structuring human relationships in layers of decreasing intimacy. 
+
+
+<p><dt><b><a name="1.5">1.5</a></b><dd>Such social predispositions need to be explained in both behavioural and evolutionary terms. This paper explores the causal processes underlying the emergence of social structure by an agent-based computational model. We explore the behavioural predispositions which might have led to the evolution of the social relationship structures in humans, i.e. friendships organised in decreasing layers of intimacy. In our previous work (<a href="#sutcliffe2012">Sutcliffe &amp; Wang 2012</a>) we described a computer model of trust based on social interaction between agents and explored how different social predispositions such as favouring fewer strong, or more weak relationships effected the emergence of social structure and networks. This model was a 'behaviour-time' view of social interaction; in this paper we extend that model in evolutionary time to investigate how the genetic basis of social behaviour might emerge and compete under a range of selection pressures. The model investigates trade-offs between time spent foraging or socialising, with interactions between these fitness criteria and strategies that determine social interaction preferences. The paper addresses two research questions:
+
+<ol><li>Can social strategies that favour the few at the expense of the many lead to development of relationships in concentric layers of intimacy? This question tests the evolutionary influence of different social preferences in relationship formation.
+<li>Which social preference strategies spread in populations to produce social network structures observed in human populations? Social preference strategies will be investigated over a range of fitness criteria for wellbeing benefits from social relationships and fitness derived from foraging and feeding as competing activities.
+</ol>
+
+
+<p><dt><b><a name="1.6">1.6</a></b><dd>In the following sections of this paper, first the modelling approach is described with a summary of the model of trust formation and relationship development which we reported in the previous paper (<a href="#sutcliffe2012">Sutcliffe &amp; Wang 2012</a>). Then the new evolutionary layer of the model is introduced to investigate competition between agents with different interaction strategies that reflect their social preferences. We next explore the evolution of different social strategies under a range of fitness criteria weightings. The paper concludes with a discussion of implications for the emergence of social network structures in evolutionary and behavioural time and the concordance between theoretical simulations and empirical observations.
+
+
+
+</dl><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* ">Trust and Social Relationship Modelling
+</h3><dl compact>
+<dt><b><a name="2.1">2.1</a></b><dd>We depart from the conventional RPD model of cooperative behaviour since we want to explicitly model the fact that all social species face competing demands on their time, such that they will eventually face a potential trade-off between time spent feeding (to maintain fitness) and time spent socialising (which yields increased survival of offspring and increased predator protection, and possibly increases the efficiency of finding food by exchange of information, or other benefits of social cooperation including alliances for hunting larger prey and inter-group competition: <a href="#tooby1989">Tooby &amp; Cosimides 1989</a>). For simplicity, we restrict modelling to a simple trade-off between social and foraging/feeding time. The basis for our model is therefore strategies that offer the choice of spending more or less time feeding or socialising, reflected in the ratio of 'forage' vs. 'meet/socialise'.
+
+
+<p><dt><b><a name="2.2">2.2</a></b><dd>The trust model (<a href="#sutcliffe2012">Sutcliffe &amp; Wang 2012</a>) implemented a psychological mechanism for relationship development which is more sophisticated and concordant with the empirical literature than simple linear relationships between frequencies of cooperation/socialising and relationship strength. The key features of the model are as follows: through repeated interaction, trust changes from 'calculative mode' (in which an individual's trustworthiness is assessed on limited evidence) to relational trust based on social experience. In relational mode, deep trust is maintained by social emotions (e.g. belonging, pleasure in alters' company), hence less reinforcement is necessary to maintain the tie. In calculative mode, which precedes the development of emotional bonding, the frequency of interaction and strength of the tie have a linear relationship. In relational mode the relationship with interaction frequency becomes a logarithmic function as a 'law of diminishing returns'.
+
+
+<p><dt><b><a name="2.3">2.3</a></b><dd>The main components of the model are:
+
+<ul><li>Agents who interact and form trusting relationships. Frequency of interaction is equated with strength of relationships and trust, following empirical observations (<a href="#roberts2011">Roberts &amp; Dunbar 2011</a>; <a href="#rose1986">Rose &amp; Serafica 1986</a>). 
+<li>Responding agents may choose to accept or reject an initiation, hence interactions may have positive or negative results.
+<li>Trust accumulates for positive interactions, and is decreased by negative interactions.
+<li>Agents have a memory of previous interactions with other agents.
+<li>Agents have social preference strategies for initiating interaction according to the history of previous successful interaction. Four agent strategies are tested ranging from favour the few to favour many. 
+<li>Increase in trust is controlled by smoothing algorithms to implement the hypothesis that individuals in high-trust relationships exhibit different behaviour from those in low-trust relationships. This models the change from calculative to relational mode (<a href="#ostrom2002">Ostrom 2002</a>; <a href="#rempel1985">Rempel et al. 1985</a>). 
+<li>Trust in relationships wanes over time at a slow rate. This models the empirical observation that relationship strength declines unless it is maintained by social interaction (<a href="#wellman2001">Wellman et al. 2001</a>, <a href="#wellman2006">2006</a>).
+</ul>
+ 
+
+Each agent within the population is assigned a turn, so there is an equal opportunity to interact. Initially the alter agent is selected at random. However, once a history of interaction develops, the focal agent's choice of alter is governed by a history-dependent response algorithm which selectively initiates interaction according to the agent's strategy. 
+
+<p><dt><b><a name="2.4">2.4</a></b><dd>Trust accumulates between any two agents by one unit for each cooperative interaction. When A initiates interaction and B cooperates, A's trust in B increases (A&rarr; B); but if B defects, the existing trust value (A&rarr; B) is decreased by one unit. Initially trust increases linearly in proportion to the number of cooperative interactions with the responding agent. As trust in a relationship increases, a log ratio algorithm is applied; so the rate of increase progressively decreases as the value of trust rises. Since the log algorithm applies to negative as well as positive interaction, high-trust relationships are relatively immune to defections. This models the intuition that people forgive alters' indiscretions in high-trust relationships. Details of the formula for determining trust from interaction frequency are given in Sutcliffe and Wang (<a href="#sutcliffe2012">2012</a>). 
+
+
+<h4>Agent Strategies
+</h4><p><dt><b><a name="2.5">2.5</a></b><dd>A probabilistic search function determines how the focal agent chooses a target agent for interaction according to the history of previous cooperative interactions. Four strategies were implemented to model different preferences in relationship formation; three are static with a constant bias in alter selection, while the fourth, dynamic, strategy changes during the simulation run. The alter selection strategies are:
+
+<ul><li>Favour the few preference: the history-dependent search function favours cooperating with alters with whom the agent has had more previous successful interactions. This encourages development of high-trust relationships or strong ties; however, since the function is stochastic, there is a low probability of initiating interaction with low-trust alters and strangers without a previous interaction history.
+<li>Medium ties: the search function is biased towards the mid-point in the relationship trust distribution.
+<li>Favour the many: the search is biased towards the low-trust/interaction frequency part of the distribution.
+<li>Staged: in this dynamic strategy, the search bias is changed over time so the ego agent initially favours the few but progressively favours initiating proportionately more interactions with strangers and low-trust (weak-tie) partners. This implements the behavioural predisposition manifest over an individual's lifetime, that strong ties are formed earlier in life, while weaker ties accumulate in later life and strong ties persist (<a href="#hays1989">Hays 1989</a>). 
+</ul>
+
+For futher details of the probability function for alter selection in each of the four strategies, the reader is referred to Sutcliffe and Wang (<a href="#sutcliffe2012">2012</a>).
+
+<h4>Model Control Process
+</h4><p><dt><b><a name="2.6">2.6</a></b><dd>The top-level algorithm for the model has two cycles. The first powers the simulation for the desired set of runs; in the simulations reported below this was set at 2000. The second cycle gives each focal agent a turn within a run and iterates according to the number of agents in the population.  
+
+<pre>
+Model-Control
+Initialise-model (N agents, strategies, run-cycles, parameters CR, W, D, FM)
+While Run-cycles Do
+	For Agent (i) to N Do
+                  Select Focal Agent (i) {initially at random)
+	     If Forage-turn Then
+		Increment Res by 1 {1}
+	     Else {Social-turn}
+                          Read Relationship History
+			Search for Alter-agent {2}
+			If Alter-response = Cooperate Then
+				Increment Trust by (MaxCR-CI &times; Trust) {3}
+			Else {Alter defects}
+				Decrement Trust by (MaxCR-CI &times; Trust)
+				Increment Defect by 1
+			End-If
+			Decrement Trust by W {4}
+	End-Do
+End-While
+</pre>
+Notes<br>
+<ol><li>The forage : social turn is set by the FM ratio parameter.
+<li>Search depends on the agent strategy as described previously, so initially when there is no relationship history the search algorithm for all strategies selects a stranger at random. As relationship histories accrue, the algorithm is chosen more selectively according to the agent's strategy.
+<li>Trust compression is applied progressively as the relationship (i,j) increases. Initially there is no effect since there is no history.
+<li>Waning is applied with a log function, so stronger relationships wane less than weaker ones.
+<li>The parameters CR Compression Rate for Trust, W for the Waning rate and D for % Defection rate on response can be changed between experimental runs.
+<li>More details of the algorithms and source code can be found at  <a href="http://www.openabm.org/model/2934/version/1/view">http://www.openabm.org/model/2934/version/1/view</a>.
+</ol>
+
+
+
+</dl><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* ">Simulation Experiments
+</h3><dl compact>
+
+<dt><b><a name="3.1">3.1</a></b><dd>The experimental parameters (independent variables) in the computational model are:
+
+<ul><li>Defect rate = percentage of turns in which the respondent will not cooperate.
+<li>Waning cost.
+<li>Number of cycles in each model run.
+<li>Proportion of agents by strategy in the population.
+</ul>
+
+
+<p><dt><b><a name="3.2">3.2</a></b><dd>The model outputs (dependent variables) are:
+
+<ul><li>Trust between agents for each strategy.
+<li>Frequency of relationships for each ego ranked by trust relationship strength.
+<li>Average number of relationships per ego, divided into strong, medium and weak ties.
+</ul>
+
+
+<p><dt><b><a name="3.3">3.3</a></b><dd>Since the distribution of trust values was continuous rather than discrete, strong ties were counted as relationships in the upper tercile (33.3%) of the distribution, weak ties in the lower tercile and medium ties as relationships falling between strong and weak. The history of trust development for individual relationships was inspected to see if these conformed to the appropriate pattern predicted by the theory, i.e. for strong ties the curve will rapidly approach maximal trust, weak ties exhibit a shallow gradient with perturbations, and medium ties intermediate curves with more marked perturbations. 
+
+
+<p><dt><b><a name="3.4">3.4</a></b><dd>Strong and staged agents simulations produced a power law (or J curve) distribution of ties. The distributions were skewed towards a few stronger relationships, with a mid-range showing high variation in trust values, then a long tail of low-trust relationships with less variation. The layered distributions, with a small number of strong ties, a few more medium ties, followed by many weak ties after the gradient change in the curve, conformed approximately to SBH predictions with total ties N = 150 in agent populations of 200 and 300 with moderate waning (0.05) and defection rates (0.01).
+
+<p><center>
+<a name="fig1"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Fig1.jpg" width="600" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Figure 1</b>. Sample simulation result for average (strong/medium/weak) ties per agent for each trust model version, showing the number of ties over 2000 simulation cycles
+</td></tr></table>
+</center><p>
+
+
+<p><dt><b><a name="3.5">3.5</a></b><dd>As expected, medium- and weak-tie strategy agents produced flatter distributions with little variation between relationships at their preferred strength (see Figure 1), while the strong and staged strategy agents contributed more strong- and medium-tie relationships. This suggests that strong and staged strategies are better explanations for social preferences to create the intimacy layers required by SBH. 
+
+
+<p><dt><b><a name="3.6">3.6</a></b><dd>The trust-based model produced SBH distributions with an upper limit of circa 150 overall ties per ego within a range of population sizes from 200 to 500. The simulation shows that the number of overall relationships appears to be a function of agents' partner-preference strategy, and the trust increase/waning model.
+
+
+
+</dl><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* ">Natural Selection of Strategies
+</h3><dl compact>
+
+<dt><b><a name="4.1">4.1</a></b><dd>To extend the previous behaviour-time simulations across generations into evolutionary timescales, we investigated how well each strategy would survive given fitness criteria of wellbeing, as a benefit of social interaction and relationships, and resource acquisition as the benefit accruing from foraging and finding food. Two hypotheses explored by the fitness criteria were:
+
+<ul><li>A few intimate social relationships will improve wellbeing more than many less intimate relationships.
+<li>Many weaker relationships will improve food-finding capability by providing more information sources. This conjecture is based on Granovetter's (<a href="#granovetter1973">1973</a>) view of the value of weak ties.
+</ul>
+
+
+<p><dt><b><a name="4.2">4.2</a></b><dd>Two fitness functions were defined:
+
+
+<h5>Wellbeing 
+</h5>The fitness for wellbeing (WB) for the <i>i</i>th ego (<i>i</i> is the index of egos) is
+<p><center>
+<table border=0 cellspacing=2 cellpadding=1 width="50%">
+<tr align="Left" valign="Middle"><td>
+<img src="3/eqn.png" width="312" height="67" alt="Equation">
+</td>
+<td align="Right" valign="Middle" width=40>
+</td></tr></table>
+</center><p>
+
+where <i>N<sub>i</sub></i> is the number of total ties for ego <i>i</i>, <i>trust<sub>I,A<sub>k</sub></sub></i> is the trust from ego <i>i</i> to the <i>j</i>th tie (where <i>j</i> is the index of ties for the <i>i</i>th ego),  <i>in<sub>i</sub></i> is the total number of interactions from other agents to ego <i>i</i>, and  <i>out<sub>i</sub></i> is the total number of interactions from ego <i>i</i> to other agents. 
+
+<h5>Resource
+</h5>The fitness for resource (R) for the ith ego is
+
+<p><center>
+<table border=0 cellspacing=2 cellpadding=1 width="50%">
+<tr align="Left" valign="Middle"><td>
+<img src="3/eqn2.png" width="214" height="42" alt="Equation">
+</td>
+<td align="Right" valign="Middle" width=40>
+</td></tr></table>
+</center><p>
+
+where <i>N<sub>i</sub></i> is the number of total ties for ego <i>i</i> and <i>forage<sub>i</sub></i> is the total number of foraging turns for ego <i>i</i>. Food resource benefits from foraging turns were augmented by the number of ties per ego to model the benefit of weak ties providing information that could subsequently improve the ego's ability to find food. This function favours egos with more weak ties.
+
+<p><dt><b><a name="4.3">4.3</a></b><dd>Both functions were evaluated after a lifetime of 2000 interaction cycles. Fitness functions were ranked with selection operating on summed weighted ranks. Selection eliminated the weaker 20% of the population using summed ranks of both fitness criteria. Breeding replaced the agents by replicating individuals drawn at random from the top 20%. Mutation and crossover were included in later simulations (see Discussion section below); here we assessed fitness and competition. The initial population was set at <i>N</i> = 300 with equal numbers of the four strategies: strong, medium, weak ties and staged.
+
+<p><dt><b><a name="4.4">4.4</a></b><dd>Trust model parameters were taken from the optimal SBM fit simulation:
+
+<ol><li>Log increase/linear decrease
+<li>MC ratio on increase = 10
+<li>Waning rate = 0.08
+</ol>
+
+Simulations were run for 20 generations, to produce outputs showing the populations of agent strategies across generations and average trust in relationships divided into strong, medium and weak tie ranges. 
+
+<p><dt><b><a name="4.5">4.5</a></b><dd>We took the SBH pattern of relationships as a goal and investigated the set of waning and defection parameters, fitness functions and social strategies that produced simulations matching the observed SBH structure. Two independent variables were tested:
+
+<ul><li>The forage:meeting (FM) ratio which changed the ratio of turns for each agent from 1:1 to favour either more time spent socialising or more time spent foraging.
+<li>The fitness criteria pay-off for wellbeing and resources, set as a ratio to weight the fitness ranking algorithm.
+</ul>
+
+Dependent variables were agent population frequencies and average trust per tie strength range across generations.
+
+<p><dt><b><a name="4.6">4.6</a></b><dd>Over a range of FM ratios from 1:8 to 2:1 varying the resource:wellbeing ratio (R:WB) from 3:1 to 1:3, two patterns of results emerged with a R:WB tipping point around 1:1.5. Ratios favouring wellbeing all produced good-fit SBH layers, while ratios favouring resource created too many weak ties and too few strong and medium ties. The best fit SBH distribution occurred with R:WB = 1:3 and FM = 1:4, although strong and medium ties were slightly higher than the ideal SBH range (strong ties 6-7 vs SBH 5; medium ties 16-17 vs SBH 15). FM ratios 1:1 or more favourable to foraging all produced too many weak ties, and a range of R:WB settings from 10:1 to 1:1 favoured resource. The model requires frequent social interactions to enable trust and relationships to develop, and as long as turns are biased towards social interaction, relationship development persists over a range of fitness trade-offs, although a high bias towards resource fitness will overcome development of strong ties, as illustrated in Figure 2 for average ties per agent; and Figure 3, agents' survival by strategy.
+
+
+ 
+
+<p><center>
+<a name="fig2"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Fig2.jpg" width="600" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Figure 2</b>. Average ties per ego in SBH layers with optimal objective function settings FM (1:3) and R:WB (1:3)
+</td></tr></table>
+</center><p>
+<p><center>
+<a name="fig3"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Fig3.jpg" width="600" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Figure 3</b>. Survival of agents in a simulation. Average ties/ego and the agent strategies surviving over 20 generations with 10% defects, F:M 1:3 and RW 1:3
+</td></tr></table>
+</center><p>
+
+
+
+<p><dt><b><a name="4.7">4.7</a></b><dd>When the FM ratio was 1:1 or more favourable, all simulations within the range of neutral to resource-favouring R:WB settings produced too few strong and medium ties and too many weak ties. Over the range of simulations, strong and staged were the more successful strategies, even in simulations that produced mainly weak ties (see Table 1).
+
+
+<p><dt><b><a name="4.8">4.8</a></b><dd>Weak and medium ties were only competitive when both the fitness criteria and the FM ratio were biased in favour of resources.
+
+<p><center>
+<a name="table1"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Table1.jpg" width="800" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Table 1</b>. Dominant strategies in the simulation runs, varying fitness criteria R (resource) WB (wellbeing) weights and agent behaviour by the F (forage) M (meet) ratio reflecting time spent foraging or socialising.
+</td></tr></table>
+</center><p>
+
+
+
+<p><dt><b><a name="4.9">4.9</a></b><dd>The simulations produced an approximation to the SBH predictions for the total number of social relationships over a range of parameters; however, the best fit to N = 150 total ties per ego was only observed when the FM ratio was 1:3 in favour of social interaction (see Table 2).
+
+<p><center>
+<a name="table2"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Table2.jpg" width="800" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Table 2</b>. Total ties observed in the simulations, with the same criteria and agent setting as in Table 1.
+</td></tr></table>
+</center><p>
+
+<p><dt><b><a name="4.10">4.10</a></b><dd>Lower FM ratios do not produce sufficient opportunity for relationships to develop, while high ratios favouring more social interaction produce excessive numbers of ties and a maximally networked population (i.e. circa 290+ relationship/ego in a population of 300).
+
+
+<p><dt><b><a name="4.11">4.11</a></b><dd>The same results were obtained with a larger population size, N=500, although the optimal MC and WR parameters for SBH were MC=20, WR =0.18, as trust in relationships developed more slowly in larger populations since interactions were distributed over more individuals.
+
+
+<h4>Adding Kin to the Model
+</h4><p><dt><b><a name="4.12">4.12</a></b><dd>In Dunbar's model, relationships may be either friends (non-kin) or related alters (kin). SBH does not predict how many kin will be present in each relationship layer; instead, it appears that kin and non-kin may substitute for each other at each level as if they compete for a set number of slots in the best friends (5-6), and close friends (15) layers (<a href="#dunbar1995">Dunbar &amp; Spoors 1995</a>; <a href="#roberts2009">Roberts et al. 2009</a>). To investigate this aspect of SBH, kin were introduced into the simulation as pre-set strong ties by assigning them high-trust values before the simulation began. Kin relationships were also carried forward to the next generation modelling parent-offspring as well as sibling kinship.
+
+
+<p><dt><b><a name="4.13">4.13</a></b><dd>Adding up to five kin did not affect the SBH distribution: the kin relationships just substituted for the emergence of strong ties. Even when kin ties were seeded at a lower level of trust equivalent to medium ties, the same result was observed. The strong kin ties were preserved by preferential treatment by the waning function irrespective of the focal agent's strategy. Their existence at the onset of the simulation biased the probability distribution of the staged and strong-ties strategies to favour reinforcing kin ties rather than forming new strong ties; hence the simulation model follows empirical evidence that kin appear to substitute for best friends within inner SBH layers. If more than 5 kin were introduced, the number of strong ties increased marginally to 6-7 and this was partially sensitive to the number of initial strong kin ties, but numbers did not increase much beyond 8-9 strong ties, indicating that the model self-limits too many strong relationships even if more kin are available.
+
+
+<h4>Effect of Defections
+</h4><p><dt><b><a name="4.14">4.14</a></b><dd>Defections decreased the number of strong and medium ties approximately in proportion to the defect rate. Low rates (&le;5%) had a minor effect, reducing strong ties from 5-6 to an average 4-5 and medium ties from 16-17 to 14-15. As expected, a symmetrical impact, when both partners lose trust, was higher than asymmetric, when only the initiator/trustor loses (A loses when B defects). There was little difference between linear and log impact on trust, probably because defections were relatively infrequent. Higher defection rates reduced strong ties to an average 2-3, with medium ties averaging 11-12, although the strong and staged strategies remained competitive.
+
+
+<p><dt><b><a name="4.15">4.15</a></b><dd>The results showed 'tipping points' when FM and RWB settings changed from SBH concordant outputs to a preponderance of weak ties, following the same pattern as models without defections, suggesting that the SBH model and agent strategies tolerate moderate defection rates and show small deviations from the SBH pattern as defection rates increase.
+
+
+
+</dl><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* ">Competition between Strategies
+</h3><dl compact>
+
+<dt><b><a name="5.1">5.1</a></b><dd>To explore a more explicit evolutionary process, we used a simulation of a genotype with three genes each with four alleles:
+
+<ul><li>Social preference strategy: strong-, medium-, weak-tie preferences and staged as defined previously
+<li>Social time predisposition: forage:meet/socialise ratio, 4 settings &lt;8:1, 5:1, 4:1, 1:1&gt;
+<li>Social cooperativeness: defect ratio for the alter on social interaction, 4 settings &lt;0.01, 0.025, 0.05, 0.075&gt;
+</ul>
+
+The seed populations (N=1000) had a hierarchical distribution, containing an equal proportion of agents by strategy and then within each strategy an equal number of individuals for each FM genotype, and finally within each Strategy/FM variant an equal number of individuals for each defect genotype.
+
+<p><dt><b><a name="5.2">5.2</a></b><dd>Simulations were run with cross-over only and with cross-over and mutation. The cross-over rate was 0.9; one gene was selected at random per breeding cycle, and for the selected gene, pairing was random. Mutation was random on pseudo-continuous distributions for:
+
+<ul><li>FM range 0.125..0.5, (i.e. 8:1..1:1 ratios) divided into 1000 intervals
+<li>Defect range 0.01..0.075, divided into 1000 intervals
+<li>with a rate of 0.01 on all genes.
+</ul>
+
+<p><dt><b><a name="5.3">5.3</a></b><dd>R:WB ratios favouring resource (10:1, 5:1) produced stable populations after 50 generations with approximately 120 alters per ego, with very few strong or medium ties. Weak and medium tie strategies dominate, while the FM ratio rapidly stabilised at 0.5 and the defect rate at 0.02. An even R:WB weighting produced a similar outcome, although strong and staged strategies dominate and some strong (1) and medium ties (7) are produced, while defection approaches the minimum value 0.01. The SBH conformant result appears with R:WB ratio 1:5; see Figure 4. The number of ties/ego is slightly high for each SBH layer (total 160, with 20 medium and 7 strong), agents with the stage  and strong strategies progressively spread in the population, while FM and defections are driven towards the lower extremes of their ranges: FM 0.15, defections 0.01. 
+
+<p><center>
+<a name="fig4"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Fig4.jpg" width="600" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Figure 4</b>. Survival of agents over 50 generations with equal seed populations and R:WB weightings 1:5
+</td></tr></table>
+</center><p>
+
+
+<p><dt><b><a name="5.4">5.4</a></b><dd>When R:WB weightings are biased even more favourably in the social wellbeing direction, slightly more ties in each layer (e.g. ST 7-9, MT 20-22, Total ties 165) are produced with more marked selection pressure to reduce defections and increase social interactions at the expense of foraging. The tipping point between SBH-compliant and non-compliant simulations appears to be in the region of R:WB 1:5 to 1:6, although given the stochastic nature of selection a mix of non-compliant and compliant results appears from R:WB 1:3 to 1:9, with an increased frequency of compliant runs which dominate &gt;50% within 50 runs where ratios were &gt;1:5 in favour of WB.  
+
+
+<p><dt><b><a name="5.5">5.5</a></b><dd>Since the strong and staged strategies were competitive over a wide range of fitness criteria, we tested their ability to spread in a population of weak-tie agents. When populations were seeded with 1% strong and 1% staged agents in a population of weak-tie agents with FM and defect gene settings assigned at random using a roulette algorithm, both strong and staged spread rapidly to dominate the population within 10-20 generations. The model outputs (see Figure 5) were the same as found in equal seed populations with SBH conforming patterns being produced when R:WB weightings were 1:5 or better and the weak tie dominant pattern in 1:1 or more resource-favourable ratios. As before, the FM ratio stabilised at 0.5 while the defect rate was driven down towards the minimal setting with an average 0.05. The same result was produced with 0.5 % seed populations of stage and strong agents, so it appears these strategies have a strong competitive advantage over a range of fitness criteria.
+
+ 
+
+<p><center>
+<a name="fig5"></a><table border=0 cellspacing=2 cellpadding=1>
+<tr align="Center" valign="Middle"><td>
+<img src="3/Fig5.jpg" width="600" alt="Figure">
+</td></tr>
+<tr align="Center" valign="Middle"><td>
+<b>Figure 5</b>. Survival of agents over 50 generations with 1% seed populations of strong and staged agents
+</td></tr></table>
+</center><p>
+
+
+<p><dt><b><a name="5.6">5.6</a></b><dd>Since the evolutionary simulations produced slightly different SBH patterns than the simulations with selection but no breeding, we examined a range of breeding manipulations. Crossover-only runs produced slightly better SBH conformant results, with similar FM and defect rate results. Mutation only with an initial homogeneous FM population set at 0.5 produced run-away increases in FM genes to favour foraging, with an average ratio of 0.7 on a mutation range 0 to 1.0; however, defection rates did not spread with similar initial settings and ranges. 
+
+
+<p><dt><b><a name="5.7">5.7</a></b><dd>Multiple simulation runs (50) with tipping point R:WB 1:5 setting produced 22% non-SBH compliant results with weak-tie agents dominating and F:M ratios stabilising at 0.5 from an initial average 0.25. The other 78% were SBH-compliant with the staged strategy dominating with strong in 22 runs; strong dominating with staged in 12; and in five runs both strategies were approximately equal. In all these SBH-compliant runs, F:M ratios decreased from 0.25 to levels varying from 0.2 to 0.15, the latter being more frequent. As might be expected, multiple runs in the R:WB range of 1:1 to 1:10 produced a high proportion of SBH-compliant results as the ratio favoured wellbeing fitness with &lt;5% non-compliant at 1:8 and zero at 1:10. These results suggest two evolutionary-stable scenarios: when fitness rewards foraging and feeding, populations become dominated by individuals that favour weak social ties and spending more time foraging; conversely, as wellbeing is favoured, populations are dominated by the social strategy favouring fewer stronger relationships, although weak ties also develop.
+
+
+<p><dt><b><a name="5.8">5.8</a></b><dd>Since our model was biased against defections, as there was little reward for increased defection, so a final manipulation explored increasing the opportunity cost reward of defection by giving defectors more foraging turns. Extra foraging turns (1,2,5,10) for each defection modelled the opportunity gained as additional feeding/foraging time by forgoing social interaction. The model was stable, producing a similar pattern as before, with SBH runs dominating when R:WB ratios were 1:5 or more favourable for WB. The distribution of ties per ego and the dominance of strong and stage strategies continued with higher defectors being eliminated until the defect reward was 5 additional foraging turns. At 5 or above, weak tie-high defector individuals were progressively more competitive even with R:WB ratios of 1:5 and above. Defector strategies therefore need a considerable reward to compete with social investment strategies. 
+
+
+
+</dl><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* ">Discussion and Conclusions
+</h3><dl compact><dt><dd>
+
+<h4>Properties of the Model
+</h4><dt><b><a name="6.1">6.1</a></b><dd>The contribution of the model presented in this paper is to provide a software simulation tool for exploring the evolution of social strategies and social relationships. The tool provides a causal account for the development of complex social structures based on agent populations with different strategies governing how they manage trade-offs between social v. foraging time and social preferences to favour either the few or the many. Development of social structure could be investigated under a range of fitness conditions for a Wellbeing objective function which was rewarded by social interaction and Resource rewarded by foraging behaviour. The model was based on previous work which implemented a trust-modulated algorithm with logarithmic functions governing the relationship between interaction frequency and relationship strength (or trust) to model plausible behavioural assumptions for a law of diminishing returns for increasing interaction frequency on strengthening relationships, while also making stronger relationships more resilient to waning.
+
+
+<p><dt><b><a name="6.2">6.2</a></b><dd>The social:feeding contrast in the model could be satisfied by any pair of state variables that had the characteristics defined in the model. For example the variables don't have to be time budget components, just things that affect fitness in different ways that have costs to acquire or perform. Hence the model provides a mechanism for investigating a variety of contrasts between evolutionary pressures (or fitness functions) within a meeting - interaction - partner choice paradigm. While evolution of social structure and social relationship formation are the main foci of the model, it has the following more general properties which can be applied to modelling social phenomena:
+
+<ul><li>The probabilistic function for selection of alter agents can be parameterised towards different areas in the frequency distribution of prior interactions for the focal agent. This facilitates expression of different social preference strategies.
+<li>The relationship between change in relationship strength and interaction frequency is parameterised to set the rate of change. This enables assumptions contained in the underlying trust model to be changed from log to linear increase/decrease.
+<li>Fitness functions can be weighted to investigate a range of evolutionary selection pressures 
+<li>The initial population of agents, and their strategies, can be specified to explore survival of different population sizes and strategy mixes.
+<li>Mutation rates, cross-over rules and frequency, and selection rates are all parameterised to facilitate sensitivity analysis of social structures under different reproductive and selection conditions.
+<li>Cycles per generation and number of generations can be changed to explore different combinations of behavioural time (cycles) and evolution.
+<li>Outputs are: (a) relationships per ego ranked by strength aggregated for the whole agent population; in tercile (strong, medium, weak) categories of the distribution for each cycle; (b) frequencies of agents by strategy surviving across generations; (c) totals of agents surviving after N generations aggregated across several model runs which varied fitness conditions; (d) social structures defined by distributions of strong/medium/weak ties aggregated across several model runs which varied fitness conditions, to enable cross-referencing to composition of surviving agents (see (c)).
+</ul>
+
+
+<h4>Sociological Assumptions
+</h4><p><dt><b><a name="6.3">6.3</a></b><dd>The model produced insight into plausible behavioural processes by which the distribution of relationships predicted by SBH might arise. The agent strategies implicit in SBH, favouring fewer stronger ties and the staged developmental strategy that favoured stronger ties earlier and more weaker ties later, produced results that best matched  observed relationship distributions. These strategies are supported by empirical observations of human social relationships in which bands of best/close friends and less intimate casual friends (<a href="#baumeister1995">Baumeister &amp; Leary 1995</a>; <a href="#brown2009">Brown &amp; Brown 2009</a>; <a href="#hays1989">Hays 1989</a>); and by empirical studies on relationships in a variety of societies (<a href="#hill2003">Hill &amp; Dunbar 2003</a>; <a href="#wellman2001">Wellman et al. 2001</a>, <a href="#wellman2006">2006</a>; <a href="#zhou2005">Zhou et al. 2005</a>). Our model suggests that relationship layers based on a discrete distribution of emotional closeness can arise from social strategies favouring strong relationships within an envelope of parameter settings for waning and uncooperative responses.
+
+
+<p><dt><b><a name="6.4">6.4</a></b><dd>Social strategies (strong and staged) are highly competitive and invade populations from a low baseline; furthermore, they are robust and survive over a range of fitness criteria, even when defection is rewarded with a considerable opportunity/cost compensation. The model's tipping point of resource:wellbeing ratio 1:5 is of course arbitrary; however, these settings do have plausible justification insofar as ecological studies of social behaviour show that humans devote more time to social interaction, compared to other activities, than do other primates (<a href="#dunbar2008">Dunbar et al. 2008</a>). Furthermore, the reward for wellbeing may be more important than feeding resource gain, since the social compensation of wellbeing fitness should be manifest not only in stress reduction, but also in increased survival of offspring as well as predator protection (<a href="#dunbar2010">Dunbar 2010</a>; <a href="#shultz2004">Shultz et al. 2004</a>). The simulation indicates that the pattern of human relationships predicted by SBH and supported by the friendship literature may only arise in a small part of the parameter range which represents proportionately higher rewards for investing in social behaviour rather than foraging. This agrees with the observed ratio of social:foraging time, which is higher in humans than in other species, probably due to more efficient food gathering (<a href="#dunbar2009">Dunbar et al. 2009</a>; <a href="#lehmann2007">Lehmann et al. 2007</a>, <a href="#lehmann2008">2008</a>). Of course, these findings are constrained by the modelling assumptions, i.e relationships are simulated according to two forms of relationship sustaining dynamics, linear accumulation of strength from interaction frequency and a slow decaying function in which trust is implicit. Although our model does not directly distinguish between feeding time and resource gain as explored in optimal foraging models, the effect of the trade-off between social time and foraging will still be present.
+
+
+<p><dt><b><a name="6.5">6.5</a></b><dd>Kin and close friends play a similar role in our model, substituting for each other in competition for a limited number of 'slots' in the support and sympathy layers, which agrees with empirical observations. This suggests that inclusive fitness in the shared genetic kin sense (<a href="#hamilton1964">Hamilton 1964</a>), may also apply to close friends where the benefits of reciprocity may have driven evolutionary predispositions to favour the few. However, whether such predispositions arise from social learning or longer-term genetic predisposition is a difficult issue to ultimately resolve, as demonstrated by debates in the evolutionary psychology literature (<a href="#tooby1989">Tooby &amp; Cosimides 1989</a>). Our contribution is to illustrate how an evolutionary process could produce predispositions which underlie observed human social structures, with a plausible account of how the role of cognition in the form of trust might produce observed stratification of strong-, medium- and weak-ties relationships. 
+
+
+<p><dt><b><a name="6.6">6.6</a></b><dd>Although we have demonstrated that SBH could evolve in social groups via simple social relationship strategies such as favour-the-few and a trust mechanism underpinning relationship formation, there are alternative explanations for the emergence of human social groups, although no rival theories explain the observed intimacy layers in human relationships. For example, a rival explanation for social cooperation is alliance formation for hunting, intergroup competition and predatory protection. Alternatively, 'favour-the-few' strategies might arise from social learning, if rewards from cooperation and reduced tension are apparent to reinforce learning, or imitation in social learning (<a href="#laland2011">Laland &amp; Brown 2011</a>; <a href="#tooby1989">Tooby &amp; Cosimides 1989</a>; <a href="#whiten2011">Whiten et al. 2011</a>); however, social learning of such preferences should produce a concentration of strong ties to the exclusion of weaker ties, which is clearly not the case. Even if differential rewards are posited to argue for the strategies we propose arising from cognitive learning processes, variation in human social relationship structures across societies might be expected since the reward environment is unlikely to be uniform. Considerable evidence supports the SBH assertion that social relationship layers are remarkably similar across populations (<a href="#dunbar2008">Dunbar 2008</a>, <a href="#dunbar2010">2010</a>; <a href="#dunbar2007">Dunbar &amp; Schultz 2007</a>; <a href="#dunbar1995">Dunbar &amp; Spoors 1995</a>). This argues for genetic predispositions. Nevertheless, we intend to explore the tension between socio-cultural and alternative genetic predispositions in our future research. 
+
+
+<h4>Related Research
+</h4><p><dt><b><a name="6.7">6.7</a></b><dd>Simulation of the emergence of complex social networks in agent populations with strategies governed by exchange theory and social learning of relationship preferences (<a href="#pujol2005">Pujol et al. 2005</a>) is related to our simulation of social preferences; however, Pujol and colleagues modelled the emergence of social networks rather than the social structure of our model, which presents an aggregate view of social relationships within a population rather than a topology of relationships. The emergence of social predispositions within agent populations has been modelled for costly signalling theory, which originally explained trade-off between benefits accruing from signalling in mate selection set against the predation costs; this was adapted by Wildman and Sosis (<a href="#wildman2011">2011</a>) to investigate display trade-offs and group stability in human culture with different configurations of leaders' charisma and susceptibilities of other group members. 
+
+
+<p><dt><b><a name="6.8">6.8</a></b><dd>Agent-based models of cooperation and social relationships have been motivated by a wide variety of contexts; for example, the balance between reward cooperation and punishment for anti-social behaviour in public goods games (<a href="#ye2011">Ye et al. 2011</a>), collaboration in peer-to-peer networking systems with ranking schemes for agent selection (<a href="#yu2004">Yu et al. 2004</a>), the development of trust in inter-organisation relationships (<a href="#kim2009">Kim 2009</a>), and the extensive literature on the biological evolution of cooperation. Macy and Skorvetz (<a href="#macy1998">1998</a>) showed that trust could evolve among strangers in local groups in simulations with reputation assessment strategies and options to cooperate, defect or refuse to participate. Others (<a href="#boyd1988">Boyd &amp; Richerson 1988</a>, <a href="#nowak2005">Nowak &amp; Sigmund 2005</a>) have demonstrated that reputation mechanisms (i.e. indirect reciprocity) can lead to formation of individual preferences underlying social relationships. However, most models were concerned with the tension between cooperation v. defection strategies rather than the evolution of complex social structures. 
+
+
+<p><dt><b><a name="6.9">6.9</a></b><dd>Segmentation of social relationships into different intensities also emerges from simulations of interaction in social networks (<a href="#whitmeyer2002">Whitmeyer 2002</a>). Whitmeyer assumed that time spent in social interaction influences relationship strength, and developed a social network model to predict the agents' social relationships showing that a few more intense relationships emerge at the expense of more diffuse ties, with optima similar to SBH (N=5). Whitmeyer adapted Heider's balance theory's constraint (<a href="#heider1946">Heider 1946</a>) that too many connected friends increases the probability of conflict, and hence reduces trust. Risk of conflict may provide a constraint-based alternative explanation for the favour-the-few strategy; however, it does not explain the structure of medium and weak ties. Our investigations have extended previous models which demonstrate that social network structures emerge either when preferences for trustworthy individuals are present (i.e. 'cliquers': <a href="#whitmeyer2002">Whitmeyer 2002</a>), or knowledge of altruistic and cooperative behaviour is spread in social networks as a collective memory (<a href="#mohtashemi2003">Mohtashemi &amp; Mui 2003</a>). However, in contrast to previous RPD models, we have demonstrated how a computational model of trust and social behaviour predispositions can lead to the emergence of social structures conforming to empirical studies of human friendship (<a href="#hays1989">Hays 1989</a>; <a href="#oswald2004">Oswald et al. 2004</a>).
+
+
+<h4>Limitations and Future Developments
+</h4>
+
+<p><dt><b><a name="6.12">6.10</a></b><dd>Our current model does not account for spatial effects, which have been modelled by Beltran et al. (<a href="#beltran2006">2006</a>) who demonstrated that groups can emerge from interactions within a lattice topology as a consequence of agents' preferences to maintain personal or social space.Defections are currently modelled as a global parameter, whereas in RPD social cooperation models, defection governs selection of social partners. Although we demonstrated that the SBH model was robust in the face of an increased reward for defecting, we did not use memory of previous defections as an influence in choosing social partners. Also our current model assumes an ego network view so the consequences for relationship development of interactions across a whole social network were not considered. Only two objective functions are currently considered - wellbeing and resources - which may be a limited view of the selection pressures on social relationships; for instance, more closer relationships increase stress and relationships expose individuals to risks when they have to reciprocate favours in alliances (<a href="#sutcliffe2012">Sutcliffe et al. 2012</a>). In future we will extend the model with objective functions to explore the trade-off between negative (risk/stress) and positive (wellbeing) selection pressures.
+
+
+
+
+
+
+</dl><hr><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* "> Acknowledgements
+</h3><dl compact><dt><dd>
+<!-Acknowledgements here -->
+
+
+This research was supported by ESRC/EPSRC Cognitive Foresight Programme project TESS, developing Theory for Evolving Socio-technical Systems. RD's research is also funded by the British Academy Centenary Research Project, the EU-FP7 SocialNets project and the EU-FP7 ICTe-Collective Project.
+
+
+</dl><hr><h3><img align=Bottom src="/gifs/bullet.gif" width="23" height="23" alt="* "> References</h3><dl compact><dt><dd>
+ <!-- References here -->
+
+
+<a name="akerman2007">AKERMAN</a>, J.M., Kenrick, D.T. &amp; Schaller, M. (2007). Is friendship akin to kinship? <i>Evolution and Human Behaviour</i>, 28, 365-374.  <a class="doi" href="http://dx.doi.org/10.1016/j.evolhumbehav.2007.04.004" target="_blank">[doi:10.1016/j.evolhumbehav.2007.04.004]</a>
+<p><a name="arrow2000">ARROW</a>, H., McGrath, J.E. &amp; Berdahl, J.L. (2000). <i>Small groups as complex systems: Formation, coordination, development and adaptation</i>. Thousand Oaks CA: Sage Publications. 
+<p><a name="baumeister1995">BAUMEISTER</a> R.F. &amp; Leary, M.R. (1995) The need to belong: Desire for interpersonal attachments as a fundamental human motivation. <i>Psychological Bulletin</i>, 117(3), 497-529.  <a class="doi" href="http://dx.doi.org/10.1037/0033-2909.117.3.497" target="_blank">[doi:10.1037/0033-2909.117.3.497]</a>
+<p><a name="beltran2006">BELTRAN</a>, F.S., Salas, L. &amp; Quera, V. (2006). Spatial behavior in groups: An agent-based approach. <i>Journal of Artificial Societies and Social Simulation</i>, 9(3),5  <a href="https://www.jasss.org/9/3/5.html">https://www.jasss.org/9/3/5.html</a> 
+<p><a name="boyd1988">BOYD</a>, R. &amp; Richerson, P.J. (1988) The evolution of reciprocity in sizable groups. <i>Journal of Theoretical Biology</i>, 132, 337-356.  <a class="doi" href="http://dx.doi.org/10.1016/S0022-5193(88)80219-4" target="_blank">[doi:10.1016/S0022-5193(88)80219-4]</a>
+<p><a name="brown2009">BROWN</a>, S.L. &amp; Brown, R.M. (2009) Selective investment theory: Recasting the functional significance of close relationships. <i>Psychological Inquiry</i>, 17, 1-29.  <a class="doi" href="http://dx.doi.org/10.1207/s15327965pli1701_01" target="_blank">[doi:10.1207/s15327965pli1701_01]</a>
+<p><a name="buys1979">BUYS</a>, C.J. &amp; Larson, K.L. (1979). Human sympathy groups. <i>Psychology Reports</i>, 45, 547-553.  <a class="doi" href="http://dx.doi.org/10.2466/pr0.1979.45.2.547" target="_blank">[doi:10.2466/pr0.1979.45.2.547]</a>
+<p><a name="dunbar1993">DUNBAR</a>, R.I.M. (1993) Coevolution of neocortex size, group size and language in humans. <i>Behavioral Brain Sciences</i>, 16, 681-735.  <a class="doi" href="http://dx.doi.org/10.1017/S0140525X00032325" target="_blank">[doi:10.1017/S0140525X00032325]</a>
+<p><a name="dunbar1998">DUNBAR</a>, R.I.M. (1998) The Social Brain Hypothesis. <i>Evolutionary Anthropology</i>, 6, 178-190.  <a class="doi" href="http://dx.doi.org/10.1002/(SICI)1520-6505(1998)6:5<178::AID-EVAN5>3.0.CO;2-8" target="_blank">[doi:10.1002/(SICI)1520-6505(1998)6:5<178::AID-EVAN5>3.0.CO;2-8]</a>
+<p><a name="dunbar2008">DUNBAR</a>, R.I.M. (2008) Mind the gap: Or why humans aren't just great apes. <i>Proceedings British Academy</i>, 154, 403-423. 
+<p><a name="dunbar2010">DUNBAR</a>, R.I.M. (2010) Brain and behaviour in primate evolution. In P.H. Kappeler &amp; J. Silk (Eds) <i>Mind the gap: tracing the origins of human universals</i>, 315-330. Berlin: Springer.  <a class="doi" href="http://dx.doi.org/10.1007/978-3-642-02725-3_15" target="_blank">[doi:10.1007/978-3-642-02725-3_15]</a>
+<p><a name="dunbar2007">DUNBAR</a>, R. &amp; Shultz, S. (2007). Understanding primate brain evolution. <i>Philosophical Transactions of the Royal Society London, 362B</i>, 649-658.  <a class="doi" href="http://dx.doi.org/10.1098/rstb.2006.2001" target="_blank">[doi:10.1098/rstb.2006.2001]</a>
+<p><a name="dunbar1995">DUNBAR</a>, R.I.M. &amp; Spoors, M. (1995) Social networks, support cliques, and kinship. <i>Human Nature</i>, 6, 273-290.  <a class="doi" href="http://dx.doi.org/10.1007/BF02734142" target="_blank">[doi:10.1007/BF02734142]</a>
+<p><a name="dunbar2009">DUNBAR</a>, R.I.M., Korstjens, A. &amp; Lehmann, J. (2009) Time as an ecological constraint. <i>Biological Reviews</i>, 84, 413-429.  <a class="doi" href="http://dx.doi.org/10.1111/j.1469-185X.2009.00080.x" target="_blank">[doi:10.1111/j.1469-185X.2009.00080.x]</a>
+<p><a name="granovetter1973">GRANOVETTER</a>, M. (1973) The strength of weak ties. <i>American Journal of Sociology</i>, 78, 1360-1380.  <a class="doi" href="http://dx.doi.org/10.1086/225469" target="_blank">[doi:10.1086/225469]</a>
+<p><a name="granovetter1985">GRANOVETTER</a>, M. (1985) Economic action and social structure: The problem of embeddedness. <i>American Journal of Sociology</i>, 91, 481-510.  <a class="doi" href="http://dx.doi.org/10.1086/228311" target="_blank">[doi:10.1086/228311]</a>
+<p><a name="hamilton1964">HAMILTON</a>, W.D. (1964) The genetical evolution of social behaviour, I and II. <i>Journal of Theoretical Biology</i>, 7, 1-16, 17-52.  <a class="doi" href="http://dx.doi.org/10.1016/0022-5193(64)90039-6" target="_blank">[doi:10.1016/0022-5193(64)90039-6]</a>
+<p><a name="hardy2006">HARDY</a>, C.L. &amp; Van Vugt, M. (2006) Nice guys finish first: The competitive altruism hypothesis. <i>Personality and Social Psychology Bulletin</i>, 32, 1402-1413.  <a class="doi" href="http://dx.doi.org/10.1177/0146167206291006" target="_blank">[doi:10.1177/0146167206291006]</a>
+<p><a name="hays1989">HAYS</a>, R.B. (1989) The day-to-day functioning of close versus casual friendships. <i>Journal of Social and Personal Relationships</i>, 6, 21-37.  <a class="doi" href="http://dx.doi.org/10.1177/026540758900600102" target="_blank">[doi:10.1177/026540758900600102]</a>
+<p><a name="heider1946">HEIDER</a>, F. (1946) Attitudes and cognitive organization. <i>Journal of Psychology</i>, 21, 107-112.  <a class="doi" href="http://dx.doi.org/10.1080/00223980.1946.9917275" target="_blank">[doi:10.1080/00223980.1946.9917275]</a>
+<p><a name="hill2003">HILL</a>, R.A. &amp; Dunbar, R.I.M. (2003) Social network size in humans. <i>Human Nature</i>, 14, 53-72.  <a class="doi" href="http://dx.doi.org/10.1007/s12110-003-1016-y" target="_blank">[doi:10.1007/s12110-003-1016-y]</a>
+<p><a name="hill2008">HILL</a>, R.A., Bentley, A. &amp; Dunbar, R.I.M. (2008) Network scaling reveals consistent fractal pattern in hierarchical mammalian societies. <i>Biology Letters</i>, 4, 748-751.  <a class="doi" href="http://dx.doi.org/10.1098/rsbl.2008.0393" target="_blank">[doi:10.1098/rsbl.2008.0393]</a>
+<p><a name="hruschka2006">HRUSCHKA</a>, D.J. &amp; Henrich, J. (2006) Friendship, cliquishness, and the emergence of cooperation. <i>Journal of Theoretical Biology,</i> 239, 1-15.  <a class="doi" href="http://dx.doi.org/10.1016/j.jtbi.2005.07.006" target="_blank">[doi:10.1016/j.jtbi.2005.07.006]</a>
+<p><a name="kim2009">KIM</a>, W.-S. (2009). Effects of trust on complex adaptive supply networks: An agent-based simulation study. <i>Journal of Artificial Societies and Social Simulation</i>, 13(3),4  <a href="https://www.jasss.org/12/3/4.html">https://www.jasss.org/12/3/4.html</a> 
+<p><a name="laland2011">LALAND</a>, K.N. &amp; Brown, G.R. (2011). <i>Sense and nonsense: Evolutionary perspectives on human behaviour</i>, 2nd ed. London: Oxford University Press. 
+<p><a name="lehmann2007">LEHMANN</a>, J., Korstjens, A.H. &amp; Dunbar, R.I.M. (2007). Group size, grooming and social cohesion in primates. <i>Animal Behaviour</i>, 74, 1617-1629.  <a class="doi" href="http://dx.doi.org/10.1016/j.anbehav.2006.10.025" target="_blank">[doi:10.1016/j.anbehav.2006.10.025]</a>
+<p><a name="lehmann2008">LEHMANN</a>, J., Korstjens, A.H., &amp; Dunbar, R.I.M. (2008). Time management in great apes: Implications for gorilla biogeography. <i>Evolutionary Ecology Research</i>, 10, 515-536. 
+<p><a name="lu2009">LU</a>, Y.-E., Roberts, S., Lio, P., Dunbar, R. &amp; Crowcroft, J. (2009). Size matters: Variation in personal network size, personality and effect on information transmission, <i>CSE</i>, <i>International Conference on Computational Science and Engineering</i>, 4, 188-193. doi: 10.1109/CSE.2009.179' , 2009.  <a class="doi" href="http://dx.doi.org/10.1109/CSE.2009.179" target="_blank">[doi:10.1109/CSE.2009.179]</a>
+<p><a name="macy1998">MACY</a>, M.W. &amp; Skvoretz, J. (1998). The evolution of trust and cooperation between strangers: A computational model. <i>American Sociological Review</i>, 63(5), 638-660.  <a class="doi" href="http://dx.doi.org/10.2307/2657332" target="_blank">[doi:10.2307/2657332]</a>
+<p><a name="madsen2007">MADSEN</a>, E., Tunney, R., Fieldman, G., Plotkin, H., Dunbar, R.I.M., Richardson, J. &amp; McFarland, D. (2007). Altruism and kinship: A cross-cultural experimental study. <i>British Journal of Psychology</i>, 98, 339-359.  <a class="doi" href="http://dx.doi.org/10.1348/000712606X129213" target="_blank">[doi:10.1348/000712606X129213]</a>
+<p><a name="mcpherson2006">MCPHERSON</a>, M., Smith-Lovin, L., &amp; Brashears, M.E. (2006) Social isolation in America: Changes in core discussion networks over two decades. <i>American Sociological Review</i>, 71, 353-375.  <a class="doi" href="http://dx.doi.org/10.1177/000312240607100301" target="_blank">[doi:10.1177/000312240607100301]</a>
+<p><a name="mohtashemi2003">MOHTASHEMI</a>, M. &amp; Mui, L. (2003) Evolution of indirect reciprocity by social information: the role of trust and reputation in evolution of altruism. <i>Journal of Theoretical Biology</i>, 223(4), 523-531.  <a class="doi" href="http://dx.doi.org/10.1016/S0022-5193(03)00143-7" target="_blank">[doi:10.1016/S0022-5193(03)00143-7]</a>
+<p><a name="moreland1982">MORELAND</a>, R.L. &amp; Levine, J.M. (1982). Socialization in small groups: temporal changes in individual-group relations. In L. Berkowitz (Ed.) <i>Advances in experimental social psychology, </i>15. New York: Academic Press. 
+<p><a name="nowak1998">NOWAK</a>, M. &amp; Sigmund, K. (1998) Evolution of indirect reciprocity by image scoring. <i>Nature</i>, 383, 537-577.  <a class="doi" href="http://dx.doi.org/10.1038/31225" target="_blank">[doi:10.1038/31225]</a>
+<p><a name="nowak2005">NOWAK</a>, M. &amp; Sigmund, K. (2005) Evolution of indirect reciprocity, <i>Nature</i>, 437, 1291-1298.  <a class="doi" href="http://dx.doi.org/10.1038/nature04131" target="_blank">[doi:10.1038/nature04131]</a>
+<p><a name="ostrom2002">OSTROM</a>, E. (2002) Towards a behavioural theory linking trust, reciprocity and reputation. In E. Ostrom &amp; J. Walker (Eds), <i>Trust and reciprocity: Interdisciplinary lessons from experimental research,</i> 19-79. New York: Russel Sage Foundation. 
+<p><a name="oswald2004">OSWALD</a>, D.L, Clark, E.M. &amp; Kelly, C.M. (2004) Friendship maintenance: An analysis of individual and dyad behaviours. <i>Journal of Social and Clinical Psychology</i>, 23(3), 413-441.  <a class="doi" href="http://dx.doi.org/10.1521/jscp.23.3.413.35460" target="_blank">[doi:10.1521/jscp.23.3.413.35460]</a>
+<p><a name="pujol2005">PUJOL</a>, J.M., Flache, A., Delgado, J. &amp; Sang&uuml;esa, R. (2005) How can social networks ever become complex? Modelling the emergence of complex networks from local social exchanges. <i>Journal of Artificial Societies and Social Simulation</i>, 8(4), 12  <a href="https://www.jasss.org/8/4/12.html">https://www.jasss.org/8/4/12.html</a> 
+<p><a name="reicher1995">REICHER</a>, S.D., Spears, R. &amp; Postmes, T. (1995). A social identity model for deindividualisation phenomena. <i>European Review of Social Psychology</i>, 6, 161-198.  <a class="doi" href="http://dx.doi.org/10.1080/14792779443000049" target="_blank">[doi:10.1080/14792779443000049]</a>
+<p><a name="rempel1985">REMPEL</a>, J.K., Holmes, J.G. &amp; Zanna, M.P. (1985). Trust in close relationships. <i>Journal of Personality and Social Psychology</i>, 49(1), 95-112  <a class="doi" href="http://dx.doi.org/10.1037/0022-3514.49.1.95" target="_blank">[doi:10.1037/0022-3514.49.1.95]</a>
+<p><a name="roberts2011">ROBERTS</a>, S.B.G. &amp; Dunbar, R.I.M. (2011) Communication in social networks: Effects of kinship, network size and emotional closeness. <i>Personal Relationships</i>, 18(3), 439-452.  <a class="doi" href="http://dx.doi.org/10.1111/j.1475-6811.2010.01310.x" target="_blank">[doi:10.1111/j.1475-6811.2010.01310.x]</a>
+<p><a name="roberts2003">ROBERTS</a>, S.B.G. &amp; Renwick, J.S. (2003) The development of cooperative relationships: An experiment. <i>Proceedings of the Royal Society of London</i>, 270, 2279-2283.  <a class="doi" href="http://dx.doi.org/10.1098/rspb.2003.2491" target="_blank">[doi:10.1098/rspb.2003.2491]</a>
+<p><a name="roberts2009">ROBERTS</a>, S.B.G., Dunbar, R., Pollet, T. &amp; Kuppens, T. (2009) Exploring variations in active network size: Constraints and ego characteristics. <i>Social Networks</i>, 31, 138-146.  <a class="doi" href="http://dx.doi.org/10.1016/j.socnet.2008.12.002" target="_blank">[doi:10.1016/j.socnet.2008.12.002]</a>
+<p><a name="rosasa2010">ROSASA</a>, A. (2010) Evolutionary game theory meets social science: is there a unifying rule for human cooperation? <i>Journal of Theoretical Biology,</i> 264(2), 450-456.  <a class="doi" href="http://dx.doi.org/10.1016/j.jtbi.2010.02.015" target="_blank">[doi:10.1016/j.jtbi.2010.02.015]</a>
+<p><a name="rose1986">ROSE</a>, S. &amp; Serafica, F. (1986) Keeping and ending casual, close and best friendships. <i>Journal of Social and Personal Relationships</i>, 3(3), 275-288.  <a class="doi" href="http://dx.doi.org/10.1177/0265407586033002" target="_blank">[doi:10.1177/0265407586033002]</a>
+<p><a name="shultz2004">SHULTZ</a>, S., Noe, R., McGraw, S. &amp; Dunbar, R.I.M. (2004) A community-level evaluation of the impact of prey behavioural and ecological characteristics on predator diet composition. <i>Proceedings of the Royal Society of London</i>, 271B, 725-732.  <a class="doi" href="http://dx.doi.org/10.1098/rspb.2003.2626" target="_blank">[doi:10.1098/rspb.2003.2626]</a>
+<p><a name="stiller2007">STILLER</a>, J. &amp; Dunbar, R. (2007). Perspective-taking and social network size in humans. <i>Social Networks</i>, 29, 93-104.  <a class="doi" href="http://dx.doi.org/10.1016/j.socnet.2006.04.001" target="_blank">[doi:10.1016/j.socnet.2006.04.001]</a>
+<p><a name="sutcliffe2012">SUTCLIFFE</a>, A.G. &amp; Wang, D. (2012). Computational modelling of trust and social relationships, <i>Journal of Artificial Societies and Social Simulation</i>, 15(1), 3.  <a href="https://www.jasss.org/15/1/3.html">https://www.jasss.org/15/1/3.html</a> 
+<p><a name="sutcliffe2012">SUTCLIFFE</a>, A., Dunbar, R.I.M., Binder, J. &amp; Arrow, H. (2012). Relationships and the social brain: integrating psychological and evolutionary perspectives. <i>British Journal of Psychology</i> (in press).  <a class="doi" href="http://dx.doi.org/10.1111/j.2044-8295.2011.02061.x" target="_blank">[doi:10.1111/j.2044-8295.2011.02061.x]</a>
+<p><a name="tajfel1979">TAJFEL</a>, H. &amp; Turner, J.C. (1979). An integrative theory of intergroup conflict. In W. Austin and S. Worchel (Eds), <i>The social psychology of intergroup relations</i>. Monterey CA: Brooks/Cole. 
+<p><a name="tooby1989">TOOBY</a>, J. &amp; Cosimides, L. (1989) Evolutionary psychology and the generation of culture, I: theoretical considerations. <i>Ethology and Sociobiology,</i> 10, 29-49.  <a class="doi" href="http://dx.doi.org/10.1016/0162-3095(89)90012-5" target="_blank">[doi:10.1016/0162-3095(89)90012-5]</a>
+<p><a name="tuckman1965">TUCKMAN</a>, B.W. (1965). Developmental sequence in small groups. <i>Psychological Bulletin</i>, 63, 384-399.  <a class="doi" href="http://dx.doi.org/10.1037/h0022100" target="_blank">[doi:10.1037/h0022100]</a>
+<p><a name="wellman1990">WELLMAN</a>, B. &amp; Wortley, S. (1990) Different strokes from different folks: Community ties and social support. <i>American Journal of Sociology</i>, 96, 558-588.  <a class="doi" href="http://dx.doi.org/10.1086/229572" target="_blank">[doi:10.1086/229572]</a>
+<p><a name="wellman2001">WELLMAN</a>, B., Haase, A.Q., Witte, J. &amp; Hampton, K. (2001) Does the internet increase, decrease, or supplement social capital? <i>American Behavioural Scientist</i>, 45, 436-455.  <a class="doi" href="http://dx.doi.org/10.1177/00027640121957286" target="_blank">[doi:10.1177/00027640121957286]</a>
+<p><a name="wellman2006">WELLMAN</a>, B., Hogan, B., Berg, K., Boase, J., Carrasco, J.A., C&ocirc;t&eacute;, R., Kayahara, J., Kennedy, T. &amp; Tran, P. (2006) Connected lives: the project. In P. Purcell (Ed.) <i>Networked neighborhoods</i>. Berlin: Springer.  <a class="doi" href="http://dx.doi.org/10.1007/1-84628-601-8_8" target="_blank">[doi:10.1007/1-84628-601-8_8]</a>
+<p><a name="whiten2011">WHITEN</a>, A., Hinde, R., Laland, K.N. &amp; Stringer, C. (2011) Culture evolves. <i>Philosophical Transactions of the Royal Society B</i>, 366, 938-948  <a class="doi" href="http://dx.doi.org/10.1098/rstb.2010.0372" target="_blank">[doi:10.1098/rstb.2010.0372]</a>
+<p><a name="whitmeyer2002">WHITMEYER</a> J.M. (2002) A deductive approach to friendship networks. <i>Journal of Mathematical Sociology</i>, 26(3), 147-165.  <a class="doi" href="http://dx.doi.org/10.1080/00222500212989" target="_blank">[doi:10.1080/00222500212989]</a>
+<p><a name="wildman2011">WILDMAN</a>, W.J. &amp; Sosis, R. (2011) Stability of groups with costly beliefs and practices. <i>Journal of Artificial Societies and Social Simulation</i>, 14(3), 6.  <a href="https://www.jasss.org/14/3/6.html">https://www.jasss.org/14/3/6.html</a> 
+<p><a name="yamagashi1998">YAMAGASHI</a>, T., Cook, K.S. &amp; Watabe, M. (1998) Uncertainty, trust and commitment formation in the United States and Japan. <i>American Journal of Sociology</i>, 104(1), 165-194.  <a class="doi" href="http://dx.doi.org/10.1086/210005" target="_blank">[doi:10.1086/210005]</a>
+<p><a name="ye2011">YE</a>, H. Tan, F., Ding, M., Jia, Y. &amp; Chen, Y. (2011) Sympathy and punishment: Evolution of cooperation in public goods game. <i>Journal of Artificial Societies and Social Simulation</i>, 14(4), 20.  <a href="https://www.jasss.org/14/4/20.html">https://www.jasss.org/14/4/20.html</a> 
+<p><a name="yu2004">YU</a>, B., Singh, M.P. &amp; Sycara, K. (2004), Developing trust in large-scale peer-to-peer systems<i>, IEEE First Symposium on Multi-Agent Security and Survivability</i>, 30-31, 1-10, Los Alamitos: IEEE Computer Society Press. 
+<p><a name="zhou2005">ZHOU</a>, W., Sornette, D., Hill, R.A. &amp; Dunbar, R. (2005) Discrete hierarchical organization of social group sizes. <i>Proceedings of the Royal Society of London, 272B</i>, 439-444. <a class="doi" href="http://dx.doi.org/10.1098/rspb.2004.2970" target="_blank">[doi:10.1098/rspb.2004.2970]</a>
+<p>
+
+
+
+
+
+</dl>
+    </div> <!-- article -->
+</div> <!-- content -->
+<div class="footer" id="footer">
+	<img src="/gifs/line-rain.gif" width="100%" height="4" alt="----">
+	<p>
+	| <a href="/JASSS.html">JASSS Home</a>
+	| <a href="/current.html">Current issue</a>
+	| <a href="/admin/info.html">Information</a>
+	| <a href="/admin/search.html">Search</a>
+	| <a href="/admin/notices.html">Notices</a>
+	| <a href="/admin/archive.html">Back issues</a>
+	| <a href="/admin/comments.html">Comments</a>
+	</p>
+	<p style="text-align: left;">
+	&copy; <a href="/admin/copyright.html">Copyright JASSS</a>
+	</p>
+</div>
+
+
+</body>
+</html>

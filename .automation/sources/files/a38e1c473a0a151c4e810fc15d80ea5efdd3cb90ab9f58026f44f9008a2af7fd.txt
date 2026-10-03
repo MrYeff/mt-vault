@@ -1,0 +1,78 @@
+---
+title: "Simulating Urban Patterns of Life: A Geo-Social Data Generation Framework"
+tags:
+  - urban_simulation
+  - synthetic_data
+authors:
+  - "[[Literature/Authors/Joon-Seok Kim|Joon-Seok Kim]]"
+  - "[[Literature/Authors/Hamdi Kavak|Hamdi Kavak]]"
+  - "[[Literature/Authors/Umar Manzoor|Umar Manzoor]]"
+  - "[[Literature/Authors/Andrew Crooks|Andrew Crooks]]"
+  - "[[Literature/Authors/Dieter Pfoser|Dieter Pfoser]]"
+  - "[[Literature/Authors/Carola Wenk|Carola Wenk]]"
+  - "[[Literature/Authors/Andreas Züfle|Andreas Züfle]]"
+publication date: 2019 
+source: "https://par.nsf.gov/servlets/purl/10187146"
+doi: 10.1145/3347146.3359106
+  - "model"
+  - "simulation"
+read status: Todo
+⚠️:
+  - audit failed
+---
+
+## Abstract
+
+Data generators have been heavily used in creating massive trajectory datasets to address common challenges of real-world datasets, including privacy, cost of data collection, and data quality. However, such generators often overlook social and physiological characteristics of individuals and as such their results are often limited to simple movement patterns. To address these shortcomings, we propose an agent-based simulation framework that facilitates the development of behavioral models in which agents correspond to individuals that act based on personal preferences, goals, and needs within a realistic geographical environment. Researchers can use a drag-and-drop interface to design and control their own world including the geospatial and social (i.e. geo-social) properties. The framework is capable of generating and streaming very large data that captures the basic patterns of life in urban areas. Streaming data from the simulation can be accessed in real time through a dedicated API.
+
+## Research Questions
+> Research Questions extracted via LLM
+- How can an agent-based framework generate large urban trajectory data while representing individual preferences, goals, needs, and geo-social context?[^r1]
+- How can researchers configure a geographical world and stream generated data for downstream use?[^r1]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+The paper specifies a configurable agent-based data-generation framework with agents, an environment, model components and outputs such as check-ins, transactions and meetings. It supplies an architecture and behavior-building primitives rather than one fixed urban behavior model.[^r3]
+
+```yml
+Agent:
+  needs: [Need]
+  beliefs: [Belief]
+  characteristics: [Characteristic]
+  location: Location
+  behaviors: [Behavior]
+
+Behavior:
+  trigger: Trigger
+  actions: [Action]
+  priority: 0..
+  goal: Goal
+
+Framework:
+  component_library: [ModelComponent]
+  model_builder: ModelBuilder
+  simulator: Simulator
+  environment: GeoSocialEnvironment
+```
+
+### How does it work?
+A trigger fires when an internal or external condition is met (example: hunger when food level falls below a threshold). It starts a behavior composed of actions; actions proceed until their goal condition, and may pass outputs to the next action. The modeler defines priority when multiple behaviors compete. The Model Builder encodes selected library components; the Simulator decodes the model, creates agents, executes them and writes generated events/data.[^r3]
+
+### What can it answer?
+It can generate large geo-social pattern-of-life datasets and stream outputs through an API; the resulting behavior depends on model components chosen by the researcher.[^r4]
+
+### Where does it apply?
+It applies to customizable urban trajectory and geo-social data generation. The paper's four-page framework description does not define a universal trigger priority or individual choice equation; both are modeler-specified.[^r3]
+
+## Metadata
+### References
+
+## Audit Log
+- Initial independent audit: failed on missing model mechanisms, abstract fidelity, or source-access reporting; see `vault/.automation/audit/next-forty-54-66-initial-2026-09-30.json`. Revisions added source-located model detail; independent re-audit remains pending.
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://doi.org/10.1145/3347146.3359106. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: Kim et al., §2 (trigger/behavior/action/goal primitives) and §3 (Model Builder, component library, Simulator architecture). Source: https://par.nsf.gov/servlets/purl/10187146.
+[^r4]: Kim et al., abstract and §3 output/data-generation description. Source: https://par.nsf.gov/servlets/purl/10187146.

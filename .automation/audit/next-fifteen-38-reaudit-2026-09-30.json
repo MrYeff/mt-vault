@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "entry": 38,
+  "auditor": "root, independent of extractor and corrector",
+  "source": "https://arxiv.org/pdf/2411.10109",
+  "source_version": "arXiv v3, revised 2026-06-28",
+  "initial_audit": "next-fifteen-36-40-initial-2026-09-30.json",
+  "result": "PASS",
+  "checks": [
+    "The revised model note now describes four expert reflections, selection of the relevant reflection at prediction time, and GPT-4o, matching main text PDF p. 4 and supplementary agent architecture.",
+    "Held-out GSS item exclusion, Big Five category exclusion, and overlapping-item screening match main text PDF pp. 4 and 11.",
+    "Two-week participant retest and normalized accuracy (agent accuracy divided by participant replication accuracy), with normalized correlations for continuous outcomes, match main text PDF pp. 4-5.",
+    "The 150 GSS items, Big Five, five incentivized games, and five experimental studies match Figure 1 and main text PDF pp. 3-6.",
+    "The note's claim that these are prediction proxies rather than a social-interaction theory is accurate; it does not infer human equivalence from benchmark performance.",
+    "The paper has 80 numbered reference entries on PDF pp. 13-17. The note now has 80 source-ordered Obsidian links. Source entries 31 and 43 contain no work title, so their unresolved placeholders and raw citations in import metadata are appropriate. Source entry 4 is duplicated as source entry 14, and both are preserved."
+  ],
+  "remaining_limit": "Most newly added bibliography links do not yet have imported target paper notes; this does not change the source-order/reference-count audit result."
+}

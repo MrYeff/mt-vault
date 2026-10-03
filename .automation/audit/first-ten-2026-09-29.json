@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-29",
+  "method": "Independent source-to-note audits by gpt-6-luna subagents; corrections checked by a different subagent or an independent auditor. Claims, defining model mechanics, outcomes, source conflicts, and citation locations checked. Structural checks run separately.",
+  "records": [
+    {
+      "note": "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
+      "source": "https://www.jstor.org/stable/20451153",
+      "audit_model": "gpt-6-luna",
+      "result": "abstract_only_pass",
+      "source_scope": "publisher abstract; 2008 full text unavailable",
+      "resolution": "Research questions and model-extraction skip verified; original model rules cannot be audited."
+    },
+    {
+      "note": "Literature/Papers/Entries/A Framework for Sequential Planning in Multi-Agent Settings.md",
+      "source": "https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume24/gmytrasiewicz05a.pdf",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Clarified §6 proved properties and aligned footnote."
+    },
+    {
+      "note": "Literature/Papers/Entries/A Schelling model with adaptive tolerance.md",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5839580/",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Prior independent Luna/Astra comparison; corrected movement, migration, outcomes and source conflicts; passed Luna re-audit."
+    },
+    {
+      "note": "Literature/Papers/Entries/A causal test of the strength of weak ties.md",
+      "source": "https://gwern.net/doc/sociology/technology/2022-rajkumar.pdf",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Separated member randomization from edge/node observation units; added tie-strength formula, timing and median split."
+    },
+    {
+      "note": "Literature/Papers/Entries/A meta-analytic test of intergroup contact theory.md",
+      "source": "https://lindatropp.com/media/pages/lab/academic-publications/5f31f72ec8-1735348299/pettigrew-tropp-meta-analytic-test.pdf",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Meta-analysis questions verified; no simulation model was invented."
+    },
+    {
+      "note": "Literature/Papers/Entries/Affect control processes- Intelligent affective interaction using a partially observable Markov decision process.md",
+      "source": "https://cs.uwaterloo.ca/~jhoey/teaching/cs886-affect/papers/bayesact.pdf",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Corrected BayesAct state, observations, ACT transition/reward, policy approximation, defaults and outcomes."
+    },
+    {
+      "note": "Literature/Papers/Entries/Agent-Based Modeling to Inform Online Community Design- Impact of Topical Breadth- Message Volume- and Discussion Moderation on Member Commitment and Contribution.md",
+      "source": "https://carlsonschool.umn.edu/sites/carlsonschool.umn.edu/files/2018-10/RenKraut-HCI2014-AgentBasedModel.pdf",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Added benefit/tie/reply rules, moderation limits, factor levels, outcome definitions and replication scope."
+    },
+    {
+      "note": "Literature/Papers/Entries/AgentSociety 2- An Integrated Research Environment for Executable Social Science.md",
+      "source": "https://arxiv.org/html/2607.11895",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Replaced placeholder schema with source-backed agent skills, environment routing, human gates and scoped results."
+    },
+    {
+      "note": "Literature/Papers/Entries/AgentSociety- Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society.md",
+      "source": "https://arxiv.org/html/2502.08691",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Added agent memory/action loop, engine mechanisms, online/offline scope and case outcomes."
+    },
+    {
+      "note": "Literature/Papers/Entries/An Agent-Based Model of Social Identity Dynamics.md",
+      "source": "https://www.jasss.org/15/4/7.html",
+      "audit_model": "gpt-6-luna",
+      "result": "pass",
+      "source_scope": "full text",
+      "resolution": "Added initialization, local observation, update/error rules, conditional equilibria, results and corrected publication date."
+    }
+  ],
+  "related_records": [
+    "audit/schelling-comparison-2026-09-29.json",
+    "audit/butts-relational-event-2008-abstract-audit-2026-09-29.json"
+  ],
+  "remaining_limit": "Original 2008 Butts full text unavailable. Its abstract-derived claims passed, but its model rules were neither extracted nor audited."
+}

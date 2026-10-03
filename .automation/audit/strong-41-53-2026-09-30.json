@@ -1,0 +1,182 @@
+{
+  "date": "2026-09-30",
+  "auditor": "strong source auditor",
+  "guides_read": [
+    "LLM Extraction Rules",
+    "Model Notation",
+    "Template"
+  ],
+  "papers": [
+    {
+      "index": 45,
+      "path": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "source": "https://arxiv.org/html/1811.10981v1",
+      "findings": [
+        "invented ordered/overlapping execution",
+        "opaque associations omitted strengths and belief perspectives",
+        "missing tree and inheritance constraints",
+        "nonexistent §4.3 citation"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "7ce36c6cf83eb5c372cba95fe63a8bf5c28f5de24d3826b515b90fb791abbb3f",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html"
+    },
+    {
+      "index": 43,
+      "path": "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "source": "https://www.jasss.org/24/4/6.html",
+      "findings": [
+        "missing reciprocal actor selection and group-directed actions",
+        "unexplained ACT minimizer concealed polynomial and objective",
+        "missing network eligibility and protocol constraints",
+        "incomplete jury control settings"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "2294f280b2f7a17586f3a5885b573ca8276b5b40b3321e2f6334378464e721d8",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888.html"
+    },
+    {
+      "index": 41,
+      "path": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "source": "https://arxiv.org/html/1908.05437",
+      "findings": [
+        "S3D incorrectly grouped with six evaluated candidates",
+        "neighbor popularity omitted",
+        "embedding truncation and prospective latent-feature scope omitted",
+        "event-type count source conflict unreported"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "98f79d28521aa09cbbdd69aa21f1a254ecc684261ccabfdce1132b6f12658fc4",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html"
+    },
+    {
+      "index": 42,
+      "path": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "source": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+      "findings": [
+        "continuous rules lacked readable state/procedure",
+        "vector-boundary and figure population conflicts require preservation"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "cf2c603f8f93dd3a9244d9ee070fbe059291fa645c422c22854364f8fa49c65f",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1.pdf"
+    },
+    {
+      "index": 44,
+      "path": "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11",
+      "findings": [
+        "missing parameter and scheduling tables",
+        "recency weighting insufficiently specified",
+        "satisfaction range/positive-feedback reporting tension unflagged",
+        "omitted numerical transition rules not disclosed"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "45e0a4c32c7e8653175d535aa19a4ba729f7fb29e040c52647a38415e5b1dcb2",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c.html",
+      "additional_sources": [
+        "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076.html",
+        "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224.html"
+      ]
+    },
+    {
+      "index": 46,
+      "path": "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605",
+      "findings": [
+        "opaque fitness omitted objective functions",
+        "appendix not examined by prior extraction",
+        "resource/risk symbol contradiction hidden",
+        "stress and risk direction conflicts hidden",
+        "FtM formula versus prose conflict",
+        "waning lagged-trust equation versus linear/8% summary conflict"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "c5e04477fbfe72e75f82764cfb2ff050c8c33480190718100c71bef263fbb029",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa.html",
+      "additional_source": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d.docx",
+      "equation_images_checked": [
+        "Appendix pp.3–5"
+      ]
+    },
+    {
+      "index": 47,
+      "path": "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "source": "https://arxiv.org/html/2411.11581",
+      "findings": [
+        "missing recommendation ranking mechanics",
+        "omitted feed refresh sampling and activation timing",
+        "unexplained scenario control conditions",
+        "configurable framework scope insufficiently exposed"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "f3f54b81cfd394128a211d701f1384a60855aa30fe865de0794a9c2dbd914ed0",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39.html"
+    },
+    {
+      "index": 48,
+      "path": "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "source": "https://arxiv.org/html/2310.10108",
+      "findings": [
+        "previous note falsely claimed source unreadable",
+        "profile equations and emotional-memory mechanism omitted",
+        "watch/rate/continue/exit procedure omitted",
+        "profile/evaluation rating-boundary distinction omitted",
+        "strategy-evaluation page cap and outcomes omitted",
+        "abstract missing final source code-availability sentence; restored read arXiv version"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "fd2d2cfd5522b60f5dd216109adcc716cc5693b1745ad7aa9922ea31ff5e43f9",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html"
+    },
+    {
+      "index": 52,
+      "path": "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
+      "findings": [
+        "opaque source distributions concealed independent quality/appeal rules",
+        "feed-specific engagement/age state omitted",
+        "posting/feed/recency/convergence constants omitted",
+        "bad-actor growth and non-resharing of authentic messages omitted",
+        "targeting fixed-follower control omitted"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "61e0eab0b73c5149dace04b1322aa75069759db94595fc286a7cebf8c106a6d2",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0.html"
+    },
+    {
+      "index": 53,
+      "path": "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "source": "https://arxiv.org/html/2103.08057",
+      "findings": [
+        "schema concealed current/past dependency and story mechanics",
+        "no concrete example despite full source availability",
+        "specific-example mechanism not distinguishable from universal behavior",
+        "provider boost direction prose tension unreported"
+      ],
+      "status": "corrected; independent re-audit pending",
+      "full_text_read": true,
+      "sha256_corrected_note": "2b1a6d93726511909d1a2d2fde1c8bae452fa98ed1f339cda30422a655cb25a0",
+      "model_headings_checked": true,
+      "full_source_cache": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html"
+    }
+  ]
+}

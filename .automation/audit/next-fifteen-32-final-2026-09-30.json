@@ -1,0 +1,19 @@
+{
+  "audit_id": "next-fifteen-32-final-2026-09-30",
+  "auditor": "independent final audit",
+  "audited_at": "2026-09-30",
+  "scope": "Current entry #32 wording checked against SAGE publisher primary record and author preprint; publisher bibliography checked for count, titles, and order. Note was not edited.",
+  "path": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+  "verdict": "PASS",
+  "source_access": {
+    "publisher": "SAGE record https://journals.sagepub.com/doi/10.1177/08944393231213960; publisher abstract, metadata, and full bibliography accessible.",
+    "full_text": "Author preprint https://arxiv.org/pdf/2109.08862; full text accessible."
+  },
+  "reference_check": {
+    "count": 59,
+    "result": "All 59 displayed reference titles are present in the same order as the 59 items on the SAGE publisher reference list (publisher lines 42–340). Obsidian target aliases are descriptive title links; the note correctly caveats alias matching/completeness against the paper."
+  },
+  "findings": [],
+  "metadata_check": "Publisher title, author Firman M. Firmansyah, DOI 10.1177/08944393231213960, first-online date 2023-11-22, and abstract match the SAGE record (lines 20–34). Tags are valid and ⚠️ remains not audited.",
+  "model_check": "The current note accurately distinguishes social-identity distance from friendship strength while naming it as required tie length LT; the bilateral eligibility/capacity rule and stopping condition match the preprint’s equations/procedure (pp. 5–9). The text correctly discloses the unspecified stochastic initiator/target distribution. It correctly records the design/result inconsistencies: method q={.2,.5,.8} (Table 2, p. 8), prose/list q={.2,.5,.9} and strongest-segregation prose q=.3 (pp. 11–12), Table 4 q=.3/.5/.8 plus prose typo q=3 (pp. 14–15). It also accurately notes population and TC mean are paired, so their individual effects cannot be separated, and its bounded result summary is supported (pp. 11–16)."
+}

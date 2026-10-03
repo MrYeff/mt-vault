@@ -1,0 +1,513 @@
+Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum | EPJ Data Science | Springer Nature Link
+Skip to main content
+Advertisement
+Advertisement
+SpringerOpen journals have moved to Springer Nature Link. Learn more about website changes.
+Springer Nature Link
+Log in
+Menu
+Find a journal
+Publish with us
+Track your research
+Search
+Saved research
+Cart
+Home
+EPJ Data Science
+Article
+Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum
+Research
+Open access
+Published: 11 June 2026
+Volume 15, article number 72 (2026)
+Cite this article
+You have full access to this open access article
+Download PDF
+Save article
+View saved research
+EPJ Data Science
+Aims and scope
+Submit manuscript
+Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum
+Download PDF
+Aleksandar Tomašević1,
+Darja Cvetković1,
+Sara Major2,
+Slobodan Maletić3,
+Miroslav Anđelković3,
+Ana Vranić1,
+Boris Stupovski1,
+Dušan Vudragović1,
+Aleksandar Bogojević1 &
+…
+Marija Mitrović Dankulov1 Show authors
+777 Accesses
+1 Citation
+2
+Altmetric
+Explore all metrics
+Abstract
+Validation of LLM-agent social simulations remains underdeveloped, with most studies relying on subjective assessments or single runs. We address this gap by running 30 independent 30-day simulations of a technology forum modeled on Voat’s v/technology, using stateless Dolphin Mistral 24B agents on the Y Social platform, and evaluating operational validity across five dimensions: activity patterns, network structure, toxicity, topical coverage, and stylistic convergence. Against 30 matched, non-overlapping 30-day Voat comparison windows, results show overlapping 99% confidence intervals for unique users, root posts, and daily active users, while comments, average thread length, and mean toxicity remain higher in simulation. Both simulated and empirical networks exhibit core–periphery structure, though simulated cores are larger and more diffuse and repeated interactions are less frequent. Topic alignment is near-complete, but toxicity is misallocated across content layers: simulated root posts are substantially more toxic than real submissions, while simulated comments are less toxic than Voat comments. These findings demonstrate that LLM agents in platform-faithful environments can reproduce familiar online regularities, while systematic divergences—particularly those linked to stateless agent design and content-layer calibration—point to concrete directions for future improvement.
+Similar content being viewed by others
+LLM-Based User Simulation as a Tool for Investigating Complex Socio-Technical Applications
+Chapter
+© 2026
+Persona-prompted LLM agents achieve modest but genuine prediction of human social media reactions
+Article
+Open access
+03 September 2026
+An Agent‑Based Simulation of Politicized Topics Using Large Language Models: Algorithmic Personalization and Polarization on Social Media
+Article
+Open access
+09 December 2025
+Explore related subjects
+Discover the latest articles, books and news in related subjects, suggested using machine learning.
+Computational Social Science, Social Networks
+Computational platforms and environments
+Computational Social Sciences
+Latino and Latina Sociology
+Model Building and Simulation
+Model Invertebrates
+Statistical Methods in Psychological Science
+1 Introduction
+Online social media is a primary arena for public discourse and collective sense-making, yet it often generates polarization, echo chambers, harassment, and norm violations that co-evolve with moderation and platform design [1–4]. Studying such dynamics in vivo is increasingly difficult in the post-API era due to ethical issues, limited access, and reproducibility constraints [5]. Complementary to traditional agent-based models, recent LLM-based simulations embed language-model agents in platform-faithful environments to test whether recognizable online regularities emerge from culturally informed, norm-conditioned interactions [6–8]. However, generating realistic contentious and toxic discourse remains challenging: standard aligned models tend toward politeness and consensus, poorly suited to simulate the disagreements and norm violations that drive real online dynamics. Moreover, generative agent-based modeling faces a central methodological challenge: rigorous validation frameworks remain underdeveloped [8, 9]. Recent reviews find that most studies rely on subjective “believability” assessments rather than quantitative comparison with empirical data, and nearly all report results from single simulation runs, akin to drawing conclusions from a single case study [8]. Newly emerging proposals thus caution against treating LLM outputs as substitutes for human participants without explicit empirical checks [10, 11]. Even when multi-user discussions appear realistic, conversational realism does not guarantee that platform-level structures and distributions match the target system [12–14]. Ground truth for validating that agents act as the persons they simulate is rarely accessible, and the black-box nature of LLMs intensifies interpretability problems [10].
+As online platforms begin to mix people and artificial users in the future, human-machine interactions will become an increasingly important subject of social-science research [15]. Understanding what AI agents alone can produce in a social media environment provides a critical baseline for later human-machine studies, where even suspected machine presence may change how people act. The present work presents a first step toward this goal, by studying machine-machine interaction in a Reddit-like forum. We treat LLM agents as carriers of cultural knowledge and conversational norms [16], and ask whether they can share, remix, and react to content in ways that yield familiar social-media patterns, without agents being given a specific aim or over-control of their behavior.
+We view LLM agents as cultural technologies rather than payoff-maximizing decision makers. Agents do not optimize utilities for posting, replies, or visibility. Instead, models trained on large conversational corpora encode social norms, roles, and routines. In practice, agents respond by what seems appropriate in context—given a topic, a thread position, and a persona—rather than by trying to achieve a specific goal through reward maximization. This lets us test whether compressed cultural knowledge alone can generate familiar online patterns when placed inside a realistic platform setting [7, 16, 17].
+Concretely, we simulate Voat’s v/technology forum on the Y Social platform using persona-based LLM agents and a fixed catalog of technology URLs drawn from the original forum. To preserve disagreement and the possibility of toxic speech, we use the uncensored Dolphin Mistral 24B model. Voat offers a useful baseline because its Reddit-like architecture and complete lifecycle data enable platform-faithful calibration, while v/technology itself is comparatively mainstream in topic content on the platform, though not necessarily in ideological composition.
+We calibrate population size, growth, posting and reply likelihoods, and per-round action budgets to Voat’s v/technology and run 30-day simulations. We adopt a complex-systems view [6, 8]: can LLM agents, carrying compressed cultural knowledge and operating under realistic platform constraints, reproduce the emergent patterns characteristic of online communities?
+We address this question through three validation dimensions, which also structure our contributions:
+1.
+Activity patterns: Do simulated posting rates, thread dynamics, and user turnover match empirical distributions? We provide a platform-faithful baseline calibrated to Voat’s v/technology with replicated validation across 30 runs.
+2.
+Network structure: Does the interaction network exhibit comparable structural properties? We analyze core–periphery organization, degree distributions, and repeated interactions against 30 Voat comparison windows.
+3.
+Textual convergence: Do agent outputs converge toward reference community characteristics? We evaluate toxicity distributions, topic alignment via embedding similarity, and linguistic convergence entropy.
+Together, these provide an operational-validation framework and a reproducible approach to LLM-based community simulation. Figure 1 provides a visual overview of the complete workflow.
+Figure 1
+Figure 1
+Full size image
+Visual abstract of the simulation and validation workflow. The study proceeds through four stages. (1) Calibration data: we extract user activity parameters from 10 non-overlapping 30-day samples of Voat’s v/technology subverse (MADOC dataset). (2) LLM agent profile: each agent is assigned a concise persona comprising education level, political leaning, age, per-round action budget, topical interests, and a toxicity propensity level. (3) LLM simulation: the Y Social platform runs 30 independent 30-day simulations using Dolphin Mistral 24B; agents enter and exit the population daily according to calibrated growth and churn rates, choose actions via persona-guided prompts and stochastic menus, and their interactions are mapped to a weighted undirected network. (4) Result validation: simulation outputs are compared against 30 matched, non-overlapping 30-day Voat windows across five dimensions: user activity patterns, network structure (core-periphery, degree distribution, repeated interactions), and text analysis (toxicity, convergence entropy, topic modeling, embedding similarity)
+The paper proceeds as follows: we first discuss our view of LLMs as social agents, then outline the simulation approach and design, detail evaluation methods, present results on activity, network structure, toxicity, topics/embeddings, and stylistic convergence, and discuss implications and limitations.
+2 LLMs as social agents
+Recent work argues that large language models are best understood as cultural and social technologies: systems that reorganize and render usable the information produced by people, just as print, markets, and bureaucracies have historically done [17]. From this perspective, the key question is not whether models can be autonomous minds, but how they moderate access to, and coordination of, cultural repertoires and human knowledge. Much like earlier technologies, LLMs reduce complexity and function as mediators between individual actors and a broader repository of human knowledge and culture, simultaneously being shaped by existing epistemic and symbolic structures and reciprocally influencing them [16]. Their ability to compress and disseminate information and cultural scripts, while continually being refined by external input (primarily through reinforcement learning from human feedback) positions them as potentially central to processes of meaning-making in mediated publics. This implies a broad array of potential applications and risks yet to be fully understood [17].
+What makes large models a particularly valuable resource for researchers seeking to understand social patterns is their ability to not only store, reproduce, and transform vast amounts of data, but, with careful prompting, to explicate and simulate the various social perspectives implicit in it [10, 18]. Consider the action space agents must navigate to produce realistic threads in a Reddit-like environment: a single discussion about operating-system updates might involve quoting prior turns, deploying in-group jargon (kernel, distro, drivers, telemetry), using irony (“just use Arch”), and sustaining disagreement via reply chains, while reactions and feed visibility concentrate attention on the most contested subthreads. Classical ABMs often used parsimonious, deterministic, or rational-choice rules for tractability, but these are poorly suited for such culture-laden, role-dependent interaction [19]. LLM simulations replace payoff optimization with linguistic, norm-guided action selection. This allows them to capture the compression dynamics underlying human social coordination [20], i.e. the patterned reductions that emerge from the ways human groups process and distill cultural and cognitive complexity. Recent work in generative agent-based modeling has demonstrated the potential for language-mediated simulations [7], though our approach more specifically targets social media dynamics.
+We adopt this norm-guided approach to LLM simulations, positing that agents’ choices are generated via normative role expectations. By “LLM social agent” we mean a language-model-driven (artificial) participant in an online forum that produces context-appropriate posts and replies grounded in shared norms, roles, and routines. Here, the concept of appropriateness implies that agent action is grounded in socially agreed-upon rules and understandings about what normal, reasonable, and legitimate behavior is for actors within a given social setting [21]. Instead of pursuing utility or optimization of returns, agents must favor normative fit and try to adhere to the prescribed roles and expectations associated with their community.
+Since models are trained on human culture, algorithmic fidelity implies that subpopulation-conditioned agents can inherit group-level beliefs and biases. This means they reproduce the social constructions—cultural codes, conventions, and inclinations—already present in the training data, rather than simulating generic human behavior. At the same time, because their “social cognition” is not experiential, they lack the ability to independently reinterpret norms and negotiate social constructs [17], meaning they can only mirror the objectified realities established by humans through socialization and social interaction [22]. By replicating existing cultural narratives, the inherent biases of agents thus closely resemble the real-world propensities of human actors within a given context [23]. This allows LLMs to act as carriers of established hermeneutic structures and enables concrete computational implementations of social construction [7, 24].
+In Reddit-like forums where interaction is language-mediated and governed by explicit rules and tacit norms, we find this framing fits better than homo-economicus assumptions: agents generate choices by appropriateness and role, leveraging background cultural knowledge to ground identities, routines, and sense-making [6, 7, 16]. For instance, under a post about a Windows update and telemetry changes, an open-source/privacy-oriented persona may argue for Linux alternatives (e.g., Fedora/Debian) and emphasize control and transparency, while a gaming-oriented persona may defend Windows on the grounds of driver support and DirectX compatibility.
+In line with ABM validation practice simulation succeeds [25–27], if it reproduces the right distributional patterns for the right reasons, not by matching individuals or text. Accordingly, we treat LLM agents as tools for studying norm-guided interactions, not as models of human cognition [7, 28]. Building on prior work, first, we design LLM agents’ interactions as stateless micro-dialogues, without long-term chat memory.
+Second, we expose content through a reverse chronological feed based on post popularity (ranked by reaction count with recency tie-breaking) within a 96-round visibility window, so engaged items are surfaced while decisions remain grounded in recent context. Third, we enforce a small stochastic action menu with heavy-tailed per-round budgets to induce unequal participation. Fourth, we prioritize mentions so local conversational dependencies propagate within threads even under stateless prompting. Fifth, we seed discussion from a fixed Voat link catalog to anchor topics culturally without external drift.
+3 Methods
+We implement the study using Y Social, a client–server digital twin of a Reddit-like forum [29]. The platform consists of three main components: (i) a stateful server that maintains users, content, and recommendation logic; (ii) a simulation engine that advances the simulation clock, schedules agents, and orchestrates interactions; and (iii) a stateless LLM (via Ollama) that generates agent actions and drafts text for posts and comments based on constraints provided by the engine. This architecture enables controlling global parameters such as feed design, initial agent population, simulation duration, activity probabilities, and churn or growth dynamics, while keeping the agent model fixed. At the same time, it logs the full system trajectory for evaluation. Implementation details of Y Social are beyond the scope of this paper; we refer readers to [29] for a detailed description.
+3.1 Calibration data
+To inform the simulation design, we analyze samples from the MADOC dataset [50], drawn from real-world Voat data, with a focus on the v/technology subverse. This community centers on technology-related topics (e.g., Big Tech, AI, privacy, and gadgets), in contrast to the more political or conspiratorial content associated with other subverses.
+We construct 10 non-overlapping 30-day calibration windows and, for each, compute daily activity, user dynamics, and thread characteristics. Table 1 summarizes the key metrics used to calibrate the simulation (see also Fig. 1, panel 1). Validation in Results uses a separate set of 30 matched, non-overlapping comparison windows (each a single 30-day sample).
+Table 1 MADOC calibration samples summary for Voat v/technology (10 windows of 30 days each). Means and standard deviations are across windows
+Full size table
+Taken together, these statistics describe a small and relatively volatile forum: approximately 576 unique users per 30-day window, with around 32 active users per day. Threads are shallow (≈ 1.07 comments per post), and overall activity is low (∼618 posts and ∼665 comments per window). Daily inflow of new users is high (∼60%), and churn is also high (∼75%), indicating less persistent engagement. Accordingly, our simulation emulates a smaller, less stable forum with higher turnover and shorter, sparser conversations.
+To ensure discussions are oriented toward technological topics, we built a fixed-URL catalog from Voat’s v/technology dataset (MADOC). URLs are cleaned (tracking removed, domains normalized), deduplicated, and sampled to create a pool of 1000 links (Table 2). These are stored locally and used during share-link actions.
+Table 2 Top calibration domains (from calibration URL list). Examples illustrate the kind of content used to seed/calibrate topics
+Full size table
+3.2 LLM user profiles
+In the simulation, the client instantiates a population of agents with sampled personas according to Table 3 (see also Fig. 1, panel 2). Each agent is assigned a fixed locale (English, U.S.), an education level (from high school to PhD), an age between 18 and 60, and 2–5 topical interests drawn from a 10-category, technology-focused catalog. Agents are also assigned a toxicity propensity level, Absolutely No, No, Moderately, with probabilities (0.80, 0.15, 0.05). Personas generated like this are constructed for face validity rather than demographic representativeness and are not calibrated to Voat’s user population.
+Table 3 Agent population initialization parameters
+Full size table
+Political leaning is the only benchmark-informed constrained attribute; other persona dimensions are sampled broadly. To reflect the ideological profile of v/technology, agents are sampled from four right-of-center segments listed in Table 3, with fixed proportions (0.35, 0.25, 0.25, 0.15). These segments correspond to Pew’s 2021 typology [30] and are intended to approximate the platform’s alt-right–skewed environment [31]. The weights are heuristic and used to induce plausible stance variation, not to estimate Voat’s true population.
+Finally, each agent receives a per-round action budget between 1 and 10 actions, sampled from a truncated Zipf distribution (s=2.5). This produces a heavy-tailed activity pattern, most agents are minimally active, while a small minority contribute disproportionately, consistent with participation inequality observed in online communities [32, 33].
+Each agent is able to perform the following actions:
+1.
+posting creates a root submission and expands the content inventory;
+2.
+commenting deepens a thread and alters its shape and lifetime;
+3.
+reading represents lurking behavior and can shift interests based on consumed content;
+4.
+searching steers engagement toward topical items (e.g., searching for Linux drivers or AI chips) and contributes to topic–interest alignment;
+5.
+share-link propagates existing news posts or ingests fresh articles from the news database, seeding discussion around real-world content and changing the mix of link vs. text submissions.
+Interests therefore form a simple feedback loop: they shape exposure and search, are injected into prompts through server-side state, and can themselves shift after engagement.
+Agents interact with the platform through short, stateless micro-dialogues between an agent and a handler. The handler, implemented by the simulation engine, prompts the LLM to select actions and generate text. All agent decisions, picking actions from the menu, generating text, and reacting to content, are made by Dolphin Mistral 24B Venice Edition (model details are provided in SI Section S1). Importantly, agents have no internal memory; continuity is maintained via server-side state (e.g., thread history and user interests) passed into each prompt. They are also linked to a server-side recommender that provides content across rounds. The feed is non-personalized and ranked by popularity within a fixed visibility window: posts are ordered by total reactions (likes + dislikes), with ties broken by recency. Agents do not see their own posts, and items older than 96 rounds are excluded. When agents open a thread, the visible reply context is capped at \(K=3\) prior items. This uniform cap is a pragmatic context-window control for the smaller model setup rather than a behavioral claim that all users read equally deep. It keeps conversations grounded in the local thread context and the agent’s persona. Variable-depth policies tied to agent activity or empirical thread-depth distributions are a natural future extension.
+3.3 LLM simulation
+The simulation runs in discrete daily iterations. At \(t=0\), we set the total duration of the simulation and initialize the population with 50 agents generated as described previously. Each day, a subset of agents is activated, and at the end of day t, we update the population using the rates from Table 4. First, a fraction of agents with the longest inactivity is removed (ties broken randomly). Then, new agents are added, sampled using the same initialization procedure, at a rate proportional to the pre-churn population.
+Table 4 Parameters for the Voat v/technology simulation
+Full size table
+The engagement of active agents is defined by weighted likelihoods, Table 4. The agent receives a small stochastic menu of actions, and via a prompt, selects one action at a time until its per-round budget is exhausted. Every turn presents exactly three options: NONE and two distinct actions sampled (without replacement) from five options—posting, reading, commenting, searching, and sharing links—according to engagement-likelihood weights. Chosen weights can reproduce the observed comment-to-post ratio, but the mapping from per-turn menus to realized comment volumes is not linear due to reply cascades and thread depth. Passive engagement, such as exposure without content creation, is not directly observable in the calibration data, so the read/search weights must be treated as heuristic. MADOC includes only a static subscriber-count field rather than a time-varying membership series, so it cannot support direct calibration of passive engagement dynamics.
+Implementation details (e.g., prompt templates and client modifications) are available in the project repositories.Footnote 1
+3.4 Validation
+Our validation strategy assesses whether the simulation produces realistic social media behavior across multiple dimensions. The simulation creates conversational interaction structures, as illustrated in Fig. 2, which we analyze using five complementary methods: (1) network analysis, examining interaction topology and core–periphery structure; (2) toxicity analysis, quantifying harmful language with a RoBERTa classifier; (3) semantic similarity, measuring alignment between simulated and real texts; (4) topic analysis, comparing thematic structure via topic modeling; and (5) convergence entropy, testing whether agents exhibit stylistic accommodation within threads. To enable statistical inference, we conduct 30 independent simulation runs and compare activity, network, toxicity, and repeated-interaction metrics against 30 matched, non-overlapping 30-day Voat windows from v/technology. For the smaller sensitivity analyses reported in SI Section S10, we use percentile bootstrap 99% confidence intervals. Topic modeling uses a uniform random sample of 10,000 Voat threads drawn from the MADOC v/technology corpus, whereas item-level semantic retrieval uses the full Voat corpus as the reference base; convergence entropy is benchmarked against the external GPT-4o mini reference. Here we outline the methodological approach; SI Sections S6–S13 provide the full benchmark tables, additional network diagnostics, expanded toxicity robustness checks, alternative embedding visualizations, complete topic-match lists, and the benchmark power analysis.
+Figure 2
+Figure 2
+Full size image
+Illustrative thread showing a discussion between two simulated agents (red and blue) on the topic of content creators and platform economics. Dashed lines on the left indicate interpersonal message pairs (between different agents), while those on the right indicate intrapersonal pairs (consecutive messages from the same agent), used to compute convergence entropies. Numbers denote cosine similarity scores between paired messages. Toxic messages are marked with a hazard icon. Colored and bolded words highlight recurring thematic terms (e.g., “creators,” “government,” “taxes,” ‘tech giants”) whose repetition across the conversation contributes to lower entropy, reflecting linguistic convergence between agents
+Network analysis. We represent conversational interactions as an undirected, weighted graph to investigate network structure and core–periphery organization. Nodes are users; an edge connects a commenter to the author of the parent item (post or comment). Self-interactions are removed. Repeated exchanges increment an integer edge count that we then normalize to \([0,1]\) by dividing by the maximum edge count in that graph. On the full graph, we report standard descriptors computed with the NetworkX Python library [34]: nodes, edges, density, mean degree, mean weighted degree (sum of normalized weights), and the weighted clustering coefficient. To identify a dense “core” coupled to a sparse “periphery”, we fit a two-class hub–and-spoke stochastic block model (SBM) [35] to the largest connected component (LCC), which assigns each node to the core or periphery while capturing characteristic within- and between-connectivity. For the two tail-shape claims used in the activity and network results, SI Sections S7 and S8.4 report separate discrete fits for root-posts-per-user and positive degree using the Clauset–Shalizi–Newman procedure [36], bootstrap goodness-of-fit, and likelihood-ratio comparisons against lognormal, truncated power-law, and exponential alternatives.
+Toxicity. Toxic language is a salient feature of contentious online communities and one of our validation targets. Figure 2 provides an illustrative simulated thread in which some messages are marked with hazard icons. To compare toxicity patterns between simulation and Voat, we quantify harmful language in both corpora using a RoBERTa-based model trained on the ToxiGen benchmark [37].Footnote 2 Each text unit (root post, news-link share, or comment) receives a continuous toxicity score, interpreted as the model’s probability that the content is toxic.
+Semantic Similarity. Semantic similarity captures how closely two texts share meaning and vocabulary. Figure 2 illustrates this: messages that reuse terms like “creators,” “government,” and “taxes” yield cosine similarities of 0.72–0.73, while pairs with less thematic overlap score lower (0.45–0.5). To assess whether simulation content occupies similar semantic territory to Voat, we embed each text with a sentence-level encoder (SentenceTransformers, all–MiniLM–L6–v2) [38] and pair each simulation item to its nearest Voat counterpart by cosine similarity. We compute best-match scores separately for posts and for comments, and summarize with the mean, median, and counts above the designated thresholds.
+Topic analysis. To compare thematic structure between the simulation and Voat, we use thread-level topic modeling. Each thread (post and all its comments) is treated as a single document, representing the overall discussion theme and reducing noise from short replies. We fit BERTopic [39] separately on simulation threads and on a sample of Voat threads using sentence embeddings (all-MiniLM-L6-v2) with Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) clustering; dimensionality reduction uses Uniform Manifold Approximation and Projection (UMAP) (cosine metric, random seed 42). Text is lightly cleaned (URL removal, whitespace normalization), while vectorization uses 1–2-gram features, and filters tokens to avoid very short or alphanumeric strings. For each fitted model, we retain topic labels and top words to aid interpretation, and represent each topic by a document-embedding centroid formed from up to 200 threads assigned to that topic.
+Convergence entropy. We estimate convergence entropy to measure short-range stylistic alignment in simulation threads. Following accommodation theory and LM-based formulations [40, 41], an utterance is considered more convergent when it becomes more predictable given prior speech. In this information-theoretic view, lower entropy indicates stronger alignment, while higher entropy reflects more independent wording. As illustrated in Fig. 2, repeated use of shared terms (e.g., “government,” “taxes,” “creators”) increases predictability across turns, reducing entropy.
+We operationalize this by extracting alternating two-speaker exchanges from reply trees and segmenting them into A–B–A–B chains (minimum length 3). From these, we construct ordered message pairs at different distances and distinguish between interpersonal pairs (different speakers) and intrapersonal pairs (same speaker baseline), as shown in Fig. 2. Interpersonal pairs capture cross-agent alignment, while intrapersonal pairs reflect within-speaker consistency. The entropy is computed at the token level, with tokens extracted using a BERT encoder (bert-base-uncased). For each token in x, we compute its maximum cosine similarity to any token in y, and map these values to log-probabilities via a Normal kernel centered at 1 (\(\sigma =0.3\)). Convergence entropy is then defined as:
+$$ H(x;y)=-\sum _{i} \exp (\ell _{i})\,\ell _{i} $$
+where \(\ell _{i}\) are per-token log-probabilities.
+We report entropy per token (\(H/T\)) and compare interpersonal and intrapersonal distributions, treating all comparisons as exploratory without formal significance tests. Additionally, for an external baseline, we compare against the relative convergence entropy reported by [41] for GPT-4o mini (\(\mu =0.2827 \pm 0.0002\) bits/token).
+4 Results
+4.1 User activity
+Across 30 independent runs, we observe steady increases over time in posts/day, comments/day, and unique active users/day. Day-to-day post and comment volumes can fluctuate because local agent decisions can trigger or dampen reply cascades, and user activity is inherently stochastic and not directly controllable; nonetheless, the resulting volumes remain within the same order of magnitude across runs and relative to Voat. Table 5 shows key metrics with 99% confidence intervals against the 30 matched Voat comparison windows: root-post volume, unique users, and daily active users overlap with Voat, while comments and average thread size remain higher in the simulations. Mean toxicity also sits above the Voat benchmark and is discussed separately below. SI Sections S6–S7 and S13 report the full benchmark statistics and the associated power analysis.
+Table 5 Overall statistics for the Voat simulation (v/technology) vs. matched Voat comparison windows from MADOC. Simulation values are means with 99% t-distribution CIs from 30 runs; Voat values are means with 99% t-distribution CIs from 30 matched 30-day comparison windows
+Full size table
+The distribution of root posts per user is strongly right-skewed with a long upper tail (Fig. 3). The simulation is more tightly concentrated around the low-activity mode, while Voat spreads much more mass into the extreme-participation tail. Formal discrete tail fits reported in SI Section S8.4 show that the simulated participation tail usually admits a power-law fit only above \(x_{\min}=2\), but a truncated power law fits better in all 30 runs, consistent with the bounded action-budget design. The empirical Voat participation tail is far more concentrated by distribution-free metrics (median top-1% share 30.4% versus 5.1%), yet only 9 of 30 windows support a pure power-law fit, indicating a heavier but more heterogeneous winner-take-most pattern across windows. Overall activity volumes remain of the same order of magnitude across the synthetic and real Voat settings, and both produce short threads (≈2 interactions on average). Interactions per active user remain low (≈1–1.3), indicating brief daily engagement.
+Figure 3
+Figure 3
+Full size image
+KDE of log root posts per user (computed as \(\log (1+\mathrm{posts})\)): simulation (30 runs) vs. 30 matched 30-day Voat comparison windows. Curves show the mean density; shaded bands show the 5th–95th percentile range across runs/samples. Both corpora are strongly right-skewed, but the simulation has a sharper low-activity mode whereas Voat retains much more mass in the extreme participation tail. Formal tail-shape fits are reported in SI Section S8.4
+4.2 Network analysis
+Under the matched 30-window Voat benchmark, the simulated and real Voat graphs are both sparse and strongly right-skewed, but the upper-degree tails differ more sharply than log-log inspection alone suggests. Average degree is close (2.72 vs. 2.31; Table 6), while the simulation produces more nodes and edges, higher density (1.6×) and clustering (4.6×), and a smaller LCC share (66.5% vs. 85.3%). Formal fits in SI Section S8.4 show that 28 of 30 Voat windows are compatible with a power-law upper tail above \(x_{\min}=2\) (median \(\alpha =2.18\)), compared with only 5 of 30 simulation runs; in most simulations, lognormal or truncated alternatives fit better and the fitted tail begins much farther out (\(x_{\min}=6\)). Distribution-free concentration metrics point in the same direction: the top 1% of Voat nodes hold a median 20.3% of total degree versus 7.2% in simulation. The degree-distribution comparison in Fig. 4 makes the mismatch more specific: Voat puts more mass on degree-1 users and in the extreme right tail, whereas the simulation is elevated through the low-to-mid degree range. This indicates participation inequality in both corpora, but with weaker hub consolidation in the simulation. Because visibility is mediated by a popularity-plus-recency slate, exposure is coupled to feedback and can plausibly alter hub consolidation and clustering relative to purely chronological exposure [42, 43]. Despite non-overlapping CIs for clustering and density, both networks exhibit the same qualitative structure: sparse, heavy-tailed, with clear participation heterogeneity. Additional weighted-degree, repeated-interaction, hub-concentration, and formal tail-shape diagnostics are reported in SI Sections S8.1–S8.4.
+Figure 4
+Figure 4
+Full size image
+Degree distribution (log-log) for the 60 networks in the main benchmark: 30 simulation runs and 30 matched 30-day Voat comparison windows. Both distributions are heavy-tailed, but formal fits in SI Section S8.4 show that a clean power-law upper tail is typical for Voat windows and uncommon in simulation. Voat places more mass on isolates and extreme hubs, whereas the simulation is more concentrated in the low-to-mid degree range
+Table 6 Network analysis. Simulation values are means with 99% t-distribution CIs from 30 runs; Voat values are from 30 matched 30-day comparison windows
+Full size table
+Both datasets yield robust non-empty cores, confirming core-periphery structure in both simulation and Voat despite different core sizes. LCC sizes are essentially matched (406 vs. 414 nodes on average, with overlapping 99% CIs; Table 6), but the core share is much larger in the simulation (19.6% vs. 5.1% of the LCC). Core density is of the same order of magnitude in both datasets, with the real Voat core somewhat denser (0.100 vs. 0.070), while the core–periphery coupling remains markedly lower in the simulation (0.020 vs. 0.055), indicating a tighter, more strongly coupled hub set in the empirical network (Fig. 5). Visually, the left-hand Voat panel concentrates a relatively small red core near the center, while the right-hand simulation panel spreads many more core nodes across a broader central region. Repeated interactions are also less frequent in simulation (5.90% vs. 8.70% of edges), reinforcing the view that the simulated network is structurally too diffuse even when its largest component is the right size. For visualization, Fig. 5 shows the simulation–Voat pair with the smallest aggregate network-metric distance under the matched Voat benchmark, while Fig. 7 shows the run with the highest mean comment-to-comment embedding cosine across the 30 simulation runs. The key finding is structural: both networks exhibit clear core-periphery organization.
+Figure 5
+Figure 5
+Full size image
+Core–periphery structure on the largest connected component for the closest-matching pair under the matched Voat benchmark: Voat window 11 (left) vs. simulation run 21 (right). Red nodes indicate core members; blue nodes indicate periphery. Node sizes are scaled by weighted degree
+4.3 Toxicity analysis
+Toxicity distributions are broadly similar in shape (heavy near-zero mass with a positive tail), but against the Voat comparison windows the simulation is clearly more toxic overall: mean toxicity is 0.143 [0.135, 0.151] (99% CI) compared to Voat’s 0.119 [0.108, 0.129], with non-overlapping intervals. Stratifying by content layer changes the interpretation of this mismatch. Simulated root posts/news items have mean toxicity 0.116 [0.107, 0.124], far above real Voat root submissions (0.0307 [0.0265, 0.0348]), whereas simulated comments are less toxic than Voat comments (0.161 [0.151, 0.170] vs. 0.189 [0.173, 0.205]). Comments are still more toxic than posts within the simulation (1.39×), so the posts-to-comments ordering is preserved, but the main discrepancy is not uniformly elevated comment toxicity; it is that toxicity is shifted upward into the root-post layer. Additional layer-specific benchmark statistics, the local one-at-a-time robustness panel, and the depth-shuffle permutation check are reported in SI Sections S9.1, S9.2, and S10. Within that separate 10-day setup, a neutral-persona variant reduces mean toxicity by 46.7% and the share of items above 0.5 by 51.5%, whereas a no-politics variant produces only modest shifts with overlapping intervals. Taken together, these results indicate that toxicity is sensitive to persona construction more broadly, not solely to the political-leaning field; comments/day, topic coverage, and convergence entropy remain close to baseline in the neutral-persona variant.
+In both simulation and real Voat, comments are more toxic than root submissions. However, the layer contrast is much steeper in the empirical data. The simulation therefore captures the direction of the posts-to-comments gradient while misallocating its magnitude, overproducing toxic openings and underproducing the more toxic reply layer seen in Voat. A depth-shuffle permutation test reported in SI Section S9.2 yields Spearman \(\rho = 0.122\), which falls inside the permutation null 95% interval [0.121, 0.127] (\(p = 0.896\)), indicating that this apparent depth pattern is explained by the post/comment split rather than by within-thread escalation.
+Stratifying by agent propensity level confirms that the toxicity ladder mechanism produces the intended behavioral gradient (Fig. 6b). Agents assigned “moderately toxic” propensity produce higher mean toxicity per user than those labeled “no toxicity,” who in turn exceed “absolutely no toxicity” agents. This ordering is consistent across all 30 runs and demonstrates that toxicity variation is not merely an artifact of the base model’s tendencies but follows from designed persona traits. The finding strengthens the mechanistic interpretation: agents carry norm-guided dispositions that shape content generation in predictable ways.
+Figure 6
+Figure 6
+Full size image
+Toxicity analysis. (a) KDE of item-level toxicity scores pooled across the 30 simulation runs and the 30 matched Voat comparison windows used in the main benchmark. (b) Simulation-only mechanism check: mean toxicity per user stratified by toxicity propensity trait across 30 runs. Diamonds mark group means
+Figure 2 shows an adversarial exchange in which toxic messages (marked with hazard icons) co-occur with repeated thematic terms as agents adopt contrasting positions on shared content. The figure therefore illustrates confrontational language and lexical reuse within a thread, not a measured escalation effect.
+4.4 Text analysis
+We compare thread-level topics discovered from simulation threads (582 threads per run; 24.2 topics on average [99% CI: 23.1, 25.3]) to topics extracted from a sample of 10,000 Voat threads (140 topics). Using sentence embeddings (all–MiniLM–L6–v2), we form topic centroids (≤200 threads/topic) and compute cosine similarity between simulation and Voat centroids, retaining matches at or above 0.50. Coverage is near-complete: 99.6% of simulation topics have at least one Voat match. The top 1 match per simulation topic yields mean cosine 0.687 [0.680, 0.693] across 30 runs. SI Sections S11.1–S11.2 and S12.1–S12.2 report the alternative embedding visualizations, full topic statistics, and complete run01 topic list for the same semantic comparison.
+Core technology themes transfer well at the thread level: privacy/security, energy and EVs, AI discourse, and platform/Big Tech themes show consistent alignment, with best pairs ranging from 0.69 to 0.82 (Table 7). Notably, the aligned themes closely mirror the agent interest catalog in Table 3 (Social Media & Online Platforms; Internet Policy & Regulation; Artificial Intelligence; Electric Vehicles & Transportation; Software Development; Clean Energy & Sustainability; Cybersecurity & Privacy; Big Tech; Space Technology; Open Source Projects), consistent with persona interests and link seeding shaping the discussion mix. Taken together, these results support content validity on core tech themes.
+Table 7 Selected thread-level topic matches between simulation and Voat (MADOC). Values are cosine similarities between topic centroids (all–MiniLM–L6–v2); threshold 0.50. Representative subset shown (run01); SI Sections S12.1 and S12.2 report the full thread-level topic statistics and the complete run01 match list
+Full size table
+Embedding similarity (nearest–neighbor)
+We complement topic matching with an item-level nearest-neighbor analysis. Using all-MiniLM-L6-v2 embeddings, each simulation text (posts and comments analyzed separately) is paired to its closest Voat counterpart by cosine similarity. Across 30 runs, posts show moderate-to-good alignment (mean cosine 0.607 [0.604, 0.609]) while comments are somewhat lower (0.573 [0.566, 0.580]).
+Cosine similarities above 0.5 correspond to human-judged similarity scores indicating topical relatedness, based on our STS-B calibration (see Methods, Embedding similarity). Posts align more closely than comments, consistent with topical alignment for news-sharing behavior and more varied commentary styles. A two-dimensional t-SNE projection (perplexity 80; cosine) of the best-matching comment run makes the residual mismatch visible: the simulated comments occupy several compact clusters around the margins of the broader Voat cloud rather than collapsing into a single shared manifold (Fig. 7). The visual fit is therefore consistent with moderate semantic proximity, but not with full distributional overlap. SI Sections S11.1 and S11.2 provide a UMAP view and a side-by-side UMAP/t-SNE comparison for the same selected comment run.
+Figure 7
+Figure 7
+Full size image
+t-SNE projection of comment embeddings for the simulation run with highest mean comment similarity (run11) against the full Voat comment corpus, using all-MiniLM-L6-v2 embeddings and a cosine metric. Even in this best-matching run, the simulation forms several compact clusters around the edges of the broader Voat cloud, indicating moderate proximity but clear residual separation. For context, the run reaches mean cosine 0.606 for posts and 0.598 for comments
+4.4.1 Convergence entropy
+We quantify stylistic alignment within A-B alternating reply chains using convergence entropy H (lower values indicate higher convergence). Across 30 runs, mean entropy per token is 0.275 [0.270, 0.280] (99% CI), which falls below the GPT-4o mini baseline of 0.2827 bits/token reported by [41] (Fig. 8a). This indicates greater stylistic convergence in simulation threads than in the external benchmark. Figure 8b shows that most individual runs fall below this baseline, confirming the pattern is robust across replications.
+Figure 8
+Figure 8
+Full size image
+Convergence entropy analysis with benchmark comparison. (a) Violin plot of entropy per token (H/T) across 30 simulation runs; the simulation mean (red line) falls below the GPT-4o mini baseline (orange dashed). (b) Run-by-run entropy per token with a descriptive 95% band around the simulation mean; most runs fall below the external baseline, indicating greater stylistic convergence (lower is more convergent). This band is a visualization aid and distinct from the 99% t-based benchmark intervals used elsewhere in the paper
+Crucially, this convergence is a consequence of threaded discussion structure, not stylistic persona adaptation. Entropy rises monotonically with turn distance: H increases from 0.272 [0.267, 0.277] at lag 1 to 0.279 [0.272, 0.286] at lag 2 and 0.287 [0.278, 0.297] at lag 3, then plateaus at lag 4+ (0.287 [0.272, 0.302], \(n=13\)). This pattern exactly traces the configured context window (\(K=3\)): as prior turns drop out of context, entropy rises; once all context is lost, it plateaus. Interpersonal pairs show marginally lower entropy (0.273) than intrapersonal pairs (0.279), but the lag-driven decay dominates both. There is no evidence of persistent stylistic convergence between agent personas; the accommodation effect is purely local, mediated by the architectural context window rather than any form of stylistic learning or identity alignment.
+5 Discussion
+This study addresses a central gap in the generative agent-based modeling literature: the lack of rigorous, replicated validation against empirical data (Fig. 1). Where prior work has relied primarily on subjective believability judgments or single-run demonstrations [8, 9], we provide quantitative comparison with matched empirical samples, uncertainty quantification through 30 independent replications, and explicit tracing of divergences to architectural choices. This positions our work within calls for operational validity, the requirement that simulations capture underlying mechanisms of target systems, not merely surface features [8, 10].
+Our standard is operational validity: simulated aggregate distributions and meso-level structures should resemble those of the reference community at comparable scales, without one-to-one reproduction of specific users or texts. Using 99% t-based confidence intervals from 30 replications and 30 matched 30-day Voat windows, we find partial but uneven evidence for this alignment. Root-post volume, unique users, daily active users, and LCC size overlap with Voat, while comment volume, average thread size, mean toxicity, and most global network statistics do not. Given the current replication depth, these overlaps should be read as coarse-scale agreement rather than close quantitative equivalence; the power analysis in SI Section S13 shows that smaller differences remain difficult to detect at \(\alpha =0.01\). The closest fit is therefore at the level of community scale and activity rhythms: daily trajectories remain plausible (Table 5), threads are short (Table 5), and participation remains strongly right-skewed with a long upper tail (Fig. 3). Network structure remains in the right regime but systematically shifted, with average degree about 1.2× the empirical value, density 1.6×, and clustering 4.6× (Table 6); the tail-shape analysis in SI Section S8.4 further shows that empirical degree windows are much closer to a clean power-law regime than the simulated ones. Content still aligns semantically: topics show near-complete coverage (99.6%; Table 7), embedding similarities remain moderate-to-good (0.61 posts, 0.57 comments; Table 8; Fig. 7), and short-range stylistic accommodation is present and decays with lag. Run-average \(H/T\) also remains below the GPT-4o mini baseline reported by [41] (Fig. 8). Taken together, these results show that Y Social reproduces scale and thematic coverage more convincingly than interaction structure, toxicity allocation, or persistent conversational coupling.
+Table 8 Embedding similarity between simulation and Voat (nearest neighbor by cosine). Values are means with 99% CIs from 30 runs
+Full size table
+Despite this broad alignment, several divergences point to specific mechanisms. Although LCC sizes are essentially matched, the simulated core is much larger (19.6% vs. 5.1% of LCC) and more diffuse, with weaker core–periphery coupling (0.020 vs. 0.055) and fewer repeated interactions (5.90% vs. 8.70%) than Voat (Table 6; Fig. 5). This is consistent with narrow per-round activity ranges, simplified feedback and visibility rules, and stateless dialogue that dampen hub consolidation and sustained pairwise exchange. Toxicity also diverges in a specific layer-dependent way. Overall toxicity is higher in simulation (0.143 vs. 0.119), but the excess is concentrated in the root-post layer: simulated root submissions are about 3.8× as toxic as empirical Voat roots, while simulated comments are only about 0.85× as toxic as empirical Voat comments. Both corpora still show more toxic comments than root submissions, but the empirical contrast is much steeper. This points to persona calibration, opening-post prompts, and link seeding that encourage overly confrontational starts, even as the reply process underproduces the more toxic reply layer seen in Voat. Both the diffuse core and the lag-limited convergence are expected consequences of a stateless, per-action design where appropriateness is local and memory is absent.
+A recurring concern in LLM-based social simulation is circularity: models trained on toxic online discourse may simply reproduce that toxicity regardless of platform design [8]. We do not dispute that LLMs carry cultural patterns, including toxic ones, from their training data; indeed, this is precisely the mechanism that makes norm-guided simulation possible. We do not claim that toxicity emerges from platform dynamics; rather, it is prompted via persona-level propensity and scaffolded by an uncensored base model. Our contribution is narrower: toxicity is structured by persona traits and platform architecture rather than deployed indiscriminately, but the comparison to Voat shows that its magnitude is misplaced across content layers. The posts–comments gradient (comments more toxic than posts) appears in both simulation and Voat, yet the depth-shuffle permutation test indicates that this pattern is explained by the post/comment split rather than by within-thread escalation. This is consistent with the stateless design: agents have no long-range memory, so tone does not accumulate across reply depth. The K=3 convergence-entropy signature separately confirms that stylistic accommodation tracks the architectural context window. At the same time, this comparison makes the remaining limitation explicit: simulated root submissions are far too toxic, while simulated comments do not fully reproduce the harsher reply layer seen in Voat. The safer conclusion is therefore narrower: persona traits and platform scaffolding structure where toxicity appears, but only imperfectly. The broader 10-condition local OAT robustness panel in SI Section S10 shows that these absolute levels are strongly calibration-sensitive in a targeted way: neutralizing persona framing moves toxicity the most, temperature has weak local effects, and budget/CPR/churn settings mainly perturb activity and network structure rather than toxicity itself. The remaining mismatch therefore appears tunable rather than fundamental, even if identifying a configuration that improves toxicity while preserving the full 30-day Voat fit remains future work.
+As emphasized in the introductory sections, this is a machine-to-machine baseline built on the “logic of appropriateness”: agents act from norms and roles under short, stateless context. As a result, identity formation and long-range alignment are out of scope; we focus on short-range behavior and medium-scale structure rather than motives or psychology. Several measurements are proxies with familiar caveats (e.g., domain shift for the toxicity model, approximate embedding thresholds and 2D maps), and the fixed link catalog intentionally shapes topical exposure. Taken together, the results show that placing LLM agents in a realistic platform with simple, transparent rules can recover familiar platform patterns, but findings should be interpreted as structural resemblance at the right scale, not literal replication.
+5.1 Limitations and future work
+Three control challenges remain central for scaling this approach. First, agent behavior remains sensitive to prompt wording, context selection, and model idiosyncrasies, so “validity” is always conditional on a documented prompting protocol [44]. Second, multi-agent interaction can exhibit coherence failures (e.g., role drift or identity instability) that accumulate with horizon length, even when individual turns look locally plausible [45, 46]. Third, our stateless design deliberately avoids long-horizon memory and identity scaffolds, which improves interpretability of short-range effects but limits the class of long-range phenomena the simulation can represent. These constraints motivate a staged program of extensions where memory is introduced only when it measurably improves operational validity under the same validation panel.
+This benchmark is intentionally conservative. v/technology is small, shallow-threaded, and relatively low-volume, making it a favorable first test for stateless agents. Larger or more heterogeneous communities would likely amplify exactly the mismatches already visible here, especially hub consolidation, repeated interactions, and long-range conversational carryover. We therefore interpret the present results as evidence of validity in a tractable small-community regime, not as evidence that the same architecture would validate unchanged on larger Reddit-scale communities.
+Relatedly, our use of an uncensored base model should be read as a realism choice for a contentious forum setting rather than a policy statement. Preference-based alignment can induce sycophancy and suppress disagreement, which would bias a conflict-oriented simulation toward cooperation and niceness [47–49]. A natural next step is an ablation that holds the platform and validation panel fixed while varying model families (uncensored vs. instruction-tuned vs. anti-sycophancy-tuned) to quantify tradeoffs between safety, conflict realism, and structural validity.
+Looking ahead, we prioritize a simple, evidence-based roadmap. First, test alternative feed variants—pure recency, pure popularity, or a “controversial” ranking (balanced ups/downs)—to probe whether different recommendation strategies consolidate the core or shift toxicity dynamics relative to the current popularity-weighted baseline. Second, widen or replace the truncated Zipf activity distribution (or test alternative heavy-tailed forms) to better capture participation heterogeneity. These steps should increase fidelity while preserving reproducibility. For substantially higher fidelity, introducing agent memory will be crucial; this study makes clear the limits of a memoryless approach and motivates future work on lightweight, per-thread memory and longer-horizon state. Longer horizons may also require explicit controls against entropy drift in multi-agent populations.
+Beyond Voat’s v/technology, the same operational-validation panel can in principle be transferred to other communities, but transfer of validity is empirical rather than automatic. One would update the link catalog (or content source), re-tune personas to the local context, and reuse the same evaluation axes (daily activity trajectories and thread size/depth distributions, network core–periphery, toxicity by content type, topics/embeddings, convergence), then re-establish the benchmark against community-specific data. This keeps cross-setting comparisons interpretable because the standard remains structural resemblance at comparable scales, not one-to-one replication. For larger or denser communities, however, we would expect stronger demands on persistence, repeated interaction, and long-range memory than the present stateless design can support.
+The platform-faithful setup also enables practical “what-if” experiments. Researchers can vary feed rules (recency vs. popularity vs. controversial), moderation policies, or action menus and quantify shifts in the same structural terms. The same panel extends naturally to mixed human–machine studies by injecting or signaling agent presence while tracking activity, network concentration, toxicity by content type, semantic coverage, and convergence. Interpreted through operational validity, these experiments identify levers that measurably change platform-level patterns and provide a reproducible, falsifiable baseline for future improvements. In sum, Y Social with norm-guided LLM agents offers a transparent testbed for cumulative, empirical research on online social network dynamics.
+Data availability
+The entire workflow (simulation configuration, prompts, fixed URL catalog, analysis scripts, and model references) is organized for reproducibility and open access. Empirical calibration and validation samples are drawn from the Multi-Platform Aggregated Dataset of Online Communities (MADOC), which provides standardized data and FAIR (Findable, Accessible, Interoperable, Reusable) access via Zenodo (doi:10.5281/zenodo.15690964). Simulation results and Python code are available on GitHub: https://github.com/atomashevic/voat-simulation. The modified YSocial client used in this study is available at: https://github.com/atomashevic/YClient-Reddit.
+Notes
+Upstream client: https://github.com/YSocialTwin/YClientReddit; modified client: https://github.com/atomashevic/YClient-Reddit.
+https://huggingface.co/tomh/toxigen_roberta.
+Abbreviations
+ABM:
+Agent-Based Model
+API:
+Application Programming Interface
+CI:
+Confidence Interval
+ECDF:
+Empirical Cumulative Distribution Function
+HDBSCAN:
+Hierarchical Density-Based Spatial Clustering of Applications with Noise
+KDE:
+Kernel Density Estimation
+LCC:
+Largest Connected Component
+LLM:
+Large Language Model
+MADOC:
+Multi-platform Aggregated Dataset of Online Communities
+MCMC:
+Markov Chain Monte Carlo
+MDL:
+Minimum Description Length
+RSS:
+Really Simple Syndication
+SBM:
+Stochastic Block Model
+SD:
+Standard Deviation
+t-SNE:
+t-distributed Stochastic Neighbor Embedding
+UMAP:
+Uniform Manifold Approximation and Projection
+URL:
+Uniform Resource Locator
+References
+Cinelli M, De Francisci Morales G, Galeazzi A, Quattrociocchi W, Starnini M (2021) The echo chamber effect on social media. Proc Natl Acad Sci USA 118(9):2023301118. https://doi.org/10.1073/pnas.2023301118
+Article
+Google Scholar
+Avalle M, Di Marco N, Etta G (2024) Persistent interaction patterns across social media platforms and over time. Nature. https://doi.org/10.1038/s41586-024-07229-y
+Article
+Google Scholar
+Pandita S, Garg K, Zhang J, Mobbs D (2024) Three roots of online toxicity: disembodiment, accountability, and disinhibition. Trends Cogn Sci. https://doi.org/10.1016/j.tics.2024.06.001
+Article
+Google Scholar
+Neuman WR, Marcus GE, MacKuen MB (2024) The affective resonance of norm-violation rhetoric in social media. In: Research handbook on social media and society. Edward Elgar Publishing, Cheltenham, pp 161–180. https://doi.org/10.4337/9781800377059.00023
+Chapter
+Google Scholar
+Mimizuka K, Brown MA, Yang K-C, Lukito J (2025) Post-post-api age: studying digital platforms in scant data access times. J ACM 37(4):111. https://doi.org/10.48550/arXiv.2505.09877. arXiv:2505.09877. DSA Article 40
+Article
+Google Scholar
+Anthis JR, Liu R, Richardson SM, Kozlowski AC, Koch B, Evans JA, Brynjolfsson E, Bernstein M (2025) LLM social simulations are a promising research method. arXiv, arXiv:2504.02234. https://doi.org/10.48550/arXiv.2504.02234
+Vezhnevets AS, Agapiou JP, Aharon A, Ziv R, Matyas J, Duéñez-Guzmán EA, Cunningham WA, Osindero S, Karmon D, Leibo JZ (2023) Generative agent-based modeling with actions grounded in physical, social, or digital space using Concordia. https://doi.org/10.48550/arXiv.2312.03664. arXiv [cs.AI]
+Larooij M, Törnberg P (2025) Do large language models solve the problems of agent-based modeling? A critical review of generative social simulations. https://doi.org/10.48550/arXiv.2504.03274. arXiv:2504.03274 [cs.MA]
+Li C, Wang J, Wang Y, Zhao H (2024) A survey on the application of large language models in agent-based modeling and simulation. Humanit Soc Sci Commun 11:1–15
+Google Scholar
+Adornetto C, Mora A, Hu K, Garcia LI, Atchade-Adelomou P, Greco G, Pastor LAA, Larson K (2025) Generative agents in agent-based modeling: overview, validation, and emerging challenges. IEEE Trans Artif Intell 6(12):3165–3183. https://doi.org/10.1109/tai.2025.3566362
+Article
+Google Scholar
+Lin Z (2025) Six fallacies in substituting large language models for human participants. Adv Methods Pract Psychol Sci 8(3). https://doi.org/10.1177/25152459251357566
+Bouleimen A, De Marzo G, Kim T, Pagan N, Metzler H, Giordano S, Garcia D (2025) The collective Turing test: large language models can generate realistic multi-user discussions. https://doi.org/10.48550/arXiv.2511.08592. https://arxiv.org/abs/2511.08592
+Mayor E, Bietti LM, Bangerter A (2025) Can large language models simulate spoken human conversations? Cogn Sci 49(9). https://doi.org/10.1111/cogs.70106
+Ng LHX, Carley KM (2025) Are LLM-powered social media bots realistic? Springer, Cham, pp 14–23. https://doi.org/10.1007/978-3-032-07715-8_2
+Book
+Google Scholar
+Tsvetkova M, Yasseri T, Pescetelli N, Werner T (2024) A new sociology of humans and machines. Nat Hum Behav 8(10):1864–1876. https://doi.org/10.1038/s41562-024-02001-8
+Article
+Google Scholar
+Brinkmann L, Baumann F, Bonnefon J-F, Derex M, Müller TF, Nussberger A-M, Czaplicka A, Acerbi A, Griffiths TL, Henrich J, Leibo JZ, McElreath R, Oudeyer P-Y, Stray J, Rahwan I (2023) Machine culture. Nat Hum Behav 7(11):1855–1868. https://doi.org/10.1038/s41562-023-01742-2
+Article
+Google Scholar
+Farrell H, Gopnik A, Shalizi C, Evans J (2025) Large AI models are cultural and social technologies. Science (Policy Forum). https://doi.org/10.1126/science.adt9819. Science galley
+Article
+Google Scholar
+Park JS, Popowski L, Cai C, Morris MR, Liang P, Bernstein MS (2022) Social simulacra: creating populated prototypes for social computing systems. In: Proceedings of the 35th annual ACM symposium on user interface software and technology. ACM, Bend, pp 1–18. https://doi.org/10.1145/3526113.3545616. https://dl.acm.org/doi/10.1145/3526113.3545616. Accessed 2025-08-28
+Chapter
+Google Scholar
+Kozlowski AC, Evans J (2025) Simulating subjects: the promise and peril of artificial intelligence stand-ins for social agents and interactions. Sociol Methods Res 54(3). https://doi.org/10.1177/00491241251337316
+Durrheim K, Quayle M (2025) Human murmuration: group polarisation as compression in interaction-language dynamics captured by large language models. Eur Rev Soc Psychol, 1–40. https://doi.org/10.1080/10463283.2025.2499332
+March JG, Olsen JP (2013) The logic of appropriateness. In: Goodin R (ed) The Oxford handbook of political science, 1st edn. Oxford University Press, Oxford, pp 478–497. https://doi.org/10.1093/oxfordhb/9780199604456.013.0024
+Chapter
+Google Scholar
+Berger PL, Luckmann T (1991) The social construction of reality. Penguin Books, Harmondsworth
+Google Scholar
+Argyle LP, Busby EC, Fulda N, Gubler JR, Rytting C, Wingate D (2023) Out of one, many: using language models to simulate human samples. Polit Anal 31(3):337–351. https://doi.org/10.1017/pan.2023.2
+Article
+Google Scholar
+Bao H, Wu S, Choi J, Mao Y, Evans JA (2025) Language models surface the unwritten code of science and society. https://doi.org/10.48550/arXiv.2505.18942. arXiv [cs.CY]
+Epstein JM (1999) Agent-based computational models and generative social science. Complexity 4(5):41–60. https://doi.org/10.1002/(sici)1099-0526(199905/06)4:5<41::aid-cplx9>3.0.co;2-f
+Article
+MathSciNet
+Google Scholar
+Fagiolo G, Moneta A, Windrum P (2007) A critical guide to empirical validation of agent-based models in economics: methodologies, procedures, and open problems. Comput Econ 30(3):195–226. https://doi.org/10.1007/s10614-007-9104-4
+Article
+Google Scholar
+Guerini M, Moneta A (2017) A method for agent-based models validation. J Econ Dyn Control 82:125–141. https://doi.org/10.1016/j.jedc.2017.06.001
+Article
+MathSciNet
+Google Scholar
+Park JS, O’Brien JC, Cai CJ, Morris MR, Liang P, Bernstein MS (2023) Generative agents: interactive simulacra of human behavior. In: Proceedings of the 36th annual ACM symposium on user interface software and technology, pp 1–22. https://doi.org/10.1145/3586183.3606763
+Chapter
+Google Scholar
+Rossetti G, Stella M, Cazabet R, Abramski K, Cau E, Citraro S, Failla A, Improta R, Morini V, Pansanella V (2024) Y social: an LLM-powered social media digital twin. https://doi.org/10.48550/arXiv.2408.00818. arXiv [cs.AI]
+Pew Research Center (2021) Beyond red vs. blue: the political typology. Technical report, Pew Research Center. https://www.pewresearch.org/wp-content/uploads/sites/20/2021/11/PP_2021.11.09_political-typology_REPORT.pdf
+Mekacher A, Papasavva A (2022) “I can’t keep it up.” A dataset from the defunct Voat.co news aggregator. Proc Int AAAI Conf Web Soc Media 16:1302–1311. https://doi.org/10.1609/icwsm.v16i1.19382
+Article
+Google Scholar
+Panek E, Hollenbach C, Yang J, Rhodes T (2017) Growth and inequality of participation in online communities. In: Proceedings of the 2017 ACM conference on computer supported cooperative work and social computing, pp 1321–1332. https://doi.org/10.1145/3097286.3097337
+Chapter
+Google Scholar
+Muchnik L, Pei S, Parra LC, Reis SDS, Andrade JS Jr, Havlin S, Makse HA (2013) Origins of power-law degree distribution in the heterogeneity of human activity in social networks. Sci Rep 3:1783. https://doi.org/10.48550/arXiv.1304.4523. arXiv:1304.4523
+Article
+Google Scholar
+Hagberg AA, Schult DA, Swart PJ (2008) Exploring network structure, dynamics, and function using NetworkX. In: Proceedings of the 7th python in science conference (SciPy 2008). SciPy, Austin, pp 11–15. https://doi.org/10.25080/TCWV9851
+Chapter
+Google Scholar
+Gallagher RJ, Young J-G, Welles BF (2021) A clarified typology of core-periphery structure in networks. Sci Adv 7(12):9800. https://doi.org/10.1126/sciadv.abc9800
+Article
+Google Scholar
+Clauset A, Shalizi CR, Newman MEJ (2009) Power-law distributions in empirical data. SIAM Rev 51(4):661–703. https://doi.org/10.1137/070710111
+Article
+MathSciNet
+Google Scholar
+Hartvigsen T, Gabriel S, Palangi H, Sap M, Ray D, Kamar E (2022) ToxiGen: a large-scale machine-generated dataset for adversarial and implicit hate speech detection. In: Proceedings of the 60th annual meeting of the association of computational linguistics
+Google Scholar
+Reimers N, Gurevych I (2019) Sentence-BERT: sentence embeddings using Siamese BERT-networks. In: Proceedings of the 2019 conference on empirical methods in natural language processing and the 9th international joint conference on natural language processing (EMNLP-IJCNLP). Association for Computational Linguistics, Hong Kong, pp 3982–3992. https://doi.org/10.18653/v1/D19-1410
+Chapter
+Google Scholar
+Grootendorst M (2022) BERTopic: neural topic modeling with a class-based TF-IDF procedure. https://doi.org/10.48550/arXiv.2203.05794. arXiv [cs.CL]
+Rosen ZP, Dale R (2024) BERTs of a feather: studying inter- and intra-group communication via information theory and language models. Behav Res Methods 56(4):3140–3160. https://doi.org/10.3758/s13428-023-02267-2
+Article
+Google Scholar
+Chaiyakul R, Rosen ZP, Dale R (2025) Large language model discourse dynamics. In: Proceedings of the Annual Meeting of the Cognitive Science Society, vol 47
+Google Scholar
+Koley G, Digrajkar S (2025) A simulation framework for studying recommendation-network co-evolution in social platforms. https://doi.org/10.48550/arXiv.2512.10106. https://arxiv.org/abs/2512.10106
+Larooij M, Törnberg P (2025) Can we fix social media? Testing prosocial interventions using generative social simulation. https://doi.org/10.48550/arXiv.2508.03385. arXiv [cs.SI]
+Lu Y, Aleta A, Du C, Shi L, Moreno Y (2024) LLMs and generative agent-based models for complex systems research. Phys Life Rev 51:283–293. https://doi.org/10.1016/j.plrev.2024.10.013
+Article
+Google Scholar
+Shekkizhar S, Cosentino R, Earle A, Savarese S (2025) Echoing: identity failures when LLM agents talk to each other. https://doi.org/10.48550/arXiv.2511.09710. https://arxiv.org/abs/2511.09710
+Book
+Google Scholar
+Mooney J, Woldense J, Jia ZR, Hayati SA, Nguyen MH, Raheja V, Kang D (2025) Are LLM agents behaviorally coherent? Latent profiles for social simulation. https://doi.org/10.48550/arXiv.2509.03736. https://arxiv.org/abs/2509.03736
+Book
+Google Scholar
+Sharma M, Tong M, Korbak T, Duvenaud D, Askell A, Bowman SR, Cheng N, Durmus E, Hatfield-Dodds Z, Johnston SR, Kravec S, Maxwell T, McCandlish S, Ndousse K, Rausch O, Schiefer N, Yan D, Zhang M, Perez E (2025) Towards understanding sycophancy in language models. https://doi.org/10.48550/arXiv.2310.13548. https://arxiv.org/abs/2310.13548
+Book
+Google Scholar
+Wei J, Huang D, Lu Y, Zhou D, Le QV (2024) Simple synthetic data reduces sycophancy in large language models. https://doi.org/10.48550/arXiv.2308.03958. https://arxiv.org/abs/2308.03958
+Malmqvist L (2024) Sycophancy in large language models: causes and mitigations. https://doi.org/10.48550/arXiv.2411.15287. https://arxiv.org/abs/2411.15287
+Book
+Google Scholar
+Mitrović Dankulov M, Tomašević A, Maletić S, Anđelković M, Vranić A, Cvetković D, Stupovski B, Vudragović D, Major S, Bogojević A (2025) Multi-platform aggregated dataset of online communities (MADOC). Proc Int AAAI Conf Web Soc Media 19:2529–2538. https://doi.org/10.1609/icwsm.v19i1.35954
+Article
+Google Scholar
+Download references
+Acknowledgements
+This research was financially supported by the Science Fund of the Republic of Serbia, 7416, Topology-derived methods for the analysis of collective trust dynamics CTRUST. Prizma program (grant No. 7416). We performed analyses on the Paradox V cluster at the Scientific Computing Laboratory, National Center of Excellence for the Study of Complex Systems, Institute of Physics Belgrade.
+Funding
+This research was financially supported by the Science Fund of the Republic of Serbia, Prizma program (grant No. 7416).
+Author information
+Authors and Affiliations
+Institute of Physics Belgrade, University of Belgrade, Belgrade, Serbia
+Aleksandar Tomašević, Darja Cvetković, Ana Vranić, Boris Stupovski, Dušan Vudragović, Aleksandar Bogojević & Marija Mitrović Dankulov
+Faculty of Philosophy, University of Novi Sad, Novi Sad, Serbia
+Sara Major
+Vinča Institute of Nuclear Sciences - National Institute of the Republic of Serbia, University of Belgrade, Belgrade, Serbia
+Slobodan Maletić & Miroslav Anđelković
+Authors
+Aleksandar Tomašević
+View author publications
+Search author on:PubMed Google Scholar
+Darja Cvetković
+View author publications
+Search author on:PubMed Google Scholar
+Sara Major
+View author publications
+Search author on:PubMed Google Scholar
+Slobodan Maletić
+View author publications
+Search author on:PubMed Google Scholar
+Miroslav Anđelković
+View author publications
+Search author on:PubMed Google Scholar
+Ana Vranić
+View author publications
+Search author on:PubMed Google Scholar
+Boris Stupovski
+View author publications
+Search author on:PubMed Google Scholar
+Dušan Vudragović
+View author publications
+Search author on:PubMed Google Scholar
+Aleksandar Bogojević
+View author publications
+Search author on:PubMed Google Scholar
+Marija Mitrović Dankulov
+View author publications
+Search author on:PubMed Google Scholar
+Contributions
+A.T., D.C., S.M., S.Mal., M.A., A.V., B.S., D.V., A.B., and M.M.D. contributed to the study conceptualization and methodology. A.T. led software development, formal analysis, investigation, data curation, visualization, and wrote the original draft. D.C. contributed to software development, investigation, data curation, visualization, and manuscript review and editing. S.M., S.Mal., M.A., B.S., and A.B. contributed to data curation and manuscript review and editing. A.V. contributed to data curation, visualization, and manuscript review and editing. D.V. contributed to data curation, resources, and manuscript review and editing. A.B. contributed resources and provided supervision. M.M.D. provided supervision, managed project administration, acquired funding, and contributed to manuscript review and editing. All authors reviewed and approved the final manuscript.
+Corresponding author
+Correspondence to
+Aleksandar Tomašević.
+Ethics declarations
+Ethics approval and consent to participate
+No human participants were involved in this study. Generated content was produced with a base, less-aligned model under safeguards and filtered for research use only. The link catalog for seeding content is derived from public Voat data; no live RSS ingestion is used, and all experiments run in a closed environment. We do not use third-party generation or scoring APIs (e.g., commercial LLM endpoints or Perspective API) to avoid alignment restrictions that suppress toxic content and to ensure reproducibility; all inference uses local open models with fixed seeds and documented preprocessing.
+Consent for publication
+Not applicable.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Handling Editor: Giancarlo RUFFO
+Publisher’s note
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Supplementary Information
+Below is the link to the electronic supplementary material.
+(PDF 4.1 MB) (download PDF )
+Rights and permissions
+Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+Reprints and permissions
+About this article
+Check for updates. Verify currency and authenticity via CrossMark
+Cite this article
+Tomašević, A., Cvetković, D., Major, S. et al. Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum.
+EPJ Data Sci. 15, 72 (2026). https://doi.org/10.1140/epjds/s13688-026-00674-x
+Download citation
+Received: 02 February 2026
+Accepted: 03 June 2026
+Published: 11 June 2026
+Version of record: 17 August 2026
+DOI: https://doi.org/10.1140/epjds/s13688-026-00674-x
+Share this article
+Anyone you share the following link with will be able to read this content:Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy shareable link to clipboard
+Provided by the Springer Nature SharedIt content-sharing initiative
+Keywords
+Agent-based modeling
+LLM Agents
+Social simulation
+Operational validity
+Reddit
+Voat
+Online social networks
+Profiles
+Aleksandar Tomašević
+View author profile
+Ana Vranić
+View author profile
+Advertisement
+Search
+Search by keyword or author
+Search
+Navigation
+Find a journal
+Publish with us
+Track your research
+Footer Navigation
+Discover content
+Journals A-Z
+Books A-Z
+Subjects A-Z
+Publish with us
+Journal finder
+Publish your research
+Language editing
+Open access publishing
+Products and services
+Our products
+Librarians
+Societies
+Partners and advertisers
+Our brands
+Springer
+Nature Portfolio
+BMC
+Palgrave Macmillan
+Apress
+Discover
+Corporate Navigation
+Your privacy choices/Manage cookies
+Your US state privacy rights
+Accessibility statement
+Terms and conditions
+Privacy policy
+Help and support
+Legal notice
+Cancel contracts here
+185.17.205.210
+Not affiliated
+Springer Nature
+© 2026 Springer Nature

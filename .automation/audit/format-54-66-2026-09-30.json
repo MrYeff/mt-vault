@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-30",
+  "task": "Presentation-only formatting for case-sensitive sorted Markdown entry indices 54-66.",
+  "inventory": [
+    "RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+    "Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+    "Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+    "Reliable and Efficient Agent-Based Modeling and Simulation.md",
+    "Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+    "SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+    "Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+    "Social Agents- A Systematic Review of Social Identity Formalizations.md",
+    "Social Relationships and the Emergence of Social Networks.md",
+    "Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+    "Social capital II- determinants of economic connectedness.md",
+    "Stochastic Actor-Oriented Models for Network Dynamics.md",
+    "T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md"
+  ],
+  "changed_files": [
+    {
+      "path": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "presentation_change": "Split one long Model bullet into separate bullets for boredom threshold, the two boredom variants, and the stated unresolved composition/reset details; preserved claims and citations."
+    },
+    {
+      "path": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "presentation_change": "Split two long Model bullets into compact bullets for turn/partner schedule, strategy search and memory; and for the printed trust-rule conflict versus the §4.4 alternative. Preserved claims, warning, and citations."
+    }
+  ],
+  "audit_status": "No source audit performed; existing warnings and statuses unchanged."
+}

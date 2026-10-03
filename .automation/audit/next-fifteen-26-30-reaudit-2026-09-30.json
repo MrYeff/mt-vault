@@ -1,0 +1,83 @@
+{
+  "audit_id": "next-fifteen-26-30-reaudit-2026-09-30",
+  "audit": "independent re-audit of corrected entries 26-30",
+  "audited_at": "2026-09-30",
+  "scope": "Read-only audit against the initial findings and primary sources. Compared Metadata/References against original_frontmatter.refs in order. No paper notes edited; no obsolete SocialIntegrationBibliography.json pointer restored.",
+  "overall_status": "FAIL",
+  "entries": [
+    {
+      "number": 26,
+      "file": "vault/Literature/Papers/Entries/Friendship Dynamics- Modelling Social Relationships through a Fuzzy Agent-Based Simulation.md",
+      "status": "FAIL",
+      "source_access": "Full 19-page article copy readable at https://pdfs.semanticscholar.org/2c3b/ef77179d5fdaf4faddee8a632af966cd3ab8.pdf; publisher record at https://onlinelibrary.wiley.com/doi/10.1155/2011/765640.",
+      "resolved_initial_findings": [
+        "The RQs no longer say friendship dissolves. The note explicitly says the relationship follows dF/dt = gF(1-F/K), with g=R_similarity×J and J=J0 exp(p×R_similarity), and ties cannot weaken or break (Section 5.2, Eqs. 5.1–5.3, printed pp. 12–13; primary PDF pp. 11–12).",
+        "Figure 4 example K=1 and F0=.01 and Figure 5 p=5.8, J0=.001 are accurately identified as illustrations; source says p and J0 were obtained experimentally (printed p. 13).",
+        "Four crisp/fuzzy similarity/friendship variants and two configurations are named. The ANOVA comparison across fuzzification levels and p<.001 are supported by Section 6, Table 2 and discussion (printed pp. 16–17). The note correctly limits this to internal model comparison and reports the authors’ no-empirical-support caveat for the logistic assumption."
+      ],
+      "unresolved_or_new_findings": [
+        {
+          "location": "Model > What can it answer?",
+          "finding": "The claim that MentatFuzzAll produced higher mean couple similarity than every other variant in both configurations hides a source-internal prose/table conflict. The prose says it ‘beats’ the other versions on RSimilarity and RFriendship in both configurations (Section 6, printed p. 17), but Table 2 reports random-friendship RSimilarity 0.77 for both MentatFuzzSim and MentatFuzzAll (PDF p. 16). The table also marks crisp-friendship values as ‘all couples are friends,’ so those are not an ordinary graded comparison. The note repeats the prose as an unqualified result and does not flag the conflicting table values.",
+          "correction_needed": "Report the table values and explicitly flag the discrepancy with the prose, or qualify the prose claim as conflicting with Table 2. Keep the ANOVA statement distinct from the pairwise/model-level result."
+        }
+      ],
+      "metadata_and_references": "Title/DOI/date and corrected displayed author Juan Pavón are consistent with the publisher record; tags use underscores/no spaces. All 67 reference links exactly match the original captured array in order."
+    },
+    {
+      "number": 27,
+      "file": "vault/Literature/Papers/Entries/Friendship networks and social status.md",
+      "status": "PASS",
+      "source_access": "Complete 7-page primary author preprint readable at https://arxiv.org/pdf/1205.6822; Cambridge record https://www.cambridge.org/core/journals/network-science/article/abs/friendship-networks-and-social-status/18CD7D21D1A2852C27C74374BAF22432.",
+      "verified_fixes": [
+        "Model separates symmetric reciprocated-edge function alpha(rank difference) from directional one-way-edge function beta(rank difference); no self-edges and a uniform rank prior are stated (PDF pp. 2–3, Eqs. 1–11).",
+        "The estimation summary correctly describes hidden ranks/alpha-beta maximum likelihood with EM iteration and MCMC approximation for the rank posterior; posterior-averaged inferred rank is the reported measure (PDF pp. 2–4 and 5–6).",
+        "The empirical scale/results are accurate: 84 AddHealth school networks covering over 90,000 students; minimum-violations rankings have about 98% of unreciprocated edges directed lower-to-higher; inferred rank correlates with grade and popularity, with status interpretation explicitly conjectural (PDF pp. 3–6)."
+      ],
+      "metadata_and_references": "Title, authors, DOI 10.1017/nws.2012.4 and Cambridge online date 2013-04-15 agree with primary metadata. Tags use underscores/no spaces. All 31 reference links match the original captured array in exact order. No material unsupported claim or unresolved initial finding found."
+    },
+    {
+      "number": 28,
+      "file": "vault/Literature/Papers/Entries/From Individual to Society- A Survey on Social Simulation Driven by Large Language Model-based Agents.md",
+      "status": "LIMITED",
+      "source_access": "The arXiv v1 full text is readable at https://arxiv.org/pdf/2412.03563. The ACM full 41-page version of record was not accessible for this audit. Paperity at https://paperity.org/p/376522331/from-individual-to-society-a-survey-on-social-simulation-driven-by-large-language-model exposes the ACM abstract and metadata/first-page excerpt, but not the full published text. ACM DOI record direct fetch was unavailable.",
+      "verified": "The note’s abstract matches the ACM abstract exposed in Paperity, including the revised ending on datasets, benchmarks, tools, risks and challenges. The arXiv v1 abstract differs in that ending; the note discloses the version distinction. The taxonomy/model description is explicitly limited to arXiv v1, so it does not claim to verify later full-text changes. DOI 10.1145/3800683, article 280, ACM Computing Surveys 58(11), all 11 authors/order, and tags are consistent with the ACM metadata excerpt. All 233 reference links match the original captured array in exact order.",
+      "required_caveats": [
+        "Per the extraction guide, add ⚠️ fulltext unavailable for the published ACM version while retaining the existing not audited warning; readable arXiv v1 does not make the version of record full text available.",
+        "The publication date is currently year-only (2026), while the ACM record explicitly says publication date April 2026; use 2026-04 if this property supports year-month precision.",
+        "Revise ‘ACM PDF was indexed in an accessible Paperity mirror’ and the LLM Justification’s ‘accessible indexed full-text mirror’ wording: only the abstract and a limited excerpt/metadata were inspected, not the complete 41-page published text."
+      ]
+    },
+    {
+      "number": 29,
+      "file": "vault/Literature/Papers/Entries/From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities.md",
+      "status": "FAIL",
+      "source_access": "Complete arXiv v1 article readable at https://arxiv.org/pdf/2606.17174; primary record https://arxiv.org/abs/2606.17174.",
+      "verified_fixes": [
+        "The note now states the engagement-active sample bounds (5–150 comments) and 11-day window; source specifies 2026-01-28 to 2026-02-08 UTC and explicitly says estimates are for engagement-active threads rather than full-platform prevalence (Section 3.1, PDF pp. 3–4).",
+        "The adjusted Any-PSR to OP-participation comparison accurately distinguishes the keyword result (OR 1.07, 95% CI 0.88–1.30; nonsignificant) from significant few-shot and grouped-context results (Table 8, PDF p. 7).",
+        "The note bounds inference to observed behavioral traces and says recurrence does not establish durable internal PSR/attachment or sentience, consistent with the Discussion’s explicit distinction between interaction-level evidence and durable internal relationships (PDF pp. 9–10)."
+      ],
+      "unresolved_or_new_findings": [
+        {
+          "location": "Frontmatter authors[0]",
+          "finding": "The displayed first-author name is ‘MohammadSadegh Abolhasani’; the primary arXiv record spells it ‘Mohammadsadegh Abolhasani’ (one uninterrupted given name; https://arxiv.org/abs/2606.17174, author line). The capitalization introduces a source-inconsistent name form.",
+          "correction_needed": "Normalize the author label/path to the primary spelling, preserving the existing author link target as appropriate."
+        }
+      ],
+      "metadata_and_references": "arXiv DOI and first-submission date 2026-06-15 match the primary record. Tags use underscores/no spaces. All 38 reference links match the original captured array in exact order. Abstract matches arXiv v1."
+    },
+    {
+      "number": 30,
+      "file": "vault/Literature/Papers/Entries/Generative agent-based modeling with actions grounded in physical- social- or digital space using Concordia.md",
+      "status": "PASS",
+      "source_access": "Complete arXiv v1 PDF readable at https://arxiv.org/pdf/2312.03664v1; latest v2 also readable at https://arxiv.org/pdf/2312.03664. Audited the corrected turn/update claims in both versions. Primary record https://arxiv.org/abs/2312.03664 confirms the original submission date, authors/order and DOI.",
+      "verified_fixes": [
+        "The note correctly separates component observation delivery from regular configurable component updates and says multiple observations may arrive before action; Appendix A.1, Eq. 1 (v1 PDF p. 23).",
+        "The GM sequence is accurately stated: update then agent-specific partial_state/observation; agent act; update_before_event; GM builds event statement from component state; update_after_event; termination check (Appendix A.3, v1 pp. 23–24; same sequence in v2).",
+        "Random initiative order, advancing the clock after each or all agents, sequential and quasi-simultaneous modes, and optional concurrency with possible inconsistencies are all stated in Appendix A.3–A.3.1 (v1 pp. 23–24; v2 pp. 24–25). The current footnote points to the latest arXiv PDF, where its page range matches."
+      ],
+      "metadata_and_references": "Abstract is exact against the arXiv record; title, 10 authors, arXiv DOI 10.48550/arXiv.2312.03664 and first-submission date 2023-12-06 are correct. Tags use underscores/no spaces. All 114 reference links match the original captured array in exact order. No material unsupported claim or unresolved initial finding found."
+    }
+  ]
+}

@@ -1,0 +1,3027 @@
+The Prosocial Ranking Challenge: Reducing Polarization on Social Media without Sacrificing Engagement
+Report GitHub Issue
+×
+Title:
+Content selection saved. Describe the issue below:
+Description:
+Submit without GitHub
+Submit in GitHub
+arXiv is now an independent nonprofit!
+Learn more
+×
+Back to arXiv
+Why HTML?
+Report Issue
+Back to Abstract
+Download PDF
+Abstract
+References and Notes
+1 Supplementary Materials
+1.1 Preregistration and Deviations
+1.1.1 Outcome Measures
+1.1.2 Sample Size
+1.1.3 Interventions
+1.2 Results on All Outcomes
+1.3 Survey Outcomes
+1.4 Preregistered Indexes
+Mental Health
+Support for Partisan Violence
+Meta-perceptions on Support for Partisan Violence
+Affective Polarization
+Intergroup empathy
+Political Knowledge
+Meaningful Connections and Experience
+Negative Emotions
+Social Trust
+1.5 Engagement Outcomes
+2 In Feed Survey Measures
+3 Ranking Algorithms
+3.1 Perspective Arms
+People involved (in authorship order):
+Theory
+Implementation
+Classifiers used:
+Posts Added
+Posts replaced/deleted?
+Posts, comments, both?
+Resulting changes
+Where this ranker runs
+Change log
+3.2 Diverse Approval
+People involved (in authorship order):
+Theory
+Implementation
+Classifiers
+LLM classifier prompt and validation
+Posts added
+Number of posts added
+Posts replaced/deleted
+Resulting changes
+Personalization
+Where in the feed are posts inserted?
+Where this ranker runs
+Posts, comments, both?
+Change log:
+3.3 Challenging Stereotypes
+People involved (in authorship order)
+Theory
+Implementation:
+Classifiers
+GPT-4o prompt
+Posts added
+Number of posts added
+Posts replaced/deleted
+Resulting changes
+Personalization
+Where this ranker runs
+Posts, comments, both?
+Change log:
+3.4 Add News
+People involved (in authorship order):
+Theory
+Implementation
+Classifiers
+Posts added
+Number of posts added
+Posts replaced/deleted
+Resulting Changes
+Personalization
+Where this ranker runs
+Posts, comments, both?
+Change log:
+4 Participant Recruitment and Sample
+5 Identification Strategy
+5.1 Behavioral Outcomes (Daily Panel)
+Pooled treatment arms.
+Individual arms.
+Heterogeneity.
+5.2 Survey and In-Feed Outcomes
+6 Attrition
+6.1 Survey Attrition
+7 All Survey Questions
+7.1 Political Knowledge Questions
+Group 1
+Group 2
+Group 3
+Group 4
+Group 5
+Group 6
+Group 7
+Group 8
+Group 9
+Group 10
+Group 11
+8 Additional Robustness Checks
+License: arXiv.org perpetual non-exclusive license
+arXiv:2603.19626v2 [cs.SI] 18 Aug 2026
+The Prosocial Ranking Challenge: Reducing Polarization on Social Media without Sacrificing Engagement
+Jonathan Stray
+Ian Baker
+Affiliation: Center for Human-Compatible AI, UC Berkeley, Berkeley, CA 94720, USA.
+George Beknazar-Yuzbashev
+Affiliation: Columbia University, New York, NY 10027, USA.
+Ceren Budak
+Affiliation: School of Information, University of Michigan, Ann Arbor, MI 48109, USA.
+Julia Kamin
+Affiliation: Civic Health Project, USA.
+Kylan Rutherford
+Affiliation: Columbia University, New York, NY 10027, USA.
+Mateusz Stalinski
+Affiliation: University of Warwick, Coventry CV4 7AL, UK.
+Tin Acosta
+Affiliation: Jigsaw, Google, New York, NY, USA.
+Chris Bail
+Affiliation: Department of Sociology, Duke University, Durham, NC 27708, USA.
+Michael Bernstein
+Affiliation: Department of Computer Science, Stanford University, Stanford, CA 94305, USA.
+Mark Brandt
+Affiliation: Department of Psychology, Michigan State University, East Lansing, MI 48824, USA.
+Amy Bruckman
+Affiliation: School of Interactive Computing, Georgia Institute of Technology, Atlanta, GA 30332, USA.
+Anshuman Chhabra
+Affiliation: University of South Florida, Tampa, FL 33620, USA.
+Soham De
+Affiliation: University of Washington, Seattle, WA 98195, USA.
+Kayla Duskin
+Affiliation: Information School, University of Washington, Seattle, WA 98195, USA.
+Sara Fish
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Beth Goldberg
+Affiliation: Jigsaw, Google, New York, NY, USA.
+Andy Guess
+Affiliation: Department of Politics, Princeton University, Princeton, NJ 08544, USA.
+Dylan Hadfield-Menell
+Affiliation: Department of Electrical Engineering and Computer Science, MIT, Cambridge, MA 02139, USA.
+Muhammed Haroon
+Affiliation: UC Davis, Davis, CA 95616, USA.
+Safwan Hossain
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Michael Inzlicht
+Affiliation: Department of Psychology, University of Toronto, Toronto, ON M5S 1A1, Canada.
+Gauri Jain
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Zaria Jalan
+Affiliation: Department of Electrical Engineering and Computer Science, MIT, Cambridge, MA 02139, USA.
+Yanchen Jiang
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Alexander P. Landry
+Affiliation: Department of Computer Science, Stanford University, Stanford, CA 94305, USA.
+Yph Lelkes
+Affiliation: Annenberg School for Communication, University of Pennsylvania, Philadelphia, PA 19104, USA.
+Hongfan Lu
+Affiliation: University of Washington, Seattle, WA 98195, USA.
+Peter Mason
+Affiliation: Independent.
+Jennifer McCoy
+Affiliation: Department of Political Science, Georgia State University, Atlanta, GA 30303, USA.
+Smitha Milli
+Affiliation: Meta FAIR, New York, NY, USA.
+Paul Resnick
+Affiliation: School of Information, University of Michigan, Ann Arbor, MI 48109, USA.
+Emily Saltz
+Affiliation: Saltern Studio, USA.
+Martin Saveski
+Affiliation: University of Washington, Seattle, WA 98195, USA.
+Lisa Schirch
+Affiliation: Kroc Institute for International Peace Studies, University of Notre Dame, Notre Dame, IN 46556, USA.
+Max Spohn
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Siddarth Srinivasan
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Alexis Tatore
+Affiliation: Independent.
+Luke Thorburn
+Affiliation: Department of Informatics, King’s College London, London WC2R 2LS, UK.
+Joshua A. Tucker
+Affiliation: Department of Politics, New York University, New York, NY 10012, USA.
+Robb Willer
+Affiliation: Department of Computer Science, Stanford University, Stanford, CA 94305, USA.
+Magdalena Wojcieszak
+Affiliation: UC Davis, Davis, CA 95616, USA.
+Manuel Wüthrich
+Affiliation: Harvard University, Cambridge, MA 02138, USA.
+Sylvan Zheng
+Affiliation: Department of Politics, New York University, New York, NY 10012, USA.
+∗Corresponding author. Email: jonathanstray@berkeley.edu
+Abstract
+We report the first direct comparisons of multiple alternative social media algorithms on multiple platforms on outcomes of societal interest. We used a browser extension to modify which posts were shown to desktop social media users, randomly assigning 9,386 users to a control group or one of five alternative ranking algorithms which simultaneously altered content across three platforms for six months during the US 2024 presidential election. This reduced our preregistered index of affective polarization by an average of 0.030.03 standard deviations (p<0.05p<0.05), including a 1.51.5 degree decrease in differences between the 100 point inparty and outparty feeling thermometers. We saw reductions in active use time for Facebook (−0.37-0.37 min/day) and Reddit (−0.2-0.2 min/day), but an increase of 0.320.32 min/day (p<0.01p<0.01) for X/Twitter. We saw an increase in reports of negative social media experiences but found no effects on well-being, news knowledge, outgroup empathy, perceptions of and support for partisan violence. This implies that bridging content can improve some societal outcomes without necessarily conflicting with the engagement-driven business model of social media.
+Figure 1: Design and timeline of our experiment. Top: Participants installed a custom browser extension that intercepted platform API calls to extract the top 30-50 items of content served by each of three platforms, rerouting them to our ranking server for real-time reordering, deletion, and addition. Bottom: Experiment timeline, with key dates and survey waves. Wave W1 was the recruitment period, with participants completing a baseline survey on signup. W2 (midline) was pre-election while W3 (endline) was pre-inauguration. Diverse Approval, Challenging Stereotypes and Add News interventions started later than Uprank Bridging and Uprank Bridging, Downrank Toxic due to technical delays.
+Billions of people around the globe use social media platforms. The backbone of these platforms are ranking algorithms that recommend content largely by choosing items that are predicted to generate views, clicks, watch time, and other engagement [1]. Critics worry that this selects for identity-confirming, sensational, and polarizing content, potentially exacerbating political polarization [2].
+In response to these concerns, researchers and policymakers have called for alternative algorithmic ranking and recommendation strategies that might promote healthier interactions online. Theoretical studies [3], agent-based simulations [4], observational analyses [5], leaked platform experiments [6], experiments using simulated social media platforms [7], crowd-sourced misinformation detection systems [8] and expert workshops [9] all suggest that alternative social media algorithms could reduce polarization. Some proposed methods include increasing the diversity of the items users see [10], bridging-based ranking which finds items common to fractured groups [11] and “surprising validators” where a credible source endorses a stereotypically outgroup idea [12]. All of these algorithms are attempts to create impartial mediators that reduce inter-group misperceptions and improve large-scale social relationships. We call such approaches “prosocial,” a term from social psychology that refers to behaviors intentionally designed to benefit others and strengthen social relationships, such as cooperation, empathy, and mutual aid [13].
+Understanding how such redesigns perform in the field—under real conditions of platform use—is both scientifically important and of high public relevance. Previous large experiments on Facebook and Instagram that minimized reshares [14], downranked like-minded sources [15], eliminated political ads [16] and re-introduced chronological feeds [17] found robust null effects on various political attitudes including polarization. However, Piccardi et al. [18] used a browser extension to change the Twitter/X ranking algorithm and showed that a reduction in polarized attitudes is possible. How such results apply across different platforms, for sustained periods, across a vast number of possible interventions is yet to be determined.
+In this context, we report a preregistered longitudinal field experiment of multiple prosocial content ranking interventions across multiple platforms, which is both larger (N = 9,386) and longer (six months) than previous tests. We developed three different alternative ranking algorithms through a peer-reviewed competition [19] inspired by the “megastudy” approach of Voelkel et al. [20]. We solicited entries and had them evaluated by a team of expert judges to identify ranking algorithms which were both practical given our setting, and theoretically-grounded as having the potential for prosocial impacts on users. In addition to these three arms, we selected two more ourselves. 11
+1
+The Google Jigsaw Perspective API-based treatments Uprank Bridging and Uprank Bridging, Downrank Toxic were chosen because they are simple treatments that only re-rank content (not add or delete it), and because similar Perspective-based toxicity classifiers have been widely used in previous scholarship. These experimental arms were funded in part by Google Jigsaw. Table 1 and supplementary text 3 present detailed descriptions and theoretical justifications for each experimental arm.
+We then deployed them as a custom browser extension, extending the technique of Piccardi et al. [21] to multiple platforms and algorithms. As shown in figure 1, this extension modified the ranking of content within algorithmic feeds on Facebook, Reddit, and X/Twitter for 9,386 participants during and after the contentious 2024 U.S. presidential election campaign, from September 2024 to February 2025. Participants were contacted through consumer market research firms and screened for desktop usage of our three social media sites (see supplementary text 4 for details) after which they were asked to install the extension and take the baseline survey via Qualtrics. Only people who kept the extension installed for at least one week are included in our sample.
+Each person was randomly assigned to one of five ranking algorithms or control (platform default ranking). Each of these algorithms uses language-model based classifiers to identify and then uprank or add various types of “prosocial” content, broadly defined as posts or comments with informative, constructive, pro-democracy, or divide-bridging qualities [11, 7], as follows:
+1.
+Uprank Bridging: Rerank posts and comments according to how ‘‘bridging” they are, as evaluated by a suite of experimental classifiers added to Jigsaw’s Perspective API 22
+2
+The Perspective API was originally developed by Google Jigsaw as a “toxicity” classifier [22] and has become widely used for comment moderation, research, etc. The original toxicity classifier was recently extended to identify more than a dozen different positive and negative communicative constructs [23, 24]. For details on the constructs used for our interventions, see supplementary text 3. [23, 24]. Chosen by the authors.
+2.
+Uprank Bridging, Downrank Toxic: Additionally downrank items identified as “toxic” or outrage-inducing by the same classifier suite. Chosen by the authors.
+3.
+Challenging Stereotypes: Replace political content with ideologically surprising posts that challenge dominant stereotypes of Democrats and Republicans[12, 25, 26]. Chosen through peer-reviewed competition.
+4.
+Diverse Approval: Replace political content with posts predicted to be interesting and engaging for both Republicans and Democrats [3, 11, 6]. Chosen through peer-reviewed competition.
+5.
+Add News: Add personally relevant news from factual and ideologically diverse news organizations as based on external expert metrics[27]. Chosen through peer-reviewed competition.
+In addition to three waves of surveys, we collected all the content that participating users saw on algorithmic feeds over six months (196 million items) and all the posts and comments they contributed (1.2 million items), as well as all engagement actions on these items including like, share, etc. (84 million events). Given the variety of our treatment arms and nuances in their intended effects, we preregistered examining ten dependent variables, including outcomes relating to polarization, intergroup empathy, news knowledge, mental-health, user experiences, meta-perceptions of support for political violence, and time spent using social media (see supplementary text 1.2 for details). We preregistered pooling across all treatment arms. In this paper, we focus on a subset of outcomes, with the intention of future papers more closely examining each individual treatment as well as additional dependent variables relevant to each. Pooling across all treatment arms (as preregistered), we found statistically significant, though small, changes on three of these outcomes.
+First, we were able to reduce an index of user affective polarization (feeling thermometer and social distance survey questions) by 0.027 standard deviations, including a reduction of about 1.5 degrees on the gap between inparty and outparty evaluations on the 100-point affective polarization scale. This is similar the effect found by Piccardi et al. [18] of 2.1 degrees, and compares with an average increase of 0.6 degrees per year over the past few decades. Second, although we saw reductions in active use time for Facebook (−0.37-0.37 min/day) and Reddit (−0.2-0.2 min/day), we found an increase of 0.320.32 min/day for X/Twitter. Third, we saw a small reduction in an index of reports of positive user experiences. Because participants had been treated for three to four more months by the end of the study while users respond to platform changes over about three months [28], we suspect that we measured equilibrium effects. Since these algorithms could be continued indefinitely, these results represent sustainable changes.
+Beyond the pooled results, we saw statistically significant polarization reductions for two individual treatments, Uprank Bridging, Downrank Toxic and Add News. For full results across all outcomes, treatments and platforms see supplementary text 1.2.
+These results show a complex trade-off between polarization, platform use, and user experiences on social media. We expect that platform implementation would lead to greater polarization reduction due to network effects and creator incentives, and because we could not intervene on mobile apps. Our results have broader implications for platform design and public policy and offer a realistic, scalable and sustainable option for depolarization efforts [29].
+Background
+Disagreement and conflict are a basic feature of democracy and are not necessarily harmful. Problems arise when political disagreement hardens into a form of polarization characterized by strong in-group loyalty and out-group hostility, variously described as affective polarization, political sectarianism, or pernicious polarization [30, 31, 32, 33]. It increases political intolerance, reduces social trust, weakens support for democratic norms and institutions, foments in-party misinformation endorsement [34], makes governance and compromise difficult [35, 36, 37], and can lead to political violence [38].33
+3
+We acknowledge, however, that other scholars find limited evidence for the relationship between affective polarization and support for undemocratic norms or political violence [39, 40]. In the United States, affective polarization between Democrats or liberals and Republicans or conservatives is on the rise [32, 30], and other countries are also experiencing long-term increases in polarization [41].
+Although various factors contribute to affective polarization, many scholars and observers focus on social media platforms and their recommendation algorithms. Platforms rely largely on user engagement data, i.e., clicks, likes, comments, and shares, to recommend and rank content for users [1]. Previous work has shown that sensationalist [42], moralizing [43], “toxic” [44] and outgroup hostile [45, 46] content receives more engagement. Beknazar-Yuzbashev et al. [47] provided causal evidence for this relationship in the case of toxic content, using a field experiment. By contrast, lab studies where people interact with simulated platforms (e.g. [48, 49, 7]) find inconclusive effects that may not generalize to naturalistic settings of actual platform exposure and interaction.
+Observational studies of real users have been suggestive. Milli et al. [42] found that Twitter users felt angry or sad when viewing political tweets recommended to them, and Oldemburgo de Mello et al. [50] used experience sampling to determine the correlates of Twitter use, finding short-term decreased subjective well-being and increased affective polarization. To estimate causation, a series of studies in collaboration with Meta altered Facebook and Instagram in various ways such as reverting to a chronological feed [17], disabling reshare functions [14] and demoting content from politically congenial sources [15], all of which had null effects on polarization and other political attitudes. Another recent study by Gauthier et al. [51] explored manually switching users between algorithmic and chronological feeds, finding mixed results on engagement and political opinions, but no movement on affective polarization. While these experiments add greatly to our knowledge, many other alternative algorithms, beyond what platforms currently offer, remain to be tested. Recently, Piccardi et al. [18] demonstrated reductions in polarization after ten days of treatment by directly modifying user feeds on Twitter to downrank putatively polarizing content. Our work expands this evidence by testing five novel changes to algorithmic feeds, for six months, on multiple platforms, with a large set of blinded participants.
+Last but not least, unlike most work that focuses on minimizing “bad” content on platforms, we increase “good” or pro-social content in users’ platform feeds. Given growing evidence shows that platform exposure to and engagement with misleading, untrustworthy, or biased information is in fact relatively rare [52, 53, 54, 55, 56], so interventions that aim to decrease exposure to such information may have small effects simply because the majority of users do not encounter it. We instead test a portfolio of pro-social interventions that increase the prevalence of several types of content theorized to defuse polarization [11, 57, 20].
+We built on the wisdom of our research community by launching a challenge, where researchers submitted their ideas for how to redesign social media algorithms. A panel of judges in related academic fields ranked the entries according to scientific interest and experimental plausibility, and our core research team selected five final “rankers”, described in table 1.
+Table 1: Experimental arms, cohort size, and references giving prior theoretical justification for each intervention.
+Name
+Description
+N
+Refs
+Control group
+Platform default ranking.
+2729
+Uprank Bridging
+Reorders posts and comments using an average of the experimental bridging attributes in Google Jigsaw’s widely used Perspective API (e.g. compassion, curiosity, reasoning).
+1312
+[23, 24]
+Uprank Bridging, Downrank Toxic
+Reorders posts and comments using the average of bridging attributes minus the average of negative Perspective API attributes (e.g. insult, identity attack, moral outrage, alienation).
+1400
+[23, 24]
+Challenging Stereotypes
+Recommends content classified by GPT-4o as “challenging political stereotypes,” i.e., content in which liberal entities align with stereotypically conservative views or entities, and vice versa. Recommended posts must also pass various quality filters to be shown.
+1391
+[12, 25, 26, 20]
+Diverse Approval
+Replaces civic posts (about political or social issues) with posts that are both civic and “bridging,” defined as posts that would be found “valuable, interesting, and engaging” for both average Republicans and Democrats, according to an LLM rater.
+1433
+[3, 11, 6].
+Add News
+Inserts personalized (topic matched) news posts from 95 credible and ideologically diverse news sources to increase the user’s exposure to factual public affairs information.
+1444
+[27, 58, 59]
+Results
+Experimental Setup
+To examine the effects of our pro-social ranking algorithms, we conducted a large-scale field experiment among consenting participants that combined data from their on-platform behavior with their responses to a multi-wave survey. This design allows us to estimate the effects of the treatment on the information that participants saw, their on-platform behavior, and their political attitudes. In total, the sample consists of 9,386 adult social media users
+who were recruited by multiple survey companies from July to October 2024, with most users recruited in August and September (see supplementary text 4 for details on the recruitment process and sample characteristics). The study received approvals from UC Berkeley IRB and all participants provided informed consent to participate.
+Our overall sample was 65% white, 53% female, relatively highly educated (43% with a college degree), and left-leaning (62% self-identified Democrats and lean-Democrat) (See table S17 in supplementary text 4). Table S19 in supplementary text 6 shows that there was no differential attrition by arm.
+Participants were randomly assigned to one of the five treatments or control. All participants installed a custom browser extension on Facebook, X/Twitter, and Reddit. Each user was assigned to either a control condition, which did not alter the user’s feeds, or one of the five algorithmic “rankers” that altered what participants saw when viewing algorithmically-ranked feeds of posts or comments (see supplementary text 3 for background and implementation details for each intervention). Randomization was successful: the treatment and control groups do not differ in their demographic characteristics (see Table S17 in supplementary text 4).
+Participants in both the treatment and control groups were invited to complete three surveys: one at signup (and therefore at a variable time, 16,823 responses), one in the week before the November 5, 2024 election (5,700 responses), and one in the week before the January 20, 2025 inauguration (3,739 responses). We also injected a single survey question in participants’ feeds each week, randomizing between five different questions.
+We analyze the final sample of those who completed at least one survey and kept the extension installed for at least one week, in total 9,386 of the 17,095 people who installed the extension. We find no differential attrition: those who stopped using the extension or did not answer the final survey are not statistically significantly different from our final sample (see supplementary text 6).
+As preregistered, we used a difference-in-differences model for causal identification (see supplementary text 5 for the full specification). All covariates, namely ideology, gender, race, age and income, were measured in the pre-treatment survey. Supplementary text 1.2 includes descriptive statistics and balance tables.
+We preregistered ten primary outcomes including polarization, support for partisan violence, perceptions of support for partisan violence, intergroup empathy, platform experiences, mental health, political knowledge, engagement and others (see supplementary text 1.2 for the definition of all outcomes). All survey questions were taken from prior work. Four of the five rankers were specifically designed to reduce polarization, while the fifth (Add News) was designed to increase news knowledge, but a similar field experiment previously also found a polarization reduction [27]. Three outcomes showed statistically significant effects: polarization, positive user experiences, and active time on platform. We discuss these here and report the remaining preregistered outcomes, plus secondary outcomes and subgroup effects, in supplementary text 1.2.
+Polarization
+Figure 2 shows treatment effects on polarization. As seen, pooled across all experimental arms and platforms we found a reduction in our pre-registered polarization index (combining feeling thermometer ratings and comfort with being friends with counter-partisans). The effect size is 0.027 standard deviations, statistically significant at p<0.05p<0.05. Interestingly, treated participants felt both warmer toward the other side and cooler toward their own side. The result includes a 1.5 point decrease in the gap between inparty and outparty evaluations on the 100 point feeling thermometer scale (see Table S4). Since affective polarization in the U.S. has been rising by about 0.6 points per year in the last four decades, this corresponds to a reversal with a magnitude equal to around two and a half years of average polarization increase. We did not find a significant effect in measures of support for partisan violence or intergroup empathy, the most closely related outcomes. We do, however, find a significant increase in generalized social trust (1.7 points on a 100 point scale, p<0.05p<0.05, Table S2). This is consistent with the interpretation that the algorithms improved participants’ orientation toward those outside their partisan group.
+Figure 2 also plots the effect on polarization index for each ranker. Point estimates for all rankers show reductions in affective polarization, which suggests that a fairly broad set of interventions might work and lends power to our preregistered pooled result. Two of our five arms had statistically significant effects (at p<0.05p<0.05), with all other treatment arms having estimated effects in the same direction.
+Upranking posts and comments that contained nuance, compassion, and personal stories without negative aspects, such as moral outrage, threats, and identity attacks (the Uprank Bridging, Downrank Toxic treatment using the experimental Perspective “bridging API” [23, 24]) reduced affective polarization by 0.042 standard deviations. Adding posts from a curated set of verified and ideologically balanced news sources and interleaving them into users’ feeds so that up to 15% of the resulting feed is news (the Add News ranker) reduced affective polarization by 0.044 standard deviations.
+Figure 2: Effects on polarization and time on platform. Left: treatment effects on affective polarization index, and inparty and outparty components of this index, pooled cross all arms and per-arm. All survey outcomes were rescaled to a 0..1 range. Right: treatment effects on active time per platform, pooled across all arms and per-arm. “Bridging Pooled” is a preregistered aggregation of Uprank Bridging, Downrank Toxic and Uprank Bridging, not a separate treatment condition. (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+Engagement
+Next we examine the impact of our various re-ranking algorithms on platform usage and engagement. Every minute, our extension recorded whether any of our three platforms are the active page on each user’s device. We also record every time a tracked content item is newly displayed on the device’s view window. Combining these two signals, we calculate daily active time for each user on each platform. The right panels of Figure 2 report our treatment effect on active time across our three treated platforms. In aggregate, we find that our prosocial treatments decrease active time on Facebook and Reddit, but increase time spent on X/Twitter. Looking at the individual classifiers, we find that all treatments except for Diverse Approval appear to decrease time spent on Facebook and Reddit, with most having a statistically significant effect. For X/Twitter, all treatments except for Diverse Approval appear to increase time on the platform. The Diverse Approval treatment has a statistically insignificant effect on both Facebook and Reddit, but significantly decreases time spent on X/Twitter.
+Given that platforms want to maximize time spent on their platforms, we often assume that their algorithms are optimized for active time. Thus, when we alter the ostensibly optimized algorithms, it would make sense that active time would go down. This is exactly what we see on Facebook. However, our results suggest mixed effects for Reddit and the complete opposite effects for X/Twitter. This demonstrates that we cannot assume that every platform is on the Pareto frontier of “good for society” and “good for business.”
+Experience
+We also measured user perceptions of ranking algorithm changes. These survey questions ask the users to recall experiences in the previous two weeks, and tend to respond more readily to algorithmic changes than broader questions about attitudes [1]. We replicated the questions in the Neely Social Media index [60], an ongoing survey of social media experiences, combining them into one four-question index. Pooled across all treatment arms we saw an effect of −0.038-0.038 standard deviations (p<0.01p<0.01) for this Neely index. See supplementary text 1.2 for survey questions and all per-arm results.
+Notably, the Uprank Bridging, Downrank Toxic arm did not show statistically significant decreases in the Neely index, while the Add News and Challenging Stereotypes arms had effects of −0.068-0.068 (p<0.01p<0.01) and −0.064-0.064 (p<0.01p<0.01) respectively, driving the aggregate result. We do not know what accounts for the impact seen by these two treatments, but previous work shows that exposure to negative news can lead to negative emotions [61, 62] and content which contradicts an individual’s preconceptions can be unpleasant. These interventions also replace political content with content from accounts and pages users do not follow, so they might be removing content that users find valuable and meaningful. Hence, these treatments could produce worse experiences for users even if they also reduced polarization.
+Discussion
+Designing algorithms that shift attitudes related to trust, cohesion, and conflict naturally raises serious ethical and political questions. Following modern conflict resolution practice [63, 64], agonistic democratic theory [65, 66, 2] and previous work considering the connection between social media, polarization, and violence [10, 2], the goal of this work is not to eliminate conflict or enforce consensus, but to transform conflict from destructive to constructive forms. We operationalized this idea by choosing preexisting measures of affective polarization, intergroup empathy, and support for political violence.
+The most depolarizing ranking algorithms were Uprank Bridging, Downrank Toxic and Add News. Reordering content to prioritize constructive attributes alone (Uprank Bridging) did not produce a statistically significant reduction in polarization, whereas a variant that also reduced the prominence of outrage-eliciting content did (Uprank Bridging, Downrank Toxic). Although these two treatments were not statistically distinguishable from each other, the results suggest that deprioritizing certain content attributes may be an important aspect of interventions aimed at producing measurable depolarization effects, alongside the promotion of constructive content. Moreover, Uprank Bridging, Downrank Toxic also improved generalized social trust. The success of Add News demonstrates that downranking content isn’t strictly necessary, if it is also possible to inject high-quality content that would not normally appear in feeds. News exposure is not inherently depolarizing, indeed exposure to pro-attitudinal news can increase polarization [67, 68]. However, when Levi et al.[27] asked users to manually subscribe to counter-attitudinal news organizations it slightly reduced polarization, with an effect size of 0.030.03 standard deviations, comparable to the 0.0440.044 from our algorithmic change. Surprisingly, we did not find a significant effect on our news knowledge index for this or any other ranker.
+Across all rankers, our experiment produced a mean 1.5 point shift the 100-point feeling thermometer scale. The most similar previous experiments are Piccardi et al. [18] which produced polarization decreases corresponding to 2.1 points, and Levi et al. [27] which reduced polarization by 0.96 points. This suggests that this line of research may be producing replicable results.
+A recent meta-analysis of depolarization interventions found a mean 5.4 point shift on the 100-point feeling thermometer scale [29]. That review raised significant concerns about the durability and scalability of the depolarization techniques studied, which were mostly “one-shot” interactions. While our results are smaller they are also sustainable and scalable, because an algorithmic change can be applied simultaneously to all users of a platform and run indefinitely. Industry experience suggests that user adjustment to algorithmic changes generally happens over three months or so [28], so our six month experiment likely captured equilibrium effects.
+Many authors have argued that meaningful reductions in polarized attitudes and behaviors can only come from “structural” changes [69, 70, 20] which alter the rules or incentives for politicians, journalists, voters, etc. Platform algorithm changes are just such a structural change. Our experiment estimates the first-order effects of exposure to different content, but our design cannot estimate the second-order effects that would result from applying such changes to all users of a platform [71]. Related experiments [72] show that users who are less polarized in turn like and share less polarizing content, so these network effects are expected to be positive. We were also unable to change people’s feeds on mobile devices where most social media consumption happens, further biasing our effect downwards. Creator incentives are potentially even more significant, and algorithmically-induced creator behavior shifts have been both theorized [73] and observed [74, 2]. If widely-used ranking algorithms prioritize more constructive content, then major content creators (including journalists and politicians) may change their behavior accordingly.
+Nevertheless, modifications to platform algorithms alone will not solve longstanding polarization. Escaping from the escalating conflict dynamics seen in many modern democracies will require changes across all of society [75]. Yet social media algorithms have often been suggested as a key intervention point with potentially far-reaching consequences. By testing across multiple algorithms and platforms, this work provides robust evidence that it is indeed possible to shift the polarization dynamics of social media, at least a little and maybe more. Further, we found the effects on engagement to be small and sometimes positive, which suggests that economic tradeoffs do not preclude healthier algorithms. Finally, our study also reveals that reductions in affective polarization might come at a cost of negative impacts in other meaningful outcomes, such as user experiences for our participants. As such, it is advisable to monitor the effects of interventions for potential unintended negative consequences.
+References and Notes
+[1]
+T. Cunningham, et al., Ranking by engagement and non‐engagement
+signals: Learnings from industry. Annals of the New York Academy of
+Sciences p. nyas.15399 (2025), doi:10.1111/nyas.15399,
+https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.15399.
+[2]
+J. Stray, R. Iyer, H. Puig Larrauri, The Algorithmic Management of
+Polarization and Violence on Social Media (Kinght First Amendment
+Institute at Columbia University, New York, NY) (2023),
+https://knightcolumbia.org/content/the-algorithmic-management-of-polarization-and-violence-on-social-media.
+[3]
+L. Thorburn, M. Polukarov, C. Ventre, Societal Sorting as a Systemic Risk
+of Recommenders, in Proceedings of the 18th ACM Conference on
+Recommender Systems, RecSys ’24 (Association for Computing Machinery,
+New York, NY, USA) (2024), pp. 951–956, doi:10.1145/3640457.3688175,
+https://dl.acm.org/doi/10.1145/3640457.3688175.
+[4]
+P. T”ornberg, D. Valeeva, J. Uitermark, C. Bail, Simulating Social Media
+Using Large Language Models to Evaluate Alternative News Feed Algorithms.
+arXiv preprint arXiv:2310.05984 (2023).
+[5]
+E. Fraxanet, A. Kaltenbrunner, F. Germano, V. Gómez, Analyzing news engagement
+on Facebook: tracking ideological segregation and news quality in the
+Facebook URL dataset. EPJ Data Science 14 (1), 73 (2025),
+doi:10.1140/epjds/s13688-025-00585-3,
+https://doi.org/10.1140/epjds/s13688-025-00585-3.
+[6]
+L. Thorburn, A. Ovadya, Social media algorithms can be redesigned to bridge
+divides — here’s how (2023),
+https://www.niemanlab.org/2023/10/social-media-algorithms-can-be-redesigned-to-bridge-divides-heres-how/.
+[7]
+C. Jia, M. S. Lam, M. C. Mai, J. Hancock, M. S. Bernstein, Embedding
+Democratic Values into Social Media AIs via Societal Objective
+Functions (2023), doi:10.48550/arXiv.2307.13912,
+http://arxiv.org/abs/2307.13912, arXiv:2307.13912 [cs].
+[8]
+S. Wojcik, et al., Birdwatch: Crowd Wisdom and Bridging
+Algorithms can Inform Understanding and Reduce the Spread of
+Misinformation (2022), doi:10.48550/arXiv.2210.15723,
+http://arxiv.org/abs/2210.15723, arXiv:2210.15723 [cs].
+[9]
+B. Goldberg, et al., AI and the Future of Digital Public
+Squares (2024), doi:10.48550/arXiv.2412.09988,
+http://arxiv.org/abs/2412.09988, arXiv:2412.09988 [cs].
+[10]
+J. Stray, Designing recommender systems to depolarize. First Monday
+27 (7) (2022).
+[11]
+A. Ovadya, L. Thorburn, Bridging Systems: Open problems for countering
+destructive divisiveness across ranking, recommenders, and governance, Tech.
+rep., Knight First Amendment Institute at Columbia University (2021).
+[12]
+E. L. Glaeser, C. R. Sunstein, Why Does Balanced News Produce
+Unbalanced Views?, 18975 NBER Working Papers, National Bureau of
+Economic Research (2013), http://www.nber.org/papers/w18975.
+[13]
+C. D. Bateson, A. A. Powell, Altruism and Prosocial Behavior, in
+Handbook of Psychology, Volume 5, Personality and Social
+Psychology (John Wiley & Sons, Inc.), vol. 5, pp. 463–484 (2003).
+[14]
+A. M. Guess, et al., Reshares on social media amplify political news but
+do not detectably affect beliefs or opinions. Science
+381 (6656), 404–408 (2023).
+[15]
+B. Nyhan, et al., Like-minded sources on Facebook are prevalent but not
+polarizing. Nature 620 (7972), 137–144 (2023).
+[16]
+H. Allcott, et al., The Effects of Political Advertising on
+Facebook and Instagram before the 2020 US Election (2025),
+doi:10.3386/w33818, https://www.nber.org/papers/w33818.
+[17]
+A. M. Guess, et al., How do social media feed algorithms affect
+attitudes and behavior in an election campaign? Science
+381 (6656), 398–404 (2023).
+[18]
+T. Piccardi, et al., Reranking partisan animosity in algorithmic social
+media feeds alters affective polarization. Science
+390 (6776), eadu5584 (2025), publisher: American Association for the
+Advancement of Science, doi:10.1126/science.adu5584,
+https://www.science.org/doi/10.1126/science.adu5584.
+[19]
+J. Stray, The Prosocial Ranking Challenge FAQ (2024),
+https://rankingchallenge.substack.com/p/faq.
+[20]
+J. G. Voelkel, et al., Megastudy testing 25 treatments to reduce
+antidemocratic attitudes and partisan animosity. Science
+386 (6719), eadh4764 (2024).
+[21]
+T. Piccardi, et al., Reranking Social Media Feeds: A Practical Guide for
+Field Experiments. arXiv preprint arXiv:2406.19571 (2024).
+[22]
+A. Lees, et al., A New Generation of Perspective API:
+Efficient Multilingual Character-level Transformers, in
+Proceedings of the 28th ACM SIGKDD Conference on Knowledge
+Discovery and Data Mining, KDD ’22 (Association for Computing
+Machinery, New York, NY, USA) (2022), pp. 3197–3207,
+doi:10.1145/3534678.3539147,
+https://dl.acm.org/doi/10.1145/3534678.3539147.
+[23]
+S. Schmer-Galunder, et al., Annotator in the Loop: A Case Study
+of In-Depth Rater Engagement to Create a Prosocial Benchmark
+Dataset. Proceedings of the AAAI/ACM Conference on AI, Ethics, and
+Society 7 (1), 1319–1328 (2024), doi:10.1609/aies.v7i1.31726,
+https://ojs.aaai.org/index.php/AIES/article/view/31726.
+[24]
+Jigsaw, Announcing Experimental Bridging Attributes in Perspective
+API (2024),
+https://medium.com/jigsaw/announcing-experimental-bridging-attributes-in-perspective-api-578a9d59ac37.
+[25]
+P. Dandekar, A. Goel, D. T. Lee, Biased assimilation, homophily, and the
+dynamics of polarization. Proceedings of the National Academy of
+Sciences 110 (15), 5791–5796 (2013), publisher: Proceedings of the
+National Academy of Sciences, doi:10.1073/pnas.1217220110,
+https://www.pnas.org/doi/abs/10.1073/pnas.1217220110.
+[26]
+A. L. Ozer, J. M. Wright, Partisan news versus party cues: The effect of
+cross-cutting party and partisan network cues on polarization and persuasion.
+Research & Politics 9 (1), 20531680221075455 (2022),
+publisher: SAGE Publications Ltd, doi:10.1177/20531680221075455,
+https://doi.org/10.1177/20531680221075455.
+[27]
+R. Levy, Social media, news consumption, and polarization: Evidence from a
+field experiment. American Economic Review 111 (3), 831–70
+(2021).
+[28]
+M. Mladenov, O. Meshi, J. Ooi, D. Schuurmans, C. Boutilier, Advantage
+Amplification in Slowly Evolving Latent-State Environments
+2019-Augus, 3165–3172 (2019), iSBN: 9780999241141,
+doi:10.24963/ijcai.2019/439,
+https://dl.acm.org/doi/abs/10.5555/3367471.3367481.
+[29]
+D. E. Holliday, Y. Lelkes, S. J. Westwood, Why depolarization is hard:
+Evaluating attempts to decrease partisan animosity in America.
+Proceedings of the National Academy of Sciences 122 (39),
+e2508827122 (2025), doi:10.1073/pnas.2508827122,
+https://pnas.org/doi/10.1073/pnas.2508827122.
+[30]
+L. Mason, Uncivil agreement: How politics became our identity
+(University of Chicago Press) (2018).
+[31]
+E. J. Finkel, et al., Political sectarianism in America.
+Science 370 (6516), 533–536 (2020),
+doi:10.1126/science.abe1715.
+[32]
+I. Shanto, Y. Lelkes, M. Levendusky, N. Malhotra, S. J. Westwood, The Origins
+and Consequences of Affective Polarization in the United States pp.
+1–35 (2019), doi:10.1146/annurev-polisci-051117-073034,
+https://www.annualreviews.org/doi/full/10.1146/annurev-polisci-051117-073034.
+[33]
+J. McCoy, M. Somer, Toward a Theory of Pernicious Polarization and How
+It Harms Democracies: Comparative Evidence and Possible
+Remedies. The Annals of the American Academy of Political and Social
+Science 681 (1), 234–271 (2019), publisher: SAGE Publications Inc,
+doi:10.1177/0002716218818782,
+https://doi.org/10.1177/0002716218818782.
+[34]
+L. Jenke, Affective polarization and misinformation belief. Political
+Behavior 46 (2), 825–884 (2024).
+[35]
+Y. E. Orhan, The relationship between affective polarization and democratic
+backsliding: Comparative evidence. Democratization 29 (4),
+714–735 (2022).
+[36]
+G. Simonovits, J. McCoy, L. Littvay, Democratic hypocrisy and out-group threat:
+Explaining citizen support for democratic erosion. The Journal of
+Politics 84 (3), 1806–1811 (2022).
+[37]
+J. Kingzette, et al., How affective polarization undermines support for
+democratic norms. Public Opinion Quarterly 85 (2), 663–677
+(2021).
+[38]
+O. Ramsbotham, Tom Woodhouse, Hugh Miall, Contemporary Conflict
+Resolution, 4th Edition (Wiley) (2016).
+[39]
+D. E. Broockman, J. L. Kalla, S. J. Westwood, Does affective polarization
+undermine democratic norms or accountability? Maybe not. American
+Journal of Political Science 67 (3), 808–828 (2023).
+[40]
+J. N. Druckman, S. Klar, Y. Krupnikov, M. Levendusky, J. B. Ryan,
+Partisan hostility and American democracy: explaining political
+divisions and when they matter (University of Chicago Press) (2024).
+[41]
+L. Boxell, Gentzkow, Matthew, J. M. Shapiro, Cross-Country Trends
+in Affective Polarization, Tech. rep. (2020),
+https://www.nber.org/papers/w26669, issue: June.
+[42]
+S. Milli, et al., Engagement, user satisfaction, and the amplification
+of divisive content on social media. PNAS nexus 4 (3),
+pgaf062 (2025).
+[43]
+W. J. Brady, S. Rathje, L. K. Globig, J. J. Van Bavel, Estimating the effect
+size of moral contagion in online networks: A pre-registered replication
+and meta-analysis. PNAS Nexus 4 (11), pgaf327 (2025),
+doi:10.1093/pnasnexus/pgaf327,
+https://doi.org/10.1093/pnasnexus/pgaf327.
+[44]
+A. Biswas, A. J. Sabet, Y.-R. Lin, Toxic politics and TikTok engagement in
+the 2024 U.S. election. Harvard Kennedy School Misinformation
+Review (2025), doi:10.37016/mr-2020-181,
+https://misinforeview.hks.harvard.edu/article/toxic-politics-and-tiktok-engagement-in-the-2024-u-s-election/.
+[45]
+S. Rathje, J. J. Van Bavel, S. van der Linden, Out-group animosity drives
+engagement on social media. Proceedings of the National Academy of
+Sciences 118 (26), e2024292118 (2021),
+doi:10.1073/pnas.2024292118,
+http://www.pnas.org/lookup/doi/10.1073/pnas.2024292118.
+[46]
+X. Yu, M. Wojcieszak, A. Casas, Partisanship on Social Media: In-Party
+Love Among American Politicians, Greater Engagement with
+Out-Party Hate Among Ordinary Users. Political Behavior
+46 (2), 799–824 (2024), doi:10.1007/s11109-022-09850-x,
+https://doi.org/10.1007/s11109-022-09850-x.
+[47]
+G. Beknazar-Yuzbashev, R. Jim’enez-Dur’an, J. McCrosky, M. Stalinski, Toxic
+content and user engagement on social media: Evidence from a field
+experiment. Available at SSRN 4307346 (2022).
+[48]
+N. Liu, et al., Short-term exposure to filter-bubble recommendation
+systems has limited polarization effects: Naturalistic experiments on
+YouTube. Proceedings of the National Academy of Sciences
+122 (8), e2318127122 (2025), doi:10.1073/pnas.2318127122,
+https://pnas.org/doi/10.1073/pnas.2318127122.
+[49]
+O. Kelm, et al., How algorithmically curated online environments
+influence users’ political polarization: Results from two experiments
+with panel data. Computers in Human Behavior Reports 12,
+100343 (2023), doi:10.1016/j.chbr.2023.100343,
+https://www.sciencedirect.com/science/article/pii/S2451958823000763.
+[50]
+V. Oldemburgo de Mello, F. Cheung, M. Inzlicht, Twitter (X) use predicts
+substantial changes in well-being, polarization, sense of belonging, and
+outrage. Communications Psychology 2 (1), 1–11 (2024),
+number: 1 Publisher: Nature Publishing Group,
+doi:10.1038/s44271-024-00062-z,
+https://www.nature.com/articles/s44271-024-00062-z.
+[51]
+G. Gauthier, R. Hodler, P. Widmer, E. Zhuravskaya, The political effects of
+X’s feed algorithm. Nature pp. 1–8 (2026).
+[52]
+S. Altay, R. K. Nielsen, R. Fletcher, Quantifying the “infodemic”: People
+turned to trustworthy news outlets during the 2020 coronavirus pandemic.
+Journal of Quantitative Description: Digital Media 2 (2022).
+[53]
+C. Budak, B. Nyhan, D. M. Rothschild, E. Thorson, D. J. Watts, Misunderstanding
+the harms of online misinformation. Nature 630 (8015), 45–53
+(2024).
+[54]
+N. Grinberg, K. Joseph, L. Friedland, B. Swire-Thompson, D. Lazer, Fake news on
+Twitter during the 2016 US presidential election. Science
+363 (6425), 374–378 (2019).
+[55]
+A. Guess, J. Nagler, J. Tucker, Less than you think: Prevalence and predictors
+of fake news dissemination on Facebook. Science advances
+5 (1), eaau4586 (2019).
+[56]
+M. Wojcieszak, A. Casas, X. Yu, J. Nagler, J. A. Tucker, Most users do not
+follow political elites on Twitter; those who do show overwhelming
+preferences for ideological congruity. Science advances
+8 (39), eabn9418 (2022).
+[57]
+C. S. B. Overgaard, Perceiving Affective Polarization in the United
+States: How Social Media Shape Meta-Perceptions and Affective
+Polarization. Social Media + Society 10 (1),
+20563051241232662 (2024), publisher: SAGE Publications Ltd,
+doi:10.1177/20563051241232662,
+https://doi.org/10.1177/20563051241232662.
+[58]
+M. Haroon, X. Yu, E. Menchen-Trevino, M. Wojcieszak, Nudging the recommendation
+algorithm increases news consumption and diversity on YouTube. arXiv
+preprint arXiv:2308.06822 (2023).
+[59]
+H. Askari, A. Chhabra, B. C. von Hohenberg, M. Heseltine, M. Wojcieszak,
+Incentivizing news consumption on social media platforms using large language
+models and realistic bot accounts. PNAS nexus 3 (9), pgae368
+(2024).
+[60]
+N. Fast, J. Schroeder, R. Iyer, M. Motyl, Unveiling the Neely Ethics &
+Technology Indices (2023),
+https://psychoftech.substack.com/p/unveiling-the-neely-ethics-and-technology.
+[61]
+S. Shaikh, A. McGowan, D. Lydon-Staley, Associations Between Valenced
+News and Affect in Daily Life: Experimental and Ecological
+Momentary Assessment Approaches. Media Psychology
+27 (3), 455–478 (2024), _eprint:
+https://doi.org/10.1080/15213269.2023.2247320,
+doi:10.1080/15213269.2023.2247320,
+https://doi.org/10.1080/15213269.2023.2247320.
+[62]
+N. de Hoog, P. Verboon, Is the news making us unhappy? The influence of daily
+news exposure on emotional states. British Journal of Psychology
+111 (2), 157–173 (2020), doi:10.1111/bjop.12389,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7187375/.
+[63]
+J. P. Lederach, The Little Book of Conflict Transformation (Good
+Books) (2014).
+[64]
+H. Miall, Conflict Transformation: A Multi-Dimensional Task
+2004, 67–89 (2004), doi:10.1007/978-3-663-05642-3_4.
+[65]
+M. Sax, Algorithmic News Diversity and Democratic Theory: Adding
+Agonism to the Mix. Digital Journalism 10 (10),
+1650–1670 (2022).
+[66]
+K. Crawford, Can an Algorithm be Agonistic? Ten Scenes from Life in
+Calculated Publics. Science, Technology, & Human Values
+41 (1), 77–92 (2016), doi:10.1177/0162243915589635,
+http://journals.sagepub.com/doi/10.1177/0162243915589635.
+[67]
+R. K. Garrett, et al., Implications of Pro and Counterattitudinal
+Information Exposure for Affective Polarization. Human
+Communication Research 40, 309–332 (2014).
+[68]
+E. Son, Y. M. Baek, Ideological Citizens’ Pro-attitudinal Media
+Exposure and Ideological Polarization: The Mediating Role of
+Presumed Media Influence and Presumed Media Affect.
+International Journal of Politics, Culture, and Society (2025),
+doi:10.1007/s10767-025-09534-4,
+https://link.springer.com/10.1007/s10767-025-09534-4.
+[69]
+S. S.-H. Wang, J. Cervas, B. Grofman, K. Lipsitz, A systems framework for
+remedying dysfunction in US democracy. Proceedings of the National
+Academy of Sciences 118 (50), e2102154118 (2021), publisher:
+Proceedings of the National Academy of Sciences,
+doi:10.1073/pnas.2102154118,
+https://www.pnas.org/doi/10.1073/pnas.2102154118.
+[70]
+P. T. Coleman, L. S. Liebovitch, J. Fisher, Taking Complex Systems
+Seriously: Visualizing and Modeling the Dynamics of Sustainable
+Peace. Global Policy 10 (S2), 84–92 (2019),
+doi:10.1111/1758-5899.12680,
+https://onlinelibrary.wiley.com/doi/10.1111/1758-5899.12680.
+[71]
+D. Eckles, R. F. Kizilcec, E. Bakshy, Estimating peer effects in networks with
+peer encouragement designs. Proceedings of the National Academy of
+Sciences 113 (27), 7316–7322 (2016), publisher: Proceedings of the
+National Academy of Sciences, doi:10.1073/pnas.1511201113,
+https://www.pnas.org/doi/10.1073/pnas.1511201113.
+[72]
+W. J. Brady, K. McLoughlin, T. N. Doan, M. J. Crockett, How social learning
+amplifies moral outrage expression in online social networks. Science
+advances 7 (33), eabe5641 (2021).
+[73]
+X. Hu, M. Jagadeesan, M. I. Jordan, J. Steinhardt, Incentivizing
+High-Quality Content in Online Recommender Systems (2024),
+doi:10.48550/arXiv.2306.07479, http://arxiv.org/abs/2306.07479,
+arXiv:2306.07479 [cs].
+[74]
+M. Garz, F. Szucs, Algorithmic selection and supply of political news on
+Facebook. Information Economics and Policy 62, 101020
+(2023), doi:10.1016/j.infoecopol.2023.101020,
+https://www.sciencedirect.com/science/article/pii/S0167624523000057.
+[75]
+G. Burgess, H. Burgess, S. Kaufman, Applying conflict resolution insights to
+the hyper-polarized, society-wide conflicts threatening liberal democracies.
+Conflict Resolution Quarterly 39 (4), 355–369 (2022),
+_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/crq.21334,
+doi:10.1002/crq.21334,
+https://onlinelibrary.wiley.com/doi/abs/10.1002/crq.21334.
+[76]
+S. Iyengar, G. Sood, Y. Lelkes, Affect, Not Ideology: A Social
+Identity Perspective on Polarization. Public Opinion Quarterly
+76 (3), 405–431 (2012), doi:10.1093/poq/nfs038,
+https://doi.org/10.1093/poq/nfs038.
+[77]
+C. W. Topp, S. D. Østergaard, S. Søndergaard, P. Bech, The WHO-5
+Well-Being Index: A Systematic Review of the Literature.
+Psychotherapy and Psychosomatics 84 (3), 167–176 (2015),
+doi:10.1159/000376585,
+https://www.karger.com/Article/FullText/376585.
+[78]
+N. P. Kalmoe, L. Mason, Lethal Mass Partisanship: Prevalence,
+Correlates, & Electoral Contingencies (2019),
+https://www.dannyhayes.org/uploads/6/9/8/5/69858539/kalmoe___mason_ncapsa_2019_-_lethal_partisanship_-_final_lmedit.pdf.
+[79]
+J. S. Mernyk, S. L. Pink, J. N. Druckman, R. Willer, Correcting inaccurate
+metaperceptions reduces Americans’ support for partisan violence.
+Proceedings of the National Academy of Sciences 119 (16),
+e2116851119 (2022), doi:10.1073/pnas.2116851119,
+https://pnas.org/doi/full/10.1073/pnas.2116851119.
+[80]
+C. V. Sirin, N. A. Valentino, J. D. Villalobos, Group Empathy Theory: The
+Effect of Group Empathy on US Intergroup Attitudes and Behavior
+in the Context of Immigration Threats. The Journal of Politics
+78 (3), 893–908 (2016), doi:10.1086/685735,
+https://www.journals.uchicago.edu/doi/10.1086/685735.
+[81]
+C. Small, M. Bjorkegren, T. Erkkilä, L. Shaw, C. Megill, Polis: Scaling
+deliberation by mapping high dimensional opinion spaces. Recerca:
+revista de pensament i anàlisi 26 (2) (2021).
+[82]
+M. Saveski, D. Beeferman, D. McClure, D. Roy, Engaging politically diverse
+audiences on social media, in Proceedings of the International AAAI
+Conference on Web and Social Media, vol. 16 (2022), pp. 873–884.
+[83]
+K. Kawintiranon, L. Singh, PoliBERTweet: a pre-trained language model for
+analyzing political content on Twitter, in Proceedings of the
+Thirteenth Language Resources and Evaluation Conference (2022), pp.
+7360–7367.
+[84]
+M. S. Levendusky, N. Malhotra, (Mis)perceptions of Partisan Polarization
+in the American Public. Public Opinion Quarterly 80 (S1),
+378–391 (2016), doi:10.1093/poq/nfv045,
+https://doi.org/10.1093/poq/nfv045.
+[85]
+R. J. Robinson, D. Keltner, A. Ward, L. Ross, Actual versus assumed differences
+in construal:” Naive realism” in intergroup perception and conflict.
+Journal of personality and social psychology 68 (3), 404
+(1995).
+[86]
+N. C. Dias, Y. Lelkes, J. Pearl, American partisans vastly under-estimate the
+diversity of other partisans’ policy attitudes. Political Science
+Research and Methods 13 (3), 725–735 (2025).
+[87]
+F. Zimmerman, G. Garbulsky, D. Ariely, M. Sigman, J. Navajas, Political
+coherence and certainty as drivers of interpersonal liking over and above
+similarity. Science Advances 8 (6), eabk1909 (2022).
+[88]
+J. Lees, M. Cikara, Inaccurate group meta-perceptions drive negative out-group
+attributions in competitive contexts. Nature human behaviour
+4 (3), 279–286 (2020).
+[89]
+A. P. Landry, J. W. Schooler, R. Willer, P. Seli, Reducing explicit blatant
+dehumanization by correcting exaggerated meta-perceptions. Social
+Psychological and Personality Science 14 (4), 407–418 (2023).
+[90]
+A. Braley, G. S. Lenz, D. Adjodah, H. Rahnama, A. Pentland, Why voters who
+value democracy participate in democratic backsliding. Nature human
+behaviour 7 (8), 1282–1293 (2023).
+[91]
+G. Heltzel, K. Laurin, Seek and ye shall be fine: Attitudes toward
+political-perspective seekers. Psychological Science 32 (11),
+1782–1800 (2021).
+[92]
+M. Yeomans, J. Minson, H. Collins, F. Chen, F. Gino, Conversational
+receptiveness: Improving engagement with opposing views. Organizational
+Behavior and Human Decision Processes 160, 131–148 (2020).
+[93]
+A. J. Berinsky, Rumors and health care reform: Experiments in political
+misinformation. British journal of political science 47 (2),
+241–262 (2017).
+[94]
+D. Cengiz, A. Dube, A. Lindner, B. Zipperer, The effect of minimum wages on
+low-wage jobs. The Quarterly Journal of Economics 134 (3),
+1405–1454 (2019).
+[95]
+J. C. Driscoll, A. C. Kraay, Consistent covariance matrix estimation with
+spatially dependent panel data. Review of economics and statistics
+80 (4), 549–560 (1998).
+[96]
+H. Allcott, L. Braghieri, S. Eichmeyer, M. Gentzkow, The welfare effects of
+social media. American Economic Review 110 (3), 629–76
+(2020).
+Acknowledgments
+We would like to thank our contest judges (some of whom are also authors): Jennifer McCoy, Robb Willer, Alexander P. Landry, Amy Bruckman, Andy Guess, Chris Bail, Dylan Hadfield-Menell, Josh Tucker, Lisa Schirch, Magdalena Wojcieszak, Mark Brandt, Michael Bernstein, Michael Inzlicht, Paul Resnick, and Yph Lelkes. This research would not have been possible without our tireless engineering staff who created our complex software on tight deadlines and kept it running: Leo Alekseyev, Brian Zimmer, Sana Pandey, James Clark, Cameron Yuen, Haroon Iftikhar, Amar Humackic, Harun Skender, Ante Sunjic, Nedzid Zaklan, and Jayson Vantuyl. Elizbeth Cooper and Sawyer Bernath at the Berkeley Existential Risk Initiative provided much-needed operational and administrative support. Finally, thank you to the Civic Health Project for bringing the core team together.
+Funding:
+Funding for this experiment was provided by the DALHAP Foundation, Google Jigsaw, Survival and Flourishing Fund, Project Liberty, the Harvard Berkman-Klein Center, Dan McCormick, Reset.Tech, and Justin Kosselyn. J.K. was supported by the Civic Health Project. S.D., K.D., and M.S. were supported by National Science Foundation Award IIS-2403434.
+Author Contributions:
+J.S. conceived the study, raised funds, recruited participants, and made final editorial decisions. J.S., G.B.Y., C.B., J.K., K.R. and M.S. designed the study and wrote the paper. I.B. led engineering and made related scientific decisions. G.B.Y., M.S., J.S., and S.Z. performed data analysis. M.Wo. contributed additional writing. B.G., T.A. and E.S. implemented the Perspective API bridging classifiers. L.T., S.D., K.D., H.L., S.M. and M.S. implemented the Diverse Approval ranking algorithm. S.S., M.S., P.M., G.J., Y.J., S.F., A.T., S.H., and M.Wü. implemented the Challenging Stereotypes ranking algorithm. M.M., A.C., J.S., and M.Wo. implemented the Add News ranking algorithm. J.M., R.W., A.P.L, A.G., C.B., D.H.M., J.T., L.S., M.Wo., M.Be., M.Br., M.I., P.R. and Y.L. judged the contest.
+Competing interests:
+“There are no competing interests to declare.”
+Data and materials availability:
+TBD
+Supplementary Materials for
+The Prosocial Ranking Challenge: Reducing Polarization on Social Media without Sacrificing Engagement
+Jonathan Stray∗, Ian Baker, George Beknazar-Yuzbashev,
+Ceren Budak, Julia Kamin, Kylan Rutherford,
+Mateusz Stalinski, Tin Acosta, Chris Bail,
+Michael Bernstein, Mark Brandt, Amy Bruckman,
+Anshuman Chhabra, Soham De, Kayla Duskin,
+Sara Fish, Beth Goldberg, Andy Guess,
+Dylan Hadfield-Menell, Muhammed Haroon, Safwan Hossain,
+Michael Inzlicht, Gauri Jain, Yanchen Jiang,
+Alexander P. Landry, Yph Lelkes, Hongfan Lu,
+Peter Mason, Jennifer McCoy, Smitha Milli,
+Paul Resnick, Emily Saltz, Martin Saveski,
+Lisa Schirch, Max Spohn, Siddarth Srinivasan,
+Alexis Tatore, Luke Thorburn, Joshua A. Tucker,
+Robb Willer, Magdalena Wojcieszak, Manuel Wüthrich,
+Sylvan Zheng
+∗Corresponding author. Email: jonathanstray@berkeley.edu
+1 Supplementary Materials
+We built a custom Chrome browser extension that intercepts communication between the web client and platform server for Facebook, X/Twitter, and Reddit, building on previous browser extension platform manipulation approaches [21, 47]. When the application page loads, our extension immediately queries the platform server for the first 50-100 posts or comments (depending on platform, see supplementary text 3), then sends the text content of these posts to our own server which runs all algorithmic interventions. Each tested “ranker” can reorder, remove, or add content. This extends previous browser extension-based methods which could not add content. The ranker forwards the altered feed back to the web client, where it is displayed to the user. Users in the control condition go through the same server with a pass-thru ranker. All results (experimental and control) are returned by the server after a fixed 500ms, to prevent latency differences from contaminating the comparison (see supplementary text 3).
+We recruited users through a combination of research panel providers and consumer market research companies, screening for people who reported using at least one of Facebook, X/Twitter or Reddit and at least 30% of their social media use on desktop. 17,095 users installed the browser extension within our enrollment period from July to September 2024 of which 16,823 completed the baseline survey, but many soon removed the extension, leaving 9,386 who kept it installed for at least one week. We administered the midline survey from October 29 to November 5, recording 5,700 responses. We administered the endline survey from January 10 to January 20, recording 3,739 responses. 5,294 people still had the extension installed on January 10, so we were still able to collect engagement and behavioral data on many people who did not fill out the endline survey.
+We had five different experimental arms each corresponding to one ranking algorithm. We randomly assigned participants at enrollment to one arm (1/7 of all users per arm) or control (2/7 of all users) for the entire experiment. Due to technical challenges, different experimental arms started interventions at different dates (Early September to early October), but all users were held in the control condition (no intervention) for at least 14 days post sign-up to record baseline behavioral data.
+Effects were estimated using a difference-in-differences model as detailed in supplementary text 5. Because even within the same study arm different users started treatment on different dates, we used additional fixed effects to account for this variation. Regardless of intervention start date, all users of all arms were surveyed during the same week-long midline and endline periods.
+1.1 Preregistration and Deviations
+We preregistered our study in the AEA RCT Registry on August 29, 2024, prior to the start of interventions.44
+4
+The link to the preregistration: https://www.socialscienceregistry.org/trials/14274. The initial registration covered Treatment Arms 1–2. Treatment Arms 3–5 were added via an amendment submitted prior to the start of those interventions.
+We did our best to ensure that our experiment and subsequent analyses followed what was preregistered. Below, we outline deviations that occurred.
+1.1.1 Outcome Measures
+Our preregistration listed “meaningful connections on platforms” and “experiences on platforms” as separate primary outcomes (outcomes 7 and 8). In practice, the survey questions for both outcomes are drawn from the Neely Social Media Index [60], which was designed as a unified instrument measuring positive and negative user experiences on social media platforms. We therefore report these as a single combined index (the “Neely index”), consistent with the instrument’s intended use.
+For affective polarization, following the standard operationalization [76], we computed the difference between inparty and outparty scores for both the feeling thermometer and the friendship comfort questions, then averaged these two difference scores. The preregistration does not specify this precisely.
+Our preregistration mistakenly specified that we will measure social trust using both a general trust question and one of our affective polarization questions about being comfortable having friends from the outparty. We should have only included the first question. To address this, we report treatment effects on general trust alone (see Trust columns in Table S1 and Table S2) and on the two question index, as preregistered, (see TrustIndex columns in Table S1 and Table S2). Both outcomes show significant treatment effects of the pooled algorithms against the control, making the preregistration deviation inconsequential.
+Our preregistration specified engagement rate (total engagement signals divided by number of posts seen) as a primary measure of social media use alongside active time. A software issue compromised our ability to record view events on Facebook before September, rendering the post-view denominator unreliable for this measure. We therefore report total engagement events as an alternative measure of engagement (see Appendix 1.5).
+Lastly, other engagement-based secondary outcomes, including total number of political/civic posts seen, average toxicity of posts seen, engagement rate with toxicity, engagement rate with political/civic posts, average toxicity of posts created, will be reported in a companion study. The same applies to heterogeneity analysis with respect to measures dependent on these outcomes, such as treatment effect heterogeneity by baseline exposure to political or toxic content.
+1.1.2 Sample Size
+We recruited 16,823 participants who installed the browser
+extension and completed the baseline survey, exceeding the
+preregistered target of approximately 15,000. However, many participants did not use the extension for more than a few days, leaving 9,386 who kept it active for at least one week—a threshold that ensures some level of authentic user activity and a minimum period of baseline behavioral data for our difference-in-differences estimation. Of these, 3,739 completed the endline survey, well below the upper bound of 80% retention (approximately 12,000) specified in the preregistration. Section 6 shows no evidence of differential attrition by treatment arm. Section S20 shows that our results are robust to changing the inclusion requirement to two weeks or two days.
+1.1.3 Interventions
+The preregistration specified re-ranking the first 50 content items per page load. In practice, slate sizes varied by platform and content type (see Table S11). Most notably, Facebook posts were fetched in two passes (10, then 35) because Facebook returns posts in small batches, and waiting for 50 before displaying any content would have caused unacceptable delays for users.
+We removed the nuance classifier from the Uprank Bridging and Uprank Bridging, Downrank Toxic interventions because it ended up mostly picking up on comment length, i.e. it did not work as intended because of poor training data. From Uprank Bridging, Downrank Toxic we removed severe toxicity because it turned out to be nearly identical to toxicity, removed profanity, sexually explicit and flirtation because they exhibited too many false positives on actually constructive content, and removed power appeal because it was never implemented.
+1.2 Results on All Outcomes
+Here we present tabular results on all of our preregistered outcomes.
+Our main results are aggregate effects across all experimental arms. This analytical strategy addresses the following research question: can modifications to existing social media algorithms designed by informed researchers reduce polarization?
+Consistent with our preregistration plan, we also report effects individually by ranker arm to facilitate comparisons between different ranking algorithms, as well as
+heterogeneous effects by platform (where applicable), and demographic variables (race, gender, and partisanship).
+We additionally preregistered examining results by baseline levels of political content and toxic content exposure - heterogeneous effects by these variables are omitted in this draft as they are currently under construction.
+All analysis models for survey based outcomes use standardized survey indices such that effects are measured in standard deviations of the control group.
+Platform based outcomes are reported in raw units (minutes per day, for active time).
+For a complete description of the identification strategy and analysis model specification details, see supplementary text 5.
+1.3 Survey Outcomes
+Our preregistered survey outcomes included
+1.
+mental health and well being [77]
+2.
+support for political violence [78]
+3.
+perceptions of the outgroup’s support for political violence (aka ”meta-perceptions”) [79]
+4.
+affective polarization [76]
+5.
+inter-group empathy [80]
+6.
+political knowledge
+7.
+meaningful connections and experiences on social media [60]
+8.
+negative emotions
+9.
+social trust
+Outcomes 1-8 were preregistered as primary outcomes, while outcome 9 was registered as a secondary outcome. All outcomes were preregistered both pooled across all treatment arms and for individual arms.
+1.4 Preregistered Indexes
+For most of our survey outcomes, we asked a combination of related survey questions. We preregistered the following approaches to creating indexes for these outcomes. Unless otherwise specified, we standardize scores for each statement or question, and add them up to create a single index measure for each outcome.
+Mental Health
+Mental Health was measured using the following survey questions (All of the time, Most of the time, More than half the time, Some of the time, At no time) from the WHO-5 well-being index [77]:
+•
+I have felt cheerful and in good spirits
+•
+I have felt calm and relaxed
+•
+I have felt active and vigorous
+•
+I woke up feeling fresh and rested
+•
+My daily life has been filled with things that interest me
+Support for Partisan Violence
+Support for partisan violence was measured using the following survey questions from [78]:
+•
+When, if ever, is it OK for [inparty] to send threatening and intimidating messages to [outparty] leaders? (101 pt scale, Never, Always)
+•
+How much do you feel it is justified for [inparty members] to use violence in advancing their political goals these days? (101 pt scale, Not at all, Extremely)
+Meta-perceptions on Support for Partisan Violence
+Meta-perceptions on support for partisan violence was measured using two survey questions (All of the time, Most of the time, More than half the time, Some of the time, At no time) from [79]:
+•
+How do you think an average [outparty] would respond to the following question? How much do you feel it is justified for [outparty] to use violence in advancing their political goals these days?
+•
+How do you think an average [outparty] would respond to the following question? When, if ever, is it OK for [outparty] to send threatening and intimidating messages to [inparty] leaders?
+Affective Polarization
+Affective polarization was measured using the following survey questions, slight variations of the ANES survey questions asked for many years [76]:
+•
+Please indicate how you feel toward [outparty members] using the scale below. 100 means that you feel very favorably or warm toward them, 0 that you feel very unfavorable or cold, and 50 are neutral.
+•
+Please indicate how you feel toward [inparty members] using the scale below. 100 means that you feel very favorably or warm toward them, 0 that you feel very unfavorable or cold, and 50 are neutral.
+•
+How comfortable are you having friends who are [outgroup members]? (1-7 scale from Not at all to Extremely)
+•
+How comfortable are you having friends who are [ingroup members]? (1-7 scale from Not at all to Extremely)
+To aggregate these measures, we first standardized scores for each statement. Then, we took the average of the inparty and the negative of outparty scores for both the feeling thermometer questions and questions about having friends of each party. We then took the average of those two difference scores.
+Intergroup empathy
+Intergroup empathy was measured using two survey questions (7-point scale ranging from Strongly disagree to Strongly agree) from [80]:
+•
+I find it difficult to see things from [outparty] point of view.
+•
+I think It is important to understand [outparty] by imagining how things look from their perspective.
+Political Knowledge
+Participants were asked questions about their political knowledge in each of the surveys. In each survey, they were given five news headlines and asked, “Of the following news events, which ones do you think are true events that occurred in the last month, and which ones do you think are false and did not occur?” (True, False, Unsure)
+For each survey, we gathered recent headlines using archives of the Google News page from up to 2 weeks before each survey, selected five which were recent, among the top stories, and relevant to politics, and then changed two headlines to be false versions.
+Meaningful Connections and Experience
+Meaningful connection and experiences on platforms was measured using the following survey questions, from the Neely Social Media Index survey [60]:
+•
+In the last two weeks, have you experienced a meaningful connection with others on Facebook?
+•
+In the last two weeks, have you experienced a meaningful connection with others on X (Twitter)?
+•
+In the last two weeks, have you experienced a meaningful connection with others on Reddit?
+•
+In the last two weeks, have you personally witnessed or experienced something that affected you negatively on Facebook?
+•
+In the last two weeks, have you personally witnessed or experienced something that affected you negatively on X (Twitter)?
+•
+In the last two weeks, have you personally witnessed or experienced something that affected you negatively on Reddit?
+•
+In the last two weeks, have you learned something that was useful or helped you understand something important on Facebook?
+•
+In the last two weeks, have you learned something that was useful or helped you understand something important on X (Twitter)?
+•
+In the last two weeks, have you learned something that was useful or helped you understand something important on Reddit?
+•
+In the last two weeks, have you witnessed or experienced content that you would consider bad for the world on Facebook?
+•
+In the last two weeks, have you witnessed or experienced content that you would consider bad for the world on X (Twitter)?
+•
+In the last two weeks, have you witnessed or experienced content that you would consider bad for the world on Reddit?
+Negative Emotions
+We asked about negative emotions only on the in-feed survey, see supplementary text 2.
+Social Trust
+This question is from the General Social Survey, answered on a scale of 0 (Most people can be trusted) to 100 (You can’t be too careful).
+•
+Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?
+1.5 Engagement Outcomes
+Our primary measure of engagement (reported in the main text) was total active time spent on platform. We calculated this using the methodology described in [47].
+Our other preregistered measures of engagement include engagement rate, total number of posts seen, total number of political/civic posts seen average toxicity of posts seen, toxic post engagement rate, political/civic post engagement rate, and average toxicity of created posts.
+However, a software problem compromised our ability to record view events on Facebook before September. Thus, we are unable to calculate the secondary preregistered engagement measures which depend on view count integrity. Instead, we present raw number of engagement events, which we believe serves as a reliable secondary measure of engagement.
+Treatment effects on engagement outcomes are reported as aggregate effects over all treatment arms as well as individually across each ranker arm. We also present heterogeneous effects by party, gender, and race. All results presented both combined across platforms and disaggregated.
+2 In Feed Survey Measures
+In addition to our three full surveys sent to participants at baseline, midline, and endline, we also periodically sent a small set of survey questions to participants, embedded in their feeds as in figure S1. Each survey appeared one week after the most recent previous appearance, and was shown on whatever platform the user used first, up to three times on three consecutive days. We preregistered reporting results for these questions. We were hoping to measure short-term effects with these in-feed surveys, akin the experience sampling method of [50] which measured affect within 30 minutes of Twitter usage. The results are shown in table S10, estimated with the two-way fixed effects model of section 5. We found no statistically significant effects for these outcomes by treatment, possibly because of the relatively low response rate. Note that the N in table reports the number of survey answers (users times weeks), not the number of individual users who answered.
+The following questions were asked in-feed:
+•
+Please indicate how you feel toward [out-party] using the scale below [10 - Very favorable (warm toward them), 9, 8, 7, 6, 5 - Neutral, 4, 3, 2, 1, 0 - Very unfavorable (cold toward them)]
+•
+How interested would you say you have been in the political campaigns in the last two weeks? [Not at all interested, A little interested, Somewhat interested, Very interested, Extremely interested] (Asked before Nov 5th 2024)
+•
+How interested would you say you have been in politics in the last two weeks? [Not at all interested, A little interested, Somewhat interested, Very interested, Extremely interested] (Asked after Nov 5th 2024)
+•
+Please indicate how strongly you agree or disagree with this statement: Reading [current platform] today makes me feel angry, sad, or disgusted. [Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree]
+•
+How do you think an average [out-party] would respond to the following question: How much do you feel it is justified for [out-party] to use violence in advancing their political goals these days? [0 - Not at all, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 - Extremely]
+•
+Think about the coming presidential election. If [inparty candidate] is declared the winner of a contested election, how likely do you think [out-party] voters would be to engage in violence? [0 - Not at all likely, 1, 2, 3, 4, 5, 6, 7, 8, 9 ,10 - Extremely likely] (Asked before Nov 5th 2024)
+•
+Please indicate how strongly you agree or disagree with this statement: I find it difficult to see things from [out-party] point of view [Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree”]
+3 Ranking Algorithms
+As shown in figure 1, our browser extension intercepted API calls from the platform web client code and sent them to our servers for modification. To reduce latency, only the first N posts were retrieved from the platform server and sent for re-ranking. This slate length N varied by platform, and also depending on whether the user was viewing posts, comments, or replies. Our extension did not send further posts for re-ranking after this first N, because it would not be possible to re-order posts from the second batch into the first or vice-versa. The exception was Facebook posts, where we fetched first 10 and then another 35 in the background. This was necessary because Facebook only returns posts in groups of 5, so fetching 50 Facebook posts before displaying any posts at all would cause unacceptably long delays. See table S11 for the full logic.
+In each slate of posts, ads and items without text content (videos and photos without captions) were treated as “immovable” and left in place, while other posts were re-ordered around them. When available, photo and video alt text was appended to the main text, and on some platforms (especially Facebook) often contained AI-generated descriptions of the media, which aided our LLM-based classifiers.
+To prevent latency differences between the control and treatment arms, all arms including control were configured to return results after 500ms. This latency was a hard requirement for our ranking algorithms, which they met more than 95% of the time. However total user lag was greater than 500ms because it included client-side lag to fetch the initial batch of posts to send to our ranking server, and was on the order of 1-2 seconds for most platforms (including in the control group, where our server just returned the identity ranking). To prevent user attrition after installation due to added latency, all users were slowly ramped up linearly from zero lag to 1200ms lag over the first two weeks after sign up before re-ranking began (which also ensured that we collected baseline pre-intervention data for all users even if they signed up after the nominal intervention start).
+For each ranking algorithm we graph the number of posts added, number of posts deleted, and normalized ranking change per slate. The normalized ranking change is the absolute change in ranking position for a post, divided by the length of the slate (as given in table S11). Thus, a value of 0.3 means that posts changed rank by 30% of the slate length on average, e.g. 15 positions for a Twitter slate of length 50. Added and deleted posts are not counted in this metric.
+All users in each experimental arm started treatment at the same time (except for a minority who enrolled less than 14 days before intervention start, allow at least 14 days of baseline data collection), but with different per-arm dates in September and October. Also, intervention on Facebook started later in October for those arms that added posts. We had intended to start all arms and all platforms at the same time, but were unable to do so due to software development software delays. Each ranker section below lists start dates for each platform.
+3.1 Perspective Arms
+People involved (in authorship order):
+Beth Goldberg, Tin Acosta, Emily Saltz
+Theory
+This intervention builds on Google Jigsaw’s widely used Perspective API to identify rhetorical attributes associated with constructive, bridging discourse [24, 23]. The goal is to promote bridging interactions by reordering posts and comments based on predicted conversational attributes, without adding or removing content.
+Implementation
+Two rankers were implemented. One ranker uses an average of positive (bridging) attributes provided by the Perspective API. A second ranker uses this same average minus the average of negative Perspective API attributes (i.e., insult and identity attack) and additional proprietary classifiers that detect rhetorical attributes such as moral outrage and alienation. These attributes are summarized in table S12. Both rankers reorder existing posts and comments and do not add or remove content.
+The Uprank Bridging ranker ordered items by the average of the positive (i.e. bridging) attributes according to the weights in table S13. The Uprank Bridging, Downrank Toxic ranker ordered items by the average of positive attributes minus the negative attributes, according to the weights in table S14. The weights were chosen according to the formula b​r​i​d​g​i​n​g−12​p​e​r​s​u​a​s​i​o​n−12​t​o​x​i​c​i​t​ybridging-\frac{1}{2}persuasion-\frac{1}{2}toxicity The Scapegoating, Moral outrage and Alienation attributes were further averaged together because these three classifier outputs were strongly correlated.
+Classifiers used:
+The ranker uses classifiers for the experimental attributes of the Google Jigsaw Perspective API. An encoder-only version of Google’s PaLM 2 model was fine-tuned using human ratings of comments from online forums including Reddit, Wikipedia, The New York Times, and the Civil Comments dataset (N = 11,973). The latter annotations of the Civil Comments dataset were published in a 2024 benchmark dataset [23].
+Posts Added
+These rankers did not add any new posts.
+Posts replaced/deleted?
+None.
+Posts, comments, both?
+Both.
+Resulting changes
+Figures S3 and S4 show the timeline of post rank change, posts added and deleted for Uprank Bridging and Uprank Bridging, Downrank Toxic, respectively. As noted above, these rankers do not add or remove content, so the bottom two panels in each figure are zero. The normalized rank change (measured as the average numerical rank change for each item, divided by the length of the item slate) hovers around 0.3 for both rankers, meaning items changed rank by 30% on average —a sizable change.
+Where this ranker runs
+All pages with algorithmically ranked posts or comments.
+Change log
+Intervention start date: 2024-09-06.
+Dates when significant changes were made to the algorithm: N/A.
+Dates where bugs occurred and were/were not fixed: N/A.
+3.2 Diverse Approval
+People involved (in authorship order):
+Luke Thorburn, Soham De, Kayla Duskin, Hongfan Lu, Smitha Milli, Martin Saveski
+Theory
+This ranker approximates the “diverse approval” approach to bridging-based ranking [64] for civic content; namely substituting in civic content that is deemed valuable or engaging by multiple groups who typically disagree. This basic heuristic is used in the Community Notes algorithm on X and other platforms [94], in the civic engagement tool Polis [81], in writing tools that help reach politically diverse audiences [82], and previously by Meta as a signal for comment ranking.55
+5
+see https://bridging.systems/facebook-papers/ for the leaked document describing this work In theory, content that elicits this pattern of engagement is more likely to be written in a way that’s mindful of how it will land with the “other side,” and to represent a form of common experience.
+Implementation
+In each ranking request, all civic posts (defined as posts about political or social issues) were replaced with posts that were both civic and “bridging,” defined as posts that would be found “valuable, interesting, and engaging” for both average Republicans and Democrats, according to an LLM rater. In cases where less than 15% of posts in the request were civic, additional civic and bridging posts were inserted at random positions to attain a minimum dosage of 15% across treatment arms.
+Classifiers
+The ranker used three classifiers: a civic classifier, a bridging “scorer” (ordinal multi-class classifier), and a national interest classifier.
+•
+The civic classifier was a version of PoliBERTweet [83] fine-tuned using a set of 31,359 human-labeled X posts from [42]. We added a randomly initialized binary classification head which was a single dense layer with layer norm and dropout on top of the RoBERTa backbone.
+•
+The bridging scorer was implemented by prompting OpenAI’s GPT-4o-mini to score the text of each post on a scale of 1 to 5 reflecting the degree to which an average Republic or Democratic would find the post “valuable, interesting, and engaging”. A post is considered “bridging” if it scored at least 3 from both groups. Posts with higher bridging scores–defined as the lower of the two party-specific scores–were preferentially sampled for insertion.
+•
+To focus on nationally relevant content, from 14 Nov onwards we also filtered out local politics (city or state level issues) by prompting GPT-4o-mini with: “Would the content of the following social media post be of national interest to a U.S. audience?”
+LLM classifier prompt and validation
+The civic classifier achieved 89.3% accuracy (F1 score=.73) on a 15% held-out set of the human-labeled X posts from [42]. The bridging scorer and the national interest classifier were not systematically validated.
+Posts added
+The inventory of posts eligible for insertion was created by regularly collecting posts from a predefined set of sources on each platform, composed broadly of low-slant news media, civil society organisations, state governors and national legislators, as well as the same list of sources used in the Challenging Stereotypes ranker. To be eligible for insertion in a given ranking response, a post from this inventory needed to be civic, bridging, recent, and not previously seen by the user. Additionally, we inserted at most one item per source, and removed duplicate posts in each ranking request.
+Number of posts added
+Variable. Additional posts were inserted as needed to ensure that at least 15% of posts in a ranking request were civic.
+Posts replaced/deleted
+Civic posts were replaced with civic and bridging posts, and additional posts were inserted when necessary to reach the minimum dosage of 15% civic content.
+Resulting changes
+Figure S6 shows the rank change, added and removed posts over the course of the experiment, 5 day moving average. Normalized rank change is the average numerical rank change for each item, divided by the length of the item slate. Compared to Uprank Bridging and Uprank Bridging, Downrank Toxic, this intervention leads to minimal changes in normalized rank change because because Diverse Approval mostly operates by replacing content, which does not shift the rank of the remaining items. This is reflected in the number of added and removed items mostly mirroring each other. The exception to this is timelines that do not already include at least 15% civic content. This plot shows that user timelines usually already have at least this fraction of civic content, because there is minimal change in the normalized rank and only small differences between posts added and removed at any point in time.
+Personalization
+None. Added posts were selected from a global pool shared between all users.
+Where in the feed are posts inserted?
+Civic posts were replaced at their original positions. If less than 15% of the posts in the request were civic, additional posts were inserted at random positions to attain a “minimum dosage” of 15%.
+Where this ranker runs
+The ranker intervened only on the main feeds for each platform: the X engagement-based “For you” feed, the Facebook feed, and the Reddit homepage. It did not intervene on comment threads or topic-specific subreddits..
+Posts, comments, both?
+Posts only.
+Change log:
+Intervention start dates: 2024-10-05 (X/Twitter, Reddit) and 2024-10-21 (Facebook).
+Dates when significant changes were made to the algorithm:
+•
+12 Oct, 12pm PST: Increased the minimum % of civic posts in ranking responses from 15% to 20%.
+•
+21 Oct, 1pm PST: Reduced min % of civic posts back from 20% to 15%.
+•
+26 Oct, 9am PST: Expanded the set of news sources in our inventory to include those with a wider range of political slants (as measured by Media Bias Fact Check ratings).
+•
+7 Nov, 5pm PST: Reduced the maximum age of inserted posts from 5 days to 1 day, and enforced that they be posted after Nov 6 (to avoid posts from before the election outcome seeming particularly out of date).
+•
+14 Nov, 1pm PST: Added the national interest classifier.
+Dates where bugs occurred and were/were not fixed:
+21 Oct, 1pm PST: Fixed bug where we only intervened on x.com (not twitter.com).
+3.3 Challenging Stereotypes
+People involved (in authorship order)
+Siddarth Srinivasan, Max Spohn, Peter Mason, Gauri Jain, Yanchen Jiang, Sara Fish, Alexis Tatore, Safwan Hossain, Manuel Wüthrich
+Theory
+This algorithm recommends content that challenges stereotypes of political in- and out-group members while meeting basic quality thresholds. A growing literature in social psychology and political science has identified misperceptions as an important driver of partisan animosity - and a promising lever to reduce polarization (e.g. [20]). The algorithm is designed to address three types of perceptions:
+•
+People perceive out-group members to hold more extreme [84, 85] and less varied [86, 87] political opinions than they really do.
+•
+People also hold incorrect second-order beliefs, expecting out-group members to view the in-group as more extreme, less human, and less democratic [88, 89, 90].
+•
+In a case of pluralistic ignorance, people perceive in-group members to hold social norms that punish engagement with opposing partisans and viewpoints, despite the well-documented reputational benefits [91, 92].
+We inject posts that challenge political stereotypes to shift these perceptions. We find that many such posts come from “surprising validators” [12] - in-group members with high source credibility that challenge in-group beliefs [93] and out-group members who contribute to the in-party dialogue [26]. By shifting perceptions of out-group members’ extremity and thoughtfulness, as well as in-group members’ willingness to engage with out-group viewpoints, we attempt to reduce affective polarization.
+Implementation:
+The algorithm fetches posts from a pre-selected list of sources on each platform, uses GPT-4o to rate posts along multiple dimensions of ideology and quality, filters them for quality, scores and sorts the post by how much they challenge political stereotypes, and queues them to be recommended. When the user requests a new feed, we identify the top 20 percent most political posts using a fast RoBERTA-based political classifier, then replace them with these pre-selected posts. Inserted posts alternate between liberal- and conservative-leaning to ensure a balanced feed.
+Classifiers
+Challenging Stereotypes uses two different classifiers. At serving time, a fast RoBERTa-based classifier from [59] is used to decide which existing posts in the user’s feed are political, and therefore eligible for replacement. Offline, a GPT-4o based classifier with a single long prompt classifies scraped posts along a variety of “quality” dimensions as well as whether it challenges perceptions and political stereotypes. Each scraped post receives probability scores (ranging from 0 to 1) across several content dimensions, and posts are eligible for addition if they fall within acceptable thresholds. Thresholds were set by team members hand labeling whether posts with different scores were suitable for adding to feeds. The filtering dimensions are:
+Universal Filters (applied across all platforms)
+•
+NSFW content (threshold << 0.1): Posts flagged as containing adult or inappropriate material were excluded using a strict threshold to ensure workplace-appropriate content.
+•
+Niche content (threshold << 0.4): Posts addressing highly specialized topics unlikely to be of broad interest were filtered out.
+•
+Frivolous content (threshold << 0.4): Posts lacking substantive informational value were removed.
+•
+Outrage-bait (threshold << 0.66): Posts designed primarily to provoke emotional reactions were deprioritized.
+•
+Conspiratorial content (threshold << 0.7): Conspiratorial posts were filtered.
+•
+Pessimistic framing (threshold << 0.66): Excessively negative or doom-oriented content was limited.
+•
+Political orientation (retained if score >> 2.1 and << 5.9): Posts with strongly partisan framing at either end of the political spectrum were excluded.
+Platform-Specific Filters
+•
+Reddit: Satirical content (threshold << 0.75) was filtered, as satire on this platform often requires community-specific context.
+•
+Twitter/X: Posts required sufficient standalone context (threshold >> 0.75) and were filtered for sarcasm (threshold << 0.75), given the platform’s brevity constraints and conversational tone.
+•
+Facebook: Similar context and sarcasm requirements as Twitter, with an additional filter removing logistical posts (threshold << 0.2) such as event announcements or scheduling content.
+Final post scoring
+The same prompt also scores scraped posts on two other dimensions, combined to create a single final score.
+•
+A score representing how much the post challenges political stereotypes, in 0-1. We prompt the model to flag “ideologically surprising” content with a few positive and negative examples of real headlines/posts gathered from an initial batch of content.
+•
+A source-post mismatch” score, in the range 0-0.9. We rate the post’s general political orientation and position on the specific issues in the baseline survey (if the post is rated relevant to that issue). We then compute a 0-1 “post similarity score” as the similarity between the post’s ideological profile and the user’s ideological profile (based on their survey responses). Next, we compute a 0-1 “source similarity score” as the average post similarity score across posts from a given source (subreddit, twitter account, Facebook page). We select content with high source similarity scores and moderate post similarity scores (the user agrees with the source but not the post), as well as content with high post similarity scores and moderate source similarity scores (the user agrees with the post but not the source).
+The post’s final score is the maximum of these two scores. Posts are queued for insertion ordered by this final score. Because the maximum source-post mismatch score is approximately 0.9, challenging stereotypes posts are served first.
+GPT-4o prompt
+You will be given a post from Facebook. Your task is to explain the post along
+with any associated image(s), as well as provide some additional analysis as
+specified below. The goal is to identify what kinds of individuals are most
+aligned with the content and views expressed in the post. If the post lacks
+political/cultural/civic content (broadly construed), you may acknowledge this
+in the relevant fields. Provide a JSON response in exactly the following format,
+and do not add any other fields.
+{
+"explanation": <explain the post and any attached images; watch out for
+sarcasm/ironic posts>,
+"tone": <analyze the tone and sentiment of the post>,
+"ideological_analysis": <analyze the post for its political/ideological
+content, and note any groups/ideological views being promoted or criticized
+(explicitly or implicitly). Even if a post is facially neutral, be sure to
+note if it is likely to be viewed especially favorably or skeptically by any
+particular political identity/group given the broader context of U.S.
+political and cultural opinions. Alternatively, note if the post would have
+broad buy-in from most Americans, except for the strongest partisans/most
+polarized.>,
+"has_enough_context": <true if the point of the post can be understood by a
+general U.S. audience, false otherwise>,
+"is_political_social": <true if the post is political in nature (broadly
+construed, includes economic/social/culture war issues), false otherwise>,
+"is_ideologically_surprising": <Scoring guideline: Determine if the post
+contains ideologically surprising information that challenges ideological
+stereotypes or pre-existing political/cultural beliefs. true if the post
+contains ideologically surprising information. Examples:
+- A traditionally right-leaning individual making "pro-choice" statements.
+- A Democratic politician rejecting reparations for African-Americans.
+- "MAGA Patriots" actively opposing white supremacists at a Trump rally.
+- A well-known liberal figure expressing skepticism about immigration.
+- Texas producing more solar energy than California, contrary to
+expectations.
+- A post showing strong support for both LGBT rights and the U.S. military.
+- A prominent conservative expressing support for a Democratic politician.
+false if not ideologically surprising or if it reinforces typical
+ideological views. Examples:
+- A Republican politician advocating for lower taxes.
+- A liberal-leaning individual advocating for stricter gun control measures.
+- Environmental activists burning down a fossil fuel office.
+- Non-ideological content, such as a woman reuniting with her long-lost
+twin sisters.>,
+"political_orientation": int{1-7} or null <
+7 - Extremely liberal.
+6 - Liberal.
+5 - Slightly liberal.
+4 - Moderate.
+3 - Slightly conservative.
+2 - Conservative.
+1 - Extremely conservative.
+null - Not applicable.>,
+"opinion_trump": int{1-5} or null <
+5 - Highly favorable views of Donald Trump.
+4 - Somewhat favorable views of Donald Trump.
+3 - Neutral views towards Donald Trump.
+2 - Somewhat unfavorable views of Donald Trump.
+1 - Strongly unfavorable views of Donald Trump.
+null - Not applicable.>,
+"opinion_media": int{1-5} or null <
+5 - Strongly trusts mainstream media.
+4 - Somewhat trusts mainstream media.
+3 - Neither trusts nor distrusts mainstream media.
+2 - Somewhat distrusts mainstream media.
+1 - Strongly distrusts mainstream media.
+null - Not applicable.>,
+"opinion_immigration": int{1-5} or null <
+5 - Favors greatly increasing immigration.
+4 - Favors somewhat increasing immigration.
+3 - Favors keeping immigration levels about the same.
+2 - Favors somewhat decreasing immigration.
+1 - Favors greatly decreasing immigration.
+null - Not applicable.>,
+"opinion_abortion": int{1-5} or null <
+5 - Strongly supports a legal right to abortion.
+4 - Somewhat supports a legal right to abortion.
+3 - Neither supports nor opposes.
+2 - Somewhat opposes a legal right to abortion.
+1 - Strongly opposes a legal right to abortion.
+null - Not applicable.>,
+"opinion_israel": int{1-5} or null <
+5 - Strongly supports Israel.
+4 - Somewhat supports Israel.
+3 - Neither supports nor opposes Israel.
+2 - Somewhat opposes Israel.
+1 - Strongly opposes Israel.
+null - Not applicable.>,
+"opinion_climate": int{1-5} or null <
+5 - Extremely concerned about climate change.
+4 - Somewhat concerned about climate change.
+3 - Moderately concerned about climate change.
+2 - Only a little concerned about climate change.
+1 - Not at all concerned about climate change.
+null - Not applicable.>,
+"opinion_racism": int{1-5} or null <
+5 - Racism against Black Americans is a major problem.
+4 - Racism against Black Americans is a significant problem.
+3 - Racism against Black Americans is a moderate problem.
+2 - Racism against Black Americans is only a slight problem.
+1 - Racism against Black Americans is not a problem at all.
+null - Not applicable.>,
+"opinion_military": int{1-5} or null <
+5 - Strongly supports the U.S. military.
+4 - Somewhat supports the U.S. military.
+3 - Neutral towards the U.S. military.
+2 - Somewhat opposes the U.S. military.
+1 - Strongly opposes the U.S. military.
+null - Not applicable.>,
+"opinion_economy": int{1-5} or null <
+5 - Feels extremely positive about the current U.S. economic situation.
+4 - Feels somewhat positive.
+3 - Feels neither positive nor negative.
+2 - Feels somewhat negative.
+1 - Feels extremely negative.
+null - Not applicable.>,
+"is_niche": <true if the post is very niche, lacks enough context, too
+technical, or is not relevant to a general U.S. audience, false otherwise>,
+"is_logistical": <true if the post primarily serves to advertise an event or
+other media without much commentary, false otherwise>,
+"is_frivolous": <true if the post is frivolous, trivial, or lacks substance,
+false otherwise>,
+"is_sarcastic": <true if the post is sarcastic or satirical, false
+otherwise>,
+"is_outrage": <true if the post is inflammatory, antagonistic, or provokes
+outrage, resentment, or strong negative emotion, false otherwise>,
+"is_conspiratorial": <true if the post is sincerely conspiratorial or
+promotes/reflects a lack of social trust, false otherwise>,
+"is_pessimistic": <true if the post reflects or promotes a negative or
+pessimistic outlook, false otherwise>,
+"is_bridging": <true if the post promotes trust, empathy, or understanding
+across the political/ideological spectrum in particular, false otherwise>,
+"is_nsfw": <true if the post contains NSFW content, false otherwise>
+}
+Here is the Facebook post:
+{post}
+Posts added
+Posts to be added are fetched from a pre-selected list of sources on each platform at regular intervals, then annotated using GPT-4o as described above. Only those posts that pass the quality filters and are identified as challenging political stereotypes and/or satisfy source–post mismatch criteria are selected for recommendation.
+For each of the three platforms, we asked ChatGPT and Claude to generate a list of sources (subreddits, Twitter accounts, Facebook pages) from various domains (politics, entertainment, technology, journalism, academia). On Twitter, we additionally crawled the “following” list of suggested accounts and sampled accounts with large followings. We then conducted an initial screen to discard sources with low “yield”, i.e., sources whose content was unlikely to be recommended by our algorithm (due to low quality or low frequency of content that challenged political stereotypes). This left us with 139 Facebook pages and groups, 413 Twitter sources, and 95 Subreddits.
+The following sources yielded the most top-scoring posts under our algorithm in absolute terms. Note that this is not necessarily representative of the average score of posts from these sources.
+•
+On Reddit: r/centrist, r/vaushv, r/conservative, r/neoliberal, r/uspolitics
+•
+On Twitter: Mediaite, The Hill, Fox News, DC Examiner, and Politico.
+•
+On Facebook: The Hill, Fox News, The Daily Beast, The Daily Caller, Huffington Post Politics
+Number of posts added
+Approximately 20% of feed items.
+Posts replaced/deleted
+On each request, the 20% most political posts in the user’s feed are replaced with queued posts.
+Resulting changes
+Overall, there is no change in normalized rank change since this ranker only replaces items, leaving the rank of existing items unchanged.
+Personalization
+This algorithm uses two sources of posts. Posts are selected if they challenge political stereotypes, and these are not personalized. Posts are also selected in a personalized way, by comparing the user’s political position on nine issues (known from their baseline survey answers) to the political position of posts and sources (identified by the GPT-4o classifier). This is used to select content where the user agrees with the source but not the post, or where the user agrees with the post but not the source.
+Where this ranker runs
+The ranker intervened only on the X engagement-based timeline, the Facebook feed, and the Reddit homepage. It did not intervene on comment threads or topic-specific subreddits.
+Posts, comments, both?
+Posts only.
+Change log:
+Intervention start dates: 2024-10-06 (Twitter/X, Reddit) and 2024-10-21 (Facebook).
+Dates when significant changes were made to the algorithm: N/A.
+Dates where bugs occurred and were/were not fixed: Worker that managed annotation of scraped posts with GPT-4o failed starting around Jan 12 and was fixed on Jan 28. During this time we served queued posts that were more than three days old, which would otherwise have expired.
+3.4 Add News
+People involved (in authorship order):
+Muhammed Haroon, Anshuman Chhabra, Jonathan Stray, Magdalena E. Wojcieszak
+Theory
+This intervention adds posts from verified and ideologically balanced news outlets to increase users’ exposure to factual public affairs information toward increasing knowledge, efficacy, political interest, and belief accuracy.
+Implementation
+The algorithm adds posts from verified and ideologically balanced news outlets selected by overlapping high-reliability ranking lists from NewsGuard and Ad Fontes. Posts are selected using a weighted sampling strategy across ideological categories and are personalized using users’ prior histories. User embeddings are generated in the background, candidate posts are stored in a Redis database, and real-time requests are served from this database. Crawling and computation occur in background processes at regular intervals of three hours.
+Classifiers
+Sentence-transformer models are used to generate embeddings for personalization. The stella_en_400M_v5 model from the SentenceTransformers library is used for efficiency and low resource consumption.
+Posts added
+We selected 95 verified and ideologically balanced news outlets by overlapping high-reliability sources listed by NewsGuard and Ad Fontes.
+For Twitter/X and Facebook, posts are scraped from the accounts operated by these sources. For Reddit, posts are scraped from news subreddits, and only posts whose external URLs are from the selected news sources are used. Posts are selected using a weighted sampling strategy that assigns 25% weight to left-leaning sources, 50% weight to moderate sources, and 25% weight to right-leaning sources.
+All scraping was done through the Apify service. Only scraped posts which are within 48 hours of the newest scraped post are eligible for addition to the user’s feed, and a 48-hour shown-posts cache prevents the same item from being recommended multiple times within that window. These two rules allow graceful degradation of the user experience if the scraper stops running, which happened on Facebook around the week of October 29.
+Number of posts added
+An upper bound is imposed such that no more than 15% of a user’s daily posts are injected by the algorithm.
+Posts replaced/deleted
+None.
+Resulting Changes
+Figure S10 shows the patterns of rank changes, added and removed content for this ranker.
+Since Add News does not replace/remove any content, the third panel is flat.
+Personalization
+Personalization is achieved by identifying scraped news posts whose content is similar to the participant’s prior viewing history. In the offline worker, for each user we retrieve the posts served by the platform from each of the last 100 ranking requests. We then sample 50 of these posts randomly to create a reference set (filtering out any post shorter than 20 characters). Each sampled served post and each candidate scraped post is embedded using the stella_en_400M_v5 sentence transformer model. For each sampled post we find the five most similar candidate posts by directly computing all cosine similarities. We score candidate posts by counting the number of sampled posts for which they are one the top five closest posts. The top 50 highest scoring posts are randomly shuffled and queued for addition to the user’s feed. We do not try to preserve ideological diversity in this personalization step, relying on the diversity of scraped sources for balance. This whole process runs several times a day for each platform for each user.
+Where this ranker runs
+The ranker intervened only on the X engagement-based timeline, the Facebook feed, and the Reddit homepage. It did not intervene on comment threads or topic-specific subreddits.
+Posts, comments, both?
+Posts only.
+Change log:
+Intervention start dates: 2024-10-05 (Twitter/X, Reddit) and 2024-10-21 (Facebook).
+Dates when significant changes were made to the algorithm: N/A.
+Dates where bugs occurred and were/were not fixed: N/A.
+4 Participant Recruitment and Sample
+Because we needed to recruit many people quickly and screen in rates were low, participants were mostly recruited by presenting a screening survey to as many people as possible using more than a dozen U.S. consumer market research firms. A significant number came from a research panel maintained by Forthright, and a smaller number from self-serve research platforms CloudResearch and Positly. A small number came from social media ads, before we determined that this was not a cost effective recruiting strategy. The participant source breakdown is shown in table S15. The final sample of 9,386 are those of the 9,701 who also completed the baseline survey.
+Participants were recruited through a multi-stage process. First, they had to pass the screening survey shown in table S16 which asked whether they were desktop users of Facebook, Reddit and/or X/Twitter on the Chrome browser. Participants were paid for this screening survey even if they were not eligible. We did not have control over the amount of this payment as it varied from vendor to vendor based on our negotiated price and their pass-through but it was small, typically less than $1 US. Those who were eligible for the study were then redirected to socialmedialab.study and asked to install the extension. Those who installed the extension were asked to complete the baseline survey. If they installed the extension but didn’t complete the baseline survey, we sent occasional email and browser notification reminders. The overall conversion rate from completing the screening survey to inclusion in the sample study (defined as completion of baseline survey and the extension kept installed for at least one week) was 3.7%, meaning that we contacted over 250,000 people to obtain our final sample. Our total recruitment cost was over $400,000, with the majority (>80>80%) going toward user acquisition rather than payment for surveys.
+We learned some important lessons from this massive recruitment effort. First, we needed so many people to sign up so fast that we essentially saturated the consumer market research industry for a few weeks, meaning that there is probably no easy way to recruit participants faster even if money is not an issue. Second, we probably could have benefited greatly from better participant communication. Although we stated in multiple places during the recruitment pipeline that people would receive $5 for each of two follow up surveys months later, many people were still confused about when they would get paid, and often emailed asking. This confusion may be why many people uninstalled the extension immediately after installation. Were we to attempt such a long-term study again, we would try to be even clearer about the payment structure, which may reduce short term attrition. We would also send monthly update emails confirming enrollment and telling people when to expect the next survey and payment, which may reduce long term attrition.
+5 Identification Strategy
+5.1 Behavioral Outcomes (Daily Panel)
+Pooled treatment arms.
+We estimate the following two-way fixed effects (TWFE) regression:
+Yi,t=αi+δt,Ci,d+β​Di,t+εi,t,Y_{i,t}=\alpha_{i}+\delta_{t,C_{i},d}+\beta D_{i,t}+\varepsilon_{i,t},
+(S1)
+where Yi,tY_{i,t} is the outcome for user ii in period tt (measured relative to the intervention start date), αi\alpha_{i} represents individual fixed effects, Di,tD_{i,t} is an indicator variable equal to 1 for periods on or after the day when the user had treatment switched on. To address the staggered treatment roll-out, as well as the fact that the earliest treatment start was different for different treatment arms, δt,Ci,d\delta_{t,C_{i},d} captures the interaction of period, cohort, and date fixed effects, i.e., a separate day-level period dummy for each cohort defined by its enrollment date. The triple interaction of fixed effects extends the “stacked regression” approach to ensuring robustness to the staggered roll-out of the treatment to a case where different treatments – see [94] for an application.
+For the control group, we set the intervention start date to the latest of the earliest intervention start date in the sample and 14 days after enrollment, ensuring at least two weeks of baseline period.
+Individual arms.
+For individual arms, we subset the sample to the relevant individual treatment arm and the control group and set the hypothetical intervention start date, for the control group, to the intervention start date of the respective cohort, meaning that δt,Ci,d\delta_{t,C_{i},d} effectively becomes δt,Ci\delta_{t,C_{i}}.
+Heterogeneity.
+We estimate heterogeneity of treatment effects with respect to baseline and demographics characteristics using the following specification:
+Yi,t=αi+δt,Ci,d,Hi+β​Di,t+ϕ⁡(Di​t​Hi)+εi,t,Y_{i,t}=\alpha_{i}+\delta_{t,C_{i},d,H_{i}}+\beta D_{i,t}+\phi\,(D_{it}H_{i})+\varepsilon_{i,t},
+(S2)
+where the dummy HiH_{i} encodes a baseline or demographic characteristic.
+We exploit the opportunity presented by having a large number of daily time periods in the study, and use [95] standard errors, which account for both serial and cross-sectional dependence, to increase power.
+5.2 Survey and In-Feed Outcomes
+We estimate the two-way fixed effects (TWFE) regression with three time periods:
+Yi,t=αi+δt+β​Di,t+εi,t,Y_{i,t}=\alpha_{i}+\delta_{t}+\beta D_{i,t}+\varepsilon_{i,t},
+(S3)
+where Yi,tY_{i,t} is the outcome for user ii at time tt, and Di,tD_{i,t} is an indicator whether the user ii had already been treated by time tt. For individual treatment arms, we restrict the sample to the control group and the respective treatment arm. Heterogeneity analysis, similarly to the behavioral outcomes, adds the term ϕ⁡(Di​t​Hi)\phi\,(D_{it}H_{i}).
+Given the relatively low number of time periods, for these specifications we use clustered standard errors.
+6 Attrition
+6.1 Survey Attrition
+Overall, our survey completion rate is 53%. This figure measures the proportion of users who completed either a midline or endline survey out of all who (1) completed a pre-treatment survey and (2) installed the extension and kept it installed for one week.
+We find no evidence that participants assigned to the treatment group completed surveys at different rates compared to the control group.
+Table S19 shows the results of several OLS regressions where completion of either a midline or endline survey is the dependent variable and treatment assignment is the independent variable.
+Model (1) of the table shows the basic, bivariate model. The substantively tiny and statistically insignificant coefficient on the treatment dummy indicates that treated participants were not more or less likely than control participants to complete the surveys.
+Model (2) of the table models the predicted probability of completing a survey as a function of a propensity score that combines available demographic and baseline characteristics (gender, race, education, party affiliation, income, baseline social media usage, and baseline polarization), and interacts this predicted survival score with treatment assignment.
+The result suggests that participants who are in general more likely to fill out surveys based on these characteristics are equally as likely to fill out the midline or endline survey when assigned to treatment as compared to control.
+Finally, Model (3) models survey taking as a function of each treatment arm individually. Again, no significant differences are observed between treatment arms.
+7 All Survey Questions
+party id [76]: Generally speaking, do you usually think of yourself as a Republican, Democrat, Independent, or what?
+[Republican, Democrat, Independent, No preference, Other (please specify)]
+party strong (if Republican or Democrat) [76]: Would you call yourself a strong [party id choice] or not a very strong [party id choice]?
+[Strong, Not very strong]
+party leaner (if NOT Republican or Democrat) [76]: Do you think of yourself as closer to the Republican or Democratic Party?
+[Republican, Democratic]
+browser mobile: For each of the platforms below, how often would you say you use social media from your desktop computer (including laptops), as opposed to your mobile device? For each platform, please use the slider where 0 means only mobile and 100 only desktop. If you do not use the platform, please check “Not Applicable.”
+[slider, 0 to 100]
+[Facebook, Reddit, X (Twitter)]
+gender: Are you:
+[Male, Female, Non-binary, Prefer not to say]
+age What is your age?
+[18-24, 25-34, 35-44, 45-54, 55-64, 65+]
+education What is the highest level of education you have completed?
+[Some high school, Graduated high school, Some college, Associate’s degree, Bachelor’s degree, Graduate degree]
+ideology Here is a seven-point scale on which the political views that people might hold are arranged from extremely liberal—point 1—to extremely conservative—point 7. Where would you place yourself on this scale?
+[1. Extremely liberal, 2. Liberal, 3. Slightly liberal, 4. Moderate, middle of the road, 5. Slightly conservative, 6. Conservative, 7. Extremely conservative]
+income What is your annual household income?
+[Less than $20,000, $20,000 to $34,999, $35,000 to $49,999, $50,000 to $74,999, $75,000 to $99,999, $100,000 to $149,999, $150,000+]
+ethnicity Which race or ethnicity best describes you? (Please choose only one.)
+[American Indian or Alaskan Native, Asian / Pacific Islander, Black or African American, Hispanic, White / Caucasian, Multiple ethnicity/ Other (please specify)]
+socmed use: Think of the past two weeks. How much time did you spend on social media, on average, per day?
+[0–30 minutes, 30–60 minutes, 60–90 minutes, 90–120 minutes, 2–3 hours, 3–4 hours, More than 4 hours]
+desktop share: Is your desktop shared with others?
+[Yes, No]
+wellbeing [77]: Over the past 2 weeks, how often have you felt the following?
+[All of the time, Most of the time, More than half the time, Some of the time, At no time]
+•
+I have felt cheerful and in good spirits.
+•
+I have felt calm and relaxed.
+•
+I have felt active and vigorous.
+•
+I woke up feeling fresh and rested.
+•
+My daily life has been filled with things that interest me.
+ft out [76]: Please indicate how you feel toward [out party] voters using the scale below. 100 means that you feel very favorably or warm toward them, 0 means that you feel very unfavorable or cold, and 50 means neutral.
+[Feeling thermometer: 0 (Cold) – 100 (Warm)]
+ft in [76]: Please indicate how you feel toward [in party] voters using the scale below. 100 means that you feel very favorably or warm toward them, 0 means that you feel very unfavorable or cold, and 50 means neutral.
+[Feeling thermometer: 0 (Cold) – 100 (Warm)]
+kalmoe mason 3 [78]: How much do you feel it is justified for [out party] to use violence in advancing their political goals these days?
+[0 (Not at all justified) – 100 (Extremely justified)]
+kalmoe mason 1 [78]: When, if ever, is it OK for [in party] to send threatening and intimidating messages to [out party] leaders?
+[0 (Never OK) – 100 (Always OK)]
+meta spv 1 [79]: How do you think an average [out party] would respond to the following question? How much do you feel it is justified for [out party] to use violence in advancing their political goals these days?
+[0 (Not at all justified) – 100 (Extremely justified)]
+meta spv 2 [79]: How do you think an average [out party] would respond to the following question? When, if ever, is it OK for [out party] to send threatening and intimidating messages to [out party] leaders?
+[0 (Never OK) – 100 (Always OK)]
+meta wev past [79]: Think about the recent presidential election. If [in party candidate, Trump or Harris] was declared the winner of a close, contested election, how likely do you think [out party] voters would have been to engage in violence?
+[0 (Not at all likely) – 100 (Extremely likely)]
+intergroup empathy [80]: How much do you agree or disagree with the following statements?
+[1 = Strongly disagree, 2, 3, 4, 5, 6, 7 = Strongly agree]
+•
+I find it difficult to see things from [out party]’ point of view.
+•
+I think it is important to understand [out party] by imagining how things look from their perspective.
+gss general trust: Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?
+[0 (Most people can be trusted) – 100 (You can’t be too careful)]
+sd out [32]: How comfortable are you having friends who are [out party]?
+[1 (Not at all comfortable) – 7 (Extremely comfortable)]
+sd in [32]: How comfortable are you having friends who are [in party]?
+[1 (Not at all comfortable) – 7 (Extremely comfortable)]
+learned fb [60]: In the last two weeks, have you learned something that was useful or helped you understand something important on Facebook?
+[Yes, No, Not sure]
+learned x [60]: In the last two weeks, have you learned something that was useful or helped you understand something important on X (Twitter)?
+[Yes, No, Not sure]
+learned reddit [60]: In the last two weeks, have you learned something that was useful or helped you understand something important on Reddit?
+[Yes, No, Not sure]
+bftw fb [60]: In the last two weeks, have you witnessed or experienced content that you would consider bad for the world on Facebook?
+[Yes, No, Not sure]
+bftw x [60]: In the last two weeks, have you witnessed or experienced content that you would consider bad for the world on X (Twitter)?
+[Yes, No, Not sure]
+bftw reddit [60]: In the last two weeks, have you witnessed or experienced content that you would consider bad for the world on Reddit?
+[Yes, No, Not sure]
+meaningful fb [60]: In the last two weeks, have you experienced a meaningful connection with others on Facebook?
+[Yes, No, Not sure]
+meaningful x [60]: In the last two weeks, have you experienced a meaningful connection with others on X (Twitter)?
+[Yes, No, Not sure]
+meaningful reddit [60]: In the last two weeks, have you experienced a meaningful connection with others on Reddit?
+[Yes, No, Not sure]
+negative fb [60]: In the last two weeks, have you personally witnessed or experienced something that affected you negatively on Facebook?
+[Yes, No, Not sure]
+negative x [60]: In the last two weeks, have you personally witnessed or experienced something that affected you negatively on X (Twitter)?
+[Yes, No, Not sure]
+negative reddit [60]: In the last two weeks, have you personally witnessed or experienced something that affected you negatively on Reddit?
+[Yes, No, Not sure]
+7.1 Political Knowledge Questions
+Each time participants took the main survey, they were asked the to review recent news headlines and evaluate whether or not they are true. We gathered five headlines pulled from the top articles on Google news within the past two weeks which were related to political events. We altered two to three of these headlines each week to create a false version (following to the approach used in [96]). Question wording was as follows:
+Of the following news events, which ones do you think are true events that occurred in the last month, and which ones do you think are false and did not occur?
+[True, False, Unsure]
+We presented the following sets of headlines, refreshed regularly throughout the study:
+Group 1
+•
+(F) Nikki Haley fails to win any Republican primaries before ending her election bid
+•
+(T) U.N. Team finds grounds to support reports of sexual violence in Hamas Attack
+•
+(F) Alabama governor vetoes IVF protection bill, limiting the protection for fertility services in the state
+•
+(T) Biden directs US military to establish aid port in Gaza
+•
+(T) Biden and Trump trade attacks in dueling events in Georgia
+Group 2
+•
+(F) US House votes against $95 billion aid package for Ukraine, Israel, and Taiwan
+•
+(T) Trump Hush money trial commences
+•
+(F) ByteDance agrees to sell TikTok, avoiding a US shutdown
+•
+(T) USC cancels main commencement ceremony after protests, arrests
+•
+(T) Tornadoes devastate parts of Nebraska and Iowa
+Group 3
+•
+(F) India’s Modi reelected in a landslide, increasing his party’s majority
+•
+(T) Louisiana governor signs bill to classify abortion pills as controlled substances into law
+•
+(T) Taiwan’s parliament passes bill pushing pro-China changes
+•
+(F) Biden details Gaza truce proposal, Hamas rejects it outright
+•
+(T) In Shift, Biden Issues Order Allowing Temporary Border Closure to Migrants
+Group 4
+•
+(F) The U.N. Security Council rejects U.S. cease-fire plan to end the war in Gaza
+•
+(T) Inflation slows in May, with consumer prices up 3.3% from a year ago
+•
+(T) Unanimous Supreme Court preserves access to abortion pill mifepristone
+•
+(T) Biden tells congressional Democrats he is “firmly committed” to staying in 2024 race
+•
+(F) Ohio House rejects bill restricting bathroom use for transgender students
+Group 5
+•
+(F) Supreme Court upholds EPA’s interstate air pollution regulation
+•
+(F) Labour Party’s Keir Starmer concedes defeat as Prime Minister Rishi Sunak and his Conservative Party head towards another sweeping UK election victory
+•
+(T) Assassination attempt on Trump at Pennsylvania rally leaves 2 hurt, 2 dead, including shooter
+•
+(T) Biden reportedly to push for supreme court term limits and new ethics code
+•
+(F) Speaker Johnson calls on Biden to resign after the president announces he won’t seek reelection
+Group 6
+•
+(T) Venezuelan President Nicolas Maduro claims election victory, refuses to publish results
+•
+(F) U.S., Russia, and other countries end prisoner swap negotiations after failing to reach agreement
+•
+(T) US economy added far fewer jobs than expected in July
+•
+(F) Google is not an illegal monopoly, federal court rules
+•
+(T) Harris selects Minnesota Gov. Tim Walz to be VP running mate
+Group 7
+•
+(T) Trump campaign hacked, blames Iran for stealing internal communications
+•
+(T) Ilhan Omar, member of the ‘Squad’, wins Minnesota Democratic primary
+•
+(F) Minouche Shafik Announces She Will Continue Tenure as Columbia President, Seeks to ‘Reunify’ Campus
+•
+(T) ‘The answer is no’: Pro-Palestinian delegates say their request for a speaker at DNC was shut down
+•
+(F) RFK Jr. suspends campaign; endorses VP Harris
+Group 8
+•
+(F) Supreme Court Agrees to Restart Biden’s Latest Student Debt Relief Plan
+•
+(F) Harris vows to ban fracking as president
+•
+(T) Harris says she’d appoint a Republican to her Cabinet if elected
+•
+(T) Trump Says He’ll Vote Against Florida’s Abortion Rights Measure After Conservative Backlash
+•
+(T) US accuses Russian state media of meddling in 2024 election
+Group 9
+•
+(F) Putin Declares Support for Trump, Dismisses Harris
+•
+(F) Ohio police note ‘some credible reports’ of Haitian immigrants harming pets, are investigating further
+•
+(T) Donald Trump Rejects A Rematch, Says There Won’t Be Another Debate With Kamala Harris
+•
+(T) Trump is safe following shooting at Florida golf course; suspect detained
+•
+(T) Netanyahu warns Yemen’s Houthis face a “heavy price” as missile lands in central Israel
+Group 10
+•
+(T) Mark Robinson Vows to Stay in N.C. Governor’s Race After CNN Report
+•
+(F) Freddie Owens execution delayed after key witness admits he lied
+•
+(T) No government shutdown for now: Congress agrees on temporary funding deal through December
+•
+(F) Trump says he would run for president again in 2028 if he loses this time
+•
+(T) Ukraine’s Zelenskiy says US decisive actions could end Russian war next year
+Group 11
+•
+(T) Gaetz Paid for Sex, Used Drugs While in Congress, Panel Finds
+•
+(F) Luigi Mangione Pleads Guilty to State Murder and Terror Charges
+•
+(T) Azerbaijan Airlines plane headed to Russia crashes hundreds of miles off course, dozens dead
+•
+(F) Donald Trump wins appeal against E Jean Carroll sexual abuse verdict
+•
+(T) Mike Johnson re-elected House speaker after GOP mutiny threat dissolves
+8 Additional Robustness Checks
+Table S20 shows our main results when defining the inclusion criterias as keeping the extension installed for two days or two weeks, as opposed to our main specification of one week. Table S21 shows our main results without any user who used X/Twitter at all during their two week pre-intervention baseline period.
+Figure S1: How in-feed surveys appeared to participants on X/Twitter. Similar UI was used for Facebook and Reddit.
+Figure S2: Design of the Perspective ranking algorithms. The Uprank Bridging and Uprank Bridging, Downrank Toxic algorithms are identical except for different classifier weights, as listed in tables S13 and S14.
+Figure S3: Timeline of post rank change, posts added, and posts deleted for Uprank Bridging, 5 day moving average. Normalized rank change is the average numerical rank change for each item, divided by the length of the item slate.
+Figure S4: Timeline of post rank change, posts added, and posts deleted for Uprank Bridging, Downrank Toxic, 5 day moving average. Normalized rank change is the average numerical rank change for each item, divided by the length of the item slate.
+Figure S5: Design of the Diverse Approval ranking algorithm.
+Figure S6: Timeline of post rank change, posts added, and posts deleted for Diverse Approval, 5 day moving average. Normalized rank change is the average numerical rank change for each item, divided by the length of the item slate.
+Figure S7: Design of the Challenging Stereotypes ranking algorithm.
+Figure S8: Timeline of post rank change, posts added, and posts deleted for Challenging Stereotypes, 5 day moving average. Normalized rank change is the average numerical rank change for each item, divided by the length of the item slate.
+Figure S9: Design of the Add News ranking algorithm.
+Figure S10: Timeline of post rank change, posts added, and posts deleted for Add News, 5 day moving average.
+Figure S11: The share of individuals in each group over time, out of the total number ever validly enrolled in our sample (i.e. completed the baseline survey and kept the extension installed for at least one week). Recruitment ran until late September, which is why all shares increase until that point. Attrition is fairly steady for all groups. Note that we began automatically removing the extension in February of 2025, causing the sharp drop at that point.
+Table S1: Results on all preregistered survey outcomes, estimated separately for each treatment arm. All survey measures normalized using the control group mean and SD, except for Trust which is on a 0-100 scale. Bridging Pooled combines Uprank Bridging and Uprank Bridging, Downrank Toxic. (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+lhs: Polarization
+lhs: Neely
+lhs: Empathy
+lhs: Wellbeing
+lhs: Violence
+lhs: Perceptions
+lhs: Knowledge
+lhs: Trust
+Uprank Bridging, Downrank Toxic
+Treated
+-0.042**
+-0.016
+0.032
+0.003
+0.014
+-0.017
+-0.028
+0.097**
+(0.017)
+(0.019)
+(0.041)
+(0.027)
+(0.026)
+(0.040)
+(0.066)
+(0.041)
+N
+5361
+5318
+3723
+5360
+5361
+5361
+5361
+5361
+Uprank Bridging
+Treated
+-0.015
+-0.025
+-0.004
+-0.006
+-0.006
+0.011
+0.041
+0.025
+(0.019)
+(0.019)
+(0.043)
+(0.028)
+(0.027)
+(0.040)
+(0.067)
+(0.042)
+N
+5335
+5288
+3715
+5335
+5335
+5335
+5334
+5335
+Challenging Stereotypes
+Treated
+-0.020
+-0.064***
+0.027
+0.013
+0.030
+0.072*
+-0.019
+0.041
+(0.019)
+(0.017)
+(0.039)
+(0.028)
+(0.028)
+(0.037)
+(0.066)
+(0.041)
+N
+5523
+5481
+3845
+5522
+5523
+5523
+5522
+5523
+Add News
+Treated
+-0.044**
+-0.068***
+-0.049
+-0.016
+0.036
+0.024
+-0.089
+0.068
+(0.017)
+(0.018)
+(0.039)
+(0.028)
+(0.027)
+(0.041)
+(0.066)
+(0.042)
+N
+5482
+5431
+3779
+5482
+5482
+5482
+5480
+5482
+Diverse Approval
+Treated
+-0.011
+-0.010
+0.058
+-0.013
+0.021
+-0.004
+-0.019
+0.078*
+(0.018)
+(0.018)
+(0.042)
+(0.028)
+(0.025)
+(0.040)
+(0.067)
+(0.043)
+N
+5353
+5310
+3694
+5352
+5353
+5353
+5353
+5353
+Bridging Pooled
+Treated
+-0.029*
+-0.021
+0.013
+-0.001
+0.004
+-0.003
+0.007
+0.062*
+(0.015)
+(0.015)
+(0.034)
+(0.023)
+(0.021)
+(0.033)
+(0.055)
+(0.034)
+N
+7115
+7056
+4981
+7114
+7115
+7115
+7114
+7115
+Table S2: Results on all preregistered survey outcomes, aggregated across all treatment arms. All survey measures normalized using the control group mean and SD (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+lhs: Polarization
+lhs: Neely
+lhs: Empathy
+lhs: Wellbeing
+lhs: Violence
+lhs: Perceptions
+lhs: Knowledge
+lhs: Trust
+Treated
+−0.027-0.027**
+−0.038-0.038***
+0.0120.012
+−0.003-0.003
+0.0200.020
+0.0180.018
+−0.024-0.024
+0.0620.062**
+(0.0120.012)
+(0.0120.012)
+(0.0280.028)
+(0.0190.019)
+(0.0180.018)
+(0.0270.027)
+(0.0460.046)
+(0.0290.029)
+N
+1273012730
+1262812628
+89288928
+1272712727
+1273012730
+1273012730
+1272612726
+1273012730
+Table S3: Heterogeneous effects on all preregistered survey outcomes, aggregated across all treatment arms (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+lhs: Polarization
+lhs: Neely
+lhs: Empathy
+lhs: Wellbeing
+lhs: Violence
+lhs: Perceptions
+lhs: Knowledge
+lhs: Trust
+Democrat
+Treated
+-0.032**
+-0.015
+0.048
+0.012
+0.024
+0.062*
+-0.147***
+0.075**
+(0.015)
+(0.015)
+(0.034)
+(0.023)
+(0.022)
+(0.033)
+(0.057)
+(0.036)
+Treated:DemocratTRUE
+0.006
+-0.035**
+-0.056*
+-0.027
+-0.004
+-0.073**
+0.194***
+-0.020
+(0.013)
+(0.014)
+(0.031)
+(0.021)
+(0.020)
+(0.030)
+(0.050)
+(0.032)
+F:βTreated+β×=0F:\beta_{\rm{Treated}}+\beta_{\rm{\times}}=0
+3.54*
+13.95***
+0.08
+0.51
+1.02
+0.15
+0.90
+3.24*
+N
+12696
+12597
+8899
+12693
+12696
+12696
+12692
+12696
+White
+Treated
+-0.026
+-0.049***
+0.049
+0.018
+0.006
+-0.032
+-0.108*
+0.107***
+(0.016)
+(0.015)
+(0.035)
+(0.025)
+(0.026)
+(0.035)
+(0.058)
+(0.036)
+Treated:WhiteTRUE
+0.000
+0.017
+-0.056*
+-0.030
+0.021
+0.072**
+0.127**
+-0.067**
+(0.015)
+(0.014)
+(0.032)
+(0.022)
+(0.023)
+(0.032)
+(0.051)
+(0.032)
+F:βTreated+β×=0F:\beta_{\rm{Treated}}+\beta_{\rm{\times}}=0
+4.00**
+5.87**
+0.06
+0.41
+2.14
+1.97
+0.14
+1.78
+N
+12708
+12607
+8915
+12705
+12708
+12708
+12704
+12708
+Male
+Treated
+-0.032**
+-0.040***
+0.009
+-0.018
+0.016
+0.001
+-0.074
+0.078**
+(0.014)
+(0.014)
+(0.030)
+(0.021)
+(0.019)
+(0.030)
+(0.051)
+(0.031)
+Treated:MaleTRUE
+0.012
+0.004
+0.008
+0.031
+0.008
+0.037
+0.107**
+-0.036
+(0.013)
+(0.013)
+(0.030)
+(0.020)
+(0.020)
+(0.029)
+(0.048)
+(0.030)
+F:βTreated+β×=0F:\beta_{\rm{Treated}}+\beta_{\rm{\times}}=0
+1.98
+6.38**
+0.24
+0.39
+1.23
+1.50
+0.40
+1.59
+N
+12728
+12626
+8926
+12725
+12728
+12728
+12724
+12728
+Table S4: Effects on the individual components of our polarization index, pooled across arms Thermometer is the difference between inparty and outparty affect in 0-100 scale units (degrees), Comfortable Friends is in 1-7 Likert scale units, all other columns are standardized effects. Outparty Affect combines outparty feeling thermometer and comfort with outparty friends, Inparty Affect combines combines inparty feeling thermometer and comfort with inparty friends (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01).
+Thermometer
+Comfortable Friends
+Outparty Affect
+Inparty Affect
+Treated
+−1.480-1.480*
+−0.065-0.065
+0.0250.025
+−0.028-0.028
+(0.7860.786)
+(0.0420.042)
+(0.0170.017)
+(0.0200.020)
+Mean
+40.4440.44
+1.491.49
+−0.091-0.091
+−0.017-0.017
+SD
+35.0735.07
+1.891.89
+0.8370.837
+0.8430.843
+N
+1273012730
+1273012730
+1273012730
+1273012730
+Table S5: Main treatment effects on active time and total engagements by platform and combined (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+Facebook
+X/Twitter
+Reddit
+CombinedFXR
+Active Time
+Treated
+-0.368***
+0.319***
+-0.195***
+-0.186*
+(0.131)
+(0.078)
+(0.072)
+(0.108)
+N
+1636498
+1636498
+1636498
+1636498
+Total Engagement
+Treated
+-0.242**
+0.413***
+-0.040
+0.131
+(0.101)
+(0.092)
+(0.042)
+(0.120)
+N
+1636498
+1636498
+1636498
+1636498
+Table S6: Active Time treatment effects by platform and individual ranker arm (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+Facebook
+X/Twitter
+Reddit
+CombinedFXR
+Uprank Bridging, Downrank Toxic
+Treated
+-0.366***
+0.477***
+-0.221***
+-0.059
+(0.119)
+(0.086)
+(0.066)
+(0.145)
+Mean
+5.58
+2.96
+1.81
+8.55
+SD
+20.26
+19.74
+11.02
+28.93
+N
+696965
+696965
+696965
+696965
+Uprank Bridging
+Treated
+-0.302*
+0.151*
+-0.191*
+-0.258*
+(0.173)
+(0.089)
+(0.115)
+(0.150)
+Mean
+5.47
+2.98
+1.79
+8.49
+SD
+19.36
+19.89
+10.99
+28.51
+N
+682210
+682210
+682210
+682210
+Challenging Stereotypes
+Treated
+-0.458***
+0.355***
+-0.144*
+0.064
+(0.086)
+(0.084)
+(0.082)
+(0.120)
+Mean
+5.55
+2.89
+1.79
+8.43
+SD
+19.57
+19.39
+12.72
+28.92
+N
+701306
+701306
+701306
+701306
+Add News
+Treated
+-0.380***
+0.187*
+-0.036
+-0.032
+(0.095)
+(0.095)
+(0.060)
+(0.169)
+Mean
+5.47
+2.95
+1.73
+8.42
+SD
+19.55
+19.73
+10.62
+28.44
+N
+702968
+702968
+702968
+702968
+Diverse Approval
+Treated
+0.064
+-0.505***
+0.011
+-0.303**
+(0.085)
+(0.077)
+(0.040)
+(0.144)
+Mean
+5.47
+3.02
+1.71
+8.45
+SD
+19.41
+19.98
+10.41
+28.42
+N
+693773
+693773
+693773
+693773
+Bridging Pooled
+Treated
+-0.369***
+0.319***
+-0.195***
+-0.186*
+(0.120)
+(0.075)
+(0.068)
+(0.105)
+Mean
+5.64
+2.98
+1.83
+8.66
+SD
+20.26
+19.66
+11.29
+29.03
+N
+918994
+918994
+918994
+918994
+Table S7: Total Engagement treatment effects by platform and individual ranker arm (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+Facebook
+X/Twitter
+Reddit
+CombinedFXR
+Uprank Bridging, Downrank Toxic
+Treated
+-0.348***
+0.479***
+0.062**
+0.193
+(0.111)
+(0.097)
+(0.027)
+(0.143)
+Mean
+3.72
+1.99
+0.273
+5.99
+SD
+20.48
+18.16
+4.98
+28.26
+N
+696965
+696965
+696965
+696965
+Uprank Bridging
+Treated
+-0.098
+0.292***
+-0.148**
+0.046
+(0.123)
+(0.103)
+(0.060)
+(0.158)
+Mean
+3.62
+2.04
+0.30
+5.96
+SD
+19.56
+18.62
+5.52
+28.07
+N
+682210
+682210
+682210
+682210
+Challenging Stereotypes
+Treated
+-0.278**
+0.756***
+0.157***
+0.635***
+(0.117)
+(0.109)
+(0.024)
+(0.168)
+Mean
+3.66
+1.95
+0.266
+5.87
+SD
+19.79
+17.73
+4.85
+27.46
+N
+701306
+701306
+701306
+701306
+Add News
+Treated
+-0.066
+-0.033
+0.017
+-0.082
+(0.109)
+(0.108)
+(0.026)
+(0.150)
+Mean
+3.58
+2.11
+0.304
+5.99
+SD
+19.42
+20.23
+5.41
+29.08
+N
+702968
+702968
+702968
+702968
+Diverse Approval
+Treated
+-0.162
+-0.495***
+0.105***
+-0.552***
+(0.115)
+(0.102)
+(0.020)
+(0.171)
+Mean
+3.62
+2.06
+0.263
+5.95
+SD
+19.90
+19.51
+4.84
+28.74
+N
+693773
+693773
+693773
+693773
+Bridging Pooled
+Treated
+-0.242**
+0.413***
+-0.040
+0.131
+(0.096)
+(0.087)
+(0.040)
+(0.122)
+Mean
+3.83
+2.02
+0.287
+6.13
+SD
+20.69
+18.35
+5.35
+28.65
+N
+918994
+918994
+918994
+918994
+Table S8: Heterogeneous effects on active time, aggregated across all treatment arms (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+Facebook
+X/Twitter
+Reddit
+CombinedFXR
+Democrat
+Treated
+-0.731***
+0.359***
+-0.383***
+-0.692***
+(0.127)
+(0.125)
+(0.087)
+(0.212)
+Treated:Democrat
+0.498*
+-0.089
+0.304**
+0.722*
+(0.259)
+(0.153)
+(0.142)
+(0.370)
+N
+1577896
+1577896
+1577896
+1577896
+White
+Treated
+-0.177
+0.098
+-0.299***
+0.026
+(0.163)
+(0.157)
+(0.079)
+(0.217)
+Treated:White
+-0.318*
+0.321*
+0.191
+-0.396
+(0.181)
+(0.181)
+(0.128)
+(0.355)
+N
+1581238
+1581238
+1581238
+1581238
+Male
+Treated
+-0.294
+0.255***
+-0.380***
+-0.729***
+(0.186)
+(0.079)
+(0.100)
+(0.167)
+Treated:Male
+-0.256
+0.088
+0.392***
+1.049***
+(0.222)
+(0.174)
+(0.121)
+(0.325)
+N
+1583807
+1583807
+1583807
+1583807
+Table S9: Heterogeneous effects on total engagements aggregated across all treatment arms (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+Facebook
+X/Twitter
+Reddit
+CombinedFXR
+Democrat
+Treated
+-0.438*
+0.252*
+-0.180**
+-0.366
+(0.225)
+(0.145)
+(0.072)
+(0.248)
+Treated:Democrat
+0.264
+0.231
+0.221***
+0.715*
+(0.407)
+(0.166)
+(0.065)
+(0.374)
+N
+1577896
+1577896
+1577896
+1577896
+White
+Treated
+-0.259**
+0.167
+-0.022
+-0.113
+(0.125)
+(0.149)
+(0.019)
+(0.158)
+Treated:White
+-0.021
+0.396**
+-0.016
+0.359
+(0.199)
+(0.193)
+(0.059)
+(0.277)
+N
+1581238
+1581238
+1581238
+1581238
+Male
+Treated
+0.266
+0.121
+-0.194***
+0.193
+(0.171)
+(0.093)
+(0.069)
+(0.187)
+Treated:Male
+-1.185***
+0.542***
+0.345***
+-0.298
+(0.251)
+(0.168)
+(0.059)
+(0.297)
+N
+1583807
+1583807
+1583807
+1583807
+Table S10: Outcomes for in-feed survey questions. (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+OutpartyFeeling
+CampaignInterest
+FeedSentiment
+PerceivedViolenceLikelihood
+PerspectiveDifficulty
+Treatment
+-0.469
+0.128
+-0.016
+0.543
+-0.067
+(0.463)
+(0.414)
+(0.282)
+(0.496)
+(0.342)
+N
+2721
+1614
+2297
+1821
+2379
+Table S11: Number of items re-ranked on each page, by platform and content type.
+Platform
+Content
+Slate size
+Reddit
+Posts
+50
+Reddit
+Comments
+all available
+Twitter
+Posts
+50
+Twitter
+Replies
+50 (or all available)
+Facebook
+Posts
+10 (first pass), then 35 (second pass)
+Facebook
+Comments
+50 (or all available)
+Table S12: Experimental attributes from Perspective API. AUC measures performance on the tests data sets in [23].
+Attribute
+Definition
+AUC-ROC
+Affinity
+References shared interests, motivations or outlooks between the comment author and another individual, group or entity.
+0.86
+Compassion
+Identifies with or shows concern, empathy, or support for the feelings/emotions of others.
+0.91
+Curiosity
+Attempts to clarify or ask follow-up questions to better understand another person or idea.
+0.87
+Nuance
+Incorporates multiple points of view in an attempt to provide a full picture or contribute useful detail and/or context.
+0.88
+Personal story
+Includes a personal experience or story as a source of support for the statements made in the comment.
+0.95
+Reasoning
+Makes specific or well-reasoned points to provide a fuller understanding of the topic without disrespect or provocation.
+0.87
+Respect
+Shows deference or appreciation to others, or acknowledges the validity of another person.
+0.96
+Alienation
+Portrays someone as inferior, implies a lack of belonging, or frames the statement in an us vs. them context.
+0.93
+Fearmongering
+Deliberately arouses fear or alarm about a particular issue.
+0.93
+Stereotyping
+Asserts something to be true for either of all members of a certain group or of an indefinite part of that group.
+0.88
+Moral outrage
+Anger, disgust, or frustration directed toward other people or entities who seem to violate the author’s ethical values or standards.
+0.93
+Scapegoating
+Blames a person or entity for the wrongdoings, mistakes, or faults of others, especially for reasons of expediency.
+0.91
+Identity attack
+Negative or hateful comments targeting someone because of their identity.
+0.97
+Insult
+Insulting, inflammatory, or negative comment towards a person or a group of people.
+0.97
+Table S13: Classifier weights for Uprank Bridging ranker
+Attribute
+Weight
+Reasoning
+1/6
+Personal story
+1/6
+Affinity
+1/6
+Compassion
+1/6
+Respect
+1/6
+Curiosity
+1/6
+Table S14: Classifier weights for Uprank Bridging, Downrank Toxic
+Attribute
+Weight
+Reasoning
+1/6
+Personal story
+1/6
+Affinity
+1/6
+Compassion
+1/6
+Respect
+1/6
+Curiosity
+1/6
+Fearmongering
+-1/6
+Stereotyping
+-1/6
+Scapegoating
+-1/18
+Moral outrage
+-1/18
+Alienation
+-1/18
+Toxicity
+-1/8
+Identity attack
+-1/8
+Insult
+-1/8
+Threat
+-1/8
+Table S15: Participant recruitment companies, recruitment funnel stages, and conversion rates. “Screened in” counts people eligible to participate (see table S16). Forthright and Symmetric implemented their own screening survey. Facebook and Twitter refer to platform ads. We were unable to record recruitment channel information for some users due to ad blockers and other technical issues.
+Source
+Started screening
+Conv%
+Screened in
+Conv%
+Installed Extension
+Conv%
+Kept installed one week
+Rep Data
+69,854
+32
+22,615
+19
+4,374
+53
+2,338
+Audience Align
+56,167
+41
+22,778
+11
+2,583
+44
+1,131
+Pure Spectrum
+54,392
+33
+18,117
+18
+3,321
+51
+1,705
+Eleven MR
+52,835
+40
+21,317
+11
+2,248
+69
+1,554
+Prodege
+6,967
+15
+1,068
+25
+266
+80
+213
+Cloud Research
+4,516
+37
+1,678
+66
+1,102
+74
+811
+Sago
+2,630
+39
+1,032
+11
+115
+49
+56
+Cint
+2,564
+27
+683
+9
+64
+45
+29
+Roots
+2,092
+19
+388
+22
+84
+69
+58
+Innovate MR
+1,634
+44
+723
+23
+167
+41
+69
+Positly
+1,328
+14
+188
+40
+76
+71
+54
+Borderless
+470
+24
+113
+28
+32
+56
+18
+Forthright
+2,064
+63
+1,295
+Symmetric
+155
+70
+109
+Facebook
+38
+82
+31
+Twitter
+25
+84
+21
+Unknown
+374
+56
+209
+Total
+255,449
+36
+90,700
+19
+17,088
+57
+9,701
+Table S16: Recruitment screening survey
+Question
+Passing answer
+What device are you currently using?
+Laptop or Desktop
+Are you currently using the Chrome browser on your computer?
+Yes
+Which of the following social media apps/websites do you use?
+At least one of Facebook, Twitter, Reddit
+What percentage of the time would you say you use social media from your desktop computer (including laptops), as opposed to your phone or mobile device?
+≥30\geq 30 percent
+We are recruiting people to participate in an academic research study that involves installing a browser extension. You will be paid a total of $10\$10 for your participation in this study, plus a chance to win $500\$500, if you keep the extension installed for five months.
+Yes
+This is a study run by researchers at UC Berkeley who are studying the effects of social media and trying to make a better user experience. We would like to collect anonymized data about your online experiences for research purposes only, and make small changes to which content you see on social media. You will be paid $5\$5 for each of two surveys over several months.
+Are you interested in participating?
+Table S17: Participant sample descriptive statistics
+Variable
+Mean
+Median
+SD
+Min
+Max
+N
+Bachelors
+0.435
+0.000
+0.496
+0
+1.000
+9386
+BaselineTimeFacebook
+11.151
+2.594
+23.258
+0
+435.676
+6002
+BaselineTimeReddit
+4.819
+0.762
+15.999
+0
+396.711
+4882
+BaselineTimeX/Twitter
+5.839
+0.214
+22.639
+0
+365.978
+7014
+Democrat
+0.616
+1.000
+0.486
+0
+1.000
+9346
+ExtensionData
+1.000
+1.000
+0.000
+1
+1.000
+9709
+IncomeK
+68.588
+62.500
+47.406
+10
+175.000
+9323
+Male
+0.471
+0.000
+0.499
+0
+1.000
+9383
+SocialMediaMoreThan90Min
+0.517
+1.000
+0.500
+0
+1.000
+9386
+White
+0.649
+1.000
+0.477
+0
+1.000
+9368
+Young
+0.326
+0.000
+0.469
+0
+1.000
+9386
+Table S18: Balance Table
+Control (N=2729)
+Prosocial Ranking (N=6980)
+Mean
+Std. Dev.
+Mean
+Std. Dev.
+Diff. in Means
+p
+Male
+0.5
+0.5
+0.5
+0.5
+-0.0
+0.648
+White
+0.6
+0.5
+0.7
+0.5
+0.0
+0.559
+Young
+0.3
+0.5
+0.3
+0.5
+-0.0
+0.622
+Bachelors
+0.4
+0.5
+0.4
+0.5
+0.0
+0.882
+Democrat
+0.6
+0.5
+0.6
+0.5
+-0.0
+0.187
+IncomeK
+69.0
+47.5
+68.4
+47.4
+-0.6
+0.576
+SocialMediaMoreThan90Min
+0.5
+0.5
+0.5
+0.5
+-0.0
+0.088
+BaselineTimeFacebook
+10.4
+21.2
+11.4
+24.0
+1.1
+0.099
+BaselineTimeTwitter
+6.5
+24.7
+5.6
+21.8
+-0.9
+0.141
+BaselineTimeReddit
+5.0
+13.2
+4.7
+17.0
+-0.3
+0.542
+Table S19: Regression models testing for differential survey attrition by treatment group (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01)
+(1)
+(2)
+(3)
+(Intercept)
+0.534***
+-0.030
+0.534***
+(0.010)
+(0.064)
+(0.010)
+Treatment
+0.003
+0.021
+(0.012)
+(0.075)
+SurvivalScore
+1.050***
+(0.118)
+Treatment:SurvivalScore
+-0.031
+(0.139)
+GroupAN:Treatment
+0.007
+(0.017)
+GroupCS:Treatment
+0.022
+(0.017)
+GroupDA:Treatment
+-0.015
+(0.017)
+GroupUB:Treatment
+0.019
+(0.017)
+GroupUBDT:Treatment
+-0.016
+(0.017)
+N
+9269
+9269
+9269
+Table S20: Robustness to sample inclusion criteria. The main specification includes participants who remained in the study for at least one week. This table replicates the main results using alternative minimum participation cutoffs of 2 days and 2 weeks. All survey measures normalized using the control group mean and SD. Active time outcomes are in relative terms (minutes per day per baseline hour) (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01).
+Polarization
+Facebook
+Twitter
+Reddit
+CombinedFTR
+2-day cutoff
+Treated
+-0.027**
+-0.375***
+0.292***
+-0.185***
+-0.213**
+(0.012)
+(0.129)
+(0.082)
+(0.068)
+(0.107)
+N
+12815
+1698840
+1698840
+1698840
+1698840
+2-week cutoff
+Treated
+-0.025**
+-0.345***
+0.361***
+-0.182**
+-0.106
+(0.012)
+(0.117)
+(0.079)
+(0.076)
+(0.111)
+N
+12646
+1581860
+1581860
+1581860
+1581860
+Table S21: Robustness to Twitter usage in the sample. “No Twitter Sample” excludes all participants with any baseline Twitter usage. “Low Twitter Sample” excludes participants with baseline Twitter usage exceeding 5 minutes per week. All survey measures normalized using the control group mean and SD. Active time outcomes are in relative terms (minutes per day per baseline hour) (* p<0.1p<0.1, ** p<0.05p<0.05, *** p<0.01p<0.01).
+Polarization
+Facebook
+Twitter
+Reddit
+CombinedFTR
+No Twitter Sample
+Treated
+-0.015
+-0.022
+0.005
+-0.106**
+-0.202*
+(0.016)
+(0.085)
+(0.033)
+(0.051)
+(0.112)
+N
+6908
+1079407
+1079407
+1079407
+1079407
+Low Twitter Sample
+Treated
+-0.027**
+-0.184*
+-0.040
+-0.177***
+-0.425***
+(0.014)
+(0.108)
+(0.029)
+(0.039)
+(0.106)
+N
+10184
+1471811
+1471811
+1471811
+1471811
+Experimental support, please
+view the build logs
+for errors. Generated by
+L
+A
+T
+E
+xml
+.
+Instructions for reporting errors
+We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+methods listed below:
+Click the "Report Issue" (
+) button, located in the page header.
+Tip: You can select the relevant text first, to include it in your report.
+Our team has already identified the following issues. We appreciate your time reviewing and reporting rendering errors we
+may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+all.
+Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion, and welcome developer contributions.
+We gratefully acknowledge support from
+our major funders,
+member institutions, ,
+and all contributors.
+About
+·
+Help
+·
+Contact
+·
+Subscribe
+·
+Copyright
+·
+Privacy
+·
+Accessibility
+·
+Operational Status (opens in new tab)
+Major funding support from

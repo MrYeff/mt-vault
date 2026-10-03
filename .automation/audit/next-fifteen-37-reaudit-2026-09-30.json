@@ -1,0 +1,24 @@
+{
+  "audit_id": "next-fifteen-37-reaudit-2026-09-30",
+  "auditor": "independent re-audit",
+  "audited_at": "2026-09-30",
+  "note": "vault/Literature/Papers/Entries/Introduction to stochastic actor-based models for network dynamics.md",
+  "status": "PASS",
+  "source_access": "Readable full primary article copy checked at https://cns.iu.edu/docs/presentations/2009-zoss-links/2009-zoss-links-stochastic-modeling/references/SnijdersvdBuntSteglich2009.pdf (17-page article-in-press copy; also linked Oxford author PDF noted in the note, but web fetch of that URL failed during this audit). Cross-checked DOI/version-of-record metadata at https://doi.org/10.1016/j.socnet.2009.02.004. Sections and article text were readable in the indexed PDF.",
+  "initial_findings": [
+    {
+      "finding": "Abstract included ‘Crown Copyright © 2009.’ outside the published abstract.",
+      "result": "Resolved. Current abstract ends after ‘sensible rules for model selection.’ and excludes the copyright/footer. This matches the publisher abstract and primary article abstract (PDF page 1; copyright notice is separately displayed below the abstract in the PDF copy)."
+    },
+    {
+      "finding": "Opportunity-rate actor dependence on network position and actor covariates was omitted.",
+      "result": "Resolved. Note now says actor-specific opportunity rates may depend on network position (e.g. centrality) and actor covariates (e.g. age/sex), citing Section 2.1 assumptions 5–6 and Section 4.1. Primary PDF Section 2.1 states change rates may depend on actor network positions and covariates (PDF p. 3); Section 4.1 calls this the rate function and gives degree/sex examples (PDF p. 10)."
+    },
+    {
+      "finding": "‘Brief event ties such as calls require aggregation’ was an unsupported categorical application claim.",
+      "result": "Resolved; no new unsupported aggregation claim. Note now says event data such as calls are not automatically durable ties and that event intensity may be aggregated over an interval and treated as a state indicator when appropriate. This accurately qualifies the paper’s explicit discussion: calls/emails are event data rather than enduring-state ties, but event intensity can often be aggregated over a period and viewed as state indicators (Section 2, PDF pp. 2–3)."
+    }
+  ],
+  "additional_check": "Other current model statements inspected are supported by the article: directed binary ties and optional ordinal behavior; continuous-time Markov process observed at discrete waves; actor opportunity followed by one outgoing tie change or no change; objective-function choice probabilities; separate, non-coordinated network and behavior changes. No substantive new unsupported claim was found. The note remains marked not audited. Reference array was not rechecked because the requested scope was the corrected #37 findings; no note was edited.",
+  "citation_note": "The note’s footnote names the relevant sections. Its PDF page numbers are keyed to the linked Oxford author manuscript; the independently readable alternative copy checked here is the 17-page article-in-press version, where the corresponding sections fall on PDF pp. 3, 10, and 2–3 respectively. Section-level claims match."
+}

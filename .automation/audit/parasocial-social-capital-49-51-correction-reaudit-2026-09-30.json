@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "scope": "Independent re-audit of corrected lexicographic entries 49–51",
+  "method": "Read each current note and compare abstract, research questions, bibliographic metadata, author links, tags, footnotes, warnings, and ordered reference links against primary publisher or author-hosted full text.",
+  "entries": [
+    {
+      "entry": 49,
+      "note_path": "vault/Literature/Papers/Entries/On and Off the -Net- Scales for Social Capital in an Online Era.md",
+      "status": "PASS",
+      "primary_source": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1083-6101.2006.00029.x",
+      "full_text_also_checked": "https://www.globalbelonging.org/_files/ugd/714abd_d5c2b421b42d4512b442fc9c07f15a95.pdf",
+      "source_locations": [
+        "Wiley header: first published 09 August 2006; title and author, lines 15–39.",
+        "Publisher abstract, lines 65–68; note Abstract matches the full source text.",
+        "Scale framework: Item development, four online/offline bonding/bridging subscales and 10 items each, lines 128–130.",
+        "Validation methods and survey sample: Scale validation, lines 190–209 and following factor-analysis sections."
+      ],
+      "checks": {
+        "abstract": "PASS; exact substantive wording matches the Wiley abstract. The publisher’s typographic apostrophe is represented as a straight apostrophe in the note title only.",
+        "metadata": "PASS; title, author, DOI, and corrected publication date 2006-08-09 match publisher metadata.",
+        "research_questions": "PASS; both questions reflect the scale-development/validation aim and are explicitly framed as questions, not as unreported findings.",
+        "references": "PASS; 74 links preserved in snapshot order.",
+        "tags_and_footnotes": "PASS; tags are a YAML list; r1 is defined and used, with no unused footnote.",
+        "audit_log": "PASS; records unused-footnote removal and date correction. Warning remains audit failed pending this re-audit."
+      },
+      "findings": []
+    },
+    {
+      "entry": 50,
+      "note_path": "vault/Literature/Papers/Entries/Parasocial Interaction and Parasocial Relationship- Conceptual Clarification and a Critical Assessment of Measures.md",
+      "status": "PASS",
+      "primary_source": "https://onlinelibrary.wiley.com/doi/abs/10.1111/hcre.12063",
+      "full_text_also_checked": "https://research.vu.nl/ws/portalfiles/portal/1121630/2015%2BDibble%2Bet%2Bal%2B%2BEPSI%2Bvs%2BPSI-Scale%2B%2BHCR%2Barticle%2B%282%29.pdf",
+      "source_locations": [
+        "Wiley header: authors, issue/page, and first publication date 17 March 2015, lines 15–75.",
+        "Wiley abstract, lines 101–103; note Abstract matches.",
+        "Author-hosted publisher-version PDF: conceptual distinction between in-viewing PSI and enduring PSR, PDF pp. 1 and 5 (PDF lines 38–58, 195–205).",
+        "Author-hosted PDF: experimental hypothesis about bodily address and EPSI versus PSI-Scale, PDF pp. 8–9 (lines 297–319 onward); abstract reports N=383 and comparison."
+      ],
+      "checks": {
+        "abstract": "PASS; exact source abstract verified against both Wiley and the author-hosted version of record.",
+        "metadata": "PASS; title, three authors, DOI, and publication date match publisher metadata.",
+        "research_questions": "PASS; the first reflects the paper’s conceptual/measurement distinction and concern that PSI-Scale may capture liking; the second reflects the direct-address manipulation and predicted scale response. These are questions, not claims that the paper separately measures a PSR scale.",
+        "references": "PASS; 72 links preserved in snapshot order.",
+        "tags_and_footnotes": "PASS; tags are a YAML list; r1 is defined and used, with no unused footnote.",
+        "audit_log": "PASS; records unused-footnote removal. Warning remains audit failed pending this re-audit."
+      },
+      "findings": []
+    },
+    {
+      "entry": 51,
+      "note_path": "vault/Literature/Papers/Entries/Persistence of social signatures in human communication.md",
+      "status": "PASS",
+      "primary_source": "https://www.pnas.org/doi/10.1073/pnas.1308540110",
+      "full_text_also_checked": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3903242/",
+      "source_locations": [
+        "PNAS header/citation metadata identifies the 2014-01-06 issue and DOI.",
+        "PNAS abstract, lines 142–144; note Abstract matches the source, including the 18-month dataset and persistence finding.",
+        "Methods, lines 243–254: 30 recruited participants, 24 included in analysis; three surveys and call-record intervals across 18 months; social signatures calculated from ranked alter call counts.",
+        "Results, lines 193–205 and 213–223: three six-month intervals, network turnover, within-ego signature persistence and Jensen–Shannon divergence comparison."
+      ],
+      "checks": {
+        "abstract": "PASS; exact source abstract verified.",
+        "metadata": "PASS; title, six linked authors, DOI, source, and publication date match PNAS/PMC metadata.",
+        "research_questions": "PASS; both questions are supported by the reported longitudinal analysis and results; no model or causal mechanism is claimed.",
+        "references": "PASS; 52 links preserved in snapshot order.",
+        "tags_and_footnotes": "PASS; tags are a YAML list; r1 is defined and used, with no unused footnote.",
+        "audit_log": "PASS; records unused-footnote removal. Warning remains audit failed pending this re-audit."
+      },
+      "findings": []
+    }
+  ],
+  "summary": {
+    "PASS": 3,
+    "FAIL": 0,
+    "LIMITED": 0
+  }
+}

@@ -1,0 +1,2726 @@
+{
+  "schema_version": 1,
+  "files": {
+    "99c7dbcf1d8f82b08657298c08743fec43509733ec050e419c3bab33c6352c2b": {
+      "path": ".automation/sources/files/99c7dbcf1d8f82b08657298c08743fec43509733ec050e419c3bab33c6352c2b.txt",
+      "sha256": "99c7dbcf1d8f82b08657298c08743fec43509733ec050e419c3bab33c6352c2b",
+      "bytes": 6520,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/54.txt"
+      ],
+      "records": []
+    },
+    "45213cacc97ff9109c59609ebbc8d8ee9ee9d3eaf10c94c0f64fae1f69f50e3f": {
+      "path": ".automation/sources/files/45213cacc97ff9109c59609ebbc8d8ee9ee9d3eaf10c94c0f64fae1f69f50e3f.txt",
+      "sha256": "45213cacc97ff9109c59609ebbc8d8ee9ee9d3eaf10c94c0f64fae1f69f50e3f",
+      "bytes": 20060,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/55.txt"
+      ],
+      "records": []
+    },
+    "24749d3748965f4746ec5c295437bfbd62cfb380d685b38616dd87e53cb19f72": {
+      "path": ".automation/sources/files/24749d3748965f4746ec5c295437bfbd62cfb380d685b38616dd87e53cb19f72.txt",
+      "sha256": "24749d3748965f4746ec5c295437bfbd62cfb380d685b38616dd87e53cb19f72",
+      "bytes": 7997,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/56.txt"
+      ],
+      "records": []
+    },
+    "23b0d177701cd75b56416b133b8e76869f46274c021b08462ec70a8e783648cc": {
+      "path": ".automation/sources/files/23b0d177701cd75b56416b133b8e76869f46274c021b08462ec70a8e783648cc.txt",
+      "sha256": "23b0d177701cd75b56416b133b8e76869f46274c021b08462ec70a8e783648cc",
+      "bytes": 6434,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/57.txt"
+      ],
+      "records": []
+    },
+    "70beed90efbdbb00e87b546a06bea80502b02f10201a25349384e16f75f85a19": {
+      "path": ".automation/sources/files/70beed90efbdbb00e87b546a06bea80502b02f10201a25349384e16f75f85a19.txt",
+      "sha256": "70beed90efbdbb00e87b546a06bea80502b02f10201a25349384e16f75f85a19",
+      "bytes": 8094,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/58.txt"
+      ],
+      "records": []
+    },
+    "306c67a7ffe5d64c7880f1ec2d0c9f95dd3a375c998a2548ac74fda31433591d": {
+      "path": ".automation/sources/files/306c67a7ffe5d64c7880f1ec2d0c9f95dd3a375c998a2548ac74fda31433591d.txt",
+      "sha256": "306c67a7ffe5d64c7880f1ec2d0c9f95dd3a375c998a2548ac74fda31433591d",
+      "bytes": 10948,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/59.txt"
+      ],
+      "records": []
+    },
+    "a38e1c473a0a151c4e810fc15d80ea5efdd3cb90ab9f58026f44f9008a2af7fd": {
+      "path": ".automation/sources/files/a38e1c473a0a151c4e810fc15d80ea5efdd3cb90ab9f58026f44f9008a2af7fd.txt",
+      "sha256": "a38e1c473a0a151c4e810fc15d80ea5efdd3cb90ab9f58026f44f9008a2af7fd",
+      "bytes": 4539,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/60.txt"
+      ],
+      "records": []
+    },
+    "65331704db9f28ebb0c747695c8846acc599da8fe81894ed02402f335761af18": {
+      "path": ".automation/sources/files/65331704db9f28ebb0c747695c8846acc599da8fe81894ed02402f335761af18.txt",
+      "sha256": "65331704db9f28ebb0c747695c8846acc599da8fe81894ed02402f335761af18",
+      "bytes": 8223,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/61.txt"
+      ],
+      "records": []
+    },
+    "f7b02b26690274b3b5c369fcb2d99ad170ee929ced96e16ad400c0d5ccfb2fd7": {
+      "path": ".automation/sources/files/f7b02b26690274b3b5c369fcb2d99ad170ee929ced96e16ad400c0d5ccfb2fd7.txt",
+      "sha256": "f7b02b26690274b3b5c369fcb2d99ad170ee929ced96e16ad400c0d5ccfb2fd7",
+      "bytes": 8326,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/62.txt"
+      ],
+      "records": []
+    },
+    "d077d40f7f0bb49ecf3394c777205ee732d8a125981b4fb4670cec7b24e80912": {
+      "path": ".automation/sources/files/d077d40f7f0bb49ecf3394c777205ee732d8a125981b4fb4670cec7b24e80912.txt",
+      "sha256": "d077d40f7f0bb49ecf3394c777205ee732d8a125981b4fb4670cec7b24e80912",
+      "bytes": 10497,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/63.txt"
+      ],
+      "records": []
+    },
+    "81b6ce1506a5aad4e0aba8515e458b4b1433975748241baca5144aff1dabcb26": {
+      "path": ".automation/sources/files/81b6ce1506a5aad4e0aba8515e458b4b1433975748241baca5144aff1dabcb26.txt",
+      "sha256": "81b6ce1506a5aad4e0aba8515e458b4b1433975748241baca5144aff1dabcb26",
+      "bytes": 7395,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/64.txt"
+      ],
+      "records": []
+    },
+    "dc93dcf90b634f4dbe902c2088cc3f03da0d6caa86cbdc63d0c887bbe3685e48": {
+      "path": ".automation/sources/files/dc93dcf90b634f4dbe902c2088cc3f03da0d6caa86cbdc63d0c887bbe3685e48.txt",
+      "sha256": "dc93dcf90b634f4dbe902c2088cc3f03da0d6caa86cbdc63d0c887bbe3685e48",
+      "bytes": 10767,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/65.txt"
+      ],
+      "records": []
+    },
+    "48fe8f46b2d88eaa26451befacde45fc13cb587a77f934d0506ed42872e40337": {
+      "path": ".automation/sources/files/48fe8f46b2d88eaa26451befacde45fc13cb587a77f934d0506ed42872e40337.txt",
+      "sha256": "48fe8f46b2d88eaa26451befacde45fc13cb587a77f934d0506ed42872e40337",
+      "bytes": 8525,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/66.txt"
+      ],
+      "records": []
+    },
+    "ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888": {
+      "path": ".automation/sources/files/ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888.html",
+      "sha256": "ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888",
+      "bytes": 191283,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/acting-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://www.jasss.org/24/4/6.html"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "febdb4fffdd87b3e007f22169d7f6e2852c8a8b515d5c28169366ed11c45578f": {
+      "path": ".automation/sources/files/febdb4fffdd87b3e007f22169d7f6e2852c8a8b515d5c28169366ed11c45578f.txt",
+      "sha256": "febdb4fffdd87b3e007f22169d7f6e2852c8a8b515d5c28169366ed11c45578f",
+      "bytes": 132598,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/acting-full.html.txt"
+      ],
+      "records": []
+    },
+    "61f2aaee01698acb99a8071eb6698121441f373b7c0d3427bf2a8d2395181c5f": {
+      "path": ".automation/sources/files/61f2aaee01698acb99a8071eb6698121441f373b7c0d3427bf2a8d2395181c5f.txt",
+      "sha256": "61f2aaee01698acb99a8071eb6698121441f373b7c0d3427bf2a8d2395181c5f",
+      "bytes": 134886,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/acting-full.txt"
+      ],
+      "records": []
+    },
+    "bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1": {
+      "path": ".automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html",
+      "sha256": "bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1",
+      "bytes": 200149,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/agent4rec-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://arxiv.org/html/2310.10108"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022": {
+      "path": ".automation/sources/files/9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022.txt",
+      "sha256": "9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022",
+      "bytes": 70789,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/agent4rec-full.html.txt"
+      ],
+      "records": []
+    },
+    "e9f9ded8242ed5af0a7b9505c2ca5f60cf271a19ec4625dbd9dfce1a40893348": {
+      "path": ".automation/sources/files/e9f9ded8242ed5af0a7b9505c2ca5f60cf271a19ec4625dbd9dfce1a40893348.txt",
+      "sha256": "e9f9ded8242ed5af0a7b9505c2ca5f60cf271a19ec4625dbd9dfce1a40893348",
+      "bytes": 72862,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/agent4rec-full.txt"
+      ],
+      "records": []
+    },
+    "28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872": {
+      "path": ".automation/sources/files/28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872.txt",
+      "sha256": "28eb80f184bf2c61dfcc6b64ed5e2b3dbc18ca2309e74d369921f19284dac872",
+      "bytes": 153800,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/audit-71-compact.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
+            "source_url": "https://arxiv.org/pdf/2603.19626"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md"
+          }
+        }
+      ]
+    },
+    "084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f": {
+      "path": ".automation/sources/files/084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f.txt",
+      "sha256": "084b44b8eb8b8cf13978de7eaef6634979725ce2eb6441aa8cb263d8131dd07f",
+      "bytes": 102473,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/audit-72-compact.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
+            "source_url": "https://www.cambridge.org/core/journals/behavioural-public-policy/article/contact-hypothesis-reevaluated/142C913E7FA9E121277B29E994124EC5"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md"
+          }
+        }
+      ]
+    },
+    "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31": {
+      "path": ".automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt",
+      "sha256": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31",
+      "bytes": 135128,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/audit-73-compact.txt",
+        "/tmp/strong-73.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+            "source_url": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md"
+          }
+        },
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {
+            "source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "The latent cognitive structures of social networks.md",
+            "primary_source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
+          }
+        }
+      ]
+    },
+    "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f": {
+      "path": ".automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+      "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f",
+      "bytes": 79169,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/audit-74-compact.txt",
+        "/tmp/strong-74.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+            "source_url": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md"
+          }
+        },
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+            "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
+          }
+        }
+      ]
+    },
+    "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d": {
+      "path": ".automation/sources/files/0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d.txt",
+      "sha256": "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d",
+      "bytes": 99437,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/audit-78-compact.txt",
+        "/tmp/strong-78.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+            "source_url": "https://www.jasss.org/26/3/9.html"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md"
+          }
+        },
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+            "primary_source": "https://www.jasss.org/26/3/9.html"
+          }
+        }
+      ]
+    },
+    "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32": {
+      "path": ".automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+      "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32",
+      "bytes": 113920,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/audit-80-compact.txt",
+        "/tmp/strong-80.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+            "source_url": "https://arxiv.org/pdf/2408.00818"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md"
+          }
+        },
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "Y Social- an LLM-powered Social Media Digital Twin.md",
+            "primary_source": "https://arxiv.org/html/2408.00818"
+          }
+        }
+      ]
+    },
+    "eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c": {
+      "path": ".automation/sources/files/eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c.html",
+      "sha256": "eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c",
+      "bytes": 316494,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/cohesion-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "01c97e17225a6a92e910d308cb4d7753324063616e3353ad2186ff89e2deff4b": {
+      "path": ".automation/sources/files/01c97e17225a6a92e910d308cb4d7753324063616e3353ad2186ff89e2deff4b.txt",
+      "sha256": "01c97e17225a6a92e910d308cb4d7753324063616e3353ad2186ff89e2deff4b",
+      "bytes": 37901,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/cohesion-full.html.txt"
+      ],
+      "records": []
+    },
+    "7b9eb6d7d02d4cef2b39ae7999801831acc7914dcee5cd3c44d8bd537ca04bcc": {
+      "path": ".automation/sources/files/7b9eb6d7d02d4cef2b39ae7999801831acc7914dcee5cd3c44d8bd537ca04bcc.txt",
+      "sha256": "7b9eb6d7d02d4cef2b39ae7999801831acc7914dcee5cd3c44d8bd537ca04bcc",
+      "bytes": 51171,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/cohesion-full.txt"
+      ],
+      "records": []
+    },
+    "77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076": {
+      "path": ".automation/sources/files/77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076.html",
+      "sha256": "77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076",
+      "bytes": 187228,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/cohesion-table1.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11"
+          }
+        }
+      ]
+    },
+    "4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224": {
+      "path": ".automation/sources/files/4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224.html",
+      "sha256": "4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224",
+      "bytes": 186705,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/cohesion-table2.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11"
+          }
+        }
+      ]
+    },
+    "2870e993c112e539c77addb9fdb88e166b763593c2042be81f217a028213b53a": {
+      "path": ".automation/sources/files/2870e993c112e539c77addb9fdb88e166b763593c2042be81f217a028213b53a.png",
+      "sha256": "2870e993c112e539c77addb9fdb88e166b763593c2042be81f217a028213b53a",
+      "bytes": 209180,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deff-page4.png"
+      ],
+      "records": []
+    },
+    "e88e90d71563e69ff40f4449003b513cf6bde76719b12103b566df3caf527d3a": {
+      "path": ".automation/sources/files/e88e90d71563e69ff40f4449003b513cf6bde76719b12103b566df3caf527d3a.json",
+      "sha256": "e88e90d71563e69ff40f4449003b513cf6bde76719b12103b566df3caf527d3a",
+      "bytes": 3948,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/deffuant-crossref.json"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+            "url": "https://api.crossref.org/works/10.1142/S0219525900000078"
+          }
+        }
+      ]
+    },
+    "ebe21db94158b70a7ecc4de28367d98305c009ef8a045000ae6cb91ff73c9770": {
+      "path": ".automation/sources/files/ebe21db94158b70a7ecc4de28367d98305c009ef8a045000ae6cb91ff73c9770.png",
+      "sha256": "ebe21db94158b70a7ecc4de28367d98305c009ef8a045000ae6cb91ff73c9770",
+      "bytes": 221366,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant-page4.png",
+        "/tmp/deffuant2001-p4.png"
+      ],
+      "records": []
+    },
+    "e1765b0cb4993ffa6b7fa7bd892829057f8376e1450ed731fb8ed5d089f8dff8": {
+      "path": ".automation/sources/files/e1765b0cb4993ffa6b7fa7bd892829057f8376e1450ed731fb8ed5d089f8dff8.png",
+      "sha256": "e1765b0cb4993ffa6b7fa7bd892829057f8376e1450ed731fb8ed5d089f8dff8",
+      "bytes": 276216,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant-vector10.png"
+      ],
+      "records": []
+    },
+    "e18f96b3d22567dca9760e47282269a772306eb263a253649e6360c0b97a3740": {
+      "path": ".automation/sources/files/e18f96b3d22567dca9760e47282269a772306eb263a253649e6360c0b97a3740.png",
+      "sha256": "e18f96b3d22567dca9760e47282269a772306eb263a253649e6360c0b97a3740",
+      "bytes": 176280,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant-vector9.png"
+      ],
+      "records": []
+    },
+    "466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562": {
+      "path": ".automation/sources/files/466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562.txt",
+      "sha256": "466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562",
+      "bytes": 25866,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/deffuant2001-layout.txt",
+        "/tmp/deffuant2001.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+            "url": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf"
+          }
+        }
+      ]
+    },
+    "64d7a42c123b2effbb47061cb0d41979e861244e012c4d8166f78519e49ca911": {
+      "path": ".automation/sources/files/64d7a42c123b2effbb47061cb0d41979e861244e012c4d8166f78519e49ca911.png",
+      "sha256": "64d7a42c123b2effbb47061cb0d41979e861244e012c4d8166f78519e49ca911",
+      "bytes": 291199,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant2001-p10.png"
+      ],
+      "records": []
+    },
+    "fc4128e39477706608d636399f3135d4b86b53a4d4c811ec0ea83a55e4e844df": {
+      "path": ".automation/sources/files/fc4128e39477706608d636399f3135d4b86b53a4d4c811ec0ea83a55e4e844df.png",
+      "sha256": "fc4128e39477706608d636399f3135d4b86b53a4d4c811ec0ea83a55e4e844df",
+      "bytes": 281931,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant2001-p12.png"
+      ],
+      "records": []
+    },
+    "398bd5dd0f030bcbead56f4ff5a165338088b698bbc6c07e788572faf63b9ac7": {
+      "path": ".automation/sources/files/398bd5dd0f030bcbead56f4ff5a165338088b698bbc6c07e788572faf63b9ac7.png",
+      "sha256": "398bd5dd0f030bcbead56f4ff5a165338088b698bbc6c07e788572faf63b9ac7",
+      "bytes": 276504,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant2001-p3.png"
+      ],
+      "records": []
+    },
+    "29a2c6ce4a2e438f8425f3ee4c20dc16f5a49b94bd703cac6e8728b8db14061c": {
+      "path": ".automation/sources/files/29a2c6ce4a2e438f8425f3ee4c20dc16f5a49b94bd703cac6e8728b8db14061c.png",
+      "sha256": "29a2c6ce4a2e438f8425f3ee4c20dc16f5a49b94bd703cac6e8728b8db14061c",
+      "bytes": 192072,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/deffuant2001-p9.png"
+      ],
+      "records": []
+    },
+    "a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1": {
+      "path": ".automation/sources/files/a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1.pdf",
+      "sha256": "a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1",
+      "bytes": 1260723,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/deffuant2001.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+            "url": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf"
+          }
+        }
+      ]
+    },
+    "575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf": {
+      "path": ".automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html",
+      "sha256": "575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf",
+      "bytes": 117722,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/github-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://arxiv.org/html/1908.05437"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "060dc10b7ee3b9024f905b0be2c74edd7a0156707838ef08e64a49f9159c946a": {
+      "path": ".automation/sources/files/060dc10b7ee3b9024f905b0be2c74edd7a0156707838ef08e64a49f9159c946a.txt",
+      "sha256": "060dc10b7ee3b9024f905b0be2c74edd7a0156707838ef08e64a49f9159c946a",
+      "bytes": 41496,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/github-full.html.txt"
+      ],
+      "records": []
+    },
+    "3cf5b7deded508aa2338a8261350f3e2ea76a4ef0b9a06fc252b277904ee8b03": {
+      "path": ".automation/sources/files/3cf5b7deded508aa2338a8261350f3e2ea76a4ef0b9a06fc252b277904ee8b03.txt",
+      "sha256": "3cf5b7deded508aa2338a8261350f3e2ea76a4ef0b9a06fc252b277904ee8b03",
+      "bytes": 42967,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/github-full.txt"
+      ],
+      "records": []
+    },
+    "7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39": {
+      "path": ".automation/sources/files/7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39.html",
+      "sha256": "7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39",
+      "bytes": 729541,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/oasis-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://arxiv.org/html/2411.11581"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "f1eee7635fc0861bd4c54465ade2bc6b14887fb20b3c70a078666e101686246e": {
+      "path": ".automation/sources/files/f1eee7635fc0861bd4c54465ade2bc6b14887fb20b3c70a078666e101686246e.txt",
+      "sha256": "f1eee7635fc0861bd4c54465ade2bc6b14887fb20b3c70a078666e101686246e",
+      "bytes": 108022,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/oasis-full.html.txt"
+      ],
+      "records": []
+    },
+    "54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be": {
+      "path": ".automation/sources/files/54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be.txt",
+      "sha256": "54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be",
+      "bytes": 111611,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/oasis-full.txt"
+      ],
+      "records": []
+    },
+    "99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f": {
+      "path": ".automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html",
+      "sha256": "99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f",
+      "bytes": 396430,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/recsim-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://arxiv.org/html/2103.08057"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "556ce7a53376b8dba0c040ae2a8f2d6ae2f4bee74bcb4663a1d7f0c1edae295a": {
+      "path": ".automation/sources/files/556ce7a53376b8dba0c040ae2a8f2d6ae2f4bee74bcb4663a1d7f0c1edae295a.txt",
+      "sha256": "556ce7a53376b8dba0c040ae2a8f2d6ae2f4bee74bcb4663a1d7f0c1edae295a",
+      "bytes": 97010,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/recsim-full.html.txt"
+      ],
+      "records": []
+    },
+    "f5662aa50181278f983551f491aeaad9300bb7de06c25cb39cf0962d18da0ffb": {
+      "path": ".automation/sources/files/f5662aa50181278f983551f491aeaad9300bb7de06c25cb39cf0962d18da0ffb.txt",
+      "sha256": "f5662aa50181278f983551f491aeaad9300bb7de06c25cb39cf0962d18da0ffb",
+      "bytes": 108880,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/recsim-full.txt"
+      ],
+      "records": []
+    },
+    "a6849d17c5b549df1b9ca08177fca9d5c326c1a2626f41b3be7acd84510b19f6": {
+      "path": ".automation/sources/files/a6849d17c5b549df1b9ca08177fca9d5c326c1a2626f41b3be7acd84510b19f6.pdf",
+      "sha256": "a6849d17c5b549df1b9ca08177fca9d5c326c1a2626f41b3be7acd84510b19f6",
+      "bytes": 73918,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/remaining-kraut-introduction-precopyedited.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {
+            "source_url": "https://mitpress.mit.edu/9780262016575/building-successful-online-communities/"
+          }
+        }
+      ]
+    },
+    "b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0": {
+      "path": ".automation/sources/files/b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0.html",
+      "sha256": "b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0",
+      "bytes": 379568,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/simsom-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "6e2f4d59b6a15632494861ebce47a4330cac154a5b31f8057b2a8e800d2c17da": {
+      "path": ".automation/sources/files/6e2f4d59b6a15632494861ebce47a4330cac154a5b31f8057b2a8e800d2c17da.txt",
+      "sha256": "6e2f4d59b6a15632494861ebce47a4330cac154a5b31f8057b2a8e800d2c17da",
+      "bytes": 74615,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/simsom-full.html.txt"
+      ],
+      "records": []
+    },
+    "c1ecf0affc6dd14875d9b203948b70c045012348829d8d84fcdbdd1737605b69": {
+      "path": ".automation/sources/files/c1ecf0affc6dd14875d9b203948b70c045012348829d8d84fcdbdd1737605b69.txt",
+      "sha256": "c1ecf0affc6dd14875d9b203948b70c045012348829d8d84fcdbdd1737605b69",
+      "bytes": 82727,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/simsom-full.txt"
+      ],
+      "records": []
+    },
+    "aab8372b6867d9e2aa954edc9fcf325539b17f7e03637e0df649ee007b91d992": {
+      "path": ".automation/sources/files/aab8372b6867d9e2aa954edc9fcf325539b17f7e03637e0df649ee007b91d992.txt",
+      "sha256": "aab8372b6867d9e2aa954edc9fcf325539b17f7e03637e0df649ee007b91d992",
+      "bytes": 92914,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/sopra-full-layout.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+            "url": "https://arxiv.org/pdf/1811.10981v1"
+          }
+        }
+      ]
+    },
+    "53de7e3bd58efe77c6d2364aca9e55097fa08d498852e7db125bc336119feb7e": {
+      "path": ".automation/sources/files/53de7e3bd58efe77c6d2364aca9e55097fa08d498852e7db125bc336119feb7e.png",
+      "sha256": "53de7e3bd58efe77c6d2364aca9e55097fa08d498852e7db125bc336119feb7e",
+      "bytes": 453077,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/sopra-full-p14.png"
+      ],
+      "records": []
+    },
+    "57fe1083445bbe59ed6390140b0c6336962b5c9844d441d4c488d79791331649": {
+      "path": ".automation/sources/files/57fe1083445bbe59ed6390140b0c6336962b5c9844d441d4c488d79791331649.png",
+      "sha256": "57fe1083445bbe59ed6390140b0c6336962b5c9844d441d4c488d79791331649",
+      "bytes": 180872,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/sopra-full-p18.png"
+      ],
+      "records": []
+    },
+    "4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d": {
+      "path": ".automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html",
+      "sha256": "4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d",
+      "bytes": 247236,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/sopra-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/import/sopra-primary-bibliography-candidates.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://arxiv.org/html/1811.10981v1"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+            "url": "https://arxiv.org/html/1811.10981v1"
+          }
+        }
+      ]
+    },
+    "9c5e86afe329c3b5e1730081ba5d1927b1a8a0ba8a44eb046f00b34ac5276233": {
+      "path": ".automation/sources/files/9c5e86afe329c3b5e1730081ba5d1927b1a8a0ba8a44eb046f00b34ac5276233.txt",
+      "sha256": "9c5e86afe329c3b5e1730081ba5d1927b1a8a0ba8a44eb046f00b34ac5276233",
+      "bytes": 87977,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/sopra-full.html.txt"
+      ],
+      "records": []
+    },
+    "c69bffd38e7b2c9e2ecf0e91c69f1184ae308409208b127761f68079a406bfed": {
+      "path": ".automation/sources/files/c69bffd38e7b2c9e2ecf0e91c69f1184ae308409208b127761f68079a406bfed.pdf",
+      "sha256": "c69bffd38e7b2c9e2ecf0e91c69f1184ae308409208b127761f68079a406bfed",
+      "bytes": 759975,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/sopra-full.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+            "url": "https://arxiv.org/pdf/1811.10981v1"
+          }
+        }
+      ]
+    },
+    "9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a": {
+      "path": ".automation/sources/files/9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a.txt",
+      "sha256": "9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a",
+      "bytes": 90738,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/sopra-full.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+            "url": "https://arxiv.org/html/1811.10981v1"
+          }
+        }
+      ]
+    },
+    "3e36a7158a9b8eaff08130f4cb5d72ed1062d7aae4409dc42bd1430e4bd25d06": {
+      "path": ".automation/sources/files/3e36a7158a9b8eaff08130f4cb5d72ed1062d7aae4409dc42bd1430e4bd25d06.txt",
+      "sha256": "3e36a7158a9b8eaff08130f4cb5d72ed1062d7aae4409dc42bd1430e4bd25d06",
+      "bytes": 87778,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/sopra-readable.txt"
+      ],
+      "records": []
+    },
+    "104b9f6e8c2e77daba5f7c192c832c2194f2e37fc66c912409a1de72c97f5f51": {
+      "path": ".automation/sources/files/104b9f6e8c2e77daba5f7c192c832c2194f2e37fc66c912409a1de72c97f5f51.png",
+      "sha256": "104b9f6e8c2e77daba5f7c192c832c2194f2e37fc66c912409a1de72c97f5f51",
+      "bytes": 292748,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong-46-page3.png"
+      ],
+      "records": []
+    },
+    "d3d7868dbf1e0cfba038239b7a14825dbdad8377f172e2a422deb30a7905aaa5": {
+      "path": ".automation/sources/files/d3d7868dbf1e0cfba038239b7a14825dbdad8377f172e2a422deb30a7905aaa5.png",
+      "sha256": "d3d7868dbf1e0cfba038239b7a14825dbdad8377f172e2a422deb30a7905aaa5",
+      "bytes": 347623,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong-46-page4.png"
+      ],
+      "records": []
+    },
+    "b911a1790da7c6c80e5128bb249bf99d21ec532cc7c3cb33efa5d97230ba189d": {
+      "path": ".automation/sources/files/b911a1790da7c6c80e5128bb249bf99d21ec532cc7c3cb33efa5d97230ba189d.png",
+      "sha256": "b911a1790da7c6c80e5128bb249bf99d21ec532cc7c3cb33efa5d97230ba189d",
+      "bytes": 294519,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong-46-page5.png"
+      ],
+      "records": []
+    },
+    "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4": {
+      "path": ".automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+      "sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4",
+      "bytes": 4691522,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-67.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+            "source_url": "https://arxiv.org/pdf/2112.00626"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "The Effect of People Recommenders on Echo Chambers and Polarization.md",
+            "primary_source": "https://arxiv.org/pdf/2112.00626"
+          }
+        }
+      ]
+    },
+    "53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60": {
+      "path": ".automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+      "sha256": "53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60",
+      "bytes": 75559,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong-67.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "The Effect of People Recommenders on Echo Chambers and Polarization.md",
+            "primary_source": "https://arxiv.org/pdf/2112.00626"
+          }
+        }
+      ]
+    },
+    "a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d": {
+      "path": ".automation/sources/files/a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d.pdf",
+      "sha256": "a68e48b3b7d83dfbabe7d5bc92f1506f1d7651ca21be7d5360960e206195f45d",
+      "bytes": 2056521,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-68.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+            "source_url": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "The Focused Organization of Social Ties.md",
+            "primary_source": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf"
+          }
+        }
+      ]
+    },
+    "ddaf6072011c8b22992fd52acc953b742c630bbc4af67f17b989640a3684a515": {
+      "path": ".automation/sources/files/ddaf6072011c8b22992fd52acc953b742c630bbc4af67f17b989640a3684a515.txt",
+      "sha256": "ddaf6072011c8b22992fd52acc953b742c630bbc4af67f17b989640a3684a515",
+      "bytes": 22,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong-68.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59": {
+      "path": ".automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html",
+      "sha256": "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59",
+      "bytes": 1859944,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-73.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {
+            "source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+            "source_url": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "The latent cognitive structures of social networks.md",
+            "primary_source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
+          }
+        }
+      ]
+    },
+    "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab": {
+      "path": ".automation/sources/files/4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab.html",
+      "sha256": "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab",
+      "bytes": 213853,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-74-table4.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+            "source_url": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md"
+          }
+        }
+      ]
+    },
+    "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e": {
+      "path": ".automation/sources/files/9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e.html",
+      "sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e",
+      "bytes": 491828,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-74.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+            "source_url": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+            "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
+          }
+        }
+      ]
+    },
+    "26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb": {
+      "path": ".automation/sources/files/26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb.html",
+      "sha256": "26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb",
+      "bytes": 237408,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-75.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+            "url": "https://arxiv.org/html/2306.02552v3"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "User Behavior Simulation with Large Language Model based Agents.md",
+            "primary_source": "https://arxiv.org/html/2306.02552v3"
+          }
+        }
+      ]
+    },
+    "a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55": {
+      "path": ".automation/sources/files/a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55.txt",
+      "sha256": "a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55",
+      "bytes": 79759,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong-75.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-42-45-75-2026-09-30.json",
+          "context": {
+            "file": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+            "url": "https://arxiv.org/html/2306.02552v3"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "User Behavior Simulation with Large Language Model based Agents.md",
+            "primary_source": "https://arxiv.org/html/2306.02552v3"
+          }
+        }
+      ]
+    },
+    "87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc": {
+      "path": ".automation/sources/files/87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc.png",
+      "sha256": "87090b59b1545575d876bf122cad98717b208ed22aad84e63ada0d58105569cc",
+      "bytes": 258036,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong-76-page-15.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "source_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md"
+          }
+        }
+      ]
+    },
+    "94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652": {
+      "path": ".automation/sources/files/94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652.png",
+      "sha256": "94455b20c7110b795f0366b6bbc69923b6211d6f2473c5399a13d509ee703652",
+      "bytes": 227397,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong-76-page-16.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "source_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md"
+          }
+        }
+      ]
+    },
+    "4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8": {
+      "path": ".automation/sources/files/4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8.png",
+      "sha256": "4556556e88058ed72e8982217b2a32a582e59a6bf936655d90097f6f8f35a7c8",
+      "bytes": 273953,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong-76-page-17.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "source_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md"
+          }
+        }
+      ]
+    },
+    "54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6": {
+      "path": ".automation/sources/files/54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6.pdf",
+      "sha256": "54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6",
+      "bytes": 235931,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-76.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "source_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "primary_source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        }
+      ]
+    },
+    "732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b": {
+      "path": ".automation/sources/files/732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b.txt",
+      "sha256": "732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b",
+      "bytes": 84978,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong-76.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "source_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+            "primary_source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
+          }
+        }
+      ]
+    },
+    "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705": {
+      "path": ".automation/sources/files/d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705.html",
+      "sha256": "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705",
+      "bytes": 154474,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-78.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+            "source_url": "https://www.jasss.org/26/3/9.html"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+            "primary_source": "https://www.jasss.org/26/3/9.html"
+          }
+        }
+      ]
+    },
+    "b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96": {
+      "path": ".automation/sources/files/b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96.html",
+      "sha256": "b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96",
+      "bytes": 292665,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong-80.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-67-80-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+            "source_url": "https://arxiv.org/pdf/2408.00818"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-c-2026-09-30.json",
+          "context": {
+            "note": "Y Social- an LLM-powered Social Media Digital Twin.md",
+            "primary_source": "https://arxiv.org/html/2408.00818"
+          }
+        }
+      ]
+    },
+    "c4116160232425b8e2feb62d22a79f6c2aec6b7e9781bb9d0b01b96b0400662a": {
+      "path": ".automation/sources/files/c4116160232425b8e2feb62d22a79f6c2aec6b7e9781bb9d0b01b96b0400662a.html",
+      "sha256": "c4116160232425b8e2feb62d22a79f6c2aec6b7e9781bb9d0b01b96b0400662a",
+      "bytes": 188989,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/54.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/import/recsim-primary-bibliography-candidates.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-54-65-66-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://arxiv.org/html/1909.04847"
+          }
+        }
+      ]
+    },
+    "b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88": {
+      "path": ".automation/sources/files/b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88.txt",
+      "sha256": "b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88",
+      "bytes": 74197,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/54.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-54-65-66-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+            "source_url": "https://arxiv.org/html/1909.04847"
+          }
+        }
+      ]
+    },
+    "ba84eabeb69a038e3dfb38e1b17f15d0cde2179782c193f6a427f6aa5d7c5708": {
+      "path": ".automation/sources/files/ba84eabeb69a038e3dfb38e1b17f15d0cde2179782c193f6a427f6aa5d7c5708.pdf",
+      "sha256": "ba84eabeb69a038e3dfb38e1b17f15d0cde2179782c193f6a427f6aa5d7c5708",
+      "bytes": 1673961,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/55.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://arxiv.org/pdf/2007.16120v2"
+          }
+        }
+      ]
+    },
+    "527b066e879b88506e1ee81a79a352c34f9a93bb46442ab8e429b6f8378a16cd": {
+      "path": ".automation/sources/files/527b066e879b88506e1ee81a79a352c34f9a93bb46442ab8e429b6f8378a16cd.txt",
+      "sha256": "527b066e879b88506e1ee81a79a352c34f9a93bb46442ab8e429b6f8378a16cd",
+      "bytes": 179189,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/55.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+            "source_url": "https://arxiv.org/pdf/2007.16120v2"
+          }
+        }
+      ]
+    },
+    "f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78": {
+      "path": ".automation/sources/files/f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78.html",
+      "sha256": "f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78",
+      "bytes": 383480,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/56.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://www.nature.com/articles/s41586-026-10536-1"
+          }
+        }
+      ]
+    },
+    "e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871": {
+      "path": ".automation/sources/files/e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871.txt",
+      "sha256": "e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871",
+      "bytes": 48542,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/56.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+            "source_url": "https://www.nature.com/articles/s41586-026-10536-1"
+          }
+        }
+      ]
+    },
+    "a4e83edab4243f71b8baf9fb97b7e7b3d2354cdeb3dc3ea68c5c712d57ca2df8": {
+      "path": ".automation/sources/files/a4e83edab4243f71b8baf9fb97b7e7b3d2354cdeb3dc3ea68c5c712d57ca2df8.html",
+      "sha256": "a4e83edab4243f71b8baf9fb97b7e7b3d2354cdeb3dc3ea68c5c712d57ca2df8",
+      "bytes": 154292,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/57.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://www.jasss.org/27/2/4.html"
+          }
+        }
+      ]
+    },
+    "6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015": {
+      "path": ".automation/sources/files/6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015.txt",
+      "sha256": "6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015",
+      "bytes": 98628,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/57.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+            "source_url": "https://www.jasss.org/27/2/4.html"
+          }
+        }
+      ]
+    },
+    "3f797798fdc78bd7168ac8ae14fe9477f48435a1e71b229267767f84e147d0fe": {
+      "path": ".automation/sources/files/3f797798fdc78bd7168ac8ae14fe9477f48435a1e71b229267767f84e147d0fe.pdf",
+      "sha256": "3f797798fdc78bd7168ac8ae14fe9477f48435a1e71b229267767f84e147d0fe",
+      "bytes": 538372,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/58.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf"
+          }
+        }
+      ]
+    },
+    "b66e91bdf18f235be11dea28aa923246fcb06dac6c75e486782df8401957dc73": {
+      "path": ".automation/sources/files/b66e91bdf18f235be11dea28aa923246fcb06dac6c75e486782df8401957dc73.txt",
+      "sha256": "b66e91bdf18f235be11dea28aa923246fcb06dac6c75e486782df8401957dc73",
+      "bytes": 81620,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/58.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+            "source_url": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf"
+          }
+        }
+      ]
+    },
+    "7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a": {
+      "path": ".automation/sources/files/7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a.html",
+      "sha256": "7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a",
+      "bytes": 413696,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/59.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://arxiv.org/html/2311.16586"
+          }
+        }
+      ]
+    },
+    "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192": {
+      "path": ".automation/sources/files/46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192.txt",
+      "sha256": "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192",
+      "bytes": 132242,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/59.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+            "source_url": "https://arxiv.org/html/2311.16586"
+          }
+        }
+      ]
+    },
+    "0e053c017fc8dac2e30d4ba4a4daef39fc5454d534e316ae119f74bd60f2b773": {
+      "path": ".automation/sources/files/0e053c017fc8dac2e30d4ba4a4daef39fc5454d534e316ae119f74bd60f2b773.pdf",
+      "sha256": "0e053c017fc8dac2e30d4ba4a4daef39fc5454d534e316ae119f74bd60f2b773",
+      "bytes": 745670,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/60.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://par.nsf.gov/servlets/purl/10187146"
+          }
+        }
+      ]
+    },
+    "308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47": {
+      "path": ".automation/sources/files/308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47.txt",
+      "sha256": "308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47",
+      "bytes": 27901,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/60.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+            "source_url": "https://par.nsf.gov/servlets/purl/10187146"
+          }
+        }
+      ]
+    },
+    "c28f05deb82a857f5049b282135e6bc82c6e157badd9e04d2210488e26cd4273": {
+      "path": ".automation/sources/files/c28f05deb82a857f5049b282135e6bc82c6e157badd9e04d2210488e26cd4273.html",
+      "sha256": "c28f05deb82a857f5049b282135e6bc82c6e157badd9e04d2210488e26cd4273",
+      "bytes": 118789,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/61.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://www.jasss.org/26/2/6.html"
+          }
+        }
+      ]
+    },
+    "e83672e73d9f27818e8a55c5d90dccdcb61ad483424c375a9b19b66df6372ac9": {
+      "path": ".automation/sources/files/e83672e73d9f27818e8a55c5d90dccdcb61ad483424c375a9b19b66df6372ac9.txt",
+      "sha256": "e83672e73d9f27818e8a55c5d90dccdcb61ad483424c375a9b19b66df6372ac9",
+      "bytes": 76521,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/61.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+            "source_url": "https://www.jasss.org/26/2/6.html"
+          }
+        }
+      ]
+    },
+    "9ca771c349852b8db82c9421fc4a2228e44868df3be4ecd0c32f96284fda5bf0": {
+      "path": ".automation/sources/files/9ca771c349852b8db82c9421fc4a2228e44868df3be4ecd0c32f96284fda5bf0.png",
+      "sha256": "9ca771c349852b8db82c9421fc4a2228e44868df3be4ecd0c32f96284fda5bf0",
+      "bytes": 277724,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong54-66-sources/62-fitness.png"
+      ],
+      "records": []
+    },
+    "f620b51d4411437783b24810487ae16c162e3fb52a287a871e9cc58a43126c21": {
+      "path": ".automation/sources/files/f620b51d4411437783b24810487ae16c162e3fb52a287a871e9cc58a43126c21.html",
+      "sha256": "f620b51d4411437783b24810487ae16c162e3fb52a287a871e9cc58a43126c21",
+      "bytes": 90754,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/62.html"
+      ],
+      "records": []
+    },
+    "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34": {
+      "path": ".automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+      "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34",
+      "bytes": 1053901,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/62.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://www.jasss.org/15/4/3/3.pdf"
+          }
+        }
+      ]
+    },
+    "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3": {
+      "path": ".automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+      "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3",
+      "bytes": 64003,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/62.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+            "source_url": "https://www.jasss.org/15/4/3.html"
+          }
+        }
+      ]
+    },
+    "0f7836dfa2facf3d54aed31499c54fa9d6a114935484cba0729cedc38db1a882": {
+      "path": ".automation/sources/files/0f7836dfa2facf3d54aed31499c54fa9d6a114935484cba0729cedc38db1a882.pdf",
+      "sha256": "0f7836dfa2facf3d54aed31499c54fa9d6a114935484cba0729cedc38db1a882",
+      "bytes": 3145871,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/63.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf"
+          }
+        }
+      ]
+    },
+    "2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c": {
+      "path": ".automation/sources/files/2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c.txt",
+      "sha256": "2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c",
+      "bytes": 137947,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/63.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+            "source_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf"
+          }
+        }
+      ]
+    },
+    "bb98a6565aa613c98f738ac420a9f20e574579af6423fd18a26b5eb34da61f19": {
+      "path": ".automation/sources/files/bb98a6565aa613c98f738ac420a9f20e574579af6423fd18a26b5eb34da61f19.html",
+      "sha256": "bb98a6565aa613c98f738ac420a9f20e574579af6423fd18a26b5eb34da61f19",
+      "bytes": 537377,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/64.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://www.nature.com/articles/s41586-022-04997-3"
+          }
+        }
+      ]
+    },
+    "d222d3be48874c34770d5b5c15945f16af3c793ad3ed25b6085ceb6e89021344": {
+      "path": ".automation/sources/files/d222d3be48874c34770d5b5c15945f16af3c793ad3ed25b6085ceb6e89021344.txt",
+      "sha256": "d222d3be48874c34770d5b5c15945f16af3c793ad3ed25b6085ceb6e89021344",
+      "bytes": 156505,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/64.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+            "source_url": "https://www.nature.com/articles/s41586-022-04997-3"
+          }
+        }
+      ]
+    },
+    "c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707": {
+      "path": ".automation/sources/files/c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707.pdf",
+      "sha256": "c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707",
+      "bytes": 752657,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/65.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-54-65-66-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf"
+          }
+        }
+      ]
+    },
+    "43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222": {
+      "path": ".automation/sources/files/43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222.txt",
+      "sha256": "43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222",
+      "bytes": 80722,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/65.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-54-65-66-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+            "source_url": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf"
+          }
+        }
+      ]
+    },
+    "abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68": {
+      "path": ".automation/sources/files/abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68.html",
+      "sha256": "abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68",
+      "bytes": 291721,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/strong54-66-sources/66.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/import/trecs-primary-bibliography-candidates.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/verified-54-65-66-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/strong-54-66-2026-09-30.json",
+          "context": {
+            "source_url": "https://arxiv.org/html/2107.08959"
+          }
+        }
+      ]
+    },
+    "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9": {
+      "path": ".automation/sources/files/f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9.txt",
+      "sha256": "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9",
+      "bytes": 119538,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/strong54-66-sources/66.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-54-65-66-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/remaining-audit-b-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+            "source_url": "https://arxiv.org/html/2107.08959"
+          }
+        }
+      ]
+    },
+    "5acb8612df1a518c588367f3608597988d68ddef4639091320f5c4fcc617380f": {
+      "path": ".automation/sources/files/5acb8612df1a518c588367f3608597988d68ddef4639091320f5c4fcc617380f.png",
+      "sha256": "5acb8612df1a518c588367f3608597988d68ddef4639091320f5c4fcc617380f",
+      "bytes": 222033,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong68-page-06.png"
+      ],
+      "records": []
+    },
+    "07a006d9392f0073e6c017d26fbd3340d5b463dc66cb5558729edfff7115d31b": {
+      "path": ".automation/sources/files/07a006d9392f0073e6c017d26fbd3340d5b463dc66cb5558729edfff7115d31b.png",
+      "sha256": "07a006d9392f0073e6c017d26fbd3340d5b463dc66cb5558729edfff7115d31b",
+      "bytes": 239144,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong68-page-07.png"
+      ],
+      "records": []
+    },
+    "4e2651ff259e4f45f42fc3467bcdf00d245d96b3bf2c00fb03a1b492e8b2922d": {
+      "path": ".automation/sources/files/4e2651ff259e4f45f42fc3467bcdf00d245d96b3bf2c00fb03a1b492e8b2922d.png",
+      "sha256": "4e2651ff259e4f45f42fc3467bcdf00d245d96b3bf2c00fb03a1b492e8b2922d",
+      "bytes": 204146,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong68-page-08.png"
+      ],
+      "records": []
+    },
+    "5d727e10058f9699d61df5a1d4d8ec9d060413a93439a8542e26fa8f79d985bc": {
+      "path": ".automation/sources/files/5d727e10058f9699d61df5a1d4d8ec9d060413a93439a8542e26fa8f79d985bc.png",
+      "sha256": "5d727e10058f9699d61df5a1d4d8ec9d060413a93439a8542e26fa8f79d985bc",
+      "bytes": 220311,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong68-page-09.png"
+      ],
+      "records": []
+    },
+    "f2a0784d7896401935128da54c514ad32dd9dd19e2eb422495bc5a1e1dd7bfbf": {
+      "path": ".automation/sources/files/f2a0784d7896401935128da54c514ad32dd9dd19e2eb422495bc5a1e1dd7bfbf.png",
+      "sha256": "f2a0784d7896401935128da54c514ad32dd9dd19e2eb422495bc5a1e1dd7bfbf",
+      "bytes": 230015,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong68-page-10.png"
+      ],
+      "records": []
+    },
+    "dd85194e75af953768268b6f490a3538449d1b2826374078d7f3ed832af89440": {
+      "path": ".automation/sources/files/dd85194e75af953768268b6f490a3538449d1b2826374078d7f3ed832af89440.png",
+      "sha256": "dd85194e75af953768268b6f490a3538449d1b2826374078d7f3ed832af89440",
+      "bytes": 236358,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/strong68-page-11.png"
+      ],
+      "records": []
+    },
+    "adefe984a358d282762a4aebef0f1032db619b8d96f358d76205e2777f68a02f": {
+      "path": ".automation/sources/files/adefe984a358d282762a4aebef0f1032db619b8d96f358d76205e2777f68a02f.txt",
+      "sha256": "adefe984a358d282762a4aebef0f1032db619b8d96f358d76205e2777f68a02f",
+      "bytes": 27606,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/structure-appendix-rendered.txt"
+      ],
+      "records": []
+    },
+    "d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d": {
+      "path": ".automation/sources/files/d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d.docx",
+      "sha256": "d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d",
+      "bytes": 623295,
+      "kind": "supplement",
+      "original_paths": [
+        "/tmp/structure-appendix-source.docx",
+        "/tmp/structure-appendix.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "a5336791787e28836662de4978e4ed546c5ee0be980db66b7e5f7af490b883c4": {
+      "path": ".automation/sources/files/a5336791787e28836662de4978e4ed546c5ee0be980db66b7e5f7af490b883c4.pdf",
+      "sha256": "a5336791787e28836662de4978e4ed546c5ee0be980db66b7e5f7af490b883c4",
+      "bytes": 304816,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/structure-appendix-source.pdf"
+      ],
+      "records": []
+    },
+    "18a0c63a3d3ac59dc438a4c719ffb79eac96063690bbd3c385b4612a3315d944": {
+      "path": ".automation/sources/files/18a0c63a3d3ac59dc438a4c719ffb79eac96063690bbd3c385b4612a3315d944.txt",
+      "sha256": "18a0c63a3d3ac59dc438a4c719ffb79eac96063690bbd3c385b4612a3315d944",
+      "bytes": 22969,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/structure-appendix.txt"
+      ],
+      "records": []
+    },
+    "5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa": {
+      "path": ".automation/sources/files/5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa.html",
+      "sha256": "5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa",
+      "bytes": 266549,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/structure-full.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/strong-41-53-2026-09-30.json",
+          "context": {
+            "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605"
+          }
+        },
+        {
+          "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        }
+      ]
+    },
+    "cca5797d1b02cbfd3bbb729c283b3d88c52e06196aed5b2f8b230433a0c6530b": {
+      "path": ".automation/sources/files/cca5797d1b02cbfd3bbb729c283b3d88c52e06196aed5b2f8b230433a0c6530b.txt",
+      "sha256": "cca5797d1b02cbfd3bbb729c283b3d88c52e06196aed5b2f8b230433a0c6530b",
+      "bytes": 69888,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/structure-full.html.txt"
+      ],
+      "records": []
+    },
+    "706645c718fe4b05673d399221ffe89583492c6a6850d742f964f4621d835631": {
+      "path": ".automation/sources/files/706645c718fe4b05673d399221ffe89583492c6a6850d742f964f4621d835631.txt",
+      "sha256": "706645c718fe4b05673d399221ffe89583492c6a6850d742f964f4621d835631",
+      "bytes": 82742,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/structure-full.txt"
+      ],
+      "records": []
+    },
+    "494cd2bac3fd8563174fa4344cb1e16d6dc3e8df372331dc66b4176556c46f71": {
+      "path": ".automation/sources/files/494cd2bac3fd8563174fa4344cb1e16d6dc3e8df372331dc66b4176556c46f71.json",
+      "sha256": "494cd2bac3fd8563174fa4344cb1e16d6dc3e8df372331dc66b4176556c46f71",
+      "bytes": 25043,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-42-45-75-before.json"
+      ],
+      "records": []
+    },
+    "f35c1d735a1c5bb81c166b54211a337a26df95b9b098f5e03b101e9c18e0356e": {
+      "path": ".automation/sources/files/f35c1d735a1c5bb81c166b54211a337a26df95b9b098f5e03b101e9c18e0356e.json",
+      "sha256": "f35c1d735a1c5bb81c166b54211a337a26df95b9b098f5e03b101e9c18e0356e",
+      "bytes": 26383,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-42-45-bibliography-mapping.json"
+      ],
+      "records": []
+    },
+    "6c58e4b8faf6de6d54b50a57b1ef5a778d40d4cbb6ca9552138ee38deaef9b6a": {
+      "path": ".automation/sources/files/6c58e4b8faf6de6d54b50a57b1ef5a778d40d4cbb6ca9552138ee38deaef9b6a.json",
+      "sha256": "6c58e4b8faf6de6d54b50a57b1ef5a778d40d4cbb6ca9552138ee38deaef9b6a",
+      "bytes": 18459,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-54-primary-bibliography.json"
+      ],
+      "records": []
+    },
+    "110f98f3c362e013fe5dff9af2df9cb8a8c3dae6996dd1b61291c6764a37fe26": {
+      "path": ".automation/sources/files/110f98f3c362e013fe5dff9af2df9cb8a8c3dae6996dd1b61291c6764a37fe26.json",
+      "sha256": "110f98f3c362e013fe5dff9af2df9cb8a8c3dae6996dd1b61291c6764a37fe26",
+      "bytes": 29675,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-54-references-candidates.json"
+      ],
+      "records": []
+    },
+    "006b0b567425f7c0d9d0d3efc379396885e035c2f215795591279280e2e10cdf": {
+      "path": ".automation/sources/files/006b0b567425f7c0d9d0d3efc379396885e035c2f215795591279280e2e10cdf.json",
+      "sha256": "006b0b567425f7c0d9d0d3efc379396885e035c2f215795591279280e2e10cdf",
+      "bytes": 16061,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-65-primary-bibliography.json"
+      ],
+      "records": []
+    },
+    "a067fb57eb7227b63ed36b5fe763433e7fca42c1de60162c366ddad25980c778": {
+      "path": ".automation/sources/files/a067fb57eb7227b63ed36b5fe763433e7fca42c1de60162c366ddad25980c778.json",
+      "sha256": "a067fb57eb7227b63ed36b5fe763433e7fca42c1de60162c366ddad25980c778",
+      "bytes": 21577,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-65-primary-titles.json"
+      ],
+      "records": []
+    },
+    "42dddfd6a9d4a58274198751ee2fe5e7970c0ff74abd931fc02106c9569c3f81": {
+      "path": ".automation/sources/files/42dddfd6a9d4a58274198751ee2fe5e7970c0ff74abd931fc02106c9569c3f81.json",
+      "sha256": "42dddfd6a9d4a58274198751ee2fe5e7970c0ff74abd931fc02106c9569c3f81",
+      "bytes": 50805,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-65-references-candidates.json"
+      ],
+      "records": []
+    },
+    "16b2e608fd798693591d40a3193f9b573f26477d0d8ebc4c92329def34291a2f": {
+      "path": ".automation/sources/files/16b2e608fd798693591d40a3193f9b573f26477d0d8ebc4c92329def34291a2f.json",
+      "sha256": "16b2e608fd798693591d40a3193f9b573f26477d0d8ebc4c92329def34291a2f",
+      "bytes": 23499,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-66-primary-bibliography.json"
+      ],
+      "records": []
+    },
+    "999963a785815f2bda33357674c5604ac8fc048e8b7e50019c2f91f2336aa4e6": {
+      "path": ".automation/sources/files/999963a785815f2bda33357674c5604ac8fc048e8b7e50019c2f91f2336aa4e6.json",
+      "sha256": "999963a785815f2bda33357674c5604ac8fc048e8b7e50019c2f91f2336aa4e6",
+      "bytes": 29824,
+      "kind": "metadata",
+      "original_paths": [
+        "/tmp/verified-66-references-candidates.json"
+      ],
+      "records": []
+    },
+    "6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534": {
+      "path": ".automation/sources/files/6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534.pdf",
+      "sha256": "6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534",
+      "bytes": 420291,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/verified-70.pdf"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+            "source_url": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md"
+          }
+        }
+      ]
+    },
+    "1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543": {
+      "path": ".automation/sources/files/1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543.txt",
+      "sha256": "1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543",
+      "bytes": 63022,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/verified-70.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md"
+          }
+        }
+      ]
+    },
+    "a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5": {
+      "path": ".automation/sources/files/a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5.html",
+      "sha256": "a781e197a61f996fd642712846965ffc0d45de90d09fc3fd1d8bd6e6da6f31c5",
+      "bytes": 645767,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/verified-71.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
+            "source_url": "https://arxiv.org/pdf/2603.19626"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md"
+          }
+        }
+      ]
+    },
+    "29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922": {
+      "path": ".automation/sources/files/29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922.txt",
+      "sha256": "29f2ec271caad297be5433a665c5d29022b84589b25ce94019591bc6afc7c922",
+      "bytes": 160667,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/verified-71.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
+            "source_url": "https://arxiv.org/pdf/2603.19626"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md"
+          }
+        }
+      ]
+    },
+    "1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216": {
+      "path": ".automation/sources/files/1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216.html",
+      "sha256": "1f2dc54b09feec68b524210c81e8633f2a2cc941def9c670db7e511818824216",
+      "bytes": 1209367,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/verified-72.html"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
+            "source_url": "https://www.cambridge.org/core/journals/behavioural-public-policy/article/contact-hypothesis-reevaluated/142C913E7FA9E121277B29E994124EC5"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md"
+          }
+        }
+      ]
+    },
+    "aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8": {
+      "path": ".automation/sources/files/aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8.txt",
+      "sha256": "aecc15022cbefed22dae68d022667474d485eed9d538a383190ee780f2d02af8",
+      "bytes": 113814,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/verified-72.txt"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
+            "source_url": "https://www.cambridge.org/core/journals/behavioural-public-policy/article/contact-hypothesis-reevaluated/142C913E7FA9E121277B29E994124EC5"
+          }
+        },
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The contact hypothesis re-evaluated.md"
+          }
+        }
+      ]
+    },
+    "7cbc00db5d08fd068d18262dc7aa4751a2f826cb52d0de9807444d8d79f87eff": {
+      "path": ".automation/sources/files/7cbc00db5d08fd068d18262dc7aa4751a2f826cb52d0de9807444d8d79f87eff.png",
+      "sha256": "7cbc00db5d08fd068d18262dc7aa4751a2f826cb52d0de9807444d8d79f87eff",
+      "bytes": 93337,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-01.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "1edd5552127d19647ece87d6b4d87239aa70e17c63ea3d1573a97196130149ab": {
+      "path": ".automation/sources/files/1edd5552127d19647ece87d6b4d87239aa70e17c63ea3d1573a97196130149ab.png",
+      "sha256": "1edd5552127d19647ece87d6b4d87239aa70e17c63ea3d1573a97196130149ab",
+      "bytes": 305714,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-02.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "48e7e69e81ce84657a35918097b5141a3b62f00adca1a72b641b8c62fa19588d": {
+      "path": ".automation/sources/files/48e7e69e81ce84657a35918097b5141a3b62f00adca1a72b641b8c62fa19588d.png",
+      "sha256": "48e7e69e81ce84657a35918097b5141a3b62f00adca1a72b641b8c62fa19588d",
+      "bytes": 317899,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-03.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "c4509f6ddf657b550c024feaf47b2bfe957b3341af1162fbdcd34bdfe70fa0d8": {
+      "path": ".automation/sources/files/c4509f6ddf657b550c024feaf47b2bfe957b3341af1162fbdcd34bdfe70fa0d8.png",
+      "sha256": "c4509f6ddf657b550c024feaf47b2bfe957b3341af1162fbdcd34bdfe70fa0d8",
+      "bytes": 336993,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-04.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "b8c97ad0f6d20d792ca3c1072efb3e12734cf726779fc3767ffb2f8b7f36b1ef": {
+      "path": ".automation/sources/files/b8c97ad0f6d20d792ca3c1072efb3e12734cf726779fc3767ffb2f8b7f36b1ef.png",
+      "sha256": "b8c97ad0f6d20d792ca3c1072efb3e12734cf726779fc3767ffb2f8b7f36b1ef",
+      "bytes": 311435,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-05.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "39885cd64dfd0772c7fa3f6dc6eee039c4af9b2a168972fa4be0795e8d0a2d73": {
+      "path": ".automation/sources/files/39885cd64dfd0772c7fa3f6dc6eee039c4af9b2a168972fa4be0795e8d0a2d73.png",
+      "sha256": "39885cd64dfd0772c7fa3f6dc6eee039c4af9b2a168972fa4be0795e8d0a2d73",
+      "bytes": 300322,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-06.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "ae05e916ca31a986892e8a94f3b5af9b00a55c73410263a516db377f6382aa1c": {
+      "path": ".automation/sources/files/ae05e916ca31a986892e8a94f3b5af9b00a55c73410263a516db377f6382aa1c.png",
+      "sha256": "ae05e916ca31a986892e8a94f3b5af9b00a55c73410263a516db377f6382aa1c",
+      "bytes": 321916,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-07.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "895b8fdaad96728151111472d293a3de35e2f70f17d7cbf547b40a7fd9a0b27b": {
+      "path": ".automation/sources/files/895b8fdaad96728151111472d293a3de35e2f70f17d7cbf547b40a7fd9a0b27b.png",
+      "sha256": "895b8fdaad96728151111472d293a3de35e2f70f17d7cbf547b40a7fd9a0b27b",
+      "bytes": 280560,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-08.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "649d03f92f3dac3d399c71bb53f4af890348d89915e715fdc48c50ceef7f749f": {
+      "path": ".automation/sources/files/649d03f92f3dac3d399c71bb53f4af890348d89915e715fdc48c50ceef7f749f.png",
+      "sha256": "649d03f92f3dac3d399c71bb53f4af890348d89915e715fdc48c50ceef7f749f",
+      "bytes": 299249,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-09.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "3bf6ec241b245fd6575c5d6eb13a6ddb7842049d697b69b525160d3b590b7617": {
+      "path": ".automation/sources/files/3bf6ec241b245fd6575c5d6eb13a6ddb7842049d697b69b525160d3b590b7617.png",
+      "sha256": "3bf6ec241b245fd6575c5d6eb13a6ddb7842049d697b69b525160d3b590b7617",
+      "bytes": 310536,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-10.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "3426f39850dfae0e7111f50037e25826aa8c3e284c845400b21b45f5e2c9b77c": {
+      "path": ".automation/sources/files/3426f39850dfae0e7111f50037e25826aa8c3e284c845400b21b45f5e2c9b77c.png",
+      "sha256": "3426f39850dfae0e7111f50037e25826aa8c3e284c845400b21b45f5e2c9b77c",
+      "bytes": 321364,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-11.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "0aeb28c5b5c294506506e813efdbb5818a2a9eb6f93f41fa1394234508897be4": {
+      "path": ".automation/sources/files/0aeb28c5b5c294506506e813efdbb5818a2a9eb6f93f41fa1394234508897be4.png",
+      "sha256": "0aeb28c5b5c294506506e813efdbb5818a2a9eb6f93f41fa1394234508897be4",
+      "bytes": 298221,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-12.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "0d94cc1702a6d5b1b00e1acdc519e1c94b205c7f24cb2e5be9a2eee7f4c8405b": {
+      "path": ".automation/sources/files/0d94cc1702a6d5b1b00e1acdc519e1c94b205c7f24cb2e5be9a2eee7f4c8405b.png",
+      "sha256": "0d94cc1702a6d5b1b00e1acdc519e1c94b205c7f24cb2e5be9a2eee7f4c8405b",
+      "bytes": 195372,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-13.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "f912813e31888a6db2d80d96459475d968d726292616aa9b21d615ae7fa9a483": {
+      "path": ".automation/sources/files/f912813e31888a6db2d80d96459475d968d726292616aa9b21d615ae7fa9a483.png",
+      "sha256": "f912813e31888a6db2d80d96459475d968d726292616aa9b21d615ae7fa9a483",
+      "bytes": 260813,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-14.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "2fda2460869405d91bbff9de678258977b892d5995a3158ff8b6487e10b237d1": {
+      "path": ".automation/sources/files/2fda2460869405d91bbff9de678258977b892d5995a3158ff8b6487e10b237d1.png",
+      "sha256": "2fda2460869405d91bbff9de678258977b892d5995a3158ff8b6487e10b237d1",
+      "bytes": 300043,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-15.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "9a662e2338019697b4454f6bd38803117fd7be3b61b13ed090575385c99b878a": {
+      "path": ".automation/sources/files/9a662e2338019697b4454f6bd38803117fd7be3b61b13ed090575385c99b878a.png",
+      "sha256": "9a662e2338019697b4454f6bd38803117fd7be3b61b13ed090575385c99b878a",
+      "bytes": 231164,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-16.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "25345a1a5b445f19727564cbe470c45ed6c6d18d3819fcffa3dad20bc7391720": {
+      "path": ".automation/sources/files/25345a1a5b445f19727564cbe470c45ed6c6d18d3819fcffa3dad20bc7391720.png",
+      "sha256": "25345a1a5b445f19727564cbe470c45ed6c6d18d3819fcffa3dad20bc7391720",
+      "bytes": 282399,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-17.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "71190941efa3e11928229452b36165e09c7ed8b6614201476f1a43b3152be35d": {
+      "path": ".automation/sources/files/71190941efa3e11928229452b36165e09c7ed8b6614201476f1a43b3152be35d.png",
+      "sha256": "71190941efa3e11928229452b36165e09c7ed8b6614201476f1a43b3152be35d",
+      "bytes": 319488,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-18.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "9e6cc7866768be806bbd370fc0fd86153ba8be2c3019c68d8753d1f4badfa312": {
+      "path": ".automation/sources/files/9e6cc7866768be806bbd370fc0fd86153ba8be2c3019c68d8753d1f4badfa312.png",
+      "sha256": "9e6cc7866768be806bbd370fc0fd86153ba8be2c3019c68d8753d1f4badfa312",
+      "bytes": 343410,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-19.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "8f3df68650e2caccb92383be53cd59f615e264ed89d2439df8f8a54ab55cb618": {
+      "path": ".automation/sources/files/8f3df68650e2caccb92383be53cd59f615e264ed89d2439df8f8a54ab55cb618.png",
+      "sha256": "8f3df68650e2caccb92383be53cd59f615e264ed89d2439df8f8a54ab55cb618",
+      "bytes": 314148,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-20.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "86e5c063fba7c381026c464fc26cf90929e357378e435bad74a897163fd63377": {
+      "path": ".automation/sources/files/86e5c063fba7c381026c464fc26cf90929e357378e435bad74a897163fd63377.png",
+      "sha256": "86e5c063fba7c381026c464fc26cf90929e357378e435bad74a897163fd63377",
+      "bytes": 303849,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-21.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "74e60895eedff625b76eba7247949bd7aa6b761c27226bec4f509c7e8f17f726": {
+      "path": ".automation/sources/files/74e60895eedff625b76eba7247949bd7aa6b761c27226bec4f509c7e8f17f726.png",
+      "sha256": "74e60895eedff625b76eba7247949bd7aa6b761c27226bec4f509c7e8f17f726",
+      "bytes": 279796,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified68/page-22.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md"
+          }
+        }
+      ]
+    },
+    "83ec3778e1081e7e810c852543b7c0901f86c8a4a0e09e2aa1096164d78aefae": {
+      "path": ".automation/sources/files/83ec3778e1081e7e810c852543b7c0901f86c8a4a0e09e2aa1096164d78aefae.png",
+      "sha256": "83ec3778e1081e7e810c852543b7c0901f86c8a4a0e09e2aa1096164d78aefae",
+      "bytes": 337447,
+      "kind": "rendered_page",
+      "original_paths": [
+        "/tmp/verified70p16.png"
+      ],
+      "records": [
+        {
+          "record": ".automation/audit/verified-67-80-2026-09-30.json",
+          "context": {
+            "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md"
+          }
+        }
+      ]
+    }
+  },
+  "last_archived_at": "2026-09-30",
+  "scope": "Saved caches, extracted text, supplements and rendered pages. Cache availability does not establish source authenticity or audit completion."
+}

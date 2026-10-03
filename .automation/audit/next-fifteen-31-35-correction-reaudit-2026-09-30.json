@@ -1,0 +1,34 @@
+{
+  "audit_date": "2026-09-30",
+  "scope": "Independent re-audit of corrected model paragraphs for entries #31 and #35 against primary full texts. Notes were not edited.",
+  "papers": [
+    {
+      "entry": 31,
+      "file": "HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "status": "PASS",
+      "source_access": "JASSS version of record and Appendix A read: https://www.jasss.org/28/1/4.html.",
+      "evidence": [
+        "Appendix A, Signal (paras. 485–494): the signalled recipient updates experiential and value satisfactions using sender information and persuasion weights; current note now assigns the update to the recipient.",
+        "Appendix A, Inquire (paras. 503–512): inquiring ego updates its own experiential/value satisfaction from the inquired alter's values; current note describes this direction correctly.",
+        "Appendix A, Signal (paras. 486–488) and Inquire (paras. 504–506): similarity is 0.4 × (1 − absolute motive-importance difference) when the matching motive evaluations share a sign, otherwise zero; relative aspiration is 0.4 × (initiator aspiration − counterpart aspiration), clipped to [0,1]; persuasion is the product. Current note states the same sign-gated similarity and clipped aspiration product.",
+        "Appendix A, Set dissonances (social motive definition) calculates social satisfaction by scaling the same-choice alter fraction to [−1,1]; current note now states 2 × fraction − 1 before multiplying by social importance."
+      ],
+      "remaining_discrepancies": [],
+      "recommendation": "No correction identified in the audited mechanisms."
+    },
+    {
+      "entry": 35,
+      "file": "Individual Motivations and Network Effects.md",
+      "status": "PASS",
+      "source_access": "SAGE article and accessible full text read: https://journals.sagepub.com/doi/10.1177/0002716214565755 and https://www.researchgate.net/publication/274897882_Individual_Motivations_and_Network_Effects_A_Multilevel_Analysis_of_the_Structure_of_Online_Social_Relationships.",
+      "evidence": [
+        "Methods, printed p.185: random sample of 20 Second Life groups, 1,254 users overall; current note correctly identifies the 20 group networks.",
+        "Methods, printed pp.184–187: the authors fit group-level ERGMs and aggregate coefficients using weighted least squares; current note's ‘separate ... model to each group network, then combines coefficients with weighted least squares’ accurately reflects this procedure.",
+        "Model specification, printed pp.185–186: balance is represented with geometrically weighted edgewise shared partners (GWESP); current note names this measure correctly.",
+        "Results, printed pp.186–187 and publisher abstract: time online and balance are significant, while the other hypothesized predictors are not; the note's result summary is consistent with the source."
+      ],
+      "remaining_discrepancies": [],
+      "recommendation": "No correction identified in the audited model design claims."
+    }
+  ]
+}

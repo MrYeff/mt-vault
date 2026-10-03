@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "scope": "Independent full-source re-audit of corrected entries 77–80",
+  "method": "Read the current notes and each accessible primary source in full or across all model/method/experiment sections; checked abstract/version and metadata, claims and omissions, footnote locators, references/order (worker reports snapshot parity), tags, and warning state.",
+  "entries": [
+    {
+      "entry": 77,
+      "note_path": "vault/Literature/Papers/Entries/Value-based large language model agent simulation for mutual evaluation of trust and interpersonal closeness.md",
+      "status": "PASS",
+      "primary_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12644628/",
+      "source_locations": [
+        "PMC header/abstract, lines 35–84: title, all three authors, DOI, date, and abstract.",
+        "Methods, lines 311–341: two-stage design; preliminary PVQ controllability across 10 basic/four higher-order values, three named LLMs, prompt configurations, 50 runs, response scoring.",
+        "Results, lines 155–182 and Methods, lines 345–374: pairwise design (55 basic/10 higher-order pairs), two topics, five turns per agent, explicit reconstructed dialogue history, 10 independent runs per pairing/task, three-item trust measure and 7-point IOS measure, similarity groupings and trend test."
+      ],
+      "checks": {
+        "abstract": "PASS; matches the PMC version-of-record abstract exactly.",
+        "metadata": "PASS; three authors, DOI, and 2025-11-24 publication date match the source.",
+        "research_questions": "PASS; question accurately reflects the stated value-similarity question.",
+        "model": "PASS; correctly treats the paper as a controlled paired-agent experiment rather than an evolving population model. The design and outcomes are concise and faithful: three preliminary LLMs, 50-run prompt-controllability phase, pair grids, language/task factors, dialogue-history handling, and reciprocal rating scales are covered.",
+        "references_and_footnotes": "PASS; r1–r5 are defined/used and have relevant Methods/Results locators; 41 reference links preserve the captured order per the batch snapshot comparison.",
+        "tags_and_warning": "PASS; separate model/simulation tags and not-audited warning are appropriate."
+      },
+      "findings": []
+    },
+    {
+      "entry": 78,
+      "note_path": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "status": "FAIL",
+      "primary_source": "https://www.jasss.org/26/3/9.html",
+      "source_locations": [
+        "JASSS header/abstract, lines 3–18: metadata and abstract.",
+        "Model formalization, §§Clustering and Salience/Active identity, especially equations (1)–(10); lines 135–169 specify threshold rule, normative fit, comparative fit, salience, and accessibility reinforcement.",
+        "Dictator-game setup, lines 207–216: 50-agent population, context switching, 0.2 thresholds, 0.01 accessibility growth and scenario decision rule.",
+        "Trash collection setup, lines 277–285: 500 steps/50 runs, 2-color assignment, context, fieldOfView=1, thresholds, growth factor, and decision properties."
+      ],
+      "checks": {
+        "abstract": "PASS; matches JASSS abstract.",
+        "metadata": "PASS; title, five authors, date, and DOI match journal metadata.",
+        "research_questions": "PASS; appropriate question for the formalized component and scenarios.",
+        "model": "FAIL; the central salience mechanism is misstated. The note defines `fit = normative_fit(group, cluster) * comparative_fit(cluster)`, but source treats normative fit as a thresholded match to known group prototypes (Eq. 5, tNormative) and separately defines comparative fit by normalized group distance/dispersion (Eq. 7); it does not multiply those two as written. Accessibility is not scenario-specific/open: Equation 10 supplies the reinforcement update and the scenarios use a constant growth factor 0.01 (lines 168–169, 215, 280). The note also hides the specifics of context-filtered attributes/clustering and leaves the example decision rules overly vague (Dictator offer formula and trash-task movement/collection decisions). Current claims are not a faithful extraction of equations 1–11 and both use cases.",
+        "references_and_footnotes": "PASS; r1–r4 are defined and used with section/equation/table locators; 55 reference links preserve the captured order per batch snapshot comparison.",
+        "tags_and_warning": "PASS; model/simulation separate; warning remains audit failed."
+      },
+      "findings": [
+        "Correct the fit vs normative-match distinction and give the Equation 10 accessibility update; specify the equation-based action decisions in the Dictator and trash scenarios or state precisely which parameters are scenario-defined."
+      ]
+    },
+    {
+      "entry": 79,
+      "note_path": "vault/Literature/Papers/Entries/Why Does Facebook Fail to Catalyze Diverse Friendship Formations.md",
+      "status": "PASS",
+      "primary_source": "https://www.informs-sim.org/wsc21papers/271.pdf",
+      "source_locations": [
+        "WSC PDF pp. 0–1, title/author/abstract and §§1–2: exact abstract, FIRMAN social-identity coordinates, tie outreachability/capacity definitions and reciprocal feasibility; printed PDF lines 2–40.",
+        "WSC PDF p. 1, §3 Methods: SI1/SI2 shares/weights, n and TC Gaussian factors, TO binomial parameters, 100 trials per cell; printed lines 41–48.",
+        "WSC PDF p. 1, §4 and Figure 2: comparisons of friendship counts and homogeneous/diverse proportions; lines 49–55.",
+        "WSC PDF p. 1, §2, lines 33–35: source literally says TC is less than current number of friends despite defining TC as maximum capacity, which conflicts with the capacity interpretation."
+      ],
+      "checks": {
+        "abstract": "PASS; exact WSC abstract is preserved.",
+        "metadata": "PASS; author/title/year and direct WSC proceedings PDF are consistent. The source supplies no DOI on the paper itself, so blank DOI is acceptable.",
+        "research_questions": "PASS; reflects the source question and model factors.",
+        "model": "PASS WITH SOURCE CONFLICT DOCUMENTED; defines weighted social-identity distance, reciprocal tie eligibility, TC and TO roles, scenario factors, and trial count. The note explicitly records the contradictory TC inequality in the source and states its operational interpretation, instead of hiding the conflict. The simplified pair-loop is an explanatory formalization of the reported reciprocal formation rule; the paper does not specify a more detailed scheduling procedure.",
+        "references_and_footnotes": "PASS; all three source references are linked in order; r1–r5 defined/used and source section/page locators support the claims.",
+        "tags_and_warning": "PASS; model/simulation tags are separate and warning remains not audited."
+      },
+      "findings": []
+    },
+    {
+      "entry": 80,
+      "note_path": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "status": "FAIL",
+      "primary_source": "https://arxiv.org/html/2408.00818",
+      "version_checked": "arXiv:2408.00818v1, 2024-08-01",
+      "source_locations": [
+        "arXiv v1 header/abstract, lines 38–44: authors, version/date, and abstract.",
+        "§3.1 server primitives and recommender sections; §3.2.1, lines 212–257: LLM choice, profile dimensions, Big Five high/low values and persona conditioning.",
+        "§3.2 action mechanics, lines 264–285: READ shortlist/random selection, reactions and follow prompts; POST; COMMENT/REPLY/SEARCH constraints; FOLLOW score-to-probability sampling; RSS NEWS/SHARE.",
+        "§3.2.2 / Algorithm 1, lines 297–344: agent registration, slot activity sampling, clock sync, action menus, per-day follow stage and population growth.",
+        "§4.1, lines 347–355: actual case study configuration and 1000→2000 population growth; §4.2 and §5 describe generated-data examples/use cases."
+      ],
+      "checks": {
+        "abstract": "PASS; matches arXiv v1 abstract.",
+        "metadata": "PASS; title, ten authors, v1 publication date, source and DOI match the full-text version.",
+        "research_questions": "PASS; concise paraphrase of the platform's stated capability and scope.",
+        "model": "FAIL; the note compresses away defining API and schedule distinctions in this framework paper. It groups `NEWS` as a generic post and does not explain RSS-fed news content or SHARE of peer-shared news; READ uses content-recommender shortlist plus random item selection and reactions, COMMENT/REPLY/SEARCH have distinct recommender constraints, and FOLLOW is a separate score-weighted probabilistic tie action rather than a generic suggestion. The loop does not state that the time-slot active set is sampled as int(population × hourly_activity[h]), that every active agent receives the configured limited action count, and that the follow action has its own daily probability stage before the end-of-day add_agents call. Core profile dimensions (languages, political leaning, topics, model identity, and Big Five) are mostly hidden under `Profile`; only the five dichotomous traits are named. Those API/action distinctions and profile-conditioned behaviors are the described contribution, so the current extraction is too generic for an independent, source-complete model summary.",
+        "references_and_footnotes": "PASS; r1–r4 used/defined with §§3–4/algorithm/page locators; 119 source references preserve captured order per batch snapshot comparison.",
+        "tags_and_warning": "PASS; model/simulation tags are separate; warning remains audit failed."
+      },
+      "findings": [
+        "Represent the specific server and action primitives: separate NEWS/SHARE, READ, COMMENT, REPLY, SEARCH and FOLLOW behavior, along with profile dimensions; expand Algorithm 1's hourly activation/menu/follow/population update order and cite §§3.1–3.2/Algorithm 1."
+      ]
+    }
+  ],
+  "summary": {
+    "PASS": 2,
+    "FAIL": 2,
+    "LIMITED": 0
+  }
+}

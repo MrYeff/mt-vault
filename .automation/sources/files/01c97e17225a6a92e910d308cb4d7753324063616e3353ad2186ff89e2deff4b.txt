@@ -1,0 +1,491 @@
+Modeling Social Cohesion: The Influence of Memory and Learning in Simulated Networks | Springer Nature Link
+Skip to main content
+Advertisement
+Log in
+Menu
+Find a journal
+Publish with us
+Track your research
+Search
+Saved research
+Cart
+Home
+Computational Social Science of Social Cohesion and Polarization
+Chapter
+Modeling Social Cohesion: The Influence of Memory and Learning in Simulated Networks
+Chapter
+Open Access
+First Online:
+08 February 2026
+pp 257–269
+Cite this chapter
+You have full access to this
+open access
+chapter
+Download
+book PDF
+Download
+book EPUB
+Save chapter
+View saved research
+Computational Social Science of Social Cohesion and Polarization
+Modeling Social Cohesion: The Influence of Memory and Learning in Simulated Networks
+Download
+book PDF
+Download
+book EPUB
+Yara Khaluf
+ORCID:
+orcid.org/0000-0002-5590-9321
+18
+,
+Bernd Wurpts
+ORCID:
+orcid.org/0000-0002-0490-1557
+19
+,
+Till Hovestadt
+ORCID:
+orcid.org/0000-0002-0707-0779
+20
+,
+Nikolas Zöller
+ORCID:
+orcid.org/0000-0001-5764-7313
+21
+&
+…
+Gert Jan Hofstede
+ORCID:
+orcid.org/0000-0001-6100-4660
+18
+Show authors
+Part of the book series:
+Computational Social Sciences
+((CSS))
+2993
+Accesses
+2
+Citations
+The original version of the chapter has been revised. A correction to this chapter can be found at
+https://doi.org/10.1007/978-3-032-01373-6_13
+Abstract
+This study explores group cohesion on the base of social exchange theory, focusing on the dynamics within groups as influenced by memory and learning mechanisms. Using agent-based modeling, we examine how these factors affect individual and group-level cohesion. Specifically, we model the average time agents spend in groups (duration of individual membership), the duration of group existence (aggregate cohesion), and overall agent satisfaction under three conditions: No Memory, Memory, and Memory+Learning, across two network structures: Fully Connected (FC) and Preferential Attachment (PA). Our model incorporates dynamic cultural adaptation and reciprocal exchanges to simulate realistic social dynamics. Dynamic cultural adaptation in our model refers to the evolving behaviors of agents as they adjust their individualism and preferences based on past interactions and group experiences. We find that memory of past interactions enhances group cohesion and stability, while learning introduces new dynamics that influence group persistence.
+You have full access to this open access chapter,
+Download chapter PDF
+Similar content being viewed by others
+Agent-Based Simulation of Social Groups: A Systematic Review of Structural, Behavioral, and Interactional Dimensions
+Article
+01 December 2025
+A Nonlinear Dynamical System Perspective on Team Learning: The Role of Team Culture and Social Cohesion
+Chapter
+© 2019
+Approximations Between Cultural-historical Psychology and Enactivism: Applications to Theories of Memory and Implications for Education
+Article
+29 December 2025
+Explore related subjects
+Discover the latest articles, books and news in related subjects, suggested using machine learning.
+Group Dynamics
+Social Neuroscience
+Social Structure
+Societal Psychology
+Social Learning
+Cultural  Psychology
+11.1
+Introduction
+Understanding social exchange processes is key to comprehending how groups maintain stability and how members derive satisfaction from their affiliations. In this study, we hypothesize that individuals’ satisfaction with group membership directly contributes to group stability. Our aim is to explore the mechanisms that foster strong, enduring groups and identify the conditions under which individuals feel most connected and satisfied.
+This study explores group cohesion through the lens of social exchange theory, focusing on the dynamics within groups as influenced by memory and learning mechanisms. Memory in this model refers to the agents’ ability to store and recall past interactions and feedback, which influences their decision-making in future group interactions. In real societies, individuals regularly engage in various groups—such as workplaces, sports teams, or community organizations—where social cohesion is essential for maintaining collaboration and achieving common goals. Social cohesion, as modeled here, mirrors real-life social behavior where individuals derive satisfaction from positive interactions within their groups (Markovsky and Lawler
+1994
+). Social exchange theory helps explain these dynamics by positing that individuals are motivated to stay in groups based on the rewards and status they receive through their social interactions. In our model, memory and learning mechanisms play a central role, allowing agents to adapt their behavior based on prior interactions and evolving group norms. This mirrors real-world scenarios in which individuals assess their past experiences to make more informed decisions about whether to maintain their group membership. Individualism, a key variable in our model, captures how agents prioritize their personal preferences over group norms, influencing their likelihood to stay in or leave a group. Thus, the model reflects real-world group dynamics where memory, learning, and individualism all contribute to the stability and cohesion of social groups.
+Using agent-based modeling, we investigate how dependencies—the reliance on others for status—and interactions within groups affect group cohesion. Previous research has highlighted the role of dependencies in influencing power and status differences within groups (Molm
+1994
+). These dependencies create a framework within which group dynamics operate, shaping how individuals interact and form bonds. We examine how memory—defined as the retention of past feedback from interactions, and learning, where agents adjust their behavior based on past interactions and evolving group norms akin to reinforcement learning—influences individual and group-level cohesion. Specifically, we model the average time agents (i.e., group members) spend in groups as a measure of individual membership, the duration of group existence as a measure of aggregate group cohesion, and the overall satisfaction of agents. The analysis is conducted under three conditions: No Memory, Memory, and Memory+Learning, across two network structures: Fully Connected (FC) and Preferential Attachment (PA) (Barabási and Albert
+1999
+; Steyvers and Tenenbaum
+2005
+).
+Hofstede and Liu (
+2020
+) present the GRASP WORLD model, which is one of the studies that comes closest to our model. However, our model differs in fundamental aspects. While GRASP WORLD had culture as an unchanging attribute of agents, we modeled culture as a preexisting attribute that is subsequently updated after interactions, where agents staying longer in a group adapt to group norms over time. Additionally, GRASP WORLD models fully connected worlds without explicit links, whereas our model incorporates preferential attachment networks, which we argue provides a more realistic assumption than fully connected networks.
+Other related models include the work on the cultural impact on social cohesion, which examines how cultural events and interactions influence social cohesion, such as those explored by Janssen and Jager (
+2002
+). However, their work primarily focuses on technological diffusion and the role of social networks in the spread of innovations, whereas our model incorporates dynamic memory and learning mechanisms to investigate how these cognitive processes influence group stability and individual satisfaction. Another work is Epstein and Axtell (
+1996
+), where the authors explore social dynamics from the bottom up, emphasizing the aggregation of individual actions into social outcomes. While they focus on simulating broad societal patterns, such as wealth distribution and population dynamics, our model is more specific, targeting the micro-level interactions related to social cohesion. In Gilbert and Troitzsch (
+2005
+), the authors investigate the dynamics of economic and social behavior, highlighting the importance of empirical calibration of agent-based models.
+Our model extends these frameworks by specifically focusing on the dynamic adaptation of cultural attributes through memory and learning mechanisms, and by exploring the impacts within different network structures. This approach aims to provide a deeper understanding of how group cohesion and member satisfaction evolve under varying conditions of memory and learning.
+11.2
+Background in Social Exchange Theory
+In this study, we draw on exchange theory. Following Markovsky and Lawler (
+1994
+), we consider social cohesion as a range of forces that motivate individuals to stay in a group and as a determinant of social solidarity. Both, cohesion, and solidarity, are outcomes of individual level phenomena such as emotions, but emotions are also themselves caused by social interactions (Scherke
+2024
+).
+Our study was initially motivated by Kemper’s Kemper (
+1978
+) classic approach to emotions, which focuses on social structural positions and social interaction. Aiming for a general theory, Kemper claimed that status-power-relations determine which emotions are experienced. While the theory considers both status and power, we limit the present study to one dimension to begin with. The following analyses capture status conferral in social interactions. It is assumed that group loyalty or commitment results from satisfaction, which comes from positive feedback through sufficient status conferral. Individuals have a certain belief about the status they deserve and if the status conferred upon them is smaller, they become dissatisfied. Receiving too little status in a group might negatively impact an individuals’ emotions and lead to the decision to leave and join another group. As the fundamental unit is status conferral, which is a valued resource in social interaction, the classical Kemperian perspective is consistent with the broader exchange theory, particularly in social-psychological approaches (Neuhofer et al.
+2016
+).
+In social exchange theory, the focus is on the relationships among individuals and the benefits and costs involved in forming and maintaining these relationships (Emerson
+1972a
+,
+b
+). Emerson’s theory uses learning theory as its micro-foundation, assuming that individuals aim to maximize positive outcomes and minimize negative ones. The theory does not specify what individuals value, allowing for a broad application across different contexts. When two individuals exchange resources, they form a transaction. Repeated transactions can lead to the formation of exchange relations, which may connect to create larger exchange networks, but only if these transactions are positively received by the agents. In our model, exchange networks exist regardless of the nature of the interactions—whether positive or negative. These networks can influence the frequency and value of exchanges, with positive connections increasing exchanges and negative ones decreasing them (Emerson
+1972b
+; Molm
+1997
+).
+Four general forms of exchange are distinguished: productive, negotiated, reciprocal, and generalized exchange. Productive exchange involves collaboration between multiple parties to create a shared outcome, emphasizing group-based cooperation. Negotiated exchange is typically dyadic, where two parties explicitly agree on terms, such as contracts or deals, though it can involve more parties in complex situations. Reciprocal exchange usually occurs between two individuals in a dyadic manner, where one party gives with the expectation of receiving something back over time, without immediate negotiation. In contrast, generalized exchange involves larger social networks, where benefits are exchanged indirectly within a group, with no expectation of direct reciprocity from the same individual, fostering broader community engagement (Cook and Rice
+2003
+).
+Our proposed model primarily uses reciprocal exchange, where agents perform acts that benefit others in their group, such as conferring status. This approach allows us to simulate realistic social dynamics where agents’ decisions to stay or leave a group are influenced by the benefits they receive from their interactions with other group members.
+Furthermore, exchange theory posits that individuals commit to relationships because staying reduces uncertainty. In repeated exchanges, individuals learn about each other’s behavior, increasing predictability and trust, which incentivizes maintaining the relationship (Molm
+1994
+). Emerson highlighted that the cohesion of a relationship is influenced by the mutual dependence of individuals, where dependence refers to the degree to which individuals derive value from the relationship (Molm
+1997
+). In our model, dependence could be interpreted as agents deriving satisfaction from interactions, though the model abstracts away from specific dependencies in favor of a more general satisfaction-driven decision-making process.
+Lawler and Yoon (
+1993
+) introduced the theory of relational cohesion, which asserts that positive emotions from interactions lead to stronger commitments to the group. Positive feelings generated from exchanges can make groups intrinsically valuable to individuals, fostering group cohesion. This is particularly evident in multi-actor settings where collaborative tasks generate positive emotions, enhancing person-to-group ties and commitment (Lawler et al. Lawler, Thye and Yoon (
+2000
+)).
+Our model incorporates these principles by allowing agents to update their satisfaction and individualism based on their interactions, reflecting the dynamic adaptation of their commitment to the group over time. By simulating these processes, our model provides insights into how group cohesion and member satisfaction evolve in response to varying conditions of memory and learning.
+11.3
+Model
+In this study, we develop an agent-based model using
+NetLogo
+Footnote
+1
+to explore group formation and dissolution when derived by agents’ satisfaction within their current group. Agent’s satisfaction is influenced by the status conferral it received from its group members and hence by the agent’s experiences within the group. Status conferral refers to the act of assigning value to an interaction partner based on their perceived worth. Conceptually, it reflects a social evaluation mechanism: agents attribute significance to others’ presence or actions. This value can take various forms—such as recognition, respect, influence, or prestige—depending on the cultural norms. In our model, this conferral of status acts as a social reward. When agents consistently receive high status from others, they experience increased satisfaction, which in turn strengthens their motivation to remain in the group.
+During each interaction, agents engage in a two-part process: status conferral and feedback reception. The first step is status conferral, where one agent (the sender) evaluates the other (the receiver) based on the receiver’s status and the collective status of their group. The status conferral is calculated through the lens of the sender’s individualism and group status—i.e., the average of the individual statuses of all current group members. Specifically, higher individualism makes the sender prioritize the individual status of the receiver, while lower individualism places more weight on the collective status of the receiver’s group. A small random component is also added to introduce variability.
+In the second step, the receiving agent compares the status conferral they received with their expected status conferral, which is a similar calculation but based on their own status and group status. The difference between the expected and actual status conferral determines the feedback. If the received status conferral is lower than expected (beyond a certain tolerance), the receiver gives negative feedback (
+\(-1\)
+); otherwise, they give positive feedback (
+\(+1\)
+).
+This feedback is stored in the feedback memory of the sender and is used in subsequent decisions, such as whether to stay in or leave the group. Both status conferral and feedback reception influence agent satisfaction, which is then computed by weighting the feedback over time, with more recent feedback given higher weight. Each simulation tick follows a fixed sequence of agent actions (see Fig.
+11.1
+) that model social interaction and group restructuring.
+At initialization, agents are assigned to groups of varying sizes. During each tick, agents search for potential interaction partners (mates) within their immediate network neighborhood (e.g., all group members in a fully connected setup). If no partner is found (e.g., in the case of solitary agents), the agent is flagged for group exit and prompted to seek or form a new group. At the end of each tick, agents process the outcomes of the interaction (e.g., satisfaction), decide whether to remain in their group, and possibly restructure the social configuration by joining or forming a new group. This is also when traits like satisfaction and memory are updated.
+Fig. 11.1
+This diagram shows the sequence of actions agents take during each tick, including resetting variables, interacting with group members, updating satisfaction, and deciding whether to stay in or leave the group
+Full size image
+Table
+11.1
+presents the agent’s main attributes as designed in the proposed model, whereas Table
+11.2
+presents the simulation phases over its timeline.
+Table 11.1 Summary of agent’s attributes: ranges and initial settings
+Full size table
+Table 11.2 Simulation timeline
+Full size table
+Memory plays a critical role in this model. It is used as a Feedback Memory to store previous feedbacks that an agent has received during interactions. This memory allows for a cumulative effect on the agent’s behavior and satisfaction, which in turn affects its decision-making process, such as whether to stay in or leave its group. To emphasize more recent feedback, a range of weights is assigned to each feedback entry. This weight increases linearly, giving more recent feedback a higher weight compared to older feedback. The sum of the weighted positive feedback values is calculated to get a total positive feedback score, and the agent’s satisfaction is computed by dividing the summed weighted positive feedback by the normalization factor. This gives a satisfaction value that reflects the agent’s overall experience, weighted by the recency of feedback.
+When agents switch groups, our model can handle their feedback memory in two different ways. In one option, the agent’s feedback memory is retained, allowing the agent to carry over past experiences that continue to influence the agent’s decisions in their new environment. Alternatively, if the memory reset feature is activated, the agent’s feedback memory is cleared allowing the agent to start fresh, without any influence from past interactions, enabling them to evaluate the new group independently of previous experiences.
+Besides agent’s memory, agent’s learning is another key component offered by the model to enable agents to update their cultural dimensions based on their current group—here the model uses only one cultural dimension which is individualism. This update of the agent’s individualism influences how agents interact in the future, as individualism affects how they confer status to others and how they perceive the feedback received. The learning process affects satisfaction indirectly. As agents adjust their individualism, their expectations and responses to feedback change. This, in turn, influences the cumulative feedback stored in their Feedback Memory. When computing satisfaction, the model uses this adjusted individualism to weigh the feedback received in previous interactions.
+Agents decide to leave or stay in a group based on their cumulative satisfaction. The decision is probabilistic and takes into account their level of individualism. More individualistic agents are more likely to leave, even if their satisfaction is positive, while more collectivist agents may stay longer in the group even with declining satisfaction. In the “no memory” condition, agents do not base their decision on cumulative feedback. Instead, they change groups based on immediate interactions. After a negative interaction, they are more likely to leave their group and look for a new group to join. In the “memory” condition, agents accumulate feedback over time, and their decision-making incorporates both recent and older interactions.
+Finally, the model studies group cohesion under different network structures—i.e. fully connected and preferential attachment. The Preferential Attachment (PA) network used in the model was generated using the Barabási–Albert algorithm (Barabási and Albert
+1999
+; Barabási
+2016
+), which creates a scale-free network by preferentially linking new nodes to existing nodes with higher connectivity. This results in a hierarchical structure with hubs that play a central role in group dynamics. The link density was set at 0.15, ensuring that each new node is more likely to connect to an existing hub, leading to stable group formations over time.
+During the setup phase, the model initializes the network structure based on the specified type. This network structure determines the pool of potential mates (interaction partners) for each agent. For example, in a fully connected network, agents can interact with any agent, while in preferential attachment the probability to interact with hubs is much higher than the probability to interact with non-hub agents. Since the agent’s satisfaction is computed based on the feedback received from interactions, the network structure indirectly affects satisfaction.
+11.4
+Results and Discussions
+We model group cohesion both as a function of members staying in the group (duration of individual membership), as well as existence of the group (aggregate cohesion of the group). To quantitatively assess these dynamics, we focus on the following metrics: the average time agents spend in groups, group existence, and agent satisfaction, each of which provides insight into the system’s behavior.
+The average time agents spend in groups is computed by tracking the time each agent spends in their current group. When an agent leaves a group, the time spent in that group is recorded, and the average across all agents and simulations is calculated. This metric captures the stability of group membership from the individual’s perspective.
+The group existence metric, on the other hand, reflects how long a group persists over the course of the simulation. A group is considered to exist as long as it has at least one member. Group existence is calculated from the time a group forms (i.e., when it first has members) until the moment it disbands (i.e., when all its members leave).
+Finally, agent satisfaction measures how content agents are within their current group. Satisfaction is calculated based on the feedback agents receive from their interactions with group members, with feedback weighted more heavily toward recent interactions. This rolling satisfaction score reflects an agent’s cumulative experience in their group and influences decisions to leave or stay. Satisfaction is averaged across agents and simulations to assess overall contentment in different conditions, with lower variance suggesting higher group cohesion, while greater fluctuations may indicate instability or dissatisfaction within groups.
+The above-mentioned metrics are evaluated under three different conditions: No Memory, Memory, and Memory+Learning. The analysis was conducted separately for two network structures: Fully Connected (FC) and Preferential Attachment (PA). In the FC network, agents in the No Memory condition spent the least amount of time in groups, indicating frequent group changes or short-lived groups. When memory was introduced, agents spent more time in groups, suggesting that memory helps maintain group cohesion. In the Memory+Learning condition, the average time in groups was slightly lower than with Memory alone but still significantly higher than in the No Memory condition. This difference can be attributed to the role of learning, which introduces a layer of adaptability to the agents’ behavior. When learning is introduced, agents adjust their individualism based on the feedback they receive from interactions, allowing them to evolve their preferences over time. Unlike in the No Memory condition, where agents react immediately to negative feedback, learning enables agents to consider their past experiences and make more deliberate decisions. As a result, agents may switch groups not solely due to dissatisfaction but also as they evolve in their preferences over time. This adaptability leads to slower, but more meaningful rather than impulsive group changes, as agents balance both individual needs and group dynamics.
+Fig. 11.2
+Analysis of group dynamics under three conditions: no memory, memory, and memory+learning in a FC network.
+a
+Average time agents spend in groups.
+b
+Average group existence time.
+c
+Average satisfaction of agents
+Full size image
+The average group existence time in the FC network was highest in the No Memory condition, with a high variance indicating that while some groups disbanded quickly, others lasted considerably longer. This unexpected result could be due to the highly interconnected nature of the FC network, where the lack of memory causes some groups to persist due to random stabilization factors. When memory was introduced, the average group existence time decreased. The Memory and Memory+Learning conditions showed almost the same values for average group existence time, suggesting that learning doesn’t improve this dynamic.
+In the PA network, the dynamics were influenced by the network’s structure. The preferential attachment mechanism inherently creates a few highly connected nodes, which can impact group dynamics differently compared to a fully connected network. Agents in the No Memory condition again spent the least amount of time in groups, with frequent group changes. Memory led to more stable and longer group interactions, while learning induced a slightly lower time spent in group than with Memory alone but still significantly higher than in the No Memory.
+The average group existence time in the PA network showed an interesting pattern. Both the No Memory and Memory conditions resulted in similar existence times, indicating that the presence of memory alone did not significantly alter the stability of groups. However, when learning was introduced along with memory (Memory+Learning), there was a significant increase in the average group existence time. This suggests that learning mechanisms, combined with memory, allow agents to adapt more gradually to group dynamics, leading to more persistent group structures. This is particularly in PA networks because agents’ decisions are influenced by a few key nodes, leading to more deliberate, network-wide changes. In contrast, the FC network’s uniformity diffuses this influence, making group changes more frequent
+Fig. 11.3
+Analysis of group dynamics under three conditions: no memory, memory, and memory+learning in a preferential attachment (PA) network.
+a
+Average time agents spend in groups.
+b
+Average group existence time.
+c
+Average satisfaction of agents
+Full size image
+Agent satisfaction in both network structures remained relatively consistent across all three conditions. This indicates that the overall contentment of agents is not significantly influenced by memory and learning, regardless of the network structure. This is plausible as dissatisfied agents leave their groups and generate satisfaction from new interactions while satisfied members stay in their groups. Ultimately, agents find an optimum satisfaction.
+In both the FC and the PA network structures, the average group status remained relatively consistent across all three conditions (Figs.
+11.2
+and
+11.3
+). This suggests that the presence of memory and learning mechanisms does not significantly affect the overall status of the groups.
+For average group size (Figs.
+11.4
+and
+11.5
+), also for both network structures, the No Memory condition resulted in a moderately sized group with substantial variability. Introducing memory led to a larger average group size with increased variability, indicating that memory allows for the formation of larger groups but also introduces instability—i.e., fluctuating group sizes. However, when learning was combined with memory, the average group size decreased slightly compared to the memory-only condition, and the variability reduced. This suggests that learning helps stabilize group sizes by mitigating some of the fluctuations introduced by memory.
+Finally, the average group sizes in the PA network are generally larger than those in the FC network, highlighting the influence of the network structure on group formation dynamics.
+Fig. 11.4
+Analysis of group dynamics in a fully connected (FC) network under three conditions: no memory, memory, and memory+learning.
+a
+Average group status.
+b
+Average group size
+Full size image
+Fig. 11.5
+Analysis of group dynamics in a Preferential Attachment (PA) network under three conditions: no memory, memory, and memory+learning.
+a
+Average group status.
+b
+Average group size
+Full size image
+11.5
+Conclusion
+Our study employs an agent-based model to explore the dynamics of group cohesion through the principles of social exchange theory, focusing on the effects of memory and learning within different network structures. Our model extends the studies by Lawler and Yoon (
+1993
+,
+1996
+,
+1998
+) to the context of groups. We show that group cohesion emerges from the cumulative effect of sustained positive interactions. In particular, our results reveal that memory increases the duration of individual membership within groups due to the accumulation of past positive feedback—its effect on group-level stability varies depending on the network structure. Group existence time decreases in Fully Connected (FC) networks when memory is present, but it increases in Preferential Attachment (PA) networks. Learning on the other side, introduces new dynamics that can lead to group changes but still maintains higher cohesion compared to the absence of memory. We furthermore show that fully connected groups exist for shorter periods than in preferential attachment networks. These results provide significant contributions to social exchange theory, offering insights into how memory and learning mechanisms shape group dynamics and stability.
+Future work could extend our model by integrating the update of additional cultural dimensions, such as power distance, alongside individualism. Additionally, incorporating dynamic network interactions, where the structure of the network evolves based on the interactions and relationships formed, could provide a more comprehensive understanding of group cohesion.
+Change history
+06 May 2026
+A correction has been published.
+Notes
+1.
+View the OSF project at
+https://doi.org/10.17605/OSF.IO/U5TSF
+.
+References
+A.-L. Barabási,
+Network Science
+(Cambridge University Press, 2016)
+Google Scholar
+A.-L. Barabási, R. Albert, Emergence of scaling in random networks. Science
+286
+(5439), 509–512 (1999)
+Article
+Google Scholar
+K.S. Cook, E. Rice, Social exchange theory, in
+Handbook of Social Psychology
+. ed. by J. Delamater (Springer, Boston, MA, 2003), pp.53–76
+Google Scholar
+R.M. Emerson, Exchange theory, part I: A psychological basis for social exchange. Sociol. Theor. Progr.
+2
+, 38–57 (1972a)
+Google Scholar
+R.M. Emerson, Exchange theory, part II: Exchange relations and networks. Sociol. Theor. Progr.
+2
+, 58–87 (1972b)
+Google Scholar
+J.M. Epstein, R. Axtell,
+Growing Artificial Societies: Social Science from the Bottom Up
+(MIT Press, 1996)
+Google Scholar
+N. Gilbert, K.G. Troitzsch,
+Simulation for the Social Scientist
+(McGraw-Hill Education, 2005)
+Google Scholar
+G.J. Hofstede, C. Liu, To stay or not to stay? artificial sociality in grasp world, in
+Advances in Social Simulation
+(Springer, 2020), pp. 217–231
+Google Scholar
+M. Janssen, W. Jager, Stimulating diffusion of technological innovations. Adv. Complex Syst.
+4
+(3), 323–347 (2002)
+Google Scholar
+T.D. Kemper,
+A Social Interactional Theory of Emotions
+(Wiley, 1978)
+Google Scholar
+E.J. Lawler, S.R. Thye, J. Yoon, Emotion and group cohesion in productive exchange. Am. J. Sociol.
+106
+(3), 616–657 (2000)
+Article
+Google Scholar
+E.J. Lawler, J. Yoon, Power and the emergence of commitment behavior in negotiated exchange,
+American Sociological Review
+(1993), pp. 465–481
+Google Scholar
+E.J. Lawler, J. Yoon, Commitment in exchange relations: test of a theory of relational cohesion,
+American Sociological Review
+(1996), pp. 89–108
+Google Scholar
+E.J. Lawler, J. Yoon, Network structure and emotion in exchange relations.
+American Sociological Review
+(1998), pp. 871–894
+Google Scholar
+B. Markovsky, E.J. Lawler, A new theory of group solidarity, in
+Advances in Group Processes
+(JAI Press, 1994), vol. 11, pp. 113–137
+Google Scholar
+L.D. Molm, Dependence and risk: transforming the structure of social exchange. Soc. Psychol. Quarter.
+57
+(3), 163–176 (1994)
+Article
+Google Scholar
+L.D. Molm,
+Coercive Power in Social Exchange
+(Cambridge University Press, 1997)
+Google Scholar
+S. Neuhofer, I. Reindl, B. Kittel, Social exchange networks: a review of experimental studies. Connections
+36
+, 34–51 (2016)
+Article
+Google Scholar
+K. Scherke,
+Emotionssoziologie, Transcript
+(2024)
+Google Scholar
+M. Steyvers, J.B. Tenenbaum, The large-scale structure of semantic networks: statistical analyses and a model of semantic growth. Cogn. Sci.
+29
+(1), 41–78 (2005)
+Article
+Google Scholar
+Download references
+Acknowledgements
+and Funding
+Bernd Wurpts is grateful for financial support from the University of Lucerne Faculty of Humanities and Social Sciences Dean’s Office. Till Hovestadt was funded by a grant by the Deutsche Forschungsgemeinschaft (grant number 462521224).
+Author information
+Authors and Affiliations
+Vrije Universiteit Amsterdam, Amsterdam, Netherlands
+Yara Khaluf & Gert Jan Hofstede
+Independent Researcher, Lucerne, Switzerland
+Bernd Wurpts
+Nuffield College, University of Oxford, Oxford, UK
+Till Hovestadt
+Max Planck Institute for Human Development, Berlin, Germany
+Nikolas Zöller
+Authors
+Yara Khaluf
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Bernd Wurpts
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Till Hovestadt
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Nikolas Zöller
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Gert Jan Hofstede
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Corresponding author
+Correspondence to
+Yara Khaluf
+.
+Editor information
+Editors and Affiliations
+Toulouse School of Economics, Institute for Advanced Study in Toulouse, Toulouse, France
+Marijn A. Keijzer
+Constructor University, Bremen, Bremen, Germany
+Jan Lorenz
+Kozminski University, warsaw, Poland
+Michał Bojanowski
+Rights and permissions
+Open Access
+This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (
+http://creativecommons.org/licenses/by/4.0/
+), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made.
+The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.
+Reprints and permissions
+Copyright information
+© 2026 The Author(s)
+About this chapter
+Cite this chapter
+Khaluf, Y., Wurpts, B., Hovestadt, T., Zöller, N., Hofstede, G.J. (2026).  Modeling Social Cohesion: The Influence of Memory and Learning in Simulated Networks.
+
+                     In: Keijzer, M.A., Lorenz, J., Bojanowski, M. (eds) Computational Social Science of Social Cohesion and Polarization. Computational Social Sciences. Springer, Cham. https://doi.org/10.1007/978-3-032-01373-6_11
+Download citation
+.RIS
+.ENW
+.BIB
+DOI
+:
+https://doi.org/10.1007/978-3-032-01373-6_11
+Published
+:
+08 February 2026
+Publisher Name
+:
+Springer, Cham
+Print ISBN
+:
+978-3-032-01372-9
+Online ISBN
+:
+978-3-032-01373-6
+eBook Packages
+:
+Social Sciences
+Social Sciences (R0)
+Share this chapter
+Anyone you share the following link with will be able to read this content:
+Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy shareable link to clipboard
+Provided by the Springer Nature SharedIt content-sharing initiative
+Publish with us
+Policies and ethics
+Profiles
+Gert Jan Hofstede
+View author profile
+Search
+Search by keyword or author
+Search
+Navigation
+Find a journal
+Publish with us
+Track your research
+Footer Navigation
+Discover content
+Journals A-Z
+Books A-Z
+Subjects A-Z
+Publish with us
+Journal finder
+Publish your research
+Language editing
+Open access publishing
+Products and services
+Our products
+Librarians
+Societies
+Partners and advertisers
+Our brands
+Springer
+Nature Portfolio
+BMC
+Palgrave Macmillan
+Apress
+Discover
+Corporate Navigation
+Your privacy choices/Manage cookies
+Your US state privacy rights
+Accessibility statement
+Terms and conditions
+Privacy policy
+Help and support
+Legal notice
+Cancel contracts here
+185.17.205.210
+Not affiliated
+© 2026 Springer Nature

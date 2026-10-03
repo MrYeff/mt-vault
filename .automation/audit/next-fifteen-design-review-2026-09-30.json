@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-30",
+  "scope": "Independent design-relevant review of entries 31, 32, and 38; does not replace full-note audit",
+  "papers": [
+    {
+      "entry": 31,
+      "doi": "10.18564/jasss.5611",
+      "primary_source": "https://www.jasss.org/28/1/4.html",
+      "findings": [
+        "The note's abstract differs slightly from the journal's exact abstract; copy the published wording.",
+        "The note's author Gary Polhill differs from publisher J. Gareth Polhill; corrected the link to a new author note.",
+        "The current model summary omits the defining order: each tick has information exchange followed by attitude formation (Appendix, Process overview and scheduling).",
+        "The current model summary omits the social-dilemma -> signal and non-social-dilemma -> inquire branches, and the different partner selection rules (Appendix, Process overview; Interaction).",
+        "The current model summary omits the observation boundary: agents initially know alters' chosen alternatives, then learn other characteristics through communication (Appendix, Table 3 and Sensing)."
+      ],
+      "status": "correction required before re-audit"
+    },
+    {
+      "entry": 32,
+      "doi": "10.1177/08944393231213960",
+      "primary_sources": ["https://journals.sagepub.com/doi/10.1177/08944393231213960", "https://arxiv.org/pdf/2109.08862"],
+      "findings": [
+        "FIRMAN dyad rule, stochastic invitation order, six conditions, 100 trials each, and outcome metrics agree with preprint pp. 5-9.",
+        "The exact abstract in the note follows the publisher version; it differs from the earlier arXiv manuscript.",
+        "The published page has a bibliography, but the note has no captured reference links. Bibliography import remains incomplete."
+      ],
+      "status": "model claims checked; bibliography incomplete"
+    },
+    {
+      "entry": 38,
+      "doi": "10.48550/arXiv.2411.10109",
+      "primary_source": "https://arxiv.org/pdf/2411.10109",
+      "findings": [
+        "The model section omits the four model-generated expert reflections and task-relevant selection at prediction time (v3 pp. 3-4).",
+        "It omits the GPT-4o model choice and exclusion of evaluation-overlapping input items, which are important to interpreting the validation (v3 p. 4).",
+        "The source has references but the original note captured none; bibliography import remains incomplete."
+      ],
+      "status": "correction required before re-audit"
+    }
+  ]
+}

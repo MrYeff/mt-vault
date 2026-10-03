@@ -1,0 +1,38 @@
+{
+  "audited_at": "2026-09-30",
+  "independent_of_editor": true,
+  "entries": [
+    {
+      "entry": 45,
+      "note_path": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "auditor": "root",
+      "status": "PASS_CONTENT",
+      "source_read": "https://arxiv.org/html/1811.10981v1",
+      "source_locations": [
+        "§§4–5.5, Figures2–6, Eqs1–7",
+        "§§6–8 verification/usecase/static scope"
+      ],
+      "sha256_reviewed": "c6032ab8cb8c0709d75837631a3eef8d59d15023317c8cf3165ccff4cbfc4d3a",
+      "remaining": "Structural cleanup of duplicate/unused footnotes or opaque type declarations; no further model-rule changes authorized by this pass.",
+      "source_conflicts": []
+    },
+    {
+      "entry": 75,
+      "note_path": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "auditor": "root",
+      "status": "SUPERSEDED_INCOMPLETE_REVIEW",
+      "source_read": "https://arxiv.org/html/2306.02552v3",
+      "source_locations": [
+        "Results: six actions/Pareto density",
+        "Methods: memory writing, reading, reflection; displayed forgetting function",
+        "Results: believability and cocoon/conformity experiments"
+      ],
+      "sha256_reviewed": "271a2ef2eb2a6950b0ee9a1ee0c47642d8d75d50ba75fa7884f92e271ef3f25a",
+      "remaining": "New full-source independent reviewer found a misattributed evaluation claim (memory relevance/informativeness versus chat/broadcast believability). Earlier limited root check does not establish a pass.",
+      "source_conflicts": [
+        "Sensory s means importance, forgetting paragraph s means recency and r importance; note preserves local definition.",
+        "Activation-probability conversion from Pareto density and exact forgetting proportionality are unspecified; note explicitly discloses this."
+      ]
+    }
+  ]
+}

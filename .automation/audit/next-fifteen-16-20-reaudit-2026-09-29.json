@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "audit": "independent_reaudit",
+  "selection": "Entries filenames 16-20 in lexicographic order",
+  "audited_at": "2026-09-29",
+  "scope": "Read the initial audit and corrected notes. Checked source claims against the primary article texts and publisher/author records; no paper notes edited. #17 was spot-checked against its full arXiv HTML and bibliography.",
+  "overall_status": "FAIL",
+  "notes": [
+    {
+      "number": 16,
+      "filename": "Bounded Confidence Revisited- What We Overlooked- Underestimated- and Got Wrong.md",
+      "status": "FAIL",
+      "source_access": "Full JASSS article accessible.",
+      "verified": [
+        "Opinions on [0,1], inclusive insider condition |xi-xj| <= epsilon, simultaneous arithmetic-mean update, and exact fractional arithmetic are correct.",
+        "Switch definition as the minimum distance to an outsider found anywhere in the process is correct; crossing the switch adds a link and changes the process.",
+        "The note correctly distinguishes always-finite primary switches from the conjecture that all switches are finite for every initial profile. The search terminated with finite lists for all tested cases.",
+        "The interval statement is accurate: the original inclusive-rule processes are constant on intervals [0,e1), [e1,e2), ..., [es,1], so switches are included at the left edge of the next segment.",
+        "Title, author, date, and DOI agree with the journal record."
+      ],
+      "bibliography": "The note explicitly says 26 imported identifiers remain unresolved and title mapping/completeness are unverified. This is an adequate caveat; no item-by-item bibliography match was attempted.",
+      "exact_issues": [
+        "LLM Justification reuses footnote labels [^r3] and [^r4] for two different definitions each. The first r3/r4 definitions cite switch mechanics and exact arithmetic; the later duplicate r3/r4 definitions cite outcomes and scope. This makes the claims' citations ambiguous/invalid. Keep one definition per label and renumber all in-text references consistently.",
+        "The Abstract is a single run-on paragraph with missing spaces after several sentence-ending periods (for example, 'bound of confidence'.With). Restore the source's sentence spacing/punctuation for legibility."
+      ],
+      "limitations": "Bibliography links remain unresolved as explicitly disclosed; source claims pass apart from note citation structure and abstract transcription formatting."
+    },
+    {
+      "number": 17,
+      "filename": "Bridging Systems- Open Problems for Countering Destructive Divisiveness across Ranking- Recommenders- and Governance.md",
+      "status": "PASS",
+      "source_access": "Full arXiv HTML accessible; bibliography checked against references [1]-[115].",
+      "verified": [
+        "Abstract, authors, initial submission date 2023-01-24, and research-question paraphrases are supported by the paper. The questions closely follow the Introduction's two core questions and proposed research agenda.",
+        "This is a research agenda/framework rather than an executable simulation; omitting a Model section is appropriate.",
+        "The 115 ordered note links correspond to all numbered references [1]-[115] in the primary paper."
+      ],
+      "bibliography": "Full ordered reference list was checked and matches; no completeness caveat needed.",
+      "exact_issues": [],
+      "limitations": "This spot-check verifies source and bibliography correspondence, not any separate assessment of the paper's proposals."
+    },
+    {
+      "number": 18,
+      "filename": "Building Successful Online Communities- Evidence-Based Social Design.md",
+      "status": "PASS_WITH_ACCESS_LIMIT",
+      "source_access": "Published full book unavailable; MIT Press publisher page and author-hosted materials accessible.",
+      "verified": [
+        "Publication date 2012-03-23 matches MIT Press book metadata for hardcover/eBook; authors and title are consistent with the publisher listing.",
+        "The abstract-level synthesis and five design challenges are supported by the publisher description and author-hosted materials cited in the note.",
+        "The note does not present a formal simulation model, which is appropriate for the book-level synthesis."
+      ],
+      "bibliography": "The note says no reference links were present in the imported note, that the book contains source references, and that bibliography extraction is incomplete. This is an adequate caveat.",
+      "exact_issues": [],
+      "limitations": "Full-book claims, detailed chapter content, and bibliography cannot be audited without book access; PASS is limited to available descriptions and metadata."
+    },
+    {
+      "number": 19,
+      "filename": "Cognitive social structures.md",
+      "status": "PASS_WITH_SOURCE_EXTRACTION_LIMIT",
+      "source_access": "Primary 26-page CMU-hosted PDF accessible, although the browser's general PDF extractor returned no lines. Relevant Section 3.2 text was independently retrieved from indexed extracts of that same primary PDF.",
+      "verified": [
+        "The N x N x N directed report representation and perceiver-specific slice description match the paper.",
+        "The corrected LAS description is right: row-dominated LAS uses i's report R_iji; column-dominated LAS uses j's report R_ijj. These are the dyad members' reports, whereas consensus aggregates across perceivers.",
+        "The note appropriately distinguishes measurement/aggregation from temporal simulation and limits the case inference to the small management team.",
+        "Author, June 1987 date at month precision, and DOI 10.1016/0378-8733(87)90009-8 agree with publisher metadata."
+      ],
+      "bibliography": "The note explicitly states that 17 identifiers remain unresolved and title mapping/completeness are unverified. Caveat is adequate; no item-by-item mapping was completed.",
+      "exact_issues": [],
+      "limitations": "The CMU PDF text layer did not extract generally; verification of the LAS formulas used same-primary-PDF indexed text for Section 3.2."
+    },
+    {
+      "number": 20,
+      "filename": "Computational Modelling of Trust and Social Relationships.md",
+      "status": "FAIL",
+      "source_access": "Full JASSS article accessible.",
+      "verified": [
+        "3000 cycles, per-agent turns, FM forage/social choice, new-versus-existing alter probabilities, all four alter-selection strategies, directed trust, trust waning/floor, tercile outcome definitions, and global-defection limitation are supported by the cited model sections.",
+        "MaxCR=10, MinCR=0, MaxTrust=100 are the parameters specified for the logarithmic trust-increase experiments.",
+        "The stated finding that strong-tie and staged strategies better reproduce SBH layers than medium/weak strategies is supported by the results; scope is appropriately limited to model fit, not platform intervention validation.",
+        "Date, DOI, authors, and title are consistent with JASSS metadata."
+      ],
+      "bibliography": "The note says three imported reference identifiers remain unresolved and that equal counts do not establish title mapping; adequate caveat. It contains 41 items, the same count as the source list, but unresolved titles mean individual mapping is still unverified.",
+      "exact_issues": [
+        "The model summary still omits the defining experimental comparison of linear versus logarithmic trust waning. The paper tests a 2x2 combination of linear/log trust increase and linear/log waning; the note mentions only linear versus logarithmic trust increase, then leaves waning as generic 'trust wanes.' Add both waning variants and say the log-increase/linear-decrease configuration best fit the SBH distribution (Sections 4.5-4.10), so the described mechanism/results are not misleadingly incomplete.",
+        "The note describes the response and trust update only generically. Clarify that a cooperative response increments trust and a defection decrements trust according to the selected increase/decrease function, and that waning follows each social turn in the model-control sequence (Section 3.23). The note's current 'then trust wanes' is directionally correct but under-specifies the update variant just noted."
+      ],
+      "limitations": "Source bibliography item mappings remain unresolved but caveat is explicit. The outstanding failure is model-method coverage, not evidence that the stated model claims are false."
+    }
+  ],
+  "summary": "#17 passes the spot-check, #18 passes within publisher/author-source limits, and #19 passes with the disclosed PDF extraction limitation. #16 fails for duplicate footnote identifiers and malformed abstract spacing; #20 fails because it omits the tested trust-waning alternatives and the best-fitting increase/waning combination. Bibliography caveats in #16, #18, #19, and #20 are adequate; #17 reference list matches the source."
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "scope": "Independent source-focused audit of entries 67–69 after current corrections",
+  "method": "Read the current notes and the complete accessible primary sources; checked abstract text, source metadata, research questions, model/theory claims or model omission, source-located footnotes, references, tags, and warning state.",
+  "entries": [
+    {
+      "entry": 67,
+      "note_path": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "status": "FAIL",
+      "primary_source": "https://ojs.aaai.org/index.php/ICWSM/article/view/19275",
+      "full_text_also_checked": "https://ojs.aaai.org/index.php/ICWSM/article/download/19275/19047/23288",
+      "source_locations": [
+        "Publisher HTML title/author/date/DOI header and abstract; published 2022-05-31. The note abstract matches the journal HTML abstract (the PDF manuscript has a differing abstract version).",
+        "PDF §§3–3.2, pp. 2–5: input graph and recommender output, Algorithm 1 schedule and phase conditions, opinion models, recommender definitions and recommendation-score transformations.",
+        "PDF §3, Algorithm 1 and surrounding text, pp. 2–3: node permutation, S interactions per node, alpha-based recommender participation, p_v acceptance, R_MAX cutoff, uniform outgoing-neighbor replacement, and T_MAX stopping condition.",
+        "PDF §3, pp. 2–3: alpha calibration; §3.2, pp. 3–4: directed Jaccard, PPR, SALSA, and opinion-based recommender definitions; pp. 4–5: score normalization.",
+        "PDF experiment sections, pp. 5–10: LFR graph and initial-opinion generation, experimental comparisons, outcome measures, and significance testing."
+      ],
+      "checks": {
+        "abstract": "PASS; matches the official journal HTML abstract exactly in substance and wording.",
+        "metadata": "PASS; title, four authors, date, source page, and DOI match the publisher metadata.",
+        "research_questions": "PASS; the single question is a fair, explicitly interrogative paraphrase of the framework aim.",
+        "model": "FAIL; this remains an abstract-level synopsis rather than a source-complete extraction. The procedure leaves the defining recommender-phase condition hidden in `recommender_phase(world)`, and omits alpha's Bernoulli participation rule/calibration and S, R_MAX, T_MAX values/roles. It says bounded confidence shifts opinions within epsilon but omits the precise pair update and epsilon/mu semantics; epistemological dynamics are only called communicated observations, with no belief state or update rule. It names recommenders without their scoring definitions/parameters and omits score normalization. Initial opinions are not specified (LFR community opinion plus Bernoulli homophily assignment). The causal comparison, paired control, outcome definitions, and statistical test are compressed to a generic metrics/null/significance statement. Algorithm 1 and cited sections provide these defining details, so the abstractions do not count as a faithful compact model description.",
+        "references_and_footnotes": "LIMITED; note has 45 reference links, but ordered parity was not checked against the original import snapshot in this audit. r1–r6 are used and defined; locators to the arXiv PDF sections/pages exist and generally cover the statements, though r4 is too broad for the omitted detailed rules.",
+        "tags_and_warning": "PASS; separate model and simulation list tags; warning remains audit failed pending correction/re-audit."
+      },
+      "findings": [
+        "Replace the opaque recommender_phase helper with the source's alpha/Bernoulli rule, including its calibration, and expose when recommender proposals cease after R_MAX accepted recommendations.",
+        "Specify the source-defined opinion state and transition rule for both bounded-confidence and epistemological variants, rather than describing the latter as generic updating from observations.",
+        "Include initial opinion generation, the recommender scoring/normalization essentials, and the exact experimental comparison/outcomes/tests at the compact level needed to reproduce the framework. Use locators to Algorithm 1 and the relevant §3, §§4–5 passages."
+      ]
+    },
+    {
+      "entry": 68,
+      "note_path": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "status": "FAIL",
+      "primary_source": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf",
+      "publisher_metadata": "https://doi.org/10.1086/227352",
+      "source_locations": [
+        "Author-hosted full text, pp. 1015–19: problem, focus concept, and Homans framework.",
+        "Author-hosted full text, pp. 1020–24: tie formation, transitivity propositions, and local-bridge definition/predictions.",
+        "Author-hosted full text, pp. 1023–24, summary of local bridges: focus-based ties are less bridging; fewer, less constraining, and smaller foci increase bridging; less tie investment and incompatible foci make bridging more likely.",
+        "Author-hosted full text, pp. 1028–31: personal-network density proposition and Detroit Area Study illustration. Proposition 1D predicts denser ego networks when associates are drawn from fewer foci; example reports single-source networks more often fully dense than three-source networks.",
+        "Publisher citation record: title, Scott L. Feld, DOI 10.1086/227352, American Journal of Sociology 86(5), 1 March 1981."
+      ],
+      "checks": {
+        "abstract": "PASS; exact abstract text, including the original's typographical errors, is preserved.",
+        "metadata": "PASS; title, author, date, and DOI match. Source now points to the author-hosted full text actually read.",
+        "research_questions": "PASS; split into focused questions on foci/ties, transitivity/bridging, and personal-network density, all within the stated paper scope.",
+        "model_or_theory": "PASS; correctly identifies the article as a theoretical account rather than an executable simulation. Current bridging statement now reflects the source's direction (smaller, not larger, foci increase bridging) and distinguishes focus-based ties from ties not based on foci. Density proposition is stated explicitly.",
+        "references_and_footnotes": "LIMITED; footnotes r1–r4 are used, defined, and point to appropriate page ranges. Ordered reference parity against the import snapshot was not checked in this pass.",
+        "tags_and_warning": "PASS; theoretical model is tagged `model`, not `simulation`; warning remains audit failed until note status is updated through the audit workflow.",
+        "independent_reaudit": "FAIL; this agent edited the note to correct its source URL, tag, research-question split, bridging direction, and density proposition. Rule 9 requires a separate auditor to verify those edits against the scanned PDF; this report is not independent of the corrections. Leave the note warning at audit failed until another auditor verifies the revised claims."
+      },
+      "findings": [
+        "Self-correction made by the note editor; an independent source check of the new bridging and density statements is still required before passing."
+      ]
+    },
+    {
+      "entry": 69,
+      "note_path": "vault/Literature/Papers/Entries/The ODD Protocol for Describing Agent-Based and Other Simulation Models- A Second Update to Improve Clarity- Replication- and Structural Realism.md",
+      "status": "PASS",
+      "primary_source": "https://www.jasss.org/23/2/7.html",
+      "full_text_also_checked": "https://www.jasss.org/23/2/7/7.pdf",
+      "source_locations": [
+        "JASSS page header and abstract: title, author list, DOI 10.18564/jasss.4259, published 31-Mar-2020, and abstract wording.",
+        "JASSS full-text §1 and Figure 1: ODD overview/design-concepts/details structure and summary-ODD guidance.",
+        "JASSS full text, sections on protocol updates and Table 1: rationale/evaluation additions, complex ODD summaries, code links, and simulation experiment descriptions."
+      ],
+      "checks": {
+        "abstract": "PASS; matches the JASSS abstract.",
+        "metadata": "PASS; title, listed authors, publication date, source, and DOI match the journal page.",
+        "research_questions": "PASS; concise question reflects the stated aim and limitations/update scope.",
+        "model_or_type": "PASS; this article updates a description/reporting protocol; it is not itself an agent-based simulation, so omitting a Model section is appropriate.",
+        "references_and_footnotes": "LIMITED; r1 is defined/used and cites the article abstract/aim. Ordered reference parity against the import snapshot was not checked in this pass.",
+        "tags_and_warning": "PASS; `research_method` is appropriate and no simulation/model tag is asserted; warning remains not audited."
+      },
+      "findings": []
+    }
+  ],
+  "summary": {
+    "PASS": 1,
+    "FAIL": 2,
+    "LIMITED": 0
+  }
+}

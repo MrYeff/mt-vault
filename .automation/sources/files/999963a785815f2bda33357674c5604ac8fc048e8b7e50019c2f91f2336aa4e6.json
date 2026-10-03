@@ -1,0 +1,622 @@
+[
+  {
+    "link": "TheFilterBubbleHowTheNewPersonalizedWebIsChangingWhatWeReadAndHowWeThink",
+    "resolved_title": "TheFilterBubbleHowTheNewPersonalizedWebIsChangingWhatWeReadAndHowWeThink",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib59",
+      "text": "Pariser (2011) Eli Pariser. 2011. The filter bubble: How the new personalized web is changing what we read and how we think . Penguin."
+    }
+  },
+  {
+    "link": "TheComplexityOfCooperationAgentBasedModelsOfCompetitionAndCollaboration",
+    "resolved_title": "TheComplexityOfCooperationAgentBasedModelsOfCompetitionAndCollaboration",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib6",
+      "text": "Axelrod (1997) Robert Axelrod. 1997. The complexity of cooperation: Agent-based models of competition and collaboration . Vol. 3. Princeton University Press."
+    }
+  },
+  {
+    "link": "ExposureToIdeologicallyDiverseNewsAndOpinionOnFacebook",
+    "resolved_title": "ExposureToIdeologicallyDiverseNewsAndOpinionOnFacebook",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib7",
+      "text": "Bakshy et al . (2015) Eytan Bakshy, Solomon Messing, and Lada A Adamic. 2015. Exposure to ideologically diverse news and opinion on Facebook. Science 348, 6239 (2015), 1130\u20131132."
+    }
+  },
+  {
+    "link": "DynamicModelsOfSegregation",
+    "resolved_title": "DynamicModelsOfSegregation",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib68",
+      "text": "Schelling (1971) Thomas C Schelling. 1971. Dynamic models of segregation. Journal of mathematical sociology 1, 2 (1971), 143\u2013186."
+    }
+  },
+  {
+    "link": "UnresolvedReferenceFBB81C107D658BDA",
+    "resolved_title": "UnresolvedReferenceFBB81C107D658BDA",
+    "exists": false,
+    "score": 0.457,
+    "primary_entry": {
+      "id": "bib.bib28",
+      "text": "Garimella et al . (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al . 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems ."
+    }
+  },
+  {
+    "link": "LearningFromTheBehaviorOfOthersConformityFadsAndInformationalCascades",
+    "resolved_title": "LearningFromTheBehaviorOfOthersConformityFadsAndInformationalCascades",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib9",
+      "text": "Bikhchandani et al . (1998) Sushil Bikhchandani, David Hirshleifer, and Ivo Welch. 1998. Learning from the behavior of others: Conformity, fads, and informational cascades. Journal of economic perspectives 12, 3 (1998), 151\u2013170."
+    }
+  },
+  {
+    "link": "ScikitLearnMachineLearningInPython",
+    "resolved_title": "ScikitLearnMachineLearningInPython",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib60",
+      "text": "Pedregosa et al . (2011) F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research 12 (2011), 2825\u20132830."
+    }
+  },
+  {
+    "link": "CollaborativeFilteringForImplicitFeedbackDatasets",
+    "resolved_title": "CollaborativeFilteringForImplicitFeedbackDatasets",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib40",
+      "text": "Hu et al . (2008) Yifan Hu, Yehuda Koren, and Chris Volinsky. 2008. Collaborative filtering for implicit feedback datasets. In 2008 Eighth IEEE International Conference on Data Mining . Ieee, 263\u2013272."
+    }
+  },
+  {
+    "link": "MeasuringPersonalizationOfWebSearch",
+    "resolved_title": "MeasuringPersonalizationOfWebSearch",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib33",
+      "text": "Hannak et al . (2013) Aniko Hannak, Piotr Sapiezynski, Arash Molavi Kakhki, Balachander Krishnamurthy, David Lazer, Alan Mislove, and Christo Wilson. 2013. Measuring personalization of web search. In Proceedings of the 22nd international conference on World Wide Web . 527\u2013538."
+    }
+  },
+  {
+    "link": "GettingToKnowYou",
+    "resolved_title": "GettingToKnowYou",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib62",
+      "text": "Rashid et al . (2002) Al Mamunur Rashid, Istvan Albert, Dan Cosley, Shyong K Lam, Sean M McNee, Joseph A Konstan, and John Riedl. 2002. Getting to know you: learning new user preferences in recommender systems. In Proceedings of the 7th international conference on Intelligent User Interfaces . 127\u2013134."
+    }
+  },
+  {
+    "link": "HowToComputeTheWienerIndexOfAGraph",
+    "resolved_title": "HowToComputeTheWienerIndexOfAGraph",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib54",
+      "text": "Mohar and Pisanski (1988) Bojan Mohar and Toma\u017e Pisanski. 1988. How to compute the Wiener index of a graph. Journal of mathematical chemistry 2, 3 (1988), 267\u2013277."
+    }
+  },
+  {
+    "link": "AgentBasedModels",
+    "resolved_title": "AgentBasedModels",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib6",
+      "text": "Axelrod (1997) Robert Axelrod. 1997. The complexity of cooperation: Agent-based models of competition and collaboration . Vol. 3. Princeton University Press."
+    }
+  },
+  {
+    "link": "ExperimentalStudyOfInequalityAndUnpredictabilityInAnArtificialCulturalMarket",
+    "resolved_title": "ExperimentalStudyOfInequalityAndUnpredictabilityInAnArtificialCulturalMarket",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib67",
+      "text": "Salganik et al . (2006) Matthew J Salganik, Peter Sheridan Dodds, and Duncan J Watts. 2006. Experimental study of inequality and unpredictability in an artificial cultural market. science 311, 5762 (2006), 854\u2013856."
+    }
+  },
+  {
+    "link": "AnimatingRotationWithQuaternionCurves",
+    "resolved_title": "AnimatingRotationWithQuaternionCurves",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib70",
+      "text": "Shoemake (1985) Ken Shoemake. 1985. Animating rotation with quaternion curves. In Proceedings of the 12th annual conference on Computer graphics and interactive techniques . 245\u2013254."
+    }
+  },
+  {
+    "link": "CollaborativeDeepLearningForRecommenderSystems",
+    "resolved_title": "CollaborativeDeepLearningForRecommenderSystems",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib83",
+      "text": "Wang et al . (2015) Hao Wang, Naiyan Wang, and Dit-Yan Yeung. 2015. Collaborative deep learning for recommender systems. In Proceedings of the 21th ACM SIGKDD international conference on knowledge discovery and data mining . 1235\u20131244."
+    }
+  },
+  {
+    "link": "ModellingAndSimulationSoftwareToSupportIndividualBasedEcologicalModelling",
+    "resolved_title": "ModellingAndSimulationSoftwareToSupportIndividualBasedEcologicalModelling",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib51",
+      "text": "Lorek and Sonnenschein (1999) Helmut Lorek and Michael Sonnenschein. 1999. Modelling and simulation software to support individual-based ecological modelling. Ecological Modelling 115, 2-3 (1999), 199\u2013216."
+    }
+  },
+  {
+    "link": "OpinionFormationInTheDigitalDivide",
+    "resolved_title": "OpinionFormationInTheDigitalDivide",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib50",
+      "text": "Lim et al . (2014) Dongwon Lim, Hwansoo Lee, Hang-Jung ZO, and Andrew Ciganek. 2014. Opinion formation in the digital divide. The Journal of Artificial Societies and Social Simulation 17, 1 (2014)."
+    }
+  },
+  {
+    "link": "TheNetflixRecommenderSystem",
+    "resolved_title": "TheNetflixRecommenderSystem",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib32",
+      "text": "Gomez-Uribe and Hunt (2016) Carlos A. Gomez-Uribe and Neil Hunt. 2016. The Netflix Recommender System: Algorithms, Business Value, and Innovation. ACM Trans. Manage. Inf. Syst. 6, 4, Article 13 (Dec. 2016), 19 pages. https://doi.org/10.1145/2843948"
+    }
+  },
+  {
+    "link": "EnsembleBasedAndHybridRecommenderSystems",
+    "resolved_title": "EnsembleBasedAndHybridRecommenderSystems",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib3",
+      "text": "Aggarwal (2016) Charu C Aggarwal. 2016. Ensemble-based and hybrid recommender systems. In Recommender systems . Springer, 199\u2013224."
+    }
+  },
+  {
+    "link": "RecommendationsWithAPurpose",
+    "resolved_title": "RecommendationsWithAPurpose",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib44",
+      "text": "Jannach and Adomavicius (2016) Dietmar Jannach and Gediminas Adomavicius. 2016. Recommendations with a purpose. In Proceedings of the 10th ACM conference on recommender systems . 7\u201310."
+    }
+  },
+  {
+    "link": "AnAgentBasedModelOfMessagePropagationInTheFacebookElectronicSocialNetwork",
+    "resolved_title": "AnAgentBasedModelOfMessagePropagationInTheFacebookElectronicSocialNetwork",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib57",
+      "text": "Nasrinpour et al . (2016) HR Nasrinpour, MR Friesen, and RD McLeod. 2016. An agent-based model of message propagation in the Facebook electronic social network. preprint. arXiv preprint arXiv:1611.07454 (2016)."
+    }
+  },
+  {
+    "link": "BeyondParityFairnessObjectivesForCollaborativeFiltering",
+    "resolved_title": "BeyondParityFairnessObjectivesForCollaborativeFiltering",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib85",
+      "text": "Yao and Huang (2017) Sirui Yao and Bert Huang. 2017. Beyond parity: fairness objectives for collaborative filtering. In Proceedings of the 31st International Conference on Neural Information Processing Systems . 2925\u20132934."
+    }
+  },
+  {
+    "link": "MultisidedFairnessForRecommendation",
+    "resolved_title": "MultisidedFairnessForRecommendation",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib13",
+      "text": "Burke (2017) Robin Burke. 2017. Multisided fairness for recommendation. arXiv preprint arXiv:1707.00093 (2017)."
+    }
+  },
+  {
+    "link": "BalancingInformationExposureInSocialNetworks",
+    "resolved_title": "BalancingInformationExposureInSocialNetworks",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib28",
+      "text": "Garimella et al . (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al . 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems ."
+    }
+  },
+  {
+    "link": "Drn",
+    "resolved_title": "Drn",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib86",
+      "text": "Zheng et al . (2018) Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li. 2018. DRN: A deep reinforcement learning framework for news recommendation. In Proceedings of the 2018 World Wide Web Conference . 167\u2013176."
+    }
+  },
+  {
+    "link": "TheSpreadOfTrueAndFalseNewsOnline",
+    "resolved_title": "TheSpreadOfTrueAndFalseNewsOnline",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib82",
+      "text": "Vosoughi et al . (2018) Soroush Vosoughi, Deb Roy, and Sinan Aral. 2018. The spread of true and false news online. Science 359, 6380 (2018), 1146\u20131151."
+    }
+  },
+  {
+    "link": "BalancedNeighborhoodsForMultiSidedFairnessInRecommendation",
+    "resolved_title": "BalancedNeighborhoodsForMultiSidedFairnessInRecommendation",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib14",
+      "text": "Burke et al . (2018) Robin Burke, Nasim Sonboli, and Aldo Ordonez-Gauger. 2018. Balanced neighborhoods for multi-sided fairness in recommendation. In Conference on Fairness, Accountability and Transparency . PMLR, 202\u2013214."
+    }
+  },
+  {
+    "link": "HumanInteractionWithRecommendationSystems",
+    "resolved_title": "HumanInteractionWithRecommendationSystems",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib69",
+      "text": "Schmit and Riquelme (2018) Sven Schmit and Carlos Riquelme. 2018. Human interaction with recommendation systems. In International Conference on Artificial Intelligence and Statistics . PMLR, 862\u2013870."
+    }
+  },
+  {
+    "link": "RecogymAReinforcementLearningEnvironmentForTheProblemOfProductRecommendationInOnlineAdvertising",
+    "resolved_title": "RecogymAReinforcementLearningEnvironmentForTheProblemOfProductRecommendationInOnlineAdvertising",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib66",
+      "text": "Rohde et al . (2018) David Rohde, Stephen Bonner, Travis Dunlop, Flavian Vasile, and Alexandros Karatzoglou. 2018. Recogym: A reinforcement learning environment for the problem of product recommendation in online advertising. arXiv preprint arXiv:1808.00720 (2018)."
+    }
+  },
+  {
+    "link": "EchoChambersAndViralMisinformationModelingFakeNewsAsComplexContagion",
+    "resolved_title": "EchoChambersAndViralMisinformationModelingFakeNewsAsComplexContagion",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib78",
+      "text": "T\u00f6rnberg (2018) Petter T\u00f6rnberg. 2018. Echo chambers and viral misinformation: Modeling fake news as complex contagion. PloS one 13, 9 (2018), e0203958."
+    }
+  },
+  {
+    "link": "SearchingForAlternativeFacts",
+    "resolved_title": "SearchingForAlternativeFacts",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib79",
+      "text": "Tripodi (2018) Francesca Tripodi. 2018. Searching for alternative facts. Data & Society (2018)."
+    }
+  },
+  {
+    "link": "AlternativeInfluenceBroadcastingTheReactionaryRightOnYoutube",
+    "resolved_title": "AlternativeInfluenceBroadcastingTheReactionaryRightOnYoutube",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib49",
+      "text": "Lewis (2018) Rebecca Lewis. 2018. Alternative influence: Broadcasting the reactionary right on YouTube. Data & Society 18 (2018)."
+    }
+  },
+  {
+    "link": "TheTripleFilterBubbleUsingAgentBasedModellingToTestAMetaTheoreticalFrameworkForTheEmergenceOfFilterBubblesAndEchoChambers",
+    "resolved_title": "TheTripleFilterBubbleUsingAgentBasedModellingToTestAMetaTheoreticalFrameworkForTheEmergenceOfFilterBubblesAndEchoChambers",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib29",
+      "text": "Geschke et al . (2019) Daniel Geschke, Jan Lorenz, and Peter Holtz. 2019. The triple-filter bubble: Using agent-based modelling to test a meta-theoretical framework for the emergence of filter bubbles and echo chambers. British Journal of Social Psychology 58, 1 (2019), 129\u2013149."
+    }
+  },
+  {
+    "link": "AutomatedSerendipity",
+    "resolved_title": "AutomatedSerendipity",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib26",
+      "text": "Fletcher and Nielsen (2018) Richard Fletcher and Rasmus Kleis Nielsen. 2018. Automated serendipity: The effect of using search engines on news repertoire balance and diversity. Digital Journalism 6, 8 (2018), 976\u2013989."
+    }
+  },
+  {
+    "link": "ModellingOpinionDynamicsInTheAgeOfAlgorithmicPersonalisation",
+    "resolved_title": "ModellingOpinionDynamicsInTheAgeOfAlgorithmicPersonalisation",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib61",
+      "text": "Perra and Rocha (2019) Nicola Perra and Luis EC Rocha. 2019. Modelling opinion dynamics in the age of algorithmic personalisation. Scientific reports 9, 1 (2019), 1\u201311."
+    }
+  },
+  {
+    "link": "Siren",
+    "resolved_title": "Siren",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib12",
+      "text": "Bountouridis et al . (2019) Dimitrios Bountouridis, Jaron Harambam, Mykola Makhortykh, M\u00f3nica Marrero, Nava Tintarev, and Claudia Hauff. 2019. SIREN: A simulation framework for understanding the effects of recommender systems in online news environments. In Proceedings of the conference on fairness, accountability, and transparency ."
+    }
+  },
+  {
+    "link": "DebiasingTheHumanRecommenderSystemFeedbackLoopInCollaborativeFiltering",
+    "resolved_title": "DebiasingTheHumanRecommenderSystemFeedbackLoopInCollaborativeFiltering",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib72",
+      "text": "Sun et al . (2019) Wenlong Sun, Sami Khenissi, Olfa Nasraoui, and Patrick Shafto. 2019. Debiasing the human-recommender system feedback loop in collaborative filtering. In Companion Proceedings of The 2019 World Wide Web Conference . 645\u2013651."
+    }
+  },
+  {
+    "link": "AltRightPipelineIndividualJourneysToExtremismOnline",
+    "resolved_title": "AltRightPipelineIndividualJourneysToExtremismOnline",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib56",
+      "text": "Munn (2019) Luke Munn. 2019. Alt-right pipeline: Individual journeys to extremism online. First Monday (2019)."
+    }
+  },
+  {
+    "link": "NetlogoASimpleEnvironmentForModelingComplexity",
+    "resolved_title": "NetlogoASimpleEnvironmentForModelingComplexity",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib77",
+      "text": "Tisue and Wilensky (2004) Seth Tisue and Uri Wilensky. 2004. Netlogo: A simple environment for modeling complexity. In International conference on complex systems , Vol. 21. Boston, MA, 16\u201321."
+    }
+  },
+  {
+    "link": "JointDeepModelingOfUsersAndItemsUsingReviewsForRecommendation",
+    "resolved_title": "JointDeepModelingOfUsersAndItemsUsingReviewsForRecommendation",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib87",
+      "text": "Zheng et al . (2017) Lei Zheng, Vahid Noroozi, and Philip S Yu. 2017. Joint deep modeling of users and items using reviews for recommendation. In Proceedings of the tenth ACM international conference on web search and data mining . 425\u2013434."
+    }
+  },
+  {
+    "link": "BprBayesianPersonalizedRankingFromImplicitFeedback",
+    "resolved_title": "BprBayesianPersonalizedRankingFromImplicitFeedback",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib63",
+      "text": "Rendle et al . (2012) Steffen Rendle, Christoph Freudenthaler, Zeno Gantner, and Lars Schmidt-Thieme. 2012. BPR: Bayesian personalized ranking from implicit feedback. arXiv preprint arXiv:1205.2618 (2012)."
+    }
+  },
+  {
+    "link": "WideDeepLearningForRecommenderSystems",
+    "resolved_title": "WideDeepLearningForRecommenderSystems",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib16",
+      "text": "Cheng et al . (2016) Heng-Tze Cheng, Levent Koc, Jeremiah Harmsen, Tal Shaked, Tushar Chandra, Hrishi Aradhye, Glen Anderson, Greg Corrado, Wei Chai, Mustafa Ispir, et al . 2016. Wide & deep learning for recommender systems. In Proceedings of the 1st workshop on deep learning for recommender systems . 7\u201310."
+    }
+  },
+  {
+    "link": "UnresolvedReference1C5047A7097ABFA4",
+    "resolved_title": "UnresolvedReference1C5047A7097ABFA4",
+    "exists": false,
+    "score": 0.457,
+    "primary_entry": {
+      "id": "bib.bib28",
+      "text": "Garimella et al . (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al . 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems ."
+    }
+  },
+  {
+    "link": "HomophilyAndMinorityGroupSizeExplainPerceptionBiasesInSocialNetworks",
+    "resolved_title": "HomophilyAndMinorityGroupSizeExplainPerceptionBiasesInSocialNetworks",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib48",
+      "text": "Lee et al . (2019) Eun Lee, Fariba Karimi, Claudia Wagner, Hang-Hyun Jo, Markus Strohmaier, and Mirta Galesic. 2019. Homophily and minority-group size explain perception biases in social networks. Nature Human Behaviour 3, 10 (2019), 1078\u20131087."
+    }
+  },
+  {
+    "link": "RecSim- A Configurable Simulation Platform for Recommender Systems",
+    "resolved_title": "RecSim: A Configurable Simulation Platform for Recommender Systems",
+    "exists": true,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib42",
+      "text": "Ie et al . (2019) Eugene Ie, Chih wei Hsu, Martin Mladenov, Vihan Jain, Sanmit Narvekar, Jing Wang, Rui Wu, and Craig Boutilier. 2019. RecSim: A Configurable Simulation Platform for Recommender Systems. (2019). arXiv:1909.04847 [cs.LG]"
+    }
+  },
+  {
+    "link": "DataVoidsWhereMissingDataCanEasilyBeExploited",
+    "resolved_title": "DataVoidsWhereMissingDataCanEasilyBeExploited",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib31",
+      "text": "Golebiewski and Boyd (2018) Michael Golebiewski and Danah Boyd. 2018. Data voids: Where missing data can easily be exploited. (2018)."
+    }
+  },
+  {
+    "link": "UnresolvedReference6B232C695FB37CB8",
+    "resolved_title": "UnresolvedReference6B232C695FB37CB8",
+    "exists": false,
+    "score": 0.457,
+    "primary_entry": {
+      "id": "bib.bib28",
+      "text": "Garimella et al . (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al . 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems ."
+    }
+  },
+  {
+    "link": "RecommendationsAndUserAgency",
+    "resolved_title": "RecommendationsAndUserAgency",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib22",
+      "text": "Dean et al . (2020) Sarah Dean, Sarah Rich, and Benjamin Recht. 2020. Recommendations and user agency: the reachability of collaboratively-filtered information. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency . 436\u2013445."
+    }
+  },
+  {
+    "link": "FairnessIsNotStatic",
+    "resolved_title": "FairnessIsNotStatic",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib20",
+      "text": "D\u2019Amour et al . (2020) Alexander D\u2019Amour, Hansa Srinivasan, James Atwood, Pallavi Baljekar, D Sculley, and Yoni Halpern. 2020. Fairness is not static: deeper understanding of long term fairness via simulation studies. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency ."
+    }
+  },
+  {
+    "link": "DeconstructingTheFilterBubbleUserDecisionMakingAndRecommenderSystems",
+    "resolved_title": "DeconstructingTheFilterBubbleUserDecisionMakingAndRecommenderSystems",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib5",
+      "text": "Aridor et al . (2020) Guy Aridor, Duarte Goncalves, and Shan Sikdar. 2020. Deconstructing the Filter Bubble: User Decision-Making and Recommender Systems. In Fourteenth ACM Conference on Recommender Systems . 82\u201391."
+    }
+  },
+  {
+    "link": "RightWingYoutubeASupplyAndDemandPerspective",
+    "resolved_title": "RightWingYoutubeASupplyAndDemandPerspective",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib55",
+      "text": "Munger and Phillips (2020) Kevin Munger and Joseph Phillips. 2020. Right-Wing YouTube: A Supply and Demand Perspective. The International Journal of Press/Politics (2020), 1940161220964767."
+    }
+  },
+  {
+    "link": "MultistakeholderRecommendationSurveyAndResearchDirections",
+    "resolved_title": "MultistakeholderRecommendationSurveyAndResearchDirections",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib2",
+      "text": "Abdollahpouri et al . (2020) Himan Abdollahpouri, Gediminas Adomavicius, Robin Burke, Ido Guy, Dietmar Jannach, Toshihiro Kamishima, Jan Krasnodebski, and Luiz Pizzato. 2020. Multistakeholder recommendation: Survey and research directions. User Modeling and User-Adapted Interaction 30, 1 (2020), 127\u2013158."
+    }
+  },
+  {
+    "link": "ArrayProgrammingWithNumpy",
+    "resolved_title": "ArrayProgrammingWithNumpy",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib35",
+      "text": "Harris et al . (2020) Charles R. Harris, K. Jarrod Millman, St\u00e9fan J van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor, Sebastian Berg, Nathaniel J. Smith, Robert Kern, Matti Picus, Stephan Hoyer, Marten H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime Fern\u00e1ndez del R\u00edo, Mark Wiebe, Pearu Peterson, Pierre G\u00e9rard-Marchant, Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph Gohlke, and Travis E. Oliphant. 2020. Array programming with NumPy. Nature 585 (2020), 357\u2013362. https://doi.org/10.1038/s41586-020-2649-2"
+    }
+  },
+  {
+    "link": "LenskitForPythonNextGenerationSoftwareForRecommenderSystemsExperiments",
+    "resolved_title": "LenskitForPythonNextGenerationSoftwareForRecommenderSystemsExperiments",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib23",
+      "text": "Ekstrand (2020) Michael D Ekstrand. 2020. LensKit for Python: Next-Generation Software for Recommender Systems Experiments. In Proceedings of the 29th ACM International Conference on Information & Knowledge Management . 2999\u20133006."
+    }
+  },
+  {
+    "link": "UnresolvedReferenceB8BB0E0B0681AF18",
+    "resolved_title": "UnresolvedReferenceB8BB0E0B0681AF18",
+    "exists": false,
+    "score": 0.457,
+    "primary_entry": {
+      "id": "bib.bib28",
+      "text": "Garimella et al . (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al . 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems ."
+    }
+  },
+  {
+    "link": "DoOfflineMetricsPredictOnlinePerformanceInRecommenderSystems",
+    "resolved_title": "DoOfflineMetricsPredictOnlinePerformanceInRecommenderSystems",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib47",
+      "text": "Krauth et al . (2020) Karl Krauth, Sarah Dean, Alex Zhao, Wenshuo Guo, Mihaela Curmei, Benjamin Recht, and Michael I Jordan. 2020. Do Offline Metrics Predict Online Performance in Recommender Systems? arXiv preprint arXiv:2011.07931 (2020)."
+    }
+  },
+  {
+    "link": "UnresolvedReference0BD19DA599D8D100",
+    "resolved_title": "UnresolvedReference0BD19DA599D8D100",
+    "exists": false,
+    "score": 0.457,
+    "primary_entry": {
+      "id": "bib.bib28",
+      "text": "Garimella et al . (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al . 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems ."
+    }
+  },
+  {
+    "link": "UnresolvedReference96F26F364ABEE4AC",
+    "resolved_title": "UnresolvedReference96F26F364ABEE4AC",
+    "exists": false,
+    "score": 0.457,
+    "primary_entry": {
+      "id": "bib.bib12",
+      "text": "Bountouridis et al . (2019) Dimitrios Bountouridis, Jaron Harambam, Mykola Makhortykh, M\u00f3nica Marrero, Nava Tintarev, and Claudia Hauff. 2019. SIREN: A simulation framework for understanding the effects of recommender systems in online news environments. In Proceedings of the conference on fairness, accountability, and transparency ."
+    }
+  },
+  {
+    "link": "EvaluatingTheScaleGrowthAndOriginsOfRightWingEchoChambersOnYoutube",
+    "resolved_title": "EvaluatingTheScaleGrowthAndOriginsOfRightWingEchoChambersOnYoutube",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib39",
+      "text": "Hosseinmardi et al . (2020) Homa Hosseinmardi, Amir Ghasemian, Aaron Clauset, David M Rothschild, Markus Mobius, and Duncan J Watts. 2020. Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube. arXiv preprint arXiv:2011.12843 (2020)."
+    }
+  },
+  {
+    "link": "GrowingArtificialSocietiesSocialScienceFromTheBottomUp",
+    "resolved_title": "GrowingArtificialSocietiesSocialScienceFromTheBottomUp",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib24",
+      "text": "Epstein and Axtell (1996) Joshua M Epstein and Robert Axtell. 1996. Growing artificial societies: social science from the bottom up . Brookings Institution Press."
+    }
+  },
+  {
+    "link": "DiscriminationThroughOptimizationHowFacebookSAdDeliveryCanLeadToBiasedOutcomes",
+    "resolved_title": "DiscriminationThroughOptimizationHowFacebookSAdDeliveryCanLeadToBiasedOutcomes",
+    "exists": false,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib4",
+      "text": "Ali et al . (2019) Muhammad Ali, Piotr Sapiezynski, Miranda Bogen, Aleksandra Korolova, Alan Mislove, and Aaron Rieke. 2019. Discrimination through optimization: How Facebook\u2019s Ad delivery can lead to biased outcomes. Proceedings of the ACM on Human-Computer Interaction 3, CSCW (2019), 1\u201330."
+    }
+  },
+  {
+    "link": "RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems",
+    "resolved_title": "RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems",
+    "exists": true,
+    "score": 1,
+    "primary_entry": {
+      "id": "bib.bib53",
+      "text": "Mladenov et al . (2021) Martin Mladenov, Chih-Wei Hsu, Vihan Jain, Eugene Ie, Christopher Colby, Nicolas Mayoraz, Hubert Pham, Dustin Tran, Ivan Vendrov, and Craig Boutilier. 2021. RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems. arXiv preprint arXiv:2103.08057 (2021)."
+    }
+  }
+]

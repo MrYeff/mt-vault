@@ -1,0 +1,592 @@
+{
+  "captured_at": "2026-09-30",
+  "scope": "vault fenced blocks before notation sweep",
+  "notes": {
+    "Model.md": {
+      "sha256": "18932c7f7c9ac1207692df3efedd6c787cb238f8c9a554f522d4ed8b851ea100",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "World:\n\tagents: [Agent]\n\tevents: [Event]\n\ttopics: [Topic]\n\t\nThought:\n\tCorrelation: \n\t\ta: TopicId\n\t\tb: TopicId\n\t\tcorrelation: -1..1\n\t\tcertainty: 0..1\n\tIndirectThought:\n\t\tthinker: AgentId\n\t\tthought: Thought\n\t\tcertainty: 0..1\n\nAgent:\n\tidentity: TopicId\n\thard_facts: ...\n\tin_think: [Thought]\n\tfocus: [ThoughtId -> 0..1]\n\nEvent:\n\tidentity: TopicId\n\thard_facts: ...\n"
+        },
+        {
+          "language": "",
+          "content": "MIN_RATE = 0.01\nMAX_RATE = 0.20\nCERTAINTY_RATE = 0.05\n\n\nfn update(\n\tcurrent: Thought,            # T1 ~ T2\n\tincoming: Indirect->Thought, # A -> T1 ~ T2\n\tsource_trust: Thought,       # A ~ Trustworthy\n):\n\n\t# source_trust is my belief that the speaker is Trustworthy.\n\t# Unknown trust gives a neutral weight of 0.5.\n\t\n\ttrust = 0.5 + 0.5 × source_trust.correlation × source_trust.certainty\n\tevidence = incoming.certainty  × incoming.inner.certainty × trust\n\t\n\tbase_lr = MIN_RATE + (MAX_RATE − MIN_RATE) × (1 − current.certainty)\n\tlr = base_lr × evidence\n\t\n\tdifference = abs(incoming.inner.correlation − current.correlation)\n\tcertainty_change = CERTAINTY_RATE × evidence × (1 − current.certainty × difference)\n\t\n\tcurrent.correlation += lr × (incoming.inner.correlation − current.correlation)\n\tcurrent.certainty = clamp(current.certainty + certainty_change, 0, 1)\n"
+        }
+      ]
+    },
+    "Guides/Model Notation.md": {
+      "sha256": "dcc182ce30759ca4cf0d2da8f21b00f977cc2da86bbcd2692d0b3c8ed1fe0895",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "MyStruct:\n\tfield_1: u32\n\tfield_2: str\n\tfield_3: bool\n\tfield_4: 0..1 # if range is specified prefer over using type  \n\tfield_6: str? # optional str\n\tfield_7: () # unit type, baseclass of all types\n\tfield_8: 0.. # ranges can be unbounded  \n\tfield_9: Bob | Alice | Kevin # onof can be represented like this \n\nMyStruct2: MyStruct # structs can inherit other structs\n\tfield_5: ... # information can be ommited\n\nMyEnum:\n\tOption1:\n\t\tfield_1: ...\n\tOption2: MyStruct\n\tOptionThatIsAnEnum:\n\t\tOption1: ...\n\t\tOption2: ...\n\t\tOption3\n\t\tOption4\n\t\t\nMyStruct3:\n\tfield_1: InnerType # structs and enums can be defined inline\n\t\tfield_1: ...\n\tfield_2:  # structs can be defined anon inline\n\t\tfield_1: ...\n\tfield_3:  # enums can be defined anon inline\n\t\tVariant1: ...\n\t\tVariant2: ...\n\t\t\nMyStruct4:\n\tarr_field: [f32]\n\tautomap_field: [MyStruct2] # defines MyStruct2Id. use deeper in hirarchy\n\tmap_field: [MyStruct2Id -> MyStruct2]\n\t\n\nGenericType(X): # parameters can be types\n\tinner: X\n\t\nMyStruct5:\n\tfield_1: GenericType(f32)\n\t\nMyRange(lo, hi): # parameters can be values too\n\tval: lo..hi\n"
+        },
+        {
+          "language": "",
+          "content": "CONSTANT_A = 32.0\nCONSTANT_B = MyStruct5 : field_1: inner: 2.0 \n\nadd(a: f32, b:f32) -> f32: # if no return ommit \"-> type\" \n\tc = a + b\n\tout = x # out is ther return parameter\n\nommited_impl(\n\ta: MyStruct5, \n\tb: GenericType(u32)\n): ...\n\nmut_param(\n\tmut world: World\n): ...\n\n"
+        },
+        {
+          "language": "yml",
+          "content": "World:\n\tagents: [Agent]\n\nAgent:\n\topinion: -1..1\n\ttrust: [AgentId -> 0..1]\n\nInteraction:\n\tspeaker: AgentId\n\tlistener: AgentId\n"
+        },
+        {
+          "language": "",
+          "content": "MAX_INFLUENCE = 0.2\n\nsim_step(\n\tmut world: World,\n\tinteraction: Interaction\n):\n\tspeaker = world.agents[interaction.speaker]\n\tlistener = world.agents[interaction.listener]\n\tweight = influence(listener, interaction.speaker)\n\n\tnew_opinion = shift(\n\t\tlistener.opinion,\n\t\tspeaker.opinion,\n\t\tweight,\n\t)\n\tworld.agents[interaction.listener].opinion = new_opinion\n\n\ninfluence(\n\tlistener: Agent,\n\tspeaker: AgentId\n) -> 0..1:\n\tout = MAX_INFLUENCE * listener.trust[speaker]\n\n\nshift(\n\tcurrent: -1..1,\n\theard: -1..1,\n\tweight: 0..1\n) -> -1..1:\n\tout = current + weight * (heard - current)\n"
+        },
+        {
+          "language": "yml",
+          "content": "World(Effects):\n\tactors: [Actor]\n\thistory: [Action]\n\teffects: Effects\n\nActor:\n\tlabel: str\n\nAction:\n\tsender: ActorId\n\treceiver: ActorId\n"
+        },
+        {
+          "language": "",
+          "content": "sim_step(\n\tmut world: World(Effects)\n):\n\tprobabilities = next_action(world)\n\tchosen = sample(probabilities)\n\tworld.history.push(chosen)\n\nnext_action(\n\tworld: World(Effects)\n) -> [Action -> 0..1]:\n\n\tfor action in possible_actions(world.actors):\n\t\trates[action] = rate(world, action)\n\t\t\n\tout = normalize(rates)\n\nrate(\n\tworld: World(Effects),\n\taction: Action\n) -> 0..:\n\n\tscore = log_rate(world.effects, action, world.history)\n\tout = exp(score)\n"
+        },
+        {
+          "language": "yml",
+          "content": "Recency:\n\treply_weight: f64\n\nRecencyWorld: World(Recency)\n"
+        },
+        {
+          "language": "",
+          "content": "log_rate(\n\teffects: Recency,\n\taction: Action,\n\thistory: [Action],\n) -> f64:\n\n\tout = effects.reply_weight * recent_reply(action, history)\n"
+        },
+        {
+          "language": "yml",
+          "content": "RecencyParticipation:\n\treply_weight: f64\n\tparticipation: [ActorId -> f64]\n\nParticipationWorld: World(RecencyParticipation)\n"
+        },
+        {
+          "language": "",
+          "content": "log_rate(\n\teffects: RecencyParticipation,\n\taction: Action,\n\thistory: [Action],\n) -> f64:\n\n\treply = effects.reply_weight * recent_reply(action, history)\n\tsender = effects.participation[action.sender]\n\treceiver = effects.participation[action.receiver]\n\tout = reply + sender + receiver\n"
+        },
+        {
+          "language": "yml",
+          "content": "World:\n\tprey: 0..\n\tpredators: 0..\n\trates: Rates\n\nRates:\n\tprey_birth: 0..\n\tpredation: 0..\n\tpredator_growth: 0..\n\tpredator_death: 0..\n"
+        },
+        {
+          "language": "",
+          "content": "MIN_POPULATION = 0\n\nsim_step(\n\tmut world: World,\n\tdt: 0..\n) -> ():\n\n\tprey_eaten = eaten(world)\n\tprey_births = world.rates.prey_birth * world.prey\n\tpredator_births = world.rates.predator_growth * prey_eaten\n\tpredator_deaths = world.rates.predator_death * world.predators\n\n\tnext_prey = world.prey + dt * (prey_births - prey_eaten)\n\tnext_predators = world.predators + dt * (\n\t\tpredator_births - predator_deaths\n\t)\n\n\tworld.prey = max(MIN_POPULATION, next_prey)\n\tworld.predators = max(MIN_POPULATION, next_predators)\n\neaten(\n\tworld: World\n) -> 0..:\n\n\tout = world.rates.predation * world.prey * world.predators\n"
+        }
+      ]
+    },
+    "Guides/LLM Extraction Rules.md": {
+      "sha256": "c933013acb1fedafe96b4f2ce0e07bb9f3c630b8ac67ebb29ee1d0919fcc85e8",
+      "blocks": [
+        {
+          "language": "md ",
+          "content": "## My Section\n> XYZ extracted via LLM\n\nLorem ipsum dolorem ....\n"
+        },
+        {
+          "language": "md ",
+          "content": "## Model\n> Model extracted via LLM acording to [[Model Notation]] \n\nLorem ipsum dolorem ....\n"
+        },
+        {
+          "language": "md ",
+          "content": "## Model\n> ⚠️ Model extraction skipped: full text unavailable; the abstract does not specify the model's rules.\n"
+        },
+        {
+          "language": "md ",
+          "content": "## Text\n- my statement[^r1]\n  \n## LLM Justification\n[^r1]: ... \n"
+        }
+      ]
+    },
+    ".obsidian/plugins/typst-for-obsidian/packages/preview/fontawesome/0.6.0/README.md": {
+      "sha256": "843ef598f98e7125729e840998934711a647a3b4feaf6ecc209bbc9c0ba9b043",
+      "blocks": [
+        {
+          "language": "typst",
+          "content": "#fa-use-pro()                 // Enable Pro sets\n\n#fa-icon(\"chess-queen-piece\") // Use icons from Pro sets\n"
+        },
+        {
+          "language": "typst",
+          "content": "#fa-user-alt-6() // Get the v6 unicode and render the icon\n#fa-user-alt-7() // Get the v7 unicode and render the icon\n#fa-user-alt()   // The same as #fa-user-alt-7()\n"
+        }
+      ]
+    },
+    ".obsidian/plugins/typst-for-obsidian/packages/preview/glossarium/0.5.10/README.md": {
+      "sha256": "8f1a9e67158712470bfa7dffa5b663689dda6d2f4ff51e3f1fffe06446e2bc0c",
+      "blocks": [
+        {
+          "language": "typ",
+          "content": "#import \"@preview/glossarium:0.5.10\": make-glossary, register-glossary, print-glossary, gls, glspl\n#show: make-glossary\n#let entry-list = (\n  (\n    key: \"kuleuven\",\n    short: \"KU Leuven\",\n    long: \"Katholieke Universiteit Leuven\",\n    description: \"A university in Belgium.\",\n  ),\n  // Add more terms\n)\n#register-glossary(entry-list)\n// Your document body\n#print-glossary(\n entry-list\n)\n"
+        },
+        {
+          "language": "typ",
+          "content": "#import \"@preview/glossarium:0.5.10\": make-glossary, register-glossary, print-glossary, gls, glspl\n"
+        },
+        {
+          "language": "typ",
+          "content": "#import \"glossarium.typ\": make-glossary, register-glossary, print-glossary, gls, glspl\n"
+        },
+        {
+          "language": "typ",
+          "content": "#show: make-glossary\n"
+        },
+        {
+          "language": "typ",
+          "content": "#register-glossary(entry-list)\n"
+        },
+        {
+          "language": "typ",
+          "content": "#let entry-list = (\n  // Use key as short by default\n  (\n    key: \"kuleuven\",\n  ),\n  // Add SHORT\n  (\n    key: \"kuleuven\",\n    short: \"KU Leuven\"\n  ),\n  // Add LONG\n  (\n    key: \"unamur\",\n    short: \"UNamur\",\n    long: \"Namur University\",\n  ),\n  // Add a DESCRIPTION\n  (\n    key: \"oidc\",\n    short: \"OIDC\",\n    long: \"OpenID Connect\",\n    description: [\n      OpenID is an open standard and decentralized authentication protocol promoted by the non-profit\n      #link(\"https://en.wikipedia.org/wiki/OpenID#OpenID_Foundation\")[OpenID Foundation].\n    ],\n  ),\n  // Add a PLURAL form\n  (\n    key: \"potato\",\n    short: \"potato\",\n    // \"plural\" will be used when \"short\" should be pluralized\n    plural: \"potatoes\",\n  ),\n  // Add a LONGPLURAL form\n  (\n    key: \"dm\",\n    short: \"DM\",\n    long: \"diagonal matrix\",\n    // \"longplural\" will be used when \"long\" should be pluralized\n    longplural: \"diagonal matrices\",\n    description: \"Probably some math stuff idk\",\n  ),\n  // Add a GROUP\n  (\n    key: \"kuleuven\",\n    short: \"KU Leuven\",\n    // The terms are displayed by groups in the glossary\n    group: \"Universities\",\n  ),\n  // Add a CUSTOM entry\n  (\n    key: \"c\",\n    short: $c$,\n    description: \"Speed of light in vacuum\",\n    // The custom key will be ignored by the default print-glossary function\n    custom: (unit: $op(\"m s\")^(-1)$),\n  ),\n)\n"
+        },
+        {
+          "language": "typ",
+          "content": "#print-glossary(entry-list)\n"
+        },
+        {
+          "language": "typ",
+          "content": "// Referencing the OIDC term using gls\n#gls(\"oidc\")\n// Displaying the first form forcibly\n#gls(\"oidc\", first: true)\n// Do not add a link\n#gls(\"oidc\", link: false)\n// Do not update the usage count. If done on first use, the next reference will trigger printing the full version.\n#gls(\"oidc\", update: false)\n"
+        },
+        {
+          "language": "mermaid",
+          "content": "graph TD;\n    gls;\n    gls-x[\"**Access values**\"<br>-----------------<br>gls-key<br>gls-short<br>gls-artshort<br>gls-plural<br>gls-long<br>gls-artlong<br>gls-longplural<br>gls-description<br>gls-group<br>gls-sort<br>gls-custom];\n    xgls[\"**Capitalizing, <br>Article, Plural**\"<br>-----------------<br>Gls<br>agls<br>Agls<br>glspl<br>Glspl];\n    at-syntax[\"**@key syntax <br> modifiers**\"<br>-----------------<br>@key:pl<br>@Key<br>@Key:pl<br>@key:short<br>@key:long<br>@key:description<br>@key:longplural<br>@key:custom];\n\n    gls --> gls-x;\n    gls --> xgls;\n    gls --> at-syntax;\n"
+        },
+        {
+          "language": "typ",
+          "content": "// Prints the full version on first usage, short afterwards\n@oidc\n// Will always display the long version\n@oidc:long\n// Display the plural form\n@oidc:pl\n"
+        },
+        {
+          "language": "typ",
+          "content": "print-glossary(\n  entry-list,\n  // default shorthands\n  shorthands: (\"plural\", \"capitalize\", \"capitalize-plural\", \"short\", \"long\"),\n)\n"
+        },
+        {
+          "language": "typ",
+          "content": "#glspl(\"potato\")\n"
+        },
+        {
+          "language": "typ",
+          "content": "@potato:pl\n"
+        },
+        {
+          "language": "typ",
+          "content": "#Gls(\"ref\")\n"
+        },
+        {
+          "language": "typ",
+          "content": "@Ref\n@Ref:pl\n"
+        },
+        {
+          "language": "typ",
+          "content": "#gls(\"oidc\", display: \"whatever you want\")\n"
+        },
+        {
+          "language": "typ",
+          "content": "#show link: set text(fill: blue.darken(60%))\n// links are now blue !\n"
+        },
+        {
+          "language": "typ",
+          "content": "#show: make-glossary\n\n#show ref: it => {\n  let el = it.element\n  if el != none and el.func() == figure and el.kind == \"glossarium_entry\" {\n    // Make the glossarium entry references dark blue\n    text(fill: blue.darken(60%), it)\n  } else {\n    // Other references as usual.\n    it\n  }\n}\n"
+        },
+        {
+          "language": "typ",
+          "content": "#show link: it => {\n  if type(it.dest) == str {\n    // Style links to strings red\n    text(fill: red, it)\n  } else {\n    // Return other links as usual\n    it\n  }\n}\n"
+        }
+      ]
+    },
+    ".obsidian/plugins/typst-for-obsidian/packages/preview/typsidian/0.0.3/README.md": {
+      "sha256": "08a4185eb4003d2e39214f629fe65630436509414ee7335d0ce2588e07991bab",
+      "blocks": [
+        {
+          "language": "typst",
+          "content": "#import \"@preview/typsidian:0.0.3\": *\n#show: typsidian.with(\n  theme: \"light\",\n  title: \"My Document\",\n  course: \"My Course\",\n  show-index: true,\n  index-entry-list: (\n    (\n      key: \"example\",\n      short: \"An example index entry\"\n    ),\n  )\n)\n"
+        },
+        {
+          "language": "typst",
+          "content": "#import \"@local/typsidian:0.0.3\": *\n#show: typsidian.with(\n  theme: \"dark\",\n  title: \"My Document\",\n  course: \"CS4999\",\n  standalone: false\n)\n"
+        }
+      ]
+    },
+    ".obsidian/plugins/typst-for-obsidian/packages/preview/zebraw/0.6.0/README_zh.md": {
+      "sha256": "d1d57a2fb4ceb181f7a6b2949b53792d6e2fa2feed504772ea6e074abb1c51e6",
+      "blocks": [
+        {
+          "language": "`typ",
+          "content": "#import \"@preview/zebraw:0.6.0\": *\n#show: zebraw\n\n"
+        },
+        {
+          "language": "",
+          "content": ""
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  // 第一行行号将是 2。\n  numbering-offset: 1,\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  numbering: false,\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  numbering: (\n    ([\\+], [\\*], [\\#], [\\-]),\n  ),\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  numbering-separator: true,\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#let code = ```typ\n#grid(\n  columns: (1fr, 1fr),\n  [Hello],\n  [world!],\n)\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_8.svg)\n\n#### 行高亮\n\n通过将 `highlight-lines` 参数传递给 `zebraw` 函数来高亮代码块中的特定行。`highlight-lines` 参数接受单个行号或行号数组。\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_9.svg)\n\n#### 注释\n\n通过将行号和注释的数组传递给 `highlight-lines` 参数来为高亮行添加解释性注释。\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_10.svg)\n\n注释以标志字符开头，默认是 `\">\"`。通过设置 `comment-flag` 参数来更改此标志：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_11.svg)\n\n要完全禁用标志功能，请将空字符串 `\"\"` 传递给 `comment-flag` 参数（这也会禁用注释缩进）：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_12.svg)\n\n#### 多种高亮颜色\n\n您可以为特定的高亮行分配不同的颜色。有两种方法可以实现：\n\n1. **每行颜色**：通过在 `highlight-lines` 数组中的每个元组中添加颜色作为第二个元素来直接指定颜色：\n   ````typ\n   #zebraw(\n     highlight-lines: (\n       (1, rgb(\"#edb4b0\").lighten(50%)),\n       (2, rgb(\"#a4c9a6\").lighten(50%)),\n     ),\n     ```python\n     - device = \"cuda\"\n     + device = accelerator.device\n       model.to(device)\n     ```,\n   )\n   ````\n\n2. **循环颜色**：将颜色数组传递给 `highlight-color`，这些颜色将循环应用于高亮行：\n   ````typ\n   #zebraw(\n     highlight-lines: (1, 2, 3),\n     highlight-color: (\n       rgb(\"#edb4b0\"),\n       rgb(\"#a4c9a6\"),\n       rgb(\"#94e2d5\")\n     ).map(c => c.lighten(70%)),\n     ```python\n     line 1\n     line 2\n     line 3\n     ```,\n   )\n   ````\n\n您还可以将每行颜色与默认 `highlight-color` 混合。没有特定颜色的行将使用默认颜色：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_13.svg)\n\n当将颜色与注释组合时，颜色应在元组中的注释之前：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_14.svg)\n\n#### 页眉和页脚\n\n您可以为代码块添加页眉和页脚。一种方法是在 `highlight-lines` 参数中使用特殊键：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_15.svg)\n\n或者，使用专用的 `header` 和 `footer` 参数以获得更清洁的代码：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_16.svg)\n\n#### 语言标签\n\n通过将 `lang` 设置为 `true` 来在代码块的右上角显示浮动语言标识符标签：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_17.svg)\n\n通过将字符串或内容传递给 `lang` 参数来自定义语言显示：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_18.svg)\n\n#### 缩进线、悬挂缩进和快速预览\n\n通过将正整数传递给 `indentation` 参数来显示缩进引导线，表示每个缩进级别的空格数：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_19.svg)\n\n通过将 `hanging-indent` 设置为 `true` 来启用悬挂缩进：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_20.svg)\n\n缩进线可能会减慢预览性能。为了更快的预览，通过将 `true` 传递给 `zebraw-init` 中的 `fast-preview` 参数或在 CLI 中使用 `zebraw-fast-preview` 来启用快速预览模式。这将缩进线渲染为简单的 `|` 字符：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_21.svg)\n\n#### 主题\n\nZebraw 包含内置主题。欢迎提交额外主题的 PR！\n\n"
+        },
+        {
+          "language": "rust",
+          "content": "pub fn fibonacci_reccursive(n: i32) -> u64 {\n    if n < 0 {\n        panic!(\"{} is negative!\", n);\n    }\n    match n {\n        0 => panic!(\"zero is not a right argument to fibonacci_reccursive()!\"),\n        1 | 2 => 1,\n        3 => 2,\n        _ => fibonacci_reccursive(n - 1) + fibonacci_reccursive(n - 2),\n    }\n}\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_22.svg)\n\n"
+        },
+        {
+          "language": "rust",
+          "content": "pub fn fibonacci_reccursive(n: i32) -> u64 {\n    if n < 0 {\n        panic!(\"{} is negative!\", n);\n    }\n    match n {\n        0 => panic!(\"zero is not a right argument to fibonacci_reccursive()!\"),\n        1 | 2 => 1,\n        3 => 2,\n        _ => fibonacci_reccursive(n - 1) + fibonacci_reccursive(n - 2),\n    }\n}\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_23.svg)\n\n#### （实验性）HTML 导出\n\n请参阅 [example-html.typ](example-html.typ) 或 [GitHub Pages](https://hongjr03.github.io/typst-zebraw/) 以获取更多信息。\n\n### 自定义\n\n在您的文档中有三种自定义代码块的方式：\n\n1. **每块自定义**：使用带有参数的 `#zebraw()` 函数手动样式化特定块。\n2. **局部自定义**：使用 `#show: zebraw.with()` 将样式应用于所有后续原始块。这会影响 `#show` 规则之后的所有原始块，**除了** 手动使用 `#zebraw()` 创建的那些。\n3. **全局自定义**：使用 `#show: zebraw-init.with()` 来影响规则之后的所有原始块，**包括** 手动使用 `#zebraw()` 创建的那些。通过不带参数使用 `zebraw-init` 来重置为默认值。\n\n#### 内边距\n\n通过将字典传递给 `inset` 参数来自定义每个代码行周围的填充（行号不受影响）：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_24.svg)\n\n#### 圆角\n\n通过将长度传递给 `radius` 参数来自定义代码块的角半径，与内边距无关。默认值为 `0.34em`。\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_25.svg)\n\n您还可以设置 `radius: 0pt` 以获得尖角：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_26.svg)\n\n#### 颜色\n\n使用单一颜色或交替颜色的数组来自定义背景颜色：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_27.svg)\n\n使用 `highlight-color` 参数设置标记行的突出显示颜色：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_28.svg)\n\n使用 `comment-color` 参数更改注释背景颜色：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_29.svg)\n\n使用 `lang-color` 参数设置语言标签背景颜色：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_30.svg)\n\n#### 字体\n\n通过将字典传递给 `comment-font-args`、`lang-font-args` 或 `numbering-font-args` 参数分别为注释、语言标签和行号自定义字体属性。\n\n如果未提供自定义 `lang-font-args`，语言标签将继承注释字体样式：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_31.svg)\n\n具有自定义语言标签样式的示例：\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_32.svg)\n\n#### 扩展\n\n默认情况下启用垂直扩展。当有页眉或页脚时，它将自动禁用。\n\n"
+        }
+      ]
+    },
+    ".obsidian/plugins/typst-for-obsidian/packages/preview/zebraw/0.6.0/README.md": {
+      "sha256": "337f9a3367a9820e45a84cd1eabfc80994c4ad57e0e33dbe9318392b5903fd7f",
+      "blocks": [
+        {
+          "language": "`typ",
+          "content": "#import \"@preview/zebraw:0.6.0\": *\n#show: zebraw\n\n"
+        },
+        {
+          "language": "",
+          "content": ""
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  // The first line number will be 2.\n  numbering-offset: 1,\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  numbering: false,\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  numbering: (\n    ([\\+], [\\*], [\\#], [\\-]),\n  ),\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#zebraw(\n  numbering-separator: true,\n  ```typ\n  #grid(\n    columns: (1fr, 1fr),\n    [Hello], [world!],\n  )\n  ```\n)\n"
+        },
+        {
+          "language": "`typ",
+          "content": "#let code = ```typ\n#grid(\n  columns: (1fr, 1fr),\n  [Hello],\n  [world!],\n)\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_8.svg)\n\n#### Line Highlighting\n\nHighlight specific lines in the code block by passing the `highlight-lines` parameter to the `zebraw` function. The `highlight-lines` parameter accepts either a single line number or an array of line numbers.\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_9.svg)\n\n#### Comments\n\nAdd explanatory comments to highlighted lines by passing an array of line numbers and comments to the `highlight-lines` parameter.\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_10.svg)\n\nComments begin with a flag character, which is `\">\"` by default. Change this flag by setting the `comment-flag` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_11.svg)\n\nTo disable the flag feature entirely, pass an empty string `\"\"` to the `comment-flag` parameter (this also disables comment indentation):\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_12.svg)\n\n#### Multiple Highlight Colors\n\nYou can assign different colors to specific highlighted lines. There are two ways to achieve this:\n\n1. **Per-line colors**: Specify colors directly in the `highlight-lines` array by adding a color as the second element in each tuple:\n   ````typ\n   #zebraw(\n     highlight-lines: (\n       (1, rgb(\"#edb4b0\").lighten(50%)),\n       (2, rgb(\"#a4c9a6\").lighten(50%)),\n     ),\n     ```python\n     - device = \"cuda\"\n     + device = accelerator.device\n       model.to(device)\n     ```,\n   )\n   ````\n\n2. **Cyclic colors**: Pass an array of colors to `highlight-color`, which will be applied cyclically to the highlighted lines:\n   ````typ\n   #zebraw(\n     highlight-lines: (1, 2, 3),\n     highlight-color: (\n       rgb(\"#edb4b0\"),\n       rgb(\"#a4c9a6\"),\n       rgb(\"#94e2d5\")\n     ).map(c => c.lighten(70%)),\n     ```python\n     line 1\n     line 2\n     line 3\n     ```,\n   )\n   ````\n\nYou can also mix per-line colors with a default `highlight-color`. Lines without specific colors will use the default:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_13.svg)\n\nWhen combining colors with comments, the color should come before the comment in the tuple:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_14.svg)\n\n#### Headers and Footers\n\nYou can add headers and footers to code blocks. One approach is to use special keys in the `highlight-lines` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_15.svg)\n\nAlternatively, use the dedicated `header` and `footer` parameters for cleaner code:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_16.svg)\n\n#### Language Tab\n\nDisplay a floating language identifier tab in the top-right corner of the code block by setting `lang` to `true`:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_17.svg)\n\nCustomize the language display by passing a string or content to the `lang` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_18.svg)\n\n#### Indentation Lines, Hanging Indentation and Fast Preview\n\nDisplay indentation guides by passing a positive integer to the `indentation` parameter, representing the number of spaces per indentation level:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_19.svg)\n\nEnable hanging indentation by setting `hanging-indent` to `true`:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_20.svg)\n\nIndentation lines can slow down preview performance. For faster previews, enable fast preview mode by passing `true` to the `fast-preview` parameter in `zebraw-init` or by using `zebraw-fast-preview` in the CLI. This renders indentation lines as simple `|` characters:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_21.svg)\n\n#### Themes\n\nZebraw includes built-in themes. PRs for additional themes are welcome!\n\n"
+        },
+        {
+          "language": "rust",
+          "content": "pub fn fibonacci_reccursive(n: i32) -> u64 {\n    if n < 0 {\n        panic!(\"{} is negative!\", n);\n    }\n    match n {\n        0 => panic!(\"zero is not a right argument to fibonacci_reccursive()!\"),\n        1 | 2 => 1,\n        3 => 2,\n        _ => fibonacci_reccursive(n - 1) + fibonacci_reccursive(n - 2),\n    }\n}\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_22.svg)\n\n"
+        },
+        {
+          "language": "rust",
+          "content": "pub fn fibonacci_reccursive(n: i32) -> u64 {\n    if n < 0 {\n        panic!(\"{} is negative!\", n);\n    }\n    match n {\n        0 => panic!(\"zero is not a right argument to fibonacci_reccursive()!\"),\n        1 | 2 => 1,\n        3 => 2,\n        _ => fibonacci_reccursive(n - 1) + fibonacci_reccursive(n - 2),\n    }\n}\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_23.svg)\n\n#### (Experimental) HTML Export\n\nSee [example-html.typ](example-html.typ) or [GitHub Pages](https://hongjr03.github.io/typst-zebraw/) for more information.\n\n### Customization\n\nThere are three ways to customize code blocks in your document:\n\n1. **Per-block customization**: Manually style specific blocks using the `#zebraw()` function with parameters.\n2. **Local customization**: Apply styling to all subsequent raw blocks with `#show: zebraw.with()`. This affects all raw blocks after the `#show` rule, **except** those created manually with `#zebraw()`.\n3. **Global customization**: Use `#show: zebraw-init.with()` to affect **all** raw blocks after the rule, **including** those created manually with `#zebraw()`. Reset to defaults by using `zebraw-init` without parameters.\n\n#### Inset\n\nCustomize the padding around each code line(numberings are not affected) by passing a dictionary to the `inset` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_24.svg)\n\n#### Radius\n\nCustomize the corner radius of code blocks independently from the inset by passing a length to the `radius` parameter. The default value is `0.34em`.\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_25.svg)\n\nYou can also set `radius: 0pt` for sharp corners:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_26.svg)\n\n#### Colors\n\nCustomize the background color with a single color or an array of alternating colors:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_27.svg)\n\nSet the highlight color for marked lines with the `highlight-color` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_28.svg)\n\nChange the comment background color with the `comment-color` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_29.svg)\n\nSet the language tab background color with the `lang-color` parameter:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_30.svg)\n\n#### Font\n\nCustomize font properties for comments, language tabs, and line numbers by passing a dictionary to the `comment-font-args`, `lang-font-args`, or `numbering-font-args` parameters respectively.\n\nIf no custom `lang-font-args` are provided, language tabs inherit the comment font styling:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_31.svg)\n\nExample with custom language tab styling:\n\n"
+        },
+        {
+          "language": "`",
+          "content": "\n![typst-frame](assets/frame_32.svg)\n\n#### Extend\n\nExtend at vertical is enabled at default. When there's header or footer it will be automatically disabled.\n\n"
+        }
+      ]
+    },
+    ".obsidian/plugins/typst-for-obsidian/packages/preview/showybox/2.0.4/README.md": {
+      "sha256": "145493c926f24a96ef71184e798399e53f8aca8f6a39472444f0a98b114ea6b9",
+      "blocks": [
+        {
+          "language": "typst",
+          "content": "#import \"@preview/showybox:2.0.4\": showybox\n\n#showybox(\n  [Hello world!]\n)\n"
+        },
+        {
+          "language": "typst",
+          "content": "// First showybox\n#showybox(\n  frame: (\n    border-color: red.darken(50%),\n    title-color: red.lighten(60%),\n    body-color: red.lighten(80%)\n  ),\n  title-style: (\n    color: black,\n    weight: \"regular\",\n    align: center\n  ),\n  shadow: (\n    offset: 3pt,\n  ),\n  title: \"Red-ish showybox with separated sections!\",\n  lorem(20),\n  lorem(12)\n)\n\n// Second showybox\n#showybox(\n  frame: (\n    dash: \"dashed\",\n    border-color: red.darken(40%)\n  ),\n  body-style: (\n    align: center\n  ),\n  sep: (\n    dash: \"dashed\"\n  ),\n  shadow: (\n\t  offset: (x: 2pt, y: 3pt),\n    color: yellow.lighten(70%)\n  ),\n  [This is an important message!],\n  [Be careful outside. There are dangerous bananas!]\n)\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/Affect control processes- Intelligent affective interaction using a partially observable Markov decision process.md": {
+      "sha256": "1c37b8715aaabd1e885ef9979a639b108262c44e5070d26a832f89b314b21044",
+      "blocks": [
+        {
+          "language": "",
+          "content": "BayesAct:\n  state: {application_state: X[including_interaction_turn], fundamentals: F[9], transients: T[9]}\n  observations: {application: Omega_x, affect: Omega_f}\n  actions: {propositional: A, affective_delivery: Ba}\n  belief: distribution_over(X, F, T)\n  transition: {application: problem_specific, transient: turn_conditioned_ACT_impression_map, fundamental: deflection_and_inertia}\n  reward: {task: R_x, affective: R_s_from_negative_deflection}\n\nEPA:\n  dimensions: [evaluation, potency, activity]\n  fundamentals_and_transients: [agent, behaviour, client]  # BayesAct encoding\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/A causal test of the strength of weak ties.md": {
+      "sha256": "bb55908fe4d5cb92c73df95adb62e75ee0da4b1a8ae918e6dcdcf9174ca0a00b",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "Experiment:\n  members: [Member]\n  randomized_variant: Variant\n  observations_2015: [NewTie -> JobTransmission]\n  observations_2019: [Member -> JobApplications, JobTransmissions]\n\nTie:\n  bilateral_message_count: 0..\n  mutual_connections: 0..\n  structural_strength: MutualConnections / (DegreeI + DegreeJ - MutualConnections - 2)\n  is_sequential_job_tie: bool\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md": {
+      "sha256": "197a7cea946d88e811f9236bf0939094b225007a43a67b9f5c1589d70ab2fc27",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "Dyad:\n  ego: PersonId\n  alter: PersonId\n  ego_nominates_alter: bool\n  alter_nominates_ego: bool\n  tie_strength: f32\n  social_embeddedness: f32\n  social_centrality_difference: f32\n\nInterventionRecord:\n  ego: PersonId\n  activity_ratio_p2_over_p1: f32\n  treatment: Control | PeerSee | PeerReward\n"
+        },
+        {
+          "language": "",
+          "content": "fit_activity_regression(\n  records: [InterventionRecord],\n  dyads: [Dyad]\n): ...\n\npredict_tie_type(\n  dyads: [Dyad]\n): ...\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/Agent-Based Modeling to Inform Online Community Design- Impact of Topical Breadth- Message Volume- and Discussion Moderation on Member Commitment and Contribution.md": {
+      "sha256": "bb5dae39c101d5b4c762ab915ebcd7a58bb95d47cf55991da88afe3dc1f367d1",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "Community:\n  members: [Member]\n  messages: [Message]\n  topic_breadth: [1, 5, 9]\n  mean_messages_per_day: [10, 15, 20]\n  moderation: [none, community_level, personalized]\n\nMember:\n  interests: [Topic]\n  accumulated_benefits: BenefitVector\n  costs: ParticipationCosts\n  activity: active_or_inactive\n\nBenefitVector:\n  information_from_reading: value\n  information_from_sharing: value\n  identity: value\n  interpersonal_bonds: value\n  enjoyment: value\n  reputation: value\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/A Schelling model with adaptive tolerance.md": {
+      "sha256": "3c15d98e65a54d57eddd6728ebdc18253d81f6a7a413ced6cd9ee798a44ad9be",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "World:\n  lattice: [Site]\n  agents: [Agent]\n  parameters: Parameters\n\nAgent:\n  group: Native | Migrant\n  position: SiteId\n  tolerance: 0.05..0.95\n\nParameters:\n  tolerance_step: Uniform(0.00001, 0.001)\n  candidate_vacancies: DiscreteUniform(25, 125)\n  final_density: Uniform(0.75, 0.98)\n  native_share: Uniform(0.02, 0.98)\n  migration_waves: 0 | 1 | 4 | 15 | 100\n\nConstants:\n  lattice_size: 50 * 50\n  migration_window_ticks: 1000\n  simulation_ticks: 20000\n  tolerance_bounds: 0.05..0.95\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/A Framework for Sequential Planning in Multi-Agent Settings.md": {
+      "sha256": "34d724c83ed33c04d3fc5f930d1b31b1bff1b7a6f4ebf920f45464e15ad60d0e",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "IPOMDP:\n  physical_states: [State]\n  self_actions: [Action]\n  observations: [Observation]\n  transition: ...\n  observation_model: ...\n  reward: ...\n  discount: 0..1\n\nInteractiveState:\n  physical: State\n  other_model: OtherModel\n\nOtherModel:\n  Subintentional: ...\n  Intentional:\n    belief: [InteractiveState -> 0..1]\n    frame: ...\n\nAgent:\n  belief: [InteractiveState -> 0..1]\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/An Agent-Based Model of Social Identity Dynamics.md": {
+      "sha256": "246f9a76a00a35a210fcb333da8b4f9bfe6e521f86f0f21ec834b065f42c6c43",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "World:\n\tpopulation_size: N\n\tinitial_identity_count: k0\n\tpreferred_distinctiveness: d_star  # shared and fixed across agents\n\tstructure: WellMixed | Lattice(L, r)\n\nAgent:\n\tidentity: SID\n\tlocation: lattice_site  # spatial condition only\n\tobserved_frequency: n_g / N  # well-mixed; local neighborhood fraction if spatial\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/AgentSociety 2- An Integrated Research Environment for Executable Social Science.md": {
+      "sha256": "556fb7caf2d5c2ee3eae0329fcbcb755ef58b16155d6a24b205d89c80cf56dc8",
+      "blocks": [
+        {
+          "language": "",
+          "content": "ResearchEnvironment:\n  human_researcher: approves_key_artifacts\n  AI_social_scientist:\n    workflow: [idea_and_literature, data_preparation, hypothesis,\n              experiment_design, execution, analysis, manuscript]\n  social_agents:\n    persistent_workspace: [profile, state, memory, logs, checkpoints]\n    per_tick: reason_over_context_then_act\n    available_actions: [direct_action, tool_use, skill_activation]\n  environment:\n    interface: structured_and_natural_language\n    modules: study_specific\n"
+        }
+      ]
+    },
+    "Literature/Papers/Entries/Bias Reduction in Social Networks Through Agent-Based Simulations.md": {
+      "sha256": "f66f5a96b5de8800a357e1fd5cc258a14519ca01a5d44a95786d6bd3c8e2de83",
+      "blocks": [
+        {
+          "language": "yml",
+          "content": "World:\n  users: [User]\n  edges: [FollowEdge]\n  tweets: [Tweet]\n  feed_policy: FeedPolicy\n  core_users: [CoreUser]\n  trait_prevalence: 0.05 | 0.15 | 0.50\n  tick: 0..36\n\nUser:\n  trait: 0..1 # fixed to 0 or 1\n  active: bool\n  likes: [TweetId]\n\nCoreUser:\n  user: UserId\n\nFeedPolicy:\n  Random: ...\n  ReverseChronological: ...\n  NeuralCollaborativeFiltering: ...\n  WideAndDeep: ...\n  MinimizeRho: ...\n\nTweet:\n  author: UserId\n  created_at: Tick\n"
+        },
+        {
+          "language": "",
+          "content": "sim_step(mut world: World):\n  activate_users(world, probability = 0.083)\n  generate_tweets(world, count_distribution = LogNormal(0.0, 1.0))\n  for user in world.core_users:\n    candidates = tweets_from_friends_and_friends_of_friends(user)\n    feed = select_feed(candidates, world.feed_policy, length = 30 | 50 | 100)\n    update_observed_edges(user, authors_and_sources(feed))\n    like_same_trait_tweet(probability = 0.20)\n    like_other_trait_tweet(probability = 0.05)\n  if world.tick == 24:\n    reset_observed_edges(world)\n  world.tick += 1\n"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "scope": "Structure only; independent source audit required",
+  "notes": [
+    {
+      "note": "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
+      "warnings": [
+        "fulltext unavailable"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/A Framework for Sequential Planning in Multi-Agent Settings.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/A Schelling model with adaptive tolerance.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/A causal test of the strength of weak ties.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/A meta-analytic test of intergroup contact theory.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Affect control processes- Intelligent affective interaction using a partially observable Markov decision process.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Agent-Based Modeling to Inform Online Community Design- Impact of Topical Breadth- Message Volume- and Discussion Moderation on Member Commitment and Contribution.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/AgentSociety 2- An Integrated Research Environment for Executable Social Science.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/AgentSociety- Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/An Agent-Based Model of Social Identity Dynamics.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Antecedents and Effects of Parasocial Relationships- A Meta-Analysis.md",
+      "warnings": [
+        "fulltext unavailable",
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Bias Reduction in Social Networks Through Agent-Based Simulations.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Birds of a Feather- Homophily in Social Networks.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Bond with Social Bot- A Hidden Markov Model of Parasocial Relationship Dynamics in Human-AI Interaction.md",
+      "warnings": [
+        "fulltext unavailable",
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Bounded Confidence Revisited- What We Overlooked- Underestimated- and Got Wrong.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Bridging Systems- Open Problems for Countering Destructive Divisiveness across Ranking- Recommenders- and Governance.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Building Successful Online Communities- Evidence-Based Social Design.md",
+      "warnings": [
+        "fulltext unavailable",
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Cognitive social structures.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Computational Modelling of Trust and Social Relationships.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Construct User Guide.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Contact Patterns in a High School- A Comparison between Data Collected Using Wearable Sensors- Contact Diaries and Friendship Surveys.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Dunbar-s Number in Motion- Agent-Based Simulations of Friendship Formation.md",
+      "warnings": [
+        "fulltext unavailable",
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Exploring Trade-Offs for Online Mental Health Matching- Agent-Based Modeling Study.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Exposure to opposing views on social media can increase political polarization.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Friendship Dynamics- Modelling Social Relationships through a Fuzzy Agent-Based Simulation.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Friendship networks and social status.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/From Individual to Society- A Survey on Social Simulation Driven by Large Language Model-based Agents.md",
+      "warnings": [
+        "fulltext unavailable",
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Generative agent-based modeling with actions grounded in physical- social- or digital space using Concordia.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/How many hours does it take to make a friend.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Humanoid Agents- Platform for Simulating Human-like Generative Agents.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Individual Motivations and Network Effects.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Interaction data from the Copenhagen Networks Study.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Introduction to stochastic actor-based models for network dynamics.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Like-minded sources on Facebook are prevalent but not polarizing.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Making and Breaking Parasocial Relationships with Human and Virtual Influencers- An Experience Sampling Study.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/On and Off the -Net- Scales for Social Capital in an Online Era.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Parasocial Interaction and Parasocial Relationship- Conceptual Clarification and a Critical Assessment of Measures.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Persistence of social signatures in human communication.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "warnings": [
+        "audit failed",
+        "fulltext unavailable"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The ODD Protocol for Describing Agent-Based and Other Simulation Models- A Second Update to Improve Clarity- Replication- and Structural Realism.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The Power of Social Cognition.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
+      "warnings": [
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
+      "warnings": [
+        "not audited"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Value-based large language model agent simulation for mutual evaluation of trust and interpersonal closeness.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Why Does Facebook Fail to Catalyze Diverse Friendship Formations.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    }
+  ]
+}

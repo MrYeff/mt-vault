@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-30",
+  "role": "strong source correction review; not independent re-audit",
+  "entries": [
+    {
+      "entry": 73,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+      "checked_claims": [
+        "Eq1 Poisson Tucker rates",
+        "Definitions1–4 constraints",
+        "Algorithm2 initialization and V U Y averaging G order",
+        "20 ordinary vs50SCA restarts",
+        "nonidentifiability and ordinary Wilks invalidity",
+        "splitLRT nullMLE/power/split caveats",
+        "CV five masks and testAUC"
+      ],
+      "findings": [
+        "prior note incorrectly suggested ordinary nested LRT sufficient",
+        "redundant Y must be ones; SCA requires K=C",
+        "SCA used50 starts, not20"
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "a61e711ec3d9d2acc19000661fdf76fc6912d6deb998e31ba15be17a78433142",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html",
+          "sha256": "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt",
+          "sha256": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+        }
+      ],
+      "footnote_definitions_complete": true
+    },
+    {
+      "entry": 75,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "findings": "six actual actions, reinforcement insertion, forgetting formula and notation conflict, Pareto activity limits, prompts and concrete intervention designs",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55.txt",
+          "sha256": "a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb.html",
+          "sha256": "26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb"
+        }
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "271a2ef2eb2a6950b0ee9a1ee0c47642d8d75d50ba75fa7884f92e271ef3f25a",
+      "footnote_definitions_complete": true
+    },
+    {
+      "entry": 74,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "findings": "server state, feed ordering and bounds, exact three-choice weighted menus and budget, churn-before-growth, calibrated weights, interest-feedback limits and evaluation graph",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+          "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e.html",
+          "sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e"
+        }
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "e5a9ad32fb6411fe27831961e660aa0d879b4ba69a840c9a3ed6741206b558e9",
+      "footnote_definitions_complete": true
+    },
+    {
+      "entry": 78,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "findings": "normative matching versus comparative fit, actual fit/distance/dispersion rules, group memory and normalized accessibility; rejected cheap-audit claim that Eq10 fixes a universal formula; concrete dictator/trash rules",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705.html",
+          "sha256": "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d.txt",
+          "sha256": "0cfd6339853ea65a4126780009dd144f7dd17a5f81705411864877977267632d"
+        }
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "72876cc14db691a3cc85ad9f2f263644cb2de608522ac8886851bdafb45883d3",
+      "footnote_definitions_complete": true
+    },
+    {
+      "entry": 80,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "findings": "Algorithm1 exact active-count schedule and follow-loop conflict, state/observations, primitive action mechanisms, recommender scoring and case-study configuration",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96.html",
+          "sha256": "b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+          "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32"
+        }
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "b94088cdd21b781c8d86b10b8ca9a18339c4aecf0eea5009dbdfd3c481fb645e",
+      "footnote_definitions_complete": true
+    },
+    {
+      "entry": 67,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "findings": "exact Alpha/rejection/accepted-link schedule, both opinion states/transitions, initial opinions, score definitions and CDF; discovered additional literal DJI u/v mismatch and retained it",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+          "sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+          "sha256": "53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60"
+        }
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "dacc7a11d9a08c65f94c9a5bbde80e8fc46a2a3e2a8b9bd932a72359a685bf11",
+      "footnote_definitions_complete": true
+    },
+    {
+      "entry": 76,
+      "status": "CORRECTED_AWAITING_INDEPENDENT_REAUDIT",
+      "findings": "payoff mapping, all three needs and exact investments, threshold alternatives, forecast learning and tested configurations; visually verified SD/lookback source conflict and vector learning equation",
+      "local_sources": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6.pdf",
+          "sha256": "54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b.txt",
+          "sha256": "732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b"
+        }
+      ],
+      "reference_snapshot_order_preserved": true,
+      "note_sha256": "8a157f25cb4c9cecafdb4db96d6a7e8476d3e2c7664bd17f7aa133ea2c2a5fda",
+      "footnote_definitions_complete": true,
+      "unresolved_bibliography": "Primary chapter has no bibliography; 28-page PDF ends atp102 acknowledgements; original snapshot0references. Consolidatedbookbibliography not obtained."
+    }
+  ],
+  "guides_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md",
+    "vault/Literature/Papers/Template.md"
+  ]
+}

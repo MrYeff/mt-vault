@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "selection": "First ten .md filenames in Literature/Papers/Entries, sorted lexicographically",
+  "extracted_at": "2026-09-29",
+  "records": [
+    {
+      "order": 1,
+      "note": "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://www.jstor.org/stable/20451153",
+      "full_text_access": false,
+      "extraction_basis": "published abstract only; model extraction skipped",
+      "audit_status": "abstract-only claims independently audited; fulltext unavailable for model",
+      "bibliography_links": 100
+    },
+    {
+      "order": 2,
+      "note": "Literature/Papers/Entries/A Framework for Sequential Planning in Multi-Agent Settings.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume24/gmytrasiewicz05a.pdf",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 35
+    },
+    {
+      "order": 3,
+      "note": "Literature/Papers/Entries/A Schelling model with adaptive tolerance.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5839580/",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 42
+    },
+    {
+      "order": 4,
+      "note": "Literature/Papers/Entries/A causal test of the strength of weak ties.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://gwern.net/doc/sociology/technology/2022-rajkumar.pdf",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 45
+    },
+    {
+      "order": 5,
+      "note": "Literature/Papers/Entries/A meta-analytic test of intergroup contact theory.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://lindatropp.com/media/pages/lab/academic-publications/5f31f72ec8-1735348299/pettigrew-tropp-meta-analytic-test.pdf",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed without substantive correction",
+      "bibliography_links": 168
+    },
+    {
+      "order": 6,
+      "note": "Literature/Papers/Entries/Affect control processes- Intelligent affective interaction using a partially observable Markov decision process.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://cs.uwaterloo.ca/~jhoey/teaching/cs886-affect/papers/bayesact.pdf",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 178
+    },
+    {
+      "order": 7,
+      "note": "Literature/Papers/Entries/Agent-Based Modeling to Inform Online Community Design- Impact of Topical Breadth- Message Volume- and Discussion Moderation on Member Commitment and Contribution.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://carlsonschool.umn.edu/sites/carlsonschool.umn.edu/files/2018-10/RenKraut-HCI2014-AgentBasedModel.pdf",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 118
+    },
+    {
+      "order": 8,
+      "note": "Literature/Papers/Entries/AgentSociety 2- An Integrated Research Environment for Executable Social Science.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://arxiv.org/html/2607.11895",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 111
+    },
+    {
+      "order": 9,
+      "note": "Literature/Papers/Entries/AgentSociety- Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://arxiv.org/html/2502.08691",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 120
+    },
+    {
+      "order": 10,
+      "note": "Literature/Papers/Entries/An Agent-Based Model of Social Identity Dynamics.md",
+      "extractor_model": "gpt-6-luna",
+      "source_read": "https://www.jasss.org/15/4/7.html",
+      "full_text_access": true,
+      "extraction_basis": "published full text",
+      "audit_status": "independent full-text audit passed after corrections",
+      "bibliography_links": 50
+    }
+  ],
+  "notes": "Original import identifiers, source candidates, and reference provenance are in .automation/import/papers.json. OpenAlex key was not needed or stored. Bibliography link count is a structural count, not source completeness verification."
+}

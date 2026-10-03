@@ -1,0 +1,8 @@
+{
+  "autoSync": true,
+  "bidirectionalSync": false,
+  "autoConvertToNotebookOnRun": true,
+  "toolingPython": "/home/max/Documents/Projects/master-thesis/vault/.jupymd/bin/python",
+  "notebookEditorCommand": "jupyter-lab",
+  "enableCodeBlocks": true
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-30",
+  "scope": "lexicographic entries 54-66",
+  "workflow": "Source-first reimport; initial independent audit completed for all entries; revisions applied to failed entries; independent re-audit pending for those revisions.",
+  "notes": [
+    {
+      "lexicographic_entry": 54,
+      "filename": "Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "source_read": "https://arxiv.org/html/1909.04847",
+      "source_access": "arXiv abstract and linked full-text record; article text available",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.48550/arxiv.1909.04847",
+      "reference_links_preserved_in_original_order": 58,
+      "authors_retained_existing_vault_notes": 8,
+      "warnings": [
+        "Initial independent audit passed"
+      ],
+      "sha256_original": "ac51c78b90f2ba6b051fbd7dc421418cd3b2cd0ce7d18244e8dffa33fd69a470"
+    },
+    {
+      "lexicographic_entry": 55,
+      "filename": "Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+      "source_read": "https://arxiv.org/abs/2007.16120",
+      "source_access": "arXiv abstract and linked full-text record; full text also located on university-hosted publisher PDF",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1016/j.inffus.2020.12.001",
+      "reference_links_preserved_in_original_order": 254,
+      "authors_retained_existing_vault_notes": 5,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "af47c69023f5b922a75a01dc27afe4cfeb279c4801ad7d7ecc161105eede28bc",
+      "model_revised_from_full_text": true
+    },
+    {
+      "lexicographic_entry": 56,
+      "filename": "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "source_read": "https://www.nature.com/articles/s41586-026-10536-1",
+      "source_access": "Nature article page and supplementary record are now searchable; abstract and published results verified, with article metadata available.",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1038/s41586-026-10536-1",
+      "reference_links_preserved_in_original_order": 59,
+      "authors_retained_existing_vault_notes": 11,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "32c4b2617888516a33b11363af9a4bea91d79c03f04fd5c9c177b2eb948c2cae",
+      "supplementary_source": "https://www.nature.com/articles/s41586-026-10536-1"
+    },
+    {
+      "lexicographic_entry": 57,
+      "filename": "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "source_read": "https://www.jasss.org/27/2/4/4.pdf",
+      "source_access": "JASSS publisher PDF; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.18564/jasss.5300",
+      "reference_links_preserved_in_original_order": 51,
+      "authors_retained_existing_vault_notes": 8,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "75ff72d612f0326e6e0fa5a38792ca172ee0704a629776b26a1faa9b5d22afb3"
+    },
+    {
+      "lexicographic_entry": 58,
+      "filename": "Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+      "source_read": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
+      "source_access": "Science article PDF hosted by Stanford research lab; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1126/science.adu5584",
+      "reference_links_preserved_in_original_order": 82,
+      "authors_retained_existing_vault_notes": 6,
+      "warnings": [
+        "Initial independent audit passed"
+      ],
+      "sha256_original": "b9d91a6cf543a3cf57d2bb6e0d5b15125b5fa646b7caf89db25845d634343792"
+    },
+    {
+      "lexicographic_entry": 59,
+      "filename": "Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "source_read": "https://arxiv.org/html/2311.16586",
+      "source_access": "arXiv abstract and linked full-text record; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1145/3656481",
+      "reference_links_preserved_in_original_order": 63,
+      "authors_retained_existing_vault_notes": 6,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "bb7a50616a7f1fe3df54b97a54873bf6547ab534e741b71702bfcb2be263042e",
+      "model_revised_from_full_text": true
+    },
+    {
+      "lexicographic_entry": 60,
+      "filename": "Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "source_read": "https://par.nsf.gov/servlets/purl/10187146",
+      "source_access": "NSF Public Access Repository full four-page author manuscript; full text accessible and checked.",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1145/3347146.3359106",
+      "reference_links_preserved_in_original_order": 0,
+      "authors_retained_existing_vault_notes": 7,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "6e8bf157948b9dadc9ae245666d1146f30cd0f202c54559314fd863e312f6c5f",
+      "previous_access_assessment_corrected": true,
+      "model_revised_from_full_text": true
+    },
+    {
+      "lexicographic_entry": 61,
+      "filename": "Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+      "source_read": "https://www.jasss.org/26/2/6/6.pdf",
+      "source_access": "JASSS publisher PDF; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.18564/jasss.5066",
+      "reference_links_preserved_in_original_order": 77,
+      "authors_retained_existing_vault_notes": 8,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "9497219c8b08398108b00f713bb14c3de82100ff3e2462e9c929d75b0f48eaa8"
+    },
+    {
+      "lexicographic_entry": 62,
+      "filename": "Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "source_read": "https://www.jasss.org/15/4/3/3.pdf",
+      "source_access": "JASSS publisher PDF; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.18564/jasss.2059",
+      "reference_links_preserved_in_original_order": 62,
+      "authors_retained_existing_vault_notes": 3,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "bf39e2d1224956c8a4ea821d4abf031139f3fb7a6078f6f3bc47d00717e2bf3a",
+      "model_revised_from_full_text": true
+    },
+    {
+      "lexicographic_entry": 63,
+      "filename": "Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "source_read": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
+      "source_access": "arXiv abstract/full-text record and Stanford-hosted author PDF; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1145/3526113.3545616",
+      "reference_links_preserved_in_original_order": 93,
+      "authors_retained_existing_vault_notes": 6,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "56cc267336d39ffc216d790fd023a5fce0e80094e6cc1d054bae5089a5d195d9",
+      "model_revised_from_full_text": true
+    },
+    {
+      "lexicographic_entry": 64,
+      "filename": "Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+      "source_read": "https://www.nature.com/articles/s41586-022-04997-3",
+      "source_access": "Nature primary article; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1038/s41586-022-04997-3",
+      "reference_links_preserved_in_original_order": 51,
+      "authors_retained_existing_vault_notes": 22,
+      "warnings": [
+        "Initial independent audit passed"
+      ],
+      "sha256_original": "625ded9d47c91609bae1d967071a5fee74e72055e099225e07f9a1e7435512d5"
+    },
+    {
+      "lexicographic_entry": 65,
+      "filename": "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "source_read": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
+      "source_access": "Publisher page abstract plus author-hosted accepted manuscript full PDF; full text accessible and checked.",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.1146/annurev-statistics-060116-054035",
+      "reference_links_preserved_in_original_order": 112,
+      "authors_retained_existing_vault_notes": 1,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "2fac6cecc87e0153c3db5c2811ae9228e6a64947835961c3dbd94d72b74aae74",
+      "fulltext_source": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
+      "model_revised_from_full_text": true
+    },
+    {
+      "lexicographic_entry": 66,
+      "filename": "Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "source_read": "https://arxiv.org/html/2107.08959",
+      "source_access": "arXiv abstract and linked full-text record; full text accessible",
+      "abstract_source": "primary source abstract as transcribed from snapshot and checked against primary metadata where accessible",
+      "doi": "10.48550/arxiv.2107.08959",
+      "reference_links_preserved_in_original_order": 62,
+      "authors_retained_existing_vault_notes": 4,
+      "warnings": [
+        "Initial independent audit failed; corrections applied; independent re-audit pending"
+      ],
+      "sha256_original": "3da12cfaf6fffb351be9c31c19e13bed1159704fa219b919d8f7325a46599dd5",
+      "model_revised_from_full_text": true
+    }
+  ],
+  "limitations": [
+    "Do not mark audit passed: all notes remain not audited.",
+    "Per-paper process/import metadata should be merged into vault/.automation/import/papers.json by the coordinating agent; this batch did not edit that shared file."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/max/Documents/Projects/master-thesis/vault/.jupymd/bin/python",
+    "-m",
+    "ipykernel_launcher",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "Python (.jupymd)",
+  "language": "python",
+  "metadata": {
+    "jupymd": {
+      "managed": true,
+      "interpreter": "/home/max/Documents/Projects/master-thesis/vault/.jupymd/bin/python"
+    }
+  }
+}

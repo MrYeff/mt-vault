@@ -1,0 +1,155 @@
+---
+title: "SARDINE: Simulator for Automated Recommendation in Dynamic and Interactive Environments"
+tags:
+  - recommender_system
+  - simulation
+authors:
+  - "[[Literature/Authors/Romain Deffayet|Romain Deffayet]]"
+  - "[[Literature/Authors/Thibaut Thonet|Thibaut Thonet]]"
+  - "[[Literature/Authors/Dongyoon Hwang|Dongyoon Hwang]]"
+  - "[[Literature/Authors/Vassilissa Lehoux‐Lebacque|Vassilissa Lehoux‐Lebacque]]"
+  - "[[Literature/Authors/Jean-Michel Renders|Jean-Michel Renders]]"
+  - "[[Literature/Authors/Maarten de Rijke|Maarten de Rijke]]"
+publication date: 2024-04-08 
+source: "https://arxiv.org/html/2311.16586"
+doi: 10.1145/3656481
+  - "model"
+read status: Todo
+⚠️:
+  - audit failed
+---
+
+## Abstract
+
+Simulators can provide valuable insights for researchers and practitioners who wish to improve recommender systems, because they allow one to easily tweak the experimental setup in which recommender systems operate, and as a result lower the cost of identifying general trends and uncovering novel findings about the candidate methods. A key requirement to enable this accelerated improvement cycle is that the simulator is able to span the various sources of complexity that can be found in the real recommendation environment that it simulates. With the emergence of interactive and data-driven methods—e.g., reinforcement learning or online and counterfactual learning-to-rank—that aim to achieve user-related goals beyond the traditional accuracy-centric objectives, adequate simulators are needed. In particular, such simulators must model the various mechanisms that render the recommendation environment dynamic and interactive, e.g., the effect of recommendations on the user or the effect of biased data on subsequent iterations of the recommender system. We therefore propose SARDINE, a flexible and interpretable recommendation simulator that can help accelerate research in interactive and data-driven recommender systems. We demonstrate its usefulness by studying existing methods within nine diverse environments derived from SARDINE, and even uncover novel insights about them.
+
+## Research Questions
+> Research Questions extracted via LLM
+- How can a recommender simulator represent dynamic, interactive effects such as recommendations changing users and feedback changing later data?[^r1]
+- How do recommendation methods behave across the nine environments derived from SARDINE?[^r1]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+SARDINE represents a session with a synthetic user embedding and item embeddings over a fixed topic set. The recommendation agent selects single items or slates; the simulator returns clicks and may change user state through boredom or clicked-item influence.[^r3]
+
+```yml
+World:
+  item_embeddings: [TopicVector]
+  user_embedding: TopicVector
+  history: [Interaction]
+  session_length: L
+  slate_size: S
+  observability: Full | Partial
+  boredom: BoredomMode?
+  influence_weight: 0..1?
+
+BoredomMode: TemporaryTopicLoss | ChurnAndReturn
+
+Interaction:
+  slate: [ItemId]
+  clicks: [bool]
+```
+
+### How does it work?
+Items receive sparse, unit-normalized topic vectors covering 2 or 3 topics; each new session user vector covers 3–5 topics. The simulator gives a random slate at cold start. At later steps the agent chooses a slate. Relevance is the embedding dot product; attractiveness is `ALPHA * sigmoid(LAMBDA * (relevance - MU))`. A click at rank `r` is Bernoulli with probability attractiveness × `EPSILON^(r-1)`. After feedback, boredom is checked on clicked-item main topics from the last `T_B` steps, retaining the newest `N_B` clicks; a topic appearing more than `TAU_B` times triggers boredom. Temporary-topic loss zeros that topic component for `T_B` steps, then restores it; churn-and-return zeros the whole user vector for that period. If influence is enabled, update the vector using the mean of clicked item vectors and weight `OMEGA`. Repeat to session length.[^r3]
+
+```
+sim_session(mut world: World, agent: Recommender):
+  world.user_embedding = sample_sparse_user_vector(topics=3 | 4 | 5)
+  slate = sample_random_items(world.slate_size) # initial cold-start slate
+  for step in 0..world.session_length:
+    if step > 0: slate = agent.recommend(observation(world))
+    clicks = sample_bernoulli_clicks(
+      ALPHA * sigmoid(LAMBDA * (dot(item, world.user_embedding) - MU))
+      * EPSILON^(rank - 1)
+    )
+    world.history.push(slate, clicks)
+    update_boredom_from_recent_clicked_main_topics(world)
+    if world.influence_weight.enabled:
+      world.user_embedding = OMEGA * world.user_embedding
+        + (1 - OMEGA) * mean(clicked_item_vectors)
+```
+
+The full-state observation contains the current user vector, normalized recent-topic histogram, and normalized boredom timeouts. Partial observation contains the previous slate, click/skip vector, and recent-topic histogram; the agent may retain history to infer hidden user state. The `update_boredom_from_recent_clicked_main_topics` step expands to the threshold and timeout rules above; exact environment configurations vary.[^r3]
+
+### What can it answer?
+It supports comparisons of recommendation methods across nine environments varying single-item versus slate ranking, boredom, influence, click uncertainty, observability, and reranking; it does not establish general human-behavioral validity.[^r4]
+
+### Where does it apply?
+It applies to interactive and data-driven recommendation experiments. This compact procedure omits environment-specific hyperparameter settings and recommender algorithms; those are specified separately for each of the nine environments.[^r3]
+
+## Metadata
+### References
+- [[BeingAccurateIsNotEnough]]
+- [[InteractiveRecommenderSystemsASurveyOfTheStateOfTheArtAndFutureResearchChallengesAndOpportunities]]
+- [[ClickModelsForWebSearch]]
+- [[UnbiasedLearningToRankWithBiasedFeedback]]
+- [[RecommenderSystemsBeyondMatrixCompletion]]
+- [[ProceedingsOfThe16thInternationalJointConferenceOnArtificialIntelligenceIjcai99]]
+- [[ReinforcementLearningAlgorithmForNonStationaryEnvironments]]
+- [[VirtualTaobaoVirtualizingRealWorldOnlineRetailEnvironmentForReinforcementLearning]]
+- [[AlgorithmicEffectsOnTheDiversityOfConsumptionOnSpotify]]
+- [[KeepingDatasetBiasesOutOfTheSimulation]]
+- [[RobustGeneralizationAndSafeQuerySpecializationinCounterfactualLearningToRank]]
+- [[UnresolvedReference8384B3EAF42C6CAB]]
+- [[LearningRobustRecommendersThroughCrossModelAgreement]]
+- [[The Effect of People Recommenders on Echo Chambers and Polarization]]
+- [[ProceedingsOfThe15thAcmInternationalConferenceOnInformationAndKnowledgeManagementCikm06]]
+- [[MultiArmedBanditsInRecommendationSystemsASurveyOfTheStateOfTheArtAndFutureDirections]]
+- [[ActiveLearningInRecommenderSystems]]
+- [[RecommenderSystems]]
+- [[ProceedingsOfTheInternationalJointConferenceOnNeuralNetworksIjcnn2005]]
+- [[EvaluatingRecommenderSystemsSurveyAndFramework]]
+- [[ProceedingsOfThe26thInternationalConferenceOnWorldWideWebWww17]]
+- [[OfflineEvaluationForReinforcementLearningBasedRecommendation]]
+- [[BootstrappedPersonalizedPopularityForColdStartRecommenderSystems]]
+- [[2023IeeeInternationalConferenceOnEnablingTechnologiesInfrastructureForCollaborativeEnterprisesWetice]]
+- [[UnresolvedReference38CCF27109EFFA10]]
+- [[ProceedingsOfThe30thInternationalConferenceOnMachineLearningProceedingsOfMachineLearningResearch]]
+- [[ProceedingsOfTheWebConferenceWww20]]
+- [[ProceedingsOfThe17thAcmConferenceOnRecommenderSystemsRecsys23]]
+- [[IeeeInternationalConferenceOnEnablingTechnologiesInfrastructureForCollaborativeEnterprisesWetice14]]
+- [[ProceedingsOfThe13thInternationalConferenceOnWebSearchAndDataMiningWsdm19]]
+- [[ProceedingsOfTheInternationalConferenceOnWebSearchAndDataMiningWsdm08]]
+- [[ProceedingsOfThe46thInternationalAcmSigirConferenceOnResearchAndDevelopmentInInformationRetrievalSigir23]]
+- [[ProceedingsOfThe16thAcmInternationalConferenceOnWebSearchAndDataMiningWsdm23]]
+- [[ProceedingsOfTheInternationalConferenceOnMachineLearningIcml18]]
+- [[ProceedingsOfThe4thInternationalConferenceOnLearningRepresentationsIclr16]]
+- [[ProceedingsOfTheAcmSigirInternationalConferenceSigir22]]
+- [[ProceedingsOfThe14thAcmConferenceOnRecommenderSystemsRecsys20]]
+- [[ProceedingsOfThe24thInternationalConferenceOnArtificialIntelligenceAndStatisticsProceedingsOfMachineLearningResearch]]
+- [[ProceedingsOfThe28thInternationalJointConferenceOnArtificialIntelligenceIjcai19]]
+- [[RecSim- A Configurable Simulation Platform for Recommender Systems]]
+- [[ProceedingsOfThePerspectivesWorkshopAtRecsys23]]
+- [[ProceedingsOfTheInternationalConferenceOnWebSearchAndDataMiningWsdm17]]
+- [[UnresolvedReferenceCDBD15A4AFF8CD2A]]
+- [[ProceedingsOfTheAcmConferenceOnRecommenderSystemsRecsys23]]
+- [[ProceedingsOfThe45thInternationalAcmSigirConferenceOnResearchAndDevelopmentInInformationRetrievalSigir22]]
+- [[ProceedingsOfThe19thInternationalConferenceOnWorldWideWebWww10]]
+- [[ProceedingsOfTheInternationalConferenceOnWorldWideWebWww23]]
+- [[ProceedingsOfTheInternationalJointConferenceOnNeuralNetworksIjcnn17]]
+- [[UnresolvedReference0CB7BC1C4EDB0CCA]]
+- [[ProceedingsOfTheChi06ExtendedAbstractsOnHumanFactorsInComputingSystemsChiEa06]]
+- [[ProceedingsOfThe30thAcmInternationalConferenceOnInformationAndKnowledgeManagementCikm21]]
+- [[ProceedingsOfThe44thInternationalAcmSigirConferenceOnResearchAndDevelopmentInInformationRetrievalSigir21]]
+- [[ProceedingsOfTheWebConferenceWww21]]
+- [[RecogymAReinforcementLearningEnvironmentForTheProblemOfProductRecommendationInOnlineAdvertising]]
+- [[ProceedingsOfTheNeuralInformationProcessingSystemsTrackOnDatasetsAndBenchmarks]]
+- [[UnresolvedReference758822F73DAAB6DA]]
+- [[ProceedingsOfTheInternationalConferenceOnDataMiningWorkshopsIcdmw20]]
+- [[ProceedingsOfThe15thAcmConferenceOnRecommenderSystemsRecsys21]]
+- [[TheStanfordEncyclopediaOfPhilosophySpring2022Ed]]
+- [[ProceedingsOfThe31stInternationalConferenceOnNeuralInformationProcessingSystemsNips17]]
+- [[UnresolvedReferenceB31F9560449DA351]]
+- [[UnresolvedReference72AA34072D2BAA32]]
+- [[ProceedingsOfTheAcmWebConferenceWww22]]
+
+## Audit Log
+- Initial independent audit: failed on missing model mechanisms, abstract fidelity, or source-access reporting; see `vault/.automation/audit/next-forty-54-66-initial-2026-09-30.json`. Revisions added source-located model detail; independent re-audit remains pending.
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://arxiv.org/abs/2311.16586. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: Deffayet et al., §§3.1–3.5: embedding generation, cold-start and session sequence, Eqs. (1)–(2), position-based click rule, boredom/influence and observation definitions; §4.1 defines the nine configurations. Source: https://arxiv.org/html/2311.16586.
+[^r4]: Deffayet et al., §§4–5, nine derived environments and comparative evaluation. Source: https://arxiv.org/html/2311.16586.

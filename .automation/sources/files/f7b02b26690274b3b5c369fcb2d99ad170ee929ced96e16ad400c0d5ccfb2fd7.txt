@@ -1,0 +1,128 @@
+---
+title: "Social Relationships and the Emergence of Social Networks"
+tags:
+  - social_network
+  - simulation
+authors:
+  - "[[Literature/Authors/Alistair Sutcliffe|Alistair Sutcliffe]]"
+  - "[[Literature/Authors/Di Wang|Di Wang]]"
+  - "[[Literature/Authors/Robin Dunbar|Robin Dunbar]]"
+publication date: 2012-01-01 
+source: "https://www.jasss.org/15/4/3/3.pdf"
+doi: 10.18564/jasss.2059
+  - "model"
+read status: Todo
+⚠️:
+  - audit failed
+---
+
+## Abstract
+
+In complex social systems such as those of many mammals, including humans, groups (and hence ego-centric social networks) are commonly structured in discrete layers. We describe a computational model for the development of social relationships based on agents' strategies for social interaction that favour more less-intense, or fewer more-intense partners. A trust-related process controls the formation and decay of relationships as a function of interaction frequency, the history of interaction, and the agents' strategies. A good fit of the observed layers of human social networks was found across a range of model parameter settings. Social interaction strategies which favour interacting with existing strong ties or a time-variant strategy produced more observation-conformant results than strategies favouring more weak relationships. Strong-tie strategies spread in populations under a range of fitness conditions favouring wellbeing, whereas weak-tie strategies spread when fitness favours foraging for food. The implications for modelling the emergence of social relationships in complex structured social networks are discussed.
+
+## Research Questions
+> Research Questions extracted via LLM
+- Can interaction strategies and trust-related relationship formation reproduce the layered structure observed in human social networks?[^r1]
+- Under what fitness conditions do strategies favoring stronger existing ties or weaker ties spread?[^r1]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+Agents have directed trust/relationship histories, choose social partners by one of four strategies, and trade social turns against foraging turns. A response may cooperate or defect.[^r3]
+
+```yml
+Agent:
+  strategy: FavourFew | MediumTies | FavourMany | Staged
+  trust_to: [AgentId -> 0..]
+  interaction_history: [Interaction]
+  resources: 0..
+
+Parameters:
+  COMPRESSION_RATE: 0..
+  WANING_RATE: 0..
+  DEFECT_RATE: 0..1
+  FORAGE_SOCIAL_RATIO: 0..
+```
+
+### How does it work?
+Each run has 2,000 cycles in the reported simulations; each agent receives a turn. The forage/social ratio selects a forage turn (resource increment) or social turn. On a social turn, the agent reads its relationship history and selects an alter probabilistically: initially a stranger at random, then strategy-biased by past successful interactions. A cooperating response raises directed trust; defection lowers it and increments defect history. Trust changes are compressed progressively at high trust (log-ratio rule), then wanes each turn, with stronger ties waning less. The responder's defection probability, waning and strategy composition are experimental inputs.[^r3]
+
+### What can it answer?
+The simulations measure trust, each ego's ranked relationship strengths and strong/medium/weak tie counts; tie strata are defined by upper, middle and lower trust terciles. The authors compare those patterns and strategy spread under fitness conditions.[^r4]
+
+### Where does it apply?
+It applies to the paper's trust-mediated social/foraging model. The article refers to the earlier 2012 paper for the exact partner-search probability functions and trust formula; those equations are not re-derived here.[^r3]
+
+## Metadata
+### References
+- [[IsFriendshipAkinToKinship]]
+- [[SmallGroupsAsComplexSystemsFormationCoordinationDevelopmentAndAdaptation]]
+- [[TheNeedToBelongDesireForInterpersonalAttachmentsAsAFundamentalHumanMotivation]]
+- [[SpatialBehaviorInGroupsAnAgentBasedApproach]]
+- [[TheEvolutionOfReciprocityInSizableGroups]]
+- [[TargetArticleSelectiveInvestmentTheoryRecastingTheFunctionalSignificanceOfCloseRelationships]]
+- [[HumanSympathyGroups]]
+- [[CoevolutionOfNeocortexSizeGroupSizeAndLanguageInHumans]]
+- [[TheSocialBrainHypothesis]]
+- [[MindTheGapOrWhyHumansArenTJustGreatApes]]
+- [[BrainAndBehaviourInPrimateEvolutionInPHKappelerJSilkEds]]
+- [[UnderstandingPrimateBrainEvolution]]
+- [[SocialNetworksSupportCliquesAndKinship]]
+- [[TimeAsAnEcologicalConstraint]]
+- [[TheStrengthOfWeakTies]]
+- [[EconomicActionAndSocialStructureTheProblemOfEmbeddedness]]
+- [[TheGeneticalEvolutionOfSocialBehaviourIAndIi]]
+- [[NiceGuysFinishFirstTheCompetitiveAltruismHypothesis]]
+- [[TheDayToDayFunctioningOfCloseVersusCasualFriendships]]
+- [[AttitudesAndCognitiveOrganization]]
+- [[SocialNetworkSizeInHumans]]
+- [[NetworkScalingRevealsConsistentFractalPatternInHierarchicalMammalianSocieties]]
+- [[FriendshipCliquishnessAndTheEmergenceOfCooperation]]
+- [[EffectsOfTrustOnComplexAdaptiveSupplyNetworksAnAgentBasedSimulationStudy]]
+- [[SenseAndNonsenseEvolutionaryPerspectivesOnHumanBehaviour]]
+- [[GroupSizeGroomingAndSocialCohesionInPrimates]]
+- [[TimeManagementInGreatApesImplicationsForGorillaBiogeography]]
+- [[SizeMattersVariationInPersonalNetworkSizePersonalityAndEffectOnInformationTransmission]]
+- [[TheEvolutionOfTrustAndCooperationBetweenStrangersAComputationalModel]]
+- [[AltruismAndKinshipACrossCulturalExperimentalStudy]]
+- [[SocialIsolationInAmericaChangesInCoreDiscussionNetworksOverTwoDecades]]
+- [[EvolutionOfIndirectReciprocityBySocialInformationTheRoleOfTrustAndReputationInEvolutionOfAltruism]]
+- [[SocializationInSmallGroupsTemporalChangesInIndividualGroupRelationsInLBerkowitzEd]]
+- [[EvolutionOfIndirectReciprocityByImageScoring]]
+- [[EvolutionOfIndirectReciprocity]]
+- [[TowardsABehaviouralTheoryLinkingTrustReciprocityAndReputationInEOstromJWalkerEds]]
+- [[FriendshipMaintenanceAnAnalysisOfIndividualAndDyadBehaviours]]
+- [[HowCanSocialNetworksEverBecomeComplexModellingTheEmergenceOfComplexNetworksFromLocalSocialExchanges]]
+- [[ASocialIdentityModelForDeindividualisationPhenomena]]
+- [[TrustInCloseRelationships]]
+- [[CommunicationInSocialNetworksEffectsOfKinshipNetworkSizeAndEmotionalCloseness]]
+- [[TheDevelopmentOfCooperativeRelationshipsAnExperiment]]
+- [[ExploringVariationsInActiveNetworkSizeConstraintsAndEgoCharacteristics]]
+- [[EvolutionaryGameTheoryMeetsSocialScienceIsThereAUnifyingRuleForHumanCooperation]]
+- [[KeepingAndEndingCasualCloseAndBestFriendships]]
+- [[ACommunityLevelEvaluationOfTheImpactOfPreyBehaviouralAndEcologicalCharacteristicsOnPredatorDietComposition]]
+- [[PerspectiveTakingAndSocialNetworkSizeInHumans]]
+- [[Computational Modelling of Trust and Social Relationships]]
+- [[RelationshipsAndTheSocialBrainIntegratingPsychologicalAndEvolutionaryPerspectives]]
+- [[AnIntegrativeTheoryOfIntergroupConflictInWAustinAndSWorchelEds]]
+- [[EvolutionaryPsychologyAndTheGenerationOfCultureITheoreticalConsiderations]]
+- [[DevelopmentalSequenceInSmallGroups]]
+- [[DifferentStrokesFromDifferentFolksCommunityTiesAndSocialSupport]]
+- [[DoesTheInternetIncreaseDecreaseOrSupplementSocialCapital]]
+- [[ConnectedLivesTheProjectInPPurcellEd]]
+- [[CultureEvolves]]
+- [[ADeductiveApproachToFriendshipNetworks]]
+- [[StabilityOfGroupsWithCostlyBeliefsAndPractices]]
+- [[UncertaintyTrustAndCommitmentFormationInTheUnitedStatesAndJapan]]
+- [[SympathyAndPunishmentEvolutionOfCooperationInPublicGoodsGame]]
+- [[DevelopingTrustInLargeScalePeerToPeerSystems]]
+- [[DiscreteHierarchicalOrganizationOfSocialGroupSizes]]
+
+## Audit Log
+- Initial independent audit: failed on missing model mechanisms, abstract fidelity, or source-access reporting; see `vault/.automation/audit/next-forty-54-66-initial-2026-09-30.json`. Revisions added source-located model detail; independent re-audit remains pending.
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://www.jasss.org/15/4/3/3.pdf. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: Sutcliffe, Wang & Dunbar (2012), §§2.1–2.6: trust dynamics, strategy-specific partner search, control loop and parameters. Source: https://jasss.soc.surrey.ac.uk/15/4/3.html.
+[^r4]: Sutcliffe, Wang & Dunbar (2012), §§3–5: tie-stratum measures and strategy/fitness results. Source: https://jasss.soc.surrey.ac.uk/15/4/3.html.

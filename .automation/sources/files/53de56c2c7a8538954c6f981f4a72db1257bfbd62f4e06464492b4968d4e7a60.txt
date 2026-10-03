@@ -1,0 +1,670 @@
+                                               The Effect of People Recommenders on Echo Chambers and Polarization
+
+                                                             Federico Cinus,1,2 Marco Minici,3,4 Corrado Monti,2 Francesco Bonchi2,5
+                                                         1
+                                                             Sapienza University, Rome, Italy; 2 ISI Foundation, Turin, Italy; 3 ICAR-CNR, Rende(CS), Italy
+                                                                                 4
+                                                                                   University of Pisa, Italy; 5 Eurecat, Barcelona, Spain
+                                                             federico.cinus@isi.it, marco.minici@icar.cnr.it, corrado.monti@isi.it, francesco.bonchi@isi.it
+arXiv:2112.00626v1 [cs.SI] 1 Dec 2021
+
+
+
+
+                                                                      Abstract                                 viewpoint, and thus getting more and more polarized in the
+                                                                                                               long run. Among all types of algorithms potentially respon-
+                                          The effects of social media on critical issues, such as polar-
+                                                                                                               sible for strengthening echo chambers, people-recommender
+                                          ization and misinformation, are under scrutiny due to the dis-
+                                          ruptive consequences that these phenomena can have on our            systems (e.g. “People You May Know” in Facebook or “Who
+                                          societies. Among the algorithms routinely used by social me-         to Follow” in Twitter) are of special interest, as they di-
+                                          dia platforms, people-recommender systems are of special in-         rectly contribute to the evolution of the social network struc-
+                                          terest, as they directly contribute to the evolution of the social   ture, thus affecting the information and the opinions a user
+                                          network structure, affecting the information and the opinions        is exposed to. People recommenders mainly take advantage
+                                          users are exposed to. In this paper, we propose a framework          of two types of information to recommend who to follow:
+                                          to assess the effect of people recommenders on the evolution         network structure (e.g., recommending friends of friends)
+                                          of opinions. Our proposal is based on Monte Carlo simula-            or content (e.g., recommending users with similar interests)
+                                          tions combining link recommendation and opinion-dynamics             (Barbieri, Bonchi, and Manco 2014). As such, one might
+                                          models. In order to control initial conditions, we define a ran-
+                                                                                                               expect that homophilic links are more likely to be recom-
+                                          dom network model to generate graphs with opinions, with
+                                          tunable amounts of modularity and homophily. We join these           mended than heterophilic ones, contributing to the forma-
+                                          elements into a methodology to study the effects of the rec-         tion of echo chambers. As in a vicious loop, echo chambers
+                                          ommender system on echo chambers and polarization. We                might in turn make homophilic links more likely to be rec-
+                                          also show how to use our framework to measure, by means              ommended in the future. To hold algorithm designers and
+                                          of simulations, the impact of different intervention strategies.     platforms accountable for the effects of their systems, we
+                                          Our thorough experimentation shows that people recom-                need to develop tools to measure such effects.
+                                          menders can in fact lead to a significant increase in echo              Therefore, the main research question we tackle in this
+                                          chambers. However, this happens only if there is considerable        work is the following: how can we assess the effect of people
+                                          initial homophily in the network. Also, we find that if the net-     recommenders on echo chambers and polarization?
+                                          work already contains echo chambers, the effect of the recom-
+                                          mendation algorithm is negligible. Such findings are robust to
+                                                                                                                  We tackle this research question by means of a principled
+                                          two very different opinion dynamics models, a bounded con-           approach that, by combining an opinion dynamics model
+                                          fidence model and an epistemological model.                          with a given people-recommender algorithm, is able to sim-
+                                                                                                               ulate the behavior of individuals changing their opinions as
+                                                                                                               a consequence of their interactions with their neighborhood,
+                                                                1   Introduction                               within a social network that is continuously evolving.
+                                        Social media have significantly transformed how the general            Method. For what concerns opinion dynamics, we adopt
+                                        public consumes information, to such an extent that many               two very different and complementary models: the classic
+                                        contemporary political events in the world have been con-              Bounded Confidence Model (Deffuant et al. 2000), and the
+                                        nected to social media usage, from Arab Spring (Khond-                 epistemological model by Bala and Goyal (1998). The for-
+                                        ker 2011) to Donald Trump election (Enli 2017). Due to                 mer assumes opinions are equivalent; interaction happens
+                                        their disruptive potentiality, the algorithms adopted by so-           by people close enough in their opinions (i.e., within their
+                                        cial media platforms have been, rightfully, under scrutiny:            bounded confidence interval) getting closer to each other.
+                                        in fact, such platforms are suspected of contributing to the           The latter assumes that opinions are not equivalent: one of
+                                        polarization of opinions by means of the so-called “echo-              the antipodes is a factual truth and the other is its negation.
+                                        chamber” effect, due to which users tend to interact with              Each agent, while performing observations of the world,
+                                        like-minded individuals, reinforcing their own ideological             forms an opinion about a statement, that might be true or
+                                         ICWSM 2022, June 6–9, 2022, Atlanta, Georgia, and Online              false. During interactions, agents exchange the observations
+                                        Copyright © 2022, Association for the Advancement of Artificial        they made and update their opinions accordingly. An exam-
+                                        Intelligence (www.aaai.org). All rights reserved.                      ple of the first model is a typical political debate (e.g., the
+ Stay-Leave dichotomy during the Brexit campaign), while           turn into echo chambers (Quattrociocchi, Scala, and Sun-
+ an example of the second model is the tension between a           stein 2016), reinforcing their beliefs. However, this view is
+ hoax (e.g., “vaccines cause autism”) and the scientific evi-      far from unanimous. Some researchers consider that ideo-
+ dence (e.g., “vaccines do not cause autism”).                     logical segregation in social-media usage has been overes-
+    As people recommenders, we adopt several state-of-             timated (Barberá et al. 2015; Garrett 2009). Bakshy, Mess-
+ the-art link predictors (Liben-Nowell and Kleinberg 2007)         ing, and Adamic (2015), through an empirical analysis of
+ which are based on the network structure only, and one rec-       Facebook data, suggests that algorithmic ranking produces,
+ ommender which is biased by the opinions of the agents.           in fact, more exposition to diverse viewpoints. Fletcher and
+    In order to assess the dependence of our results on ini-       Kleis Nielsen (2017) confirm, through surveys, that casual
+ tial conditions, we develop a random network model with           social media users get exposed to more points of view than
+ opinions, extending the model by Lancichinetti, Fortunato,        similar people who do not use social media at all. Morales,
+ and Radicchi (2008). Finally, we develop a series of met-         Monti, and Starnini (2021) show that in the Reddit polit-
+ rics and techniques to examine whether the presence of            ical community, users of opposite leaning are more likely
+ echo chambers and polarization in the network increases or        to interact than users with similar leaning; also, they show
+ decreases as a consequence of the recommender. Our ap-            that geographical echo chambers might actually play a larger
+ proach, dubbed PROD (as it enables to study the effects of        role. Others have noted that echo chambers observed online
+ People Recommenders on Opinion Dynamics), can also as-            could be, in fact, originating offline (Bastos, Mercea, and
+ sess whether such consequences are statistically significant.     Baronchelli 2018), thus motivating the need to consider dif-
+ Findings. Our main contribution is therefore the definition       ferent possible pre-existing levels of homophily when study-
+ of a novel framework to assess the effect of any recommen-        ing the relationship between algorithms and polarization. Fi-
+ dation algorithm on echo chambers and polarization. We do         nally, Cinelli et al. (2021) found evidence of echo chambers
+ not place any assumption on the given recommender, which          on Facebook, but not on Reddit, showing that there exist dif-
+ is seen as a black-box. The results we can draw from our          ferences between different social media platforms that might
+ thorough experimentation are summarised as follows:               depend on different content recommendation mechanisms.
+1. People recommenders can strengthen echo chambers, as               Our contribution in this debate lies in a principled ap-
+    long as homophilic links are initially more present than       proach to assess, through simulations, the effects of people-
+    heterophilic ones.                                             recommender algorithms on opinion dynamics.
+                                                                      Few recent studies address similar research questions.
+2. This effect becomes negligible (or even reversed) if the
+                                                                   Sı̂rbu et al. (2019) show that algorithmic bias can slow down
+    network is already segregated in polarized communities.
+                                                                   the convergence of an opinion dynamics model, and con-
+3. The above findings are consistent between different opin-       tribute to fragmentation, but they do not study the effect of
+    ion dynamics models and recommender algorithms.                people recommenders.
+4. However, differences between recommenders can be ob-               Perra and Rocha (2019) study the effect of different in-
+    served: some recommenders dramatically contribute to           formation filtering policies by designing a novel opinion dy-
+    polarization, while others do so only slightly and only un-    namics model; they find a strong effect when the information
+    der certain assumptions.                                       received by a user is biased towards their opinion, and that
+    Summing up, we show that people recommenders can               some network configurations can reinforce such effect.
+ amplify the intrinsic homophilic bias in a social network,           Fabbri et al. (2020) study the effects of people recom-
+ contributing to the creation of echo chambers, where each         mender systems on the visibility of users in a network
+ node is surrounded by like-minded neighbors. Finally, we          divided in two subgroups (e.g., males and females, or
+ also showcase the usage of our framework to simulate the          democrats and republicans), and with different levels of ini-
+ effects of three different intervention policies, aimed at mit-   tial homophily. They show that homophily plays a key role
+ igating echo-chambers and polarization effects. Our results       in the visibility given to different groups: when the minor-
+ show that a mitigation strategy which tries to recommend          ity is homophilic, there is a disparate visibility in favor of
+ users to users with different opinions, might be effective in     the minority class; when the minority is not homophilic, the
+ reducing the appearance of echo-chambers and polarization.        dis-parate visibility is in favor of the majority class.
+                                                                      Sasahara et al. (2021) focus on user-driven rather than
+                    2    Related Work                              platform-induced behavior, showing that a small bias can
+Despite the increasing attention received by the research          lead to a segregated social network.
+community, the role played by social media in opinion for-            Finally, de Arruda et al. (2021) recently proposed a novel
+mation remains an important open question. Many stud-              opinion dynamics model that incorporates the interaction
+ies suggest that social media users tend to access informa-        with an idealized recommender. They found that the rise of
+tion from a narrow spectrum of opinions, forming “social           echo chambers crucially depends on the role of the social
+bubbles” of homogenous individuals (Nikolov et al. 2015;           network platform, expressed as a probability distribution of
+Pariser 2011), possibly as a consequence of algorithmic            content being seen by others. In this work, instead, we focus
+filtering. In this perspective, since users within homoge-         on existing recommender algorithms, and study their effects
+nous bubbles tend to produce and consume more informa-             on well-known opinion dynamics models, through their in-
+tion that confirms their preconceptions, social media might        teractions with the network structure.
+                     3   Framework                                  Algorithm 1: PROD
+Input. PROD takes as main input a directed social graph              Input: Graph with opinions G = (V, E, O),
+G = (V, E, O) where an arc (u, v) ∈ E indicates that u                       people recommender `G : V → V × [0, 1],
+follows v, while O : V → [0, 1] is a function assigning              Parameters: interactions per time step S ∈ N+ .
+to each node in the network an opinion. The other main in-                   number of recommendations Rmax ∈ N,
+put is a link recommender, that we can think as a function                   number of time steps Tmax ∈ N+ .
+`G : V → V × [0, 1]. Given a node u ∈ V , the function             1 r, t ← 0
+assigns a recommended node v ∈ V such that (u, v) ∈        / E                       T
+                                                                   2 α ← Rmax /( max    2   · S · |V |)
+and a probability pv ∈ [0, 1]. Such probability represents the     3 while t < Tmax do
+strength of the recommendation given to u to start follow-         4      t++
+ing v or, alternatively, the probability that u will accept the    5      σ ← random permutation of V
+recommendation and start following v, thus adding the new          6      forall u ∈ σ do
+link (u, v) to E.                                                  7          s←0
+   On top of these two main ingredients—a graph with opin-         8          while s < S do
+ions, and a recommender—PROD adds a given opinion dy-              9              if Bernoulli(α) then
+namics model (ODM). ODMs are expressed with an update             10                   v, pv ← `G (u)
+rule, which modifies the opinions of two nodes that interact.     11                   if Bernoulli(pv ) then
+Framework overview. Given this input, PROD operates ac-           12                       w ← random node from Nout (u)
+cording to the pseudocode in Algorithm 1.                         13                       E ← E \ {u, w}
+   For a number of time steps Tmax , nodes are visited se-        14                       E ← E ∪ {u, v}
+quentially in random order (lines 3-5). At each time step,        15                       UpdateRule(Ou , Ov )
+every node interacts with S other nodes, according to the         16                       s++
+update rule of the opinion dynamics model. There are two          17                       r++
+ways interactions can happen: through newly created links         18                       if r = Rmax then
+(lines 10-19) or through pre-existing links (lines 20-23). In     19                            α←0
+the former case, the ODM and the link recommender work
+jointly, while the latter case is a typical step of an ODM.       20            else
+   More in detail. In the first case, the recommender algo-       21                v ← random node from Nout (u)
+rithm is asked for a node v to recommend to u (line 10).          22                UpdateRule(Ou , Ov )
+Together with the node v, the algorithm will also return the      23                s++
+score pv ∈ [0, 1]—the probability of the recommendation
+being accepted. If the recommendation (u, v) is accepted,
+the interaction happens (according to the ODM), and the
+new link is added to the network. After doing this, we per-
+form a rewiring, in order to model the well-known concept         3.1   Opinion dynamics models
+of attention budget: since time and attention are limited re-     We consider two complementary models: the classic
+sources, users interact with a small set of neighbors (Golder,    Bounded Confidence Model (Deffuant et al. 2000), and the
+Wilkinson, and Huberman 2007; Huberman, Romero, and               epistemological model by Bala and Goyal (1998). As al-
+Wu 2008), even if nominally they declare a larger number of       ready discussed in Section 1 these two models are very dif-
+friends on social media. To keep this fact in consideration,      ferent and complementary. We next see them in details.
+whenever u starts to follow another node v, we remove one         Bounded Confidence Model (BCM). In BCM, interactions
+of its old neighbors at random. This mechanism will also          modify the opinions of the nodes only when they are within
+keep the overall density of the network stable, letting us at-    a confidence interval  ∈ [0, 1] from each other. If they are,
+tribute any observed effect to the recommender algorithm          when u interacts with v, u moves closer to v’s opinion. The
+itself, rather than to a densification of the graph.              strength of the interaction is represented by convergence pa-
+   When a given number of total recommendations Rmax              rameter µ ∈ [0, 0.5]. The update rule of BCM is therefore
+is reached, the recommender stops and lets the ODM work           defined by:
+alone, to let emerge any long-term effect of the final graph                     
+on the opinion distribution. We calibrate the internal param-             new       ou + µ · (ov − ou ) if |ou − ov | < 
+eter α such that these two regimes (the one with link recom-            ou =
+                                                                                    ou                    otherwise
+mender and ODM cooperating and the one purely ODM-
+based) last approximately Tmax   2    time steps each, to keep    Epistemological model. This model describes how a net-
+the simulations for different recommenders with the same          work of agents would form an opinion about a statement,
+amount of recommendations Rmax and the same number in-            that might be true or false. Consider for example a group of
+teractions between nodes (S · |V | · Tmax ).                      clinicians which use a drug X with a constant and known
+   In the rest of this section, we are going to discuss the two   probability of success (psucc = 0.5). Suppose that a new
+main ingredients of PROD: the opinion dynamics model              drug Y, with an unknown probability of success, is intro-
+and the people-recommender algorithm.                             duced. Each clinician tries the new drug in some experi-
+ments, shares the results with his network, and then updates      Personalized PageRank (PPR). Given the adjacency ma-
+his belief on the new drug using all the data acquired.           trix A associated to a directed graph G = (V, E), where
+   As in the model introduced by Bala and Goyal (1998),           each entry aij = 1 iff (i, j) ∈ E, and its column-stochastic
+we consider: (i) two Bernoulli random variables {x0 , x1 },       version A0 (i.e. each entry is the probability to transition
+which represent the actions of the agents (e.g. using the         from i to j), the global PageRank vector p is the solution
+known drug or experimenting with the new one); (ii) a “true”      of a linear system (Page et al. 1999; Gleich 2015) and satis-
+state of the world θ, that defines their probability of success   fies
+θ = [psucc (x0 ) = 0.5, psucc (x1 ) = 0.5 + ]. The parameter                         p = d · A0 p + (1 − d) · r              (2)
+ ∈ (0, 0.5] represents the gain of x1 over x0 in expectation,    where d is called damping factor and 1 − d is the teleporta-
+but it is completely unknown to the agents; in fact, agents       tion probability, representing the probability that a random
+need to form an opinion on whether  > 0 is true, or not.         walker transits randomly to another node extracted with uni-
+   Each agent, in fact, has a (normalized) belief o(θ) on the     form distribution r defined over V . Setting r = 1u , where
+state of the world θ, which drives their next action. Two pos-    1u is a |V |-dimensional vector with 1 at the uth entry, re-
+sible outcomes can arise: (i) the agent hypothesizes that        duces the solution of Eq. 2 to the Personalized PageRank
+is negative (i.e. the probability of success of the new drug      (PPR) for node u.
+is less than the previous), and they performs action x0 for       SALSA. In (Gupta et al. 2013), the Who To Follow service
+n times, giving a fixed outcome of n2 ; (ii) their hypothesis     technology architecture implemented by Twitter is depicted
+is that  > 0, which implies that psucc (x1 ) > psucc (x0 )       along with the algorithm used for the recommendations. The
+and therefore they perform action x1 . In this case, the out-     proposed model makes use of SALSA algorithm proposed by
+come of the n experiments is a Binomial distribution with         Lempel and Moran (2001). SALSA is a link-analysis algo-
+psucc (x1 ) = 0.5 + .                                            rithm, of the same family of the well-known HITS (Klein-
+   Finally, when agent u interacts with v over the arc (u, v),    berg 1999). The algorithm used in our work follows the
+they update their beliefs by considering the experiments          schema described by the same authors of (Gupta et al. 2013)
+performed by v (if any), according to a Bayesian learning         in a subsequent paper (Goel et al. 2015), using a score-
+model:                                                            propagation strategy. Given a user u ∈ V , SALSA builds
+                                     1
+         o(θ)new
+              u    =                         2kv −n       (1)   a bipartite graph Gb = (Vh , Va , Eb ), where Vh is the set of
+                          1 − o(θ) 0.5 −                         hubs, i.e. the nodes with top-k value of Personalized PageR-
+                     1+
+                            o(θ)      0.5 +                      ank on node u, and Va is the set of authorities, i.e. the nodes
+where kv is the number of successes obtained by v in their        the hubs follows in the original graph G. Each directed edge
+n experiments.                                                    (i, j) ∈ E becomes a directed edge (ih , ja ) ∈ Eb . Let M
+                                                                  be the matrix with dimension (|Va |, |Vh |), where Mij = 1
+3.2   People-recommender algorithms                               iff (jh , ia ) ∈ Eb , zero otherwise. Let M 0 be the matrix M
+People recommenders are key services in social media and          with each non-zero column divided by the sum of the col-
+social networking platforms. Although early people recom-         umn. Let M T be the transpose of the matrix M with each
+menders were essentially performing link prediction using         non-zero row divided by the sum of the row. Let d be the
+only the graph structure as input information (Liben-Nowell       damping column vector with di = dˆ if i = u and zero oth-
+and Kleinberg 2007), modern algorithms often combine dif-         erwise. Two equations are defined as follows:
+ferent sources of information through learning techniques:                                 r = M 0s                          (3)
+see (Guy 2018) for a recent survey. However, for sake of                                          ˆ · MT r
+simplicity, we can consider two main types of information                            s = d + (1 − d)                          (4)
+as input to the people recommenders: the network struc-           r and s are two vectors of size |Va | and |Vh | which represent
+ture (e.g., recommending friends of friends), content, activ-     the relevance scores of authorities and similarity scores of
+ity and behavioural information (e.g., recommending users         hubs. The procedure initializes s with si = 1 iff i = u and
+with similar interests).                                          zero otherwise. Equations 3 and 4 are then recursively ap-
+   Given that in our model we only have the graph structure       plied until the values converge. The list of recommendations
+and user opinions, we consider three scalable state-of-the-       is the set of authorities Va sorted by the values in r.
+art link prediction methods that only use the network struc-      Opinion-biased algorithm (OBA). Besides these network-
+ture —Jaccard Index, Personalized PageRank (Kumar et al.          based classic recommenders, we also consider an idealized
+2020), and SALSA (Gupta et al. 2013; Guy 2018)— and a             algorithm that recommends links by matching nodes with
+method which relies on users opinions. All the methods we         a similar opinion. Considering an opinion vector o, the
+consider (presented in details next) accept as input a directed   opinion distance between u and v is simply the difference
+social graph.                                                     duv = |ou − ov |. Therefore, as in (Sı̂rbu et al. 2019), we
+Directed Jaccard index (DJI). Let us indicate with N + (u)        define their opinion-biased recommendation score as
+the out-neighbors set for the node u, and with N − (u) its                                        d−γ
+                                                                                                   uv
+in-neighbors set, on the given directed graph G = (V, E).                            puv = P             −γ
+   Then, we define their Directed Jaccard Index as                                              (u,v)∈E duv
+                             |N + (u) ∩ N − (u)|                  where γ tunes the importance of similarity: as γ increases,
+  DJI(u, v) =                                                     the recommendation between similar nodes is more likely.
+                 |N + (u)| + |N − (v)| − |N + (u) ∩ N − (u)|
+Normalization of recommenders. Finally, an important is-         4.1   Random network model
+sue is how to make the effect of the recommenders compara-       In order to study the effect of people recommenders in all
+ble. As stated before, each recommender’s procedure derives      possible configurations of homophily, we need a random
+different recommendation scores, expressing the strengths        network model with different characteristics. First, it needs
+of their recommendations. Indeed, every recommendation           to have a tunable degree of echo chamber structure. Second,
+algorithm generates a different list of ranked links for each    it has to define opinions as well, coherently with the network
+node. Even if their scores are bounded, the scale and distri-    structure. Finally, it has to be realistic in its basic features
+bution of these scores may intrinsically depend on the nature    with respect to real social networks. For these reasons, we
+of the recommender and its similarity index.                     extended the LFR model proposed by Lancichinetti, Fortu-
+   To ensure that all results are comparable among the differ-   nato, and Radicchi (2008). This model allows creating net-
+ent models, we implement a quantile transformation of the        works with a realistic degree distribution, following a power-
+recommendation probabilities’ distribution, which allows us      law, and where each node belongs to a community. In the
+to keep the monotonicity of the ranking scores and scale the     original work, the authors show the realistic properties of
+distribution to a uniform one. Specifically, we use a prob-      this model. Moreover, its community structure lets us easily
+ability integral transform: given a random variable X dis-       define the opinions of each node.
+tributed according to the cumulative distribution function
+                                                                    The general assumption is that each node might follow the
+FX (CDF), then we define Y = FX (X), thus having a uni-
+                                                                 opinion of their community or might develop an opinion in-
+form distribution. In practice, to empirically estimate FX for
+                                                                 dependently from their neighbors. In this way, we decouple
+a given recommender, we draw a large sample of recommen-
+                                                                 and distinguish two main components of the echo-chamber
+dation scores at the beginning of the simulation. Then, each
+                                                                 structure of the network: its (initial) homophily, describing
+time a recommender is used in the process, the probability
+                                                                 how close on average is a node opinion from the opinions
+of recommendation is transformed accordingly.
+                                                                 of their local community; and its modularity, that describes
+                                                                 how segregated are the different communities. The former
+               4    Evaluation Method                            is introduced by our opinion-aware extension of the original
+In this section, we are going to discuss how to use PROD         model, while the latter is a parameter of the LFR model. We
+in order to evaluate the effect of a given recommender al-       indicate these parameters η and µ, respectively.
+gorithm on echo chambers and polarization. The proposed             The procedure takes as input three parameters: the num-
+evaluation methodology consists of the following steps:          ber of nodes in the graph N , the modularity µ and the initial
+1. Consider a grid of parameters µ, η, representing networks     homophily η, while the output consists of a directed graph
+   with different modularity and initial homophily (see de-      G and opinions O ∈ [0, 1]N of the nodes. The modularity
+   tails in Section 4.1).                                        parameter of the original model µ tunes the ratio of intra-
+                                                                 community edges; increasing this value makes the network
+2. For each pair of parameters µ, η generate a sequence Gµ,η     more split in communities. From the original model, we ob-
+   of K random graphs with opinions.                             tain a set of edges E and a partition of nodes into commu-
+3. On each graph G ∈ Gµ,η , run PROD (Algorithm 1) with-         nities c : V → C. We note that in the LFR model the sizes
+   out any recommender algorithm (i.e., with Rmax = 0),          of communities are realistic and follow a power-law distri-
+   obtaining a network G00 .                                     bution. To generate opinions, we first pick an opinion for
+                                                                 each community k ∈ C by drawing ok ∼ U (0, 1). Then, the
+4. Then, on each graph G ∈ Gµ,η , run PROD with the stud-
+                                                                 opinion of a node v is decided by a Bernoulli trial with prob-
+   ied recommender algorithm `, obtaining G0` .
+                                                                 ability η. If the outcome is successful, the node assumes the
+5. Considering a metric m for echo chambers or polarization      opinion of its community, i.e. ov = oc(v) ; otherwise, it draws
+   (see section 4.2), compute m(G), m(G00 ), m(G0` ).            a individual opinion ov ∼ U (0, 1). Hence, higher values of
+6. Assess the average difference ∆m between the two cases.       η increase the probability that a node shares the opinion of
+   Since the initial measure m(G) is the same with and with-     the other nodes belonging to the same community.
+   out recommender, we obtain                                       With this procedure, we can generate random networks
+                                                                 with opinions, by controlling both their initial homophily η
+                       1 X
+              ∆m =              m(G0` ) − m(G00 ).       (5)     and their modularity µ. A network with high values for both
+                      K                                          will have a very polarized structure. Instead, for instance,
+                        G∈Gµ,η
+                                                                 low values for η and high values for µ will lead to graphs
+7. Perform a Kolmogorov-Smirnov test comparing the dis-          with well-separated communities, but plenty of variance in-
+   tribution of differences in the two cases, determining        side each. We show an example network for each of the four
+   whether the observed effect is statistically significant.     corner cases in Figure 1.
+In the remainder of this section we are going to discuss
+the random network model we designed, which extends the          4.2   Metrics
+model by Lancichinetti, Fortunato, and Radicchi (2008) with      In order to measure the effect of the recommender systems
+opinions. Then, we are going to discuss the two metrics we       in terms of echo chambers and polarization phenomena, we
+use: the neighbor correlation index (NCI), and the random        employ two global metrics defined over a graph where each
+walk controversy score (RWC) (Garimella et al. 2018).            node is labeled with an opinion. The first one, that we in-
+                                                                be exposed to authoritative content from the opposite side.
+                                                                Given two disjoint components of the graph X and Y , the
+                                                                Random Walk Controversy score is
+                                                                              RW C = PXX PY Y − PXY PY X
+                                                                where Pij is the probability for a random walker that ends in
+                                                                partition j to have started in partition i. In our case, we de-
+                                                                fine X (resp. Y ) as the set of nodes v with opinion ov < 0.5
+                                                                (resp. ov > 0.5). This measure is not influenced by the size
+                                                                of the components and the total degree of the nodes in the
+                                                                two partitions, and it is bounded between −1 and 1. High
+                                                                values correspond to a low probability of crossing the parti-
+                                                                tions w.r.t. staying in the same partition: therefore, it means
+                                                                that the two sides are very well separated, and thus that the
+                                                                network is polarized. Oppositely, values around 0 in this
+                                                                metric reflect an equal probability to cross sides and to stay
+                                                                in the same one. In practice, we follow the suggested im-
+                                                                plementation (Garimella et al. 2018) and use random walk
+                                                                with restart, forcing a restart when the random walk reaches
+                                                                a high-degree node (specifically, over the 95th percentile of
+                                                                the degree distribution).
+                                                                   An important distinction between the two metrics is that
+                                                                since RWC is based on random walks, this metric incorpo-
+                                                                rates similarities between distant nodes. Instead, NCI cap-
+Figure 1: Examples of graphs and opinions obtained with the     tures local dynamics, by measuring how much each node’s
+random network model in four corner cases of the parame-        opinion is echoed by its immediate neighbors.
+ter space (homophily η on the x-axis, modularity µ on the
+y-axis). Colors correspond to the opinion of each node; the
+size is proportional to the degree of each node. Each commu-
+                                                                                        5    Results
+nity produced by the model has an assigned position in the      In this section, we present the results we obtain by apply-
+axis derived from the Fruchterman-Reingold force-directed       ing PROD using the ODMs of Section 3.1 and the peo-
+algorithm (Kobourov 2012). For each node, we draw random        ple recommenders of Section 3.2. To foster reproducibil-
+coordinates around the correspondent center of the assigned     ity, we publicly release all the code of our experiments at
+community. Here the density is constant in all graphs.          https://github.com/FedericoCinus/PROD-ICWSM2022.
+                                                                   In the experiments presented next, the parameters are
+                                                                fixed as follows. We generate networks with 400 nodes and
+troduce, is Neighbor Correlation Index (NCI), which mea-        ∼5500 edges. In order to avoid disconnected graphs, we set
+sures the similarity between each node and its neighbors,       Rmax by increasing it in small steps and taking the last value
+thus quantifying the echo-chamber effect. The second one,       before the graph results disconnected after running PROD.
+borrowed from the literature, is the Random Walk Contro-        In this way, we obtain Rmax = 0.4 · |E|. However, our re-
+versy score (RWC), which measures the polarization of the       sults are qualitatively similar with different values of the ra-
+network, in terms of random walks.                              tio Rmax /|E|. The parameter Tmax is set to 5000 for BCM
+Neighbors Correlation Index (NCI). We define NCI as the         and 100 for the epistemological model. The number of inter-
+Pearson correlation ρ(o, oN                                     actions S is set to 2 in order to allow for mixed interactions
+                          u ) between the opinion vector o,
+and the average opinion of each node’s neighbors, that is       (both existing edges and recommended ones) at each iter-
+                                                                ation. For BCM, the internal parameters µ and  are set to
+                           1     X
+                                                                0.2. For the epistemological model, the parameters  and n
+                  oNu =               ov .
+                         N (u)                                  are set to 0.005 and 15. With this choice of parameters, we
+                               v∈N (u)
+                                                                run the procedure outlined in Section 4, running K = 500
+Therefore, NCI is bounded between [−1, 1]. The value −1         simulations with each of the given recommenders. We re-
+represents perfect anticorrelation: each node has exactly the   peat this process varying the parameters of the random net-
+opposite opinion of its neighbors. Instead, 1 represents per-   work model, in order to estimate the effect of the recom-
+fect correlation: each node has exactly the same opinion of     mender over a range of graphs with different initial modu-
+all the nodes they follow—i.e., they are embedded in perfect    larity and homophily; specifically, we test η ∈ [0.2, 0.8] and
+echo chambers.                                                  µ ∈ [0.05, 0.95].
+Random Walk Controversy score (RWC). In order to                   We present both models’ results for the NCI metric in Fig-
+measure polarization, we employ the Random Walk Contro-         ure 2 and for the RWC metric in Figure 3. In each of these
+versy score as defined by Garimella et al. (2018). This mea-    figures, the x-axis corresponds to the initial homophily η,
+sure accounts for the probability that a random user could      while the y-axis to the initial modularity µ of the network.
+Figure 2: ∆NCI for the epistemological model (left half) and for the BCM model (right half). Each heatmap represents a given
+recommender and colors represent ∆NCI under different initial conditions (homophily η on x-axis, modularity µ on y-axis).
+Numbers are shown when the difference is statistically significant (p < 0.05). Asterisks further represent levels of significance
+(** is p < 0.01, *** is p < 0.001).
+
+
+Therefore, each region of the map corresponds to a certain          ure 2. Firstly, we find that all the recommenders significantly
+region of the space of possible initial conditions of the net-      increase echo chambers for some initial conditions. In par-
+work; examples of these initial conditions are shown in Fig-        ticular, we always observe an increase when the following
+ure 1. Since the color represents the difference in our metric      two conditions are met:
+between a scenario with a recommender and one without              (i) Homophilic links—i.e., links connecting nodes with the
+(Equation 5), areas with a more intense shade of red indi-             same opinion—are at least half of the initial links of the
+cate an increase in echo chambers (for NCI) or polarization            network (i.e., η > 0.5).
+(for RWC) when a recommender system is used. In each
+plot, we mark an entry with a number only if it is signifi-       (ii) The initial network is not already segregated in polar-
+cant (p < 0.05) according to the Kolmogorov-Smirnov test.              ized communities, but there are a large fraction of inter-
+Asterisks represent further levels of significance. Therefore,         community links (i.e., µ < 0.3).
+each of these plots is a fingerprint of one recommender sys-           For this type of network (highly homophilic, but not well
+tem, when considering a specific metric and opinion dynam-          modularized) the effect of people recommenders is always to
+ics model.                                                          increase echo chambers, w.r.t. a scenario where no algorithm
+   In the following, we will analyze first the results we ob-       was introduced. This finding is consistent across all recom-
+tained regarding echo-chamber behavior using NCI (Sec-              menders and opinion dynamics models. It is interesting to
+tion 5.1), and then regarding polarization using RWC (Sec-          note, however, that for Personalized PageRank this effect
+tion 5.2). Then, we explore how our results can change un-          is slightly more intense when the damping factor is lower.
+der different assumptions, such as different rewiring rules or      This finding is expected since a lower damping factor corre-
+susceptibility to recommendations (Section 5.3). Finally, we        sponds to recommendations being more personalized, while
+show how our framework can be used to assess the impact of          a higher damping factor prioritizes nodes that are central for
+intervention policies on recommender systems (Section 5.4).         the whole network. Therefore, the more recommendations
+                                                                    are personalized, the more we find that they can contribute
+5.1   Findings on echo chambers                                     to the rise of echo chambers.
+                                                                       Instead, we observe a different effect in other regions of
+Let us now focus on the effect of recommenders on echo              the initial conditions space. When the initial graph is not ho-
+chambers, as measured by the NCI metric, by looking at Fig-         mophilic (i.e., η < 0.5), the effect of the recommender is
+Figure 3: ∆RWC for the epistemological model (left half) and for the BCM model (right half). Each heatmap represents a given
+recommender and colors represent ∆NCI and ∆RWC under different initial conditions (homophily η on x-axis, modularity µ
+on y-axis). Numbers are shown when the difference is statistically significant (p < 0.05). Asterisks further represent levels of
+significance (** is p < 0.01, *** is p < 0.001).
+
+
+in general very small, and possibly even in the opposite di-       highlight which nodes are part of an echo chamber, by set-
+rection w.r.t. the null model with no recommender. In other        ting their transparency as proportional to their contribution
+words, the effect of recommenders on homophily is to am-           in the NCI metric—i.e., how correlated are their opinions
+plify the initial bias present in the network.                     to the opinions of their neighbors. We observe that in high
+   A similar—but stronger—pattern can be noticed when              homophily and low modularity setting, echo chambers visi-
+the network is highly modularized. Here, we also ob-               bly emerge when a recommender is considered, while they
+serve some differences between different recommenders. If          do not in the null model without a recommender. Instead,
+enough inter-community links are present in the initial net-       when the network is already polarized (i.e., with high initial
+work (µ > 0.5), then the effect of DJI is mostly non-              modularity), the effects of recommenders are negligible.
+significant. Instead, for PPR and SALSA, we observe a large
+reduction in the echo-chamber effect when such algorithms          5.2   Findings on polarization
+are used. In other words, if the network is not very segre-        Now, we turn our attention to the effect of recommenders on
+gated, recommenders increase homophily and echo cham-              polarization, as measured by the RWC metric, by looking
+bers; but, if the network is already very divided into com-        at Figure 3. First of all, in this case, results are very differ-
+munities, some recommenders might have the opposite ef-            ent between Jaccard Index and random walk-based recom-
+fect, and “shuffle together” different communities. The al-        menders, Personalized PageRank and SALSA, for all ini-
+gorithms where we observe this effect are those that are able      tial conditions. In the general case, in fact, while the for-
+to recommend distant nodes.                                        mer type of recommenders obtains a small negative effect
+   Finally, we highlight that these effects hold even for          on polarization w.r.t. the null model, the latter is increas-
+the opinion-biased recommender; however, for this recom-           ing it significantly. We hypothesize that this difference is
+mender, the overall effect is always of increasing the echo        caused by the information that these two types of recom-
+chamber in the network. This result confirms that such an          menders are considering. Since random walk-based recom-
+idealized recommender is useful as a benchmark, showing            menders consider higher distances when making recommen-
+what happens when recommendations are a result of opin-            dations, they prioritize candidates within one’s own com-
+ions only, without considering the network structure.              munity, even when such a community is larger than a one-
+   We further investigate our findings in Figure 4, by observ-     hop neighborhood. This ends up increasing the separation
+ing a concrete example with two simulated graphs. Here we          between the different communities. Instead, Jaccard Index
+Figure 4: Example of the evolution of networks with two different initial conditions, and three different recommenders. From
+left to right: (a) initial graph, (b) final graph with no recommender, (c) Directed Jaccard (d) Personalized PageRank, (e) Opinion-
+Biased. Colors represent the opinion of each node; transparency represents the correlation of their opinions with their neighbor-
+hood (i.e., echo chambers). Each community produced by the random network model has an assigned position in the axis. For
+each node, we draw random coordinates around the correspondent center of the assigned community. In the first row, the initial
+configuration is η = 0.8, µ = 0.05 (high homophily, low modularity). By looking at the difference between (b) and (c,d,e), we
+observe an increase in echo chamber behavior due to the recommenders. In the second row with η = 0.8, µ = 0.75, instead, we
+observe no significant difference.
+
+keeps in consideration only the immediate neighbors of a             5.3   Generalizability
+node; this results in avoiding increasing the segregation be-
+tween polarized communities in the global structure of the           In this section, we want to validate the robustness and gen-
+network. Moreover, since the RWC score is based on how               eralizability of our framework by exploring how changes in
+likely is a random walk to cross different communities, it           the basic assumptions of PROD could impact the results of
+sharply highlights this distinction. This metric is, therefore,      our analysis. In particular, we evaluate different procedures
+useful to distinguish the higher-order effects of the differ-        in terms of rewiring edge selection and individual suscepti-
+ent recommenders, providing useful information to evaluate           bility on recommendations.
+the long-term consequences of different choices in recom-               Following the well-known concept of attention bud-
+mender algorithms.                                                   get (Golder, Wilkinson, and Huberman 2007; Huberman,
+                                                                     Romero, and Wu 2008), we postulate that each time a new
+   Finally, we highlight that for PPR and SALSA the in-              connection is created, an existing one is removed. In the re-
+creasing effect holds in all regions of the initial condi-           sults we presented so far, we followed the most simple possi-
+tion space, except for already polarized networks (high µ,           ble choice: select an existing edge with uniform probability,
+high η). In this case, we observe a saturation phenomenon:           as done in previous work Sasahara et al. (2021). However,
+the recommender has a smaller effect (for PPR) or even neg-          it is important to assess to which extent this design choice
+ative (for SALSA) on polarization w.r.t. the null model. In-         influences our outcomes. For this reason, we consider two
+stead, when DJI starts from such a polarized network, it is          rewiring policy alternatives: an opinion-based rewiring that
+the only case when it contributes to further polarization, by        picks the edge to remove with a probability proportional to
+amplifying the initial separation.                                   the opinion distance between the two nodes; and a degree-
+                                                                     based rewiring, inspired by preferential attachment, where
+   As in the previous section, all these effects are consis-         the edge is selected with probability inversely proportional
+tent across the two opinion dynamics models. Such findings,          to the degree of the node to unfollow. We repeat previous
+therefore, are valid both for the case where opinions are in-        experiments with each of these two policies. For simplicity,
+distinguishable and nodes simply influence each other and            we limit this analysis to the PPR recommendation algorithm
+for the case where nodes are trying to form an opinion on a          and to the four extremal configurations of η and µ.
+true fact by exchanging observations.                                   We present results in the leftmost columns of Table 1.
+Table 1: Comparison between the standard model and two rewiring procedures (opinion-based and degree-based) and two
+users’ susceptibility distributions (uniform and power-law). EPI and BCM represent the two opinion dynamics models. Each
+row represents a pair of values of initial homophily η and modularity µ. We report results for each experiment in terms of our
+two metrics ∆N CI and ∆RW C. Our standard model relies on a uniform rewiring procedure and constant susceptibility for
+all nodes. In bold, we highlight cases that differ from the standard model by more than 0.1.
+
+                                    Standard Model                 Rewiring                     Susceptibility
+                                                       Opinion            Degree          Uniform         Power-law
+                         (η, µ)     EPI     BCM       EPI BCM           EPI   BCM        EPI   BCM       EPI    BCM
+
+                        (.2, .05)   -0.04   -0.03     0.38    0.64      -0.06   -0.05   -0.03   -0.03    -0.03   -0.03
+                 ∆NCI
+
+
+
+
+                        (.2, .95)   -0.04   -0.02     0.23    0.39      -0.04   -0.03   -0.03   -0.01    -0.03   -0.01
+                        (.8, .05)    0.02    0.08     0.42    0.76       0.03    0.1     0.02    0.09     0.02    0.08
+                        (.8, .95)   -0.01    0.00     0.04    0.08      -0.01    0.00   -0.01   0.00     -0.01   0.00
+
+                        (.2, .05)   0.13    0.13      0.16    0.25      0.16    0.16    0.12     0.12    0.11     0.11
+                 ∆RWC
+
+
+
+
+                        (.2, .95)   0.03    0.02      0.06    0.13      0.03    0.03    0.02     0.02    0.02     0.02
+                        (.8, .05)   0.13    0.13      0.16    0.22      0.17    0.18    0.12     0.13    0.11     0.12
+                        (.8, .95)   0.03    0.02      0.11    0.15      0.02    0.02    0.02     0.02    0.02     0.02
+
+
+
+They show quantitatively comparable outcomes between the                 we iterate over possible edges in a random order, and for
+standard model, which employs a random uniform rewiring                  each one evaluate a Bernoullian with probability p, until it
+procedure, and the degree-based policy. Instead, as one                  is successful. This probability relies on one of the following
+could expect, the rewiring based on the opinion diversity is             strategies.
+disruptive, since it greatly amplifies the polarizing effect. In        1. Random uniform strategy: p is uniform over the non ex-
+other words, all our previous findings seem confirmed when                  isting edge set. The original recommendation is therefore
+the user choices are not directly driven by opinion-based                   modified in order to pursue serendipity.
+consideration, which of course can explain echo-chamber
+effects by itself; however, we have seen how such an as-                2. Opinion diversity strategy: p is proportional to the opinion
+sumption is not necessary, since under some configurations                  difference of the nodes, i.e. p = |ou − ov |; here, we try to
+recommender systems alone can produce an increase in echo                   bridge individuals belonging to different echo chambers.
+chambers.                                                               3. Degree-based strategy: p is higher for nodes with higher
+   Then, we perform experiments challenging our assump-                     degrees, according to a sigmoid: p = 1/(1 + e−(x−d) ),
+                                                                                                                                      b
+
+tion that all nodes have an equal probability α to accept                   where x is the in-degree of the recommended node and
+the given recommendation, and observe what happens when                     db is the average in-degree of the network); the idea is to
+each node has an individual susceptibility to recommen-                     leverage popular individuals to break echo chambers, as
+dations. We test what happens with two different choices                    suggested by Elmas et al. (2020).
+to draw this susceptibility, a uniform distribution where
+                                                                            These three strategies have different degrees of real-world
+αu ∼ U (0, m) and a power-law αu ∼ 1 − m · x(m−1) . In                   applicability: for instance, a social network user might be
+both cases, we set m in order to satisfy E[αu ] = α. We                  more likely to follow a celebrity (i.e. a high-degree node)
+present these results on the rightmost columns of Table 1.               than a random social media user; following a different-
+By comparing these values with the standard model ones,                  minded individual might be even more unlikely in practice.
+we find that such a change does not alter significantly our              However, for the purpose of this work, we are interested only
+results in all configurations and recommender algorithms.                in analyzing the impact of these idealized policies in mitigat-
+Similar and consistent results have been achieved with the               ing echo-chamber effects.
+other recommendation algorithms and in all configurations,                  We test these three strategies on top of the personalized
+thus corroborating the robustness of our findings.                       PageRank algorithm. Results are presented in Figure 5. They
+                                                                         show that the in-degree strategy and the uniform strategy
+5.4   Intervention policies                                              have a comparable impact in reducing the echo chamber ef-
+Finally, in this section, we explore how to use our framework            fect, with a slightly better effect for the latter. As expected,
+to evaluate the impact of intervention policies in the context           the opinion-based strategy results to be more effective be-
+of mitigation of echo-chamber and polarization effects. We               cause it directly targets the opinions divergence between the
+defined three intervention procedures working on top of the              users, and this effect is more prominent in terms of the corre-
+recommender system. In particular, given an edge from the                lation metric (NCI). Furthermore, we observe that even low
+recommender, we replace it, with probability ξ, with another             values of intervention probability are already sufficient for
+edge selected according to a probability p; more precisely,              reversing the effect on both metrics.
+                                                                 that our framework is able to assess that such findings are in
+                                                                 general statistically significant.
+                                                                    More in general, the goal of this work is to define the set
+                                                                 of assumptions needed for an increase in echo chamber and
+                                                                 polarization to be a direct consequence of recommendation
+                                                                 algorithms. We find that while opinion-biased user behavior
+                                                                 can easily explain such effects (Table 1), in general this as-
+                                                                 sumption is not necessary: the action of recommenders can
+                                                                 cause a surge in echo chambers, as long as some initial con-
+                                                                 ditions are met. Such findings are robust across a wide range
+                                                                 of models, algorithms, and design choices.
+                                                                    Nonetheless, we acknowledge that more complex models
+                                                                 could be tested: for instance, we assume a static network,
+                                                                 where the number of nodes and edges is kept approximately
+                                                                 constant over time. Yet, our experiments with a rewiring rule
+                                                                 that resembles preferential attachment yielded very similar
+                                                                 results. We speculate that these kinds of dynamic networks
+                                                                 could present similar behavior.
+Figure 5: ∆NCI (first row) and ∆RWC (second row) as a               Like other simulation-based studies, our work lacks a di-
+function of the intervention probability ξ, for each interven-   rect, quantitative comparison with real-world data, which
+tion procedure and each model: BCM (left half) and Episte-       is obviously difficult to achieve. In fact, it is impossible in
+mological (right half).                                          most real cases to observe the counterfactual: for a given
+                                                                 set of users, simultaneously observing their behavior with
+                                                                 and without a recommender system operating. Our goal is
+                     6    Discussion                             therefore to reproduce phenomena actually observed in real
+                                                                 cases, echo-chamber and polarization. In order to investigate
+In this work, we propose a Monte Carlo simulation proce-         a causal link between them and recommendation algorithms,
+dure that combines opinion dynamics modeling and real-           it is important, in fact, to have first a formal model of how
+world recommender systems, we quantify the effect of peo-        the two are connected, and to delimit a minimal and realistic
+ple recommenders in social media platforms on the forma-         set of assumptions for this causal link to exist. This work is
+tion of echo chambers and polarization. We systematically        therefore a step in this direction, and as such it opens direc-
+explore realistic network scenarios, in terms of homophily,      tions for future research.
+modularity, and power-law degree distribution, by extending         Among all, different model extensions regarding multidi-
+a previously proposed network model (Lancichinetti, Fortu-       mensional opinions could be of interest. From an applica-
+nato, and Radicchi 2008) by considering opinions on each         tive perspective, our framework could be used as a guide-
+node. Thanks to this model, we are able to perform such          line to design and analyze other existing algorithms in order
+analysis in a wide range of initial conditions, identifying      to assess their interplay with echo chambers. For instance,
+and exploring two orthogonal dimensions of echo cham-            one could investigate more complex recommendation algo-
+bers, homophily and modularity. We consider two com-             rithms, considering a combination of content-based, graph-
+plementary opinion-dynamics models, the Bounded Confi-           based, and interaction-based methods together with recent
+dence Model (Deffuant et al. 2000) and the epistemological       network embeddings techniques. Moreover, it can be used to
+model by Bala and Goyal (1998).                                  evaluate algorithms able to mitigate echo-chamber effects.
+   Our findings are robust across the different opinion dy-      We sketched how such an analysis can work, by comparing
+namics models and people recommenders tested. We show            the effect of possible intervention strategies.
+that the effect of such algorithms is remarkable w.r.t. the
+null-model and, moreover, prominent when certain initial                                 References
+conditions are met. The emergence of echo chambers is            Bakshy, E.; Messing, S.; and Adamic, L. A. 2015. Expo-
+mostly reinforced by such algorithms when the graph struc-       sure to ideologically diverse news and opinion on Facebook.
+ture is not already modularized, but homophilic connections      Science 348(6239):1130–1132.
+are prevalent; this finding is consistent for all algorithms,
+                                                                 Bala, V., and Goyal, S. 1998. Learning from neighbours.
+even if with different magnitudes. The overall polarization
+                                                                 The review of economic studies 65(3):595–621.
+shows an increasing trend when the graph is not modular-
+ized and tends to a saturation point—with a slightly positive    Barberá, P.; Jost, J. T.; Nagler, J.; Tucker, J. A.; and Bon-
+or sometimes negative effect—when the initial conditions         neau, R. 2015. Tweeting From Left to Right: Is Online Po-
+are of high homophily and segregation. In this regard, we        litical Communication More Than an Echo Chamber? Psy-
+are able to highlight a significant difference across recom-     chological Science 26(10):1531–1542.
+menders. We argue that such differences are a result of the      Barbieri, N.; Bonchi, F.; and Manco, G. 2014. Who to follow
+tendency of some recommenders to focus on local neighbor-        and why: link prediction with explanations. In KDD ’14,
+hoods rather than the global structure. Finally, we remark       1266–1275.
+Bastos, M.; Mercea, D.; and Baronchelli, A. 2018. The          Khondker, H. H. 2011. Role of the new media in the Arab
+geographic embedding of online echo chambers: Evidence         Spring. Globalizations 8(5):675–679.
+from the Brexit campaign. PLOS ONE 13(11):e0206841.            Kleinberg, J. M. 1999. Authoritative sources in a hyper-
+Cinelli, M.; Morales, G. D. F.; Galeazzi, A.; Quattrocioc-     linked environment. J. ACM 46(5):604–632.
+chi, W.; and Starnini, M. 2021. The echo chamber effect        Kobourov, S. G. 2012. Spring embedders and force directed
+on social media. Proceedings of the National Academy of        graph drawing algorithms. arXiv:1201.3011.
+Sciences 118(9).                                               Kumar, A.; Singh, S. S.; Singh, K.; and Biswas, B. 2020.
+de Arruda, H. F.; Cardoso, F. M.; de Arruda, G. F.;            Link prediction techniques, applications, and performance:
+Hernández, A. R.; Costa, L. d. F.; and Moreno, Y. 2021.       A survey. Physica A: Statistical Mechanics and its Applica-
+Modeling how social network algorithms can influence           tions 553:124289.
+opinion polarization. arXiv preprint arXiv:2102.00099.         Lancichinetti, A.; Fortunato, S.; and Radicchi, F. 2008.
+Deffuant, G.; Neau, D.; Amblard, F.; and Weisbuch, G.          Benchmark Graphs for Testing Community Detection Al-
+2000. Mixing Beliefs Among Interacting Agents. Advances        gorithms. Physical Review E 78(4):046110.
+in Complex Systems 3:87–98.                                    Lempel, R., and Moran, S. 2001. SALSA: the stochastic
+Elmas, T.; Hardi, K.; Overdorf, R.; and Aberer, K. 2020. Can   approach for link-structure analysis. ACM Trans. Inf. Syst.
+celebrities burst your bubble? MISINFO 2021: Workshop on       19(2):131–160.
+Misinformation Integrity in Social Network.                    Liben-Nowell, D., and Kleinberg, J. 2007. The link-
+Enli, G. 2017. Twitter as arena for the authentic outsider:    prediction problem for social networks. Journal of the
+Exploring the social media campaigns of Trump and Clinton      American society for information science and technology
+in the 2016 US presidential election. European journal of      58(7):1019–1031.
+communication 32(1):50–61.                                     Morales, G. D. F.; Monti, C.; and Starnini, M. 2021. No echo
+Fabbri, F.; Bonchi, F.; Boratto, L.; and Castillo, C. 2020.    in the chambers of political interactions on reddit. Scientific
+The effect of homophily on disparate visibility of minori-     Reports 11(1):1–12.
+ties in people recommender systems. In Proceedings of the      Nikolov, D.; Oliveira, D. F. M.; Flammini, A.; and Menczer,
+International AAAI Conference on Web and Social Media,         F. 2015. Measuring online social bubbles. PeerJ Computer
+165–175.                                                       Science 1:e38.
+Fletcher, R., and Kleis Nielsen, R. 2017. Are people inci-     Page, L.; Brin, S.; Motwani, R.; and Winograd, T. 1999.
+dentally exposed to news on social media? A comparative        The pagerank citation ranking: Bringing order to the web.
+analysis. New Media & Society 20:146144481772417.              Technical report, Stanford InfoLab.
+Garimella, K.; Morales, G. D. F.; Gionis, A.; and Math-        Pariser, E. 2011. The Filter Bubble: What the Internet Is
+ioudakis, M. 2018. Quantifying controversy on social me-       Hiding from You. Penguin UK.
+dia. ACM Transactions on Social Computing 1(1):1–27.           Perra, N., and Rocha, L. E. 2019. Modelling opinion dy-
+Garrett, R. K. 2009. Echo chambers online?: Politically mo-    namics in the age of algorithmic personalisation. Scientific
+tivated selective exposure among Internet news users. JCMC     reports 9(1):1–11.
+14(2).                                                         Quattrociocchi, W.; Scala, A.; and Sunstein, C. R. 2016.
+Gleich, D. F. 2015. Pagerank beyond the web. siam REVIEW       Echo Chambers on Facebook. SSRN Scholarly Paper ID
+57(3):321–363.                                                 2795110, Social Science Research Network, Rochester, NY.
+                                                               Sasahara, K.; Chen, W.; Peng, H.; Ciampaglia, G. L.; Flam-
+Goel, A.; Gupta, P.; Sirois, J.; Wang, D.; Sharma, A.; and
+                                                               mini, A.; and Menczer, F. 2021. Social influence and unfol-
+Gurumurthy, S. 2015. The who-to-follow system at twit-
+                                                               lowing accelerate the emergence of echo chambers. Journal
+ter: Strategy, algorithms, and revenue impact. Interfaces
+                                                               of Computational Social Science 4(1):381–402.
+45(1):98–107.
+                                                               Sı̂rbu, A.; Pedreschi, D.; Giannotti, F.; and Kertész, J.
+Golder, S. A.; Wilkinson, D. M.; and Huberman, B. A. 2007.     2019. Algorithmic bias amplifies opinion fragmentation
+Rhythms of social interaction: Messaging within a massive      and polarization: A bounded confidence model. PloS one
+online network. In Communities and technologies 2007.          14(3):e0213246.
+Springer. 41–66.
+Gupta, P.; Goel, A.; Lin, J. J.; Sharma, A.; Wang, D.; and
+Zadeh, R. 2013. WTF: the who to follow service at twitter.
+In 22nd International World Wide Web Conference, WWW
+’13, 505–514. ACM.
+Guy, I. 2018. People recommendation on social media. In
+Social information access. Springer. 570–623.
+Huberman, B. A.; Romero, D. M.; and Wu, F. 2008. Social
+networks that matter: Twitter under the microscope. arXiv
+preprint arXiv:0812.1045.
+

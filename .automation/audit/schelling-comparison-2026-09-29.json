@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-29",
+  "note": "Literature/Papers/Entries/A Schelling model with adaptive tolerance.md",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5839580/",
+  "design": "Two independent source-to-note audits of the same initial cheap extraction; auditors did not edit or consult one another. Findings were checked against the published full text before correction.",
+  "extractor_model": "gpt-6-luna",
+  "audits": [
+    {
+      "model": "gpt-6-luna",
+      "result": "fail",
+      "material_findings": [
+        "Algorithm 1 may retain current site even with qualifying vacancies",
+        "Movement prose versus Algorithm 1 candidate condition conflict",
+        "Tolerance unchanged after failed move in prose versus Eq. 3/Algorithm 2 conflict",
+        "Outcome definitions and sampling cadence omitted",
+        "Clustered migration placement omitted",
+        "Tolerance decrease scope unclear",
+        "Convergence-restricted result ranges omitted",
+        "E=0 initial control and migration schedule omitted"
+      ]
+    },
+    {
+      "model": "gpt-6-astra",
+      "result": "fail",
+      "material_findings": [
+        "Algorithm 1 may retain current site even with qualifying vacancies",
+        "Satisfied-agent random movement prose versus Algorithm 2 scope conflict",
+        "5x5 Moore versus Euclidean radius-two neighborhood conflict",
+        "Higher own-group threshold called increased tolerance despite stricter satisfaction rule",
+        "E=0 initial control and dynamic clustered migration schedule omitted",
+        "Sequential shuffled update order omitted",
+        "Sampled parameter ranges and 20000-tick duration omitted",
+        "Moran I, group means and bimodality outcome definitions omitted",
+        "Convergence-restricted result ranges omitted"
+      ]
+    }
+  ],
+  "comparison": {
+    "shared_core": [
+      "Movement choice set",
+      "Migration mechanism and treatment control",
+      "Outcome measures",
+      "Convergence restriction"
+    ],
+    "cheap_only": [
+      "Failed-move tolerance-update conflict"
+    ],
+    "expensive_only": [
+      "Random satisfied-agent movement scope conflict",
+      "Neighborhood-description conflict",
+      "Threshold interpretation conflict",
+      "Sequential update order",
+      "Sampled parameter values and duration"
+    ],
+    "finding": "The cheap audit found the major extraction errors, but the expensive audit supplied additional relevant source conflicts and implementation details. One paper cannot establish a general accuracy or cost threshold; no per-agent usage/cost telemetry was available."
+  },
+  "remediation": "Initial audit findings and first re-audit findings corrected or explicitly flagged in the note; independent cheap re-audit passed.",
+  "re_audit": {
+    "model": "gpt-6-luna",
+    "first_result": "fail",
+    "additional_findings": [
+      "Migrant-placement prose versus Algorithm 4 discrepancy",
+      "Square versus radius-two neighborhood difference extends beyond corners"
+    ],
+    "final_result": "pass",
+    "source_checked": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5839580/",
+    "independent_of_extractor": true
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-30",
+  "scope": "independent audit of case-sensitive lexicographic entries 54–66 in vault/Literature/Papers/Entries",
+  "method": "Read the extraction rules, notation guide and template before auditing. Read each full primary source from the listed cache file, except index 56 where only the primary Nature abstract/metadata was accessible. Cache file paths and SHA-256 values are recorded for reproducibility. Compared abstract, source locators, model/empirical classification, stated mechanisms and caveats, authors/metadata, reference preservation, template sections and footnote support. Auditor edits were limited to removing stale audit-failed status metadata and adding audit-log entries; no claim content changed.",
+  "records": [
+    {
+      "index": 54,
+      "note": "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/html/1909.04847",
+      "evidence": "Full RecSim paper §§3.1, 4.1–4.2 and §1.4; component interfaces, observation boundary, episode loop and stated non-objectives checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88.txt",
+        "sha256": "b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88",
+        "bytes": 74197
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read RecSim paper §§3.1, 4.1–4.2, and 1.4. Note’s observation boundary (simulator state vs agent observation), configurable component payloads, sequential response/transition/recommender update, episode stopping, metrics, and non-objectives are represented and source-located.",
+      "previous_sha256": "1d19986f2c52aaba6f2265ce83ac32ceb5609b0605ca9cd0d9ad5941d5cf6baf"
+    },
+    {
+      "index": 55,
+      "note": "vault/Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/pdf/2007.16120v2",
+      "evidence": "Full v2 paper §2/Fig. 1 and definitions 2.3–2.5; reciprocal conceptual model, score fusion, candidate eligibility and source-version/metadata checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/527b066e879b88506e1ee81a79a352c34f9a93bb46442ab8e429b6f8378a16cd.txt",
+        "sha256": "527b066e879b88506e1ee81a79a352c34f9a93bb46442ab8e429b6f8378a16cd",
+        "bytes": 179189
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read reciprocal-recommender v2 PDF. Note’s model now captures directed preferences for both sides and fusion into a mutual score, recommendation eligibility/ranking, and study-design scope (§2/Fig. 1/Definitions 2.3–2.5); source is v2 PDF, avoiding the withdrawn v3 landing record.",
+      "previous_sha256": "caff2e04be9aef3b96839ef194c1e64bdf4b62112cd1aa20082ad878ac0d83da"
+    },
+    {
+      "index": 56,
+      "note": "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": false,
+      "source_url": "https://www.nature.com/articles/s41586-026-10536-1",
+      "evidence": "Nature publisher abstract and metadata only; full text blocked. Note limits claims to abstract and retains fulltext unavailable.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871.txt",
+        "sha256": "e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871",
+        "bytes": 48542
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Nature publisher page supplies abstract and bibliographic metadata only. Current study-design statements track the abstract’s N=2,000, eight-week random assignment and named feed conditions; allocation/algorithm/details are explicitly skipped. Audit scope is limited; fulltext unavailable remains.",
+      "previous_sha256": "161df2e25bf40c722cbbb7c00c8c8d4a6c2c41f62557ced2a480dee7141ef3be"
+    },
+    {
+      "index": 57,
+      "note": "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/27/2/4.html",
+      "evidence": "Full JASSS article §§3–4; abstract wording, framework scope, benchmark comparisons and EC2 calibration checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015.txt",
+        "sha256": "6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015",
+        "bytes": 98628
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full JASSS HTML §§3–4. Current abstract spacing/text matches publisher HTML; note correctly describes krABMaga framework, comparison, and EC2 calibration, without inventing a behavioral model.",
+      "previous_sha256": "5b7c5d96caded646174619414ba98f4c12042db9f5846f26b601b7f3f8fc6302"
+    },
+    {
+      "index": 58,
+      "note": "vault/Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
+      "evidence": "Full Science article; research summary and field experiment details/outcomes checked against the article.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b66e91bdf18f235be11dea28aa923246fcb06dac6c75e486782df8401957dc73.txt",
+        "sha256": "b66e91bdf18f235be11dea28aa923246fcb06dac6c75e486782df8401957dc73",
+        "bytes": 81620
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full Science paper pp. 1–4. Current study-design note matches 10-day preregistered experiment, 1,256 X users, AAPA exposure reranking and out-party feeling-thermometer result; empirical classification is correct.",
+      "previous_sha256": "ce3d82cbe180c9d721dc87133adeee22c040495fa02d01506cd500801354f9a9"
+    },
+    {
+      "index": 59,
+      "note": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/html/2311.16586",
+      "evidence": "Full SARDINE paper §§3–5 and relevant appendices; user/item initialization, click/relevance, boredom/influence, observability and environment variants checked; unresolved source ambiguities are explicit.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192.txt",
+        "sha256": "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192",
+        "bytes": 132242
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full arXiv v2 text §§3.1–3.5, Tables 1–3, §§4.1–4.4, and §5. Checked topic-vector initialization and normalization; first random/later policy slates; relevance→position-attractiveness→Bernoulli click rule and reward; both boredom variants, clicked-item influence, full/partial observation; nine environment variants and their listed controls. Note distinguishes experimental churn-and-return from the other boredom rule, records empty-click mean guard as an extraction convention, notes omitted composition/reset rules, and flags the positive sigmoid probability at zero relevance against the prose no-click claim. Remaining configuration/training details and real-world validity are explicitly scoped out; no material mechanism omission found in the claims made.",
+      "previous_sha256": "56530ebc9e517129a745f897e1a9fb6be8ffe210f4981895bf3a7c1087c03dfe"
+    },
+    {
+      "index": 60,
+      "note": "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://par.nsf.gov/servlets/purl/10187146",
+      "evidence": "Full NSF repository paper §§1–3 and references; four-page source, framework components, trigger/action/goal mechanics and retained bibliography checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47.txt",
+        "sha256": "308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47",
+        "bytes": 27901
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full NSF repository paper. Note matches the four-page PDF, trigger/behavior/action/goal component architecture, modeler-provided priorities/termination, builder-to-simulator flow, and reported outputs; full-text-unavailable flag was removed because the repository full text is accessible.",
+      "previous_sha256": "fe82d5c187188f53bcaa8950e206d01003ae2a0435fa21db49780a8f0d2ff0f2"
+    },
+    {
+      "index": 61,
+      "note": "vault/Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/26/2/6.html",
+      "evidence": "Full JASSS systematic review; exact abstract and screening/coding counts and review-vs-model distinction checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/e83672e73d9f27818e8a55c5d90dccdcb61ad483424c375a9b19b66df6372ac9.txt",
+        "sha256": "e83672e73d9f27818e8a55c5d90dccdcb61ad483424c375a9b19b66df6372ac9",
+        "bytes": 76521
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full JASSS HTML. Abstract text checked against publisher text; review counts and paired coding process match the screening/method section. Note says the paper is a systematic review and does not fabricate one unified SIA simulation.",
+      "previous_sha256": "aae6aa55b7cba841618cbd9bdad77b38e194753a54ced7c2bda2f323ec3c7d7b"
+    },
+    {
+      "index": 62,
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/15/4/3.html",
+      "evidence": "Full JASSS paper §§2–5; trust prose/algorithm discrepancy, strategy-specific search, alternating turns, fitness and selection claims checked; unresolved inherited rules flagged.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+        "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3",
+        "bytes": 64003
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full JASSS PDF/text §§2.1–2.6 and 3–4.5 (including source PDF p. 4 for image-rendered fitness equations). Checked turn allocation and strategy search, cooperation/defection trust prose against printed control algorithm, wellbeing/resource equations, and N=300 / 2,000 cycles / 20 generations / top-bottom 20% selection. Note reports both conflicting trust accounts; identifies inherited search/decay and kin seeding as omissions, and marks zero-denominator cases unspecified. No hidden single trust formula is asserted.",
+      "previous_sha256": "a180c26a381ecc28e4d541e2f2eb6689c620a6268df9997d40e71231fa55be5d"
+    },
+    {
+      "index": 63,
+      "note": "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
+      "evidence": "Full UIST paper §§3–6; persona expansion, top-level post/reply chain, responder selection/stopping and evaluation claims checked; unspecified generation parameters flagged.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c.txt",
+        "sha256": "2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c",
+        "bytes": 137947
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full UIST PDF §§3.2–3.4, 4.2.1–4.2.5, 4.3 and evaluation §§5–6. Checked persona expansion (10 seed/1,000 defaults), top-level-post prompt context and HTML stop marker, iterative reply context, 50% new persona vs prior participant (excluding latest speaker), sampled Normal reply probability/coin-flip loop and “more than 8” wording, WhatIf context intervention and Multiverse temperature 0.7→0.8. Note explicitly preserves the unspecified standard deviation and threshold/probability-boundary ambiguity, and states prompt/UI omissions and limits of evaluation.",
+      "previous_sha256": "9b4298baf5bbedd7e4f23be8a78a2def32276ad95cf00d2e00008f2e94390264"
+    },
+    {
+      "index": 64,
+      "note": "vault/Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://www.nature.com/articles/s41586-022-04997-3",
+      "evidence": "Full Nature article; publication date, abstract, exposure/friending-bias analyses and empirical classification checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d222d3be48874c34770d5b5c15945f16af3c793ad3ed25b6085ceb6e89021344.txt",
+        "sha256": "d222d3be48874c34770d5b5c15945f16af3c793ad3ed25b6085ceb6e89021344",
+        "bytes": 156505
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full Nature article. Publisher first-online date is 2022-08-01; abstract and claims on exposure/friending-bias decomposition, cohort exposure analysis and empirical (non-simulation) design are supported.",
+      "previous_sha256": "a54bd4a1efa7332b0dbfae8bbb5ee7b4b754a70d2da6f1067163e6e17e129a26"
+    },
+    {
+      "index": 65,
+      "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
+      "evidence": "Full author-hosted accepted manuscript §§2–3; rates, event timing, one-tie options, objective effects and boundary handling checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222.txt",
+        "sha256": "43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222",
+        "bytes": 80722
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full author-hosted accepted manuscript §§2–3. Checked Eqs. (1)–(6) and simulation algorithm: exponential waiting time from total actor rate, actor sampled proportional to rate, keep-or-one-outgoing-tie choice under normalized exponentiated objective, observation-wave boundary, time-varying period/covariate effects and examples of structural/path-dependent effects. Loop advances to boundary if no event fits. Estimation is summarized; coevolution/application-specific effect definitions are explicitly omitted. No mismatch found between type and loop.",
+      "previous_sha256": "e51f641c7cc651478f7615bdaa2a26f1f62078f2baa345f1969a9f4e6602ff94"
+    },
+    {
+      "index": 66,
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "status": "AUDIT_INVALIDATED",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/html/2107.08959",
+      "evidence": "Full T-RECS paper §§4–5 and Appendix A; event ordering, interfaces, creator defaults, examples and framework-vs-application distinction checked.",
+      "source_cache": {
+        "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9.txt",
+        "sha256": "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9",
+        "bytes": 119538
+      },
+      "note_changes_by_auditor": "Metadata only: removed stale `audit failed` warning and added this audit record. No Abstract, Research Questions, Model/Study Design, Metadata/References, or LLM Justification claims were edited.",
+      "source_to_note_checks": "Read full arXiv v2 text §4.1, §§4.2–4.5, §5, and Appendix A.2. Checked separate actual/predicted preferences/scores, default inner-product score, configurable presentation including optional interleaving/new-item handling, actual-preference feedback, event-driven skipping, parallel per-user feedback, model-state update and metrics. Appendix A.2.7 supports independent Bernoulli item attributes and optional creator production probability; §5.4 supports adaptive creator distributions as a case-study extension. Note distinguishes interface/defaults from that example and scopes out its equations. No material mechanism omitted from claims made.",
+      "previous_sha256": "a43020b612db78de89da63cfee6f249d5a76fc65ebe389a814b790d1d004099e"
+    }
+  ],
+  "summary": {
+    "AUDIT_INVALIDATED": 13
+  },
+  "validity": "WITHDRAWN: auditor admitted premature flag removal and overclaimed full independent checks. All conclusions require a new independent audit.",
+  "auditor_admission": "Relied on previous reports and spot checks before clearing flags; deeper checks for 59,62,63,65,66 occurred afterward. No full independent audit completed for every note."
+}

@@ -1,0 +1,55 @@
+{
+  "audit_date": "2026-09-30",
+  "scope": "Independent focused re-audit of current notes #31, #33, and #35 against primary sources. Notes were not edited.",
+  "papers": [
+    {
+      "entry": 31,
+      "file": "HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "status": "FAIL",
+      "source_access": "JASSS version of record read: https://www.jasss.org/28/1/4.html, especially Appendix A sections Initialisation, Process overview and scheduling, Signal or inquire, Signal, Inquire, Set dissonances, Update dissonances, Choose alternative.",
+      "checks_passed": [
+        "Current note now correctly records the [0,1] aspiration initialization and the conflicting Appendix Stochasticity range 0 to <3 (Appendix A, Create agents and Stochasticity).",
+        "Initialization details match Appendix A: importance/tolerance Normal(.5,.14) truncated [0,1], beta shape pairs, 20% links within 35 cells with nearest fallback, and initially known alter choices with other alter fields at defaults (Tables 1–4; Initialisation).",
+        "Dissonance formula and sign-based social/non-social dilemma definitions match Appendix A, Set dissonances and Update dissonances.",
+        "The uncontacted-first partner ranking, opposite-choice Signal versus same-choice Inquire, and persuasion-ranked selection are present and match Appendix A, Signal or inquire.",
+        "The note explicitly reports the narrative habit-choice condition versus the procedural thresholded rule; Appendix A, Process overview and scheduling versus Choose alternative supports this distinction.",
+        "Choice comparison thresholds and random-order dissonance update are substantially faithful to Appendix A, Choose alternative and Set dissonances."
+      ],
+      "remaining_discrepancies": [
+        "Exchange summary says ‘the recipient's need estimates are blended with the source's’ for both modes. Appendix A, Signal updates the signalled recipient's experiential/value satisfaction from the sender; Inquire instead updates the inquiring agent using the inquired alter's information. The direction is therefore wrong or ambiguous for Inquire.",
+        "Persuasion is underspecified: Appendix A, Signal and Inquire gives similarity as 0.4 × (1 − absolute difference in motive importance) only when the corresponding motive evaluations have the same sign, otherwise 0; relative aspiration is 0.4 × aspiration difference, clipped to [0,1]. The note omits the coefficient, sign condition, clipping, and direction of the aspiration comparison.",
+        "Appendix A, Set dissonances maps the same-choice alter fraction from [0,1] to [−1,1] before multiplying by social importance. Current note only says it depends on the fraction, omitting this transformation."
+      ],
+      "recommendation": "Correct the asymmetric Signal/Inquire information-update direction and include the compact persuasion rule and social-satisfaction rescaling before clearing the not-audited warning."
+    },
+    {
+      "entry": 33,
+      "file": "How many hours does it take to make a friend.md",
+      "status": "PASS",
+      "source_access": "SAGE publisher page read: https://journals.sagepub.com/doi/10.1177/0265407518761225 (publisher abstract and article metadata).",
+      "checks_passed": [
+        "The note's abstract matches the publisher abstract verbatim, including the source's wording ‘Hours together was associated changes in closeness between waves’; the publisher does not include ‘with’ (SAGE abstract, lines 30–32).",
+        "DOI and first-online date 2018-03-15 match SAGE metadata (lines 20, 29); the note accurately distinguishes the April 2019 issue date.",
+        "The two research questions are concise paraphrases of the stated questions and aims; the empirical, non-simulation characterization is appropriate."
+      ],
+      "remaining_discrepancies": [],
+      "recommendation": "No correction identified in this focused audit."
+    },
+    {
+      "entry": 35,
+      "file": "Individual Motivations and Network Effects.md",
+      "status": "FAIL",
+      "source_access": "SAGE publisher abstract and full text were checked, with the accessible author full text used for methods/results: https://journals.sagepub.com/doi/10.1177/0002716214565755 and https://www.researchgate.net/publication/274897882_Individual_Motivations_and_Network_Effects_A_Multilevel_Analysis_of_the_Structure_of_Online_Social_Relationships.",
+      "checks_passed": [
+        "Abstract wording and reported significance pattern agree with the SAGE publisher abstract: time online and balance predict ties; gender, age, proximity, homophily, and preferential attachment are not significant.",
+        "The printed page locator pp. 181–187 is appropriate for the cited data, model, and findings. Full text places the model framing on p.181; ERGM design and sampling on pp.184–185; specifications/results on pp.185–187.",
+        "Classifying this as empirical statistical network modeling rather than a forward-running agent simulation is accurate; the source estimates ERGMs on observed networks."
+      ],
+      "remaining_discrepancies": [
+        "The Model section says the study ‘fits an exponential random graph model ... to the observed ... network,’ which implies one network and omits the actual multilevel procedure. Methods (printed pp.184–187) sample 20 Second Life groups, fit separate ERGMs to those group networks, then use weighted least squares to aggregate coefficients. This is a material design feature and should be stated.",
+        "The note's shorthand ‘balance/common neighbors’ could be made more precise: the model operationalizes balance with GWESP (edgewise shared partners with geometrically weighted decay), as described in the specification on printed pp.185–186."
+      ],
+      "recommendation": "Revise the model summary to describe the 20 sampled group networks, separate ERGM fits, and WLS aggregation; name GWESP if retaining the balance claim."
+    }
+  ]
+}

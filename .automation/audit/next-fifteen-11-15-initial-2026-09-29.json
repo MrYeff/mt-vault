@@ -1,0 +1,127 @@
+{
+  "audit": "Independent initial audit of entries 11–15; no paper notes edited.",
+  "date": "2026-09-29",
+  "overall": "Initial audit failures documented. Corrections applied where full text was accessible; #11 and #15 still have source-access blockers and cannot pass full-text verification.",
+  "reference_preservation": "For all five notes, existing reference links and order exactly match the original snapshot.",
+  "notes": [
+    {
+      "filename": "Antecedents and Effects of Parasocial Relationships- A Meta-Analysis.md",
+      "result": "FAIL",
+      "primary_source": "https://academic.oup.com/joc/article/70/6/868/5964783",
+      "fulltext_access": "Publisher page exposes abstract and supplementary data but not article full text in this environment; full-text methods/results could not be independently checked.",
+      "claims_checked": "Abstract wording and both research questions are supported by the publisher abstract. Model extraction is appropriately skipped because the full-text methods are unavailable and this is a meta-analysis, not an agent simulation.",
+      "bibliography": {
+        "original_links": 80,
+        "current_links": 80,
+        "order_preserved": true,
+        "issues": "The article bibliography could not be inspected. A metadata index reports 70 references, while the imported note has 80 links; duplicates/edition aliases or over-import are possible but cannot be resolved without primary full text. Three links are unresolved-reference placeholders. Do not claim bibliography complete."
+      },
+      "exact_fixes": [
+        "Keep fulltext unavailable and not audited until the full article is accessible and checked.",
+        "Reconcile the 80 imported links against the article bibliography when accessible; retain existing links unless an individual mismatch is source-verified.",
+        "Add an explicit bibliography completeness caveat if the bibliography cannot be reconciled; do not imply the extracted list is complete."
+      ],
+      "metadata": "DOI 10.1093/joc/jqaa034 and publication date 2020-11-10 match the publisher record.",
+      "correction_status": "access and bibliography caveat clarified; remains not audited"
+    },
+    {
+      "filename": "Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md",
+      "result": "FAIL",
+      "primary_source": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0151588&type=printable",
+      "fulltext_access": "Full 13-page primary article accessible.",
+      "claims_checked": "Research questions and core associations are supported. Table 1 reports 76 observations; reciprocal-friend and incoming ‘ego perceived friend’ coefficients are positive/significant, while outgoing ‘alter perceived friend’ is not significant. The note correctly says the association is not a causal transition rule.",
+      "bibliography": {
+        "original_links": 68,
+        "current_links": 68,
+        "order_preserved": true,
+        "issues": "All captured references and their order match the original snapshot. This checks preservation, not completeness or title-by-title reconciliation."
+      },
+      "exact_fixes": [
+        "Correct the dependent-variable description in the analysis/model text: the article defines it as average daily activity during P2 divided by average daily activity during P1, rather than a generic activity ‘change’ or difference (Methods, intervention analysis; Table 1).",
+        "Disambiguate the paper’s counterintuitive labels: ‘ego perceived friend’ means an incoming nomination (alter names ego); ‘alter perceived friend’ means an outgoing nomination (ego names alter). State which was significant accordingly (Results, Table 1).",
+        "Replace the opaque Treatment GroupA/GroupB ellipsis with the actual control, Peer See, and Peer Reward arms, and note that the reported analysis pools the two peer-pressure conditions and omits control (Results, intervention analysis).",
+        "For the tie-type prediction component, name the reported classifier families and evaluation outcome rather than leaving the defining work entirely in predict_tie_type(...); the paper reports logistic regression and Random Forest results with ROC AUC (Results, Predicting Directionality)."
+      ],
+      "metadata": "DOI 10.1371/journal.pone.0151588 and publication date 2016-03-22 match the primary article.",
+      "correction_status": "applied; awaiting independent re-audit",
+      "corrections_applied": [
+        "Rewrote intervention outcome as mean daily activity in P2 divided by mean daily activity in P1.",
+        "Defined authors’ direction labels: ego-perceived friend is an incoming nomination (alter→ego); alter-perceived friend is outgoing (ego→alter), and stated which coefficients are significant.",
+        "Enumerated Control, Peer See, and Peer Reward and noted the peer-pressure arms are pooled with control omitted for that analysis.",
+        "Named the logistic-regression and Random Forest classification procedures and ROC AUC evaluation; specified common-friend embeddedness and degree-centrality difference."
+      ]
+    },
+    {
+      "filename": "Bias Reduction in Social Networks Through Agent-Based Simulations.md",
+      "result": "FAIL",
+      "primary_source": "https://arxiv.org/pdf/2409.16558",
+      "fulltext_access": "Full 10-page primary preprint accessible. Springer confirms the related published book chapter and chapter DOI.",
+      "claims_checked": "Research questions, core feed comparison, fixed binary trait, 173,000-user network, 1.5 million edges, 5,599 focal users, 36 hourly steps, 24-hour observed-edge reset, activation/tweet/like probabilities, feed lengths, greedy Minimize-rho principle, and listed metrics are supported by Sections 3.1–4. The prose states model-training and metric details are omitted.",
+      "bibliography": {
+        "original_links": 28,
+        "current_links": 28,
+        "order_preserved": true,
+        "issues": "All captured links and order match the original snapshot. Title-by-title bibliography reconciliation not completed."
+      },
+      "exact_fixes": [
+        "Correct publication date from 2025 to 2024-10-22 (Springer eBook publication date for the proceedings containing the chapter); keep chapter DOI 10.1007/978-3-031-71975-2_5.",
+        "Correct the pseudocode loop: the paper traces approximately 173,000 network users, but the feed experience and reported core-user outcomes concern the 5,599 central/core users. Do not imply every network node receives the same modeled feed (Section 3.2).",
+        "Clarify that users’ binary trait is assigned with prevalence scenarios P(X=1) in {0.05, 0.15, 0.50}; current types omit these conditions (Section 3.3).",
+        "Expand or explicitly label pseudocode abstraction for the feed variants: random and reverse-chronological selection, the two trained recommenders, and the greedy observed-edge rule have materially different procedures. Current select_feed(...) hides most of these despite prose explaining only Minimize-rho (Section 3.3)."
+      ],
+      "metadata": "Springer identifies chapter pages 64–77 and proceedings eBook publication 2024-10-22. The arXiv version itself has a placeholder ACM DOI; the Springer chapter DOI in frontmatter is verified.",
+      "correction_status": "applied; awaiting independent re-audit",
+      "corrections_applied": [
+        "Changed date to Springer eBook publication date 2024-10-22.",
+        "Limited feed delivery/experience to the 5,599 core users in the model representation while retaining the approximately 173,000-node network.",
+        "Added the fixed trait-prevalence scenarios and detailed baseline and learned feed policies, candidate exposure, and MinimizeRho definition."
+      ]
+    },
+    {
+      "filename": "Birds of a Feather- Homophily in Social Networks.md",
+      "result": "FAIL",
+      "primary_source": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/McPherson-2001-ARS.pdf",
+      "fulltext_access": "Full 30-page primary review PDF accessible.",
+      "claims_checked": "The copied abstract and research questions agree with the article abstract and review framing. No single simulation model is presented; this is a literature review. The note’s fulltext-unavailable flag and model-skip explanation are therefore incorrect, and its justification cites only the publisher abstract despite an accessible primary PDF.",
+      "bibliography": {
+        "original_links": 163,
+        "current_links": 163,
+        "order_preserved": true,
+        "issues": "All captured links and order match the original snapshot. The source’s bibliography is accessible; perform title-level reconciliation before claiming completeness. Current note does not claim completeness."
+      },
+      "exact_fixes": [
+        "Replace the abstract-only source URL with a readable full-text URL (the Penn-hosted primary PDF above) and remove the fulltext unavailable warning.",
+        "Remove the Model extraction skipped message: the review does not specify a simulation model, so omit Model or state plainly that no formal simulation model is presented.",
+        "Ground the research-question footnotes in the primary review’s Introduction and relevant sections (pp. 415–437), rather than citing only the abstract.",
+        "Keep not audited until the bibliography and full-text claims are corrected and a re-audit passes."
+      ],
+      "metadata": "DOI 10.1146/annurev.soc.27.1.415 and 2001-08-01 publication date are consistent with Annual Reviews metadata.",
+      "correction_status": "applied; awaiting independent re-audit",
+      "corrections_applied": [
+        "Replaced abstract-only URL with accessible primary full-text PDF and removed the erroneous fulltext-unavailable warning and skip text.",
+        "Recast as a review with no single simulation model and cited the review sections supporting the questions."
+      ]
+    },
+    {
+      "filename": "Bond with Social Bot- A Hidden Markov Model of Parasocial Relationship Dynamics in Human-AI Interaction.md",
+      "result": "FAIL",
+      "primary_source": "https://papers.ssrn.com/sol3/Delivery.cfm/7023798.pdf?abstractid=7023798&mirid=1&type=2",
+      "fulltext_access": "SSRN record confirms a 34-page paper and provides the abstract, but its PDF is not readable through the available source tools (open returned an internal error; no full-text content retrieved).",
+      "claims_checked": "Both research questions closely restate the SSRN abstract. Full model extraction is appropriately skipped under the access limitation. The abstract’s HMM description must not be treated as an audited model extraction.",
+      "bibliography": {
+        "original_links": 0,
+        "current_links": 0,
+        "order_preserved": true,
+        "issues": "No reference links were captured. Since the full paper was inaccessible, the source bibliography could not be inspected; wording should describe absence from captured metadata, not assert that the paper has no bibliography."
+      },
+      "exact_fixes": [
+        "Retain fulltext unavailable and not audited; do not infer model rules from the abstract.",
+        "Change the References note to say no reference links were captured and the source bibliography could not be checked because the PDF was inaccessible.",
+        "No other abstract-level or bibliographic-metadata correction found."
+      ],
+      "metadata": "SSRN record confirms title, authors, DOI 10.2139/ssrn.7023798, date written 2026-06-29, and posting date 2026-07-21; publication date 2026-07-21 is appropriate for the SSRN entry.",
+      "correction_status": "access and bibliography caveat clarified; remains not audited"
+    }
+  ],
+  "correction_status": "Corrections applied to #12–14; #11 and #15 access/bibliography caveats clarified. All five remain not audited pending independent re-audit."
+}

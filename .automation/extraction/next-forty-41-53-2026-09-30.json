@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-30",
+  "scope": "lexicographic entries 41-53 reimport",
+  "notes": {
+    "Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md": {
+      "source_read": "https://arxiv.org/html/1908.05437",
+      "doi": "10.1007/978-3-030-24209-1_1",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "What agent models best predict future GitHub activity at planetary scale?",
+        "How do agent-specific action and repository distributions support next-period activity prediction?"
+      ],
+      "source_locators": "Full HTML §§2–5: event tuple; shared framework; stationary variants; embedding, Bayesian and S3D models; six-model held-out evaluation.",
+      "tags": [
+        "model",
+        "simulation"
+      ],
+      "source_locator": "Full HTML §§2–5: event tuple; shared framework; stationary variants; embedding, Bayesian and S3D models; six-model held-out evaluation."
+    },
+    "Literature/Papers/Entries/Mixing beliefs among interacting agents.md": {
+      "source_read": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+      "doi": "10.1142/S0219525900000078",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "When do pairwise opinion adjustments converge and when do they form distinct clusters?",
+        "How does the allowed opinion difference shape the resulting opinion distribution?"
+      ],
+      "source_locators": "Full HAL PDF read: §§2.1–2.2 and Eqs. 1–2; §3 grid; §4.1 binary vector/Hamming rule. Prose/caption N conflict and vector threshold off-by-one wording conflict preserved.",
+      "tags": [
+        "model",
+        "simulation"
+      ],
+      "source_locator": "Full HAL PDF read: §§2.1–2.2 and Eqs. 1–2; §3 grid; §4.1 binary vector/Hamming rule. Prose/caption N conflict and vector threshold off-by-one wording conflict preserved."
+    },
+    "Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md": {
+      "source_read": "https://www.jasss.org/24/4/6.html",
+      "doi": "10.18564/jasss.4699",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "How do role identities and group interaction structures shape status positions in task groups?",
+        "Can ACT-driven behavior reproduce expectation-states patterns when status hierarchy is expressed as a network?"
+      ],
+      "source_locators": "Full article: §3 equations 4–5 and actor/object/action selection; §4 jury experiment, Table 2, 12-agent groups and 500x1,000 run setup.",
+      "tags": [
+        "model",
+        "simulation"
+      ],
+      "source_locator": "Full article: §3 equations 4–5 and actor/object/action selection; §4 jury experiment, Table 2, 12-agent groups and 500x1,000 run setup."
+    },
+    "Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md": {
+      "source_read": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11",
+      "doi": "10.1007/978-3-032-01373-6_11",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "How do memory and learning affect individual membership, group duration, and satisfaction?",
+        "Do these effects differ between fully connected and preferential-attachment networks?"
+      ],
+      "source_locators": "Full chapter §§11.3–11.4, Fig. 11.1 and Tables 11.1–11.2: conferral, feedback, memory/learning, network setup and results.",
+      "tags": [
+        "model",
+        "simulation",
+        "social_cohesion"
+      ],
+      "source_locator": "Full chapter §§11.3–11.4, Fig. 11.1 and Tables 11.1–11.2: conferral, feedback, memory/learning, network setup and results."
+    },
+    "Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md": {
+      "source_read": "https://arxiv.org/html/1811.10981v1",
+      "doi": "10.48550/arXiv.1811.10981",
+      "fulltext_accessible": true,
+      "classification": "model",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "How can static elements of Social Practice Theory be represented computationally for agent-based simulation?",
+        "How does SoPrA map habitual, social, and interconnected practice aspects onto commuting?"
+      ],
+      "source_locators": "Full paper §§4–5: static activities/hierarchies, context triggers, value links, agent beliefs; learning dynamics out of scope.",
+      "tags": [
+        "model",
+        "social_practice"
+      ],
+      "source_locator": "Full paper §§4–5: static activities/hierarchies, context triggers, value links, agent beliefs; learning dynamics out of scope."
+    },
+    "Literature/Papers/Entries/Modelling the Evolution of Social Structure.md": {
+      "source_read": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605",
+      "doi": "10.1371/journal.pone.0158605",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "Under which fitness conditions do multi-level social systems emerge?",
+        "How do alternative strategies for allocating social time compare across generations?"
+      ],
+      "source_locators": "Full article Methods/Model and Experimental Design: 300-agent population, strategies, 2,000-cycle lifetimes, fitness formula/weights, selection and 3,125-sweep clustering.",
+      "tags": [
+        "model",
+        "simulation",
+        "social_structure"
+      ],
+      "source_locator": "Full article Methods/Model and Experimental Design: 300-agent population, strategies, 2,000-cycle lifetimes, fitness formula/weights, selection and 3,125-sweep clustering."
+    },
+    "Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md": {
+      "source_read": "https://arxiv.org/html/2411.11581",
+      "doi": "10.48550/arXiv.2411.11581",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "Can a general social-media simulation framework support multiple platform behaviors and large populations?",
+        "How do platform mechanisms and population scale affect diffusion and collective phenomena in the evaluated scenarios?"
+      ],
+      "source_locators": "Full HTML §§2.1–2.6 and §3; appendices D–G for prompts, data, actions and experimental settings.",
+      "tags": [
+        "model",
+        "simulation",
+        "social_media",
+        "llm_agents"
+      ],
+      "source_locator": "Full HTML §§2.1–2.6 and §3; appendices D–G for prompts, data, actions and experimental settings."
+    },
+    "Literature/Papers/Entries/On Generative Agents in Recommendation.md": {
+      "source_read": "https://openreview.net/pdf?id=yCSZBbKyqq",
+      "doi": "10.1145/3626772.3657844",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "To what extent do LLM-powered agents simulate behavior and preferences in recommender systems?",
+        "How do agent memory, emotions, and recommender exposure affect simulated preference behavior and filter bubbles?"
+      ],
+      "source_locators": "Auditor verified method facts from indexed full paper: 1,000 MovieLens-1M agents, actions, prompt modules, baselines; prompt internals remain unverified.",
+      "tags": [
+        "model",
+        "simulation",
+        "recommender_systems",
+        "llm_agents"
+      ],
+      "source_locator": "Auditor verified method facts from indexed full paper: 1,000 MovieLens-1M agents, actions, prompt modules, baselines; prompt internals remain unverified."
+    },
+    "Literature/Papers/Entries/On and Off the -Net- Scales for Social Capital in an Online Era.md": {
+      "source_read": "https://onlinelibrary.wiley.com/doi/10.1111/j.1083-6101.2006.00029.x",
+      "doi": "10.1111/j.1083-6101.2006.00029.x",
+      "fulltext_accessible": true,
+      "classification": "measurement_social_capital",
+      "model_present": false,
+      "warnings": [
+        "not audited"
+      ],
+      "questions": [
+        "How can social capital be measured in online and offline contexts with concepts suited to Internet interactions?",
+        "Do the proposed items measure bonding and bridging social capital reliably and validly?"
+      ],
+      "source_locators": "Scale development, Study 1/Study 2 and discussion: survey items are evaluated psychometrically and yield bonding/bridging constructs; the paper develops measurement scales, not a social process model.",
+      "tags": [
+        "measurement",
+        "social_capital"
+      ],
+      "source_locator": "Scale development, Study 1/Study 2, and discussion"
+    },
+    "Literature/Papers/Entries/Parasocial Interaction and Parasocial Relationship- Conceptual Clarification and a Critical Assessment of Measures.md": {
+      "source_read": "https://onlinelibrary.wiley.com/doi/full/10.1111/hcre.12063",
+      "doi": "10.1111/hcre.12063",
+      "fulltext_accessible": true,
+      "classification": "measurement_parasocial",
+      "model_present": false,
+      "warnings": [
+        "not audited"
+      ],
+      "questions": [
+        "Do commonly used scales distinguish parasocial interaction from parasocial relationship or liking?",
+        "Does direct address change scale scores in ways consistent with within-viewing mutual awareness?"
+      ],
+      "source_locators": "Method and Results: 383 participants watched a brief video in which a woman either directly addressed the viewer or did not, then completed questionnaires. The EPSI-Scale better captured within-viewing mutual awareness; the PSI-Scale may instead capture liking or another construct. This is a measurement experiment, not an agent model.",
+      "tags": [
+        "measurement",
+        "parasocial_interaction"
+      ],
+      "source_locator": "Method and Results sections"
+    },
+    "Literature/Papers/Entries/Persistence of social signatures in human communication.md": {
+      "source_read": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3903242/",
+      "doi": "10.1073/pnas.1308540110",
+      "fulltext_accessible": true,
+      "classification": "empirical_social_networks",
+      "model_present": false,
+      "warnings": [
+        "not audited"
+      ],
+      "questions": [
+        "Does each person retain a characteristic allocation of communication across alters over time?",
+        "How does the signature change as people’s personal networks turn over during a life transition?"
+      ],
+      "source_locators": "Results / Social Signatures and Turnover; Materials and Methods: 24 students with complete data are followed across three six-month call-record intervals during transition from school to university/work. For each ego and interval, alters are ranked by call counts and each rank’s call fraction forms the signature. This is empirical analysis, not a simulation.",
+      "tags": [
+        "empirical",
+        "social_networks",
+        "communication"
+      ],
+      "source_locator": "Results “Social Signatures and Turnover” and Materials and Methods"
+    },
+    "Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md": {
+      "source_read": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
+      "doi": "10.1093/pnasnexus/pgae258",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "Which adversarial tactics most effectively amplify low-quality content in a modeled online public square?",
+        "How do network hubs, infiltration, flooding, and targeting affect content diffusion and quality?"
+      ],
+      "source_locators": "Full article Results/Methods: sampled Twitter network and k-core reduction; diffusion/feed rules; message quality/appeal; infiltration, deception, flooding, targeting.",
+      "tags": [
+        "model",
+        "simulation",
+        "social_media"
+      ],
+      "source_locator": "Full article Results/Methods: sampled Twitter network and k-core reduction; diffusion/feed rules; message quality/appeal; infiltration, deception, flooding, targeting."
+    },
+    "Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md": {
+      "source_read": "https://arxiv.org/html/2103.08057",
+      "doi": "10.48550/arXiv.2103.08057",
+      "fulltext_accessible": true,
+      "classification": "model_simulation",
+      "model_present": true,
+      "warnings": [
+        "audit failed pending independent re-audit"
+      ],
+      "questions": [
+        "How can uncertainty and multi-agent interactions be represented in recommender ecosystem simulations?",
+        "How can probabilistic program specifications support inference, learning, and policy evaluation across interaction horizons?"
+      ],
+      "source_locators": "Full paper §§3.1–3.2: factored Markov state, DBN initial/transition components, entity/behavior abstraction; examples include satisfaction/provider.",
+      "tags": [
+        "model",
+        "simulation",
+        "recommender_systems"
+      ],
+      "source_locator": "Full paper §§3.1–3.2: factored Markov state, DBN initial/transition components, entity/behavior abstraction; examples include satisfaction/provider."
+    }
+  }
+}

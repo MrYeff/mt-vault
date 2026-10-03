@@ -1,0 +1,185 @@
+---
+title: "Stochastic Actor-Oriented Models for Network Dynamics"
+tags:
+  - social_network
+  - statistical_model
+authors:
+  - "[[Literature/Authors/Tom A. B. Snijders|Tom A. B. Snijders]]"
+publication date: 2017-01-16 
+source: "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf"
+doi: 10.1146/annurev-statistics-060116-054035
+  - "model"
+read status: Todo
+⚠️:
+  - audit failed
+---
+
+## Abstract
+
+This article discusses the stochastic actor-oriented model for analyzing panel data of networks. The model is defined as a continuous-time Markov chain, observed at two or more discrete time moments. It can be regarded as a generalized linear model with a large amount of missing data. Several estimation methods are discussed. After presenting the model for evolution of networks, attention is given to coevolution models. These use the same approach of a continuous-time Markov chain observed at a small number of time points, but now with an extended state space. The state space can be, for example, the combination of a network and nodal variables, or a combination of several networks. This leads to models for the dynamics of multivariate networks. The article emphasizes the approach to modeling and algorithmic issues for estimation; some attention is given to comparison with other models.
+
+## Research Questions
+> Research Questions extracted via LLM
+- How can stochastic actor-oriented models represent and estimate network change from sparse panel observations?[^r1]
+- How can the approach be extended to coevolving networks and actor attributes?[^r1]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+A statistical continuous-time Markov process for directed network panels on a fixed actor set. Ties are binary, no self-ties are allowed, and at most one outgoing tie changes at an event. Coevolution extensions enlarge state with actor variables or further networks.[^r3]
+
+```yml
+World:
+  network: [ActorId -> ActorId -> bool]
+  actor_rate_parameters: [f64]
+  objective_parameters: [f64]
+  covariates: [Covariate]
+
+ActorChoice:
+  actor: ActorId
+  option: Keep | ToggleOneOutgoingTie
+```
+
+### How does it work?
+At current network `x`, actor `i` receives change opportunities at rate λᵢ(α,x); total waiting time is exponential with rate Σᵢλᵢ, and the actor is selected proportional to λᵢ. That actor may keep the state or toggle exactly one outgoing tie. The option is sampled by multinomial-logit probability proportional to exp(fᵢ(β,x₀,x)); the objective is commonly a parameter-weighted sum of network effects (e.g., outdegree, reciprocity, transitive triplets), optionally path-dependent. The process runs between observed panel waves; observations do not themselves alter it.[^r3]
+
+```
+sim_step(mut world: World, wave_end: Time):
+  while world.time < wave_end:
+    dt = exponential(total_actor_rate(world))
+    if world.time + dt > wave_end: break
+    actor = sample_actor(proportional_to=actor_rate(world))
+    option = softmax_objective(actor, keep_or_one_outgoing_tie_toggle(world))
+    apply(world, option)
+    world.time += dt
+```
+
+### What can it answer?
+With specified effects and parameters, it models how actor-level tie choices generate observed panel-network change; estimation uses simulated process paths to fit parameters to observed networks.[^r4]
+
+### Where does it apply?
+It applies to longitudinal network panel data with a constant actor set and can extend to network/behavior or multivariate-network coevolution. The article is a statistical model/estimation review, not a complete application-specific effect specification.[^r3]
+
+## Metadata
+### References
+- [[EfficientEstimationsFromASlowlyConvergentRobbinsMonroProcess]]
+- [[MarkovChains]]
+- [[TheDevelopmentOfSocialNetworkAnalysisAStudyInTheSociologyOfScience]]
+- [[StochasticApproximationAndRecursiveAlgorithmsAndApplications]]
+- [[RecentDevelopmentsInNetworkMeasurement]]
+- [[StatisticalModelsForSocialNetworkDynamics]]
+- [[LongitudinalModelsInTheBehavioralAndRelatedSciences]]
+- [[SelfOrganizingPolicyNetworksRiskPartnerSelectionAndCooperationInEstuaries]]
+- [[ThePeopleSChoice]]
+- [[NetworksAnIntroduction]]
+- [[ImpactsOfMarketLiberalizationOnRegulatoryNetworkALongitudinalAnalysisOfTheSwissTelecommunicationsSector]]
+- [[NetworkDynamicsAndTheEvolutionOfInternationalCooperation]]
+- [[ASeparableModelForDynamicNetworks]]
+- [[DriversOfCollaborationToMitigateClimateChangeAnIllustrationOfSwissClimatePolicyOver15Years]]
+- [[DiffusionOfInnovationsInDynamicNetworks]]
+- [[BayesianInferenceForDynamicSocialNetworkData]]
+- [[P2ARandomEffectsModelWithCovariatesForDirectedGraphs]]
+- [[TheSocialCommunicationOfPoliticalExpertise]]
+- [[StatisticalAnalysisOfLongitudinalNetworkDataWithChangingComposition]]
+- [[AStochasticApproximationMethod]]
+- [[NetworkAnalysisCultureAndTheProblemOfAgency]]
+- [[NetworkDynamicsInRegionalClustersEvidenceFromChile]]
+- [[EmergenceOfScalingInRandomNetworks]]
+- [[ADynamicModelForSocialNetworks]]
+- [[NonparametricBayesDynamicModellingOfRelationalData]]
+- [[OnAStochasticApproximationProcedureBasedOnAveraging]]
+- [[LargeSamplePropertiesOfGeneralizedMethodOfMomentsEstimators]]
+- [[FindingTheObservedInformationMatrixWhenUsingTheEmAlgorithm]]
+- [[ASurveyOfStatisticalNetworkModels]]
+- [[OnTheGeometryOfDiscreteExponentialFamiliesWithApplicationToExponentialRandomGraphModels]]
+- [[TheCoevolutionOfTradeAgreementNetworksAndDemocracy]]
+- [[TheScoreFunctionApproachForSensitivityAnalysisOfComputerSimulationModels]]
+- [[LatentSpaceApproachesToSocialNetworkAnalysis]]
+- [[InstabilitySensitivityAndDegeneracyOfDiscreteExponentialFamilies]]
+- [[TalkLeadsToRecruitment]]
+- [[InterdependenceDensityDependenceAndNetworksInPolitics]]
+- [[LogitModelsAndLogisticRegressionsForSocialNetworksIAnIntroductionToMarkovGraphsAndP]]
+- [[DoDemocraciesAttractPortfolioInvestmentTransnationalPortfolioInvestmentsModeledAsDynamicNetwork]]
+- [[VotingAStudyOfOpinionFormationInAPresidentialCampaign]]
+- [[SocialCapitalInTheCreationOfHumanCapital]]
+- [[OnUnificationOfTheAsymptoticTheoryOfNonlinearEconometricModels]]
+- [[IntroductionToTheSpecialIssueOnNetworkDynamics]]
+- [[ConditionalIndependenceInDynamicNetworks]]
+- [[MarkovModelsForDigraphPanelDataMonteCarloBasedDerivativeEstimation]]
+- [[ProcessingComplexityInNetworksAStudyOfInformalCollaborationAndItsEffectOnOrganizationalSuccess]]
+- [[LimitedDependentAndQualitativeVariablesInEconometrics]]
+- [[Introduction to stochastic actor-based models for network dynamics]]
+- [[StatisticalModelsForSocialNetworks]]
+- [[SpatiallyDispersedTiesAmongInterdependentCitizensConnectingIndividualsAndAggregates]]
+- [[MethodsOfIdentificationInSocialNetworks]]
+- [[AModelForTheMultiplexDynamicsOfTwoModeAndOneModeNetworksWithAnApplicationToEmploymentPreferenceFriendshipAndAdvice]]
+- [[SimultaneousModelingOfInitialConditionsAndTimeHeterogeneityInDynamicNetworksAnApplicationToForeignDirectInvestments]]
+- [[TheStatisticalEvaluationOfSocialNetworkDynamics]]
+- [[IntroductionToTheSpecialIssueOnNetworkDynamicsPart2]]
+- [[CollectiveDynamicsOfSmallWorldNetworks]]
+- [[CoevolutionOfPoliticalDiscussionAndCommonGroundInWebDiscussionForum]]
+- [[DynamicNetworkLogisticRegressionALogisticChoiceAnalysisOfInterAndIntraGroupBlogCitationDynamicsInThe2004UsPresidentialElection]]
+- [[WhatIsNetworkScience]]
+- [[WhereDoInterorganizationalNetworksComeFrom]]
+- [[DoNetworksSolveCollectiveActionProblemsCredibilitySearchAndCollaboration]]
+- [[NewSpecificationsForExponentialRandomGraphModels]]
+- [[AMixedEffectsModelForLongitudinalRelationalAndNetworkDataWithApplicationsToInternationalTradeAndConflict]]
+- [[AHierarchyOfPreferences]]
+- [[CurvedExponentialFamilyModelsForSocialNetworks]]
+- [[HomophilyAndContagionAreGenericallyConfoundedInObservationalSocialNetworkStudies]]
+- [[TheCalculationOfPosteriorDistributionsByDataAugmentation]]
+- [[NetworkBehaviorDynamics]]
+- [[ANoncooperativeModelOfNetworkFormation]]
+- [[8DynamicNetworksAndBehaviorSeparatingSelectionFromInfluence]]
+- [[InferenceInCurvedExponentialFamilyModelsForNetworks]]
+- [[GoodnessOfFitOfSocialNetworkModels]]
+- [[VictimsBulliesAndTheirDefendersALongitudinalStudyOfTheCoevolutionOfPositiveAndNegativeNetworks]]
+- [[AStrategicModelOfSocialAndEconomicNetworks]]
+- [[MaximumLikelihoodEstimationForSocialNetworkDynamics]]
+- [[TheChangingFaceOfMethodologicalIndividualism]]
+- [[DiscreteTemporalModelsOfSocialNetworks]]
+- [[TheMultipleFlavoursOfMultilevelIssuesForNetworks]]
+- [[TheAmericanVoterByACampbellPConverseWMillerAndDStokesNewYorkJohnWileySonsInc1960PpViii573850]]
+- [[LocalStructureInSocialNetworks]]
+- [[StatisticalAnalysisOfNetworkData]]
+- [[StatisticalInferenceInPoliticalNetworksResearch]]
+- [[ModelingTheCoevolutionOfNetworksAndBehavior]]
+- [[RALanguageAndEnvironmentForStatisticalComputing]]
+- [[LatentNetworksAndSpatialNetworksInPolitics]]
+- [[StochasticApproximation]]
+- [[UnresolvedReference962837F8A0C1F065]]
+- [[TheOxfordHandbookOfPoliticalNetworks]]
+- [[TemporalNetworks]]
+- [[LatentSpaceModelsForDynamicNetworks]]
+- [[UnresolvedReferenceAE1B0E7C5B2652F2]]
+- [[AnnualReviewOfSociologyVol37]]
+- [[PowerPositions]]
+- [[Networks]]
+- [[SmokeRingsSocialNetworkAnalysisOfFriendshipGroupsSmokingAndDrugTaking]]
+- [[SocialAndEconomicNetworks]]
+- [[HandbookOfSequentialAnalysis]]
+- [[ExponentialRandomGraphModels]]
+- [[UnresolvedReferenceEC07F8277D78028B]]
+- [[Proc4thPragueSympAsymptStat]]
+- [[RandomGraphs]]
+- [[UnresolvedReference2778343193A74D01]]
+- [[Proc6thBerkeleySympMathStatProbab]]
+- [[UnresolvedReference5011095ACBABA51C]]
+- [[UnresolvedReferenceE0403D8228B46D32]]
+- [[UnresolvedReference098FD2E6BAE9DCA8]]
+- [[UnresolvedReferenceE9832E380D66B9F0]]
+- [[SienaAlgorithms]]
+- [[OxfordHandbookOfPoliticalNetworks]]
+- [[UnresolvedReference4A2E6A0DA58887A6]]
+- [[UnresolvedReference719A12F9A50797E6]]
+- [[SocialNetworkDynamicsByExamples]]
+- [[UnresolvedReference8CA5C40E6AB984F1]]
+
+## Audit Log
+- Initial independent audit: failed on missing model mechanisms, abstract fidelity, or source-access reporting; see `vault/.automation/audit/next-forty-54-66-initial-2026-09-30.json`. Revisions added source-located model detail; independent re-audit remains pending.
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-060116-054035. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: Snijders (accepted manuscript), pp. 4–9: model definition, opportunity rates, options, objective function and simulation algorithm; pp. 16–22: coevolution. Source: https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf.
+[^r4]: Snijders (accepted manuscript), §§3–4, estimation by moments/GMM/likelihood using simulated trajectories. Source: https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf.

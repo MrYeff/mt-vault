@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "audit": "initial_independent_audit",
+  "selection": "Entries filenames 21-25 in the requested order",
+  "audited_at": "2026-09-29",
+  "auditor_scope": "Initial independent audit followed by corrections applied to notes 21, 22, 24, and 25 on 2026-09-29. No changes to note 23. Read vault/Guides/LLM Extraction Rules.md and vault/Literature/Papers/Template.md. Contact Patterns source is now the readable PLOS publisher PDF; the full primary text was checked, with unresolved-reference mapping still pending. Dunbar audit remains limited to the accessible publisher abstract as requested because its PDF was inaccessible.",
+  "overall_status": "FAIL",
+  "notes": {
+    "Literature/Papers/Entries/Construct User Guide.md": {
+      "status": "FAIL",
+      "source": "https://www.cmu.edu/casos-center/publications/cmu-s3d-24-105.pdf",
+      "source_access": "Primary 96-page PDF is accessible and text-extractable. Report cover identifies authors, June 2024, report number CMU-S3D-24-105; abstract is on PDF p. 2.",
+      "claims_checked": {
+        "abstract": "Accurately paraphrases the abstract and intended audience/purpose (PDF pp. 2, 12-14). The version 5.4.4 scope is correct.",
+        "research_questions": "Reasonable extracted questions, supported by the overall guide and program-flow discussion; the second question is answered by the execution-cycle section.",
+        "model_representation": "Framework description and core network interpretation are broadly right, though ‘interaction networks’ should be named more precisely as the knowledge network and interaction-sphere network; the latter encodes whom an agent knows and can initiate with (PDF pp. 24, 50-52).",
+        "metadata": "Title, three authors, June 2024, and source match the cover. No DOI is given on the report cover or in the accessible report metadata.",
+        "references": "The note contains 47 linked titles and no unresolved placeholders. The report has a substantial References section; an item-by-item comparison was not completed, so completeness and ordering cannot be certified from the count alone."
+      },
+      "findings": [
+        {
+          "severity": "source_contradiction_and_major_omission",
+          "note_location": "Model / How does it work? (note paragraph beginning ‘The guide describes initialization once…’)",
+          "source_location": "‘Models and Construct Program Flow,’ PDF pp. 22-24, especially p. 22 lines 610-614 and p. 24 lines 644-653; ‘Intercept Function,’ p. 24.",
+          "finding": "The note says the cycle has Think, Update, Communicate, and Clean Up phases, omitting Intercept. The guide explicitly specifies five ordered model functions: Think, Update, Intercept, Communicate, Clean Up. Each function is completed by all models before any model advances to the next. Initialization happens once before the execution cycle. Intercept lets models modify items created by other models.",
+          "required_fix": "Include Intercept in the correct order and describe its cross-model message/item modification role; cite the program-flow and Intercept sections. Preserve the synchronous all-models-per-phase ordering."
+        },
+        {
+          "severity": "major_omission",
+          "note_location": "Model / What does it represent? and How does it work?",
+          "source_location": "‘Standard Interaction Model,’ PDF pp. 50-52, especially p. 50 lines 1755-1770 and p. 51-52 lines 1817-1835.",
+          "finding": "The summary gives a useful framework-level account but omits defining Standard Interaction Model constraints: an agent can initiate only to agents in its directed interaction sphere; weighted partner choice incorporates physical/social/demographic proximity and knowledge similarity/expertise; activity, interaction-initiation/reception limits, and a shared communication medium constrain eligibility; interactions are formed dynamically until no initiators remain. ‘Who can find whom’ also conflates the interaction sphere with the separate realized interaction network.",
+          "required_fix": "Clarify the interaction-sphere versus realized interaction network terminology and either summarize the weighted selection and eligibility/update mechanics or explicitly state that this is a deliberately high-level framework summary omitting those rules. Cite the Standard Interaction Model sections/equations."
+        }
+      ],
+      "footnotes": "Existing footnotes point to relevant source sections and pages. The execution-cycle footnote must be updated to include Intercept; current wording does not support the four-function sequence.",
+      "correction_status": "Corrections applied 2026-09-29: added Intercept in the correct five-phase order, clarified one-time initialization and synchronous phase ordering, distinguished the interaction sphere from the realized interaction network, and summarized Standard Interaction Model eligibility and weighted partner selection. Added source-specific footnote and Audit Log. Pending independent re-audit; note retains not audited."
+    },
+    "Literature/Papers/Entries/Contact Patterns in a High School- A Comparison between Data Collected Using Wearable Sensors- Contact Diaries and Friendship Surveys.md": {
+      "status": "FAIL",
+      "source": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0136497&type=printable",
+      "source_access": "Complete 26-page primary publisher PDF is readable and text-extractable. Full text, abstract, methods/results, and references were checked; five note references remain unresolved and need item-level mapping.",
+      "claims_checked": {
+        "abstract": "Matches the full primary abstract on the IMT repository/arXiv, including the four data sources, diary under-reporting of short contacts, duration overestimation, friendship/contact-duration relation, low survey completion, class-mixing structure, and strongest-link/backbone conclusion.",
+        "research_questions": "Both questions are accurate synthesis of the abstract’s stated comparisons and structural-preservation result.",
+        "model": "No model section is present; appropriate for this empirical comparison paper.",
+        "metadata": "Authors and DOI match the primary record. The PLOS citation gives publication date September 1, 2015, matching the note’s 2015-09-01.",
+        "references": "The note has 57 reference links, including five unresolved identifiers. The primary References section was accessible in the publisher PDF, but the five unresolved identifiers still require exact title mapping; no bibliography-completeness claim is made."
+      },
+      "findings": [
+        {
+          "severity": "bibliography_unresolved",
+          "note_location": "Metadata / References",
+          "source_location": "Primary article References section (PLOS article/PDF); note currently has 57 links, five titled UnresolvedReference identifiers.",
+          "finding": "Five unresolved identifiers prevent title-level verification. The note now warns that bibliography reconciliation remains incomplete. No specific incorrect reference title is asserted without primary-source evidence.",
+          "required_fix": "Resolve the five identifiers against the primary References section and complete item-level reconciliation. The warning has been added; remove it only after reconciliation."
+        }
+      ],
+      "footnotes": "The two research-question footnotes now cite the readable publisher PDF and identify the abstract/methods/results locations.",
+      "correction_status": "Corrections applied 2026-09-29: source field changed to the readable PLOS publisher PDF, and both existing LLM Justification footnotes now cite that PDF with article section/page locations. Added an explicit caveat for five unresolved bibliography links. Pending independent re-audit; note retains not audited."
+    },
+    "Literature/Papers/Entries/Dunbar-s Number in Motion- Agent-Based Simulations of Friendship Formation.md": {
+      "status": "PASS",
+      "source": "https://orb.binghamton.edu/nejcs/vol6/iss1/7/",
+      "source_access": "The publisher landing page and complete abstract are accessible. The article PDF was inaccessible; audit intentionally limited to abstract-level claims as instructed.",
+      "claims_checked": {
+        "abstract": "The note reproduces/paraphrases the publisher abstract accurately: Lévy flight versus random walk, agent attributes and time budget, one-year simulated period, interaction duration/Dunbar circles, the hypothesis, and the reported greater cumulative interaction under random walk.",
+        "research_questions": "Both questions are direct, defensible paraphrases of the abstract’s comparison and hypothesis.",
+        "model": "Model extraction is correctly skipped because the abstract does not specify implementation rules; the note clearly states this full-text limitation.",
+        "metadata": "Publisher recommends citation as Cooke and Lutz (2024), Northeast Journal of Complex Systems 6(1), Article 7, DOI 10.22191/nejcs/vol6/iss1/7. Listed authors/title/year/DOI match; Cameron D. Lutz is the publisher’s exact middle-initial styling.",
+        "references": "Bibliography is explicitly marked unavailable and none is imported; this is appropriate under the stated access limit."
+      },
+      "limitations": "This pass does not certify model rules, implementation details, full-text claims, or bibliography. Keep the ‘fulltext unavailable’ flag and model-extraction skip until the PDF can be reviewed.",
+      "correction_status": "No note correction required; the requested abstract-only pass remains valid and its PDF/full-text limitation stays explicit."
+    },
+    "Literature/Papers/Entries/Exploring Trade-Offs for Online Mental Health Matching- Agent-Based Modeling Study.md": {
+      "status": "FAIL",
+      "source": "https://formative.jmir.org/2024/1/e58241/PDF ; https://pmc.ncbi.nlm.nih.gov/articles/PMC11480686/",
+      "source_access": "Complete 18-page primary publisher PDF is accessible and text-extractable. JMIR publication metadata and full methods/results were checked.",
+      "claims_checked": {
+        "abstract": "Matches the primary abstract, including the data period, status-quo replication and validation, deferred-acceptance-based alternatives, outcomes, subgroup findings, and direction of topic-based results.",
+        "research_questions": "Accurately summarize the explicitly stated question (‘How can we experiment with new matching algorithms for OMHCs?’) and subgroup comparisons (PDF p. 2, lines 102-124).",
+        "model_representation": "Platform/data scope, replication-validation-experiment sequence, and broad policy/outcome claims are correct but materially underspecified as a description of an agent-based model.",
+        "metadata": "Title, authors (including Cristopher Firman spelling), date 2024-10-01, and DOI 10.2196/58241 match the primary publisher PDF (p. 1 and p. 18). Note’s 2024-07-04 date is incorrect: the article was originally published October 1, 2024.",
+        "references": "The note contains 56 links, including 11 unresolved identifiers. The paper’s numbered References section ends at [51] (PDF pp. 15-17); 56 links plus unresolved entries indicate the list is not a simple faithful transcription. Exact mappings should be reconciled against [1]-[51]."
+      },
+      "findings": [
+        {
+          "severity": "metadata_error",
+          "note_location": "Frontmatter publication date",
+          "source_location": "Publisher PDF p. 18, publication/copyright block: ‘Originally published … 01.10.2024’; publisher article metadata identifies 2024, vol. 8, e58241.",
+          "finding": "The note’s 2024-07-04 date does not match the journal publication date. The primary article was published October 1, 2024.",
+          "required_fix": "Set publication date to 2024-10-01."
+        },
+        {
+          "severity": "major_omission",
+          "note_location": "Model / How does it work?",
+          "source_location": "‘Simulation Period’ and ‘Generation of Agents,’ PDF pp. 4-5, lines 317-347; matching/agent assumptions and outcome models, pp. 5-9; policy definitions in Introduction pp. 2 and Methods/Virtual Experiments pp. 8-10; results Tables 1-3 and Discussion pp. 12-14.",
+          "finding": "The note reports the overall replication-and-policy-testing pipeline but omits defining mechanics. Agents are support seekers and volunteer counselors generated each one-minute period using empirical arrival distributions; agents receive gender, birth year, and topic characteristics drawn to match observed distributions. The status quo has counselors selecting from a live queue, seekers can cancel while waiting, and chats can be rated/blocked. The virtual experiment tests seven named policies (FCFS, LCFS, similarity using cosine similarity, gender, age, topic, and filter-based vulnerable-group policies). Waiting time, cancellations/abandonment, matching, and predicted chat outcomes depend on the model’s prediction/validation components. These rules are central to what the simulation represents and how it updates.",
+          "required_fix": "Expand the model description to state agent types, one-minute scheduling/arrival generation, key agent attributes, queue selection and cancellation, all tested policies, and the outcome/prediction measures; distinguish assumptions and validated replication from virtual experiments. Name further omitted mechanics explicitly and cite the source subsections/tables."
+        },
+        {
+          "severity": "bibliography_unresolved",
+          "note_location": "Metadata / References",
+          "source_location": "Primary PDF References [1]-[51], pp. 15-17.",
+          "finding": "There are 56 note links and 11 unresolved identifiers versus 51 numbered source references. A count mismatch and unresolved placeholders make the note bibliography unverifiable as imported.",
+          "required_fix": "Reconcile every link against primary references [1]-[51], remove duplicates/non-reference items, map the 11 unresolved titles, or add a clear incompleteness warning until complete."
+        }
+      ],
+      "footnotes": "Current citations point generally to Methods/Simulation Framework/Matching Policies and Results/Discussion; new mechanics need source-specific subsections, page numbers, or tables as required by the extraction rules.",
+      "correction_status": "Corrections applied 2026-09-29: changed publication date to 2024-10-01 and expanded the model account with one-minute periods, data-based generation/attributes, patience and chat lengths, queue and deferred-acceptance dynamics, all seven policies, prediction/validation models, and measured outcomes. Added source-specific footnotes and Audit Log. Pending independent re-audit; note retains not audited."
+    },
+    "Literature/Papers/Entries/Exposure to opposing views on social media can increase political polarization.md": {
+      "status": "FAIL",
+      "source": "https://dlab.epfl.ch/teaching/spring2019/cs718/papers/bail2018exposure.pdf ; https://doi.org/10.1073/pnas.1804840115",
+      "source_access": "Complete primary PNAS article and supplementary materials are accessible in the PDF; checked Research Design, Results, Discussion, and numbered references.",
+      "claims_checked": {
+        "abstract": "Matches the primary abstract, including the asymmetric significant Republican versus non-significant Democratic result.",
+        "research_questions": "Both questions accurately summarize the experiment’s treatment-effect objective and partisan comparison.",
+        "model": "No simulation/model section is present; appropriate for this randomized field experiment.",
+        "metadata": "Title, author list, August 28, 2018 online publication date, and DOI 10.1073/pnas.1804840115 match primary metadata. Taylor Brown is the same author as Taylor W. Brown in the source; middle initial is omitted. The source field is an accessible mirror of the primary PNAS paper; prefer DOI/PNAS as canonical source.",
+        "references": "The note has 61 linked titles, including three unresolved placeholders. The primary paper’s main reference list is numbered [1]-[47] (PDF pp. 5-6). The note therefore has at least 14 excess links; the lists are not a faithful one-to-one bibliography as currently presented."
+      },
+      "findings": [
+        {
+          "severity": "bibliography_mismatch",
+          "note_location": "Metadata / References",
+          "source_location": "Primary PNAS PDF, References [1]-[47], PDF pp. 5-6 (source lines 443-538).",
+          "finding": "The note lists 61 references for a source with 47 numbered references, including three unresolved identifiers. Some items may be duplicates/alternate labels, but the note currently exceeds the source list by at least 14 entries and lacks an incompleteness warning; exact mapping is not reliable.",
+          "required_fix": "Reconcile against the 47 numbered PNAS references, remove duplicates and non-source additions, resolve all three placeholders, and flag incompleteness until that reconciliation is done."
+        },
+        {
+          "severity": "metadata_source_quality",
+          "note_location": "Frontmatter source",
+          "source_location": "Primary article DOI 10.1073/pnas.1804840115; paper itself states published online August 28, 2018 (PDF p. 1).",
+          "finding": "The EPFL-hosted PDF is a readable mirror of the original PNAS article; canonical DOI remains separately recorded in metadata. The date and DOI are correct.",
+          "required_fix": "Retain the readable PDF mirror as the source and the DOI in metadata so the full text remains accessible."
+        }
+      ],
+      "footnotes": "Research-question footnotes cite Research Design/Results/Discussion and support the claims. Their summaries could be more precise about the one-month bot exposure and that the reported effect is among frequent Twitter-using, party-identified respondents, but they are not false.",
+      "correction_status": "Corrections applied 2026-09-29: retained the readable original-article PDF mirror in source and DOI metadata, added a bibliography caveat for 14 excess links and three unresolved items, and added Audit Log. No reference links or order changed. Pending independent re-audit; note retains not audited."
+    }
+  }
+}

@@ -1,0 +1,550 @@
+                       Mixing beliefs among interacting agents
+            Guillaume Deffuant, David Neau, Frédéric Amblard, Gérard Weisbuch
+
+
+
+      To cite this version:
+     Guillaume Deffuant, David Neau, Frédéric Amblard, Gérard Weisbuch. Mixing beliefs among interacting
+     agents. Advances in Complex Systems (ACS), 2001, 03 (3), pp.11. ⟨10.1142/S0219525900000078⟩. ⟨hal-
+     02580278⟩
+
+
+
+
+                                        HAL Id: hal-02580278
+                              https://hal.inrae.fr/hal-02580278v1
+                                           Submitted on 20 May 2025
+
+
+
+
+    HAL is a multi-disciplinary open access archive             L’archive ouverte pluridisciplinaire HAL, est des-
+for the deposit and dissemination of scientific re-        tinée au dépôt et à la diffusion de documents scien-
+search documents, whether they are published or not.       tifiques de niveau recherche, publiés ou non, émanant
+The documents may come from teaching and research          des établissements d’enseignement et de recherche
+institutions in France or abroad, or from public or pri-   français ou étrangers, des laboratoires publics ou
+vate research centers.                                     privés.
+
+
+                                              HAL Authorization
+Mixing beliefs among interacting agents
+
+Guillaume Deffuant , David Neau , Frederic Amblard
+and Gérard Weisbuch
+ Laboratoire d’Ingénierie pour les Systèmes Complexes (LISC)
+Cemagref - Grpt de Clermont-Ferrand
+24 Av. des Landais - BP50085
+F-63172 Aubière Cedex (FRANCE)
+ Laboratoire de Physique Statistique ½
+de l’Ecole Normale Supérieure,
+24 rue Lhomond, F 75231 Paris Cedex 5, France.
+email:weisbuch@physique.ens.fr
+
+
+ABSTRACT. We present a model of opinion dynamics where agents adjust continuous opinions
+on the occasion of random binary encounters whenever their difference in opinion is below a
+given threshold. High thresholds yield convergence of opinions towards an average opinion,
+but low thresholds result in several opinion clusters: members of the same cluster share the
+same opinion but do not adjust any more with members of other clusters.
+1. Introduction
+
+    Most models about opinion dynamics [FOL 74], [ART 94], [ORL 95], [LAT 97],
+[GAL 97], [WEI 99], are based on binary opinions which social actors update under
+either social influence or according to their own experience. One issue of interest
+concerns the importance of the binary assumption: what would happen if opinion were
+a continuous variable such as the worthiness of a choice (a utility in economics), or
+some belief about adjustment of a control parameter? In some European countries, the
+Right/Left political choices were often considered as continuous and were represented
+for instance by the geometrical position of the seat of a deputy in the Chamber.
+    Binary opinion dynamics under imitation processes have been well studied, and
+we expect that in most cases the attractor of the dynamics will display uniformity of
+opinions, either 0 or 1, when interactions occur across the whole population. This is
+the “herd” behaviour often described by economists [FOL 74], [ART 94], [ORL 95].
+Clusters of opposite opinions appear when the dynamics occurs on a social network
+with exchanges restricted to connected agents. Clustering is reinforced when agents
+diversity is introduced, for instance diversity of influence [LAT 97], [GAL 97], [WEI
+99].
+   The a priori guess for continuous opinions is also homogenisation, but towards
+average initial opinion [LAS 89]. The purpose of this paper is to present results
+about continuous opinion dynamics when convergent opinion adjustments only pro-
+ceed when opinion difference is below a given threshold. We will give results con-
+cerning homogeneous mixing across the whole population and mixing across a social
+network. Preliminary results about binary vectors of opinions will also be presented.
+
+
+2. Complete Mixing
+
+2.1. The basic model
+
+                                                                       
+    Let us consider a population of agents with continuous opinions  . At each
+time step any two randomly chosen agents meet. They re-adjust their opinion when
+                                                                     
+their difference of opinion is smaller in magnitude than a threshold . Suppose that
+                                    
+the two agents have opinion and ¼ and that   ¼      
+                                                          ; opinions are then adjusted
+according to:
+                                       
+                                             
+                                                         ¼
+                                                             
+
+                                       
+                                 ¼       ¼
+                                                            
+                                                                 ¼
+
+
+
+       
+Where is the convergence parameter taken between 0 and 0.5 during the simulations.
+    The rationale for the threshold condition is that agents only interact when their
+opinion are already close enough; otherwise they do not even bother to discuss. The
+reason for such behaviour might be for instance lack of understanding, conflicts of
+interest or social pressure. Although there is no reason to suppose that openness to
+                                             
+discussion, here represented by threshold , is constant across population or even
+symmetrical on the occasion of a binary encounter, we will always take it as a constant
+simulation parameter in the present paper (We conjecture that the results we get would
+                                                                 
+remain similar provided that the distribution of accross the whole population is sharp
+rather than uniform).
+    The evolution of opinions can be mathematically predicted in the limit case of
+                                                                Æ 
+small values of [NEA 00]. Density variations   of opinions obeys the follow-                   
+ing dynamics:
+                                Æ         ¾ 
+                                          ¿              ¾ ¾
+
+
+
+This implies that starting from an initial distribution of opinions in the population, any
+local higher opinion density is amplified. Peaks of opinions increase and valleys are
+depleted until very narrow peaks remains among a desert of intermediate opinions.
+
+
+2.2. Results
+
+    Figures 1 and 2 obtained by computer simulations, display the time evolution of
+opinions among a population of           
+                                      agents for two values of the threshold .                              
+Initially opinions were randomly generated across a uniform distribution on [0,1]. At
+each time step a random pair is chosen and agents re-adjust their opinion according to
+                                                                             
+equation 1 and 2 when their opinions are closer than . Convergence of opinions is
+observed, but uniformity is only achieved for the larger value of .                          
+                1
+                                                                                             opinions
+
+
+
+
+               0.8
+
+
+
+
+               0.6
+
+
+
+
+               0.4
+
+
+
+
+               0.2
+
+
+
+
+                0
+                     0   5000   10000   15000    20000   25000       30000   35000   40000       45000   50000
+
+
+
+Figure 1. Time chart of opinions (                             ). One time unit
+corresponds to sampling 1000 pairs of agents.
+
+    Another way to follow agents opinion dynamics is to plot final opinions as a func-
+tion of initial opinions. The plot on figure 3 shows how final opinions “reflect” initial
+                 1
+                                                                                         opinions
+
+
+
+
+              0.8
+
+
+
+
+              0.6
+
+
+
+
+              0.4
+
+
+
+
+              0.2
+
+
+
+
+                 0
+                     0   5000   10000    15000   20000   25000   30000   35000   40000     45000    50000
+
+
+
+Figure 2. Time chart of opinions (                              ). One time unit
+corresponds to sampling 1000 pairs of agents.
+
+
+
+
+             
+opinions for   . One can notice that some agents with initial opinions roughly
+equidistant from final peaks of opinions can end up in either peak: basin of attractions
+in the space of opinions overlap close to the clusters frontiers. The overlap observed
+                                                    
+when    is strongly reduced when    (not represented here): agents then
+have more time to make up their mind since opinions are changing 10 times more
+slowly and their final opinion are those of the nearest peak.
+    A large number of simulations were carried out and we found that the qualitative
+                                                                 
+dynamics mostly depend on the threshold . and only influence convergence time
+and the width of the distribution of final opinions (when a large number of different
+                                     
+random samples are made). controls the number of peaks of the final distribution
+of opinions as shown in figure 4. The maximum number of peaks,  , decreases
+                     
+as a function of . A rough evaluation of  based on a minimal distance of                                
+between peaks (all other intermediate opinions being attracted by one of the peaks),
+                                 
+plus a minimal distance of of extreme peaks from 0 and 1 edges gives   ¾½ ,
+in accordance with the observations of figure 4.
+    The finiteness of the population allows some slight variations of the number of
+peaks according to random samplings for intermediate values of . These size effects       
+were confirmed when studying larger and smaller population sizes. In the intermediate
+regions one also observes small populations of “wings” (a few percent) in the vicinity
+of extreme opinions 0 and 1 (we call wings asymmetric peaks with a vertical bound
+of either 0 or 1).
+                       1
+
+
+                   0.8
+
+
+                   0.6
+
+
+                   0.4
+
+
+                   0.2
+
+
+                       0
+                           0           0.2          0.4          0.6          0.8        1
+
+
+
+Figure 3. Diagram of final opinions vs initial opinions (                       )
+
+
+             250                                                          1 peak
+                                                                         2 peaks
+                                                                         3 peaks
+                                                                         4 peaks
+             200                                                         5 peaks
+                                                                         6 peaks
+                                                                         7 peaks
+             150
+
+
+             100
+
+
+              50
+
+
+               0
+                   0           0.05   0.1    0.15   0.2   0.25   0.3   0.35     0.4   0.45   0.5
+
+
+Figure 4. Statistics of the number of peaks of opinions as a function of on the x axis       
+                   
+for 250 samples (                   
+                                , wings are excluded from the statistics).
+3. Social Networks
+
+
+     The literature on social influence and social choice also considers the cases when
+interactions occur along social connections between agents [FOL 74] rather than ran-
+domly across the whole populations. Apart from the similarity condition, we now add
+to our model a condition on neighborhood: agents only interact if they are directly con-
+nected through a social pre-existing relation. Although one might certainly consider
+the possibility that opinions on certain unimportant subjects could be influenced by
+complete strangers, we expect important decisions to be influenced by advice taken
+either from professionals (doctors for instance) or from socially connected persons
+(e.g. through family, business or clubs). Facing the difficulty of inventing a credi-
+ble instance of a social network as in the literature on social binary choice [WEI 99],
+we adopted the standard simplification and we carried out our simulations on square
+lattices: square lattices are simple, allow easy visualisation of opinion configurations
+and contain many short loops, a property that they share with real social networks.
+    We then started from a 2 dimensional network of connected agents on a square
+grid. Any agent can only interact with his four connected neighbours ( N, S, E and W).
+We then use the same initial random sampling of opinions from 0 to 1 and the same
+basic interaction process between agents as in the previous sections. At each time
+step a pair is randomly selected among connected agents and opinions are updated
+according to equations 1 and 2 provided of course that their distance is less than .
+    The results are not very different from those observed with non-local opinion mix-
+ing described in the previous section, at least for the larger values of  (      , all
+results displayed in this section are equilibrium results at large times). As seen on fig-
+ure 5 the lattice is filled with a large majority of agents which have reached consensus
+around     apart from isolated agents which have “extremists” opinions closer
+to 0 or 1: the importance of extremists is the most noticeable difference with the full
+mixing case described in the previous section.
+    Interesting differences are noticeable for the smaller values of    as observed
+in figure 6. When several values are possible for clusters of converging opinions,
+consensus can only be reached on connected clusters of agents.
+    For connectivity 4 on a square lattice, only one cluster can percolate [STA 94]
+across the lattice which then has homogeneous opinion for all the agents that belong
+to it. Otherwise, non percolating clusters have homogeneous opinions inside the clus-
+ter and these opinions correspond to groups of non-connected clusters with similar but
+not exactly equal opinions as observed on the histogram (figure 7) and on the pattern
+of opinions on the lattice (figure 6). The differences of opinions between group of
+clusters relates to , but the actual values inside a small cluster fluctuates from cluster
+to cluster because homogenisation occurred independently among the different clus-
+ters: the resulting opinion depends on fluctuations of initial opinions and histories
+from one cluster to the other. The same increase of fluctuations compared with the
+full mixing case is observed from sample to sample with the same parameter values.
+Figure 5. Display of final opinions of agents connected on a square lattice of size
+29x29 (          after 100 000 iterations) . Note the percolation of the large
+cluster of homogeneous opinion and the presence of isolated “extremists”.
+
+
+
+
+Figure 6. Display of final opinions of agents connected on a square lattice of size
+29x29 (       after 100 000 iterations) . One still observes a large per-
+colating cluster of homogeneous opinion and the presence of smaller non-percolating
+clusters with similar but not equal opinions.
+             600
+                                               histogram of opinions
+
+             500
+
+
+             400
+
+
+             300
+
+
+             200
+
+
+             100
+
+
+               0
+                   0       20         40         60            80      100
+
+
+
+Figure 7. Histogram of final opinions corresponding to the pattern observed on figure
+6 . The 101 bins noted from 0 to 100 correspond to a hundred times the final opinions
+which vary between 0 and 1.0. Note the high narrow peak at 76 corresponding to the
+percolating cluster and the smaller and wider peaks corresponding to non-percolating
+clusters.
+
+
+    The qualitative results obtained with 2D lattices should be observed with any con-
+nectivity, either periodic random or small world since they are related with the perco-
+lation phenomenon [STA 94].
+
+
+4. Vector opinions
+
+4.1. The model
+
+    Another direction for investigation are vectors of opinions. Usually people have
+opinions on different subjects, which can be represented by vectors of opinions. In ac-
+cordance with our previous hypotheses, we suppose that one agent interacts concern-
+ing different subjects with another agent according to some distance with the other
+agent’s vector of opinions. In order to simplify the model, we revert to binary opin-
+ions. An agent is characterised by a vector of binary opinions about the complete set
+of subjects, shared by all agents. We use the notion of Hamming distance between
+binary opinion vectors (the Hamming distance between two binary opinion vectors is
+the number of different bits among the two vectors). Here, we only treat the case of
+complete mixing; any couple of agents might interact and adjust opinions according
+to how many opinions they share. The adjustment process occurs when agents agree
+on at least       subjects (i. e. they disagree on   or less subjects). The rules
+for adjustment are the following: all equal opinions are conserved; when opinions
+on a subject differ, one agent (randomly selected from the pair) is convinced by the
+                               
+other agent with probability . Obviously this model has connections with popula-
+tion genetics in the presence of sexual recombination when reproduction only occurs
+if genome distance is smaller than a given threshold; such a dynamics results in the
+emergence of species (see [HIG 91]).
+    We are again interested to figure out how opinion vectors cluster. In fact clusters
+of opinions here play the same role as biological species in evolution. A first guess is
+that vector opinions dynamics might be intermediate between the binary opinion case
+and continuous opinions.
+
+
+
+4.2. Results
+
+    We observed once again that and       only modify convergence times towards
+                                                          
+equilibrium; the most influencial factors are threshold and        the number of sub-
+jects under discussion. Most simulations were done for                      
+                                                                 . For  ,
+convergence times are of the order of 10 million pair iterations. For   :
+    – When        , the radius of the hyperspace, convergence towards a single opinion
+occurs (the radius of the hyperspace is twice its diameter which is equal to 14, the
+maximum distance in the hyperspace).
+                          
+    – Between  and  a similar convergence is observed for more than 99.5
+per cent of the agents with the exception of a few clustered or isolated opinions distant
+from the main peak by roughly 7.
+          
+    – For  , one observes from 2 to seven significant peaks (with a population
+larger than 1 per cent) plus some isolated opinions.
+          
+    – For   a large number (around 500) of small clusters is observed (The num-
+ber of opinions is still smaller than the maximum number of opinions distant by 2).
+   The same kind of results is obtained with larger values of : two regimes, uni-
+                                                                           
+formity of opinions for larger values and extreme diversity for smaller values are
+separated by one      
+                     value for which a small number of clusters is observed (e.g for
+                     
+    ,  , seems to scale in proportion to ).
+    Since there is no a priori reference opinion as in the previous cases of continuous
+opinions, information about the repartition of opinions is obtained from the histogram
+of distances among couples of opinions represented on figure 8. The results of the two
+next figures were obtained by averaging over 200 samples.
+    After all agents have been involved in 1000 possible exchanges of opinions on av-
+erage, most pairs of opinions are different. One important result is that polarisation of
+opinions (opposite vectors of opinions) is not observed. The clustering process rather
+results in orthogonalisation of opinions with an average distance around 6: opinion
+vectors have no correlation, positive or negative, whatsoever. Similar results were
+observed concerning distances of binary strategies in the minority game [MAR 97].
+             120000
+                                                                 t=500
+                                                              t=15 000
+             100000
+
+
+              80000
+
+
+              60000
+
+
+              40000
+
+
+              20000
+
+
+                     0
+                         0       2           4       6   8       10      12
+
+
+Figure 8. Histogram of distances in vector opinions for         
+                                                              agents and thus
+500 000 pairs of agents. (         
+                                    ), times are given in 1000 iterations units.
+
+   We were also interested in the populations of the different clusters. Figure 9 repre-
+sent these populations at equilibrium (iteration time was 12 000 000) in a log-log plot
+according to their rank-order of size. No scaling law is obvious from these plots, but
+                                                                                   
+we observe the strong qualitative difference in decay rates for various thresholds .
+
+
+             1000
+                                                                  d=2
+                                                                  d=3
+                                                                  d=4
+
+              100
+
+
+
+               10
+
+
+
+                1
+
+
+
+               0.1
+                     1                   3       5       10               30
+
+
+Figure 9. Log-log plot of average populations of clusters of opinions arranged ac-
+                                     
+cording to decreasing order. for   agents (  ).   
+5. Conclusions
+
+
+    We thus observe than when opinion exchange is limited by similarity of opin-
+ions among agents, the dynamics yield isolated clusters among initially randomly dis-
+tributed opinions. Exchange finally only occurs inside clusters as a the result of the ex-
+change dynamics; initially all agents were communicating either directly or indirectly
+through several directly connected agents. The concertation process as described here
+is sufficient to ensure clustering even in the absence of difference in private interests
+or in experience about the external world.
+    We have studied three very basic models and observed the same clustering be-
+haviour, at least for some parameter regimes, which make us believe that the observed
+clustering is robust and should be observed in more complicated models, not to men-
+tion political life! Many variations and extensions can be proposed, including of
+course further opinion selection according to experience with some external world
+(“social reinforcement learning”). An interesting extension would be a kind of histor-
+ical perspective where subjects (or problems) would appear one after the other: posi-
+tion and discussions concerning an entirely new problem would then be conditioned
+by the clustering resulting from previous problems.
+    Acknowledgments: We thank Jean Pierre Nadal and John Padgett and the members
+of the IMAGES FAIR project, Edmund Chattoe, Nils Ferrand and Nigel Gilbert for
+helpful discussions. This study has been carried out with financial support from the
+Commission of the European Communities, Agriculture and Fisheries (FAIR) Specific
+RTD program, CT96-2092, ”Improving Agri-Environmental Policies : A Simulation
+Approach to the Role of the Cognitive Properties of Farmers and Institutions”. It does
+not necessarily reflect its views and in no way anticipates the Commission’s future
+policy in this area.
+   Arthur, B. W. (1994) “Increasing Returns and Path Dependence in the Economy”,
+(University of Michigan Press).
+   Föllmer H. (1974) ”Random Economies with Many Interacting Agents”, Journal
+of Mathematical Economics, 1/1, 51-62.
+  Galam S. (1997) ”Rational group decision making: A random field Ising model at
+T=0”, Physica A, 238, 66-80.
+   Higgs P.G. and Derrida, B. (1991) “Stochastic models for species formation in
+evolving populations”, J. Phys. A: Math. Gen., 24, 985-991.
+   Laslier, J.F. (1989) “Diffusion d’information et valuations squentielles” Economie
+applique.
+   Latané, B. and Nowak, A. (1997) ”Self- Organizing Social Systems: Necessary
+and Sufficient Conditions for the Emergence of Clustering, Consolidation and Contin-
+uing Diversity”, in Barnett, G. A. and Boster, F. J. (eds.) Progress in Communication
+Sciences.
+    Neau, D (2000), “Révisions des croyances dans un système d’agents en interac-
+tion”, rapport d’option de l’école polytechnique, available at http://www.lps.fr/ weis-
+buch/rapneau.ps.
+    Orléan A. (1995), ”Bayesian Interactions and Collective Dynamics of Opinions:
+Herd Behavior and Mimetic Contagion”, Journal of Economic Behavior and Organi-
+zation, 28, 257-274.
+   Stauffer D. and Aharony A., (1994) “Introduction to Percolation Theory”, Taylor
+and Francis, London.
+   Weisbuch G. and Boudjema G. (1999), “Dynamical aspects in the Adoption of
+Agri-Environmental Measures”, Adv. Complex Systems, 2, 11-36.
+

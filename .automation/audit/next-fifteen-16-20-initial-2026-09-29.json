@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "audit": "initial_independent_audit",
+  "selection": "Entries filenames 16-20 in lexicographic order",
+  "audited_at": "2026-09-29",
+  "auditor_scope": "Read LLM Extraction Rules and all five notes. Checked claims against accessible primary sources. Did not edit paper notes. The published book full text is unavailable; only its publisher and author pages were used. The Krackhardt primary PDF was served from CMU but the browser text extractor returned zero lines; relevant definitions were checked in indexed extracts of that same primary PDF.",
+  "overall_status": "FAIL",
+  "notes": {
+    "Literature/Papers/Entries/Bounded Confidence Revisited- What We Overlooked- Underestimated- and Got Wrong.md": {
+      "status": "FAIL",
+      "source": "https://www.jasss.org/26/4/11.html",
+      "source_access": "Full text accessible.",
+      "claims_checked": {
+        "research_questions": "Supported by the Introduction and the stated purpose of the epsilon-switch method.",
+        "model_claims": "The description of synchronous bounded-confidence averaging, exact arithmetic, and non-monotonic outcomes is broadly supported.",
+        "metadata": "Title, author, 2023-10-31 date, and DOI 10.18564/jasss.5257 match publisher metadata (source lines 4-14)."
+      },
+      "findings": [
+        {
+          "severity": "major_omission",
+          "note_location": "How does it work? (note lines 30-31)",
+          "source_location": "Section 2, equations (2)-(4), source lines 65-77; Section 4 and Appendix A, especially lines 53-56 and 454-474.",
+          "finding": "The model summary omits the defining update rule and leaves the threshold-search method at the level of 'identifies epsilon values'. The article defines opinions on [0,1], the inclusive insider condition |x_i(t)-x_j(t)| <= epsilon (including the agent itself), and simultaneous next-period replacement by the arithmetic mean of all insiders. An epsilon-switch is the smallest larger confidence value equal to the minimum distance to an outsider over the process; a finite switch list segments confidence values into intervals that induce identical processes. Exact arithmetic is needed to determine these boundaries without rounding errors.",
+          "required_fix": "State the opinion domain, inclusive insider set, synchronous mean update, switch definition, and exact-fraction requirement. Keep the finite-switch claim qualified: the article says finiteness for all start distributions is conjectured (Appendix A, Analytical Note 6), though its algorithm terminated for every case tested; the article establishes finite primary switches. The existing statement that the full threshold algorithm is omitted does not identify these defining mechanics.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        },
+        {
+          "severity": "bibliography_unresolved",
+          "note_location": "Metadata/References (note lines 39 onward)",
+          "source_location": "Publisher page, full article references and citations.",
+          "finding": "There are 82 reference links, including 26 UnresolvedReference identifiers. Exact completeness/order against the publisher bibliography was not established in this audit. The note has no bibliography-completeness warning.",
+          "required_fix": "Compare the links against the full article bibliography and retain an explicit incompleteness warning for unresolved titles until they are mapped.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        }
+      ],
+      "footnotes": "Claims have footnotes and section references; citations point to the primary article.",
+      "correction_status": "CORRECTED_PENDING_REAUDIT",
+      "correction_recorded_at": "2026-09-29",
+      "re_audit_status": "pending",
+      "correction_summary": "Added formal HK update, inclusive insider set, epsilon-switch definition, exact arithmetic requirement, and qualified finiteness statement. Retained bibliography incompleteness caveat; unresolved identifiers remain."
+    },
+    "Literature/Papers/Entries/Bridging Systems- Open Problems for Countering Destructive Divisiveness across Ranking- Recommenders- and Governance.md": {
+      "status": "PASS",
+      "source": "https://arxiv.org/html/2301.09976",
+      "source_access": "Full text accessible as arXiv HTML (version 3 dated 2023-07-24); original submission date confirmed as 2023-01-24.",
+      "claims_checked": {
+        "abstract": "Matches the primary abstract.",
+        "research_questions": "Accurately paraphrase the stated research agenda (Introduction, source lines 156-174).",
+        "model_section": "No model section is present; appropriate for this research-framework/research-agenda paper. The note does not present it as a validated executable model.",
+        "metadata": "Title, authors, initial arXiv date, and source are correct; no DOI is supplied in the note.",
+        "references": "The note has 115 ordered reference links, matching all numbered references [1]-[115] in the primary paper (source lines 482-597)."
+      },
+      "footnotes": "Each research-question claim has an LLM-Justification footnote referring to the appropriate source sections."
+    },
+    "Literature/Papers/Entries/Building Successful Online Communities- Evidence-Based Social Design.md": {
+      "status": "FAIL",
+      "source": "https://mitpress.mit.edu/9780262016575/building-successful-online-communities/ ; https://kraut.hciresearch.info/books/",
+      "source_access": "Published full book unavailable, as specified for this audit. Publisher book page and author-hosted chapter-draft listing are accessible.",
+      "claims_checked": {
+        "abstract": "Claims about social-science evidence, design claims, and five community-design challenges are supported by the MIT Press description and author-hosted materials.",
+        "research_questions": "Both questions faithfully summarize the publisher description and are footnoted.",
+        "model_section": "None; appropriate for this book-level synthesis.",
+        "authors": "All nine listed contributors are consistent with publisher metadata.",
+        "bibliography": "No reference links are present; the note explicitly warns that bibliography extraction is incomplete, as required.",
+        "publication_date": "Incorrectly set to 2012-01-01."
+      },
+      "findings": [
+        {
+          "severity": "metadata_error",
+          "note_location": "Frontmatter publication date (line 16)",
+          "source_location": "MIT Press publisher page, book metadata: Pub date March 23, 2012.",
+          "finding": "The day and month are wrong; January 1 is not the book's publication date.",
+          "required_fix": "Change publication date to 2012-03-23.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        }
+      ],
+      "footnotes": "Research-question claims are tied to the publisher description and author-hosted page. The incomplete-bibliography warning is retained.",
+      "correction_status": "CORRECTED_PENDING_REAUDIT",
+      "correction_recorded_at": "2026-09-29",
+      "re_audit_status": "pending",
+      "correction_summary": "Corrected publication date to 2012-03-23 from MIT Press publisher metadata. Full text remains unavailable."
+    },
+    "Literature/Papers/Entries/Cognitive social structures.md": {
+      "status": "FAIL",
+      "source": "https://www.heinz.cmu.edu/faculty-research/profiles/david-krackhardt/_files/1987-cognitive-social-structures.pdf",
+      "source_access": "Primary 26-page PDF is accessible from CMU; browser text extraction returned no lines. Checked relevant definitions in indexed extracts of the primary PDF, including p. 116, §3.2 and p. 119 case illustration. Publisher metadata is available at https://www.sciencedirect.com/science/article/pii/0378873387900098.",
+      "claims_checked": {
+        "abstract": "Matches the source abstract, including the N x N x N representation, three reductions, and management-team case.",
+        "research_questions": "Supported by the article's stated problems and analytical reductions.",
+        "model_representation": "The three-dimensional directed relation report and individual-slice description are supported.",
+        "metadata": "Author, June 1987, and DOI 10.1016/0378-8733(87)90009-8 match publisher metadata."
+      },
+      "findings": [
+        {
+          "severity": "source_contradiction",
+          "note_location": "How does it work? (line 30)",
+          "source_location": "Krackhardt (1987), §3.2, p. 116, primary PDF: row-dominated LAS R'_ij = R_ij_i; column-dominated LAS R'_ij = R_ij_j. Consensus aggregation uses all perceivers; the case example is described on p. 119.",
+          "finding": "The note says LAS 'combines reports for a focal actor from other perceivers.' That is incorrect. LAS is based on reports by the members of the dyad itself: i's report (row-dominated) or j's report (column-dominated). It is not an aggregation of other informants' reports. The consensus structure is the all-perceiver aggregation. In the case illustration, the LAS is the intersection of i's and j's reports and CS uses a 0.5 threshold across 21 respondents.",
+          "required_fix": "Replace the LAS sentence with the two explicit variants and distinguish them from consensus aggregation. Cite §3.2/p. 116; if describing the case, cite the p. 119 threshold/intersection example.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        },
+        {
+          "severity": "bibliography_unresolved",
+          "note_location": "Metadata/References (line 39 onward)",
+          "source_location": "Primary PDF References section; source ends on p. 134. Secondary bibliographic indexing reports 35 references, but a complete item-by-item reconciliation was not possible from the PDF text extraction.",
+          "finding": "The note contains 54 links, including 17 unresolved identifiers; this count does not demonstrate correspondence with the article bibliography. There is no explicit bibliography-incomplete warning.",
+          "required_fix": "Reconcile each item against the primary References section and flag the bibliography incomplete until all unresolved identifiers are mapped.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        }
+      ],
+      "footnotes": "Claims include section citations, but the note's LAS claim is contradicted by the cited primary definition.",
+      "correction_status": "CORRECTED_PENDING_REAUDIT",
+      "correction_recorded_at": "2026-09-29",
+      "re_audit_status": "pending",
+      "correction_summary": "Corrected row-/column-dominated LAS definition and separated it from all-perceiver consensus. Retained bibliography incompleteness caveat; unresolved identifiers remain."
+    },
+    "Literature/Papers/Entries/Computational Modelling of Trust and Social Relationships.md": {
+      "status": "FAIL",
+      "source": "https://www.jasss.org/15/1/3.html",
+      "source_access": "Full text accessible.",
+      "claims_checked": {
+        "research_questions": "Supported by the paper's aims and experimental comparisons.",
+        "reported_results": "Claims about the better fit of strong-tie and staged strategies and the comparison with weaker-tie strategies match the abstract and Results/Discussion.",
+        "scope": "The note correctly states that the model's SBH fit is not platform-intervention validation.",
+        "metadata": "2012-01-31, DOI 10.18564/jasss.1912, authors, and source match publisher metadata.",
+        "references": "The note has 41 entries, equal to the primary References section's 41 items; three are unresolved identifiers, so title-level mapping remains incomplete."
+      },
+      "findings": [
+        {
+          "severity": "major_omission",
+          "note_location": "How does it work? (lines 31-32)",
+          "source_location": "§3.2, model components; §§3.3-3.4, relationship trust; §§3.14-3.23, agent strategies and model-control algorithm; §§3.25-3.27, parameters and outputs. Primary HTML lines 134-206, 208-294, 298-314.",
+          "finding": "The summary omits several defining mechanics and the update order while explicitly deferring all equations and parameter settings. Each agent receives a round-robin turn; a forage/social turn is selected by the FM ratio; a social turn picks a stranger versus existing tie based on N_t,i/P; the selected alter responds cooperatively or defects; directed relationship trust is updated, then trust wanes. Four alter-selection strategies are specified (strong, medium, weak, staged), and trust has linear/log variants with explicit experimental values. Strong/medium/weak output layers are operationally defined by trust terciles. The global defection parameter does not retain relationship-specific defection histories (explicit limitation §5.8). These details are central to the simulation behavior and cannot be elided as generic partner selection.",
+          "required_fix": "Expand the model description or provide pseudocode capturing turn scheduling, forage/social choice, new/existing alter probabilities, strategy-based selection, response, directed trust update, waning order, parameter variants, tercile outcome definitions, and the global-defection limitation. State any further simplification explicitly and name the source sections/equations.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        },
+        {
+          "severity": "bibliography_unresolved",
+          "note_location": "Metadata/References (line 41 onward)",
+          "source_location": "Primary References section, lines 459-521.",
+          "finding": "The note has 41 bullets matching the count of primary references, but three are unresolved identifiers. A matching count alone cannot confirm correct title mappings.",
+          "required_fix": "Resolve the three identifiers against the primary References section or preserve an explicit incomplete-bibliography warning until then.",
+          "correction_status": "addressed in note; independent re-audit pending"
+        }
+      ],
+      "footnotes": "Claims have source sections and footnotes. The model footnote is too broad to substantiate all omitted mechanics; cite each added mechanism to the relevant numbered subsection/equation.",
+      "correction_status": "CORRECTED_PENDING_REAUDIT",
+      "correction_recorded_at": "2026-09-29",
+      "re_audit_status": "pending",
+      "correction_summary": "Expanded simulation mechanics, strategies, update sequence, parameter controls, tercile output definition, and global-defection limitation. Retained bibliography incompleteness caveat; unresolved identifiers remain."
+    }
+  },
+  "correction_status": "Corrections applied; independent re-audit pending. Notes retain ⚠️ not audited."
+}

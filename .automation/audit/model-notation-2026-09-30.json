@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-30",
+  "scope": "Model notation review of all paper-entry Markdown notes and the vault model/notation guides; third-party plugin READMEs were not treated as model notation.",
+  "reviewed_guides": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md"
+  ],
+  "findings": [
+    [
+      "vault/Model.md",
+      [
+        [
+          "incoming",
+          "Indirect->Thought; .inner",
+          "IndirectThought; .thought",
+          "Use the declared IndirectThought fields so the procedure input and accesses agree."
+        ]
+      ],
+      [
+        "No semantic ambiguity in the corrected field mapping; whether the model should use a differently named concept remains a content question outside notation."
+      ]
+    ],
+    [
+      "vault/Guides/Model Notation.md",
+      [
+        [
+          "add procedure return",
+          "out = x",
+          "out = c",
+          "Return the computed local result instead of an undefined variable."
+        ]
+      ],
+      []
+    ],
+    [
+      "vault/Literature/Papers/Entries/Agent-Based Modeling to Inform Online Community Design- Impact of Topical Breadth- Message Volume- and Discussion Moderation on Member Commitment and Contribution.md",
+      [
+        [
+          "Community settings",
+          "choice alternatives in arrays; active_or_inactive; value",
+          "choice alternatives use |; Active | Inactive; benefit and cost values are opaque; explicit cost fields and named experimental constants",
+          "The guide reserves brackets for arrays/maps and union bars for alternatives. The paper does not define benefit/cost scales, so opaque values avoid inventing a numeric type; fixed factor levels use named CAPS constants."
+        ]
+      ],
+      [
+        "The paper does not establish numeric ranges/scales for each benefit or cost; these remain opaque rather than assuming floating-point representation."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/AgentSociety 2- An Integrated Research Environment for Executable Social Science.md",
+      [
+        [
+          "Platform schema",
+          "implementation-like untyped field values and action arrays",
+          "compact role/workspace/environment types, explicit WorkflowStage/Skill/Action unions, and one short agent_step procedure",
+          "Replace the oversized block with readable type declarations, distinguish ordered workflow/available collections from one-of types, and express the runtime loop with a concise procedure."
+        ]
+      ],
+      [
+        "Agent internals, context payloads, environment modules, and action selection remain abstract because the paper leaves study-specific transitions and implementation details configurable."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/AgentSociety- Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society.md",
+      [
+        [
+          "Model representation",
+          "Dense prose describing agents, mind, memory, modules, and runtime without compact notation",
+          "Concise Agent/Mind/Emotion/Relationship types plus mechanism bullets for the agent loop, mobility, social interaction, economy, and runtime",
+          "The source describes an architecture rather than a complete transition model. The schema makes specified fields and ranges visible, leaves unspecified fields opaque, and preserves mechanism details and source footnotes."
+        ]
+      ],
+      [
+        "Prompts, individual parameters, study-specific treatments, and offline agent interactions remain incomplete or future work; no shared transition rule was invented."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/A causal test of the strength of weak ties.md",
+      [
+        [
+          "Experiment/Tie schema",
+          "map keys used NewTie/Member; formula referenced undeclared capitalized names; inline 2",
+          "TieId/MemberId maps, declared degree fields, lower-case field references, SELF_EXCLUSION constant",
+          "Make generated IDs and fields consistent, define opaque result types, and name the fixed formula constant."
+        ]
+      ],
+      [
+        "JobTransmission and MemberObservation contents are not specified in this compact schema and remain opaque."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md",
+      [
+        [
+          "Dyad schema",
+          "PersonId used without a Person type",
+          "Person: ... (therefore PersonId is generated)",
+          "Resolve the identifier source using the guide’s automatic ID convention."
+        ]
+      ],
+      [
+        "Metric scales are left as f32 because the note does not define their numeric domains."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/A Schelling model with adaptive tolerance.md",
+      [
+        [
+          "World/Agent/Parameters/Constants schema",
+          "fixed numbers embedded in distributions and constants; parameter choices not named",
+          "range types with named endpoints and sampling comments; migration alternatives as a union of named constants; named CAPS fixed settings; explicit Lattice/Site types",
+          "Keep actual sampled ranges, distinguish parameter ranges from sampled values, and name fixed mechanism/configuration numbers."
+        ]
+      ],
+      [
+        "Exact topology and neighborhood inconsistencies are already described in cited prose; the notation does not resolve them."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/A Framework for Sequential Planning in Multi-Agent Settings.md",
+      [
+        [
+          "I-POMDP schema",
+          "State, Action, Observation referenced but undefined",
+          "explicit opaque definitions using ...",
+          "Resolve undefined domain types without inventing their contents."
+        ]
+      ],
+      [
+        "Transition, observation, reward, and model frame remain problem-specific and are intentionally abstract."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/An Agent-Based Model of Social Identity Dynamics.md",
+      [
+        [
+          "World/Agent schema",
+          "N, k0, d_star, SID, lattice_site and L/r used as undefined value/type names",
+          "typed agent/identity/site collections, 0..1 frequency/preference ranges, optional SiteId, and explicit WellMixed | Lattice(LatticeParameters)",
+          "Separate values from types, use declared ID conventions, and represent the lattice constructor with a typed parameter structure."
+        ]
+      ],
+      [
+        "The note does not specify a concrete domain for the number of agents/identities or lattice dimensions; these remain unbounded count/radius ranges."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/Bias Reduction in Social Networks Through Agent-Based Simulations.md",
+      [
+        [
+          "World/User/Tweet and sim_step",
+          "fixed settings repeated inline; Tick/UserId/FollowEdge details incomplete",
+          "named constants, explicit FollowEdge fields, identifier conventions from User/Tweet, and World feed_length",
+          "Name fixed configuration/mechanism values, make selected settings explicit, and define the edge structure."
+        ]
+      ],
+      [
+        "LogNormal parameterization follows the note’s stated mean/standard deviation; no additional distributional assumptions were added."
+      ]
+    ],
+    [
+      "vault/Literature/Papers/Entries/Affect control processes- Intelligent affective interaction using a partially observable Markov decision process.md",
+      [
+        [
+          "BayesAct/EPA schema",
+          "F[9]/T[9] and X[including_interaction_turn] use bracket indexing as structure; Omega/transition/reward values were pseudo-types",
+          "structured EPA and EPAEvent types, an application state that carries the turn, typed action/observation pairs, and explicit belief map; application-specific functions left as ...",
+          "Use named types rather than array-index pseudo-syntax and separate actual collections/maps from nested structure."
+        ]
+      ],
+      [
+        "Application state fields, observation functions, application action domain, transition details, and reward are intentionally unspecified by the general framework."
+      ]
+    ]
+  ],
+  "global_checks": {
+    "array_vs_choice": "Corrected finite alternatives to A | B; retained brackets where the field is an actual collection or map.",
+    "constants": "Fixed configuration/mechanism values used by edited notation now have named CAPS constants. Genuine sampled/type ranges remain ranges.",
+    "types_and_ids": "Added opaque ... declarations where domain details are source-specific; used collection-derived IDs consistently.",
+    "procedures": "Kept mutation/output conventions and corrected the guide example’s undefined return variable.",
+    "scope_result": "No additional malformed one-of array, active_or_inactive, or value pseudo-type patterns remained in inventoried model blocks."
+  },
+  "unresolved_semantics": [
+    "Opaque types are explicitly retained where a general framework or compact empirical schema does not specify their internal fields.",
+    "The online-community benefit/cost metric domains, AgentSociety study-specific transitions, iPOMDP task models, and BayesAct application-specific mappings remain unspecified by their sources or this schema."
+  ]
+}

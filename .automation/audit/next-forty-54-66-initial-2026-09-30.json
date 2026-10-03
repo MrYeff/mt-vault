@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-30",
+  "scope": "independent audit of lexicographic entries 54-66",
+  "method": "Read each accessible primary full text and compare the note’s abstract, transformed claims, source locators, model or empirical framing, metadata, template, tags, warnings, and preserved reference-link order. For inaccessible full text, audit is limited to publisher abstract/metadata and note the access limit.",
+  "records": {
+    "Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md": {
+      "verdict": "PASS",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/abs/1909.04847",
+      "doi": "10.48550/arxiv.1909.04847",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 58,
+        "original_reference_count": 58,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "matches source except as noted"
+      },
+      "findings": "The publisher/arXiv full paper was read, including components and non-objectives (§§1.4, 3.1–3.2). The abstract matches the source. Research questions are supportable. The four model prompts are present; claims that RecSim is a configurable environment rather than one universal user law are accurate and source-located to §§2–3. DOI, date, authors, tags, source and exact preserved reference order/count (58) check out. No substantive issue found."
+    },
+    "Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/abs/2007.16120",
+      "doi": "10.1016/j.inffus.2020.12.001",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 254,
+        "original_reference_count": 254,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The arXiv record and university-hosted publisher PDF were read. Abstract and citation metadata are consistent; 254 original reference links remain in exact order. The note calls this only a literature analysis and has no Model section, but the paper explicitly contributes a general reciprocal recommender conceptual model (Section 2, Fig. 2; formal mutual preference scores p_x,y and p_y,x combined by a fusion function). The extraction omits this model despite the four-question model requirement. The study-design paragraph is otherwise accurate."
+    },
+    "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md": {
+      "verdict": "FAIL",
+      "primary_source_read": "primary abstract/metadata read; full text inaccessible",
+      "source_url": "https://www.nature.com/articles/s41586-026-10536-1",
+      "doi": "10.1038/s41586-026-10536-1",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 59,
+        "original_reference_count": 59,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The Nature primary page’s abstract and publication metadata were available; full article text was blocked, consistent with the existing `fulltext unavailable` flag. The note’s study-design paragraph stays within the abstract. The Abstract is not an exact copy: after the publisher abstract it appends the protocol-registration statement and a duplicate summary sentence. DOI, publication date 2026-05-27, authors, tags and 59 preserved reference links check out. Full-text claims remain unverified; LIMITED for those claims."
+    },
+    "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/27/2/4/4.pdf",
+      "doi": "10.18564/jasss.5300",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 51,
+        "original_reference_count": 51,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full JASSS PDF was read, including abstract and framework/performance descriptions. The study-design summary correctly distinguishes software/performance evaluation from a substantive behavioral model and reports the comparison and AWS EC2 calibration experiment. Abstract is not exact: words are joined across sentence/word boundaries (e.g. `systems.Over`, `smallscale`), while the publisher PDF has separated words (`systems. Over`, `small-scale`). DOI, publication date, authors, tags and 51 reference links/order check out."
+    },
+    "Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md": {
+      "verdict": "PASS",
+      "primary_source_read": true,
+      "source_url": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
+      "doi": "10.1126/science.adu5584",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 82,
+        "original_reference_count": 82,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "matches source except as noted"
+      },
+      "findings": "The full Science PDF was read. Abstract matches the paper; study design correctly records preregistration, 1,256 X users, a 10-day experiment and the 2024 campaign, and identifies the randomized exposure intervention and affective-polarization result. This is an empirical field experiment, so no simulation model is claimed. DOI, date, authors, tags, source and all 82 preserved references/order check out."
+    },
+    "Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/abs/2311.16586",
+      "doi": "10.1145/3656481",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 63,
+        "original_reference_count": 63,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full arXiv paper was read, including the simulator loop (§3), environments (§4), and results (§5). The abstract and high-level aims are accurate, but the model extraction is too generic for the accessible procedure: a session samples a user embedding, presents a recommendation/slate, computes relevance and clicks, updates user embedding for boredom and clicked-item influence when enabled, and repeats to session length; there are fully and partially observable variants and nine environments. Current text says only that nine environments are used and defers to the abstract; it omits the defining step order and user state transitions. DOI/date/source/tags and 63 original reference links in order check out."
+    },
+    "Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://doi.org/10.1145/3347146.3359106",
+      "doi": "10.1145/3347146.3359106",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 0,
+        "original_reference_count": 0,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full SIGSPATIAL paper is available in the NSF Public Access Repository PDF (also indexed by the source search); its abstract agrees with the note. The `fulltext unavailable` flag and statement that only an abstract was accessible are inaccurate. The model summary is abstract-level and misses mechanisms explained in the paper, so extraction completeness cannot be affirmed. DOI/title/authors and zero imported reference links match the snapshot; `publication date: 2019` lacks month/day precision but matches conference year. Source-missingness error is the clear failure."
+    },
+    "Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/26/2/6/6.pdf",
+      "doi": "10.18564/jasss.5066",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 77,
+        "original_reference_count": 77,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full JASSS article/PDF was read, including review protocol and findings. The study-design claim (systematic review of 43 ABMs) is supported and correctly distinguishes the review from one unified simulation. The abstract has joined words at sentence boundaries (e.g. `ABMs).However`, `challenging.Here`) and thus is not an exact copy of publisher text. DOI, publication date, author list, tags and all 77 preserved references/order check out."
+    },
+    "Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://www.jasss.org/15/4/3/3.pdf",
+      "doi": "10.18564/jasss.2059",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 62,
+        "original_reference_count": 62,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full JASSS paper was read, including the model mechanics, strategy definitions, process schedule, and outcomes. The summary correctly identifies relationship development, trust-mediated formation/decay and strategy-spread outcomes, but it wrongly says the transition function and parameterization are unavailable because only the abstract was accessible. The full text specifies trust changes on cooperation/defection with nonlinear saturation and time decay; strategy-specific history-dependent partner search; alternating social and foraging turns; and measured tie distributions/fitness. Those defining rules and simplifications are omitted. DOI/date/title/authors and 62 preserved reference links/order check out."
+    },
+    "Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/abs/2208.04024",
+      "doi": "10.1145/3526113.3545616",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 93,
+        "original_reference_count": 93,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full UIST/arXiv paper was read, including the prompt pipeline and technical/user evaluations. The research questions and broad use as social-system design prototyping are supported. The Model section is too generic: source describes a prompt chain that expands example personas into a population, assigns profile attributes, generates interactions conditioned on community goal/rules/personas, and evaluates generated threads and design interventions. It also reports limits/validation conditions that the note leaves out. DOI, source, authors, date/tags and all 93 reference links/order check out. Claims that the method is not a promise of accurate prediction are a reasonable limitation but should be tied to the paper’s Discussion, not presented as an explicit author framing without qualification."
+    },
+    "Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md": {
+      "verdict": "PASS",
+      "primary_source_read": true,
+      "source_url": "https://www.nature.com/articles/s41586-022-04997-3",
+      "doi": "10.1038/s41586-022-04997-3",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 51,
+        "original_reference_count": 51,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "matches source except as noted"
+      },
+      "findings": "The full Nature article was read. Abstract is consistent with the published abstract; both Research Questions are supported, including the quasi-experimental cross-cohort and regression-discontinuity analyses of exposure and friending bias. Study-design summary correctly labels the paper empirical and describes the Facebook friendship analysis rather than a simulation. DOI, date, authors, tags and 51 preserved reference links/order check out."
+    },
+    "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md": {
+      "verdict": "FAIL",
+      "primary_source_read": "primary abstract/metadata read; full text blocked by publisher access",
+      "source_url": "https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-060116-054035",
+      "doi": "10.1146/annurev-statistics-060116-054035",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 112,
+        "original_reference_count": 112,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The Annual Reviews publisher record provides the exact abstract and bibliographic metadata, which match the note. Full text did not load; the page requires institutional access. The model summary’s abstract-level statements are sound, but its footnotes claim support from specific model/coevolution sections that were not available for audit, and the note lacks `fulltext unavailable`. Mark the source limitation and avoid implying those sections were checked. DOI/date/authorship/tags and 112 preserved references/order check out."
+    },
+    "Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md": {
+      "verdict": "FAIL",
+      "primary_source_read": true,
+      "source_url": "https://arxiv.org/abs/2107.08959",
+      "doi": "10.48550/arxiv.2107.08959",
+      "checks": {
+        "template_sections": true,
+        "footnotes_exist": true,
+        "reference_links_match_original_in_order": true,
+        "current_reference_count": 62,
+        "original_reference_count": 62,
+        "tags_are_yaml_list": true,
+        "audit_flag_present": true,
+        "abstract_review": "see detailed findings"
+      },
+      "findings": "The full arXiv paper was read, including framework design, simulation process and replication sections. It is a simulation framework, not one substantive behavioral model, but the note incorrectly says it does not prescribe components beyond reusable modules. The paper specifies an event-driven schedule, parallel user feedback handling, user preference/prediction and score state, optional preference evolution after exposure/consumption, dynamic or fixed items, creator incentives and metrics. The four model answers omit these defining framework rules; current claim that chosen studies alone supply behavioral assumptions is too broad. DOI/source/date/authors/tags and 62 preserved reference links/order check out."
+    }
+  },
+  "summary": {
+    "PASS": 3,
+    "FAIL": 10,
+    "LIMITED": 0,
+    "source_access_limits": [
+      "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md"
+    ]
+  }
+}

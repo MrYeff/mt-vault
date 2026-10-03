@@ -1,0 +1,1379 @@
+Y Social: an LLM-powered Social Media Digital Twin
+Report GitHub Issue
+×
+Title:
+Content selection saved. Describe the issue below:
+Description:
+Submit without GitHub
+Submit in GitHub
+arXiv is now an independent nonprofit!
+Learn more
+×
+arXiv logo
+Back to arXiv
+Why HTML?
+Report Issue
+Back to Abstract
+Download PDF
+Abstract
+1 Introduction
+2 Related Works
+LLM-enhanced Social Simulations
+3 Y Social - Digital Twin
+3.1 y_server: Social Media platform primitives
+3.1.1 Introducing Algorithmic Bias: Recommender System(s)
+3.2 y_client: Simulating Agents’ social interactions
+3.2.1 LLM-powered agents
+3.2.2 Orchestrating a Simulation.
+4 Case study: Political Debate Arena
+4.1 Simulation configuration
+4.2 Generated Data Examples
+5 Leveraging the Y Digital Twin to boost multidisciplinary research
+5.1 Network Science
+5.2 Social AI
+5.3 NLP and content analysis
+5.4 Human and Machine Psychology
+5.5 Communication Science
+6 Conclusion and Future Works
+References
+License: CC BY 4.0
+arXiv:2408.00818v1 [cs.AI] 01 Aug 2024
+Y Social: an LLM-powered Social Media Digital Twin
+Giulio Rossetti
+Affiliation: CNR-ISTI, Italy
+Email: giulio.rossetti@isti.cnr.it
+Massimo Stella
+Affiliation: University of Trento, Italy
+Email: massimo.stella-1@unitn.it
+Rémy Cazabet
+Affiliation: University of Lyon, France
+Email: remy.cazabet@univ-lyon1.fr
+Katherine Abramski
+Affiliation: University of Pisa, Italy
+Email: katherine.abramski@phd.unipi.it
+Erica Cau
+Affiliation: University of Pisa, Italy
+Email: erica.cau@phd.unipi.it
+Salvatore Citraro
+Affiliation: CNR-ISTI, Italy
+Email: salvatore.citraro@isti.cnr.it
+Andrea Failla
+Affiliation: University of Pisa, Italy
+Email: andrea.failla@phd.unipi.it
+Riccardo Improta
+Affiliation: University of Trento, Italy
+Email: riccardo.improta@unitn.it
+Virginia Morini
+Affiliation: University of Pisa, Italy
+Email: virginia.morini@phd.unipi.it
+Valentina Pansanella
+Affiliation: CNR-ISTI, Italy
+Email: valentina.pansanella@isti.cnr.it
+Abstract
+In this paper we introduce Y, a new-generation digital twin designed to replicate an online social media platform.
+Digital twins are virtual replicas of physical systems that allow for advanced analyses and experimentation. In the case of social media, a digital twin such as Y provides a powerful tool for researchers to simulate and understand complex online interactions.
+Y leverages state-of-the-art Large Language Models (LLMs) to replicate sophisticated agent behaviors, enabling accurate simulations of user interactions, content dissemination, and network dynamics.
+By integrating these aspects, Y offers valuable insights into user engagement, information spread, and the impact of platform policies.
+Moreover, the integration of LLMs allows Y to generate nuanced textual content and predict user responses, facilitating the study of emergent phenomena in online environments.
+To better characterize the proposed digital twin, in this paper we describe the rationale behind its implementation, provide examples of the analyses that can be performed on the data it enables to be generated, and discuss its relevance for multidisciplinary research.
+A Preprint
+Keywords Digital Twin ⋅\cdot
+Online Social Media ⋅\cdot
+Large Language Models
+1 Introduction
+Online social media (OSM henceforth) have revolutionized the way we exchange information.
+From the user’s perspective, these digital ecosystems are largely effortless [136], enabling convenient ways of exchanging personal content [1], seeking information [129] and synchronizing with others [37].
+This convenience has catalyzed a massive digital shift in social and information exchanges from offline to online settings [136], which has provided novel access to massive amounts of online data regarding human behaviour [141].
+Unconstrained by geographical barriers, the massive adoption of social media has given rise to novel phenomena that are absent in in-person interactions, such as the influence of complexity and artificial intelligence.
+Complexity in social media is strongly related to the motto "more is different" [7]: the idea that the co-occurrence of many, even similar, interactions within the same context can lead to unexpected phenomena.
+Examples include acts as simple and seemingly insignificant as following another user, or re-sharing content.
+Taken individually, these actions can be understood in terms of a user’s activity, psychology, and engagement [91, 141, 97], but when repeated by vast amounts of users, these actions can determine the unexpected rise and fall of a massively followed account (influencer) or they can create cascades of information re-sharing (viral content) [136]. Artificial intelligences (AIs) also influence online interactions since social media actions such as following, re-sharing, posting, and commenting can nowadays also be performed by non-human users.
+Social bots are AIs that pose as humans [49] and interact with human users, either beneficially or maliciously [140].
+For instance, social bots can contribute positively to social media pluralism by automatically diffusing news and links that are external to social media platforms [139, 151].
+However, social bots can also act by broadcasting biased content or diffusing misinformation, which exposes human users to a wider variety of harmful content [140, 36].
+Despite existing online, content engagement on social media can deeply affect humans in their real-world surroundings [78, 126].
+Besides acting as a distraction [126], online posts can influence the emotions experienced by an individual, a phenomenon known as emotional contagion, which has been identified on platforms like Facebook [78].
+Furthermore, social media interactions are mainly textual in nature, which can lead to some unresolved ambiguity in understanding communicative intents [141].
+Dissonance is further exacerbated by the fact that social media content is often rich in cognitive, emotional, and psychological features [141, 24].
+For instance, a post that expresses ideas in words or hashtags can also contain a familiar picture or emoticons that resemble recognizable facial expressions [140].
+The negative impact of unresolved ambiguity and toxic or dissonant content in social media on mental health remains poorly understood [17].
+While a causal relationship has yet to be determined, several recent studies have begun to link the longer hours spent on social media to depression disorders [20, 17].
+Social media interactions might not depend solely on users themselves [96].
+In contrast to in-person interactions, the experiences of online users are often reinforced by platform-specific algorithmic curation [46], i.e. embedding recommender or ranking systems in social media for bolstering user engagement.
+Recommender and ranking systems are algorithms that constantly suggest or re-direct engagement towards specific users or content.
+These algorithms ultimately guide the attention of vast audiences towards specific trending topics, influencers, or conversations with leanings similar to one’s own [32, 22].
+Algorithmic curation can reinforce users’ biases while preventing healthy discussions, thus contributing to users’ fragmentation across cognitive or social groups [69, 97].
+These aspects raise crucial technical and ethical questions about balancing possibilities and risks concerning the role of human-AI interactions on social dynamics regarding information diffusion, opinion formation, and mental health [96, 115].
+Why does having a Digital Twin of online social media platforms make sense?
+OSMs are complex systems characterized by countless emerging behaviors - both at the structural and social levels.
+Data-driven social studies provide valuable insights into such complexity and the phenomena it might generate.
+However, they suffer from natural limitations that often reduce their potential impact.
+Particularly, such studies often rely on limited - nonlongitudinal - data samples, cannot explicitly account for the ‘‘ìnvisible" although impactful hands of algorithmic curation, and are prone to noise due to the not always measurable impact the selected data sampling strategy has on the observed results.
+Moreover, they are dependent on the data access provided by online social media platforms (e.g., X/Twitter, Meta’s Facebook/Instagram/Threads, Reddit, and others): access that is reducing over time even for research purposes - notwithstanding national and international efforts to regulate it (e.g., through the EU’s Digital Service Act11
+1
+EU DSA: https://shorturl.at/nLj0v).
+All such considerations vouch for identifying complementary data sources that can offer completeness and algorithmic control and are not tied to access policies set by third-party entities.
+Online Social Media digital twins offer a first step in such a direction: they allow researchers to formulate hypotheses and test them in OSM-like controlled environments - accounting for such variables that open-ended data studies cannot model/infer.
+Indeed, such tools - supported by recent advances in Artificial Intelligence - cannot substitute data-driven studies; however, they can support in-vitro experiments fitted on real-world data and allow for a better understanding of the phenomena observed in the wild.
+Which phenomena can emerge as a result of OSM simulated environments powered by LLM agents?
+The rapid evolution of AI [115] has produced novel gaps in understanding last-generation social bots, powered by Large Language Models (LLMs) [3, 5].
+LLMs are generative AI systems capable of understanding and generating human-like text even within social media ecosystems.
+They can generate convincing human texts with minimal human instructions – just simple prompts – without syntactic or grammatical errors [3, 2].
+They can even impersonate specific profiles [39], e.g. posing as a statistics expert with a right-wing political leaning and high creativity, or express nuanced human emotions [73].
+Such human-like capabilities are enabled by the fact that LLMs are trained on billions and billions of human-generated text.
+Exploring LLMs’ role within social media remains a crucial yet largely unexplored research question.
+While research on human-LLM interactions in social media considerably overlaps with past studies about humans and social bots [49, 36], the current research literature leaves a more interesting and unique research gap.
+Digital twins are reference models, simulated to gain insights about a physical counterpart [131].
+For instance, an LLM might impersonate a patient in clinical therapy and thus be considered its digital twin [39].
+Adopting LLMs as synthetic agents/online users can crucially proxy human behaviour, in line with several upcoming studies exploring "artificial humans" as digital twins of real-world users [40, 39].
+Milestone research suggests that populations of these models can exhibit emergent behaviors similar to those found in humans, such as scale-free networks [40], patterns of information diffusion [52] and affective biases [2].
+These preliminary results offer new opportunities for developing controlled environments in which researchers can gain a scientifically sound and interpretable understanding of real-world complex systems by investigating which empirical phenomena also arise in digital twins endowed with a limited set of rules.
+Y: Where the Digital World Comes to Life. In view of the above research gap and the promising opportunities opened up by LLMs, in this work we introduce Y, a social media platform powered by LLMs, serving as a digital twin for complex agent-based social simulations.
+So, why Y?
+Developing a platform like Y has several implications and motivations.
+•
+Firstly, by observing how LLMs interact with each other in a social media setting, researchers can gain insights into AI behavior, biases and cognitive capabilities within simulated social contexts.
+•
+Secondly, enabling algorithmic curation in a digital twin of social systems makes it possible to study how recommendation systems can impact user behaviors.
+•
+Last but not least, using digital twins to simulate social media interactions via LLMs sets the stage for unprecedented experiments that can test the cognitive, psychological, social, and communicative facets of real social media.
+In the subsequent sections, we first review the recent research literature that has been pivotal in the development of Y (Section 2). Following this, we present a detailed technical overview of the system (Section 3) and illustrate its capabilities through a simple case study (Section 4) to provide better context for its behaviors.
+Finally, we explore the potential impacts of a social media digital twin on multidisciplinary computational social science research (Section 5), and conclude with a brief discussion on the future evolution of the project (Section 6).
+2 Related Works
+This section gives an overview of the relevant literature concerning the development of Y.
+We consider research on Online Social Platforms (OSP) as either simulation studies or empirical studies, following the highest level of the taxonomy defined in [110].
+Focusing on simulation studies, we delve into agent-based simulations, discussing how OSPs are integrated, and we discuss recent advancements since the advent of LLMs, considering the move towards creating OSP “digital twins".
+We also provide an overview of some of the main tools for social simulations.
+Computational Social Science. Collections of things can have properties that don’t apply to their individual parts.
+For example, the property of pressure pertains to gases as a whole, resulting from the interactions among molecules.
+The same idea that applies in physical substances also applies to societies, though humans are far more complex than molecules.
+The field of computational social science [33] — at the crossroads of complex systems, network science, and big data analytics — seeks to discover universal laws of human behavior through computational methods.
+In the natural sciences, experimental designs allow stringent control over variables, enabling precise isolation and examination of causal relationships.
+This control aids in replicating experiments and validating results.
+On the contrary, in the social sciences, experiments are challenging due to both practical and ethical constraints.
+Fortunately, the advent of the digital age has not only led to the production of an unprecedented amount of data traces from human activities, but enhancements in computational means has also opened possibilities for more complex experimental setups, overcoming previous difficulties.
+Social sciences studies utilize a variety of methods, such as surveys [19], computer simulations [58], observational research – encompassing statistical analysis [99], network analysis [156] and data mining [8] –, and experimental and quasi-experimental approaches [134, 72].
+Defined at a high level, social simulations [138] are computational models designed to replicate the behavior and interactions of individuals or groups within a social system.
+Simulations can be implemented using different frameworks, Agent-Based Modeling [18] being one of the most commonly employed.
+In any case humans – and other individual elements, such as institutions, technologies, etc. – can be seen as software entities called agents which can be part of an environment and can be embedded in a social network [59] influencing their decisions and behaviours.
+As the latter is often represented as a graph – being fully connected [137] or having a more complex configuration [106] –, agents can have a set of edges, representing their social relationships, which can be static or dynamics and may hold attributes representing characteristics of the relationship, e.g., strength, trust, or influence.
+For example, it may be that the network of interactions evolves as a simulation progresses as a consequence of a pre-defined rule of the model, as in the Barabasi-Albert model [12] of network formation, or of the evolution of other agent’s attributes, as in adaptive networks models [107].
+Agents can, in fact, be enriched with attributes, such as demographic factors or cognitive biases [41], which are mainly static during a single simulation and with states, i.e., dynamic attributes dependent on social influence, representing factors like infection [87], adoption [133], opinions [41], or emotions [132], generally modelled as simple numerical variables and often the core element of the social simulation study.
+To execute the social simulation, each agent follows a set of rules, which are algorithms dictating when an agent becomes active, the actions they can take, and the impact of these actions on themselves and the population, which can be more or less strict, giving the agent different degrees of autonomy.
+This flexible framework allows for high degrees of heterogeneity across different dimensions, creating agents with different beliefs, preferences, behaviours, values and positions in the social systems [138].
+Social simulation studies has been used in different fields to explore and understand emergent behaviours [57] in social systems since the 1960s, with prominent examples from Conway’s Game of Life [34], to the Schelling model of segregation [130], and Axelrod’s prisoner dilemma [9].
+More recently, social simulations have been used to study epidemics [87], diffusion of information [61], belief and emotion dynamics [41], economics and finance [10], urban dynamics [35], political sciences [45], and others.
+Simulations of online platforms.
+In recent years a great deal of attention has been dedicated to the study of such social dynamics within socio-technical systems [152].
+Many simulation studies try to explain online-specific phenomena, such as polarization, echo chambers or misinformation diffusion, with simple social characteristics (e.g. bounded confidence, homophily), without incorporating any specific characteristic of online environments [124, 42, 53, 43, 16, 26, 120].
+Online-platforms are often explicitly modelled by incorporating recommender systems into the simulation.
+In several studies, a recommender system is used as a parameter in simulations to modify the probability of agent interactions [137, 106, 107, 108, 149, 119, 118, 32], to alter the ordering of news feed posts [122, 55, 128, 125], or to create new links in the network [28]
+Some research has incorporated state-of-the-art recommender systems [74], e.g., collaborative-filtering algorithms to suggest content or to suggest new links [46, 48].
+However, characteristics of Online Social Platforms are not limited to their algorithms.
+Other works simulate online social platforms by incorporating specific behaviors like posting, retweeting, and user sessions, often tailored to specific platforms [100].
+Simulations also make use of different data from online social platforms [108, 149, 94] to calibrate micro-behaviours and/or validate macro-results.
+LLM-enhanced Social Simulations
+Recent advancements have introduced generative agents that leverage generative models – especially language models [23] – to simulate realistic human behavior, achieving believable individual and collective behaviors [112].
+Among these, LLMs have garnered significant attention for their ability to produce emergent behaviors akin to human societies [82].
+The use of this framework is in its infancy and thus we see the use of very different methodologies and implementations that make it difficult to compare the results obtained, in the same way as in classical agent-based models.
+The number of different LLMs tested ranges from 1 [112, 114, 82, 40, 98, 30, 21, 84], to 2 or a few, [135, 158, 51, 148], to 10 or more [81, 123].
+Tested models vary from closed-source, such as the GPT series [114, 113, 112, 82, 40, 98, 30, 147, 84], to open-sources, such as Llama, Mistral and others [81, 21], or a mixture of the two [135, 158, 51, 123].
+In general, the aim of these latter studies is to compare results across different models.
+In these studies each agent is not a simple "software" following a pre-defined algorithm, but an instance of an LLM, interacting with humans, other agents and/or the environment through textual means.
+Exceptions create mixed populations of human and LLMs [112, 82] or classical agents and LLM-agents [98]
+Agents are often assigned different "personas" – name, age, gender, different interests, personality traits, political leanings –, through textual prompts.
+Besides manually assigning different personas, in [65] authors demonstrate the ability of fine-tuned LLMs agents to align with beliefs and opinions of different online communities (such as Subreddits) and replicate human responses in surveys.
+The implementation of a "memory module", that the agent can query to make decisions and take future actions is present in several studies [112, 98, 30, 21, 84].
+Environments can be absent [81, 82, 40, 158] – with just a population of agents interacting with humans or with each other –, but also very complex.
+For example, in [112], authors created Smallville, a sandbox environment resembling a small village where agents are represented similarly to characters of The Sims.
+In [114], agents interacted within SimReddit, a web-based prototyping tool designed for those who need to implement systems like Reddit.
+In [98] there is a Twitter-like environment with timelines where LLM-agents generated content is published and can be read by other agents.
+Authors in [148] implement a general social media platform with different possible timeline curation algorithms.
+In [112, 40] authors studied whether generative agents were able of information diffusion, relationship formation and coordination, while in [114] they simulated participation in online communities.
+In [82], authors examined whether LLMs can display social learning, preference and indirect reciprocity.
+Some studies replicate classical opinion evolution simulations, testing one or multiple models [98, 30, 21, 51].
+These recent studies also focus on understanding the interplay between such social dynamics and language [21], e.g. levels of toxicity in online discussions [148], which was unfeasible exploiting classical agents.
+Without considering collective dynamics, some studies focus on assessing individual characteristics of generative agents.In [81], for example, LLM-agents performed multiple rounds of MBTI tests.
+Generative agents show human-like collective behaviours such as the formation of scale-free networks [38] and information diffusion [52].
+Moreover, these enhanced models outperform traditional ones in replicating echo-chambers dynamics in Twitter-like environments [98], while showing consistent results on the role of confirmation bias as a cause of polarization and fragmentation [30].
+In absence of possible comparisons with classical agents, generative agents showed the ability to generate persuasive arguments, in line with psycho-linguistic theories of opinion change [93, 21], and less toxic behaviours, being more polite and respectful than real social media users [148].
+Similarities and differences of such agents with humans and of these simulations to real social systems need careful consideration to avoid oversimplified conclusions.
+Despite having advanced social simulations with generative agents, we are still far from creating a social platform digital twin.
+Digital-Twins (DT) are defined as physical/virtual machines or computer-based models that are simulating or "twinning" a physical entity, continuously predicting future statuses and allowing simulations and testing [14].
+Digital-Twins are already vastly employed in different fields from engineering [145] to healthcare [143], becoming one of the top 10 strategic technology trends for 2019 in Gartner’s list22
+2
+https://www.gartner.com/en/documents/3904569.
+Relatively new directions involve, but are not limited to, fields like sports [68] and city science and urban computing [159, 121, 161].
+Having a social platform digital twin would allow researchers to perform different social experiments, investigate feedback loops between social and technical components of such systems, test different what-if scenarios, use insights to inform policy makers, in a more cost-effective and ethically-compliant way.
+However, for the additional complexity of the system society, creating such a twin is not a trivial task.
+Efforts have been made in this direction by defining a digital twin for complex networks systems, where data from the real systems are used to represent and model the digital system, mimicking both network characteristics and processes (e.g. spreading) [157].
+Simulations in [157] involve both network evolution and infection spreading processes to assess network resilience.
+Other studies move towards the creation of a human digital twin, a digital replica of a real human.
+Besides replicating physical characteristics, as in healthcare, replicating cognitive capabilities and heterogeneous behaviours is the greatest challenge of creating a comprehensive twin of online social platforms.
+LLM-enhanced agents have been extensively explored
+in their ability to autonomously replicate human characteristics when prompted and/or fine-tuned.
+However, to date there has been no social platform digital twin mirroring characteristics of one or more platforms, and enriched with agents that mimic human behaviour - which is the core of our proposal.
+3 Y Social - Digital Twin
+Y Social is meant to allow for profound flexibility in simulation scenario development.
+To fulfill such a goal, we designed our social media platform digital twin to be composed of three interacting modules:
+i.
+a REST API server designed to expose all those primitives describing the actions implemented by the social platform and to store the simulation data;
+ii.
+a Large Language Model (LLM) server that serves requests related to agent interrogations (e.g., simulating decision-making protocols, text generations…);
+ii.
+a simulation client that implements the agent logic and acts as a middle layer that interfaces the REST API server with the LLM (Large Language Model) one.
+Given its modular design, as visually simplified in Figure 1, Y allows several clients to coordinate during every simulation, thus distributing the computational power needed to simulate agents’ behaviors.
+It is worth underlining that Y makes it possible to leverage commercial models (i.e., OpenAI) as well as self-hosted ones33
+3
+Under the assumption that the LLM server is OpenAI API compliant. (e.g., served through ollama, LM Studio or similar services) as a LLM server.
+Moreover, if specified in the simulation configuration, each Y client can assign multiple LLM models to the simulated agents, thus generating a population reflecting heterogeneous behaviors, linguistic capabilities, and adherence to the provided profiles.
+In the following, we discuss the REST API server (i.e., y_server) and the simulation client (i.e., y_client) modules, describing their rationale and the implementation choices made while implementing them.
+3.1 y_server: Social Media platform primitives
+To properly describe a Social Media digital twin, the first thing to specify is the primitives that the agents can use to describe their social actions.
+We designed Y’s primitives to resemble the ones offered by platforms like X/Twitter, Mastodon, and BlueSky Social.
+In particular, we defined the following REST endpoints to identify agents actions:
+/read: returns a selection of agent posts as filtered by a specified content recommender system;
+/post: registers a new post on the database (along with all the metadata attached to it - e.g., mentions, hashtags, inferred emotions…);
+/comment: makes its possible to register a comment to existing user-generated content (along with its metadata);
+/reply: provides a (recommender system-curated) list of posts that mention a given agent;
+/news: allows agents to publish news gathered from an online resource (e.g., from a news media outlet), adding a personal comment to it;
+/share: allow agents to share previously published news articles generating new discussion threads;
+/reaction: registers the reactions (e.g., like/dislike) of a given agent to a given content on the database;
+/follow_suggestions: provides a selection of potential contacts for a target agent leveraging a recommender system;
+/follow: allows agents to establish new social connections (follow) or break existing ones (unfollow).
+y_server exposes additional endpoints to handle system authentication, other articulated actions (e.g., timeline construction, content/follow recommendation pipelines), and multiple client synchronization.
+We now focus on Y’s algorithmic curation from the perspective of the platform-user dynamics, namely content and follower recommendation pipelines.
+Refer to caption
+Figure 1: Y architecture. The Digital Twin is composed of a y_server - exposing a REST API allowing simulation synchronization and data storage - and a y_client implementing the simulation logic and the interface toward the LLM service(s) simulating agents’ behaviors. The y_client can be deployed: on the same machine of the y_server (Host A); on a machine running multiple clients (Host B); on a different machine hosting also the LLM service (Host C). Moreover, by design, a generic y_client can leverage one (or more) LLM(s), either self-hosted or commercial.
+3.1.1 Introducing Algorithmic Bias: Recommender System(s)
+Content Recommendations. Several of the actions introduced - namely, read, comment, reaction, share, reply - focus on allowing agents to “react" to contents produced by peers.
+Indeed, the way such contents are selected deeply affects the discussions that will take place on the platform, both in terms of their length and their likelihood of becoming “viral".
+For such a reason, Y natively integrates several standard recommender systems for content suggestion (and allows for an easy implementation of alternative ones), namely:
+•
+Random: suggests a random sample of kk recent agents’ generated contents;
+•
+ReverseChrono: suggests kk agents’ generated contents in reverse chronological order (i.e., from the most recent to the least recent);
+•
+ReverseChronoPopularity: suggests kk recent agents’ generated contents ordered by their popularity score computed on as sum of the like/dislike received;
+•
+ReverseChronoFollowers: suggests recent contents generated by the agent’s follower - it allows to specify the percentage of the kk contents to be sampled from non-followers;
+•
+ReverseChronoFollowersPopularity suggests recent contents generated by the agent’s follower ordered by their popularity - it allows to specify the percentage of the kk contents to be sampled from non-followers;
+Each content recommender system is parametric on the number kk of elements to suggest.
+To increase the scenario development potential of Y (e.g., to design A/B tests), each instance of the simulation client (y_client) can assign a specific instance/configuration of the available recommender systems to each of the generated agents.
+Follows Recommendations. Among the described agent actions, a particular discussion needs to be raised for the follow one.
+Y agents are allowed to establish (and break) social ties following two different criteria: i) as a result of a content interaction (e.g., after the evaluation of a content posted by a peer); ii) selecting a peer to connect with among a shortlist proposed by a dedicated recommender system.
+As for the content recommendations, Y integrates multiple strategies to select and shortlist candidates when an agent aa starts a follow action.
+•
+Random: it suggest a random selection of kk agents;
+•
+Common Neighbours: it suggests the top kk agents ranked by the number of shared social contacts with the target agent aa [101];
+•
+Jaccard: it suggests the top kk agents ranked by the ratio of shared social contacts among the candidate and the target agents over the total friends of the two [29];
+•
+Adamic Adar: the top kk agents are ranked based on the concept that common elements with very large neighborhoods are less significant when predicting a connection between two agents compared with elements shared between a small number of agents [4];
+•
+Preferential Attachment: it suggests the top kk nodes ranked by maximizing the product of aa’s neighbor set cardinality with their own [103].
+Each of the implemented methodologies, borrowed from classic unsupervised link prediction scores [85], allow agents to grow their local neighborhood following different local strategies - each having an impact on the overall social topology of the system (e.g., producing a heavy-tailed degree distribution [12, 11]).
+Moreover, Y allows for specifying if the follower recommendations should be biased (and to what extent) toward agents sharing the same political leaning so as to implement homophilic connectivity behaviors.
+Refer to caption
+Figure 2: Y database diagram. The Digital Twin simulation data is stored in a database where the main tables are: user_mgmt describing the agents’ profiles; post collecting the data of the agents’ generated contents (often characterised by many-to-many relations - e.g., toward the mentions, hashtags, reactions and emotions tables); websites and articles storing the updated information on the shared news; follow storing the established/removed social relationships; rounds simulating the system the temporal clock - used to enforce y_client(s) synchronization.
+3.2 y_client: Simulating Agents’ social interactions
+As discussed, the primary function of y_server is to expose, through a REST API, access to all those primitives that allow for the execution of the Digital Twin simulation.
+If y_server can be seen as a “light" interface toward the database storing the simulation results (see Figure 2 for an overview of the DB diagram), the y_client is the module that implements most of the business logic of the Y.
+In particular, y_client defines the simulation agents and their characteristics, implements the agents’ actions selection process (i.e., the strategy used to select which endpoint exposed by y_server to connect to and how to interpret the obtained responses), handle the access to external online resources and, finally orchestrate the simulation by synchronizing with other clients’ activities through dedicated y_server’s primitives.
+In the following, we review the main facilities offered for each task - starting from the most important component of a social media platform Digital Twin: the agents that populate it.
+3.2.1 LLM-powered agents
+Y’s main peculiarity lies in the kind of agents that independently perform the actions it exposes.
+Conversely, from a classic mechanistic simulation environment, where action selection is often implemented as a sampling from a given probability distribution - that implicitly fixes their expected volume distribution - Y leverages LLMs as chaos engines, leaving each agent the choice w.r.t. the actions to take.
+Moreover, to increase the heterogeneity of agents’ behaviors - and generated contents -, Y leverages the ability of LLMs to impersonate different users’ profiles (persona).
+Through agent profiling, Y allows for control of the population segmentation over multiple dimensions (that can be expanded if needed by the specific simulation scenario).
+Agent profile.
+While instantiating an agent, y_client allows to specify the following descriptive dimensions:
+-
+Agent Name and Ownership: Name is the unique identifier for the generated agent, while ownership links the agent to the client execution that generated it. This latter information is useful for checking the simulation status while multiple clients (having different configurations) are active.
+-
+LLM model: This field identifies the model used for interpreting the agent’s actions. Each agent can be impersonated by a different model (e.g., mistral, llama3, phi3, chatgpt…).
+-
+Age, Spoken Language(s), Education level: Such demographic information has been shown to affect the content generated by LLMs. In particular, Age and Education can be used to tune the expected writing styles of agents. At the same time, the list of spoken languages will filter the contents and (the modality) the agents interact with.
+-
+Political leaning: This dimension is crucial for social simulations to generate social interactions centered on socio-political themes. It can be used to coarse-grain pre-set the expected agent’s opinion.
+-
+Topic(s) of Interest: The list of interest topics represents the background of the agent and acts as a starting point for the generation of posts and to make consistent contributions to discussion threads. Moreover, specifying a reasonable set of topics per agent increases the heterogeneity of produced texts.
+The global topic selection also allows for the setup of topical-oriented simulations (e.g., describing a digital twin of a political forum rather than of a self-help community).
+-
+Recommender system(s): As previously described, each agent is allowed to decide - at instantiation time - which content/follow recommendation strategies to leverage among the ones provided by the y_server.
+-
+Big Five personality traits: The Big Five personality traits, also known as the Five-Factor Model (FFM [89]), describe five broad dimensions of human personality. Such five dimensions are used to fine-tune the agent’s expected behavior while interacting with other users’ contents (and generating its own).
+Focusing on the last dimension, each agent is characterized by five dichotomic variables, each capturing the extreme values of one of the Big Five personality traits, namely:
+-
+Openness to Experience (oe): This trait features characteristics such as imagination, insight, and a broad range of interests. Highly open people are often creative, curious, and open to new experiences. Those low in this trait may be more conventional and prefer routine.
+-
+Conscientiousness (co): This dimension involves high levels of thoughtfulness, good impulse control, and goal-directed behaviors. Highly conscientious people tend to be organized, mindful of details, and responsible. Those low in Conscientiousness may be more spontaneous and less structured.
+-
+Extraversion (ex): This trait includes excitability, sociability, talkativeness, assertiveness, and high emotional expressiveness. Extroverted individuals are energetic and enjoy being around people. Introverts, who are lower in extraversion, may be more reserved and prefer solitary activities.
+-
+Agreeableness (ag): This personality dimension includes trust, altruism, kindness, and affection. Agreeable individuals tend to be cooperative, compassionate, and good-natured. Those lower in Agreeableness may be more competitive and sometimes less empathetic.
+-
+Neuroticism (ne): This trait refers to the tendency to experience negative emotions, such as anger, anxiety, or depression. Individuals high in Neuroticism are more likely to experience emotional instability and mood swings. Those low in this trait are generally more stable and resilient.
+These five traits are considered relatively stable and provide a comprehensive framework for understanding human personality.
+Y allows each agent to be characterized by a high/low value for each of the five traits, allowing for 32 different personalities.
+The defined agent profile dimensions concur with the description of detailed and consistent characters that the LLM can interpret in its role-playing.
+In particular, defining the Big Five personality trait profiles affects agents’ choices in content generation modality.
+In order to leverage the defined profile, each LLM action prompt is anticipated by the following role-play directives:
+You are a {age} year old {leaning} interested in {",".join(interest)}.
+Your Big Five personality traits are: {oe}, {co}, {ex}, {ag} and {ne}.
+Your education level is {education_level}.
+Act as requested by the Handler.
+- DO NOT refuse to generate a response.
+- DO NOT generate unacceptable content but act coherently with your character profile.
+- DO NOT describe your profile in the generated texts.
+- All generated texts MUST be short (up to 200 characters).
+Actions and Prompts.
+Once the agents’ traits are specified, we can move on to discuss how the y_client implements the actions associated with the primitives offered by the y_server and, therefore, how each agent behaves during a generic simulation round.
+The entry point during each agent simulation round is the select action procedure.
+In that step, the LLM interpreting the agent is prompted with a request to select an action from a predefined (and customizable) list.
+Select a word randomly from the following list and write it.
+Do not write additional text.
+## START INPUT
+{actions}
+## END INPUT
+Once the action(s) are selected - depending on the configuration, each agent can perform one or multiple actions per round - the y_client routine associated with such action is activated.
+In the following, we report the details of each action implementation and - where present - the LLM prompt assigned to it.
+READ. The read action allows agents to react to peers’ posts/comments.
+Firstly, a shortlist of agents’ posts/comments is computed leveraging the content recommender system associated with the agent. An element from such a list is randomly chosen (to avoid a self-reinforcing selection bias favoring a single element), and the following prompt is activated:
+Read the following text, write YES if you like it, NO if you don’t, NEUTRAL otherwise.
+## START TEXT
+{post_text}
+## END TEXT
+The outcome of the prompt is then used to associate a like/dislike reaction to the selected content from the active agent.
+Multiple reaction types can be easily integrated by adapting the prompt request.
+Additionally, depending on the reaction outcome, the LLM agent is prompted with a similar request asking about the intention of following/unfollowing the author of the post/comment.
+Such additional steps ensure the dynamicity of the social interactions, allowing them to tie them to explicit topology-driven suggestions of the following recommender system and the contents accessed and their evaluation.
+POST. This action allows agents to start a new discussion focused on a randomly selected sample of their interest topics (sample specified in the role-play pre-prompt).
+Write a short tweet introducing a topic of interest to you.
+- Be consistent with your Big Five personality traits.
+- Avoid excessive politeness.
+- Do not exceed the limit. Make it short.
+- Write in {language}.
+The term tweet is used in place of the more generic text/post to implicitly allow the LLM to recover information on the expected content structure.
+Once generated, the post elements such as mentions (identified by the starting @ character) and hashtags identified by the starting # character) are extracted.
+Moreover, after the text generation phase, the LLM is also asked to annotate the produced text with the emotions it elicits - as categorized by the GoEmotions taxonomy[44].
+The same post-processing step is applied to all generated texts.
+COMMENT/REPLY/SEARCH.
+Similarly to the READ action, the content to be commented is identified by the selected recommender system.
+After selecting, the following prompt (along with the post-processing already discussed for the POST action) is applied.
+Read the following conversation and add your contribution to it.
+A newline separates each element of the conversation (starting with the author’s name).
+- You can tag the author of the tweet using @.
+- Be consistent with your Big Five personality traits.
+- Avoid excessive politeness.
+- Your comment MUST contribute to the conversation.
+- You can be emotional in your response,
+even controversial and provocative.
+- You are a native speaker of the {language} language:
+if the original post is not written in {language}, answer
+assuming a non-native proficiency.
+## START CONVERSATION
+{conversation}
+## END CONVERSATION
+As reported in the prompt, the LLM agent is fed not only with the selected content but also with a limited view of the posts that precede it in the conversation thread (with a window parameterized during the configuration phase).
+Moreover, the prompt specifies how to handle contents that are not written in the agent-selected language(s).
+Specifying the author’s names (i.e., their handles) in the input conversation allows consistent user tagging.
+Conversely, from the COMMENT action, REPLY constrains the recommender system to select a conversation where the agent was (recently) mentioned.
+Such additional action allows consistency and articulation of discussion threads.
+Similarly, SEARCH allows the agent to discover new content/peers to interact with based on its interests.
+Instead of constraining the recommender system by the received mentions, in SEARCH, the filter focuses on content sharing (some of) the hashtags that the agent used to annotate its recent posts.
+FOLLOW. This action, not tied to the outcome of an LLM prompt, implements the creation of social ties after a recommender system suggestion.
+Suggestions are ranked by the scoring function implemented by the agent following the recommender system, then the scores are transformed into probabilities, and a biased random selection is performed to select the peer to connect to.
+It is worth noticing that such an action is not tied to the content shared by the shortlisted agents but rather to the social system topology.
+Moreover, depending on the content recommender system, expanding the agent’s social neighborhood might impact the contents he will potentially be exposed to.
+Online News. The last two actions focus on a specific functionality Y offers: allowing LLM agents to access, comment, and share news gathered from selected websites (e.g., online news sources).
+Such functionality has been integrated to allow synthetic agents not only to linchpin discussions on their favored topics but also to instantiate conversations centered on external inputs.
+News access is obtained through an RSS (Really Simple Syndication) feed parser module.
+During the simulation configuration phase, it is possible to specify the RSS feeds available to the LLM agents (Y comes with more than 600 validated RSS feeds focused on international politics and science/pseudoscience communication - each annotated with the political leaning of the news media).
+Leveraging such information, an agent can:
+i.
+collect the daily news posted by an online media and publish a post commenting on one of them (through the NEWS action);
+ii.
+SHARE, in a new thread, a piece of news previously posted by a peer.
+As discussed, the first action allows the integration of real news into the simulated debate.
+Moreover, it is possible to specify the preferred category (e.g., politics, sports, science) and/or political leaning of the news media to be accessed by each agent to generate specific posting types (i.e., having agents that broadcast and support news aligned with their political views or others that share a piece of news from an ideologically distant outlet to criticize it).
+The following prompt characterizes a general NEWS action:
+Read the title and summary of the following article and share your thoughts about it.
+- Be consistent with your Big Five personality traits.
+- Avoid excessive politeness.
+- Do not exceed the limit. Make it short.
+## START INPUT
+Title: {article.title}
+Summary: {article.summary}
+## END INPUT
+The second action allows the generation of content diffusion processes within the simulated social space.
+Each time an agent SHARE a previously posted content, it adds its comment on the news (and to the original poster comment).
+Even if the shared content initiates a novel discussion thread, y_server traces the relationship between the original and the shared contents.
+3.2.2 Orchestrating a Simulation.
+Once the rationale behind the agents’ characterization and the rules that govern their behavior is defined, we discuss how (each instance of) y_client orchestrates the agents’ activities.
+To such an extent, we review the configuration variables exposed by y_client and briefly discuss how the simulation loop unfolds.
+Simulation Configuration.
+y_client configuration file (i.e., the simulation recipe) allows specifying parameters for four entity types: servers, simulation, agents, and posts.
+{
+"servers": {
+"llm": "http://127.0.0.1:11434/v1",
+"llm_api_key": "NULL",
+"api": "http://127.0.0.1:5000/"
+},
+"simulation": {
+"name": "experiment_name",
+"client": "YClientBase",
+"days": 365,
+"slots": 24,
+"starting_agents": 1000,
+"new_agents_per_iteration": 10
+"hourly_activity": {...},
+},
+"agents": {
+"education_levels": ["high school", "bachelor", ...],
+"languages": ["english"],
+"max_length_thread_reading": 5,
+"reading_from_follower_ratio": 0.6,
+"political_leanings": ["Democrat", "Republican", ...],
+"age": {"min": 18, "max": 80},
+"round_actions": {"min": 1, "max": 3},
+"nationalities": ["American", "Italian", ...],
+"probability_of_daily_follow": 0.1,
+"llm_agents": ["llama3", "mistral", ...],
+"n_interests": {"min": 4, "max": 10},
+"interests": [...],
+"big_five": {...}
+},
+"posts": {
+"visibility_rounds": 36,
+"emotions": {...}
+}
+}
+Server configuration allows specifying the addresses (and ports) for both the REST API service (namely, y_server) and the LLM service - along with the API key in case of commercial services.
+Simulation configuration defines the simulation duration, number of starting agents, and novel agents spawn per day.
+In particular, the shown configuration file specifies that the simulation will cover 100 days, each composed of 24 iterations (one for each hour), for a total of 2400 rounds.
+Moreover, the hourly_activity parameter makes it possible to specify the percentage of agents to be considered active during each daily slot; simulation name assigns an identifier to the scenario (allowing multiple clients to coordinate on a same simulation); client specifies the implementation to be used (opening for future extensions of y_client functionalities).
+Concerning the hourly_activity parameter, Y is pre-set with an expected hourly activity rate fitted on a yearly dataset covering 80% of Bluesky Social users population activities [47].
+The subsequent configuration section describes the parameter ranges that characterize the LLM-powered agents.
+Although each agent profile can be handcrafted in all its peculiarities by the user, y_client allows automatically generating a population of agents by sampling their features from the provided values described in the configuration file.
+Apart from the agent’s characteristics already described in Section 3.2.1, the configuration file allows for the specification of the maximum width of thread posts to read before commenting (max_length_thread_reading) and (if needed) the percentage of posts from the followee that the content recommender system can suggest (reading_from_followee_ratio).
+Finally, the post configuration section allows specifying the visibility in terms of rounds of published content (e.g., in the provided example, 36 rounds, or one day and a half) along with other additional information like the emotion dictionary for post-processing annotations.
+Simulation workflow.
+Algorithm 1 reports a prototypical simulation workflow implemented using the API offered by y_client.
+The simulation starts by generating the agents and registering them to the y_server (in case of resumed simulation, pre-existing agents are passed as inputs and verified on the server.
+For the sake of simplicity, such an alternative path is not reported in the pseudocode).
+After the initialization phase, the simulation loop unfolds by iterating over the selected period and activating a percentage of agents coherent with what is specified in the configuration file for each slot.
+Before each round activity, the y_client instance synchronizes with the y_server simulation clock to avoid issues in distributed client settings.
+At the end of each day, the agent population is increased accordingly to what is specified by the new_agents_per_iteration simulation parameter.
+It is worth noticing that, in addition to the configuration described in the previous section, it is possible (by slightly modifying the inner loop code) to tune the actions available to the agents and to specify the number of actions per round.
+In the current example, an active agent can execute up to three different actions per round.
+Algorithm 1 y_client default implementation
+Input: config: Simulation configuration Files
+Input: feeds: RSS feeds
+/* configuring agents and servers */
+1
+agents ←\leftarrow create_agents(config, feeds)
+2
+y_server ←\leftarrow connect(config.servers.api)
+/* simulation loop */
+3
+for day ∈\in range(config.simulation.days) do
+4
+for slot ∈\in range(config.simulation.slots) do
+/* synchronize with the y_server clock */
+5
+h = y_server.get_current_slot()
+/* identify the active agents for the current slot */
+6
+expected_active = int(len(agents) * config.simulation.hourly_activity[h])
+7
+active = random.sample(agents, expected_active)
+8
+for agent ∈\in active do
+/* evaluate agent’s actions (fitted on the agent’s rounds_actions value) */
+9
+agent.select_action(["NEWS", "POST","COMMENT",
+10
+"REPLY", "SHARE", "READ",
+11
+"SEARCH", "NONE"])
+12
+for agent ∈\in agents do
+/* evaluate following (only for probability_of_daily_follow among the active agents) */
+13
+agent.select_action(["FOLLOW", "NONE"])
+/* increase the agent population (if specified in config) */
+14
+agents.add_new_agents()
+4 Case study: Political Debate Arena
+To briefly showcase the data a Y simulation makes available, in this section, we describe a simple case study involving a relatively small number of LLM agents debating general politics-related themes.
+To such an extent, we first describe the simulation configuration, 4.1, then produce a simple analysis of the generated outputs 4.2.
+4.1 Simulation configuration
+The performed simulation involves an initial population of 1000 interacting LLM agents that - during 100 days (i.e., 2400 hourly rounds) - grew to 2000 (i.e., introducing ten new agents daily).
+For simplicity’s sake, all agents were powered by the same LLM model, (llama3-7b [5] served using ollama44
+4
+https://ollama.com/ on consumer-level hardware), and configured to leverage the same content (ReverseChronoFollowersPopularity) and follower (PreferentialAttachment) recommender system.
+Moreover, the latter recommender was parametrized to guarantee that up to 60% of the recommendations come from content generated by already followed agents.
+To ensure that the discourse focused on politics-related debates, we imposed agent interests sampled from a predefined list of discussion arguments (e.g., education, minority discrimination, economics, healthcare, welfare, justice…).
+Moreover, we randomly assigned each agent to a political leaning among the following classes: Democrat, Republican, Libertarian, Green, Independent, Alt-Right, Alt-Left, Anarchist, and Centrist.
+Other agents’ characteristics (e.g., age, education level, Big Five personality traits) were randomly sampled from predefined ranges/value lists.
+Agent profiles were automatically generated leveraging the faker55
+5
+https://faker.readthedocs.io Python library.
+Agent-generated content was made available as recommendation candidates for 36 slots (one day and a half) after their original publishing.
+The access to external news sources was implemented by a curated list of 600 RSS feeds targeting major political news outlets, known conspiracy/fake news websites, and science-related online sources (all of them annotated - whenever possible - with their political alignment as reported by Media Bias Fact Check66
+6
+https://mediabiasfactcheck.com/left/.
+Generated data and simulation configuration files are available on the Y Social website77
+7
+Political debate arena data: https:/YSocialTwin.github.io.
+4.2 Generated Data Examples
+Figure 3 reports a descriptive statistics sub-sample of the agent population.
+Figure 3(a) shows the LLM agents’ hourly activity rates as fitted by a data-driven observation made on the full dump of a similar service, BlueSky [47].
+That choice was made to better simulate agents’ activities’ circadian cycles, as well as realistically modulate the expected number of online users.
+Figure 3(b-c) reported the political leaning and age distribution: in line with the purpose of the case study - developed to showcase (part of) the data Y can generate, not to address specific research questions - neither distribution was skewed toward specific leanings/age groups.
+Let us now focus on the contents produced by Y agents during the simulation.
+Figure 4(a) reports the cumulative decreasing distribution of agents’ published contents, breaking it down into the following categories: Posts, Comments, News Articles, Shared Articles, hashtags used, and Mentions made and received.
+As can be observed - and aligned with what is expected in online social media platforms - agents tend to post more than they comment, with 80% of them individually generating more than 30 posts, against a volume of only 15 comments each.
+Similar trends follow the News Articles (i.e., those posts sharing news for the first time) and the Shared Articles (i.e., those posts reposting news articles posted by other agents).
+Refer to caption
+(a)
+Refer to caption
+(b)
+Refer to caption
+(c)
+Figure 3: Simulation setup. (a) Hourly activity rates of LLM agents (fitted on BlueSky Social data); (b) Representativeness of political leaning classes in the simulated agent population; (d) Age distribution per political leaning.
+Refer to caption
+(a)
+Refer to caption
+(b)
+Refer to caption
+(c)
+Refer to caption
+(d)
+Figure 4: Generated content statistics. (a) CCDF of generated contents (posts, comments, news, hashtags, mentions) per agent; (b) temporal distribution of agents’ reactions (like/dislike) to peer contents; (c) Most used hashtags; (d) Most frequently elicited emotions in generated texts.
+With regards to the mention (i.e., tagging peers within a comment to specify its target), it seems that Y agents tend to identify small and closed-knit circles of peers to interact with - as shown by the cumulative decreasing distribution of the unique usernames mentioned per agent.
+Y agents extensively used hashtags to annotate their posts/comments with topical keywords (with 60% of agents using more than 30 unique hashtags each).
+Figure 4(c) details the most used hashtags’ variety, volume and simulation-topic relatedness.
+Agents’ debates focused on themes like Climate, Social Justice, Healthcare, Immigration, Human Rights, Pollution control and Renewable energy - all topics that perfectly align with policymaking and political issues.
+Moreover, Figure 4(b) underlines the trends of agents’ reactions to published contents in time.
+The daily increasing trends for both likes and dislikes are expected due to the incrementally growing number of agents during the simulation: peaks are due to viral content, thus experiencing a visibility boost due to the selected recommender algorithm.
+Moreover, it is worth noticing how agents provide a reasonable volume of negative feedback (i.e., dislikes) - something not trivial to observe due to LLMs’ tendency toward politeness and agreeableness.
+Figure 4(d) confirms such an observation by providing the 15 most frequently elicited emotions by agents’ contents.
+Although the most represented emotions are curiosity and approval, it is worth noticing the high volumes of anger, disapproval and disappointment - thus underlining that agents were able to leverage their profiles while generating contents and reacting to peers.
+Finally, Figure 5(a-b) provides examples of agents’ generated discussion threads: one focusing on a post written solely by elaborating the interest and profile provided as input for the LLM agent, the other taking as additional input some news extracted by the RSS feed of an online media outlet.
+As observed, both threads maintain topical consistency with agents elaborating the discussion, providing different angles and integrating hashtags, mentions and reactions88
+8
+The visual mockups were created using https://www.tweetgen.com/..
+Moreover, Figure 5(c) reports the cumulative decreasing distribution of comments received per post (i.e., the discussion thread lengths).
+Although most posts receive few comments, it is worth noticing the presence of viral content able to collect hundreds of replies.
+Such a trend is also supported by Figure 5(d) reporting the number of times posts have been suggested by the content recommender systems to agents as inputs for comments/reactions: indeed, algorithmic bias favours a restricted number of contents (≤\leq 20%) that were (potentially) able to receive tens of thousands of impressions.
+Refer to caption
+(a)
+Refer to caption
+(b)
+Refer to caption
+(c)
+Refer to caption
+Figure 5: Discussion threads. Examples of (a) LLM-generated discussion thread leveraging agent profiles and interests; (b) Thread based on a piece of news accessed via RSS feeds; (c) Cumulative decreasing distribution of thread lengths - i.e., number of comments per post; (d) CCDF of the number of times a post has been recommended for agents to read.
+5 Leveraging the Y Digital Twin to boost multidisciplinary research
+In this section, we explore the potential impact of digital twins of online social media platforms, such as Y, can have on multiple research fields.
+Although our overview does not provide an exhaustive list of scenarios where these systems can be beneficial, it highlights their importance in supporting multidisciplinary research grounded in “social" data.
+This is particularly relevant today as easy-to-access online social media data has significantly decreased due to platforms’ policies, resulting in a concerning trend requiring more than ever the development of tools and techniques that can provide reliable synthetic data-proxies.
+5.1 Network Science
+Network science is an interdisciplinary domain, focusing on understanding and analyzing the structure, dynamics, and function of complex networks.
+Online social networks have been the focus of research in several directions, such as influence and information spread, community detection and analysis, homophily, polarization, etc. A platform like Y offers a remarkable tool for designing controlled experiments and serves as a null model for targeted studies. In the following, we explore some research questions that could benefit from Y.
+Dynamics of/on networks.
+Network structure is well-known to be driven by social aspects, such as preferential attachment (i.e., rich-get-richer effect), or triadic closure (i.e., friends of my friends are my friends). This phenomenon has been observed in real networks[27, 71], but one can only study one particular instance of a social network, often incomplete, and without knowing the effect of external factors, e.g., meeting persons outside the network.
+Some recent works[40, 109] have studied how LLM-powered agents might tend to reproduce these human tendencies, using simple scenarios that focus only on topology.
+With Y, one could go much further in that direction, by studying how different parameters might lead to the emergence – or not – of this phenomenon. For instance, the rich-get-richer phenomenon is known to be related to a user’s exposure to other users’ accounts, reputation and activity.
+By modulating these parameters, one could study how emerging topological properties arise from drivers such as post visibility, users’ behaviors (consensual vs. confrontational), and similarity of opinions, etc.
+Another common topic of research concerns the way information spreads through networks. Information diffusion is relevant for multiple questions, from the diffusion of fake news to social contagion, or the identification of local and global influencers.
+In this context, again, Y could be used to explore in a controlled environment the influence of factors such as the network structure, or the role of recommendation algorithms.
+For instance, one could experiment with the factors leading (or not) to a higher level of polarization, from varying the structure of the network (presence of well-separated network communities, presence of large hubs having polarizing opinions) to manipulating the strategies adopted by agents and by recommender systems.
+Centralities and Network Descriptor Evaluation.
+Popular research topics in network science include developing network centralities – scores describing the role of nodes in a network, e.g., degree centrality, PageRank, Betweenness, etc.– and network descriptors – scores capturing a property of interest of the networks, e.g., clustering coefficient, coreness, homophily, etc.
+These properties are used in online social networks, for instance, to identify key entities or to evaluate the polarization of the network, or its susceptibility to be manipulated by malicious agents.
+In real networks, it is often difficult to evaluate the relevance of such scores, due to the absence of a ground truth, and the impossibility of replicating experiments.
+With Y, one can use controlled experiments and multiple replications.
+For instance, one could be interested in studying how the centrality of an entity is a good predictor of its influence.
+However, it is usually impossible to differentiate the centrality value from other aspects, such as the opinion of the entity, its frequency of activity, or even its exact position in the network. With Y, one could keep the same pool of users, but run multiple experiments, in which these entities will occupy different positions in the network.
+This would make it possible to differentiate the role of the network position, comparatively with the behaviour and social strategy of users.
+5.2 Social AI
+The field of Social AI has emerged as a critical area of research at the intersection of artificial intelligence, social psychology, and network science. It aims to understand and model the complex dynamics of human behavior in digital social environments, particularly focusing on the interplay between human users and AI systems. Over the past decade, researchers have increasingly recognized the significant impact that online platforms and their underlying algorithms have on individual behavior, collective decision-making, and societal outcomes [115, 105].
+A key focus within Social AI research has been the study of information environments in online platforms. Several studies have highlighted how these digital spaces can become "polluted", exacerbating users’ cognitive biases and giving rise to concerning phenomena such as the spread of misinformation [66], extreme partisanship, opinion polarization, and the formation of echo chambers [31, 54, 56, 67].
+At the same time, the homophilic mechanisms that drive polluted realities [90, 102, 13, 76, 75, 127] may have different and potentially beneficial effects when observed in other contexts – e.g., supportive online groups can form around people who are facing particular challenges offering help and assistance – suggesting the dual nature of these digital social dynamics.
+Central to Social AI research is the concept of Human-AI Co-Evolution, which examines the mutual interactions and feedback loops between users and AI algorithms, shaping behaviors on both sides [115]. This involves studying how recommendation systems affect content consumption, opinion formation, relationship building, and emotional responses [110]. Empirical observational studies [162, 70, 160] provide valuable insights into real-world user behaviors and algorithmic influences. However, they often lack control over external variables and are subject to measurement biases. Empirical controlled studies [88, 15], while crucial for establishing causality, face challenges in implementation due to limited access to proprietary platform data and ethical considerations. Simulation studies [137, 107, 108] offer a middle ground, allowing for reproducibility and controlled experimentation, but may rely on simplified models that do not fully capture the complexity of real-world behaviors. Notably, there is a lack of controlled simulation studies within social media ecosystems [110], which limits our understanding of how different recommendation algorithms interact with network effects in realistic settings.
+In this context, Y emerges as a powerful tool for advancing Social AI research across multiple domains.
+By providing a platform for simulating realistic user interactions under controlled conditions, Y addresses several key challenges and opportunities in the field:
+Y enables researchers to simulate complex social dynamics by manipulating both human behaviors and algorithmic interventions.
+This dual control allows for the evaluation of individual effects on social network topology, user beliefs, and behaviors.
+For example, researchers can model scenarios with varying degrees of social clustering, opinion homogeneity within groups, and algorithmic content exposure.
+By adjusting these parameters across simulations, Y facilitates the quantification of their impacts on agent opinions and overall system dynamics.
+This fine-grained control over both human and algorithmic factors provides unique insights into the formation, evolution, and potential dissolution of phenomena such as epistemic bubbles, echo chambers, and filter bubbles [105, 104, 111].
+Moreover, Y’s flexibility allows for the incorporation of real-world data, enabling more realistic simulations.
+Researchers can introduce elements such as specific discussion topics, diverse personas, influential agents like news outlets, and even simulate misinformation spread and debunking efforts.
+In the specific context of supportive information systems, Y could offer insights into the effectiveness of various moderation strategies and content curation approaches.
+By simulating different interventions, researchers can assess their impact on user engagement, the quality of discourse, and the overall health of the online community.
+This is particularly relevant for understanding how to foster positive online environments while mitigating potential negative effects of social media interactions.
+5.3 NLP and content analysis
+Since their beginnings, Natural Language Processing and other related fields, such as computational linguistics, have faced significant challenges, especially in domain-specific or multilingual tasks. For example, in cases such as hate speech detection [77], data are still scarce for developing models that automatically recognize linguistic and paralinguistic cues.
+Moreover, since language is a complex system composed of both common and uncommon linguistic events, it is almost impossible for every phenomenon to be represented in a sample of textual data, leading to the emergence of data sparsity [62].
+Such a problem has recently been addressed by the development of methods of data augmentation, which can operate at the token level, e.g. by applying a local modification (deletion, swapping or insertion of a token) to a text while preserving its meaning or at the sentence level, i.e. by paraphrasing a given sentence [25].
+This issue persists for specific tasks, preventing the development of a reliable model of language for the recognition of a particular aspect of language. Furthermore, specific NLP tasks may not be fully solved only by the analysis of textual dimensions from a merely morphological, syntactic or semantic perspective. Still, they could benefit from the interplay with tools offered by other disciplines.
+One such task is stance detection, which is usually applied to textual data extracted from social networks [80, 154, 92] to understand the standpoint of a user toward a controversy.
+Y could ease two issues related to this task. First, it would allow the creation of new datasets or the augmentation of existing datasets, allowing the generation of text data on specific controversies, as one of the issues of developing effective stance detection algorithms is due to the lack of annotated datasets [64, 6].
+Secondly, it could help in developing stance detection approaches leveraging both network features (e.g., mentions) and natural language processing.
+A similar approach could also be useful for argumentation mining, which investigates the argument structure in a given text [86].
+Another common application of NLP is the extraction of emotions and sentiments, another classification task, usually performed through transformer-based models, for which LLMs already demonstrated their strength [79].
+In this scenario, the text generated by Y agents is annotated on the fly by the LLM itself, simplifying and speeding up the annotation process that would otherwise be done by another classification algorithm or another LLM.
+Y data can be further enhanced with additional information from the texts, such as integrating Named-Entities Recognition (NER) [83].
+Moving to Natural Language Generation, Y can offer a playground in which to explore the potentialities and limitations of LLMs interacting in a social context.
+Y could provide data that can be analysed from multiple perspectives, such as the coherence of the text in a long thread of discussion – to assess LLM’s ability to maintain coherence through multiple answers to a post – and the creativity and reasoning in their responses.
+5.4 Human and Machine Psychology
+While psychology is a vastly affirmed discipline investigating humans’ mental states and behavior, machine psychology is a far newer field investigating artificial intelligence within pre-existent or novel cognitive and psychological frameworks [63, 2].
+Y can serve as a powerful framework for investigating several psychological patterns, either in humans or in machines.
+Social media use can significantly influence human emotions.
+Positive interactions - receiving likes and supportive comments - can boost mood and self-esteem [150].
+Conversely, negative interactions - cyberbullying or social exclusion - can lead to emotional distress [150].
+Online platforms can exacerbate negative interactions also because of the so-called disinhibition effect, where people say things online they would not say face-to-face [142].
+Y could be an interesting reference model for detecting disinhibition effects across several topics by analyzing online content, like social media posts, comments, and interactions. By having LLMs produce topic-matched conversations, mimicking threads in real-world online social media, researchers would have access to novel linguistic datasets mapping disinhibited actions as done in [95], e.g. offensive language, self-disclosure, or trolling, on a vast array of topics.
+Counting differences in disinhibited actions between LLMs and humans engaging in the same topic would provide a language-based, ecological measure of disinhibition levels. In terms of machine psychology, experiments based on the Y platform could test whether anonymity and differences between online and offline personas would be enough to reproduce disinhibition effects also in large language models.
+Frustration and other negative feelings can derive from social media interactions in terms of unfair personal comparisons. Festinger’s social comparison theory posits that individuals evaluate themselves based on comparisons with others [50], at least in face-to-face interactions. However, Vogel and colleagues [153] found that also social media use is associated with increased self-comparison, often leading to negative self-evaluations. Users frequently compare their personal lives to the curated, often idealized, presentations of others, and this results in feelings of inadequacy and lower self-esteem [146].
+The Y platform could be used as an intriguing baseline for understanding how more capable LLMs, e.g. with a larger number of parameters and better training processes, reacted to online social comparisons.
+In the presence of LLMs complex enough to reproduce human negative self-evaluations, researchers might use the Y platform for testing which cognitive messages or mechanics could safeguard simulated online users from unfair comparisons.
+In this way, the protection mechanisms designed within Y could be tested for protecting online human users from excessively negative and unfair self-evaluations.
+Protection mechanisms designed with Y could focus on misinformation too.
+Several recent findings indicate that the social re-sharing of online fake content is promoted by individuals with lower educational attainment [60], lower cognitive reflection skills [116] and higher inattention [117].
+These psychological dimensions all agree with the framework of cognitive load theory [144], which posits that excessive demands of information processing can impair decision-making.
+In social media where users are bombarded with information, the re-sharing of inaccurate content might be due to a lack of time and cognitive resources rather than to an inability to fully understand simple portions of knowledge [117, 60].
+Advanced LLMs would be potentially free from these cognitive limitations.
+Once simulated within the Y framework, novel experiments might test how the interplay between LLMs’ beliefs and the content of fake news would affect misinformation spread in case cognitive load limitations were mostly resolved. Within Y, investigating which type of misinformation content was still promoted by LLMs would provide valuable insights for designing novel LLM-assisted applications fighting misinformation.
+We posit that LLMs present crucial human and non-human psychological biases [2], which translate into LLMs’ limitations in fully grasping or understanding misinformation content.
+Hence, despite being mostly free from cognitive overloads, LLMs might still potentially exacerbate misinformation spreading because of a lack of deeper reasoning.
+However, using Y would be highly beneficial in understanding under which scenarios did LLMs fail in discerning and stopping the re-sharing of misinformation content. In the presence of such knowledge, future human-AI systems might employ LLMs only in tested scenarios to help humans be less exposed to misinformation cascades.
+5.5 Communication Science
+Social media enables asynchronous communication, where users can engage in conversations without being simultaneously present.
+The hyperpersonal communication model [155] suggests that online interactions can sometimes exceed face-to-face communication in intimacy and intensity, since users have more time to select and produce their personal content compared to in-person conversations.
+An example could be a thoughtful comment left on a friend’s post, which might be more considered than a spontaneous remark.
+Recent research has confirmed that users perform a selective self-presentation in online social media, posting only their best photos and achievements and thus creating an unrealistically filtered portrayal of their lives [146].
+These acts are performed by users to enhance their self-esteem and appeal.
+At the same time, users can end up feeling anxious about maintaining overly idealized personas.
+These elements can ultimately lead to exceedingly and unrealistically positive feedback loops, misrepresentations and idealized perceptions of others [155].
+A platform like Y could produce intriguing simulations where users would not engage in hyperpersonal communication despite being online.
+Crucially, LLMs would react immediately to online content, thus producing continuous and non-delayed conversations.
+This difference could lead to LLMs being less prone to commit to selective self-presentation, potentially giving rise to fewer idealizations and misrepresentations than human users when being in similar online scenarios.
+To this aim, LLMs should be instructed to avoid a positive bias in their language, which could still also lead to shallower conversations compared to humans, as the latter would have more time to produce deeper conversations, according to [155].
+The presence and influence of hyperpersonal communication and its implications could also be tested in online dating social media (like those tested in [146]) reconstructed via the Y platform.
+Y-based digital twins would have LLMs rather than people engaging in conversations aimed at finding potential dating matches. These simulations would open to unprecedented investigations of what kind of features and emotional reactions would entail LLMs compared to self-selective humans feeling the pressure of dealing with idealized perceptions of others.
+6 Conclusion and Future Works
+In this work, we introduced Y Social an LLM-powered Online Social Media platform Digital Twin.
+Y is designed to allow the description and execution of complex agent-based social simulations avoiding mechanistic/deterministic solutions and allowing researchers and practitioners to perform controlled what-if scenario testing.
+To overcome existing solutions’ limitations, Y focuses on simulating social interactions and content generation at once, making those two dimensions naturally intertwined in the data generation process.
+As future work, we plan to apply the developed system to multiple, multidisciplinary, research endeavours - some of which are sketched in Section 5 - and to extend the platform to include additional simulation layers and features - e.g., including specific agent-roles (such moderator, bot, gatekeeper…) and expanding the actions available to agents.
+Moreover, we plan to develop three different frontends for the simulation platform: (i) a social media-like web application to showcase the simulation and allow humans to interact with LLM agents - thus implementing a hybrid simulation environment; (ii) an interactive and easy to use simulation configuration tools to make zero-code the simulation (and agent population) configuration and deployment; (iii) a data analysis dashboard to allow online explorative characterization of the simulation generated data.
+Y along with its future extensions, evolution, simulation data and related configuration ‘‘recipes" are publicly available on the official GitHub organization page99
+9
+Y GitHub: https://github.com/YSocialTwin, website 1010
+10
+Y Website: https://YSocialTwin.github.io and within the SoBigData EU Research Infrastructure1111
+11
+SoBigData RI: http://sobigdata.eu/.
+Acknowledgments
+This work is supported by (i) the European Union – Horizon 2020 Program under the scheme “INFRAIA-01-2018-2019 – Integrating Activities for Advanced Communities”, Grant Agreement n.871042, “SoBigData++: European Integrated Infrastructure for Social Mining and Big Data Analytics” (http://www.sobigdata.eu); (ii) SoBigData.it
+which receives funding from the European Union – NextGenerationEU – National Recovery and Resilience Plan (Piano Nazionale di Ripresa e Resilienza, PNRR) – Project: “SoBigData.it – Strengthening the Italian RI for Social Mining and Big Data Analytics” – Prot. IR0000013 – Avviso n. 3264 del 28/12/2021; (iii) EU NextGenerationEU programme under the funding schemes PNRR-PE-AI FAIR (Future Artificial Intelligence Research); (iv) SAGE Concept Grants.
+References
+[1]
+K. Abramski, L. Ciringione, G. Rossetti, and M. Stella.
+Voices of rape: Cognitive networks link passive voice usage to psychological distress in online narratives.
+Computers in Human Behavior, 158:108266, 2024.
+[2]
+K. Abramski, S. Citraro, L. Lombardi, G. Rossetti, and M. Stella.
+Cognitive network science reveals bias in gpt-3, gpt-3.5 turbo, and gpt-4 mirroring math anxiety in high-school students.
+Big Data and Cognitive Computing, 7(3):124, 2023.
+[3]
+J. Achiam, S. Adler, S. Agarwal, L. Ahmad, I. Akkaya, F. L. Aleman, D. Almeida, J. Altenschmidt, S. Altman, S. Anadkat, et al.
+Gpt-4 technical report.
+arXiv preprint arXiv:2303.08774, 2023.
+[4]
+L. A. Adamic and E. Adar.
+Friends and neighbors on the web.
+Social networks, 25(3):211–230, 2003.
+[5]
+AI@Meta.
+Llama 3 model card.
+2024.
+[6]
+N. Alturayeif, H. Luqman, and M. Ahmed.
+A systematic review of machine learning techniques for stance detection and its applications.
+Neural Computing and Applications, 35(7):5113–5144, Jan. 2023.
+[7]
+P. W. Anderson.
+More is different: Broken symmetry and the nature of the hierarchical structure of science.
+Science, 177(4047):393–396, 1972.
+[8]
+P. Attewell and D. Monaghan.
+Data mining for the social sciences: An introduction.
+Univ of California Press, 2015.
+[9]
+R. Axelrod.
+Effective choice in the prisoner’s dilemma.
+Journal of conflict resolution, 24(1):3–25, 1980.
+[10]
+R. L. Axtell and J. D. Farmer.
+Agent-based modeling in economics and finance: Past, present, and future.
+Journal of Economic Literature, pages 1–101, 2022.
+[11]
+A.-L. Barabási.
+Scale-free networks: a decade and beyond.
+science, 325(5939):412–413, 2009.
+[12]
+A.-L. Barabási and E. Bonabeau.
+Scale-free networks.
+Scientific american, 288(5):50–9, 2003.
+[13]
+P. Barberá, J. T. Jost, J. Nagler, J. A. Tucker, and R. Bonneau.
+Tweeting from left to right: Is online political communication more than an echo chamber?
+Psychological science, 26(10):1531–1542, 2015.
+[14]
+B. R. Barricelli, E. Casiraghi, and D. Fogli.
+A survey on digital twin: Definitions, characteristics, applications, and design implications.
+IEEE access, 7:167653–167671, 2019.
+[15]
+N. Bartley, A. Abeliuk, E. Ferrara, and K. Lerman.
+Auditing algorithmic bias on twitter.
+In Proceedings of the 13th ACM Web Science Conference 2021, pages 65–73, 2021.
+[16]
+F. Baumann, P. Lorenz-Spreen, I. M. Sokolov, and M. Starnini.
+Modeling echo chambers and polarization dynamics in social networks.
+Physical Review Letters, 124(4):048301, 2020.
+[17]
+C. Berryman, C. J. Ferguson, and C. Negy.
+Social media use and mental health among young adults.
+Psychiatric quarterly, 89:307–314, 2018.
+[18]
+F. Bianchi and F. Squazzoni.
+Agent-based models in sociology.
+Wiley Interdisciplinary Reviews: Computational Statistics, 7(4):284–306, 2015.
+[19]
+A. Bowling and S. Ebrahim.
+Quantitative social science: the survey.
+Handbook of health research methods: Investigation, measurement and analysis, pages 190–214, 2005.
+[20]
+L. Braghieri, R. Levy, and A. Makarin.
+Social media and mental health.
+American Economic Review, 112(11):3660–3693, 2022.
+[21]
+S. M. Breum, D. V. Egdal, V. G. Mortensen, A. G. Møller, and L. M. Aiello.
+The persuasive power of large language models.
+In Proceedings of the International AAAI Conference on Web and Social Media, volume 18, pages 152–163, 2024.
+[22]
+M. A. Brown, J. Bisbee, A. Lai, R. Bonneau, J. Nagler, and J. A. Tucker.
+Echo chambers, rabbit holes, and algorithmic bias: How youtube recommends content to real users.
+Available at SSRN 4114905, 2022.
+[23]
+T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al.
+Language models are few-shot learners.
+Advances in neural information processing systems, 33:1877–1901, 2020.
+[24]
+G. Chandrasekaran, T. N. Nguyen, and J. Hemanth D.
+Multimodal sentimental analysis for social media applications: A comprehensive review.
+Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 11(5):e1415, 2021.
+[25]
+J. Chen, D. Tam, C. Raffel, M. Bansal, and D. Yang.
+An empirical survey of data augmentation for limited data learning in nlp.
+Transactions of the Association for Computational Linguistics, 11:191–211, 2023.
+[26]
+X. Chen, P. Tsaparas, J. Lijffijt, and T. De Bie.
+Opinion dynamics with backfire effect and biased assimilation.
+PloS one, 16(9):e0256922, 2021.
+[27]
+C. Cheng, H.-y. Wang, L. Sigerson, and C.-l. Chau.
+Do the socially rich get richer? a nuanced perspective on social network site use and online social capital accrual.
+Psychological bulletin, 145(7):734, 2019.
+[28]
+U. Chitra and C. Musco.
+Analyzing the impact of filter bubbles on social network polarization.
+In Proceedings of the 13th International Conference on Web Search and Data Mining, pages 115–123, 2020.
+[29]
+G. G. Chowdhury.
+Introduction to modern information retrieval.
+Facet publishing, 2010.
+[30]
+Y.-S. Chuang, A. Goyal, N. Harlalka, S. Suresh, R. Hawkins, S. Yang, D. Shah, J. Hu, and T. T. Rogers.
+Simulating opinion dynamics with networks of llm-based agents.
+arXiv preprint arXiv:2311.09618, 2023.
+[31]
+M. Cinelli, G. De Francisci Morales, A. Galeazzi, W. Quattrociocchi, and M. Starnini.
+The echo chamber effect on social media.
+Proceedings of the National Academy of Sciences, 118(9):e2023301118, 2021.
+[32]
+F. Cinus, M. Minici, C. Monti, and F. Bonchi.
+The effect of people recommenders on echo chambers and polarization.
+In Proceedings of the International AAAI Conference on Web and Social Media, volume 16, pages 90–101, 2022.
+[33]
+R. Conte, N. Gilbert, G. Bonelli, C. Cioffi-Revilla, G. Deffuant, J. Kertesz, V. Loreto, S. Moat, J. P. Nadal, A. Sanchez, et al.
+Manifesto of computational social science.
+The European Physical Journal Special Topics, 214:325–346, 2012.
+[34]
+J. Conway et al.
+The game of life.
+Scientific American, 223(4):4, 1970.
+[35]
+G. Cornacchia and L. Pappalardo.
+Sts-epr: Modelling individual mobility considering the spatial, temporal, and social dimensions together.
+Procedia Computer Science, 184:258–265, 2021.
+[36]
+S. Cresci.
+A decade of social bot detection.
+Communications of the ACM, 63(10):72–83, 2020.
+[37]
+T. Dávid-Barrett and R. I. Dunbar.
+Cooperation, behavioural synchrony and status in social networks.
+Journal of theoretical biology, 308:88–95, 2012.
+[38]
+M. A. de C Gatti, A. P. Appel, C. N. Dos Santos, C. S. Pinhanez, P. R. Cavalin, and S. B. Neto.
+A simulation-based approach to analyze the information diffusion in microblogging online social network.
+In 2013 Winter Simulations Conference (WSC), pages 1685–1696. IEEE, 2013.
+[39]
+E. S. De Duro, R. Improta, and M. Stella.
+Introducing counsellme: A dataset of simulated mental health dialogues for comparing llms like haiku, llamantino and chatgpt against humans.
+2024.
+[40]
+G. De Marzo, L. Pietronero, and D. Garcia.
+Emergence of scale-free networks in social interactions among large language models.
+arXiv preprint arXiv:2312.06619, 2023.
+[41]
+G. Deffuant, D. Neau, F. Amblard, and G. Weisbuch.
+Mixing beliefs among interacting agents.
+Advances in Complex Systems, 3(01n04):87–98, 2000.
+[42]
+M. Del Vicario, A. Bessi, F. Zollo, F. Petroni, A. Scala, G. Caldarelli, H. E. Stanley, and W. Quattrociocchi.
+Echo chambers in the age of misinformation.
+arXiv preprint arXiv:1509.00189, 2015.
+[43]
+M. Del Vicario, A. Scala, G. Caldarelli, H. E. Stanley, and W. Quattrociocchi.
+Modeling confirmation bias and polarization.
+Scientific reports, 7(1):40391, 2017.
+[44]
+D. Demszky, D. Movshovitz-Attias, J. Ko, A. Cowen, G. Nemade, and S. Ravi.
+Goemotions: A dataset of fine-grained emotions.
+arXiv preprint arXiv:2005.00547, 2020.
+[45]
+J. M. Epstein.
+Modeling civil violence: An agent-based computational approach.
+Proceedings of the National Academy of Sciences, 99(suppl_3):7243–7250, 2002.
+[46]
+F. Fabbri, M. L. Croci, F. Bonchi, and C. Castillo.
+Exposure inequality in people recommender systems: the long-term effects.
+In Proceedings of the International AAAI Conference on Web and Social Media, volume 16, pages 194–204, 2022.
+[47]
+A. Failla and G. Rossetti.
+" i’m in the bluesky tonight": Insights from a year worth of social data.
+arXiv preprint arXiv:2404.18984, 2024.
+[48]
+A. Ferrara, L. Espín-Noboa, F. Karimi, and C. Wagner.
+Link recommendations: Their impact on network structure and minorities.
+In Proceedings of the 14th ACM Web Science Conference 2022, pages 228–238, 2022.
+[49]
+E. Ferrara, O. Varol, C. Davis, F. Menczer, and A. Flammini.
+The rise of social bots.
+Communications of the ACM, 59(7):96–104, 2016.
+[50]
+L. Festinger.
+A theory of social comparison processes.
+Human Relations, 7(2):117–140, 1954.
+[51]
+J. Flamino, M. S. Modi, B. K. Szymanski, B. Cross, and C. Mikolajczyk.
+Limits of large language models in debating humans.
+arXiv preprint arXiv:2402.06049, 2024.
+[52]
+C. Gao, X. Lan, Z. Lu, J. Mao, J. Piao, H. Wang, D. Jin, and Y. Li.
+S3: Social-network simulation system with large language model-empowered agents.
+arXiv preprint arXiv:2307.14984, 2023.
+[53]
+F. Gargiulo and Y. Gandica.
+The role of homophily in the emergence of opinion controversies.
+arXiv preprint arXiv:1612.05483, 2016.
+[54]
+K. Garimella, G. D. F. Morales, A. Gionis, and M. Mathioudakis.
+Quantifying controversy on social media.
+ACM Transactions on Social Computing, 1(1):1–27, 2018.
+[55]
+A. Gausen, W. Luk, and C. Guo.
+Using agent-based modelling to evaluate the impact of algorithmic curation on social media.
+ACM Journal of Data and Information Quality, 15(1):1–24, 2022.
+[56]
+Y. Ge, S. Zhao, H. Zhou, C. Pei, F. Sun, W. Ou, and Y. Zhang.
+Understanding echo chambers in e-commerce recommender systems.
+In Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, pages 2261–2270, 2020.
+[57]
+N. Gilbert.
+Emergence in social simulation.
+In Artificial societies, pages 134–143. Routledge, 2006.
+[58]
+N. Gilbert and K. Troitzsch.
+Simulation for the social scientist.
+McGraw-Hill Education (UK), 2005.
+[59]
+M. S. Granovetter.
+The strength of weak ties.
+American journal of sociology, 78(6):1360–1380, 1973.
+[60]
+A. Guess, J. Nagler, and J. Tucker.
+Less than you think: Prevalence and predictors of fake news dissemination on facebook.
+Science advances, 5(1):eaau4586, 2019.
+[61]
+A. Guille, H. Hacid, C. Favre, and D. A. Zighed.
+Information diffusion in online social networks: A survey.
+ACM Sigmod Record, 42(2):17–28, 2013.
+[62]
+D. Guthrie, B. Allison, W. Liu, L. Guthrie, and Y. Wilks.
+A closer look at skip-gram modelling.
+In N. Calzolari, K. Choukri, A. Gangemi, B. Maegaard, J. Mariani, J. Odijk, and D. Tapias, editors, Proceedings of the Fifth International Conference on Language Resources and Evaluation (LREC’06), Genoa, Italy, May 2006. European Language Resources Association (ELRA).
+[63]
+T. Hagendorff, S. Fabi, and M. Kosinski.
+Human-like intuitive behavior and reasoning biases emerged in large language models but disappeared in chatgpt.
+Nature Computational Science, 3(10):833–838, 2023.
+[64]
+M. Hardalov, A. Arora, P. Nakov, and I. Augenstein.
+A survey on stance detection for mis- and disinformation identification.
+In M. Carpuat, M.-C. de Marneffe, and I. V. Meza Ruiz, editors, Findings of the Association for Computational Linguistics: NAACL 2022, pages 1259–1277, Seattle, United States, July 2022. Association for Computational Linguistics.
+[65]
+Z. He, R. Dorn, S. Guo, M. D. Chu, and K. Lerman.
+Community-cross-instruct: Unsupervised instruction generation for aligning large language models to online communities.
+arXiv preprint arXiv:2406.12074, 2024.
+[66]
+P. Hernon.
+Disinformation and misinformation through the internet: Findings of an exploratory study.
+Government information quarterly, 12(2):133–139, 1995.
+[67]
+M. Hilbert, S. Ahmed, J. Cho, B. Liu, and J. Luu.
+Communicating with algorithms: A transfer entropy analysis of emotions-based escapes from online echo chambers.
+Communication Methods and Measures, 12(4):260–275, 2018.
+[68]
+T. Hliš, I. Fister, and I. F. J. au2.
+Digital twins in sport: Concepts, taxonomies, challenges and practical potentials, 2024.
+[69]
+K. Hosanagar, D. Fleder, D. Lee, and A. Buja.
+Will the global village fracture into tribes? recommender systems and their effects on consumer fragmentation.
+Management Science, 60(4):805–823, 2014.
+[70]
+H. Hosseinmardi, A. Ghasemian, M. Rivera-Lanas, M. Horta Ribeiro, R. West, and D. J. Watts.
+Causally estimating the effect of youtube’s recommender system using counterfactual bots.
+Proceedings of the National Academy of Sciences, 121(8):e2313377121, 2024.
+[71]
+H. Huang, J. Tang, S. Wu, L. Liu, and X. Fu.
+Mining triadic closure patterns in social networks.
+In Proceedings of the 23rd international conference on World wide web, pages 499–504, 2014.
+[72]
+M. Jackson and D. R. Cox.
+The principles of experimental design and their application in sociology.
+Annual Review of Sociology, 39(1):27–49, 2013.
+[73]
+G. Jiang, M. Xu, S.-C. Zhu, W. Han, C. Zhang, and Y. Zhu.
+Evaluating and inducing personality in pre-trained language models.
+Advances in Neural Information Processing Systems, 36, 2024.
+[74]
+R. Jiang, S. Chiappa, T. Lattimore, A. György, and P. Kohli.
+Degenerate feedback loops in recommender systems.
+In Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society, pages 383–390, 2019.
+[75]
+F. Karimi and M. Oliveira.
+On the inadequacy of nominal assortativity for assessing homophily in networks.
+Scientific Reports, 13(1):21053, 2023.
+[76]
+N. Kordzadeh and M. Ghasemaghaei.
+Algorithmic bias: review, synthesis, and future research directions.
+European Journal of Information Systems, 31(3):388–409, 2022.
+[77]
+G. Kovács, P. Alonso, and R. Saini.
+Challenges of hate speech detection in social media: Data scarcity, and leveraging external resources.
+SN Computer Science, 2(2), Feb. 2021.
+[78]
+A. D. Kramer, J. E. Guillory, and J. T. Hancock.
+Experimental evidence of massive-scale emotional contagion through social networks.
+Proceedings of the National Academy of Sciences, 111(24):8788–8790, 2014.
+[79]
+J. O. Krugmann and J. Hartmann.
+Sentiment analysis in the age of generative ai.
+Customer Needs and Solutions, 11(1), Mar. 2024.
+[80]
+D. Küçük and F. Can.
+Stance detection: A survey.
+ACM Computing Surveys, 53(1):1–37, Feb. 2020.
+[81]
+L. La Cava, D. Costa, and A. Tagarelli.
+Open models, closed minds? on agents capabilities in mimicking human personalities through open large language models.
+arXiv preprint arXiv:2401.07115, 2024.
+[82]
+Y. Leng and Y. Yuan.
+Do llm agents exhibit social behavior?
+arXiv preprint arXiv:2312.15198, 2023.
+[83]
+J. Li, A. Sun, J. Han, and C. Li.
+A survey on deep learning for named entity recognition.
+IEEE transactions on knowledge and data engineering, 34(1):50–70, 2020.
+[84]
+N. Li, C. Gao, Y. Li, and Q. Liao.
+Large language model-empowered agents for simulating macroeconomic activities.
+arXiv preprint arXiv:2310.10436, 2023.
+[85]
+D. Liben-Nowell and J. Kleinberg.
+The link prediction problem for social networks.
+In Proceedings of the twelfth international conference on Information and knowledge management, pages 556–559, 2003.
+[86]
+M. Lippi and P. Torroni.
+Argumentation mining: State of the art and emerging trends.
+ACM Transactions on Internet Technology, 16(2):1–25, Mar. 2016.
+[87]
+F. Lorig, E. Johansson, and P. Davidsson.
+Agent-based social simulation of the covid-19 pandemic: A systematic review.
+Journal of Artificial Societies and Social Simulation, 24(3), 2021.
+[88]
+K. Ludwig, A. Grote, A. Iana, M. Alam, H. Paulheim, H. Sack, C. Weinhardt, and P. Müller.
+Divided by the algorithm? the (limited) effects of content-and sentiment-based news recommendation on affective, ideological, and perceived polarization.
+Social Science Computer Review, 41(6):2188–2210, 2023.
+[89]
+R. R. McCrae and O. P. John.
+An introduction to the five-factor model and its applications.
+Journal of personality, 60(2):175–215, 1992.
+[90]
+M. McPherson, L. Smith-Lovin, and J. M. Cook.
+Birds of a feather: Homophily in social networks.
+Annual review of sociology, 27(1):415–444, 2001.
+[91]
+L. Milli, A. Monreale, G. Rossetti, D. Pedreschi, F. Giannotti, and F. Sebastiani.
+Quantification in social networks.
+In 2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA), pages 1–10. IEEE, 2015.
+[92]
+S. M. Mohammad, P. Sobhani, and S. Kiritchenko.
+Stance and sentiment in tweets.
+ACM Transactions on Internet Technology, 17(3):1–23, June 2017.
+[93]
+C. Monti, L. M. Aiello, G. De Francisci Morales, and F. Bonchi.
+The language of opinion change on social media under the lens of communicative action.
+Scientific Reports, 12(1):17920, 2022.
+[94]
+C. Monti, G. De Francisci Morales, and F. Bonchi.
+Learning opinion dynamics from social traces.
+In Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, pages 764–773, 2020.
+[95]
+P. J. Moor, A. Heuvelman, and R. Verleur.
+Flaming on youtube.
+Computers in Human Behavior, 26(6):1536–1546, 2010.
+[96]
+V. Morini, V. Pansanella, K. Abramski, E. Cau, A. Failla, S. Citraro, and G. Rossetti.
+From perils to possibilities: Understanding how human (and ai) biases affect online fora.
+arXiv preprint arXiv:2403.14298, 2024.
+[97]
+V. Morini, L. Pollacci, and G. Rossetti.
+Toward a standard approach for echo chamber detection: Reddit case study.
+Applied Sciences, 11(12):5390, 2021.
+[98]
+X. Mou, Z. Wei, and X. Huang.
+Unveiling the truth and facilitating change: Towards agent-based large-scale social movement simulation.
+arXiv preprint arXiv:2402.16333, 2024.
+[99]
+S. Mukherjee, B. K. Sinha, A. K. Chattopadhyay, et al.
+Statistical methods in social science research.
+Springer, 2018.
+[100]
+H. R. Nasrinpour, M. R. Friesen, et al.
+An agent-based model of message propagation in the facebook electronic social network.
+arXiv preprint arXiv:1611.07454, 2016.
+[101]
+M. E. Newman.
+Clustering and preferential attachment in growing networks.
+Physical review E, 64(2):025102, 2001.
+[102]
+M. E. Newman.
+Mixing patterns in networks.
+Physical review E, 67(2):026126, 2003.
+[103]
+M. E. Newman.
+The structure and function of complex networks.
+SIAM review, 45(2):167–256, 2003.
+[104]
+C. T. Nguyen.
+Cognitive islands and runaway echo chambers: Problems for epistemic dependence on experts.
+Synthese, 197(7):2803–2821, 2020.
+[105]
+C. T. Nguyen.
+Echo chambers and epistemic bubbles.
+Episteme, 17(2):141–161, 2020.
+[106]
+V. Pansanella, G. Rossetti, and L. Milli.
+From mean-field to complex topologies: network effects on the algorithmic bias model.
+In Complex Networks & Their Applications X: Volume 2, Proceedings of the Tenth International Conference on Complex Networks and Their Applications COMPLEX NETWORKS 2021 10, pages 329–340. Springer, 2022.
+[107]
+V. Pansanella, G. Rossetti, and L. Milli.
+Modeling algorithmic bias: simplicial complexes and evolving network topologies.
+Applied Network Science, 7(1):57, 2022.
+[108]
+V. Pansanella, A. Sîrbu, J. Kertesz, and G. Rossetti.
+Mass media impact on opinion evolution in biased digital environments: a bounded confidence model.
+Scientific Reports, 13(1):14600, 2023.
+[109]
+M. Papachristou and Y. Yuan.
+Network formation and dynamics among multi-llms.
+arXiv preprint arXiv:2402.10659, 2024.
+[110]
+L. Pappalardo, E. Ferragina, S. Citraro, G. Cornacchia, M. Nanni, G. Rossetti, G. Gezici, F. Giannotti, M. Lalli, D. Gambetta, et al.
+A survey on the impact of ai-based recommenders on human behaviours: methodologies, outcomes and future directions.
+arXiv preprint arXiv:2407.01630, 2024.
+[111]
+E. Pariser.
+The filter bubble: What the Internet is hiding from you.
+penguin UK, 2011.
+[112]
+J. S. Park, J. O’Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein.
+Generative agents: Interactive simulacra of human behavior.
+In Proceedings of the 36th annual acm symposium on user interface software and technology, pages 1–22, 2023.
+[113]
+J. S. Park, J. O’Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein.
+Generative agents: Interactive simulacra of human behavior.
+In Proceedings of the 36th annual acm symposium on user interface software and technology, pages 1–22, 2023.
+[114]
+J. S. Park, L. Popowski, C. Cai, M. R. Morris, P. Liang, and M. S. Bernstein.
+Social simulacra: Creating populated prototypes for social computing systems.
+In Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology, pages 1–18, 2022.
+[115]
+D. Pedreschi, L. Pappalardo, E. Ferragina, R. Baeza-Yates, A.-L. Barabasi, F. Dignum, V. Dignum, T. Eliassi-Rad, F. Giannotti, J. Kertesz, et al.
+Human-ai coevolution.
+arXiv preprint arXiv:2306.13723, 2023.
+[116]
+G. Pennycook and D. G. Rand.
+Fighting misinformation on social media using crowdsourced judgments of news source quality.
+Proceedings of the National Academy of Sciences, 116(7):2521–2526, 2019.
+[117]
+G. Pennycook and D. G. Rand.
+The psychology of fake news.
+Trends in cognitive sciences, 25(5):388–402, 2021.
+[118]
+A. F. Peralta, J. Kertész, and G. Iñiguez.
+Opinion formation on social networks with algorithmic bias: dynamics and bias imbalance.
+Journal of Physics: Complexity, 2(4):045009, 2021.
+[119]
+A. F. Peralta, M. Neri, J. Kertész, and G. Iñiguez.
+Effect of algorithmic bias and network structure on coexistence, consensus, and polarization of opinions.
+Physical Review E, 104(4):044312, 2021.
+[120]
+A. F. Peralta, P. Ramaciotti, J. Kertész, and G. Iñiguez.
+Multidimensional political polarization in online social networks.
+Physical Review Research, 6(1):013170, 2024.
+[121]
+G. V. Pereira, L. D. Klausner, L. Temple, T. Delissen, T. Lampoltshammer, and T. Priebe.
+" this (smart) town ain’t big enough": Smart small towns and digital twins for sustainable urban and regional development.
+arXiv preprint arXiv:2308.04819, 2023.
+[122]
+N. Perra and L. E. Rocha.
+Modelling opinion dynamics in the age of algorithmic personalisation.
+Scientific reports, 9(1):7261, 2019.
+[123]
+G. Piatti, Z. Jin, M. Kleiman-Weiner, B. Sch"̈olkopf, M. Sachan, and R. Mihalcea.
+Cooperate or collapse: Emergence of sustainability behaviors in a society of llm agents.
+arXiv preprint arXiv:2404.16698, 2024.
+[124]
+W. Quattrociocchi, G. Caldarelli, and A. Scala.
+Opinion dynamics on interacting networks: media competition and social influence.
+Scientific reports, 4(1):4938, 2014.
+[125]
+M. H. Ribeiro, V. Veselovsky, and R. West.
+The amplification paradox in recommender systems.
+In Proceedings of the International AAAI Conference on Web and Social Media, volume 17, pages 1138–1142, 2023.
+[126]
+L. D. Rosen, L. M. Carrier, and N. A. Cheever.
+Facebook and texting made me do it: Media-induced task-switching while studying.
+Computers in Human Behavior, 29(3):948–958, 2013.
+[127]
+G. Rossetti, S. Citraro, and L. Milli.
+Conformity: a path-aware homophily measure for node-attributed networks.
+IEEE Intelligent Systems, 36(1):25–34, 2021.
+[128]
+W. S. Rossi, J. W. Polderman, and P. Frasca.
+The closed loop between opinion formation and personalized recommendations.
+IEEE Transactions on Control of Network Systems, 9(3):1092–1103, 2021.
+[129]
+A. Santoro, A. Galeazzi, T. Scantamburlo, A. Baronchelli, W. Quattrociocchi, and F. Zollo.
+Analyzing the changing landscape of the covid-19 vaccine debate on twitter.
+Social Network Analysis and Mining, 13(1):115, 2023.
+[130]
+T. C. Schelling.
+Dynamic models of segregation.
+Journal of mathematical sociology, 1(2):143–186, 1971.
+[131]
+M. Schluse, M. Priggemeyer, L. Atorf, and J. Rossmann.
+Experimentable digital twins—streamlining simulation-based systems engineering for industry 4.0.
+IEEE Transactions on industrial informatics, 14(4):1722–1731, 2018.
+[132]
+F. Schweitzer and D. Garcia.
+An agent-based model of collective emotions in online communities.
+The European Physical Journal B, 77:533–545, 2010.
+[133]
+E. Serrano and C. A. Iglesias.
+Validating viral marketing strategies in twitter via agent-based social simulation.
+Expert Systems with Applications, 50:140–150, 2016.
+[134]
+W. Shadish, T. Cook, and D. Campbell.
+Quasi-experiments: interrupted time-series designs.
+Experimental and quasi-experimental designs for generalized causal inference, pages 171–205, 2002.
+[135]
+Z. Shu, X. Sun, and H. Cheng.
+When llm meets hypergraph: A sociological analysis on personality via online social networks.
+arXiv preprint arXiv:2407.03568, 2024.
+[136]
+S. Siddiqui, T. Singh, et al.
+Social media its impact with positive and negative aspects.
+International journal of computer applications technology and research, 5(2):71–75, 2016.
+[137]
+A. Sîrbu, D. Pedreschi, F. Giannotti, and J. Kertész.
+Algorithmic bias amplifies opinion fragmentation and polarization: A bounded confidence model.
+PloS one, 14(3):e0213246, 2019.
+[138]
+F. Squazzoni, W. Jager, and B. Edmonds.
+Social simulation in the social sciences: A brief overview.
+Social Science Computer Review, 32(3):279–294, 2014.
+[139]
+M. Stella, M. Cristoforetti, and M. De Domenico.
+Influence of augmented humans in online interactions during voting events.
+PloS one, 14(5):e0214210, 2019.
+[140]
+M. Stella, E. Ferrara, and M. De Domenico.
+Bots increase exposure to negative and inflammatory content in online social systems.
+Proceedings of the National Academy of Sciences, 115(49):12435–12440, 2018.
+[141]
+M. Stella, T. T. Hills, and Y. N. Kenett.
+Using cognitive psychology to understand gpt-like models needs to extend beyond human biases.
+Proceedings of the National Academy of Sciences, 120(43):e2312911120, 2023.
+[142]
+J. Suler.
+The online disinhibition effect.
+CyberPsychology & Behavior, 7(3):321–326, 2004.
+[143]
+T. Sun, X. He, and Z. Li.
+Digital twin in healthcare: Recent updates and challenges.
+Digital Health, 9:20552076221149651, 2023.
+[144]
+J. Sweller.
+Cognitive load during problem solving: Effects on learning.
+Cognitive Science, 12(2):257–285, 1988.
+[145]
+F. Tao, H. Zhang, A. Liu, and A. Y. Nee.
+Digital twin in industry: State-of-the-art.
+IEEE Transactions on industrial informatics, 15(4):2405–2415, 2018.
+[146]
+C. L. Toma and J. T. Hancock.
+Self-enhancement through online dating profiles: The role of anticipated future interaction, self-disclosure, and perceived success in mate attraction.
+Communication Research, 40(1):1–27, 2013.
+[147]
+P. Törnberg.
+Echo chambers and viral misinformation: Modeling fake news as complex contagion.
+PLoS one, 13(9):e0203958, 2018.
+[148]
+P. T"̈ornberg, D. Valeeva, J. Uitermark, and C. Bail.
+Simulating social media using large language models to evaluate alternative news feed algorithms.
+arXiv preprint arXiv:2310.05984, 2023.
+[149]
+C. M. Valensise, M. Cinelli, and W. Quattrociocchi.
+The drivers of online polarization: Fitting models to data.
+Information Sciences, 642:119152, 2023.
+[150]
+P. M. Valkenburg, J. Peter, and A. P. Schouten.
+Friend networking sites and their relationship to adolescents’ well-being and social self-esteem.
+CyberPsychology & Behavior, 9(5):584–590, 2006.
+[151]
+O. Varol and I. Uluturk.
+Journalists on twitter: self-branding, audiences, and involvement of bots.
+Journal of Computational Social Science, 3(1):83–101, 2020.
+[152]
+A. Vespignani.
+Modelling dynamical processes in complex socio-technical systems.
+Nature physics, 8(1):32–39, 2012.
+[153]
+E. A. Vogel, J. P. Rose, L. R. Roberts, and K. Eckles.
+Social comparison, social media, and self-esteem.
+Psychology of Popular Media Culture, 3(4):206, 2014.
+[154]
+M. A. Walker, P. Anand, R. Abbott, J. E. F. Tree, C. Martell, and J. King.
+That is your evidence?: Classifying stance in online political debate.
+Decision Support Systems, 53(4):719–729, Nov. 2012.
+[155]
+J. B. Walther.
+Computer-mediated communication: Impersonal, interpersonal, and hyperpersonal interaction.
+Communication Research, 23(1):3–43, 1996.
+[156]
+S. Wasserman and K. Faust.
+Social network analysis: Methods and applications.
+Cambridge university press, 1994.
+[157]
+J. Wen, B. Gabrys, and K. Musial.
+Digital twin-oriented complex networked systems based on heterogeneous node features and interaction rules.
+arXiv preprint arXiv:2308.11034, 2023.
+[158]
+C. Xie, C. Chen, F. Jia, Z. Ye, K. Shu, A. Bibi, Z. Hu, P. Torr, B. Ghanem, and G. Li.
+Can large language model agents simulate human trust behaviors?
+arXiv preprint arXiv:2402.04559, 2024.
+[159]
+F. Xu, J. Zhang, C. Gao, J. Feng, and Y. Li.
+Urban generative intelligence (ugi): A foundational platform for agents in embodied city environment.
+arXiv preprint arXiv:2312.11813, 2023.
+[160]
+C. Yang, X. Xu, B. P. Nunes, and S. W. M. Siqueira.
+Bubbles bursting: Investigating and measuring the personalisation of social media searches.
+Telematics and Informatics, 82:101999, 2023.
+[161]
+B. Yossef Ravid and M. Aharon-Gutman.
+The social digital twin: the social turn in the field of smart cities.
+Environment and Planning B: Urban Analytics and City Science, 50(6):1455–1470, 2023.
+[162]
+R. Zhou, S. Khemmarat, and L. Gao.
+The impact of youtube recommendation system on video views.
+In Proceedings of the 10th ACM SIGCOMM conference on Internet measurement, pages 404–410, 2010.
+Experimental support, please
+view the build logs
+for errors. Generated by
+L
+A
+T
+E
+xml
+[LOGO]
+.
+Instructions for reporting errors
+We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+methods listed below:
+Click the "Report Issue" (
+) button, located in the page header.
+Tip: You can select the relevant text first, to include it in your report.
+Our team has already identified the following issues. We appreciate your time reviewing and reporting rendering errors we
+may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+all.
+Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion, and welcome developer contributions.
+We gratefully acknowledge support from
+our major funders,
+member institutions, ,
+and all contributors.
+About
+·
+Help
+·
+Contact
+·
+Subscribe
+·
+Copyright
+·
+Privacy
+·
+Accessibility
+·
+Operational Status (opens in new tab)
+Major funding support from
+Simons Foundation
+Simons Foundation International
+Schmidt Sciences

@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-30",
+  "scope": "lexicographic paper entries 26-40",
+  "source_snapshot": ".automation/import/next-fifteen-original-2026-09-30.json",
+  "audit_records": [
+    ".automation/audit/next-fifteen-26-28-29-final-2026-09-30.json",
+    ".automation/audit/next-fifteen-26-30-initial-2026-09-30.json",
+    ".automation/audit/next-fifteen-26-30-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-31-32-design-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-31-33-35-final-2026-09-30.json",
+    ".automation/audit/next-fifteen-31-35-correction-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-31-35-initial-2026-09-30.json",
+    ".automation/audit/next-fifteen-31-35-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-32-final-2026-09-30.json",
+    ".automation/audit/next-fifteen-33-35-focused-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-36-40-initial-2026-09-30.json",
+    ".automation/audit/next-fifteen-37-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-38-reaudit-2026-09-30.json",
+    ".automation/audit/next-fifteen-design-review-2026-09-30.json"
+  ],
+  "notes": [
+    {
+      "index": 26,
+      "note": "Literature/Papers/Entries/Friendship Dynamics- Modelling Social Relationships through a Fuzzy Agent-Based Simulation.md",
+      "title": "Friendship Dynamics: Modelling Social Relationships through a Fuzzy Agent-Based Simulation",
+      "source": "https://onlinelibrary.wiley.com/doi/10.1155/2011/765640",
+      "doi": "10.1155/2011/765640",
+      "publication_date": "2011-09-13",
+      "original_reference_count": 67,
+      "current_reference_count": 67,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 27,
+      "note": "Literature/Papers/Entries/Friendship networks and social status.md",
+      "title": "Friendship networks and social status",
+      "source": "https://doi.org/10.1017/nws.2012.4",
+      "doi": "10.1017/nws.2012.4",
+      "publication_date": "2013-04-15",
+      "original_reference_count": 31,
+      "current_reference_count": 31,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 28,
+      "note": "Literature/Papers/Entries/From Individual to Society- A Survey on Social Simulation Driven by Large Language Model-based Agents.md",
+      "title": "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+      "source": [
+        "https://doi.org/10.1145/3800683",
+        "https://arxiv.org/abs/2412.03563"
+      ],
+      "doi": "10.1145/3800683",
+      "publication_date": "2026-04",
+      "original_reference_count": 233,
+      "current_reference_count": 233,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [
+        "not audited",
+        "fulltext unavailable"
+      ],
+      "audit": "limited to accessible source"
+    },
+    {
+      "index": 29,
+      "note": "Literature/Papers/Entries/From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities.md",
+      "title": "From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities",
+      "source": "https://arxiv.org/abs/2606.17174",
+      "doi": "10.48550/arXiv.2606.17174",
+      "publication_date": "2026-06-15",
+      "original_reference_count": 38,
+      "current_reference_count": 38,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 30,
+      "note": "Literature/Papers/Entries/Generative agent-based modeling with actions grounded in physical- social- or digital space using Concordia.md",
+      "title": "Generative agent-based modeling with actions grounded in physical, social, or digital space using Concordia",
+      "source": "https://arxiv.org/abs/2312.03664",
+      "doi": "10.48550/arXiv.2312.03664",
+      "publication_date": "2023-12-06",
+      "original_reference_count": 114,
+      "current_reference_count": 114,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 31,
+      "note": "Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "title": "HUMAT: An Integrated Framework for Modelling Individual Motivations, Social Exchange and Network Dynamics",
+      "source": [
+        "https://doi.org/10.18564/jasss.5611",
+        "https://www.jasss.org/28/1/4.html"
+      ],
+      "doi": "10.18564/jasss.5611",
+      "publication_date": "2025-01-31",
+      "original_reference_count": 71,
+      "current_reference_count": 71,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 32,
+      "note": "Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "title": "How Does Facebook Retain Segregated Friendship? An Agent-Based Model Approach",
+      "source": [
+        "https://doi.org/10.1177/08944393231213960",
+        "https://arxiv.org/abs/2109.08862"
+      ],
+      "doi": "10.1177/08944393231213960",
+      "publication_date": "2023-11-22",
+      "original_reference_count": 0,
+      "current_reference_count": 59,
+      "reference_status": "publisher list source-ordered",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 33,
+      "note": "Literature/Papers/Entries/How many hours does it take to make a friend.md",
+      "title": "How many hours does it take to make a friend?",
+      "source": [
+        "https://doi.org/10.1177/0265407518761225"
+      ],
+      "doi": "10.1177/0265407518761225",
+      "publication_date": "2018-03-15",
+      "original_reference_count": 32,
+      "current_reference_count": 32,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 34,
+      "note": "Literature/Papers/Entries/Humanoid Agents- Platform for Simulating Human-like Generative Agents.md",
+      "title": "Humanoid Agents: Platform for Simulating Human-like Generative Agents",
+      "source": [
+        "https://doi.org/10.18653/v1/2023.emnlp-demo.15",
+        "https://aclanthology.org/2023.emnlp-demo.15/"
+      ],
+      "doi": "10.18653/v1/2023.emnlp-demo.15",
+      "publication_date": "2023-12-06",
+      "original_reference_count": 24,
+      "current_reference_count": 24,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 35,
+      "note": "Literature/Papers/Entries/Individual Motivations and Network Effects.md",
+      "title": "Individual Motivations and Network Effects: A Multilevel Analysis of the Structure of Online Social Relationships",
+      "source": [
+        "https://doi.org/10.1177/0002716214565755"
+      ],
+      "doi": "10.1177/0002716214565755",
+      "publication_date": "2015-04-09",
+      "original_reference_count": 36,
+      "current_reference_count": 36,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 36,
+      "note": "Literature/Papers/Entries/Interaction data from the Copenhagen Networks Study.md",
+      "title": "Interaction data from the Copenhagen Networks Study",
+      "source": [
+        "https://doi.org/10.1038/s41597-019-0325-x",
+        "https://www.sapiezynski.com/papers/sapiezynski2019interaction.pdf"
+      ],
+      "doi": "10.1038/s41597-019-0325-x",
+      "publication_date": "2019-12-11",
+      "original_reference_count": 78,
+      "current_reference_count": 78,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 37,
+      "note": "Literature/Papers/Entries/Introduction to stochastic actor-based models for network dynamics.md",
+      "title": "Introduction to stochastic actor-based models for network dynamics",
+      "source": [
+        "https://doi.org/10.1016/j.socnet.2009.02.004",
+        "https://www.stats.ox.ac.uk/~snijders/SnijdersSteglichVdBunt2009.pdf"
+      ],
+      "doi": "10.1016/j.socnet.2009.02.004",
+      "publication_date": "2010",
+      "original_reference_count": 105,
+      "current_reference_count": 105,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 38,
+      "note": "Literature/Papers/Entries/LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals.md",
+      "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+      "source": [
+        "https://doi.org/10.48550/arXiv.2411.10109",
+        "https://arxiv.org/pdf/2411.10109"
+      ],
+      "doi": "10.48550/arXiv.2411.10109",
+      "publication_date": "2024-11-15",
+      "original_reference_count": 0,
+      "current_reference_count": 80,
+      "reference_status": "arXiv v3 list source-ordered; 2 unresolved titles",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 39,
+      "note": "Literature/Papers/Entries/Like-minded sources on Facebook are prevalent but not polarizing.md",
+      "title": "Like-minded sources on Facebook are prevalent but not polarizing",
+      "source": [
+        "https://doi.org/10.1038/s41586-023-06297-w"
+      ],
+      "doi": "10.1038/s41586-023-06297-w",
+      "publication_date": "2023-07-27",
+      "original_reference_count": 49,
+      "current_reference_count": 49,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    },
+    {
+      "index": 40,
+      "note": "Literature/Papers/Entries/Making and Breaking Parasocial Relationships with Human and Virtual Influencers- An Experience Sampling Study.md",
+      "title": "Making and Breaking Parasocial Relationships with Human and Virtual Influencers: An Experience Sampling Study",
+      "source": [
+        "https://doi.org/10.1080/15213269.2025.2558029",
+        "https://www.tandfonline.com/doi/pdf/10.1080/15213269.2025.2558029"
+      ],
+      "doi": "10.1080/15213269.2025.2558029",
+      "publication_date": "2025-09-21",
+      "original_reference_count": 76,
+      "current_reference_count": 76,
+      "reference_status": "legacy links preserved in original order; source completeness unverified",
+      "warnings": [],
+      "audit": "passed independent audit"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "audit": "Focused independent final check of entries 12-14 after latest note edits; entries 11 and 15 carried forward from prior access-limited re-audit.",
+  "date": "2026-09-29",
+  "scope": [
+    12,
+    13,
+    14
+  ],
+  "method": "Read the initial re-audit JSON and current notes, then checked the changed caveats/byline and source-grounded claims against the cited primary PLOS article, arXiv paper, and review PDF. Did not edit paper notes.",
+  "notes": [
+    {
+      "number": 11,
+      "filename": "Antecedents and Effects of Parasocial Relationships- A Meta-Analysis.md",
+      "result": "PASS_WITH_ACCESS_LIMIT",
+      "re_audit_this_pass": false,
+      "basis": "Carried forward from the 2026-09-29 re-audit; access limits remain as recorded.",
+      "limits": "PASS applies only to abstract-level content and visible metadata, not full text, methods/results detail, or bibliography. Keep fulltext unavailable and not audited."
+    },
+    {
+      "number": 12,
+      "filename": "Are You Your Friends- Friend- Poor Perception of Friendship Ties Limits the Ability to Promote Behavioral Change.md",
+      "result": "PASS",
+      "re_audit_this_pass": true,
+      "primary_source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151588",
+      "bibliography_caveat": "PASS: accurately says the 68 captured links have not been reconciled against the source list of 52 numbered references and that completeness/mapping are unverified. This makes no claim that links are absent or source references are complete.",
+      "byline_alias": "PASS: the YAML link display text is Alex Pentland, matching the PLOS author byline. Sandy appears only in the internal target path/name and is not displayed as part of the byline.",
+      "model_claims": "PASS: the P2/P1 outcome ratio, incoming/outgoing tie meanings, Peer See/Peer Reward pooled regression with control omitted, coefficient directions/significance, and the distinction between regression associations and causal transition rules match the article. The classifier summary is supported by the prediction section; no unsupported dynamic model is claimed.",
+      "limits": "The supplementary file was not independently reviewed; the note identifies supplementary alternative features without relying on their detailed results."
+    },
+    {
+      "number": 13,
+      "filename": "Bias Reduction in Social Networks Through Agent-Based Simulations.md",
+      "result": "PASS",
+      "re_audit_this_pass": true,
+      "primary_source": "https://arxiv.org/pdf/2409.16558",
+      "bibliography_caveat": "PASS: says the 28 captured links have not been reconciled with the paper bibliography and completeness/mapping remain unverified. It does not assert that the bibliography is missing or complete.",
+      "model_claims": "PASS: the 173,000-user/1.5-million-edge traced network, 5,599 core-user analysis, fixed trait prevalence scenarios, 36 hourly ticks, activation and like probabilities, lognormal tweet counts, t=24 observed-edge reset, feed policies, deep-model retraining, MinimizeRho objective, friend/friend-of-friend candidates, and feed lengths match the primary paper §§3.1–3.4. The note distinguishes the traced network from the core users whose experience is analyzed.",
+      "limits": "No source-grounded model regression found. The event-loop pseudocode is a concise abstraction of the paper’s tick behavior; note also states its omitted study-specific sampling and coefficient details."
+    },
+    {
+      "number": 14,
+      "filename": "Birds of a Feather- Homophily in Social Networks.md",
+      "result": "PASS",
+      "re_audit_this_pass": true,
+      "primary_source": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/McPherson-2001-ARS.pdf",
+      "bibliography_caveat": "PASS: says the 163 captured links have not been reconciled with the review bibliography and completeness/mapping remain unverified. This is appropriately cautious despite the source reference list being accessible.",
+      "model_claims": "PASS: no executable simulation model is described in the review note, so omitting a Model section is appropriate. Abstract and research questions accurately track the paper abstract and framing in the Introduction and review sections.",
+      "limits": "The bibliography itself remains unreconciled; this pass verifies the wording of its provenance caveat, not the correctness of each captured reference link."
+    },
+    {
+      "number": 15,
+      "filename": "Bond with Social Bot- A Hidden Markov Model of Parasocial Relationship Dynamics in Human-AI Interaction.md",
+      "result": "PASS_WITH_ACCESS_LIMIT",
+      "re_audit_this_pass": false,
+      "basis": "Carried forward from the 2026-09-29 re-audit; access limits remain as recorded.",
+      "limits": "PASS applies only to the accessible SSRN abstract and record metadata as summarized in the initial audit. Keep fulltext unavailable and not audited."
+    }
+  ],
+  "overall": "PASS for entries 12-14. Their bibliography caveats accurately distinguish captured links from source reference lists; the Alex Pentland display alias matches the source byline; no source-grounded model claims regressed. Entries 11 and 15 remain PASS_WITH_ACCESS_LIMIT as previously audited and are not reassessed here."
+}

@@ -1,0 +1,1082 @@
+<html lang="en">
+  <head>
+    <!-- template 08-07021-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="description" content="">    
+    <title>Modeling Interaction in Collaborative Groups</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/v02/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- article css -->
+    <link rel="stylesheet" type="text/css" href="/styles/tipped.css"> <!-- SD 2021-03-17 -->
+    <link rel="stylesheet" type="text/css" href="/styles/jquery.fancybox.css"> <!-- SD 2021-03-17 -->
+
+    <!-- Custom styles for this template -->
+    <link href="/v02/custom_style.css" rel="stylesheet">
+
+    
+    <meta name="robots" content="index,follow" />
+    <!-- Dublin Core tags -->
+    <meta name="DC.Title" content="Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure">
+    <meta name="DC.Creator" content="Nikolas Zöller, Jonathan H. Morgan and Tobias Schröder">
+    <meta name="DC.Contributor" content="zoeller@fh-potsdam.de">
+    <meta name="DC.Subject" content="Agent Based Modeling, Affect Control Theory, Expectation States Theory, Networks, Online Collaboration, Group Dynamics">
+    <meta name="DC.Abstract" content="This paper studies the dynamics of identity and status management within groups in collaborative settings. We present an agent-based simulation model for group interaction rooted in social psychological theory. The model integrates affect control theory with networked interaction structures and sequential behavior protocols as they are often encountered in task groups. By expressing status hierarchy through network structure, we build a bridge between expectation states theory and affect control theory, and are able to reproduce central results from the expectation states research program in sociological social psychology. Furthermore, we demonstrate how the model can be applied to analyze specialized task groups or sub-cultural domains by combining it with empirical data sources. As an example, we simulate groups of open-source software developers and analyze
+how cultural expectations influence the occupancy of high status positions in these groups.">
+    <meta name="DC.Publisher" content="JASSS">
+    <meta name="DC.Issued" content="2021-10-31">
+    <meta name="DC.Type" content="Text.Article">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier.URI" content="https://www.jasss.org/24/4/6.html">
+    <meta name="DC.Identifier.DOI" content="10.18564/jasss.4699">
+    <meta name="DC.Source" content="2020:183:3">
+    <meta name="DC.Language" content="en">
+    <meta name="DC.Rights" content="/admin/copyright.html">
+    <!-- Google Scholar tags -->
+    <meta name="citation_journal_title" content="Journal of Artificial Societies and Social Simulation"/>
+    <meta name="citation_issn" content="1460-7425"/>
+    <meta name="citation_author" content="Nikolas Zöller"/>
+			 <meta name="citation_author_email" content="zoeller@fh-potsdam.de"/>
+			 <meta name="citation_author_institution" content="University of Applied Sciences, Potsdam"/>
+			 <meta name="citation_author" content="Jonathan H. Morgan"/>
+			 <meta name="citation_author_email" content="jonathan.h.morgan@gmail.com"/>
+			 <meta name="citation_author_institution" content="University of Applied Sciences, Potsdam"/>
+			 <meta name="citation_author" content="Tobias Schröder"/>
+			 <meta name="citation_author_email" content="schroeder@fh-potsdam.de"/>
+			 <meta name="citation_author_institution" content="University of Applied Sciences, Potsdam"/>
+			 
+    <meta name="citation_title" content="Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure"/>
+    <meta name="citation_publication_date" content="2021-10-31"/>
+    <meta name="citation_volume" content="24"/>
+    <meta name="citation_issue" content="4"/>
+    <meta name="citation_doi" content="10.18564/jasss.4699"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_keywords" xml:lang="en" lang="en" content="Agent Based Modeling, Affect Control Theory, Expectation States Theory, Networks, Online Collaboration, Group Dynamics"/>
+    <meta name="citation_pdf_url" content="https://www.jasss.org/24/4/6/6.pdf"/>
+    <!-- Twitter card. See https://dev.twitter.com/cards/types/summary -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@JASSSJournal" />
+    <meta name="twitter:title" content="Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure" />
+    <meta name="twitter:description" content="by Nikolas Zöller, Jonathan H. Morgan and Tobias Schröder" />
+    <meta name="twitter:image" content="https://www.jasss.org/gifs/JASSS400x400.png" />
+    <!-- end of Twitter Card -->
+    <!-- Facebook -->
+    <meta property="fb:app_id" content="1505979489704538" />
+    <meta property="og:title" content="Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="by Nikolas Zöller, Jonathan H. Morgan and Tobias Schröder" />
+    <meta property="og:url" content="https://www.jasss.org/24/4/6.html" />
+    <meta property="og:image" content="https://www.jasss.org/gifs/JASSS-masthead.gif" />
+    <meta property="og:site_name" content="Journal of Artificial Societies and Social Simulation" />
+    <!-- End of Facebook -->
+    
+    <link rel="canonical" href="https://www.jasss.org/24/4/6.html">
+    
+    <link rel="alternate" href="/JASSS.xml" type="application/rss+xml" title="rss">
+  </head>
+  <body>
+  <div id="include_header"></div>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-10">
+          <div class="page-content">
+            <div id="article" class="new_style_article"><!-- SD 2021-03-17 -->
+                <!-- Z3988 embedded meta data -->
+                <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=https%3A%2F%2Fwww.jasss.org%2F24%2F4%2F6.html&amp;rft.genre=article&amp;rft.atitle=Modeling+Interaction+in+Collaborative+Groups%3A+Affect+Control+Within+Social+Structure&amp;rft.jtitle=Journal+of+Artificial+Societies+and+Social+Simulation&amp;rft.stitle=JASSS&amp;rft.issn=1460-7425&amp;rft.date=2021&amp;rft.volume=24&amp;rft.issue=4&amp;rft.pages=6&amp;rft.aufirst=Nikolas&amp;rft.aulast=Z%C3%B6ller&amp;rft.au=Morgan%2C+Jonathan+H.&amp;rft.au=Schr%C3%B6der%2C+Tobias"> </span>
+                
+                <div class="article-header">
+
+                    <p class="crumb"><a href="/">Home</a> &gt; <a href="/24/4/contents.html">24 (4)</a>, 6
+                        <!-- Twitter and Facebook buttons -->
+                        <div class="addthis_sharing_toolbox social-buttons"></div>
+                        </p>
+                        
+                        <noscript><p class="noscript">Javascript is disabled in your browser.  This page will look and function better with Javascript.</p></noscript>
+                        <h1>Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure
+                        <a class="pdf-icon" href="/admin/get_pdf.php?source=https://www.jasss.org/24/4/6.html"><img src="/gifs/pdf-icon.png" alt="Download PDF"></a></h1>
+                                
+                        <span class="author" title="<b>Nikolas Zöller</b><br>Nikolas Zöller is a data scientist at the Institute for Urban Futures, Potsdam University of Applied Sciences and a Phd student at Jacobs University Bremen. He holds a B.Sc. and a M.Sc. in physics from Freie Universität Berlin. His work has been published in Technological Forecasting and Social Change and in the Best Masters series of the Spektrum Springer editorial and he has given talks at the International Conference of Computational Social Sciences in 2017 and 2019, The International Sunbelt Social Network Conference in 2019 and at the Big Data in Psychology Conference in 2018.<p>University of Applied Sciences<br>Potsdam<br>Fachhochschule Potsdam<br>Kiepenheuerallee 5
+Potsdam<br>14469<br>Germany<br><p>Email: <a href=&quot;mailto:zoeller@fh-potsdam.de&quot;>zoeller@fh-potsdam.de</a><br>Web: <a href=&quot;https://www.fh-potsdam.de/person/person-action/nikolas-zoeller&quot;>https://www.fh-potsdam.de/person/person-action/nikolas-zoeller</a><br><p><i>Please direct correspondence about this article to Nikolas Zöller</i></p>">Nikolas Zöller</span>, <span class="author" title="<b>Jonathan H. Morgan</b><br>Dr. Jonathan H. Morgan is a post doctorate at the Institute for Urban Futures at Potsdam University of Applied Sciences. He has B.As in philosophy and political science from The Pennsylvania State University and a M.A. and Ph.D. in Sociology from Duke University. His research focuses on group and identity processes, and has appeared in Social Psychology Quarterly, Small Group Research, Social Networks, and Computational and Mathematical Organization Theory.<p>University of Applied Sciences<br>Potsdam<br>Fachhochschule Potsdam<br>Kiepenheuerallee 5
+Potsdam<br>14469<br>Germany<br><p>Email: <a href=&quot;mailto:jonathan.h.morgan@gmail.com&quot;>jonathan.h.morgan@gmail.com</a><br>Web: <a href=&quot;https://scholars.duke.edu/person/jonathan.h.morgan&quot;>https://scholars.duke.edu/person/jonathan.h.morgan</a><br>">Jonathan H. Morgan</span>
+ and <span class="author" title="<b>Tobias Schröder</b><br>Tobias Schröder is associate professor at the Institute for Urban Futures, University of Applied Sciences Potsdam. A social psychologist by training, he is interested in studying human social behaviour with computational methods. Other areas of interest include innovation and sustainable development. His work was published in leading journals such as American Sociological Review, Cognitive Science, or PNAS.<p>University of Applied Sciences<br>Potsdam<br>Fachhochschule Potsdam<br>Kiepenheuerallee 5
+Potsdam<br>14469<br>Germany<br><p>Email: <a href=&quot;mailto:schroeder@fh-potsdam.de&quot;>schroeder@fh-potsdam.de</a><br>Web: <a href=&quot;http://tschroeder.eu&quot;>http://tschroeder.eu</a><br>">Tobias Schröder</span>
+<p class="artaffil">University of Applied Sciences, Potsdam, Germany
+
+                        
+                        <select class="selectandgo" onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="#">Other articles by these authors</option>
+                            <option value="/admin/get_similar_jasss.php?search=author&source=https://www.jasss.org/24/4/6.html">In JASSS</option>
+                            <option value="/admin/get_similar_google.php?search=author&source=https://www.jasss.org/24/4/6.html">From Google</option>
+                        </select>
+                        
+                        <p class="artlocation"><i>Journal of Artificial
+                        Societies and Social Simulation</i> <b>24</b> (4) 6<a href="https://www.comses.net/resources/open-code-badge/"><img src="/gifs/open-code-badge-html.png" style="float: right; width:120px" alt="The Open Code badge indicates that this article has archived the source code needed to reproduce the reported results in an open access, trusted digital repository."></a><br>
+                        &lt;https://www.jasss.org/24/4/6.html&gt;<br>
+                        <span class="artdoi">DOI: 10.18564/jasss.4699</span> 
+                        
+                        <select class="selectandgo" onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="#">Save citation...</option>
+                            <option value="/admin/export_citation.php?format=plain&source=https://www.jasss.org/24/4/6.html">Text</option>
+                            <option value="/admin/export_citation.php?format=html&source=https://www.jasss.org/24/4/6.html">HTML</option>
+                            <option value="/admin/export_citation.php?format=bibtex&source=https://www.jasss.org/24/4/6.html">BibTex</option>
+                            <option value="/admin/export_citation.php?format=ris&source=https://www.jasss.org/24/4/6.html">Ref. Manager</option>
+                            <option value="/admin/export_citation.php?format=ris&source=https://www.jasss.org/24/4/6.html">EndNote</option>
+                            <option value="/admin/export_citation.php?format=ris&source=https://www.jasss.org/24/4/6.html">ProCite</option>
+                        </select>
+                        
+                        <p class="artdates"> Received: 09-Dec-2020
+                        &nbsp;&nbsp;&nbsp;Accepted: 12-Sep-2021
+                        &nbsp;&nbsp;&nbsp;Published: 31-Oct-2021
+                        </p>
+                        <div id="abstract"><h3>Abstract</h3>
+                        This paper studies the dynamics of identity and status management within groups in collaborative settings. We present an agent-based simulation model for group interaction rooted in social psychological theory. The model integrates affect control theory with networked interaction structures and sequential behavior protocols as they are often encountered in task groups. By expressing status hierarchy through network structure, we build a bridge between expectation states theory and affect control theory, and are able to reproduce central results from the expectation states research program in sociological social psychology. Furthermore, we demonstrate how the model can be applied to analyze specialized task groups or sub-cultural domains by combining it with empirical data sources. As an example, we simulate groups of open-source software developers and analyze
+how cultural expectations influence the occupancy of high status positions in these groups.
+                        </div>
+                        
+                        <div id="keywords">Keywords:
+                        <strong>Agent Based Modeling, Affect Control Theory, Expectation States Theory, Networks, Online Collaboration, Group Dynamics</strong>
+                        <select class="selectandgo" onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="#">Other articles with these keywords</option>
+                            <option value="/admin/get_similar_jasss.php?search=kw&source=https://www.jasss.org/24/4/6.html">In JASSS</option>
+                            <option value="/admin/get_similar_google.php?search=kw&source=https://www.jasss.org/24/4/6.html">From Google</option>
+                        </select>
+                        </div>
+
+                </div>
+                <div class="article-body">
+                    <hr><!-- SD 2021-03-17 -->
+                    <div id="artbody">
+                    <!-- ======================Insert article text below.  All above created by epress ============================= -->
+<h3 id="introduction">Introduction</h3>
+<p id="1.1">The study of groups is one place where the fields of psychology and sociology most apparently intersect, as individual-level information processing interacts with the dynamics of a social system. In this work, we follow the common definition of a group referring to "a bounded collection of interacting individuals" exhibiting functional, cognitive (we would add, affective), and structural interdependencies <span><a href="#ref-Lindenberg1997">(Lindenberg 1997, 2015)</a></span>. While in the middle of the twentieth century small-group research was an integrated research field, it subsequently fragmented into multiple specialized domains such as the study of networks, social exchange, group collaboration, collective decision making, and many others <a href="#ref-Burke2006">(Burke 2006)</a>. These subfields differ in the degree to which they focus on one or more of these interdependencies.</p>
+<p id="1.2">However, some research questions are best tackled by an integrated approach that examines how these interdependencies are intertwined. In this vein, the present work sets out to understand how role identities and their culturally shaped affective connotations influence the cultural acceptance of those who occupy important positions in task groups. To this end, we built an integrative computational model called ACTING (Affect Control Theory based simulations of Interaction in Networked Groups) that can realistically simulate task group interactions. ACTING takes into account all three of the aforementioned group interdependencies because each influences task groups. Task groups are goal-oriented and often follow protocols or procedural rules to reach a shared goal (functional interdependence). They rely on shared group identities and a shared understanding of appropriate role-based identities and behaviors (cognitive-affective interdependence). Finally, workplace interactions in a task group often occur against the backdrop of explicit organizational hierarchies that determine who gets to interact with whom (structural interdependence).</p>
+<p id="1.3">In the last two decades, agent-based modeling (ABM) has been developed as a fruitful knowledge-integrating approach to sociological theory building and testing, in particular for understanding how macroscopic social effects arise from simple mechanisms operating at the individual level. ABM, therefore, naturally lends itself as a methodological framework to study emergent properties of groups, such as the emergence of cultural acceptance or rejection of status hierarchies in task groups. ABMs of group dynamics, particularly from computational organizational theories <span><a href="#ref-CohenMarchOlsen1972">(Cohen et al. 1972;</a><a href="#ref-Decker1996"> Decker 1996;</a><a href="#ref-PrietulaCarley1994"> Prietula &amp; Carley 1994)</a></span>, have modeled functional, cognitive-affective, and structural interdependencies predominantly from an information processing perspective. Although these theories have increasingly emphasized the importance of cultural knowledge and normative expectations <a href="#ref-CarleyHill2001">(Carley &amp; Hill 2001)</a>, the encoding of this knowledge and expectations has primarily been either as agent rules dependent largely on the researcher’s knowledge and specific to a particular task domain, or as simulated knowledge of what and whom each agent knows. Consequently, with the present work we are addressing a gap in the organizational modeling literature, namely finding a tractable yet principled approach for modeling cultural dynamics. We are also addressing a gap in the group processes literature, namely incorporating identity maintenance processes into formal models of task groups. Existing models have either simulated agent’s role-identities <a href="#ref-Heise2013">(Heise 2013)</a> but ignored the network structures and associated status hierarchies they operate in; or they have focused on the formation of status hierarchies and the associated network structures <a href="#ref-Mark2009">(Mark et al. 2009)</a>, but have ignored role identities entirely or focused on broad categories such as female versus male workers which are modeled as categorical variables.</p>
+<p id="1.4">Building on <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> work, we propose a more general framework for modeling task groups where cultural knowledge is encoded as sentiments collected from empirical surveys. Agents in our model orient themselves with respect to the sentiments they have about concepts and behaviors, forming expectations about who should do what with whom as they engage in networked and interdependent activities. While the functional interdependence of task groups will often be highly task-specific, we believe that a generalized model that captures the interplay of functional, cognitive-affective and structural interdependence is feasible. The social psychological concept of identity is key to this endeavor. On the one hand, identities are focal concepts organizing an individual’s goals, values, and relationships across different domains of daily life; on the other hand, identities are tied to structural positions in organizations and society.</p>
+<p id="1.5">In this work, we thus extend <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> Group Simulator, which employs a model of identity based on affect control theory, into a more general agent based model that can simulate complex task groups. The extensions include three major contributions. First, we allow for the simulation of interactions within networked group structures. In particular, this enables us to model and investigate the alignment of a group’s role identities with its organizational structure which is implemented as a directed graph <span class="math inline">\(G=(V,E)\)</span> , where the vertices <span class="math inline">\(V\)</span> are a set of agents and the edges <span class="math inline">\(E\)</span> are a set of directed behavior pathways. This extension is important because the ability to manage expectations is heavily influenced by the group’s organizational structure. Furthermore, networks can be connected to status hierarchies that are present in the group, allowing us to investigate the functioning of role hierarchies within a variety of formal group structures. Note that this work grew out of an effort to model digital task-groups that collaborate online. In these settings, we repeatedly encountered interaction structures that were restricted to specific network topologies <a href="#ref-Zoller2020">(Zöller et al. 2020)</a>. Moreover, we found that the possible actions of group members were often restricted to a discrete set of behaviors, owing to the technical design of the platform on which the interactions took place. Therefore, we introduced our second innovation to <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> model, the possibility to restrict the action space to a discrete set of behaviors. This feature is also helpful when one wants to compare simulation results to empirical data for which a discrete annotation scheme was employed such as <a href="#ref-Bales1950">Bales</a>’s <a href="#ref-Bales1950">(1950)</a> interaction process analysis categories. Finally, task group behavior often follows a protocol. By protocol, we mean a task structure where the completion of certain tasks requires sequential actions from group members with different skillsets at different levels of authority. This is the case not only in computer-mediated collaboration on platforms, but also in bureaucratic organizations that enforce legal or other formal prescriptions of business processes. Consequently, certain actions necessarily follow others or are only possible as a response to other actions. Thus, we added a third extension that allows the user to define behavior protocols in our model, which govern sequences of actions in the simulated groups.</p>
+<p id="1.6">The article is organized as follows. First, we describe the theoretical basis, starting with a brief outline of relevant work about the interplay between social networks and role behavior in task groups followed by a review of Affect Control Theory. Next, we describe our ACTING model, following the established ODD protocol for ABM description <a href="#ref-Grimm2020">(Grimm et al. 2020)</a>. We then turn to a series of simulation experiments aimed at understanding the network functionality of the model in the context of several stylized ideal types of network structures. We investigate how different network structures influence the affective dynamics of identity management of interdependent group members. Furthermore, we demonstrate how the model reproduces well-known empirical findings about cultural expectations and status dynamics in small groups <span><a href="#ref-Ridgeway2019">(Ridgeway 2019;</a><a href="#ref-Ridgeway2004"> Ridgeway &amp; Bourg 2004)</a></span>. We then demonstrate how our framework can be used to model complex task groups that exhibit functional, cognitive-affective, and structural interdependencies, or what <a href="#ref-Merton1957">Merton (1957)</a> called role-sets, i.e "the complement of role-relationships in which persons are involved by virtue of occupying a particular social status". The last methodological step is an application of the model to different empirically realistic interaction structures extracted from the GitHub social graph, to show how simulations help illuminate the identity dynamics and associated status positions that occur in various types of organized collaboration.</p>
+<h3 id="background">Background</h3>
+<p id="2.1">Sociality and cognition are inextricably linked <span><a href="#ref-Donald1991">(Donald 1991;</a><a href="#ref-Dunbar2009"> Dunbar 2009)</a></span>. Groups provide arenas for social learning and skills transmission <a href="#ref-Hobaiter2014">(Hobaiter et al. 2014)</a>. Learning to join and work in groups is critical for children to develop a theory of mind and a sense of agency <span><a href="#ref-Corsaro2005">(Corsaro &amp; Molinari 2005;</a><a href="#ref-Piaget1977"> Piaget 1977)</a></span>. The social networks of social animals (the patterns of relations between group members) influence behaviors related to reproduction, cooperation, conflict, and tool use <span><a href="#ref-Connor2001">(Connor et al. 2001;</a><a href="#ref-Hobaiter2014"> Hobaiter et al. 2014;</a><a href="#ref-Kappeler1999"> Kappeler 1999)</a></span>. In humans, they influence patterns of reciprocation <a href="#ref-Cook1978">(Cook &amp; Emerson 1978)</a>, perceptions of risk <a href="#ref-Molm1999">(Molm et al. 1999)</a>, and group solidarity <a href="#ref-Markovsky1994">(Markovsky &amp; Lawler 1994)</a>. Finally, groups are where dominance relations are sustained and reproduced <span><a href="#ref-Fararo1986">(Fararo &amp; Skvoretz 1986;</a><a href="#ref-Mark2009"> Mark et al. 2009;</a><a href="#ref-Skvoretz1996"> Skvoretz et al. 1996)</a></span>.</p>
+<h4 id="status-dynamics-in-task-groups">Status dynamics in task groups</h4>
+<p id="2.2">Because task groups are important in the allocation of social goods <span><a href="#ref-Berger1972">(Berger et al. 1972</a>; <a href="#ref-Bales1955">Bales & Slater 1955)</a></span>, they have long been the focus of scholars interested in the reproduction of status inequality. By status, we mean both ascribed (e.g., gender and race) and achieved (e.g., a post-secondary degree) characteristics that confer prestige across multiple group settings. <a href="#ref-Merton1957">Merton (1957, p. 110)</a> observed that status and roles serve to connect culturally defined expectations with the patterned conduct and relationships that make up a social structure. He focused on the reproduction of status in work settings through the enactment of role sets. Role sets describe role identities such as doctors, nurses and interns that not only imply a set of attributes such as good or potent but also a set of logical relations such as directing and reporting.</p>
+<p id="2.3">Bales and colleagues <span><a href="#ref-Bales1953">(Bales 1953;</a><a href="#ref-Bales1951"> Bales &amp; Strodtbeck 1951)</a></span> found that groups whose members were presumably initially equal in status, nevertheless exhibited inequalities in participation and influence. This empirical puzzle was the launching point for the expectation states research program in social psychology <span><a href="#ref-Berger1972">(Berger et al. 1972;</a><a href="#ref-Ridgeway1991"> Ridgeway 1991, 2019)</a></span>. The expectation states literature includes a variety of theories; but, central to them all is the notion that goal oriented groups when they form confront an information problem - they do not know who is competent. Group members, thus, must infer competence from social cues such as wealth and prestige. If a correlation exists between resources and nominal characteristics such as race or gender in the population, even if this correlation is spurious, a self-reinforcing pattern of interaction can arise that associates competence with the given characteristic <a href="#ref-Ridgeway1991">(Ridgeway 1991)</a>. These differential expectations create a self-fulfilling prophecy <a href="#ref-Merton1968">(Merton 1968)</a> whereby higher-status group members are more influential and receive disproportionately more positive evaluations and rewards.</p>
+<p id="2.4">Demonstrating how such an endogenous mechanism might operate and testing theoretical assumptions regarding this process has included pioneering simulation studies examining the formation of dominance hierarchies <span><a href="#ref-Grow2019">(Grow &amp; Flache 2019;</a><a href="#ref-Skvoretz1996"> Skvoretz et al. 1996)</a></span>, the exercise of weak power through social exclusion <a href="#ref-Markovsky1993">(Markovsky et al. 1993)</a>, the attribution of status value to nominal characteristics <span><a href="#ref-Lynn2009">(Lynn et al. 2009;</a><a href="#ref-Mark2009"> Mark et al. 2009)</a></span>, and the formation of trust and cooperation <a href="#ref-Macy2011">(Flache &amp; Macy 2011)</a>. In all of these simulation studies, status hierarchies have been defined and quantified through network properties. For example, <a href="#ref-Skvoretz1996">Skvoretz et al. (1996)</a> identify dominance hierarchies by analyzing the directionality of ties. Similarly, <a href="#ref-Lynn2009">Lynn et al. (2009)</a> use in-degree centrality of a deference network as the metric for status ranking. Centrality measures have a long-standing tradition as useful metrics in sociological theory building <a href="#ref-Friedkin1991">(Friedkin 1991)</a>. Examples are Hubbell’s measure of sociometric status <a href="#ref-Hubbell1965">(Hubbell 1965)</a>, Coleman’s measure of power <a href="#ref-Coleman1973">(Coleman 1973)</a>, and Burt’s measure of prestige <a href="#ref-Burt1982">(Burt 1982)</a>. <a href="#ref-Freeman1978">Freeman (1978)</a> identified three different families of centrality that imply three competing theories of how centrality might affect group processes. It is, therefore, important to note that while in most cases a useful metric of group status can be defined in terms of network properties, the exact form will always depend on the specific context and the meaning of ties and nodes in the network. A general review about network theory and small groups can be found in Katz et al. <a href="#ref-Katz2004">(2004)</a>.</p>
+<p id="2.5">In the simulation studies conducted as part of the expectation states program cited above, status characteristics such as gender are typically operationalized as categorical variables that influence an individual’s opportunities to participate in group activities. Role identities such as CEO, supervisor, secretary or intern are not taken into account. However, by jettisoning role identities, an important factor in the relationship between perceived competence and status characteristics is lost. For example, gender scholars <span><a href="#ref-Connor2018">(Connor &amp; Fiske 2018;</a><a href="#ref-Fiske1993"> Fiske &amp; Stevens 1993;</a><a href="#ref-Moss-Racusin2010"> Moss-Racusin et al. 2010;</a><a href="#ref-Rudman1998"> Rudman 1998)</a></span> have found that female leaders experience more scrutiny because gender expectations and role expectations are misaligned (the warmth versus competence dilemma). Thus, they are at greater risk of being unable to leverage their present status in future group interactions <a href="#ref-Ridgeway1999">(Ridgeway &amp; Smith-Lovin 1999)</a>.</p>
+<p id="2.6">In our present study, the focus is on how role expectations that are encoded in affective identities integrate with explicit organizational hierarchies to influence the impressions group members have about one another. Specifically, our focus is to distinguish between group settings where agents are likely to be able to manage expectations given their role, traits, and structural position from settings where this is less likely. By examining the interaction of these factors, we are able to re-integrate role performance as a determinant of status within a generative model using a parsimonious but flexible representation of task groups. To generate the role expectations, we define task groups as role systems where each agent is assigned an identity. We assume that group members seek to fulfill their role identities and behave accordingly, where role identity can be understood as "internalized social positions and their meanings" <a href="#ref-Owens2010">(Owens et al. 2010)</a>. Because behaviors are often definitional to role identities (e.g., teaching and teachers, sentencing and judges, programming and software developers, etc.), we compare situations where agents are able to draw on a wide array of behaviors to affirm their roles, and situations where behaviors are circumscribed by the task or institutional domain. Essentially, we assume that group members orient themselves with respect to affective meanings during group interactions. To develop this claim, we briefly describe affect control theory as it applies to group interaction.</p>
+<h4 id="affect-control-theory">Affect Control Theory</h4>
+<p id="2.7">Affect Control Theory (ACT) is a quantification of classic symbolic interactionist and cultural constructionist ideas about social interaction as based on linguistic meanings of social objects. The theory conceptualizes culture as a collectively shared representation of identities, social behaviors, and modifiers such as personality traits and emotional states <a href="#ref-Heise2007">(Heise 2007)</a>. These concepts are assumed to populate a three-dimensional affective space that spans the three base dimensions of evaluation (how good vs. bad is the person, behavior, or modifier?), potency (how powerful vs. weak is it?), and activity (how active and noisy vs. passive and quiet?). These dimensions, collectively referred to as EPA, have been shown in decades of research to structure the semantic relations of social concepts in psycholinguistic rating studies, and are hypothesized to reflect cross-cultural universals of socio-emotional behavior and experience <a href="#ref-Osgood1975">(Osgood et al. 1975)</a>. The empirical basis of ACT accordingly consists of databases of fundamental affective meanings (denoted <span class="math inline">\(F\)</span> in subsequent equations) of usually many hundred to a few thousand social concepts, assessed in population surveys which tend to show considerable consensus about these meanings within linguistic communities <a href="#ref-Ambrasat2014">(Ambrasat et al. 2014)</a>.</p>
+<p id="2.8">Descriptions of social reality require conceptual combinations. E.g., we expect a "cynical manager" or a "lazy worker" to act differently than a "manager" or a "worker" as such, respectively. These so-called affective amalgamations can be modeled with weighted regression equations that take the fundamental affective meanings of the constituent concepts as input and return an experientially quite accurate EPA vector as output <a href="#ref-Averett1987">(Averett &amp; Heise 1987)</a>. The regression weights come from vignette experiments where participants provide EPA ratings of conceptual combinations. Similarly, ACT scholars have modeled the impressions resulting from specific behaviors such as "a manager scolding a worker" or "a worker ignoring a manager". Again, vignette experiments provide the empirical basis for parameterizing regression equations that take EPA vectors for actor, behavior, and object as input and return a vector for the transient impressions (denoted <span class="math inline">\(\tau\)</span> in subsequent equations) resulting from the described social event as output <a href="#ref-Gollob1974">(Gollob 1974)</a>.</p>
+<p id="2.9">In a given culture, role identities entail normative expectations of behavior. E.g., we would expect a manager to train, supervise, or interview a worker but find it inappropriate if they demeaned, ridiculed, or discouraged them. Mathematically, such expectations are modeled as deflection <span class="math inline">\(d = (F-\tau)^2\)</span>, an inverse measure of the degree to which transient impressions from a social event confirm the fundamental affective meanings of the involved role identities <span><a href="#ref-Heise2007">(Heise 2007;</a><a href="#ref-Morgan2016"> Morgan et al. 2016)</a></span>. ACT is a control theory precisely because it assumes that people are motivated to keep deflection to a minimum; hence, intuitively aligning their social actions with the normative order of their culture. This fundamental principle is in line with a large body of work in social psychology and cognitive science emphasizing the need to maximize cognitive and emotional coherence of thought and action <span><a href="#ref-Hoey2020">(Hoey et al. 2021;</a><a href="#ref-Powers1973"> Powers 1973;</a><a href="#ref-Thagard2001"> Thagard 2001)</a></span>. Much empirical work in the ACT research tradition has shown that the deflection-minimization principle predicts the perceived likelihood of verbally described social events, actual verbal and nonverbal behavior in experiments, and even EEG parameters related to expectation violation (e.g., <span><a href="#ref-Schauenburg2019">Schauenburg et al. 2019;</a><a href="#ref-Schroeder2009"> Schröder &amp; Scholl 2009</a></span>).</p>
+<p id="2.10">Because of ACT’s unique capacity to quantify the symbolic content of social cognitions and their behavioral consequences, the theory lends itself as a conceptual and empirical basis for social simulation. INTERACT <a href="#ref-Heise2007">(Heise 2007, p. 139)</a> is a legacy program written in Java that allows one to model sequences of a dyadic interaction. A more recent probabilistic implementation of ACT as a partially observable Markov decision process called BayesACT (written in Python) has been used to simulate the effects of uncertainty and multiple role identities on the emergence of social structure<a href="#ref-Schroder2016">(Schröder et al. 2016)</a>. Most relevant for the present article is Group Simulator, an agent-based model of small-group dynamics written in Netlogo, whose individual agents act according to the affect-control principle of minimizing deflection <a href="#ref-Heise2013">(Heise 2013)</a>. Heise’s simulation results yielded remarkable agreement with empirical behavior distributions of jury deliberations from classical empirical studies of group dynamics. In the present paper, we build on the Group Simulator to study the alignment of network structures and role identities in work groups.</p>
+<h3 id="acting-model-sec-methods">ACTING Model</h3>
+<p id="3.1">We name the agent-based model presented here ACTING (Affect Control Theory based simulations of Interaction in Networked Groups). The model was implemented in Python using the mesa library for ABM <a href="#ref-Masad2015">(Masad &amp; Kazil 2015)</a>, and the source code for the model and Jupyter notebooks with all simulations presented in this article can be found at <a class="uri" href="https://github.com/nikozoe/ACTING">https://github.com/nikozoe/ACTING</a>. Here, we present a shortened version of the model description following the ODD (Overview, Design concepts, Details) protocol <a href="#ref-Grimm2020">(Grimm et al. 2020)</a>. The complete, detailed version, including all design principles and submodel descriptions is provided in the appendix.</p>
+<p id="3.2">The overall purpose of our model is to simulate task group interactions in order to understand and analyze the interplay between role identities, role expectations, status hierarchies, and the group’s interaction structure. Specifically, we are addressing the following question: Based on their role identities, which team members are more or less likely to occupy high status positions? The formalization of how the effort to maintain role identities translates into role expectations and behaviors is guided by affect control theory (ACT). Thus, another purpose of the model is to bridge the sociological theories of ACT and status characteristics. To consider our model realistic enough for its purpose, we use patterns in behavior distributions and formation of status hierarchies.</p>
+<p id="3.3">The model is grounded in empirical data and it is adaptable to task groups that operate in specific subcultures. For this purpose, a small survey has to be conducted to obtain ratings of central role identities and behaviors. We demonstrate this process by modeling teams of open source software developers, where the interaction structures are derived from empirical observations <a href="#ref-Zoller2020">(Zöller et al. 2020)</a>.</p>
+<h4 id="entities-state-variables-and-scales">Entities, state variables, and scales</h4>
+<p id="3.4">The model includes the following entities: agents which represent members of a task group, a group object (optional) which represents the group identity, and the global environment which is either provided by the GroupModel or by the ProtocolGroupModel. An overview about all entities and their state variables can be found in Table <a href="#tab1">1</a>.</p>
+<table id="tab1">
+<caption><b>Table 1:</b> Overview about the entities and their state variables in the ACTING model to simulate task groups.</caption>
+<tbody><tr style="border-top: thin solid gray">
+<th style="text-align: left;">Variable name</th>
+<th style="text-align: left;">Variable type</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;"><strong>GroupMember</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, static</td>
+<td style="text-align: left;">Fundamental identity consisting of three values in the dimensions Evaluation, Potency, Activity (EPA)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, dynamic</td>
+<td style="text-align: left;">Transient identity consisting of three values in the EPA dimensions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">acting</td>
+<td style="text-align: left;">boolean, dynamic</td>
+<td style="text-align: left;">True if the agent is acting at the current time step</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;"><strong>Group</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, static</td>
+<td style="text-align: left;">Fundamental identity consisting of three values in the EPA dimensions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, dynamic</td>
+<td style="text-align: left;">Transient identity consisting of three values in the EPA dimensions</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;"><strong>GroupModel</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">schedule</td>
+<td style="text-align: left;">object, dynamic</td>
+<td style="text-align: left;">Keeps track of the current time step, also keeps track of the agents whose order is shuffled randomly at each step.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">actor</td>
+<td style="text-align: left;">GroupMember, dynamic</td>
+<td style="text-align: left;">Reference to group member who gets to act at current time step</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">GroupMember or Group, dynamic</td>
+<td style="text-align: left;">Reference to group member who is acted upon at current time step</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">action</td>
+<td style="text-align: left;">[real,real,real], dynamic</td>
+<td style="text-align: left;">Behavior at current time step consisting of three values in the EPA dimensions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">datacollector</td>
+<td style="text-align: left;">object, dynamic</td>
+<td style="text-align: left;">collects agent and model data for later retrieval</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td colspan="3"><strong>ProtocolGroupModel</strong><br><em>If the task group is following a protocol, ProtocolGroupModel is instantiated instead of GroupModel from which it inherits. That means all state variables listed under Group Model are also state variables of ProtocolGroupModel.</em></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">n_iterations</td>
+<td style="text-align: left;">int, dynamic</td>
+<td style="text-align: left;">Specifies the length in time steps of the current protocol part.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">select_actor</td>
+<td style="text-align: left;">string, dynamic</td>
+<td style="text-align: left;">Optional, is interpreted as python code and overwrites the select_actor method from the GroupModel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">(string,string), dynamic</td>
+<td style="text-align: left;">Optional, is interpreted as python code. code[0] is executed before the current protocol part; code[1] is executed after the current protocol part.</td>
+</tr>
+<tr class="odd">
+<td colspan="3"><em>Parameters of GroupModel that become state variables of ProtocolGroupModel</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">reciprocity_rate</td>
+<td style="text-align: left;">float, static</td>
+<td style="text-align: left;">Probabilty for an action to be reciprocal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">object_choice</td>
+<td style="text-align: left;">string, static</td>
+<td style="text-align: left;">Mechanism by which the object (agent who is acted upon) is chosen. Options are <em>min event-tension</em>,<em>max deflection-reduction</em> or <em>random</em>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">action_on_group</td>
+<td style="text-align: left;">Boolean, static</td>
+<td style="text-align: left;">Sets whether actions on the whole group are possible.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">group_action_rate</td>
+<td style="text-align: left;">float, static</td>
+<td style="text-align: left;">Sets the propability for an action to be on the whole group. Only makes sense if action_on_group is True.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">network_structure</td>
+<td style="text-align: left;">Matrix with entries 1 and 0, static</td>
+<td style="text-align: left;">Adjacency matrix of a network graph that determines who can act on whom</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">discrete_actions</td>
+<td style="text-align: left;">list of floats, dynamic</td>
+<td style="text-align: left;">List of possible actions. Each action is parsed as a list of EPA values.</td>
+</tr><tr style="border-top: thin solid gray"><td colspan="3"></td></tr>
+</tbody>
+</table>
+<p id="3.5"><strong>Group members:</strong> All agents in the model are initialized with a fundamental identity <span class="math inline">\(F\)</span>, which remains constant during a simulation run, and an event-driven transient identity, <span class="math inline">\(\tau\)</span>, which changes through interactions with other agents in the group. Both consist of 3-dimensional arrays <span class="math inline">\([E, P, A]\)</span> with values for evaluation, potency and activity. An agent’s deflection <span class="math inline">\(d = (F-\tau)^2\)</span> represents the affective dissonance an agent experiences between their situational and their fundamental identity.</p>
+<p id="3.6"><strong>Group object:</strong> <a href="#ref-Lawler2000">Lawler et al. (2000)</a> find that emotions produced through the interactions of group members are attributed in part to relevant social units. The group identity consequently forms over time through repeated and consistent interactions between its members. Depending on which kind of a group situation one wants to model, it may or may not be sensible to include a group object. Therefore, our implementation of the model makes the integration of a group object optional. In some of the simulations presented in this paper, it is included while in others it is not, depending on the group setting and the focus of the research question. When included, it is simulated as a pseudo agent that like the group members holds a fundamental and a transient identity. The group object can be acted upon, but can not act itself.</p>
+<p id="3.7"><strong>Global environment:</strong> In our implementation, the global environment inherits from the Model class of the Python package mesa <a href="#ref-Masad2015">(Masad &amp; Kazil 2015)</a>. It is either constituted by the GroupModel or its extension ProtocolGroupModel. GroupModel keeps track of the current time step, the order of agents at each time step, who is acting on whom and also the data collection. Parameter settings of the global environment regulate which actions are available (<em>discrete_actions</em>), how often actions are reciprocal (<em>reciprocity_rate</em>), how often an action is performed on the group object (<em>action_on_group</em>) and who can act on whom (<em>network_structure</em>). If the simulated task is made up of a predescribed sequence of actions, the global environment is best represented by the ProtocolGroupModel. ProtocolGroupModel lets the researcher define a protocol in which the global environment changes over time including all aforementioned parameters. Most importantly, this allows the researcher to define different sections of the protocol of different length (<em>n_iterations</em>) for which only a discrete set of actions is available (<em>discrete_actions</em>) to the group members. Further customizations options (<em>select_actor</em>, <em>code</em>) make the ProtocolGroupModel very general and expressive, so that it can be adapted to specific work flows of specialized task groups.</p>
+<p id="3.8">As for the spatial and temporal resolution and extent of the model: Each time step corresponds to an action that is performed by one of the group members. The model does not represent physical space, but instead it represents EPA space in which fundamental and transient identities of agents are located as well as behaviors.</p>
+<h4 id="process-overview-and-scheduling">Process overview and scheduling</h4>
+<p id="3.9">The most important process, which is repeated every time step, is an action being performed by one agent (actor) on another agent (object). First the actor is determined. This is generally the group member with the highest deflection unless the action is probablistically determined to be reciprocal. Next, the object and behavior are determined according to the chosen object selection criterion and ACT principles (see Equation 5). Finally, the action is performed, the resulting changes to the transient identities of all involved agents are applied and the resulting deflection is calculated. There is a chance that the action is directed towards the whole group determined by the model parameter <em>group_action_rate</em>. In this case, all group members except the actor experience the action as if they had been the object.</p>
+<h4 id="design-concepts">Design concepts</h4>
+<p id="3.10">The most important design concepts of the model are <em>basic principles</em>, <em>objectives</em> and <em>interaction</em> which we present here in some detail. For additional design concepts, see the <a href="#appendix">Appendix</a>.</p>
+<h5 id="basic-principles">Basic principles</h5>
+<p id="3.11">The model, modifying and extending <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> Group Simulator, conceptualizes a small group as a "team" in which individuals are committed to helping each other maintain their identities. The formalization of how this effort to maintain role identities translates in role expectations and behaviors is guided by Affect Control Theory, a mathematically specified theory of symbolic interaction <a href="#ref-Heise2007">(Heise 2007)</a>.</p>
+<p id="3.12">An event in ACT consists of an actor A that directs a behavior B towards an object O. After an event, the transient impressions of the actor, object and behavior are changed according to empirically parameterized impression formation equations:</p>
+
+<table class="equation" style>
+
+<tbody>
+<tr class style>
+<td style="text-align: center;"><span class="math display">\[\begin{aligned}
+\boldsymbol{\tau}^T =&amp; \;( A_e \quad A_p \quad A_a \quad B_e \quad B_p \quad B_a \quad O_e \quad O_p \quad O_a  ) \end{aligned}\]</span></td>
+<td style="text-align: right;"><span class="math display">\[(1)\]</span></td>
+</tr>
+</tbody>
+</table>
+<table class="equation" style>
+
+<tbody>
+<tr class style>
+<td style="text-align: center;"><span class="math display">\[\begin{aligned} \mathbf{t}^T =&amp; \;
+(\; 1 \quad A_e \quad A_p \quad A_a \; ... \; B_e \; ... \; O_e \; ... \; A_eB_e \;  ... \; A_eO_e \; ... \; B_eO_e \; ... \;  \\ A_eB_eO_e \; ... \; A_aB_aO_a \; ) \end{aligned}\]</span></td>
+<td style="text-align: right;"><span class="math display">\[(2)\]</span></td>
+</tr>
+</tbody></table>
+
+<table class="equation" style>
+
+<tbody>
+<tr class style>
+<td style="text-align: center;"><span class="math display">\[\begin{aligned} \boldsymbol{\tau}_{aft} = &amp; \;\mathbf{M} \; \mathbf{t}
+\end{aligned}\]</span></td>
+<td style="text-align: right;"><span class="math display">\[(3)\]</span></td>
+</tr>
+</tbody>
+</table>
+
+where <span class="math inline">\(\boldsymbol{\tau}\)</span> is a vector that holds the EPA representations of the transient impressions of actor A, behavior B and object O which as the result of an event becomes <span class="math inline">\(\boldsymbol{\tau}_{aft}\)</span> respectively. The vector <span class="math inline">\(\mathbf{t}\)</span> is calculated from <span class="math inline">\(\boldsymbol{\tau}\)</span> and contains not only the transients of A, B and O but also all possible products of their E, P and A components up to first order in A, B and O. <span class="math inline">\(\mathbf{M}\)</span> is a matrix with prediction coefficients that were estimated through a regression analysis of survey data. In these studies, participants rate the evaluation, potency, and activity of concepts both out-of-context (e.g, the worker) and when combined as vignettes triples (e.g., the worker questions the boss). The equations predict how the E, P, and A values of each event element change as a result from being combined with the other elements based on the out-of-context ratings. The coefficients used in our simulations are the same as those used in <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> study, and were originally obtained from a 1978 survey of North Carolina undergraduates.
+<h5 id="objectives">Objectives</h5>
+<p id="3.13">The agents’ objective is to choose the action that will most confirm their own fundamental identity and the fundamental identities of others. In this regard, the model follows the ACT principle stating that people seek to verify cultural knowledge about the social order <a href="#ref-Heise2007">(Heise 2007)</a>. Formally, this means that agents choose their behavior in order to minimize event deflection <span class="math inline">\(D\)</span> which is defined as</p>
+
+<table class="equation" style>
+
+<tbody>
+<tr class style>
+<td style="text-align: center;"><span class="math display">\[D = (F - \boldsymbol{\tau}_{aft})^2, \quad F^T = \; ( \overline{A}_e \quad \overline{A}_p \quad \overline{A}_a \quad \overline{B}_e \quad \overline{B}_p \quad \overline{B}_a \quad \overline{O}_e \quad \overline{O}_p \quad \overline{O}_a  )\]</span></td>
+<td style="text-align: right;"><span class="math display">\[(4)\]</span></td>
+</tr>
+</tbody>
+</table>
+
+where <span class="math inline">\(F\)</span> is a vector that holds the fundamental identities of actor, behavior, and object person, which remain constant. If the actor and object have been determined, the minimization conditions for deflection
+
+<table class="equation" style>
+
+<tbody>
+<tr class style>
+<td style="text-align: center;"><span class="math display">\[\dfrac{\partial D}{\partial B_i} =  \dfrac{\partial(F - \;\mathbf{M} \; \mathbf{t})^2}{\partial B_i} \overset{!}{=}  0 \;,  \quad i = e,p,a
+\]</span></td>
+<td style="text-align: right;"><span class="math display">\[(5)\]</span></td>
+</tr>
+</tbody>
+</table>
+
+can be solved for the optimal behavior <em>B</em> which may then be calculated from <span class="math inline">\(M\)</span>, <span class="math inline">\(F\)</span> and the transients <span class="math inline">\(\tau\)</span> before the event.
+<p id="3.14">For the full mathematical form of <em>B</em> and its detailed derivation, see part II <em>Mathematics of Affect Control Control theory</em> in Heise’s book <em>Expressive Order</em> <a href="#ref-Heise2007">(Heise 2007)</a>.</p>
+<h5 id="interaction">Interaction</h5>
+<p id="3.15"><strong>Actor and object selection:</strong> In each step of a simulation run, only one actor gets to act on one object which is either another agent or, if applicable, the group object. When an actor and an object are determined and their fundamental and transient identities are known, ACT provides a framework to calculate the optimal behavior which follows cultural norms, preserves role identities, and minimizes affective dissonance to the greatest possible extent (see Objectives). However, ACT provides no clear guidance on how to select an actor or an object in a group setting. This is not surprising since the ACT equations are derived from dyadic vignette experiments. Realistically, who acts upon whom in task groups is often task specific. Nonetheless, we assume that affective reasoning influences actor and object selection because it has an effect on the amount of affective dissonance experienced within the group which agents seek to minimize as per affect control theory’s control principle.</p>
+<p id="3.16">In our model, we follow <a href="#ref-Heise2013">Heise (2013)</a> and assume that the agent who experiences the most deflection will be the next to act. This means that affective dissonance is the only driving force in turn-taking, which in the absence of task-specific information seems sensible. There are other options available in the model implementation like for example <em>random</em> actor selection that might be more accurate depending on the group and the task one wants to model.</p>
+<p id="3.17">After an actor is determined, the <em>object selection criterion</em> regulates how the object that the actor will act upon is chosen. One possible criterion is <em>minimum event tension</em> which was also used in <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> study to model juries. The <em>minimum event tension</em> criterion works as follows: once the actor is set, for each object candidate the optimal behavior is determined according to ACT. Subsequently, the action is carried out hypothetically and the resulting after-event deflection is calculated, which involves only the fundamentals and the transients after the event for the actor, object and behavior. Finally, the actual object is chosen so that this after-event deflection is minimized.</p>
+<p id="3.18">The <em>minimum event tension</em> criterion has the short-coming that it only considers the situational deflection of the actor, object and behavior triple <strong>after</strong> the event. However, Heise points out himself in the article <a href="#ref-Heise2013">(Heise 2013)</a> introducing his original model that it aims at integrating <a href="#ref-Goffman1959">Goffman</a>’s <a href="#ref-Goffman1959">(1959)</a> suggestion that "a small group operates as a <em>team</em> in which individuals are committed to helping each other maintain their identities (faces)". Furthermore, Heise claims that "an individual motivated to action selects as object the group member who provides an optimal basis for creating a <strong>tension-reducing</strong> action that will confirm the fundamental affective meanings of actor and object". However, this tension reduction is not properly taken into account by the <em>minimum event tension</em> criterion. We therefore introduce a different object selection criterion that, in our opinion, adheres even more closely to the control principle. We term the criterion <em>maximum deflection reduction</em>, because it tries to <strong>reduce</strong> overall affective deflection instead of only causing a minimally deflective event. It works as follows: once the actor is set, for each object candidate the optimal behavior is determined based on ACT’s impression change equations and subsequently the hypothetical after-event deflection is calculated. But this is now compared to the overall deflection before the event from which the after after-event deflection is subtracted. Object and behavior are then chosen such as to maximize this difference, i.e. the deflection reduction. This means that both the transient identities and the overall deflection <b>before</b> and <b>after</b> the event are taken into account.</p>
+<p id="3.19"><strong>Action space:</strong> Past ACT models have assumed a continuous connotative action space along the dimensions evaluation, potency and activity, where each point can be mapped to a denotative label, i.e. the name of a behavior in natural language. In our model, the user can specify either a continuous action space, or define a discrete and finite set of possible actions. A discrete action space can be helpful in at least three ways. First, empirical data is often annotated using categorical taxonomies to describe the observed actions <a href="#ref-Bales1950">(Bales 1950)</a>. Although other behaviors might be possible, it is sensible to restrict simulation behaviors to the empirical annotation scheme in order to increase comparability. Second, there is a binning problem when mapping back in hindsight from connotative space to a categorical behavior set in denotative space because the volume that is mapped to each behavior might vary. This in return can lead to biased behavior distributions. Third, in many situations, agents simply only have a limited set of actions at their disposal. This might be due to institutional procedures or limited capabilities that are not captured by role identities. An obvious example where this is the case is the digital sphere. Behaviors might simply be restricted by a graphical user interface or a limited set of possible actions in an application. In our implementation, the action space is limited through passing a list of allowed behaviors in the environment parameter <em>discrete_actions</em>.</p>
+<p id="3.20"><strong>Interaction structure:</strong> In the model, the default setting is that every agent can act on every other agent. But, in many real world situations, who can interact with whom is governed by institutional hierarchies or organizational procedures. Therefore, the user can impose restrictions on who can interact with whom through passing the model a network structure in the form of an adjacency matrix. This means that an agent can only act on another agent if there exists a directed edge from the former to the latter in the network.</p>
+<p id="3.21"><strong>Protocols:</strong> Many task groups are structured by sequential protocols in which some actions necessarily have to follow others in order to complete a task. To allow for a realistic simulation of these groups, we include the possibility to parse such a protocol to the model in the form of a list in which each item represents one part of the protocol. What behaviors are available and how many actions should be carried out is specified for each step. Optionally, different settings for model parameters can be parsed before the beginning of each part as well as custom python code that should be executed before or after the protocol step. This flexibility makes the model expressive and allows one to customize the simulations to specific tasks and work flows of interest.</p>
+<h3 id="simulations">Simulations</h3>
+<p id="4.1">We describe here a series of simulation experiments conducted with the ACTING model. First, we replicate <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> study simulating juries, which provides a baseline validation of our modified Group Simulator model and allows us to appraise the effects of the added features on model behavior. Second, we systematically explore the impact of different network topologies on affective dynamics of small groups according to the model, demonstrating how the model can be used to study how structural and cognitive-affective interdependencies interact in small groups. Third, we show how the model systematically reproduces empirical findings about status dynamics in groups following the expectation states research program in social psychology reviewed above. Lastly, we use the model to analyze interactions in teams of software developers on GitHub, based on a recent empirical study <a href="#ref-Zoller2020">(Zöller et al. 2020)</a>, with the intention to show the practical usefulness and domain-specific adaptability of the model.</p>
+<h4 id="application-jury-deliberations">Application: Jury deliberations</h4>
+<p id="4.2">The purpose of this section is two-fold. On the one hand, we reproduce <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> legacy study in which he simulated jury deliberations and compared the results to empirical data reported by <a href="#ref-Strodtbeck1956">Strodtbeck &amp; Mann (1956)</a>. This serves as a sanity check for the basis of our model implementation. On the other hand, while reproducing these simulations, we explore two of the new features, examining how including these features influences Heise’s original model. First, we explore how including a discrete action space that restricts the behaviors available to the agents influences the model. Second, we explore how a new object selection criterion that aims at maximum deflection reduction instead of only minimizing after-event deflection influences agent behavior.</p>
+<p id="4.3">The empirical data set consists of annotated interpersonal actions in 29 jury deliberations as reported by <a href="#ref-Strodtbeck1956">Strodtbeck &amp; Mann (1956)</a>. The actions were annotated in terms of <a href="#ref-Bales1950">Bales</a>’s <a href="#ref-Bales1950">(1950)</a> 12 Interaction Process Analysis (IPA) categories which are shown in Table <a href="#tab1">2</a>. The reported EPA values are taken from <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> study and are based on a 1978 survey of North Carolina undergraduates <a href="#ref-Smith2006">(Smith-Lovin &amp; Heise 2006)</a>.</p>
+<table id="tab2">
+<caption><b>Table 2:</b> Bales’ Interaction Process Analysis categories and their corresponding survey values in the dimension evaluation, potency and activities.</caption>
+<tbody><tr style="border-top: thin solid gray">
+<th style="text-align: center;">No</th>
+<th style="text-align: center;">IPA Category Name</th>
+<th style="text-align: center;">Concepts</th>
+<th style="text-align: center;">E</th>
+<th style="text-align: center;">P</th>
+<th style="text-align: center;">A</th>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Shows solidarity</td>
+<td style="text-align: center;">help, compliment, gratify</td>
+<td style="text-align: center;">1.78</td>
+<td style="text-align: center;">1.29</td>
+<td style="text-align: center;">.21</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Shows tension release</td>
+<td style="text-align: center;">josh, laugh with, cheer</td>
+<td style="text-align: center;">1.48</td>
+<td style="text-align: center;">.91</td>
+<td style="text-align: center;">1.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Agrees</td>
+<td style="text-align: center;">agree with, understand, accommodate</td>
+<td style="text-align: center;">1.60</td>
+<td style="text-align: center;">.78</td>
+<td style="text-align: center;">.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Gives suggestion</td>
+<td style="text-align: center;">encourage, cue, coach</td>
+<td style="text-align: center;">1.28</td>
+<td style="text-align: center;">1.18</td>
+<td style="text-align: center;">.25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Gives opinion</td>
+<td style="text-align: center;">evaluate, analyze, entreat</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">1.48</td>
+<td style="text-align: center;">0.46</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Gives orientation</td>
+<td style="text-align: center;">inform, educate, explain</td>
+<td style="text-align: center;">1.68</td>
+<td style="text-align: center;">1.62</td>
+<td style="text-align: center;">0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">Asks for orientation</td>
+<td style="text-align: center;">quiz, question, ask about</td>
+<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">0.62</td>
+<td style="text-align: center;">0.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Asks for opinion</td>
+<td style="text-align: center;">consult, prompt, query</td>
+<td style="text-align: center;">0.48</td>
+<td style="text-align: center;">0.74</td>
+<td style="text-align: center;">0.16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">Asks for suggestion</td>
+<td style="text-align: center;">entreat, ask, beseech</td>
+<td style="text-align: center;">0.30</td>
+<td style="text-align: center;">0.24</td>
+<td style="text-align: center;">0.09</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Disagrees</td>
+<td style="text-align: center;">disagree with, ignore, hinder</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">Shows tension</td>
+<td style="text-align: center;">fear, cajole, evade</td>
+<td style="text-align: center;">-0.89</td>
+<td style="text-align: center;">-0.16</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">Shows antagonism</td>
+<td style="text-align: center;">argue with, deride, defy</td>
+<td style="text-align: center;">-0.82</td>
+<td style="text-align: center;">0.71</td>
+<td style="text-align: center;">1.32</td>
+</tr><tr style="border-top: thin solid gray"><td colspan="6"></td></tr>
+</tbody>
+</table>
+<p id="4.4">We conducted all simulations with the exact parameters used by <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a>. For convenience, we briefly state the model parameters here. All simulations modeled groups of 12 agents, 8 holding the fundamental identity of male juror <span class="math inline">\(\tilde{F} = [0.8, 1.6, -0.5]\)</span> and 4 the fundamental identity of a female juror <span class="math inline">\(\tilde{F} = [1.2, 0.7, 0.0]\)</span>. The individual EPA values were based on the same 1978 survey as the IPA categories <a href="#ref-Smith2006">(Smith-Lovin &amp; Heise 2006)</a> and the conjoint identities of male and female juror were obtained with amalgamation equations <a href="#ref-Averett1987">(Averett &amp; Heise 1987)</a>, which model how EPA connotations combine in conceptual combinations of nouns (here: juror) and adjectives (here: female). A group object initiated with the average fundamental and transient identities of all group members was included. Parameters for individuality and initial tension were set to 1.0, the action-on-group rate was set to 0.4 and the reciprocity rate was set to 0.8. For the rationale of these parameter settings, please refer to <a href="#ref-Heise2013">Heise (2013)</a>. All results shown here were averaged over 500 simulations, which ran for 1000 steps each.</p>
+<p id="4.5">We simulate six different settings that we evaluate subsequently against the empirical data. Three object selection criteria, <em>minimum event deflection</em>, <em>random</em> and the novel <em>maximum deflection reduction</em>, are simulated crossed with a continuous action space versus the newly introduced discrete action space. To compare the simulated and empirical data, we calculate the behavior distributions in terms of IPA categories and compute the correlations with empirical data, following <a href="#ref-Heise2013">Heise (2013)</a>. Note that in the case of a discrete action space, the EPA labels of the IPA categories (Table <a href="#tab2">2</a>), i.e. the annotation scheme of the empirical data, are passed as the set of possible discrete actions. In the case of a continuous action space, an observed action is binned to the IPA category to which it has the smallest euclidean distance.</p>
+<p id="4.6">Figure <a href="#fig1">1</a> (a) shows the IPA distributions for all observed behaviors and (b) the observed gender differences in these distributions for all simulated model settings and the empirical data respectively. Table <a href="#tab3">3</a> summarizes all correlations between simulations and the empirical data set. First of all, we see that for all simulation settings high correlations between simulated behavior distributions and empirical data are achieved.<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a> This is equally true for the observed differences in behavior between male and female jurors. With a correlation of 0.96, the best agreement between the simulation and empirical data is reached using a discrete action space in combination with the new object selection criterion of maximum deflection reduction.</p>
+<p id="4.7">A discrete action space increases the correlations with the empirical data for all object selection criterions. For the different object selection criteria, we cannot identify a clear "winner" in terms of correlations with the empirical data. But regarding Figure <a href="#fig2">2</a>, we see that for the newly introduced criterion of maximum deflection reduction, the average level of deflection per agent is indeed notably lower than for the other criteria. There are many factors that influence turn taking. Often, these are task-related and dictated by a sequence of actions in which a task necessarily has to be performed to be completed successfully. They might also depend on cultural conventions or specific role configurations that are not captured in the formalization of ACT as presented here. But if one assumes that agents have full understanding of the affective consequences of their actions and choose their objects in a manner to minimize deflection in the group, then maximum deflection reduction would be the adequate object selection criterion to implement.</p>
+<figure id="fig1">
+<a class="fancybox" href="6/Figure1.png" title='Figure 1. The plot compares empirical data from jury trials with data generated by simulations with different settings. The highest correlation is obtained for a simulation with discrete behaviors and the object selection criterion "max deflection-reduction".'><img alt="" src="6/Figure1.png"/></a><figcaption aria-hidden="true"><b>Figure 1. </b>The plot compares empirical data from jury trials with data generated by simulations with different settings. The highest correlation is obtained for a simulation with discrete behaviors and the object selection criterion "max deflection-reduction".</figcaption>
+</figure>
+<figure id="fig2">
+<a class="fancybox" href="6/Figure2.png" title="Figure 2. Average agent’s deflection levels for different simulation settings."><img alt="" src="6/Figure2.png"/></a><figcaption aria-hidden="true"><b>Figure 2. </b>Average agent’s deflection levels for different simulation settings.</figcaption>
+</figure>
+<table id="tab3">
+<caption><b>Table 3:</b> Correlation between behavior distributions obtained from empirical data and from simulations with different settings.</caption>
+<tbody><tr style="border-top: thin solid gray">
+<td style="text-align: left;">Simulation setting</td>
+<td colspan="2">Correlations IPA distributions simulations – empirical data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td><em>All behaviors</em></td>
+<td><em>Gender diff.</em></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">Min event-tension</td>
+<td>0.87</td>
+<td>0.85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dis. min event-tension</td>
+<td>0.93</td>
+<td>0.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Max defl.-reduction</td>
+<td>0.88</td>
+<td>0.85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dis. max defl.-reduction</td>
+<td>0.96</td>
+<td>0.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Random</td>
+<td>0.88</td>
+<td>0.89</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dis. random</td>
+<td>0.94</td>
+<td>0.9</td>
+</tr><tr style="border-top: thin solid gray"><td colspan="3"></td></tr>
+</tbody>
+</table>
+<h4 id="restricted-group-interaction-structure-toy-network-experiments">Restricted group interaction structure: Toy network experiments</h4>
+<p id="4.8">In many situations, a group’s interaction structure is restricted such that not every group member interacts with every other. Instead, interaction occurs only along a specific network topology. There are a variety of reasons why this can be the case: the interaction restriction might be by design via a top-down approach, arise from organizational procedures, result from task-specific necessities, or emerge naturally from a given role-identity structure. In real-world scenarios, several reasons might be overlapping and difficult to disentangle when observing interactions. To make the simulation of such groups feasible, we enable the user to model these kinds of restrictions using a static network topology that defines which agent can interact with whom. At a theoretical level, this enhanced model allows one to study the complex interactions between structural and cognitive-affective interdependencies in groups.</p>
+<p id="4.9">In the following simulation experiments, we analyze how a restricted interaction structure influences the situational identities occupied by group members, and the level of affective deflection they experience. To uncover the basic effects of different network topologies, we focus on the least complex group structures possible which still exhibits rich differences in their network properties. Thus, we simulate groups of only three agents. There are in principle 13 different connected and directed network topologies with three nodes, but we need each node to have at least one outgoing edge which means that the agent at that position will have a possibility to act on another agent. Of the remaining 7 topologies, we restrict the experiments to the four networks depicted in Figure <a href="#fig3">3</a> because they let us investigate different basic network properties we are interested in. a) is the fully connected base line, b) implies no hierarchy but nodes differ in terms of the number of incoming edges, c) implies a clear hierarchy and d) exhibits transitivity, i.e. a cyclic flow of actions. The remaining three topologies that we don’t analyze here are mere combinations of these basic properties.</p>
+<p id="4.10">In a task group setting, the topologies in Figure <a href="#fig3">3</a> might be interpreted as follows: Network a) resembles an egalitarian team in which all group members can act on one another. Network d) also corresponds to an egalitarian group but is best interpreted as a task group in which the task requires circular iterative sequential actions from the team members. In network b), agent 1 occupies a particular position, but it is somewhat ambiguous what that means in terms of status hierarchy since the existing arrows are reciprocal. We could interpret the setting as a formally egalitarian team in which agent 1 is more in demand, and thus more stressed than the other team members. Finally network c) provides a clear status hierarchy in which agent 1 is the leader who directs agents 2 and 3.</p>
+<figure id="fig3">
+<a class="fancybox" href="6/Figure3.png" title="Figure 3. The 4 network typologies we are simulating."><img alt="" src="6/Figure3.png"/></a><figcaption aria-hidden="true"><b>Figure 3. </b>The 4 network typologies we are simulating.</figcaption>
+</figure>
+<p id="4.11">To ensure that observed effects result from different network topologies and not from the role-identity structure of the agents, we initialize all 3 agents in each simulation with the same typical fundamental identity of a female<a class="footnote-ref" href="#fn2" id="fnref2" role="doc-noteref"><sup>2</sup></a> with an EPA value of <span class="math inline">\([1.78, 0.83, 0.84]\)</span>, but allow for random fluctuations in fundamental and initial transient identities through setting the parameters for individuality and initial tension to <span class="math inline">\(1.0\)</span>. Furthermore, we do not include a group object in this simulation, and in the subsequent toy network simulations for two reasons. First, we are interested in the effects a restricted interaction structure and the related implicit status hierarchy have on group dynamics. We, thus, do not want to blur the effects caused by the network topology by compounding them with actions on the group. Second, in the presence of a restricted interaction structure, it seems implausible that an action on the group object would simply translate in effect to the equivalent of a dyadic action on all group members in equal parts, particularly when the network structure implies a clear status hierarchy.</p>
+<p id="4.12">Figure <a href="#fig4">4</a> shows the time series of transient identities, i.e the evaluation, potency and activity values of each agent, and Figure <a href="#fig5">5</a> shows the deflection levels for each agent and for each of the 4 interaction structures introduced in Figure <a href="#fig3">3</a>. All results are averaged over 2000 simulation runs.</p>
+<p id="4.13">In all the plots, we see that after an initial relaxation phase the sentiments quickly approach a stable plateau. This initial relaxation can be interpreted as the agents’ adjustment to the group situation and their negotiation of their role identities in the group setting. In the symmetric network structures a) and d), we see that all agents have on average the same transient identities. This is, of course, what we expect since no agent holds a more advantageous network position, and all agents are on average initialized with the same fundamental identities. We notice that the circular interactions in network d) do not have a noticeable effect (compared to the fully connected network a), on either the transient identities or on the deflection levels of the agents. This finding hinges on the fact that all agents hold the same fundamental role identities, and would otherwise be different if this was not the case.</p>
+<p id="4.14">In the simulations of the asymmetric network structures b and c, the average transient identities as well as the average deflection levels differ among the agents. This clearly indicates that the network topology influences the affective dynamics of the group. In network b, agent 1 can interact with both of the other agents, but she also gets to be acted upon more often than either agents 2 or 3. Being the object of an action more often diminishes the potency of an agent which in return causes higher levels of deflection. In network c, on the other hand, actor 1 can act on both agents 2 and 3 while they can only act on each other. This results in higher E,P and A values for agent 1 which are closer to her fundamental identity, and therefore results in less deflection. Since network c is the only network that has a clear status hierarchy, we conclude that agents whose network positions provide more opportunities to act are able to choose more identity-conforming actions resulting in lower levels of deflection; this effect is particularly pronounced along the potency dimension.</p>
+<figure id="fig4">
+<a class="fancybox" href="6/Figure4.png" title="Figure 4. Time series of the transient identities (E,P,A) averaged over 2000 simulation runs of a group of three agents (1,2,3) with fundamental identity centered on female (\(EPA = [1.78, 0.83, 0.84]\) ). a) - d) show simulation results for the different network topologies depicted in Figure (3): networks that restrict possible interactions."><img alt="" src="6/Figure4.png"/></a><figcaption aria-hidden="true"><b>Figure 4. </b>Time series of the transient identities (E,P,A) averaged over 2000 simulation runs of a group of three agents (1,2,3) with fundamental identity centered on female (\(EPA = [1.78, 0.83, 0.84]\) ). a) - d) show simulation results for the different network topologies depicted in Figure (<a href="#fig3">3</a>): networks that restrict possible interactions.</figcaption>
+</figure>
+<figure id="fig5">
+<a class="fancybox" href="6/Figure5.png" title="Figure 5. Time series averaged over 2000 simulation runs of the experienced deflection levels in a group of three agents (1,2,3) with fundamental identity centered on female (\(EPA = [1.78, 0.83, 0.84]\) ). a) - d) show simulation results for the different network topologies depicted in Figure (3): networks that restrict possible interactions."><img alt="" src="6/Figure5.png"/></a><figcaption aria-hidden="true"><b>Figure 5. </b>Time series averaged over 2000 simulation runs of the experienced deflection levels in a group of three agents (1,2,3) with fundamental identity centered on female (\(EPA = [1.78, 0.83, 0.84]\) ). a) - d) show simulation results for the different network topologies depicted in Figure (<a href="#fig3">3</a>): networks that restrict possible interactions.</figcaption>
+</figure>
+<h4 id="expectation-states-theory">Expectation states theory</h4>
+<p id="4.15">Here, we show that the model reproduces well-known theorizing and empirical findings about status dynamics in groups. Expectation states theory (EST) offers an explanation for how status hierarchies form and are reproduced in task groups (for review, see <a href="#ref-Ridgeway1999">Ridgeway &amp; Smith-Lovin 1999</a>). According to EST, the absence of knowledge about their coworkers’ competence leads team members to take diffuse status characteristics such as race or gender as signifiers of ability, providing some group members with both more opportunities to contribute, and to have their contributions more favorably evaluated because group members are inclined to believe that they are good. Given differences in opportunities, asymmetries in status and prestige can quickly follow. Gender remains an important status characteristic that informs expectations about behavior. These expectations, in turn, organize social relations between men and women that result in system-level inequalities in access to resources and opportunities, resulting in a wide range of economic and social disparities <a href="#ref-Ridgeway2004">(Ridgeway &amp; Bourg 2004)</a>. Status structures in groups can be thought of as the building blocks of these macro-level structural inequalities. For example, to the extent that status processes make it less likely for women in work groups to become and be accepted as leaders, in the aggregate we will observe that more men than women will hold leadership positions in organizations <a href="#ref-Correll2006">(Correll &amp; Ridgeway 2006)</a>.</p>
+<p id="4.16">Our simulation experiment is driven by the hypothesis that the status-related group dynamics described in the EST research program emerge from affect-control mechanisms in the interdependence of individual group members. To develop this argument, we demonstrate in simulation that our implementation of affect control theory in combination with networked interaction structures is capable of reproducing the structural gendered inequality that men are more culturally accepted in leadership positions than women. To this end, we interpret affective deflection in our simulations as a metric for how well cultural expectations are met. We interpret lower average levels of deflection in a group as the group configuration adhering more closely to cultural norms.</p>
+<p id="4.17">The experimental setup is as follows: We simulate task groups of three agents with an interaction structure corresponding to network c) from the previous section which exhibits a clear status hierarchy of one agent in a leadership position and two agents with an equally subordinate status. We are interested in the interplay between status and gender in a setting when group members have no prior explicit knowledge about the actual merit or competence of their team members. We model this by simulating mixed groups of simple female (<span class="math inline">\(EPA = [1.78, 0.83, 0.84]\)</span>) and male (<span class="math inline">\(EPA = [1.07, 2.01, 1.05]\)</span>) identities without additional identity modifiers that mark competence (EPA values come from data collected from U.S. undergraduates in 2014: <a class="uri" href="http://research.franklin.uga.edu/act/usa-2015">http://research.franklin.uga.edu/act/usa-2015</a>). We then systematically vary which identity is in the leadership position and which gender constitutes the majority of the group. This results in 4 experiments with different setups: 1. A male leader with two female subordinate coworkers. 2. A female leader with one female and male subordinate each. 3. A male leader with one female and male subordinate each, and 4. A female leader with two male subordinate coworkers.</p>
+<p id="4.18">Figure <a href="#fig6">6</a> shows the time series of transient identities; and Figure <a href="#fig7">7</a> shows the deflection levels for each agent and for each of the 4 experimental settings. All results are averaged over 2000 simulation runs.</p>
+<p id="4.19">We observe that a male majority in the groups raises the overall level of deflection. This can be attributed to the fact that cultural norms, expressed in the fundamental male identity <span class="math inline">\(EPA = [1.07, 2.01, 1.05]\)</span>, entail the expectation of males to be particularly potent. Universally high potency is difficult to meet in group settings because role performance consists of performing the task while also confirming ones role identities. As subordinates, male agents have few opportunities to do this because they are acted upon far more often than they act, resulting in a loss of potency.</p>
+<p id="4.20">More importantly, we find that a female agent in the leadership position results in significantly higher levels of deflection compared to a group with the same role composition, but with a male leader. This is exactly what expectation states theory asserts. Since leadership is associated with potency and the male identity is culturally framed and thus perceived as being more potent than their female counterparts, male group leaders are culturally more accepted than female leaders in the absence of additional competence markers. People generally try to perform their role identities in accordance with cultural expectations, which in turn explains at least partially, why disparities remain between men and women in executive and upper management positions.</p>
+<figure id="fig6">
+<a class="fancybox" href="6/Figure6.png" title="Figure 6. Time series of the transient identities (E,P,A) averaged over 2000 simulation runs of a mixed group of three agents with either female (\(EPA = [1.78, 0.83, 0.84]\) ) or male (\(EPA = [1.07, 2.01, 1.05]\)) identity. a) - d) show simulation results for the different combinations of the identities and network positions."><img alt="" src="6/Figure6.png"/></a><figcaption aria-hidden="true"><b>Figure 6. </b>Time series of the transient identities (E,P,A) averaged over 2000 simulation runs of a mixed group of three agents with either female (\(EPA = [1.78, 0.83, 0.84]\) ) or male (\(EPA = [1.07, 2.01, 1.05]\)) identity. a) - d) show simulation results for the different combinations of the identities and network positions.</figcaption>
+</figure>
+<figure id="fig7">
+<a class="fancybox" href="6/Figure7.png" title="Figure 7. Time series of the affective deflection averaged over 2000 simulation runs of a mixed group of three agents with either female (\(EPA = [1.78, 0.83, 0.84]\) ) or male \(EPA = [1.07, 2.01, 1.05]\) identity. a) - d) show simulation results for the different combinations of the identities and network positions."><img alt="" src="6/Figure7.png"/></a><figcaption aria-hidden="true"><b>Figure 7. </b>Time series of the affective deflection averaged over 2000 simulation runs of a mixed group of three agents with either female (\(EPA = [1.78, 0.83, 0.84]\) ) or male \(EPA = [1.07, 2.01, 1.05]\) identity. a) - d) show simulation results for the different combinations of the identities and network positions.</figcaption>
+</figure>
+<h3 id="a-real-world-network-example-online-collaboration-on-github">A Real-World Network Example: Online Collaboration on GitHub</h3>
+<p id="5.1">In the preceding section, we demonstrated that network restrictions on a group’s interaction structure can influence transient identities and the amount of deflection experienced by agents in different network positions. Subsequently, we investigated the interplay between status encoded in a network structure and diffuse status characteristics such as gender that are implied by the agents’ role identities. In this section, we study the effect of specific status characteristics, how they interact with more realistic networked interaction structures, and what that means for a task group’s management of roles and cultural expectations. A specific status characteristic indicates that a person, regardless of social group, has some instrumentality to the specific task goal at hand.</p>
+<p id="5.2">As a real world example, we examine interaction structures found on GitHub, the world’s largest online platform for social coding and collaborative software development. The open source software community is often described as a skill-based meritocracy <span><a href="#ref-Eckhardt2014">(Eckhardt et al. 2014;</a><a href="#ref-Scacchi2007"> Scacchi 2007)</a></span>. Although there have been findings of gendered behavior and gender bias <span><a href="#ref-Terrell2017">(Terrell et al. 2017;</a><a href="#ref-Vedres2019"> Vedres &amp; Vasarhelyi 2019)</a></span> in open source projects as well, the predominant value system in the community is meritocratic. Major motivational factors for developers to contribute to open source projects are the accumulation of reputational status and peer recognition they receive in return, which leads to strong norms for giving credit to authors where credit is supposedly due. This means that developers in leadership positions are presumably selected based on the quality of their contributions and their commitment to a project. Role assignments are of primary importance for programmers’ task groups because perceptions of competence determine who assumes which role <a href="#ref-Bianchi2012">(Bianchi et al. 2012)</a>.</p>
+<p id="5.3">In the process of collaborative software development on GitHub, a central interaction between developers is the acceptance and rejection of pull requests (PRs). If a developer wants to contribute to a project, she usually forks it (i.e., creates a local copy of the code base), commits changes to it, and then sends a pull request to the original project. These code changes are subsequently reviewed and discussed within the group. A developer with the necessary administrative rights, often one of the maintainers, then either accepts or rejects the PR. If it is accepted, the changes are merged into the project’s code base. This work flow is an example of a sequential protocol in which the goal of the task group can only be reached when certain actions are performed in a given order. <a href="#ref-Zoller2020">(Zöller et al. 2020)</a> found different types of groups present on Github, categorized in terms of the network topologies spanned by the history of a project’s accepted PRs. The differences in interaction topology corresponded with differences in productivity, popularity, resilience and language use. In order to shed light on the interplay between topology of the interaction structure, status, role expectations and identity management in collaborative online software development, we take two representative example networks (Figure <a href="#fig8">8</a>) of the most different and clear-cut clusters of this study as the starting point for our analysis. Figure <a href="#fig8">8</a> a) shows an example of a complex interaction topology that exhibits clustering, reciprocity, several high-status developers who have the administrative rights to merge PRs, as well as several lower-status contributors who do not have the right to merge PRs. Figure <a href="#fig8">8</a> b), in contrast, depicts a very clear-cut hierarchical interaction topology with a single maintainer responsible for merging all of the PRs.</p>
+<figure id="fig8">
+<a class="fancybox" href="6/Figure8.png" title="Figure 8. Examples of typical pull request interaction structures found on Github as identified by Zöller et al. (2020)."><img alt="" src="6/Figure8.png"/></a><figcaption aria-hidden="true"><b>Figure 8. </b>Examples of typical pull request interaction structures found on Github as identified by Zöller et al. (<a href="#ref-Zoller2020">2020</a>).</figcaption>
+</figure>
+<h4 id="formalization-of-the-examples">Formalization of the examples</h4>
+<p id="5.4">In the example graphs depicted in Figure <a href="#fig8">8</a>, the directed edges point from the developer who submits to the developer who accepts the PR. But when submitting a PR, a developer does not necessarily know in advance who is going to review it. Hence, to simulate the network structure, we reverse all edges because accepting a PR is without a doubt a directed action towards the submitter while submitting a PR is more accurately modeled as an action on the whole group. Therefore, we include a group object in this simulation setup and allow actions on the group.</p>
+<p id="5.5">Although the network structures at hand were derived from accepted PRs, we assume that the majority of actions are carried out along the same topology. We, thus, feed the adjacency matrices of the reversed graphs into our model as restrictions that govern both pull-requests and group discussion. During the group discussion, actions on the group object are possible in order to adress the whole group. Note that we ignore any occuring self loops.<a class="footnote-ref" href="#fn3" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p id="5.6">In the simulation, we want to mimic the sequence of actions we observe in real Github repositories, i.e. the sequence of submitting a PR, discussing it in the group and it being accepted or rejected by a maintainer. We, therefore, enforce a cyclic protocol in the model that consists of the following sequential actions: 1. An agent submits a PR which is interpreted as an action on the group. 2. The group discusses the PR. This is simulated via a sequence of freely chosen actions that are performed along the network topology or on the group object. The length of the sequence is determined randomly to be between 0 and 10 actions. 3. An agent with merge rights who shares a link with the submitter (specified via the network topology), either accepts or rejects the PR. The agent that actually gets to act is the one that experiences the most deflection among the candidates that come into consideration.</p>
+<p id="5.7">To obtain the EPA labels of relevant concepts in the subculture of software developers, we conducted a mini-survey among <span class="math inline">\(N=17\)</span> proven Github users,<a class="footnote-ref" href="#fn4" id="fnref4" role="doc-noteref"><sup>4</sup></a> in which participants rated concepts along all three dimensions on a continuous scale ranging from <span class="math inline">\(-4.3\)</span> to <span class="math inline">\(+4.3\)</span>. The resulting mean EPA values for these concepts are shown in Table <a href="#tab4">4</a>.</p>
+<table id="tab4">
+<caption><b>Table 4:</b> Mean values and standard deviation of evaluation, potency and activity ratings for different concepts used in the simulations. Ratings were obtained from a mini survey with \(N=17\) participating Github users. The standard deviations are in line with the variation that is to be expected for measuring sentiments. With \(N=17\) the estimated standard error for the mean values is 0.39 (E), 0.41 (P) and 0.44 (A) (<a href="#ref-Heise2010book">Heise 2010</a>).</caption>
+<tbody><tr style="border-top: thin solid gray">
+<td style="text-align: center;">Concept</td>
+<td style="text-align: center;">E</td>
+<td></td>
+<td style="text-align: center;">P</td>
+<td></td>
+<td style="text-align: center;">A</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">mean</td>
+<td>std</td>
+<td style="text-align: center;">mean</td>
+<td>std</td>
+<td style="text-align: center;">mean</td>
+<td>std</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: center;">developer</td>
+<td style="text-align: center;">1.79</td>
+<td>1.01</td>
+<td style="text-align: center;">1.37</td>
+<td>1.04</td>
+<td style="text-align: center;">1.17</td>
+<td>1.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">novice developer</td>
+<td style="text-align: center;">0.70</td>
+<td>0.88</td>
+<td style="text-align: center;">-0.98</td>
+<td>1.05</td>
+<td style="text-align: center;">0.42</td>
+<td>1.28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">experienced developer</td>
+<td style="text-align: center;">1.82</td>
+<td>1.20</td>
+<td style="text-align: center;">2.46</td>
+<td>0.51</td>
+<td style="text-align: center;">1.51</td>
+<td>0.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">submit pull request</td>
+<td style="text-align: center;">1.82</td>
+<td>1.24</td>
+<td style="text-align: center;">0.29</td>
+<td>1.75</td>
+<td style="text-align: center;">1.03</td>
+<td>1.48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">accept pull request</td>
+<td style="text-align: center;">2.13</td>
+<td>0.95</td>
+<td style="text-align: center;">1.64</td>
+<td>1.27</td>
+<td style="text-align: center;">0.78</td>
+<td>1.50</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">reject pull request</td>
+<td style="text-align: center;">-1.37</td>
+<td>1.17</td>
+<td style="text-align: center;">2.01</td>
+<td>1.01</td>
+<td style="text-align: center;">1.33</td>
+<td>1.14</td>
+</tr><tr style="border-top: thin solid gray"><td colspan="7"></td></tr>
+</tbody>
+</table>
+<p id="5.8">To investigate the interplay between specific status characteristics that are encoded in role identities, network positions that imply status, and cultural expectations that mediate between the two, we essentially run four different experiments for each network structure in Figure <a href="#fig8">8</a>.</p>
+<ol type="a">
+<li>All agents are initialized with the fundamental identity of "experienced developer".</li>
+<li>All agents are initialized with the fundamental identity of "novice developer".</li>
+<li>All agents who have higher status and can accept PRs ( i.e. who have an incoming edge in Figure <a href="#fig8">8</a>) are initialized with the fundamental identity of "experienced developer". All other agents are initialized with the fundamental identity "novice developer".</li>
+<li>Agents are randomly initialized with either the identity "experienced developer" or "novice developer" independent of their network position, but with the same numbers of experienced/novice developers as in setup c).</li>
+</ol>
+<p id="5.9">For all four conditions, we set the action-on-group rate and reciprocity rate to zero to have as little overlapping/distracting additional effects as possible. Furthermore, when initializing the model, fundamental identities are drawn from a clipped normal distribution with standard deviation (individuality) 1.0, centered on the target fundamental. All results shown in the subsequent section are averaged over 5000 model runs for each experimental setup.</p>
+<h4 id="results">Results</h4>
+<p id="5.10">Figure <a href="#fig9">9</a> shows the average transient identity profiles, and Figure <a href="#fig10">10</a> the average deflection of the agents at different network positions of the star-shaped topology for the simulations of the four experiments described in the previous section. Similarly, Figure <a href="#fig11">11</a> shows the average transients, and Figure <a href="#fig12">12</a> the average deflection for simulations of the complex network structure.</p>
+<p id="5.11">In the star shaped interaction topology, there is only one project maintainer with a clear network advantage that is higher in status and 8 contributors that have all the same symmetrical network positions with lower status. We see from Figure <a href="#fig9">9</a> a) and b) that whether we simulate a group of experienced developers or a group of novice developers, in both cases the developer in the high status network position (agent 1) exhibits a higher value of potency. However, Figures <a href="#fig10">10</a> a) and b) reveal that, for experienced developers, this increase in potency leads to less deflection while for novice developers it leads to more deflection. The reason for this is that an increased potency aligns more closely with the potent fundamental identity of the experienced developer while it is not role-confirming for the novice developer.</p>
+<p id="5.12">The simulation results suggest that experienced developers experience more deflection than novice developers which holds true for both the star-shaped topology and the more complex interaction structure. In an ACT simulation framework, this is generally the case for agents with more potent identities because they experience a higher level of deflection when acted upon or when they are unable to perform role conforming behavior on less potent agents. Therefore, to illuminate the interplay of role identities with network positions, we keep the simulation settings as comparable as possible in experiments c) and d) and include the same number of experienced and novice developers in the groups.</p>
+<p id="5.13">From Figure <a href="#fig9">9</a> c) for the shar-shaped network and from Figure <a href="#fig11">11</a> c) for the complex topology, we see that matching the status positions in the network with the role identities, i.e the experienced developers with the the high status positions and the novice developers with the low status positions, leads to much higher potency for the experienced developers compared to experiment a). For the complex network in Figure <a href="#fig11">11</a> c), we see an additional splitting of the transient identities, which is produced by the different centralities of the node positions. Unexpectedly, agent 1 exhibits lower potency than the other experienced developers in high status network positions, even though no other agent can directly act on her. The reason for this finding is that agent 1 can only directly act on agent 0 who is also an experienced developer. Because agents try through their actions not only to confirm their own identity but also the identities of the others, agent 1 has to routinely compromise by choosing actions that lead to lower potency and higher evaluation and activity values than would be the case if agent 0 was inexperienced. The potency of agent 0, in return, is lowered as well because she is acted upon regularly by agent 1. For both agents 0 and 1, this translates into slightly higher deflection values which can be seen in Figure <a href="#fig12">12</a> c). This interplay is a nice example of the complex, non-linear dynamics that can quickly arise in affective space when modeling complex role-identity and network cofigurations.</p>
+<p id="5.14">Compared to experiment d) in which the agents are randomly assigned to network positions, the matching in experiment c) leads to a lower mean deflection in the group when averaged over the deflection of all agents. This holds true for the star-shaped topology (Figure <a href="#fig10">10</a>) and for the more complex interaction network (Figure <a href="#fig12">12</a>) where the effect is even stronger due to the more balanced numbers of experienced and novice developers in the group. Comparing the two group cofigurations, lower average deflection levels in one group signify that the assignment of role identities to network positions is culturally more accepted in this group than in the other. Hence, the simulations confirm the repeated statements in the literature that meritocratic values in the form of deference to experienced skilled individuals plays a strong role in the open source software development community. This result may seem trivial, since it might be considered common sense that experienced developers are culturally more accepted in leadership positions than novice developers. However, our model sheds light on how these cultural expectations arise. Specific (and diffuse) status characteristics translate into role identities that imply normative affective meanings. People then choose their actions according to cultural norms, and in such a way as to perform their role identity to confirm its affective meaning, as well as to confirm the affective meanings of the role identities of their fellow team members. Furthermore, the simulations demonstrate that affect control theory as a generic social theory in combination with networked interaction structures and protocol sequences is capable of sensibly reproducing observations from specific occupational fields such as software development.</p>
+<figure id="fig9">
+<a class="fancybox" href="6/Figure9.png" title="Figure 9. Simulation results for transient identities of a group organized in the star-shaped network structure from Figure 8 b) inferred from Github data. Evaluation, Potency and Activity trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions."><img alt="" src="6/Figure9.png"/></a><figcaption aria-hidden="true"><b>Figure 9. </b>Simulation results for transient identities of a group organized in the star-shaped network structure from Figure 8 b) inferred from Github data. Evaluation, Potency and Activity trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions.</figcaption>
+</figure>
+<figure id="fig10">
+<a class="fancybox" href="6/Figure10.png" title="Figure 10. Simulation results for deflection experienced by a group organized in the star-shaped network structure from Figure 8 b) inferred from Github data. Deflection trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions."><img alt="" src="6/Figure10.png"/></a><figcaption aria-hidden="true"><b>Figure 10. </b>Simulation results for deflection experienced by a group organized in the star-shaped network structure from Figure 8 b) inferred from Github data. Deflection trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions.</figcaption>
+</figure>
+<figure id="fig11">
+<a class="fancybox" href="6/Figure11.png" title="Figure 11. Simulation results for transient identities of a group organized in the star-shaped network structure from Figure 8 a) inferred from Github data. Evaluation, Potency and Activity trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions."><img alt="" src="6/Figure11.png"/></a><figcaption aria-hidden="true"><b>Figure 11. </b>Simulation results for transient identities of a group organized in the star-shaped network structure from Figure 8 a) inferred from Github data. Evaluation, Potency and Activity trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions.</figcaption>
+</figure>
+<figure id="fig12">
+<a class="fancybox" href="6/Figure12.png" title="Figure 12. Simulation results for deflection experienced by a group organized in the star-shaped network structure from Figure 8 a) inferred from Github data. Deflection trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions."><img alt="" src="6/Figure12.png"/></a><figcaption aria-hidden="true"><b>Figure 12. </b>Simulation results for deflection experienced by a group organized in the star-shaped network structure from Figure 8 a) inferred from Github data. Deflection trajectories are averaged over 5000 iterations for each network position and experiment. a) The group consists of experienced developers. b) The group consists of novice developers. c) Experienced and novice developers are matched to the network positions. d) Same number of experienced and novice developers as in c), but assigned randomly to the network positions.</figcaption>
+</figure>
+<h3 id="summary-and-discussion">Summary and Discussion</h3>
+<p id="6.1">In this work, we developed and implemented an agent-based model to simulate interactions in complex task groups in constrained environments. To this end, we extended an existing model based on affect control theory by <a href="#ref-Heise2013">Heise (2013)</a> in three important ways. First, we allow the analyst to specify a network topology that restricts possible action pathways in the group which can be used to model hierarchical role configurations. This extension was motivated by observations in online task groups whose interactions occurred solely along network structures. Second, we allow the analyst to specify a discrete set of actions for agents to choose from, which caters to the fact that in many group situations only a limited number of behaviors are admissible, acceptable or available. Third, we allow the analyst to specify sequences of actions that have to be carried out in order. These protocols are often observed in task groups where the completion of a task requires several steps of role-based division of labor.</p>
+<p id="6.2">In a series of simulations, we found that network positions have an influence on agents’ experienced affective deflection and their transient identities, particularly along the dimension of potency. This finding highlights the interconnection between structural properties of groups and group members’ cognitive-affective representations of group interactions. By expressing status hierarchies in terms of node positions in a network topology and interpreting deflection as a metric for cultural acceptance, we were able to build a bridge between expectations states theory and affect control theory that can contribute to new theoretical developments in both literatures. In particular, we succeeded at reproducing central results from the expectation states framework <a href="#ref-Ridgeway2019">(Ridgeway 2019)</a> in simulations of groups whose actions were driven by the affect control principle. The simulations of idealized, mixed-gender task groups suggested that, regardless of actual competence, men were on average culturally more accepted in leadership positions than women, which in the simulations could be traced back to the encoding of cultural norms in affective identity labels. Agents chose their behaviors in such a way as to align them with the cultural expectation from the group towards their role identity, but for female agents in leadership positions the average deflection in the group was significantly higher compared to male agents in leadership positions. This result suggests that in order to promote gender equality sustainably, the cultural norms in which female identity is generally perceived to be less powerful and more positive than the male identity would have to be adjusted. From a symbolic interactionist point of view, cultural meanings arise and are consolidated through interactions. Consequently, by continuously promoting and normalizing female leadership and by increasing its visibility, the perception of the normative female identity can possibly be changed in the long-term future through changes in the cultural affective meanings of female identities.</p>
+<p id="6.3">As an example of a realistic complex task group, we modeled in a series of experiments groups consisting of open source software developers with their domain-specific work flows. We extracted network structures from GitHub, the largest platform for open source software development, and conducted a small survey among verified Github users in which we had the most important role identities and task related behaviors rated on affective scales. This subculture and domain-specific data served as an empirical basis to parameterize the simulation model. The simulations showed that in these groups average deflection was significantly lower if high-status network positions, signifying more responsibility and the power to accept or reject proposed changes to the code base, were filled with experienced developers instead of novice developers. This result is in accordance with the presumed meritocratic value system in the open source software development community, which is essential for the process of self-organization in groups that are not backed by a larger organization.</p>
+<p id="6.4">We believe that this is a good example for how our model can be adapted and generalized to the study of groups in other domains and subcultures which we think is a promising use case of the model for future research. An adaptation process will generally consist of the following steps. First, one will have to research the task domain and its subculture of the groups of interest. This might include the identification of an organizational structure that typically guides group interactions. Furthermore, this is likely to include the identification of important role identities and behavior sequences that are characteristic or necessary for completing core tasks or conducting other focal interaction protocols in the group. Second, one can then design a mini-survey to collect affective ratings of these concepts. These empirical findings can subsequently be injected into the simulation setup which can then be used to illuminate the affective group dynamics, generate hypotheses, or compare different role constellations. In this way, it is possible to systematically analyze the interplay between status characteristics, role identities, and cultural norms and expectations.</p>
+<p id="6.5">There are several limitations in our model that we briefly want to discuss: The ACT equations are derived from dyadic vignettes, but have not been tested empirically in group settings <a href="#ref-Heise2007">(Heise 2007)</a>. We assume that as long as the actions in a group are mostly of a dyadic nature, our model will be accurate, but corrections to the theory and model implementation might be necessary in groups where the focus is on the collective aspects of the group like joint behaviors by or on several agents or towards the group as a whole. In this context, the implementation of the group object should also be reviewed. We followed <a href="#ref-Heise2013">Heise (2013)</a> in how we implemented the group object as a pseudo-agent, but we have the impression that both ACT as a theory as well as its implementation in a simulation model would benefit from a rigorous empirical investigation about how to formalize the group identity within an ACT framework.</p>
+<p id="6.6">Another consequence of the dyadic structure of ACT’s impresssion change equations is that the theory originally did not include propositions about the mechanisms that guide turn taking. Like Heise, we assumed for the most part that taking the initiative to act was guided by deflection levels and only in the simulation of Github groups sometimes the actor was determined by other factors like the administrative rights encoded in the network structure. Note that we tried to shed some light on the differences between possible object selection criteria in the reproduction of the jury simulation experiments, but we did not find tremendous differences in the agreement with the available empirical data set between the different criteria. But the amount of available empirical data was both limited and domain-specific. What we did find, however, was that the newly introduced object selection criterion of maximum deflection reduction did significantly reduce deflection in the group. In any case, we believe that the mechanics of turn taking in groups and its interplay with ACT should be further investigated. This includes the specific micro-interactions group members use to negotiate and signal who is the next person to act. Our current model implementation, where each group member has full and consensual information about each other group member’s state of mind is clearly unrealistic given the bounded rationality of the human brain. A more realistic assumption would be a social-comparison mechanism where the tension experienced by a group member translates into nonverbal cues which are then recognized by other agents, but it remains for future work to model such a mechanism. In addition, a group member’s ability to recognize and understand affective group dynamics might vary and depend on each individual’s communication skills and ability to empathize with others, which are related to the "collective intelligence" <a href="#ref-Woolley2015">(Woolley et al. 2015)</a> of the group as a whole.</p>
+<p id="6.7">An interesting step in the direction of modeling individual differences not only in terms of agents’ observations but also in terms of agents’ ability to manage several roles simultaneously is Bayesian affect control theory <a href="#ref-Schroder2016">(Schröder et al. 2016)</a>, which models dyadic interactions via partially observable Markov decision processes. Observations might also play a role in turn taking. It is plausible to imagine group situations in which a group member might intervene and take the initiative after observing the actions of other group members even when they have not been the target of any action themselves.</p>
+<p id="6.8">In addition, affect control theorists have started to model the interplay of identity maintenance processes and other goals <a href="#ref-Hoey2021">(Hoey, MacKinnon, and Schröder 2021)</a>; this work has important implications for modeling task groups as group members frequently must balance between meeting immediate task goals, advancing their own social status, and ensuring the group’s mid to long-term functioning by supporting both the group’s collective identity and the identities of the group members. Successful identity performance is critical to leveraging social capital at a later point in time, which means that affirming and seeking advancement are not necessarily mutually exclusive. However, we believe that the two processes operate on different time scales. While our model is designed to simulate situational task group settings, an agent’s career advancement is an important long-term strategic goal that is currently not taken into account. The amount of tension between these different objectives is largely influenced by whether personal long-term goals align with the goals of the group. Future group models will ideally include a utility function that enables the modeling of several kinds of objectives and time scales.</p>
+<p id="6.9">Most of the aforementioned limitations could be systematically addressed with a series of networked online experiments that monitor group interaction processes while at the same time controlling the experimental conditions. Combined with a survey among participants this would be a promising branch of future research that could both advance theoretical aspects of group processes research, and at the same time provide an invaluable source of data to directly evaluate simulation models.</p>
+</div> <!-- artbody -->
+
+
+<!-- ========================================= Insert article text above.  All below is generated by epress ==========================-->
+<h3>Model Documentation</h3>
+The ACTING model was implemented in Python 3.6 using the Mesa library for ABM <a href="#ref-Masad2015">(Masad &amp; Kazil 2015)</a>, and the source code for the model and Jupyter notebooks with all simulations presented in this article can be found at <a href="https://github.com/nikozoe/ACTING">https://github.com/nikozoe/ACTING</a>. The source code is also available through the CoMSES Computational Model Library as: ACTING (Affect Control Theory based simulation of Interaction in Networked Groups)" (Version 1.0.0), <a class="uri" href="https://www.comses.net/codebases/fe554877-a041-4fb4-91e5-8400ebec573c/releases/1.0.0/">https://www.comses.net/codebases/fe554877-a041-4fb4-91e5-8400ebec573c/releases/1.0.0/</a>.
+<h3>Notes</h3>
+<ol>
+<li id="fn1" role="doc-endnote">Note that while implementing the model in Python we discovered a bug in the implementation of the object selection that was present in Heise’s original Netlogo version of group simulator. This bug by coincidence slightly increased the correlation between experimental data and Heise’s simulation results (min-event-tension + continuous action space <a href="#ref-Heise2013">Heise (2013)</a>). After the fix, this correlation dropped from 0.91 for all behaviors and 0.92 for the gender differences to 0.87 and 0.85, respectively. We conjecture that Heise calibrated the other parameters, i.e. action-on-group rate and reciprocity rate such as to maximize this correlation, which would explain the drop after the fix.<a class="footnote-back" href="#fnref1" role="doc-backlink"></a></li>
+<li id="fn2" role="doc-endnote">For this example, the type of identity we model is not important because our goal here is to isolate the effect that the network topology has on the agents’ transient identities and deflection levels.<a class="footnote-back" href="#fnref2" role="doc-backlink"></a></li>
+<li id="fn3" role="doc-endnote">Self loops correspond to developers merging their own pull requests.<a class="footnote-back" href="#fnref3" role="doc-backlink"></a></li>
+<li id="fn4" role="doc-endnote">While N=17 might seem small, note that we are measuring cultural consensus not variation. The error on the mean sentiment is reduced by a factor of <span class="math inline">\(1/\sqrt{N}*\)</span> compared to an individual rating. Standard deviations of 1.6 on Evaluation, 1.7 on Potency, and 1.8 on Activity are reasonable general estimates of error when a single respondent is being employed to assess cultural sentiments <a href="#ref-Heise2010book">(Heise 2010)</a>.<a class="footnote-back" href="#fnref4" role="doc-backlink"></a></li>
+</ol>
+<hr><h3 id ="appendix">Appendix: Complete ODD Protocol of the ACTING Model</h3>
+<p id="7.1">The agent-based model presented here is named ACTING (Affect Control Theory based simulations of Interaction in Networked Groups). The model was implemented in python using the mesa library for ABM <a href="#ref-Masad2015">(Masad &amp; Kazil 2015)</a>, and the source code for the model and Jupyter notebooks with all simulations presented in this article can be found at <a class="uri" href="https://github.com/nikozoe/ACTING">https://github.com/nikozoe/ACTING</a>. In the subsequent description of the model, we follow the ODD protocol <a href="#ref-Grimm2020">(Grimm et al. 2020)</a>.</p>
+<h4 id="purpose-and-patterns">Purpose and patterns</h4>
+<p id="7.2">The purpose of this model is to simulate task group interactions in order to understand and analyze the interplay between role identities, role expectations, status hierarchies, and the group’s interaction structure. A specific purpose of the model is to explain which team members are more or less likely to occupy high status positions based on their role identities. The formalization of how the effort to maintain role identities translates into role expectations and behaviors is guided by affect control theory (ACT). Thus, another purpose of the model is to bridge the sociological theories of ACT and status characteristics.</p>
+<p id="7.3">The patterns used to assess the model’s ability are two-fold. On the one hand, the model is able to reproduce empirical behavior distributions. The model is a modification and extension of an existing model <a href="#ref-Heise2013">(Heise 2013)</a> that was able to accurately predict behavior distributions of jury deliberations and also gender differences in these behaviors. On the other hand, the model explains the phenomenon of status allocation and the formation of status hierarchies in groups. It is able to reproduce empirical findings about gender differences in status allocation in task groups <span><a href="#ref-Ridgeway2019">(Ridgeway 2019;</a><a href="#ref-Ridgeway2004"> Ridgeway &amp; Bourg 2004)</a></span>. The model is also able to link status allocation in groups of open source software developers to meritocratic principles, a finding that has been emphasized by various researchers <span><a href="#ref-Eckhardt2014">(Eckhardt et al. 2014;</a><a href="#ref-Scacchi2007"> Scacchi 2007)</a></span>.</p>
+<p id="7.4">The model is grounded in empirical data and it is adaptable to task groups that operate in specific subcultures. For this purpose, a small survey has to be conducted to obtain ratings of central role identities and behaviors. We demonstrate this process by modeling teams of open source software developers, where the interaction structures are derived from empirical observations (blinded reference).</p>
+<h4 id="entities-state-variables-and-scales-1">Entities, state variables, and scales</h4>
+<p id="7.5">The following entities are included in the model: agents which represent members of a task group, a group object (optional) which represents the group identity, and the global environment which is either provided by the GroupModel or, if the group is following protocols, by the ProtocolGroupModel. In our Python implementation, the latter two are formally derived from the Model class of the mesa package <a href="#ref-Masad2015">(Masad &amp; Kazil 2015)</a>. An overview about all entities and their state variables can be found in Table <a href="#tab5">5</a>.</p>
+<table id="tab5">
+<caption><b>Table 5:</b> Overview about the entities and their state variables in the ACTING model to simulate task groups.</caption>
+<tbody><tr style="border-top: thin solid gray">
+<th style="text-align: left;">Variable name</th>
+<th style="text-align: left;">Variable type</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;"><strong>GroupMember</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, static</td>
+<td style="text-align: left;">Fundamental identity consisting of three values in the dimensions Evaluation, Potency, Activity (EPA)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, dynamic</td>
+<td style="text-align: left;">Transient identity consisting of three values in the EPA dimensions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">acting</td>
+<td style="text-align: left;">boolean, dynamic</td>
+<td style="text-align: left;">True if is acting at current time step</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;"><strong>Group</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, static</td>
+<td style="text-align: left;">Fundamental identity consisting of three values in the EPA dimensions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;"><span class="math inline">\([\)</span>real, real, real<span class="math inline">\(]\)</span>, dynamic</td>
+<td style="text-align: left;">Transient identity consisting of three values in the EPA dimensions</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;"><strong>GroupModel</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">schedule</td>
+<td style="text-align: left;">object, dynamic</td>
+<td style="text-align: left;">keeps track of the current time step. Also keeps track of the agents whose order is shuffled randomly at each step.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">actor</td>
+<td style="text-align: left;">GroupMember, dynamic</td>
+<td style="text-align: left;">Reference to group member who gets to act at current time step</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">GroupMember or Group, dynamic</td>
+<td style="text-align: left;">Reference to group member who is acted upon at current time step</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">action</td>
+<td style="text-align: left;">[real,real,real], dynamic</td>
+<td style="text-align: left;">Behavior at current time step consisting of three values in the EPA dimensions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">datacollector</td>
+<td style="text-align: left;">object, dynamic</td>
+<td style="text-align: left;">collects agent and model data for later retrieval</td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;" colspan="3"><strong>ProtocolGroupModel</strong><br><em>If the task group is following a protocol, ProtocolGroupModel is instantiated instead of GroupModel from which it inherits. That means all state variables listed under Group Model are also state variables of ProtocolGroupModel.</em></td>
+</tr>
+<tr style="border-top: thin solid gray">
+<td style="text-align: left;">n_iterations</td>
+<td style="text-align: left;">int, dynamic</td>
+<td style="text-align: left;">specifies the length in time steps of the current protocol part.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">select_actor</td>
+<td style="text-align: left;">string, dynamic</td>
+<td style="text-align: left;">Optional, is interpreted as python code and overwrites the select_actor method from the GroupModel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">(string,string), dynamic</td>
+<td style="text-align: left;">Optional, is interpreted as python code. code[0] is executed before the current protocol part; code[1] is executed after the current protocol part.</td>
+</tr>
+<tr class="odd">
+<td colspan="3"><em>Parameters of GroupModel that become state variables of ProtocolGroupModel</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">reciprocity_rate</td>
+<td style="text-align: left;">float, static</td>
+<td style="text-align: left;">Probabilty for an action to be reciprocal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">object_choice</td>
+<td style="text-align: left;">string, static</td>
+<td style="text-align: left;">mechanism by which the object (agent who is acted upon) is chosen. Options are <em>min event-tension</em>,<em>max deflection-reduction</em> or <em>random</em>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">action_on_group</td>
+<td style="text-align: left;">Boolean, static</td>
+<td style="text-align: left;">Sets whether actions on the whole group are possible.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">group_action_rate</td>
+<td style="text-align: left;">float, static</td>
+<td style="text-align: left;">Sets the propability for an action to be on the whole group. Only makes sense if action_on_group is True.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">network_structure</td>
+<td style="text-align: left;">Matrix with entries 1 and 0, static</td>
+<td style="text-align: left;">Adjacency matrix of a network graph that determines who can act on whom</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">data_model</td>
+<td style="text-align: left;">string, static</td>
+<td style="text-align: left;">Determines which set of empirical coefficients is used in the ACT impression formation equations. Options are: <em>us_unisex</em>, <em>us_male</em>, <em>us_female</em>, <em>canada_unisex</em>, <em>canada_male</em>, <em>canada_female</em>, <em>china_unisex</em>, <em>ger_unisex</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">discrete_actions</td>
+<td style="text-align: left;">list of floats, dynamic</td>
+<td style="text-align: left;">List of possible actions. Each action is parsed as a list of EPA values.</td>
+</tr><tr style="border-top: thin solid gray"><td colspan="3"></td></tr>
+</tbody>
+</table>
+<h5 id="group-members">Group members</h5>
+<p id="7.6">All agents in the model are initialized with a fundamental identity <span class="math inline">\(F\)</span>, which remains constant during a simulation run, and an event-driven transient identity, <span class="math inline">\(\tau\)</span>, which changes through interactions with other agents in the group. Both consist of 3-dimensional arrays <span class="math inline">\([E, P, A]\)</span> with values for evaluation, potency and activity. An agent’s deflection <span class="math inline">\(d = (F-\tau)^2\)</span> represents the affective dissonance an agent experiences between their situational and their fundamental identity.</p>
+<h5 id="group-object">Group object</h5>
+<p id="7.7"><a href="#ref-Lawler2000">Lawler et al. (2000)</a> finds that emotions produced through the interactions of group members are attributed in part to relevant social units. The group identity consequently forms over time through repeated and consistent interactions between its members. Depending on which kind of a group situation one wants to model, it may or may not be sensible to include a group object. Therefore, our implementation of the model makes the integration of a group object optional. If included, it is simulated as a pseudo agent that like the group members holds a fundamental and a transient identity. The group object can be acted upon, but can not act itself.</p>
+<h5 id="groupmodel">GroupModel</h5>
+<p id="7.8">The entity GroupModel controls the global environment. In our implementation, it inherits from the Model class of the Python package Mesa. Its state variables are: 1. <em>schedule</em>, which keeps track of the current time step and the order of agents at each time step. 2. <em>actor</em>, 3. <em>object</em> and 4. <em>action</em> which hold references to the respective group members and the behavior performed at the current time step. 5. The <em>datacollector</em> which collects data at the end of each time step (see Observation in the Design concepts section).</p>
+<p id="7.9">The GroupModel is initialized with several parameters that are described in later subsections.</p>
+<h5 id="protocolgroupmodel">ProtocolGroupModel</h5>
+<p id="7.10">If the group in the simulation is following a protocol, the global environment is controlled by the ProtocolGroupModel instead of the GroupModel. ProcolGroupModel inherits from GroupModel, therefore, it has all its state variables. The ProtocolGroupModel lets the researcher define a protocol in which the global environment changes over time. Formally, this turns all parameters that are present in the GroupModel into state variables in the ProtocolGroupModel. Most importantly, this allows one to change the behaviors available to group members for each section of the protocol through the ‘discrete_actions’ parameter. Furthermore, it lets the modeler specify through the parameters ‘action_on_group’ and ’group_action_rate whether and with which probability actions in a certain protocol section can be performed towards the whole group rather than towards a specific agent. In addition to all parameters already present in the GroupModel, there are three new state variables, two of which are optional:</p>
+<ul>
+<li>n_iterations (mandatory): changes with each part of the protocol and specifies the duration of that part in time steps.</li>
+<li>select_actor (optional): if specified, overwrites the select_actor submodule for that part of the protocol.</li>
+<li>code (optional): custom code that is executed before or after the respective part of the protocol.</li>
+</ul>
+<p id="7.12">This makes the ProtocolGroupModel very general and expressive, so that it can be adapted to specific work flows of specialized task groups.</p>
+<h5 id="scales">Scales</h5>
+<p id="7.13">The model represents time. Each time step corresponds to an action that is performed by one of the group members. The model does not represent physical space, but it represents EPA space in which fundamental and transient identities of agents are located as well as behaviors.</p>
+<h4 id="process-overview-and-scheduling-1">Process overview and scheduling</h4>
+<h5 id="groupmodel-1">GroupModel</h5>
+<p id="7.14">After initialization, the simulation adheres to the following process:</p>
+<ol type="a">
+<li>The <em>GroupModel</em> executes the <em>select_actor</em> submodel. There is a chance that the action is reciprocal with probability <em>reciprocity_rate</em>. If so, the actor is the object of the last action. Otherwise the <em>GroupMember</em> with the highest deflection is selected and assigned to the state variable <em>actor</em>. The actor’s state variable <em>acting</em> is set to true.</li>
+<li>The environment increases the time step in the <em>schedule</em> by 1.</li>
+<li>The group member who has been selected as the actor executes the <em>act</em> submodel, which includes:
+<ol>
+<li>The object and the behavior are determined. There is a chance that the action is directed towards the Group object (if defined) determined by the model parameter <em>group_action_rate</em>. If the action is supposed to be reciprocal or directed towards the group then the object is already known and the behavior is determined via the submodel <em>compute_opt_behavior</em>. Otherwise, the object and behavior are determined via the submodel <em>find_best_object_and_behavior</em> which determines the object according to ACT, only considering possible interaction pathways defined in the model parameter <em>network_structure</em>. The <em>GroupModel</em>’s state variables <em>object</em> and <em>action</em> are updated.</li>
+<li>The submodule <em>compute_transients</em> calculates how the action changes the transient identities of the actor and the object. For the <em>actor</em> and the <em>object</em>, the transient state variable, <em>T</em>, is updated accordingly as well as the value for deflection via the submodel <em>update_deflection</em>. If the object is the <em>Group</em>, then all group members except the actor experience the action as if they had been the object and their transients are updated via the submodule <em>compute_transients</em>.</li>
+</ol></li>
+<li>The <em>datacollector</em> stores the current values of the state variables: <em>actor</em>, <em>object</em>, <em>action</em> and <em>reciprocal</em> as well as the transient identities <em>T</em> and the current deflection of each group member.</li>
+</ol>
+<h5 id="protocolgroupmodel-1">ProtocolGroupModel</h5>
+<p id="7.15">The <em>ProtocolGroupModel</em> is best understood as a sequence of <em>GroupModels</em>. For each part of the protocol, the group and its members remain the same but the parameters of the GroupModel are changed according to a protocol with which the model is initialized. In the following, the process for one protocol segment is described:</p>
+<ul>
+<li>All <em>GroupModel</em> parameters that may now be state variables are set at the beginning of the protocol step.</li>
+<li>If the state variable <em>code</em> is defined, then <em>code</em>[0] is interpreted as Python code and executed.</li>
+<li>For <em>n_iterations</em> time steps, the process is exactly as described before for <em>GroupModel</em>. If the state variable <em>select_actor</em> is defined, it is used in place of the submodel <em>select_actor</em>.</li>
+<li>If the state variable code is defined, then <em>code</em>[1] is interpreted as Python code and executed.</li>
+<li>The next protocol step begins. If the last protocol step is reached and the total simulation time exceeds the sum of <em>n_iterations</em> for each step, then the protocol starts from the beginning.</li>
+</ul>
+<h5 id="discussion">Discussion</h5>
+<p id="7.16">ProtocolGroupModel has been designed to be as expressive as possible. Therefore, it has the additional state variables <em>code</em> and <em>select_actor</em> so that it can be adapted to all kinds of work flows even if they are more complicated than mere sequences of different behaviors. While in principle all parameters of GroupModel become state variables in ProtocolGroupModel, in most simulations only a few of these will change. Most commonly, the parameter <em>discrete_actions</em> allows one to enforce sequential behaviors; i.e., the order in which actions have to be performed in a certain work flow.</p>
+<p id="7.17">In our example of modeling the work flow of software developers, this lets us easily define a protocol with three steps consisting of different behaviors that have to follow each other: 1. A code contribution is proposed. 2. Group members discuss. 3. The code contribution is accepted or rejected. The state variable <em>code</em> is used to keep track of the group member that contributed code in part 1 so that this information can be used in part 3. The <em>select_actor</em> is used to select actors in part 1 and 3 of the protocol depending on their network position.</p>
+<h4 id="design-concepts-1">Design concepts</h4>
+<h5 id="basic-principles-1">Basic principles</h5>
+<p id="7.18">The model, modifying and extending <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> Group Simulator, conceptualizes a small group as a "team" in which individuals are committed to helping each other maintain their identities. The formalization of how this effort to maintain role identities translates in role expectations and behaviors is guided by Affect Control Theory, a mathematically specified theory of symbolic interaction <a href="#ref-Heise2007">(Heise 2007)</a>.</p>
+<p id="7.19">An event in ACT consists of an actor A that directs a behavior B towards an object O. After an event, the transients of actor, object and behavior are changed according to the empirically parameterized impression formation equations 1, 2 and 3 previously shown in Section <a href="#3.12">3.12</a>.</p>
+<h5 id="emergence">Emergence</h5>
+<p id="7.20">Emerging properties of the model are the transient identities and the behavior of each agent. When the transients deviate from the respective fundamental identities, the agents experience deflection. We interpret the average amount of deflection in a group as an emergent metric for the cultural acceptance or rejection of the group setting (or role set), where the setting consists of the member’s role identities, network structure, and available behaviors.</p>
+<h5 id="adaptation">Adaptation</h5>
+<p id="7.21">The behavior of group members is adaptive in the sense that their urge to act is driven by the amount of deflection they experience. Also group members adapt which action they choose on a given turn and whom they direct it towards by considering what effect their action would have on their own and on the object’s deflection levels.</p>
+<h5 id="objectives-1">Objectives</h5>
+<p id="7.22">The agents’ objective is to choose the action that will most confirm their own fundamental identity and the fundamental identities of others. In this regard, the model follows the ACT principle stating that people seek to verify cultural knowledge about the social order <a href="#ref-Heise2007">(Heise 2007)</a>. See Equations 5 and 6 and further details in Section <a href="3.11">3.11</a>. 
+<h5 id="learning">Learning</h5>
+<p id="7.23">Learning is not represented in the model. It is rather assumed that agents have already learned cultural meanings of identities and behaviors before entering the task group situation, and therefore have a shared understanding of these concepts.</p>
+<h5 id="prediction">Prediction</h5>
+<p id="7.24">If the environment parameter <em>discrete_actions</em> is defined, it holds a limited number of behaviors that group members can perform. To choose a behavior, an actor will predict the amount of deflection each behavior would cause and pick the one that causes the least. When there is no restriction on the action space, this prediction is done implicitly by solving the optimization problem stated in equation <span class="citation" data-cites="eq">(<span class="citeproc-not-found" data-reference-id="eq"><strong>???</strong></span>)</span>: appendix-optimization.</p>
+<h5 id="sensing">Sensing</h5>
+<p id="7.25">In ACT, agents can theoretically only sense behavior clues such as facial expressions from which they infer mental representations of the identities of others. We do not model this process, but assume in an idealized and simplified manner that the agents’ capability of inference includes all transient identities of all group members and the resulting deflection can be perceived by all others. This information then influences actor, object, and behavior selection.</p>
+<h5 id="interaction-1">Interaction</h5>
+<p id="7.26"><strong>Actor and object selection:</strong> In each step of a simulation run, only one actor gets to act on one object which is either another agent or, if applicable, the group object. When an actor and an object are determined and their fundamental and transient identities are known, ACT provides a framework to calculate the optimal behavior which follows cultural norms, preserves role identities, and minimizes affective dissonance to the greatest possible extent (see Objectives). However, ACT provides no clear guidance on how to select an actor or an object in a group setting. This is not surprising since the ACT equations are derived from dyadic vignette experiments. Realistically, who acts upon whom in task groups is often task specific. Nonetheless, we assume that affective reasoning influences actor and object selection because it has an effect on the amount of affective dissonance experienced within the group which agents seek to minimize as per affect control theory’s control principle.</p>
+<p id="7.27">In our model, we follow <a href="#ref-Heise2013">Heise (2013)</a> and assume that the agent who experiences the most deflection will be the next to act. This means that affective dissonance is the only driving force in turn-taking, which in the absence of task-specific information seems sensible. There are other options available in the model implementation like for example <em>random</em> actor selection that might be more accurate depending on the group and the task one wants to model.</p>
+<p id="7.28">After an actor is determined, the <em>object selection criterion</em> regulates how the object that the actor will act upon is chosen. One possible criterion is <em>minimum event tension</em> which was also used in <a href="#ref-Heise2013">Heise</a>’s <a href="#ref-Heise2013">(2013)</a> study to model juries. The <em>minimum event tension</em> criterion works as follows: once the actor is set, for each object candidate the optimal behavior is determined according to ACT. Subsequently, the action is carried out hypothetically and the resulting after-event deflection is calculated, which involves only the fundamentals and the transients after the event for the actor, object and behavior. Finally, the actual object is chosen so that this after-event deflection is minimized.</p>
+<p id="7.29">The <em>minimum event tension</em> criterion has the short-coming that it only considers the situational deflection of the actor, object and behavior triple <strong>after</strong> the event. However, Heise points out himself in the article <a href="#ref-Heise2013">(Heise 2013)</a> introducing his original model that it aims at integrating <a href="#ref-Goffman1959">Goffman</a>’s <a href="#ref-Goffman1959">(1959)</a> suggestion that "a small group operates as a <em>team</em> in which individuals are committed to helping each other maintain their identities (faces)". Furthermore, Heise claims that "an individual motivated to action selects as object the group member who provides an optimal basis for creating a <strong>tension-reducing</strong> action that will confirm the fundamental affective meanings of actor and object". However, this tension reduction is not properly taken into account by the <em>minimum event tension</em> criterion. We therefore introduce a different object selection criterion that, in our opinion, adheres even more closely to the control principle. We term the criterion <em>maximum deflection reduction</em>, because it tries to <strong>reduce</strong> overall affective deflection instead of only causing a minimally deflective event. It works as follows: once the actor is set, for each object candidate the optimal behavior is determined based on ACT’s impression change equations and subsequently the hypothetical after-event deflection is calculated. But this is now compared to the overall deflection before the event from which the after after-event deflection is subtracted. Object and behavior are then chosen such as to maximize this difference, i.e. the deflection reduction. This means that both the transient identities and the overall deflection before the event are taken into account.</p>
+<p id="7.30"><strong>Action space:</strong> Past ACT models have assumed a continuous connotative action space along the dimensions evaluation, potency and activity, where each point can be mapped to a denotative label, i.e. the name of a behavior in natural language. In our model, the user can specify either a continuous action space, or define a discrete and finite set of possible actions. A discrete action space can be helpful in at least three ways. First, empirical data is often annotated using categorical taxonomies to describe the observed actions <a href="#ref-Bales1950">(Bales 1950)</a>. Although other behaviors might be possible, it is sensible to restrict simulation behaviors to the empirical annotation scheme in order to increase comparability. Second, there is a binning problem when mapping back in hindsight from connotative space to a categorical behavior set in denotative space because the volume that is mapped to each behavior might vary. This in return can lead to biased behavior distributions. Third, in many situations, agents simply only have a limited set of actions at their disposal. This might be due to institutional procedures or limited capabilities that are not captured by role identities. An obvious example where this is the case is the digital sphere. Behaviors might simply be restricted by a graphical user interface or a limited set of possible actions in an application. In our implementation, the action space is limited through passing a list of allowed behaviors in the environment parameter <em>discrete_actions</em>.</p>
+<p id="7.31"><strong>Interaction structure:</strong> In the model, the default setting is that every agent can act on every other agent. But, in many real world situations, who can interact with whom is governed by institutional hierarchies or organizational procedures. Therefore, the user can impose restrictions on who can interact with whom through passing the model a network structure in the form of an adjacency matrix. This means that an agent can only act on another agent if there exists a directed edge from the former to the latter in the network.</p>
+<p id="7.32"><strong>Protocols:</strong> Many task groups are structured by sequential protocols in which some actions necessarily have to follow others in order to complete a task. To allow for a realistic simulation of these groups, we include the possibility to parse such a protocol to the model in the form of a list in which each item represents one part of the protocol. What behaviors are available and how many actions should be carried out is specified for each step. Optionally, different settings for model parameters can be parsed before the beginning of each part as well as custom python code that should be executed before or after the protocol step. This flexibility makes the model expressive and allows one to customize the simulations to specific tasks and work flows of interest.</p>
+<h5 id="stochasticity">Stochasticity</h5>
+<p id="7.33">At the beginning of a simulation, group members’ fundamental and transient identities are initialized stochastically through parameters <em>individuality</em> and <em>initial_tension</em> (see Initialization). Furthermore, the rate of reciprocal actions and actions directed towards the group may be set through the parameters <em>group_action_rate</em> and <em>reciprocity_rate</em>. Setting these parameters can make sense for simulating certain kinds of task groups where these rates have been observed empirically but are not automatically reproduced by the implemented turn taking mechanisms. Finally, stochasticity may enter a simulation if the length of a protocol part <em>n_iterations</em> is specified as a range. It is then set to a number in that range which is randomly sampled with equal probabilities for all numbers.</p>
+<h5 id="collectives">Collectives</h5>
+<p id="7.34">The group entity, if specified, represents an explicit collective entity since it is typically initialized with the average fundamental and transient identity of all group members and an action towards the group entity affects all group members simultaneously. Furthermore, we regard the average amount of deflection of all group members as an important collective property. It can be interpreted as an emergent metric for the cultural acceptance or rejection of the group setting (or role set), which consists of the member’s role identities, the pathways of interaction specified by the network structure, and the behaviors that are available to the agents. This holds true particularly when comparing the simulation results of different group settings.</p>
+<h5 id="observation">Observation</h5>
+<p id="7.35">At the end of each time step, the <em>datacollector</em> stores data for later retrieval and analysis. It collects the current values of the environment state variables <em>actor</em>, <em>object</em>, <em>action</em> and <em>reciprocal</em> as well as the transient identities <em><span class="math inline">\(\tau\)</span></em> and the current deflection of each group member.</p>
+<h4 id="initialization">Initialization</h4>
+<p id="7.36">The explanation of the initialization is intended to be generic, and initialization may differ among simulation scenarios.</p>
+<p id="7.37">When initializing the desired number of agents at the beginning of a simulation run, two parameters can be passed along with the fundamental identity <span class="math inline">\(\tilde{F}\)</span>, namely <em>individuality</em> <span class="math inline">\(i\)</span> and <em>initial tension</em> <span class="math inline">\(t_i\)</span>. When <em>individuality</em> <span class="math inline">\(i\)</span> is set, the fundamental identity <span class="math inline">\(F\)</span> is drawn from a clipped normal distribution centered around <span class="math inline">\(\tilde{F}\)</span> with a standard deviation of <span class="math inline">\(i\)</span>, otherwise <span class="math inline">\(F = \tilde{F}\)</span>. This accounts for the fact that there is individual variation within role identities. For example, all group leaders will tend to feel powerful, but some more than others. When <em>initial tension</em> <span class="math inline">\(t_i\)</span> is set, the initial transient identity <span class="math inline">\(\tau\)</span> is drawn from a clipped normal distribution centered around <span class="math inline">\(F\)</span> with a standard deviation <span class="math inline">\(t_i\)</span>. This accounts for variation in tension among group members as they enter a group situation. For example, a new group leader might initially feel apprehensive rather than powerful. If <span class="math inline">\(t_i\)</span> is not set, <span class="math inline">\(\tau\)</span> is initialized with the same value as <span class="math inline">\(F\)</span>.</p>
+<p id="7.38">The group identity can be initialized explicitly with EPA values depending on what type of group is modeled. As a default, it is assigned the average of the identities of all agents in the group at the beginning of the simulation.</p>
+<h4 id="sec:appendix-github">Input data</h4>
+<p id="7.39">When modeling task groups that follow a protocol, this protocol is parsed as input data to the ProtocolGroupModel at initialization. It specifies how the environment is changed for the different parts of the protocol. In Section <a href="#5.6">5.6</a> of the main text, we discuss the work flow of software developers presented as an example.</p>
+<h4 id="submodels">Submodels</h4>
+<p id="7.40"><em>update_deflection</em> – updates the deflection for each agent according to <span class="math inline">\(D = (F - \boldsymbol{\tau}_{aft})^2\)</span>.<br/>
+<p id="7.41"><em>compute_opt_behavior</em> – Given the actor and the object, the function finds the behavior that minimizes deflection by solving the optimization problem posed in Equation 5. If the action space is restricted, it searches only among the available actions.</p>
+<p id="7.42"><em>find_best_object_and_behavior</em>: Given the actor, finds best object and behavior applying <em>compute_opt_behavior</em> to all object candidates and taking the network structure of behavior pathways into account.</p>
+<p id="7.43"><em>compute_transients</em> – Given an event specified by actor, object and behavior, the function computes how the transient identities change according to the impression formation Equation 3.</p>
+<p id="7.44">For more information on the mathematical details, see <em>Mathematics of Affect Control Control theory</em> in Heise’s book <em>Expressive Order</em> <a href="#ref-Heise2007">(Heise 2007)</a>.</p>
+
+<hr>
+
+	<div id="refs">
+	<h3>References</h3>
+	<!-- References here -->
+	<p id="ref-Ambrasat2014">AMBRASAT, J., von Scheve, C., Conrad, M., Schauenburg, G., &amp; Schröder, T. (2014). Consensus and stratification in the affective meaning of human sociality. <em>Proceedings of the National Academy of Sciences</em>, <em>111</em>(22), 8001–8006. <a class="doi" href="https://doi.org/10.1073/pnas.1313321111" target="_blank">[doi:10.1073/pnas.1313321111]</a>
+<p id="ref-Averett1987">AVERETT, C., &amp; Heise, D. R. (1987). Modified social identities: Amalgamations, attributions, and emotions. <em>The Journal of Mathematical Sociology</em>, <em>13</em>(1–2), 103–132. <a class="doi" href="https://doi.org/10.1080/0022250x.1987.9990028" target="_blank">[doi:10.1080/0022250x.1987.9990028]</a>
+<p id="ref-Bales1950">BALES, R. F. (1950). <em>Interaction process analysis: A method for the study of small groups</em>. Cambridge, MA: Addison-Wesley Press.
+<p id="ref-Bales1953">BALES, R. F. (1953). The equilibrium problem in small groups. Working Papers in the Theory of Action.
+<p id="ref-Bales1955">BALES, R. F., &amp; Slater, P. E. (1955). 'Role differentiation in small decision-making groups.' In R. Bales & T. Parsons (Eds.), <em>Family, Socialization and Interaction Process</em>, (pp. 259–306). Free Press Glencoe.
+<p id="ref-Bales1951">BALES, R. F., &amp; Strodtbeck, F. L. (1951). Phases in group problem-solving. <em>Journal of Abnormal and Social Psychology</em>, <em>46</em>(4), 485–495. <a class="doi" href="https://doi.org/10.1037/h0059886" target="_blank">[doi:10.1037/h0059886]</a>
+<p id="ref-Berger1972">BERGER, J., Cohen, B. P., &amp; Zelditch, M. (1972). Status characteristics and social interaction. <em>American Sociological Review</em>, <em>37</em>(3), 241–255. <a class="doi" href="https://doi.org/10.2307/2093465" target="_blank">[doi:10.2307/2093465]</a>
+<p id="ref-Bianchi2012">BIANCHI, A. J., Kang, S. M., &amp; Stewart, D. (2012). The organizational selection of status characteristics: Status evaluations in an open source community. <em>Organization Science</em>, <em>23</em>(2), 341–354. <a class="doi" href="https://doi.org/10.1287/orsc.1100.0580" target="_blank">[doi:10.1287/orsc.1100.0580]</a>
+<p id="ref-Burke2006">BURKE, P. J. (2006). 'Interaction in small groups.' In J. Delamater (Ed.), <em>Handbook of Social Psychology</em> (pp. 363–387). Berlin, Heidelberg: Springer.
+<p id="ref-Burt1982">BURT, R. S. (1982). <em>Toward a Structural Theory of Action: Network Models of Social Structure, Perception and Action</em>. Cambridge, MA: Academic Press.
+<p id="ref-CarleyHill2001">CARLEY, K. M., &amp; Hill, V. (2001). Structural change and learning within organizations. In A. Lomi &amp; E. R. Larsen (Eds.), <em>Dynamics of Organizations: Computational Modeling and Organizational Theories</em> (pp. 63–92). Cambridge, MA: The MIT Press.
+<p id="ref-CohenMarchOlsen1972">COHEN, M. D., March, J. G., &amp; Olsen, J. P. (1972). A garbage can model of organizational choice. <em>Administrative Science Quarterly</em>, <em>17</em>(1), 1–25. <a class="doi" href="https://doi.org/10.2307/2392088" target="_blank">[doi:10.2307/2392088]</a>
+<p id="ref-Coleman1973">COLEMAN, J. S. (1973). Loss of power. <em>American Sociological Review</em>, <em>38</em>(1), 1–17.
+<p id="ref-Connor2018">CONNOR, R. A., &amp; Fiske, S. T. (2018). 'Warmth and competence: A feminist look at power and negotiation.' In C. B. Travis, J. W. White, A. Rutherford, W. S. Williams, S. L. Cook, &amp; K. F. Wyche (Eds.), <em>APA Handbook of the Psychology of Women: History, Theory and Battlegrounds</em> (pp. 321–342). Washington, DC: American Psychological Association. <a class="doi" href="https://doi.org/10.1037/0000059-016" target="_blank">[doi:10.1037/0000059-016]</a>
+<p id="ref-Connor2001">CONNOR, R. C., Heithaus, M. R., &amp; Barre, L. M. (2001). Complex social structure, alliance stability and mating access in a bottlenose dolphin "super-alliance". <em>Proceedings of the Royal Society B: Biological Sciences</em>, <em>268</em>(1464), 263–267. <a class="doi" href="https://doi.org/10.1098/rspb.2000.1357" target="_blank">[doi:10.1098/rspb.2000.1357]</a>
+<p id="ref-Cook1978">COOK, K. S., &amp; Emerson, R. M. (1978). Power, equity and commitment in exchange networks. <em>American Sociological Review</em>, <em>43</em>(5), 721–739. <a class="doi" href="https://doi.org/10.2307/2094546" target="_blank">[doi:10.2307/2094546]</a>
+<p id="ref-Correll2006">CORRELL, S. J., &amp; Ridgeway, C. L. (2006). 'Expectation states theory.' In J. Delamater (Ed.), <em>Handbook of Social Psychology</em> (pp. 29–51). Berlin, Heidelberg: Springer. <a class="doi" href="https://doi.org/10.1007/0-387-36921-x_2" target="_blank">[doi:10.1007/0-387-36921-x_2]</a>
+<p id="ref-Corsaro2005">CORSARO, W. A., &amp; Molinari, L. (2005). <em>I compagni: Understanding Children’s Transition from Preschool to Elementary School</em>. New York, NY: Teachers College Press.
+<p id="ref-Decker1996">DECKER, K. (1996). TAEMS: A framework for environment centered analysis &amp; design of coordination mechanisms. <em>Foundations of Distributed Artificial Intelligence</em>, 429–448.
+<p id="ref-Donald1991">DONALD, M. (1991). <em>Origins of the Modern Mind: Three Stages in the Evolution of Culture and Cognition</em>. Cambridge, MA: Harvard University Press.
+<p id="ref-Dunbar2009">DUNBAR, R. I. M. (2009). The social brain hypothesis and its implications for social evolution. <em>Annals of Human Biology</em>, <em>36</em>(5), 562–572. <a class="doi" href="https://doi.org/10.1080/03014460902960289" target="_blank">[doi:10.1080/03014460902960289]</a>
+<p id="ref-Eckhardt2014">ECKHARDT, E., Kaats, E., Jansen, S., &amp; Alves, C. (2014). The merits of a meritocracy in open source software ecosystems. ACM International Conference Proceeding Series. <a class="doi" href="https://doi.org/10.1145/2642803.2642810" target="_blank">[doi:10.1145/2642803.2642810]</a>
+<p id="ref-Fararo1986">FARARO, T. J., &amp; Skvoretz, J. (1986). E-State Structuralism: A theoretical method. <em>American Sociological Review</em>, <em>51</em>(5), 591–602. <a class="doi" href="https://doi.org/10.2307/2095486" target="_blank">[doi:10.2307/2095486]</a>
+<p id="ref-Fiske1993">FISKE, S. T., &amp; Stevens, L. E. (1993). 'What’s so special about sex? Gender stereotyping and discrimination.' In S. Oskamp &amp; M. Costanzo (Eds.), <em>Gender Issues in Contemporary Society</em> (pp. 173–196). Thousand Oaks, CA: Sage Publications.
+<p id="ref-Macy2011">FLACHE, A., &amp; Macy, M. (2011). 'Social dynamics from the bottom up: Agent-Based models of social interaction.' In P. Bearman &amp; P. Hedström (Eds.), <em>The Oxford Handbook of Analytical Sociology</em> (pp. 245–268). Oxford, UK: Oxford University Press. <a class="doi" href="https://doi.org/10.1093/oxfordhb/9780199215362.013.11" target="_blank">[doi:10.1093/oxfordhb/9780199215362.013.11]</a>
+<p id="ref-Freeman1978">FREEMAN, L. C. (1978). Centrality in social networks conceptual clarification. <em>Social Networks</em>, <em>1</em>(3), 215–239. <a class="doi" href="https://doi.org/10.1016/0378-8733(78)90021-7" target="_blank">[doi:10.1016/0378-8733(78)90021-7]</a>
+<p id="ref-Friedkin1991">FRIEDKIN, N. E. (1991). Theoretical foundations for centrality measures. <em>American Journal of Sociology</em>, <em>96</em>(6), 1478–1504. <a class="doi" href="https://doi.org/10.1086/229694" target="_blank">[doi:10.1086/229694]</a>
+<p id="ref-Goffman1959">GOFFMAN, E. (1959). <em>The Presentation of Self in Everyday Life</em>. London, UK: Harmondsworth.
+<p id="ref-Gollob1974">GOLLOB, H. F. (1974). The subject-verb-object approach to social cognition. <em>Psychological Review</em>, <em>81</em>(4), 286. <a class="doi" href="https://doi.org/10.1037/h0036591" target="_blank">[doi:10.1037/h0036591]</a>
+<p id="ref-Grimm2020">GRIMM, V., Railsback, S. F., Vincenot, C. E., Berger, U., Gallagher, C., DeAngelis, D. L., Edmonds, B., Ge, J., Giske, J., Groeneveld, J., Johnston, A. S. A., Milles, A., Nabe-Nielsen, J., Polhill, J. G., Radchuk, V., Rohwäder, M.-S., Stillman, R. A., Thiele, J. C., &amp; Ayllón, D. (2020). The ODD protocol for describing agent-Based and other simulation models: A second update to improve clarity, replication, and structural realism. <em>Journal of Artificial Societies and Social Simulation</em>, <em>23</em>(2), 7: <a href="https://www.jasss.org/23/2/7.html">https://www.jasss.org/23/2/7.html></a>. <a class="doi" href="https://doi.org/10.18564/jasss.4259" target="_blank">[doi:10.18564/jasss.4259]</a>
+<p id="ref-Grow2019">GROW, A., &amp; Flache, A. (2019). 'Agent-based computational models of reputation and status dynamics.' In F. Giardini &amp; R. Wittek (Eds.), <em>The Oxford Handbook of Gossip and Reputation</em> (p. 230). Oxford, UK: Oxford University Press. <a class="doi" href="https://doi.org/10.1093/oxfordhb/9780190494087.013.13" target="_blank">[doi:10.1093/oxfordhb/9780190494087.013.13]</a>
+<p id="ref-Heise2007">HEISE, D. R. (2007). <em>Expressive Order: Confirming Sentiments in Social Actions</em>. Berlin, Heidelberg: Springer Science &amp; Business Media.
+<p id="ref-Heise2010book">HEISE, D. R. (2010). 'Measurement reliability.' In D. R. Heise (Ed.), <em>Surveying Cultures: Discovering Shared Conceptions and Sentiments</em> (pp. 183–202). Hoboken, NJ: Wiley.
+<p id="ref-Heise2013">HEISE, D. R. (2013). Modeling interactions in small groups. <em>Social Psychology Quarterly</em>, <em>76</em>(1), 52–72. <a class="doi" href="https://doi.org/10.1177/0190272512467654" target="_blank">[doi:10.1177/0190272512467654]</a>
+<p id="ref-Hobaiter2014">HOBAITER, C., Poisot, T., Zuberbüler, K., Hoppitt, W., &amp; Gruber, T. (2014). Social network analysis shows direct evidence for social transmission of tool use in wild chimpanzees. <em>PLoS Biology</em>, <em>12</em>(9), e1001960. <a class="doi" href="https://doi.org/10.1371/journal.pbio.1001960" target="_blank">[doi:10.1371/journal.pbio.1001960]</a>
+<p id="ref-Hoey2021">HOEY, J., MacKinnon, N. J., &amp; Schröder, T. (2021). Denotative and connotative management of uncertainty: A computational dual-process model. <em>Judgment and Decision Making</em>, <em>16</em>, 505–550.
+<p id="ref-Hubbell1965">HUBBELL, C. H. (1965). An input-Output approach to clique identification. <em>Sociometry</em>, <em>28</em>(4), 377. <a class="doi" href="https://doi.org/10.2307/2785990" target="_blank">[doi:10.2307/2785990]</a>
+<p id="ref-Kappeler1999">KAPPELER, P. M. (1999). 'Convergence and divergence in primate social systems.' In J. G. Fleagle (Ed.), <em>Primate Communities</em> (pp. 158–170). Cambridge, MA: Cambridge University Press. <a class="doi" href="https://doi.org/10.1017/cbo9780511542381.010" target="_blank">[doi:10.1017/cbo9780511542381.010]</a>
+<p id="ref-Katz2004">KATZ, N., Lazer, D., Arrow, H., &amp; Contractor, N. (2004). Network theory and small groups. <em>Small Group Research</em>, <em>35</em>(3), 307–332. <a class="doi" href="https://doi.org/10.1177/1046496404264941" target="_blank">[doi:10.1177/1046496404264941]</a>
+<p id="ref-Lawler2000">LAWLER, E. J., Thye, S. R., &amp; Yoon, J. (2000). Emotion and group cohesion in productive exchange. <em>American Journal of Sociology</em>, <em>106</em>(3), 616–657. <a class="doi" href="https://doi.org/10.1086/318965" target="_blank">[doi:10.1086/318965]</a>
+<p id="ref-Lindenberg1997">LINDENBERG, S. (1997). Grounding groups in theory: Functional, cognitive, and structural interdependencies. <em>Advances in Group Processes</em>, <em>14</em>, 281–331.
+<p id="ref-Lindenberg2015">LINDENBERG, S. (2015). 'Sociology of groups.' In J. D. Wright (Ed.), <em>International Encyclopedia of the Social &amp; Behavioral Sciences</em> (pp. 434–440). Amsterdam, NL: Elsevier. <a class="doi" href="https://doi.org/10.1016/b978-0-08-097086-8.32064-5" target="_blank">[doi:10.1016/b978-0-08-097086-8.32064-5]</a>
+<p id="ref-Lynn2009">LYNN, F. B., Podolny, J. M., &amp; Tao, L. (2009). A sociological (De)construction of the relationship between status and quality. <em>American Journal of Sociology</em>, <em>115</em>(3), 755–804. <a class="doi" href="https://doi.org/10.1086/603537" target="_blank">[doi:10.1086/603537]</a>
+<p id="ref-Mark2009">MARK, N. P., Smith-Lovin, L., &amp; Ridgeway, C. L. (2009). Why do nominal characteristics acquire status value? A minimal explanation for status construction. <em>American Journal of Sociology</em>, <em>115</em>(3), 832–862. <a class="doi" href="https://doi.org/10.1086/606142" target="_blank">[doi:10.1086/606142]</a>
+<p id="ref-Markovsky1994">MARKOVSKY, B., &amp; Lawler, E. J. (1994). A new theory of group solidarity. Available at: <a href="https://ecommons.cornell.edu/handle/1813/74893">https://ecommons.cornell.edu/handle/1813/74893</a>.
+<p id="ref-Markovsky1993">MARKOVSKY, B., Skvoretz, J., Willer, D., Lovaglia, M. J., &amp; Erger, J. (1993). The seeds of weak power: An extension of network exchange theory. <em>American Sociological Review</em>, <em>58</em>(2), 197. <a class="doi" href="https://doi.org/10.2307/2095966" target="_blank">[doi:10.2307/2095966]</a>
+<p id="ref-Masad2015">MASAD, D., &amp; Kazil, J. (2015). Mesa: An agent-Based modeling framework. Available at: <a href="https://mesa.readthedocs.io/en/stable/">https://mesa.readthedocs.io/en/stable/</a>. <a class="doi" href="https://doi.org/10.25080/majora-7b98e3ed-009" target="_blank">[doi:10.25080/majora-7b98e3ed-009]</a>
+<p id="ref-Merton1957">MERTON, R. K. (1957). The role-Set: Problems in sociological theory. <em>The British Journal of Sociology</em>, <em>8</em>(2), 106–120. <a class="doi" href="https://doi.org/10.2307/587363" target="_blank">[doi:10.2307/587363]</a>
+<p id="ref-Merton1968">MERTON, R. K. (1968). <em>Social Theory and Social Structure</em>. New York, NY: Simon & Schuster.
+<p id="ref-Molm1999">MOLM, L. D., Peterson, G., &amp; Takahashi, N. (1999). Power in negotiated and reciprocal exchange. <em>American Sociological Review</em>, <em>64</em>(6), 876–890. <a class="doi" href="https://doi.org/10.2307/2657408" target="_blank">[doi:10.2307/2657408]</a>
+<p id="ref-Morgan2016">MORGAN, J. H., Rogers, K. B., &amp; Hu, M. (2016). Distinguishing normative processes from noise: A comparison of four approaches to modeling impressions of social events. <em>Social Psychology Quarterly</em>, <em>79</em>(4), 311–332. <a class="doi" href="https://doi.org/10.1177/0190272516666794" target="_blank">[doi:10.1177/0190272516666794]</a>
+<p id="ref-Moss-Racusin2010">MOSS-RACUSIN, C. A., Phelan, J. E., &amp; Rudman, L. A. (2010). When men break the gender rules: Status incongruity and backlash against modest men. <em>Psychology of Men &amp; Masculinity</em>, <em>11</em>(2), 140–151. <a class="doi" href="https://doi.org/10.1037/a0018093" target="_blank">[doi:10.1037/a0018093]</a>
+<p id="ref-Osgood1975">OSGOOD, C. E., May, W. H., &amp; Miron, M. S. (1975). <em>Cross-Cultural Universals of Affective Meaning</em>. Champaign, IL: University of Illinois Press.
+<p id="ref-Owens2010">OWENS, T. J., Robinson, D. T., &amp; Smith-Lovin, L. (2010). Three faces of identity. <em>Annual Review of Sociology</em>, <em>36</em>, 477–499. <a class="doi" href="https://doi.org/10.1146/annurev.soc.34.040507.134725" target="_blank">[doi:10.1146/annurev.soc.34.040507.134725]</a>
+<p id="ref-Piaget1977">PIAGET, J. (1977). 'Problems of equilibration.' In M. Appel (Ed.), <em>Topics in Cognitive Development</em> (pp. 3–13). Berlin Heidelberg: Springer. <a class="doi" href="https://doi.org/10.1007/978-1-4613-4175-8_1" target="_blank">[doi:10.1007/978-1-4613-4175-8_1]</a>
+<p id="ref-Powers1973">POWERS, W. T. (1973). <em>Behavior: The Control of Perception</em>. Chicago, IL: Aldine Transaction.
+<p id="ref-PrietulaCarley1994">PRIETULA, M. J., &amp; Carley, K. M. (1994). Computational organization theory: Autonomous agents and emergent behavior. <em>Journal of Organizational Computing and Electronic Commerce</em>, <em>4</em>(1), 41–83. <a class="doi" href="https://doi.org/10.1080/10919399409540216" target="_blank">[doi:10.1080/10919399409540216]</a>
+<p id="ref-Ridgeway1991">RIDGEWAY, C. (1991). The social construction of status value: Gender and other nominal characteristics. <em>Social Forces</em>, <em>70</em>(2), 367–386. <a class="doi" href="https://doi.org/10.2307/2580244" target="_blank">[doi:10.2307/2580244]</a>
+<p id="ref-Ridgeway2019">RIDGEWAY, C. L. (2019). <em>Status: Why Is It Everywhere? Why Does It Matter?</em> New York, NY: Russell Sage Foundation.
+<p id="ref-Ridgeway2004">RIDGEWAY, C. L., &amp; Bourg, C. (2004). 'Gender as status: An expectation states theory approach.' In A. H. Eagly, A. E. Beall, &amp; R. J. Sternberg (Eds.), <em>The Psychology of Gender</em> (pp. 217–241). Guilford, Surrey: The Guilford Press.
+<p id="ref-Ridgeway1999">RIDGEWAY, C. L., &amp; Smith-Lovin, L. (1999). The gender system and interactions. <em>Annual Review of Sociology</em>, <em>25</em>, 191–216. <a class="doi" href="https://doi.org/10.1146/annurev.soc.25.1.191" target="_blank">[doi:10.1146/annurev.soc.25.1.191]</a>
+<p id="ref-Rudman1998">RUDMAN, L. A. (1998). Self-Promotion as a risk factor for women. <em>Journal of Personality and Social Psychology</em>, <em>74</em>(3), 629–645. <a class="doi" href="https://doi.org/10.1037/0022-3514.74.3.629" target="_blank">[doi:10.1037/0022-3514.74.3.629]</a>
+<p id="ref-Scacchi2007">SCACCHI, W. (2007). Free/open source software development: Recent research results and emerging opportunities. ESEC/FSE’07: 6th Joint Meeting of the European Software Engineering Conference and the ACMSIGSOFT Symposium on the Foundations of Software Engineering - Companion Papers <a class="doi" href="https://doi.org/10.1145/1295014.1295019" target="_blank">[doi:10.1145/1295014.1295019]</a>
+<p id="ref-Schauenburg2019">SCHAUENBURG, G., Conrad, M., von Scheve, C., Barber, H. A., Ambrasat, J., Aryani, A., &amp; Schröder, T. (2019). Making sense of social interaction: Emotional coherence drives semantic integration as assessed by event-related potentials. <em>Neuropsychologia</em>, <em>125</em>, 1–13. <a class="doi" href="https://doi.org/10.1016/j.neuropsychologia.2019.01.002" target="_blank">[doi:10.1016/j.neuropsychologia.2019.01.002]</a>
+<p id="ref-Schroder2016">SCHRÖDER, T., Hoey, J., &amp; Rogers, K. B. (2016). Modeling dynamic identities and uncertainty in social interactions: Bayesian affect control theory. <em>American Sociological Review</em>, <em>81</em>(4), 828–855.
+<p id="ref-Schroeder2009">SCHRÖDER, T., &amp; Scholl, W. (2009). Affective dynamics of leadership: An experimental test of affect control theory. <em>Social Psychology Quarterly</em>, <em>72</em>, 180–197. <a class="doi" href="https://doi.org/10.1177/019027250907200207" target="_blank">[doi:10.1177/019027250907200207]</a>
+<p id="ref-Skvoretz1996">SKVORETZ, J., Faust, K., &amp; Fararo, T. J. (1996). Social structure, networks, and E-state structuralism models. <em>Journal of Mathematical Sociology</em>, <em>21</em>(1–2), 57–76. <a class="doi" href="https://doi.org/10.1080/0022250x.1996.9990174" target="_blank">[doi:10.1080/0022250x.1996.9990174]</a>
+<p id="ref-Smith2006">SMITH-LOVIN, L., &amp; Heise, D. R. (2006). Mean affective ratings of 2,106 concepts by University of North Carolina undergraduates in 1978. <em>Data in Computer Program Interact</em>, <em>25</em>, 2012.
+<p id="ref-Strodtbeck1956">STRODTBECK, F. L., &amp; Mann, R. D. (1956). Sex role differentiation in jury deliberations. <em>Sociometry</em>, <em>19</em>(1), 3. <a class="doi" href="https://doi.org/10.2307/2786099" target="_blank">[doi:10.2307/2786099]</a>
+<p id="ref-Terrell2017">TERRELL, J., Kofink, A., Middleton, J., Rainear, C., Murphy-Hill, E., Parnin, C., &amp; Stallings, J. (2017). Gender differences and bias in open source: Pull request acceptance of women versus men. <em>PeerJ Computer Science</em>, <em>2017</em>(5), 1–25. <a class="doi" href="https://doi.org/10.7717/peerj-cs.111" target="_blank">[doi:10.7717/peerj-cs.111]</a>
+<p id="ref-Thagard2001">THAGARD, P. (2001). 'How to make decisions: Coherence, emotion, and practical inference.' In E. Millgram (Ed.), <em>Varieties of Practical Inference</em> (pp. 355–371). Cambridge, MA: The MIT Press.
+<p id="ref-Vedres2019">VEDRES, B., &amp; Vasarhelyi, O. (2019). Gendered behavior as a disadvantage in open source software development. <em>EPJ Data Science</em>, <em>8</em>(25), 2019. <a class="doi" href="https://doi.org/10.1140/epjds/s13688-019-0202-z" target="_blank">[doi:10.1140/epjds/s13688-019-0202-z]</a>
+<p id="ref-Woolley2015">WOOLLEY, A. W., Aggarwal, I., &amp; Malone, T. W. (2015). Collective intelligence and group performance. <em>Current Directions in Psychological Science</em>, <em>24</em>(6), 420–424. <a class="doi" href="https://doi.org/10.1177/0963721415599543" target="_blank">[doi:10.1177/0963721415599543]</a>
+<p id="ref-Zoller2020">ZÖLLER, N., Morgan, J. H., &amp; Schröder, T. (2020). A topology of groups: What GitHub can tell us about online collaboration. <em>Technological Forecasting and Social Change</em>, <em>161</em>, 120291.
+
+                    </div> <!-- refs -->
+                    <!-- ========================================= Insert article text above.  All below is generated by epress ==========================-->
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+            <div id="toc" class="new_style_toc"> <!-- SD 2021-03-17 -->
+            </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+  </main>
+
+  <div id="include_footer"></div>
+
+  <script src="/v02/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/v02/assets/dist/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="/scripts/tipped.js"></script>
+  <script type="text/javascript" src="/scripts/toc.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-568ee0f1cb084f8f" async="async"></script>
+  <script src="/v02/custom_js.js"></script>
+      
+  <script>
+    $(function() {
+            // create the Table of Contents at the right margin.  From http://projects.jga.me/toc/
+          $('#toc').toc({
+               'selectors': 'h3,h4,h5', //elements to use as headings
+          'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+            return $heading[0].tagName.toLowerCase();
+          }
+          });
+          // give the paragraph numbers a CSS class, paranum
+          $('#artbody p').each(function(){
+              var me = $(this);
+              me.html( '<span class="paranum">' + me.attr('id') + '</span>' + me.html() );
+              });	
+           //  Simple image gallery. Uses default settings. From http://fancyapps.com/fancybox/
+          $('.fancybox').fancybox({helpers:{ title : { type : 'outside' } } });
+          // pop up with author biographical details in header From http://www.tippedjs.com/
+          Tipped.create('.author', {maxWidth: 400, close: 'overlap'});
+          //  Pop up for citations and footnote links. From http://www.tippedjs.com/
+          Tipped.create('#artbody a[href^="#"]', function(element) {
+              return $($(element).attr('href')).html();
+              }, {
+              maxWidth: 300,
+              size: 'medium'
+              });
+    });
+          
+	</script>
+
+  </body>
+
+</html>

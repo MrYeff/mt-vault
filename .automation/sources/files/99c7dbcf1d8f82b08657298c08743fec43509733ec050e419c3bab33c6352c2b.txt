@@ -1,0 +1,110 @@
+---
+title: "RecSim: A Configurable Simulation Platform for Recommender Systems"
+tags:
+  - recommender_system
+  - simulation
+authors:
+  - "[[Literature/Authors/Eugene Ie|Eugene Ie]]"
+  - "[[Literature/Authors/Chih‐Wei Hsu|Chih‐Wei Hsu]]"
+  - "[[Literature/Authors/Martin Mladenov|Martin Mladenov]]"
+  - "[[Literature/Authors/Vihan Jain|Vihan Jain]]"
+  - "[[Literature/Authors/Sanmit Narvekar|Sanmit Narvekar]]"
+  - "[[Literature/Authors/Jing Wang|Jing Wang]]"
+  - "[[Literature/Authors/Rui Wu|Rui Wu]]"
+  - "[[Literature/Authors/Craig E. Boutilier|Craig E. Boutilier]]"
+publication date: 2019-09-11 
+source: "https://arxiv.org/html/1909.04847"
+doi: 10.48550/arxiv.1909.04847
+  - "model"
+read status: Todo
+---
+
+## Abstract
+
+We propose RecSim, a configurable platform for authoring simulation environments for recommender systems (RSs) that naturally supports sequential interaction with users. RecSim allows the creation of new environments that reflect particular aspects of user behavior and item structure at a level of abstraction well-suited to pushing the limits of current reinforcement learning (RL) and RS techniques in sequential interactive recommendation problems. Environments can be easily configured that vary assumptions about: user preferences and item familiarity; user latent state and its dynamics; and choice models and other user response behavior. We outline how RecSim offers value to RL and RS researchers and practitioners, and how it can serve as a vehicle for academic-industrial collaboration.
+
+## Research Questions
+> Research Questions extracted via LLM
+- How can recommender-system environments represent sequential user interactions and item structure?[^r1]
+- Which configurable assumptions about preferences, familiarity, latent state, and response behavior can researchers vary?[^r1]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+A configurable simulation environment for sequential recommender–user interactions, with user preferences, item familiarity, latent state, and response behavior specified by the environment author.[^r3]
+
+### How does it work?
+Researchers define the environment’s user, item, response, and state-dynamics components; the paper presents RecSim as a platform and does not prescribe one universal user-response equation or transition rule.[^r3]
+
+### What can it answer?
+It can support controlled comparisons of recommender and reinforcement-learning methods under different user and item assumptions; the paper describes a platform rather than a single substantive theory of social behavior.[^r4]
+
+### Where does it apply?
+It applies to sequential interactive recommendation experiments where the researcher can specify the simulated user and item environment.[^r3]
+
+## Metadata
+### References
+- [[NeuralFittedQIterationFirstExperiencesWithADataEfficientNeuralReinforcementLearningMethod]]
+- [[AnIntroductionToMultiEnvironmentMarkovDecisionProcessesInvitedTalk]]
+- [[StatedChoiceMethodsAnalysisAndApplications]]
+- [[ANeuralConversationalModel]]
+- [[MemoryApproachesToReinforcementLearningInNonMarkovianDomains]]
+- [[CritiquingBasedRecommendersSurveyAndEmergingTrends]]
+- [[Grouplens]]
+- [[ModelingDelayedFeedbackInDisplayAdvertising]]
+- [[OptimizingSearchEnginesUsingClickthroughData]]
+- [[AgendaBasedUserSimulationForBootstrappingAPomdpDialogueSystem]]
+- [[FocusingOnTheLongTerm]]
+- [[AnEmpiricalEvaluationOfThompsonSampling]]
+- [[EmpiricalAnalysisOfPredictiveAlgorithmsForCollaborativeFiltering]]
+- [[AContextualBanditApproachToPersonalizedNewsArticleRecommendation]]
+- [[UnresolvedReferenceA2724539DBA960C0]]
+- [[FurtherOptimalRegretBoundsForThompsonSampling]]
+- [[HumanLevelControlThroughDeepReinforcementLearning]]
+- [[MultipleObjectiveOptimizationInRecommenderSystems]]
+- [[FiniteTimeAnalysisOfTheMultiarmedBanditProblem]]
+- [[DeepReinforcementLearningWithAttentionForSlateMarkovDecisionProcessesWithHighDimensionalStatesAndActions]]
+- [[TheMovielensDatasets]]
+- [[MasteringTheGameOfGoWithDeepNeuralNetworksAndTreeSearch]]
+- [[TowardsConversationalRecommenderSystems]]
+- [[RecurrentRecommenderNetworks]]
+- [[AKnowledgeGroundedNeuralConversationModel]]
+- [[DiscreteSequentialPredictionOfContinuousActionsForDeepRl]]
+- [[Drn]]
+- [[DeepDynaQIntegratingPlanningForTaskCompletionDialoguePolicyLearning]]
+- [[DeepReinforcementLearningForPageWiseRecommendations]]
+- [[LearningToInteractWithUsersACollaborativeBanditApproach]]
+- [[BeyondGreedyRankingSlateOptimizationViaListCvae]]
+- [[ConversationalRecommenderSystem]]
+- [[RecogymAReinforcementLearningEnvironmentForTheProblemOfProductRecommendationInOnlineAdvertising]]
+- [[DataCenterCoolingUsingModelPredictiveControl]]
+- [[AirdialogueAnEnvironmentForGoalOrientedDialogueResearch]]
+- [[Seq2slateReRankingAndSlateOptimizationWithRnns]]
+- [[PracticalDiversifiedRecommendationsOnYoutubeWithDeterminantalPointProcesses]]
+- [[HorizonFacebookSOpenSourceAppliedReinforcementLearningPlatform]]
+- [[NaturalEnvironmentBenchmarksForReinforcementLearning]]
+- [[TopKOffPolicyCorrectionForAReinforceRecommenderSystem]]
+- [[SoftActorCriticAlgorithmsAndApplications]]
+- [[DopamineAResearchFrameworkForDeepReinforcementLearning]]
+- [[ChallengesOfRealWorldReinforcementLearning]]
+- [[SlateqATractableDecompositionForReinforcementLearningWithRecommendationSets]]
+- [[ReinforcementLearningWhenAllActionsAreNotAlwaysAvailable]]
+- [[UnresolvedReference198BA460EBA92122]]
+- [[TensorflowASystemForLargeScaleMachineLearning]]
+- [[TowardSimulatingEnvironmentsInReinforcementLearningBasedRecommendations]]
+- [[CollaborativeFilteringBandits]]
+- [[ElfAnExtensiveLightweightAndFlexibleResearchPlatformForRealTimeStrategyGames]]
+- [[VirtualTaobaoVirtualizingRealWorldOnlineRetailEnvironmentForReinforcementLearning]]
+- [[UnresolvedReferenceC05CF18C0C813B90]]
+- [[UnresolvedReference6CF963C466BC63C7]]
+- [[FusingSimilarityModelsWithMarkovChainsForSparseSequentialRecommendation]]
+- [[BuildingPersonalizedSimulatorForInteractiveSearch]]
+- [[UnresolvedReference4781573D1A3B060A]]
+- [[UnresolvedReferenceEA603D5F03C25DFD]]
+- [[UnresolvedReference4A9B0E4B0AE71429]]
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://arxiv.org/abs/1909.04847. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: RecSim, abstract and Sections 2–3 (environment components and examples). Source: https://arxiv.org/abs/1909.04847.
+[^r4]: RecSim, abstract and Sections 2–3 (environment components and examples). Source: https://arxiv.org/abs/1909.04847.

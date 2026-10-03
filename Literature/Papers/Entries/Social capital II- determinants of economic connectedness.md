@@ -1,0 +1,113 @@
+---
+title: "Social capital II: determinants of economic connectedness"
+tags:
+  - social_capital
+  - empirical_study
+authors:
+  - "[[Literature/Authors/Raj Chetty|Raj Chetty]]"
+  - "[[Literature/Authors/Matthew O. Jackson|Matthew O. Jackson]]"
+  - "[[Literature/Authors/Theresa Kuchler|Theresa Kuchler]]"
+  - "[[Literature/Authors/Johannes Stroebel|Johannes Stroebel]]"
+  - "[[Literature/Authors/Nathaniel Hendren|Nathaniel Hendren]]"
+  - "[[Literature/Authors/Robert B. Fluegge|Robert B. Fluegge]]"
+  - "[[Literature/Authors/Sara Gong|Sara Gong]]"
+  - "[[Literature/Authors/Federico Zertuche González|Federico Zertuche González]]"
+  - "[[Literature/Authors/Armelle Grondin|Armelle Grondin]]"
+  - "[[Literature/Authors/Matthew Jacob|Matthew Jacob]]"
+  - "[[Literature/Authors/Drew M. Johnston|Drew M. Johnston]]"
+  - "[[Literature/Authors/Martin Koenen|Martin Koenen]]"
+  - "[[Literature/Authors/Eduardo Laguna-Muggenburg|Eduardo Laguna-Muggenburg]]"
+  - "[[Literature/Authors/Florian Mudekereza|Florian Mudekereza]]"
+  - "[[Literature/Authors/Tom Rutter|Tom Rutter]]"
+  - "[[Literature/Authors/Nicolaj Thor|Nicolaj Thor]]"
+  - "[[Literature/Authors/Wilbur Townsend|Wilbur Townsend]]"
+  - "[[Literature/Authors/Ruby Zhang|Ruby Zhang]]"
+  - "[[Literature/Authors/Mike Bailey|Mike Bailey]]"
+  - "[[Literature/Authors/Pablo Barberá|Pablo Barberá]]"
+  - "[[Literature/Authors/Monica Bhole|Monica Bhole]]"
+  - "[[Literature/Authors/Nils Wernerfelt|Nils Wernerfelt]]"
+publication date: 2022-08-01 
+source: "https://www.nature.com/articles/s41586-022-04997-3"
+doi: 10.1038/s41586-022-04997-3
+read status: Todo
+⚠️:
+  - audit failed
+---
+
+## Abstract
+
+Low levels of social interaction across class lines have generated widespread concern 1–4 and are associated with worse outcomes, such as lower rates of upward income mobility 4–7 . Here we analyse the determinants of cross-class interaction using data from Facebook, building on the analysis in our companion paper 7 . We show that about half of the social disconnection across socioeconomic lines—measured as the difference in the share of high-socioeconomic status (SES) friends between people with low and high SES—is explained by differences in exposure to people with high SES in groups such as schools and religious organizations. The other half is explained by friending bias—the tendency for people with low SES to befriend people with high SES at lower rates even conditional on exposure. Friending bias is shaped by the structure of the groups in which people interact. For example, friending bias is higher in larger and more diverse groups and lower in religious organizations than in schools and workplaces. Distinguishing exposure from friending bias is helpful for identifying interventions to increase cross-SES friendships (economic connectedness). Using fluctuations in the share of students with high SES across high school cohorts, we show that increases in high-SES exposure lead low-SES people to form more friendships with high-SES people in schools that exhibit low levels of friending bias. Thus, socioeconomic integration can increase economic connectedness in communities in which friending bias is low. By contrast, when friending bias is high, increasing cross-SES interactions among existing members may be necessary to increase economic connectedness. To support such efforts, we release privacy-protected statistics on economic connectedness, exposure and friending bias for each ZIP (postal) code, high school and college in the United States at https://www.socialcapital.org .
+
+## Research Questions
+> Research Questions extracted via LLM
+- How much of cross-class friendship inequality is associated with unequal exposure, and how much with friending bias conditional on exposure?[^r1]
+- Does increasing high-SES exposure increase cross-class friendship formation, and how does this depend on group friending bias?[^r1]
+
+## Study Design
+> Study design extracted via LLM
+
+This is an observational analysis of Facebook friendship data, separating exposure from conditional friending bias, with cohort variation in high-school SES composition used to study exposure changes. It is an empirical study, not an agent-based simulation.[^r3]
+
+## Metadata
+### References
+- [[SocialInequalityAndSocialStratificationInUsSociety]]
+- [[AnEconomicModelOfFriendshipHomophilyMinoritiesAndSegregation]]
+- [[PeerEffectsInEducationHowMightTheyWorkHowBigAreTheyAndHowMuchDoWeKnowThusFar]]
+- [[TheImpactOfThirdPlacesOnCommunityQualityOfLife]]
+- [[IdentifyingTheRolesOfRaceBasedChoiceAndChanceInHighSchoolFriendshipNetworkFormation]]
+- [[IdeologicalSegregationOnlineAndOffline]]
+- [[StructuralEffectOfSizeOnInterracialFriendship]]
+- [[SocialStructuralDeterminantsOfSimilarityAmongAssociates]]
+- [[AMacrosociologicalTheoryOfSocialStructure]]
+- [[TheRelationBetweenSocioeconomicStatusAndAcademicAchievement]]
+- [[InferringTieStrengthFromOnlineDirectedBehavior]]
+- [[PublicGoodsAndEthnicDivisions]]
+- [[APreferenceOpportunityChoiceFrameworkWithApplicationsToIntergroupFriendship]]
+- [[IsAmericaFragmenting]]
+- [[ReligiousInvolvementAndStatusBridgingSocialCapital]]
+- [[SocialDistanceInTheUnitedStates]]
+- [[FromNaturalVariationToOptimalPolicyTheImportanceOfEndogenousPeerGroupFormation]]
+- [[TheAssociationBetweenIncomeAndLifeExpectancyInTheUnitedStates20012014]]
+- [[TheImpactsOfNeighborhoodsOnIntergenerationalMobilityIiCountyLevelEstimates]]
+- [[UrbanMobilityAndNeighborhoodIsolationInAmericaS50LargestCities]]
+- [[SocialConnectednessMeasurementDeterminantsAndEffects]]
+- [[TheOpportunityAtlasMappingTheChildhoodRootsOfSocialMobility]]
+- [[SocialConnectednessInUrbanAreas]]
+- [[IncomeSegregationAndIntergenerationalMobilityAcrossCollegesInTheUnitedStates]]
+- [[InternationalTradeAndSocialConnectedness]]
+- [[SegregatedInteractionsInUrbanAndOnlineSpace]]
+- [[TripleDisadvantageNeighborhoodNetworksOfEverydayUrbanMobilityAndViolenceInUSCities]]
+- [[SocialNetworksShapeBeliefsAndBehaviorEvidenceFromSocialDistancingDuringTheCovid19Pandemic]]
+- [[ProximityCanInduceDiverseFriendshipsALargeRandomizedClassroomExperiment]]
+- [[TheEconomicEffectsOfSocialNetworksEvidenceFromTheHousingMarket]]
+- [[TheSocialIntegrationOfInternationalMigrantsEvidenceFromTheNetworksOfSyriansInGermany]]
+- [[QuantifyingSocialSegregationInLargeScaleNetworks]]
+- [[ExperiencedSegregation]]
+- [[SocialCapitalIMeasurementAndAssociationsWithEconomicMobility]]
+- [[UnresolvedReferenceA5A4BFA87A38343E]]
+- [[UnresolvedReference63CF360D7CA508AB]]
+- [[UnresolvedReferenceB1279BA7BEEC8634]]
+- [[UnresolvedReference70EC2CC78E4B150A]]
+- [[UnresolvedReference3D1DFDCF9DB1F1AF]]
+- [[UnresolvedReference7573484C5BD3E71C]]
+- [[UnresolvedReferenceD29C2487AC75AE08]]
+- [[UnresolvedReferenceF8B33BC3468AB77E]]
+- [[UnresolvedReference507BCF461B4E84BD]]
+- [[UnresolvedReferenceF2241B71FE857A39]]
+- [[UnresolvedReferenceEEC71BDB726736D7]]
+- [[UnresolvedReference08D1B74E1CE3BCA6]]
+- [[UnresolvedReference22705F4EBD4072E7]]
+- [[UnresolvedReferenceCAA6C3C1F7085952]]
+- [[UnresolvedReference87C0B567954903AA]]
+- [[UnresolvedReference19C5AEDD7409036F]]
+- [[UnresolvedReference2A9A4CC619D9F77B]]
+
+## Audit Log
+- Audit invalidated (2026-09-30): auditor admitted clearing flags before completing independent source checks. A new independent audit is required.
+- Strong source review (2026-09-30): Corrected publication date to publisher first-online date 1 August 2022; confirmed empirical design and source-located exposure/cohort analysis. Independent re-audit pending.
+
+- WITHDRAWN audit claim (2026-09-30): previously reported PASS; source claims, current extraction, metadata, references and footnotes checked against the available primary source. See `vault/.automation/audit/remaining-audit-b-2026-09-30.json`.
+
+## LLM Justification
+[^r1]: The paper’s abstract, at https://www.nature.com/articles/s41586-022-04997-3. The questions paraphrase the stated purpose, research scope, and reported approach.
+[^r3]: Chetty et al., main text “Exposure and friending bias,” “The effects of changes in high-SES exposure”; Methods “Measuring economic connectedness, exposure and friending bias” and high-school cohort analysis; Fig. 6. Publisher metadata: Published 01 August 2022. Full text: https://www.nature.com/articles/s41586-022-04997-3.

@@ -1,0 +1,15 @@
+{
+  "accentColor": "",
+  "theme": "obsidian",
+  "cssTheme": "Tokyo Night",
+  "baseFontSize": 17,
+  "enabledCssSnippets": [
+    "line-height",
+    "std",
+    "line-spacing",
+    "pdf-dark-mode",
+    "property-colors"
+  ],
+  "showRibbon": false,
+  "textFontFamily": ""
+}

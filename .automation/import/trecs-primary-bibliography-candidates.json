@@ -1,0 +1,1111 @@
+{
+  "source_file": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68.html",
+  "source_sha256": "abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68",
+  "entries": [
+    {
+      "index": 1,
+      "source_id": "bib.bib2",
+      "blocks": [
+        "Himan Abdollahpouri, Gediminas Adomavicius, Robin Burke, Ido Guy, Dietmar Jannach, Toshihiro Kamishima, Jan Krasnodebski, and Luiz Pizzato. 2020.",
+        "Multistakeholder recommendation: Survey and research directions.",
+        "User Modeling and User-Adapted Interaction 30, 1 (2020), 127–158.",
+        ""
+      ],
+      "citation": "Abdollahpouri et al. (2020) Himan Abdollahpouri, Gediminas Adomavicius, Robin Burke, Ido Guy, Dietmar Jannach, Toshihiro Kamishima, Jan Krasnodebski, and Luiz Pizzato. 2020. Multistakeholder recommendation: Survey and research directions. User Modeling and User-Adapted Interaction 30, 1 (2020), 127–158.",
+      "title_candidate": "Multistakeholder recommendation: Survey and research directions",
+      "status": "requires source verification"
+    },
+    {
+      "index": 2,
+      "source_id": "bib.bib3",
+      "blocks": [
+        "Charu C Aggarwal. 2016.",
+        "Ensemble-based and hybrid recommender systems.",
+        "In Recommender systems. Springer, 199–224.",
+        ""
+      ],
+      "citation": "Aggarwal (2016) Charu C Aggarwal. 2016. Ensemble-based and hybrid recommender systems. In Recommender systems. Springer, 199–224.",
+      "title_candidate": "Ensemble-based and hybrid recommender systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 3,
+      "source_id": "bib.bib4",
+      "blocks": [
+        "Muhammad Ali, Piotr Sapiezynski, Miranda Bogen, Aleksandra Korolova, Alan Mislove, and Aaron Rieke. 2019.",
+        "Discrimination through optimization: How Facebook’s Ad delivery can lead to biased outcomes.",
+        "Proceedings of the ACM on Human-Computer Interaction 3, CSCW (2019), 1–30.",
+        ""
+      ],
+      "citation": "Ali et al. (2019) Muhammad Ali, Piotr Sapiezynski, Miranda Bogen, Aleksandra Korolova, Alan Mislove, and Aaron Rieke. 2019. Discrimination through optimization: How Facebook’s Ad delivery can lead to biased outcomes. Proceedings of the ACM on Human-Computer Interaction 3, CSCW (2019), 1–30.",
+      "title_candidate": "Discrimination through optimization: How Facebook’s Ad delivery can lead to biased outcomes",
+      "status": "requires source verification"
+    },
+    {
+      "index": 4,
+      "source_id": "bib.bib5",
+      "blocks": [
+        "Guy Aridor, Duarte Goncalves, and Shan Sikdar. 2020.",
+        "Deconstructing the Filter Bubble: User Decision-Making and Recommender Systems. In Fourteenth ACM Conference on Recommender Systems. 82–91.",
+        ""
+      ],
+      "citation": "Aridor et al. (2020) Guy Aridor, Duarte Goncalves, and Shan Sikdar. 2020. Deconstructing the Filter Bubble: User Decision-Making and Recommender Systems. In Fourteenth ACM Conference on Recommender Systems. 82–91.",
+      "title_candidate": "Deconstructing the Filter Bubble: User Decision-Making and Recommender Systems. In Fourteenth ACM Conference on Recommender Systems. 82–91",
+      "status": "requires source verification"
+    },
+    {
+      "index": 5,
+      "source_id": "bib.bib6",
+      "blocks": [
+        "Robert Axelrod. 1997.",
+        "The complexity of cooperation: Agent-based models of competition and collaboration. Vol. 3.",
+        "Princeton University Press.",
+        ""
+      ],
+      "citation": "Axelrod (1997) Robert Axelrod. 1997. The complexity of cooperation: Agent-based models of competition and collaboration. Vol. 3. Princeton University Press.",
+      "title_candidate": "The complexity of cooperation: Agent-based models of competition and collaboration. Vol. 3",
+      "status": "requires source verification"
+    },
+    {
+      "index": 6,
+      "source_id": "bib.bib7",
+      "blocks": [
+        "Eytan Bakshy, Solomon Messing, and Lada A Adamic. 2015.",
+        "Exposure to ideologically diverse news and opinion on Facebook.",
+        "Science 348, 6239 (2015), 1130–1132.",
+        ""
+      ],
+      "citation": "Bakshy et al. (2015) Eytan Bakshy, Solomon Messing, and Lada A Adamic. 2015. Exposure to ideologically diverse news and opinion on Facebook. Science 348, 6239 (2015), 1130–1132.",
+      "title_candidate": "Exposure to ideologically diverse news and opinion on Facebook",
+      "status": "requires source verification"
+    },
+    {
+      "index": 7,
+      "source_id": "bib.bib8",
+      "blocks": [
+        "Omer Ben-Porat and Moshe Tennenholtz. 2018.",
+        "A game-theoretic approach to recommendation systems with strategic content providers.",
+        "arXiv preprint arXiv:1806.00955 (2018).",
+        ""
+      ],
+      "citation": "Ben-Porat and Tennenholtz (2018) Omer Ben-Porat and Moshe Tennenholtz. 2018. A game-theoretic approach to recommendation systems with strategic content providers. arXiv preprint arXiv:1806.00955 (2018).",
+      "title_candidate": "A game-theoretic approach to recommendation systems with strategic content providers",
+      "status": "requires source verification"
+    },
+    {
+      "index": 8,
+      "source_id": "bib.bib9",
+      "blocks": [
+        "Sushil Bikhchandani, David Hirshleifer, and Ivo Welch. 1998.",
+        "Learning from the behavior of others: Conformity, fads, and informational cascades.",
+        "Journal of economic perspectives 12, 3 (1998), 151–170.",
+        ""
+      ],
+      "citation": "Bikhchandani et al. (1998) Sushil Bikhchandani, David Hirshleifer, and Ivo Welch. 1998. Learning from the behavior of others: Conformity, fads, and informational cascades. Journal of economic perspectives 12, 3 (1998), 151–170.",
+      "title_candidate": "Learning from the behavior of others: Conformity, fads, and informational cascades",
+      "status": "requires source verification"
+    },
+    {
+      "index": 9,
+      "source_id": "bib.bib10",
+      "blocks": [
+        "Eric Bonabeau. 2002.",
+        "Agent-based modeling: Methods and techniques for simulating human systems.",
+        "Proceedings of the national academy of sciences 99, suppl 3 (2002), 7280–7287.",
+        ""
+      ],
+      "citation": "Bonabeau (2002) Eric Bonabeau. 2002. Agent-based modeling: Methods and techniques for simulating human systems. Proceedings of the national academy of sciences 99, suppl 3 (2002), 7280–7287.",
+      "title_candidate": "Agent-based modeling: Methods and techniques for simulating human systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 10,
+      "source_id": "bib.bib11",
+      "blocks": [
+        "Andrei Borshchev, Sally Brailsford, Leonid Churilov, and Brian Dangerfield. 2014.",
+        "Multi-method modelling: AnyLogic.",
+        "Discrete-event simulation and system dynamics for management decision making (2014), 248–279.",
+        ""
+      ],
+      "citation": "Borshchev et al. (2014) Andrei Borshchev, Sally Brailsford, Leonid Churilov, and Brian Dangerfield. 2014. Multi-method modelling: AnyLogic. Discrete-event simulation and system dynamics for management decision making (2014), 248–279.",
+      "title_candidate": "Multi-method modelling: AnyLogic",
+      "status": "requires source verification"
+    },
+    {
+      "index": 11,
+      "source_id": "bib.bib12",
+      "blocks": [
+        "Dimitrios Bountouridis, Jaron Harambam, Mykola Makhortykh, Mónica Marrero, Nava Tintarev, and Claudia Hauff. 2019.",
+        "SIREN: A simulation framework for understanding the effects of recommender systems in online news environments. In Proceedings of the conference on fairness, accountability, and transparency.",
+        ""
+      ],
+      "citation": "Bountouridis et al. (2019) Dimitrios Bountouridis, Jaron Harambam, Mykola Makhortykh, Mónica Marrero, Nava Tintarev, and Claudia Hauff. 2019. SIREN: A simulation framework for understanding the effects of recommender systems in online news environments. In Proceedings of the conference on fairness, accountability, and transparency.",
+      "title_candidate": "SIREN: A simulation framework for understanding the effects of recommender systems in online news environments. In Proceedings of the conference on fairness, accountability, and transparency",
+      "status": "requires source verification"
+    },
+    {
+      "index": 12,
+      "source_id": "bib.bib13",
+      "blocks": [
+        "Robin Burke. 2017.",
+        "Multisided fairness for recommendation.",
+        "arXiv preprint arXiv:1707.00093 (2017).",
+        ""
+      ],
+      "citation": "Burke (2017) Robin Burke. 2017. Multisided fairness for recommendation. arXiv preprint arXiv:1707.00093 (2017).",
+      "title_candidate": "Multisided fairness for recommendation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 13,
+      "source_id": "bib.bib14",
+      "blocks": [
+        "Robin Burke, Nasim Sonboli, and Aldo Ordonez-Gauger. 2018.",
+        "Balanced neighborhoods for multi-sided fairness in recommendation. In Conference on Fairness, Accountability and Transparency. PMLR, 202–214.",
+        ""
+      ],
+      "citation": "Burke et al. (2018) Robin Burke, Nasim Sonboli, and Aldo Ordonez-Gauger. 2018. Balanced neighborhoods for multi-sided fairness in recommendation. In Conference on Fairness, Accountability and Transparency. PMLR, 202–214.",
+      "title_candidate": "Balanced neighborhoods for multi-sided fairness in recommendation. In Conference on Fairness, Accountability and Transparency. PMLR, 202–214",
+      "status": "requires source verification"
+    },
+    {
+      "index": 14,
+      "source_id": "bib.bib15",
+      "blocks": [
+        "Allison J. B. Chaney, Brandon M. Stewart, and Barbara E. Engelhardt. 2018.",
+        "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility. In Proceedings of the 12th ACM Conference on Recommender Systems (Vancouver, British Columbia, Canada) (RecSys ’18).",
+        ""
+      ],
+      "citation": "Chaney et al. (2018) Allison J. B. Chaney, Brandon M. Stewart, and Barbara E. Engelhardt. 2018. How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility. In Proceedings of the 12th ACM Conference on Recommender Systems (Vancouver, British Columbia, Canada) (RecSys ’18).",
+      "title_candidate": "How Algorithmic Confounding in Recommendation Systems Increases Homogeneity and Decreases Utility. In Proceedings of the 12th ACM Conference on Recommender Systems (Vancouver, British Columbia, Canada) (RecSys ’18)",
+      "status": "requires source verification"
+    },
+    {
+      "index": 15,
+      "source_id": "bib.bib16",
+      "blocks": [
+        "Heng-Tze Cheng, Levent Koc, Jeremiah Harmsen, Tal Shaked, Tushar Chandra, Hrishi Aradhye, Glen Anderson, Greg Corrado, Wei Chai, Mustafa Ispir, et al. 2016.",
+        "Wide & deep learning for recommender systems. In Proceedings of the 1st workshop on deep learning for recommender systems. 7–10.",
+        ""
+      ],
+      "citation": "Cheng et al. (2016) Heng-Tze Cheng, Levent Koc, Jeremiah Harmsen, Tal Shaked, Tushar Chandra, Hrishi Aradhye, Glen Anderson, Greg Corrado, Wei Chai, Mustafa Ispir, et al. 2016. Wide & deep learning for recommender systems. In Proceedings of the 1st workshop on deep learning for recommender systems. 7–10.",
+      "title_candidate": "Wide & deep learning for recommender systems. In Proceedings of the 1st workshop on deep learning for recommender systems. 7–10",
+      "status": "requires source verification"
+    },
+    {
+      "index": 16,
+      "source_id": "bib.bib17",
+      "blocks": [
+        "Giovanni Luca Ciampaglia, Azadeh Nematzadeh, Filippo Menczer, and Alessandro Flammini. 2018.",
+        "How algorithmic popularity bias hinders or promotes quality.",
+        "Scientific reports 8 (2018).",
+        ""
+      ],
+      "citation": "Ciampaglia et al. (2018) Giovanni Luca Ciampaglia, Azadeh Nematzadeh, Filippo Menczer, and Alessandro Flammini. 2018. How algorithmic popularity bias hinders or promotes quality. Scientific reports 8 (2018).",
+      "title_candidate": "How algorithmic popularity bias hinders or promotes quality",
+      "status": "requires source verification"
+    },
+    {
+      "index": 17,
+      "source_id": "bib.bib18",
+      "blocks": [
+        "Kelley Cotter. 2019.",
+        "Playing the visibility game: How digital influencers and algorithms negotiate influence on Instagram.",
+        "New Media & Society 21, 4 (2019), 895–913.",
+        ""
+      ],
+      "citation": "Cotter (2019) Kelley Cotter. 2019. Playing the visibility game: How digital influencers and algorithms negotiate influence on Instagram. New Media & Society 21, 4 (2019), 895–913.",
+      "title_candidate": "Playing the visibility game: How digital influencers and algorithms negotiate influence on Instagram",
+      "status": "requires source verification"
+    },
+    {
+      "index": 18,
+      "source_id": "bib.bib19",
+      "blocks": [
+        "Christian S. Crandall and Jeffrey W. Sherman. 2016.",
+        "On the scientific superiority of conceptual replications for scientific progress.",
+        "Journal of Experimental Social Psychology 66 (2016), 93–99.",
+        "",
+        "Publisher: Elsevier."
+      ],
+      "citation": "Crandall and Sherman (2016) Christian S. Crandall and Jeffrey W. Sherman. 2016. On the scientific superiority of conceptual replications for scientific progress. Journal of Experimental Social Psychology 66 (2016), 93–99. Publisher: Elsevier.",
+      "title_candidate": "On the scientific superiority of conceptual replications for scientific progress",
+      "status": "requires source verification"
+    },
+    {
+      "index": 19,
+      "source_id": "bib.bib20",
+      "blocks": [
+        "Alexander D’Amour, Hansa Srinivasan, James Atwood, Pallavi Baljekar, D Sculley, and Yoni Halpern. 2020.",
+        "Fairness is not static: deeper understanding of long term fairness via simulation studies. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency.",
+        ""
+      ],
+      "citation": "D’Amour et al. (2020) Alexander D’Amour, Hansa Srinivasan, James Atwood, Pallavi Baljekar, D Sculley, and Yoni Halpern. 2020. Fairness is not static: deeper understanding of long term fairness via simulation studies. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency.",
+      "title_candidate": "Fairness is not static: deeper understanding of long term fairness via simulation studies. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency",
+      "status": "requires source verification"
+    },
+    {
+      "index": 20,
+      "source_id": "bib.bib21",
+      "blocks": [
+        "Scott De Marchi and Scott E Page. 2014.",
+        "Agent-based models.",
+        "Annual Review of political science 17 (2014), 1–20.",
+        ""
+      ],
+      "citation": "De Marchi and Page (2014) Scott De Marchi and Scott E Page. 2014. Agent-based models. Annual Review of political science 17 (2014), 1–20.",
+      "title_candidate": "Agent-based models",
+      "status": "requires source verification"
+    },
+    {
+      "index": 21,
+      "source_id": "bib.bib22",
+      "blocks": [
+        "Sarah Dean, Sarah Rich, and Benjamin Recht. 2020.",
+        "Recommendations and user agency: the reachability of collaboratively-filtered information. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency. 436–445.",
+        ""
+      ],
+      "citation": "Dean et al. (2020) Sarah Dean, Sarah Rich, and Benjamin Recht. 2020. Recommendations and user agency: the reachability of collaboratively-filtered information. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency. 436–445.",
+      "title_candidate": "Recommendations and user agency: the reachability of collaboratively-filtered information. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency. 436–445",
+      "status": "requires source verification"
+    },
+    {
+      "index": 22,
+      "source_id": "bib.bib23",
+      "blocks": [
+        "Michael D Ekstrand. 2020.",
+        "LensKit for Python: Next-Generation Software for Recommender Systems Experiments. In Proceedings of the 29th ACM International Conference on Information & Knowledge Management. 2999–3006.",
+        ""
+      ],
+      "citation": "Ekstrand (2020) Michael D Ekstrand. 2020. LensKit for Python: Next-Generation Software for Recommender Systems Experiments. In Proceedings of the 29th ACM International Conference on Information & Knowledge Management. 2999–3006.",
+      "title_candidate": "LensKit for Python: Next-Generation Software for Recommender Systems Experiments. In Proceedings of the 29th ACM International Conference on Information & Knowledge Management. 2999–3006",
+      "status": "requires source verification"
+    },
+    {
+      "index": 23,
+      "source_id": "bib.bib24",
+      "blocks": [
+        "Joshua M Epstein and Robert Axtell. 1996.",
+        "Growing artificial societies: social science from the bottom up.",
+        "Brookings Institution Press.",
+        ""
+      ],
+      "citation": "Epstein and Axtell (1996) Joshua M Epstein and Robert Axtell. 1996. Growing artificial societies: social science from the bottom up. Brookings Institution Press.",
+      "title_candidate": "Growing artificial societies: social science from the bottom up",
+      "status": "requires source verification"
+    },
+    {
+      "index": 24,
+      "source_id": "bib.bib25",
+      "blocks": [
+        "Max Fischer and Amanda Taub. 2019.",
+        "How YouTube Radicalized Brazil.",
+        "The New York Times (2019).",
+        "https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html"
+      ],
+      "citation": "Fischer and Taub (2019) Max Fischer and Amanda Taub. 2019. How YouTube Radicalized Brazil. The New York Times (2019). https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html",
+      "title_candidate": "How YouTube Radicalized Brazil",
+      "status": "requires source verification"
+    },
+    {
+      "index": 25,
+      "source_id": "bib.bib26",
+      "blocks": [
+        "Richard Fletcher and Rasmus Kleis Nielsen. 2018.",
+        "Automated serendipity: The effect of using search engines on news repertoire balance and diversity.",
+        "Digital Journalism 6, 8 (2018), 976–989.",
+        ""
+      ],
+      "citation": "Fletcher and Nielsen (2018) Richard Fletcher and Rasmus Kleis Nielsen. 2018. Automated serendipity: The effect of using search engines on news repertoire balance and diversity. Digital Journalism 6, 8 (2018), 976–989.",
+      "title_candidate": "Automated serendipity: The effect of using search engines on news repertoire balance and diversity",
+      "status": "requires source verification"
+    },
+    {
+      "index": 26,
+      "source_id": "bib.bib27",
+      "blocks": [
+        "Adrien Friggeri, Lada Adamic, Dean Eckles, and Justin Cheng. 2014.",
+        "Rumor cascades. In Proceedings of the International AAAI Conference on Web and Social Media, Vol. 8.",
+        ""
+      ],
+      "citation": "Friggeri et al. (2014) Adrien Friggeri, Lada Adamic, Dean Eckles, and Justin Cheng. 2014. Rumor cascades. In Proceedings of the International AAAI Conference on Web and Social Media, Vol. 8.",
+      "title_candidate": "Rumor cascades. In Proceedings of the International AAAI Conference on Web and Social Media, Vol. 8",
+      "status": "requires source verification"
+    },
+    {
+      "index": 27,
+      "source_id": "bib.bib28",
+      "blocks": [
+        "Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al. 2017.",
+        "Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems.",
+        ""
+      ],
+      "citation": "Garimella et al. (2017) Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti, et al. 2017. Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems.",
+      "title_candidate": "Balancing information exposure in social networks. In IEEE Conference on Neural Information Processing Systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 28,
+      "source_id": "bib.bib29",
+      "blocks": [
+        "Daniel Geschke, Jan Lorenz, and Peter Holtz. 2019.",
+        "The triple-filter bubble: Using agent-based modelling to test a meta-theoretical framework for the emergence of filter bubbles and echo chambers.",
+        "British Journal of Social Psychology 58, 1 (2019), 129–149.",
+        ""
+      ],
+      "citation": "Geschke et al. (2019) Daniel Geschke, Jan Lorenz, and Peter Holtz. 2019. The triple-filter bubble: Using agent-based modelling to test a meta-theoretical framework for the emergence of filter bubbles and echo chambers. British Journal of Social Psychology 58, 1 (2019), 129–149.",
+      "title_candidate": "The triple-filter bubble: Using agent-based modelling to test a meta-theoretical framework for the emergence of filter bubbles and echo chambers",
+      "status": "requires source verification"
+    },
+    {
+      "index": 29,
+      "source_id": "bib.bib30",
+      "blocks": [
+        "Sharad Goel, Ashton Anderson, Jake Hofman, and Duncan J. Watts. 2016.",
+        "The structural virality of online diffusion.",
+        "Management Science 62, 1 (2016), 180–196.",
+        ""
+      ],
+      "citation": "Goel et al. (2016) Sharad Goel, Ashton Anderson, Jake Hofman, and Duncan J. Watts. 2016. The structural virality of online diffusion. Management Science 62, 1 (2016), 180–196.",
+      "title_candidate": "The structural virality of online diffusion",
+      "status": "requires source verification"
+    },
+    {
+      "index": 30,
+      "source_id": "bib.bib31",
+      "blocks": [
+        "Michael Golebiewski and Danah Boyd. 2018.",
+        "Data voids: Where missing data can easily be exploited.",
+        "(2018).",
+        ""
+      ],
+      "citation": "Golebiewski and Boyd (2018) Michael Golebiewski and Danah Boyd. 2018. Data voids: Where missing data can easily be exploited. (2018).",
+      "title_candidate": "Data voids: Where missing data can easily be exploited",
+      "status": "requires source verification"
+    },
+    {
+      "index": 31,
+      "source_id": "bib.bib32",
+      "blocks": [
+        "Carlos A. Gomez-Uribe and Neil Hunt. 2016.",
+        "The Netflix Recommender System: Algorithms, Business Value, and Innovation.",
+        "ACM Trans. Manage. Inf. Syst. 6, 4, Article 13 (Dec. 2016), 19 pages.",
+        "https://doi.org/10.1145/2843948"
+      ],
+      "citation": "Gomez-Uribe and Hunt (2016) Carlos A. Gomez-Uribe and Neil Hunt. 2016. The Netflix Recommender System: Algorithms, Business Value, and Innovation. ACM Trans. Manage. Inf. Syst. 6, 4, Article 13 (Dec. 2016), 19 pages. https://doi.org/10.1145/2843948",
+      "title_candidate": "The Netflix Recommender System: Algorithms, Business Value, and Innovation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 32,
+      "source_id": "bib.bib33",
+      "blocks": [
+        "Aniko Hannak, Piotr Sapiezynski, Arash Molavi Kakhki, Balachander Krishnamurthy, David Lazer, Alan Mislove, and Christo Wilson. 2013.",
+        "Measuring personalization of web search. In Proceedings of the 22nd international conference on World Wide Web. 527–538.",
+        ""
+      ],
+      "citation": "Hannak et al. (2013) Aniko Hannak, Piotr Sapiezynski, Arash Molavi Kakhki, Balachander Krishnamurthy, David Lazer, Alan Mislove, and Christo Wilson. 2013. Measuring personalization of web search. In Proceedings of the 22nd international conference on World Wide Web. 527–538.",
+      "title_candidate": "Measuring personalization of web search. In Proceedings of the 22nd international conference on World Wide Web. 527–538",
+      "status": "requires source verification"
+    },
+    {
+      "index": 33,
+      "source_id": "bib.bib34",
+      "blocks": [
+        "F Maxwell Harper and Joseph A Konstan. 2015.",
+        "The movielens datasets: History and context.",
+        "Acm transactions on interactive intelligent systems (tiis) 5, 4 (2015), 1–19.",
+        ""
+      ],
+      "citation": "Harper and Konstan (2015) F Maxwell Harper and Joseph A Konstan. 2015. The movielens datasets: History and context. Acm transactions on interactive intelligent systems (tiis) 5, 4 (2015), 1–19.",
+      "title_candidate": "The movielens datasets: History and context",
+      "status": "requires source verification"
+    },
+    {
+      "index": 34,
+      "source_id": "bib.bib35",
+      "blocks": [
+        "Charles R. Harris, K. Jarrod Millman, Stéfan J van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor, Sebastian Berg, Nathaniel J. Smith, Robert Kern, Matti Picus, Stephan Hoyer, Marten H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime Fernández del Río, Mark Wiebe, Pearu Peterson, Pierre Gérard-Marchant, Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph Gohlke, and Travis E. Oliphant. 2020.",
+        "Array programming with NumPy.",
+        "Nature 585 (2020), 357–362.",
+        "https://doi.org/10.1038/s41586-020-2649-2"
+      ],
+      "citation": "Harris et al. (2020) Charles R. Harris, K. Jarrod Millman, Stéfan J van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor, Sebastian Berg, Nathaniel J. Smith, Robert Kern, Matti Picus, Stephan Hoyer, Marten H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime Fernández del Río, Mark Wiebe, Pearu Peterson, Pierre Gérard-Marchant, Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph Gohlke, and Travis E. Oliphant. 2020. Array programming with NumPy. Nature 585 (2020), 357–362. https://doi.org/10.1038/s41586-020-2649-2",
+      "title_candidate": "Array programming with NumPy",
+      "status": "requires source verification"
+    },
+    {
+      "index": 35,
+      "source_id": "bib.bib36",
+      "blocks": [
+        "Daniel Heard, Gelonia Dent, Tracy Schifeling, and David Banks. 2015.",
+        "Agent-based models and microsimulation.",
+        "Annual Review of Statistics and Its Application 2 (2015), 259–272.",
+        ""
+      ],
+      "citation": "Heard et al. (2015) Daniel Heard, Gelonia Dent, Tracy Schifeling, and David Banks. 2015. Agent-based models and microsimulation. Annual Review of Statistics and Its Application 2 (2015), 259–272.",
+      "title_candidate": "Agent-based models and microsimulation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 36,
+      "source_id": "bib.bib37",
+      "blocks": [
+        "Jonathan L Herlocker, Joseph A Konstan, Loren G Terveen, and John T Riedl. 2004.",
+        "Evaluating collaborative filtering recommender systems.",
+        "ACM Transactions on Information Systems (TOIS) 22, 1 (2004), 5–53.",
+        ""
+      ],
+      "citation": "Herlocker et al. (2004) Jonathan L Herlocker, Joseph A Konstan, Loren G Terveen, and John T Riedl. 2004. Evaluating collaborative filtering recommender systems. ACM Transactions on Information Systems (TOIS) 22, 1 (2004), 5–53.",
+      "title_candidate": "Evaluating collaborative filtering recommender systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 37,
+      "source_id": "bib.bib38",
+      "blocks": [
+        "Ryan Holmes. 2016.",
+        "The Problem Isn’t Fake News, It’s Bad Algorithms — Here’s Why.",
+        "Observer (2016).",
+        "https://observer.com/2016/12/the-problem-isnt-fake-news-its-bad-algorithms-heres-why/"
+      ],
+      "citation": "Holmes (2016) Ryan Holmes. 2016. The Problem Isn’t Fake News, It’s Bad Algorithms — Here’s Why. Observer (2016). https://observer.com/2016/12/the-problem-isnt-fake-news-its-bad-algorithms-heres-why/",
+      "title_candidate": "The Problem Isn’t Fake News, It’s Bad Algorithms — Here’s Why",
+      "status": "requires source verification"
+    },
+    {
+      "index": 38,
+      "source_id": "bib.bib39",
+      "blocks": [
+        "Homa Hosseinmardi, Amir Ghasemian, Aaron Clauset, David M Rothschild, Markus Mobius, and Duncan J Watts. 2020.",
+        "Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube.",
+        "arXiv preprint arXiv:2011.12843 (2020).",
+        ""
+      ],
+      "citation": "Hosseinmardi et al. (2020) Homa Hosseinmardi, Amir Ghasemian, Aaron Clauset, David M Rothschild, Markus Mobius, and Duncan J Watts. 2020. Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube. arXiv preprint arXiv:2011.12843 (2020).",
+      "title_candidate": "Evaluating the scale, growth, and origins of right-wing echo chambers on YouTube",
+      "status": "requires source verification"
+    },
+    {
+      "index": 39,
+      "source_id": "bib.bib40",
+      "blocks": [
+        "Yifan Hu, Yehuda Koren, and Chris Volinsky. 2008.",
+        "Collaborative filtering for implicit feedback datasets. In 2008 Eighth IEEE International Conference on Data Mining. Ieee, 263–272.",
+        ""
+      ],
+      "citation": "Hu et al. (2008) Yifan Hu, Yehuda Koren, and Chris Volinsky. 2008. Collaborative filtering for implicit feedback datasets. In 2008 Eighth IEEE International Conference on Data Mining. Ieee, 263–272.",
+      "title_candidate": "Collaborative filtering for implicit feedback datasets. In 2008 Eighth IEEE International Conference on Data Mining. Ieee, 263–272",
+      "status": "requires source verification"
+    },
+    {
+      "index": 40,
+      "source_id": "bib.bib41",
+      "blocks": [
+        "Neil Hurley and Mi Zhang. 2011.",
+        "Novelty and diversity in top-n recommendation–analysis and evaluation.",
+        "ACM Transactions on Internet Technology (TOIT) 10, 4 (2011), 1–30.",
+        ""
+      ],
+      "citation": "Hurley and Zhang (2011) Neil Hurley and Mi Zhang. 2011. Novelty and diversity in top-n recommendation–analysis and evaluation. ACM Transactions on Internet Technology (TOIT) 10, 4 (2011), 1–30.",
+      "title_candidate": "Novelty and diversity in top-n recommendation–analysis and evaluation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 41,
+      "source_id": "bib.bib42",
+      "blocks": [
+        "Eugene Ie, Chih wei Hsu, Martin Mladenov, Vihan Jain, Sanmit Narvekar, Jing Wang, Rui Wu, and Craig Boutilier. 2019.",
+        "RecSim: A Configurable Simulation Platform for Recommender Systems.",
+        "(2019).",
+        "arXiv:1909.04847 [cs.LG]"
+      ],
+      "citation": "Ie et al. (2019) Eugene Ie, Chih wei Hsu, Martin Mladenov, Vihan Jain, Sanmit Narvekar, Jing Wang, Rui Wu, and Craig Boutilier. 2019. RecSim: A Configurable Simulation Platform for Recommender Systems. (2019). arXiv:1909.04847 [cs.LG]",
+      "title_candidate": "RecSim: A Configurable Simulation Platform for Recommender Systems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 42,
+      "source_id": "bib.bib43",
+      "blocks": [
+        "Taylor Gordon Ivan Medvedev, Haotian Wu. 2019.",
+        "Powered by AI: Instagram’s Explore recommender system.",
+        "Facebook AI Blog (2019).",
+        "https://ai.facebook.com/blog/powered-by-ai-instagrams-explore-recommender-system/"
+      ],
+      "citation": "Ivan Medvedev (2019) Taylor Gordon Ivan Medvedev, Haotian Wu. 2019. Powered by AI: Instagram’s Explore recommender system. Facebook AI Blog (2019). https://ai.facebook.com/blog/powered-by-ai-instagrams-explore-recommender-system/",
+      "title_candidate": "Powered by AI: Instagram’s Explore recommender system",
+      "status": "requires source verification"
+    },
+    {
+      "index": 43,
+      "source_id": "bib.bib44",
+      "blocks": [
+        "Dietmar Jannach and Gediminas Adomavicius. 2016.",
+        "Recommendations with a purpose. In Proceedings of the 10th ACM conference on recommender systems. 7–10.",
+        ""
+      ],
+      "citation": "Jannach and Adomavicius (2016) Dietmar Jannach and Gediminas Adomavicius. 2016. Recommendations with a purpose. In Proceedings of the 10th ACM conference on recommender systems. 7–10.",
+      "title_candidate": "Recommendations with a purpose. In Proceedings of the 10th ACM conference on recommender systems. 7–10",
+      "status": "requires source verification"
+    },
+    {
+      "index": 44,
+      "source_id": "bib.bib45",
+      "blocks": [
+        "Ray Jiang, Silvia Chiappa, Tor Lattimore, András György, and Pushmeet Kohli. 2019.",
+        "Degenerate feedback loops in recommender systems. In Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society. 383–390.",
+        ""
+      ],
+      "citation": "Jiang et al. (2019) Ray Jiang, Silvia Chiappa, Tor Lattimore, András György, and Pushmeet Kohli. 2019. Degenerate feedback loops in recommender systems. In Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society. 383–390.",
+      "title_candidate": "Degenerate feedback loops in recommender systems. In Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society. 383–390",
+      "status": "requires source verification"
+    },
+    {
+      "index": 45,
+      "source_id": "bib.bib46",
+      "blocks": [
+        "Toshihiro Kamishima, Shotaro Akaho, Hideki Asoh, and Jun Sakuma. 2018.",
+        "Recommendation independence. In Conference on Fairness, Accountability and Transparency. PMLR, 187–201.",
+        ""
+      ],
+      "citation": "Kamishima et al. (2018) Toshihiro Kamishima, Shotaro Akaho, Hideki Asoh, and Jun Sakuma. 2018. Recommendation independence. In Conference on Fairness, Accountability and Transparency. PMLR, 187–201.",
+      "title_candidate": "Recommendation independence. In Conference on Fairness, Accountability and Transparency. PMLR, 187–201",
+      "status": "requires source verification"
+    },
+    {
+      "index": 46,
+      "source_id": "bib.bib47",
+      "blocks": [
+        "Karl Krauth, Sarah Dean, Alex Zhao, Wenshuo Guo, Mihaela Curmei, Benjamin Recht, and Michael I Jordan. 2020.",
+        "Do Offline Metrics Predict Online Performance in Recommender Systems?",
+        "arXiv preprint arXiv:2011.07931 (2020).",
+        ""
+      ],
+      "citation": "Krauth et al. (2020) Karl Krauth, Sarah Dean, Alex Zhao, Wenshuo Guo, Mihaela Curmei, Benjamin Recht, and Michael I Jordan. 2020. Do Offline Metrics Predict Online Performance in Recommender Systems? arXiv preprint arXiv:2011.07931 (2020).",
+      "title_candidate": "Do Offline Metrics Predict Online Performance in Recommender Systems?",
+      "status": "requires source verification"
+    },
+    {
+      "index": 47,
+      "source_id": "bib.bib48",
+      "blocks": [
+        "Eun Lee, Fariba Karimi, Claudia Wagner, Hang-Hyun Jo, Markus Strohmaier, and Mirta Galesic. 2019.",
+        "Homophily and minority-group size explain perception biases in social networks.",
+        "Nature Human Behaviour 3, 10 (2019), 1078–1087.",
+        ""
+      ],
+      "citation": "Lee et al. (2019) Eun Lee, Fariba Karimi, Claudia Wagner, Hang-Hyun Jo, Markus Strohmaier, and Mirta Galesic. 2019. Homophily and minority-group size explain perception biases in social networks. Nature Human Behaviour 3, 10 (2019), 1078–1087.",
+      "title_candidate": "Homophily and minority-group size explain perception biases in social networks",
+      "status": "requires source verification"
+    },
+    {
+      "index": 48,
+      "source_id": "bib.bib49",
+      "blocks": [
+        "Rebecca Lewis. 2018.",
+        "Alternative influence: Broadcasting the reactionary right on YouTube.",
+        "Data & Society 18 (2018).",
+        ""
+      ],
+      "citation": "Lewis (2018) Rebecca Lewis. 2018. Alternative influence: Broadcasting the reactionary right on YouTube. Data & Society 18 (2018).",
+      "title_candidate": "Alternative influence: Broadcasting the reactionary right on YouTube",
+      "status": "requires source verification"
+    },
+    {
+      "index": 49,
+      "source_id": "bib.bib50",
+      "blocks": [
+        "Dongwon Lim, Hwansoo Lee, Hang-Jung ZO, and Andrew Ciganek. 2014.",
+        "Opinion formation in the digital divide.",
+        "The Journal of Artificial Societies and Social Simulation 17, 1 (2014).",
+        ""
+      ],
+      "citation": "Lim et al. (2014) Dongwon Lim, Hwansoo Lee, Hang-Jung ZO, and Andrew Ciganek. 2014. Opinion formation in the digital divide. The Journal of Artificial Societies and Social Simulation 17, 1 (2014).",
+      "title_candidate": "Opinion formation in the digital divide",
+      "status": "requires source verification"
+    },
+    {
+      "index": 50,
+      "source_id": "bib.bib51",
+      "blocks": [
+        "Helmut Lorek and Michael Sonnenschein. 1999.",
+        "Modelling and simulation software to support individual-based ecological modelling.",
+        "Ecological Modelling 115, 2-3 (1999), 199–216.",
+        ""
+      ],
+      "citation": "Lorek and Sonnenschein (1999) Helmut Lorek and Michael Sonnenschein. 1999. Modelling and simulation software to support individual-based ecological modelling. Ecological Modelling 115, 2-3 (1999), 199–216.",
+      "title_candidate": "Modelling and simulation software to support individual-based ecological modelling",
+      "status": "requires source verification"
+    },
+    {
+      "index": 51,
+      "source_id": "bib.bib52",
+      "blocks": [
+        "Megan McCluskey. [n.d.].",
+        "These TikTok Creators Say They’re Still Being Suppressed for Posting Black Lives Matter Content.",
+        "Time ([n. d.]).",
+        "https://web.archive.org/web/20210325170448/https://time.com/5863350/tiktok-black-creators/"
+      ],
+      "citation": "McCluskey ([n.d.]) Megan McCluskey. [n.d.]. These TikTok Creators Say They’re Still Being Suppressed for Posting Black Lives Matter Content. Time ([n. d.]). https://web.archive.org/web/20210325170448/https://time.com/5863350/tiktok-black-creators/",
+      "title_candidate": "These TikTok Creators Say They’re Still Being Suppressed for Posting Black Lives Matter Content",
+      "status": "requires source verification"
+    },
+    {
+      "index": 52,
+      "source_id": "bib.bib53",
+      "blocks": [
+        "Martin Mladenov, Chih-Wei Hsu, Vihan Jain, Eugene Ie, Christopher Colby, Nicolas Mayoraz, Hubert Pham, Dustin Tran, Ivan Vendrov, and Craig Boutilier. 2021.",
+        "RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems.",
+        "arXiv preprint arXiv:2103.08057 (2021).",
+        ""
+      ],
+      "citation": "Mladenov et al. (2021) Martin Mladenov, Chih-Wei Hsu, Vihan Jain, Eugene Ie, Christopher Colby, Nicolas Mayoraz, Hubert Pham, Dustin Tran, Ivan Vendrov, and Craig Boutilier. 2021. RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems. arXiv preprint arXiv:2103.08057 (2021).",
+      "title_candidate": "RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems",
+      "status": "requires source verification"
+    },
+    {
+      "index": 53,
+      "source_id": "bib.bib54",
+      "blocks": [
+        "Bojan Mohar and Tomaž Pisanski. 1988.",
+        "How to compute the Wiener index of a graph.",
+        "Journal of mathematical chemistry 2, 3 (1988), 267–277.",
+        ""
+      ],
+      "citation": "Mohar and Pisanski (1988) Bojan Mohar and Tomaž Pisanski. 1988. How to compute the Wiener index of a graph. Journal of mathematical chemistry 2, 3 (1988), 267–277.",
+      "title_candidate": "How to compute the Wiener index of a graph",
+      "status": "requires source verification"
+    },
+    {
+      "index": 54,
+      "source_id": "bib.bib55",
+      "blocks": [
+        "Kevin Munger and Joseph Phillips. 2020.",
+        "Right-Wing YouTube: A Supply and Demand Perspective.",
+        "The International Journal of Press/Politics (2020), 1940161220964767.",
+        ""
+      ],
+      "citation": "Munger and Phillips (2020) Kevin Munger and Joseph Phillips. 2020. Right-Wing YouTube: A Supply and Demand Perspective. The International Journal of Press/Politics (2020), 1940161220964767.",
+      "title_candidate": "Right-Wing YouTube: A Supply and Demand Perspective",
+      "status": "requires source verification"
+    },
+    {
+      "index": 55,
+      "source_id": "bib.bib56",
+      "blocks": [
+        "Luke Munn. 2019.",
+        "Alt-right pipeline: Individual journeys to extremism online.",
+        "First Monday (2019).",
+        ""
+      ],
+      "citation": "Munn (2019) Luke Munn. 2019. Alt-right pipeline: Individual journeys to extremism online. First Monday (2019).",
+      "title_candidate": "Alt-right pipeline: Individual journeys to extremism online",
+      "status": "requires source verification"
+    },
+    {
+      "index": 56,
+      "source_id": "bib.bib57",
+      "blocks": [
+        "HR Nasrinpour, MR Friesen, and RD McLeod. 2016.",
+        "An agent-based model of message propagation in the Facebook electronic social network. preprint.",
+        "arXiv preprint arXiv:1611.07454 (2016).",
+        ""
+      ],
+      "citation": "Nasrinpour et al. (2016) HR Nasrinpour, MR Friesen, and RD McLeod. 2016. An agent-based model of message propagation in the Facebook electronic social network. preprint. arXiv preprint arXiv:1611.07454 (2016).",
+      "title_candidate": "An agent-based model of message propagation in the Facebook electronic social network. preprint",
+      "status": "requires source verification"
+    },
+    {
+      "index": 57,
+      "source_id": "bib.bib58",
+      "blocks": [
+        "Tien T Nguyen, Pik-Mai Hui, F Maxwell Harper, Loren Terveen, and Joseph A Konstan. 2014.",
+        "Exploring the filter bubble: the effect of using recommender systems on content diversity. In Proceedings of the 23rd international conference on World wide web. ACM, 677–686.",
+        ""
+      ],
+      "citation": "Nguyen et al. (2014) Tien T Nguyen, Pik-Mai Hui, F Maxwell Harper, Loren Terveen, and Joseph A Konstan. 2014. Exploring the filter bubble: the effect of using recommender systems on content diversity. In Proceedings of the 23rd international conference on World wide web. ACM, 677–686.",
+      "title_candidate": "Exploring the filter bubble: the effect of using recommender systems on content diversity. In Proceedings of the 23rd international conference on World wide web. ACM, 677–686",
+      "status": "requires source verification"
+    },
+    {
+      "index": 58,
+      "source_id": "bib.bib59",
+      "blocks": [
+        "Eli Pariser. 2011.",
+        "The filter bubble: How the new personalized web is changing what we read and how we think.",
+        "Penguin.",
+        ""
+      ],
+      "citation": "Pariser (2011) Eli Pariser. 2011. The filter bubble: How the new personalized web is changing what we read and how we think. Penguin.",
+      "title_candidate": "The filter bubble: How the new personalized web is changing what we read and how we think",
+      "status": "requires source verification"
+    },
+    {
+      "index": 59,
+      "source_id": "bib.bib60",
+      "blocks": [
+        "F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. 2011.",
+        "Scikit-learn: Machine Learning in Python.",
+        "Journal of Machine Learning Research 12 (2011), 2825–2830.",
+        ""
+      ],
+      "citation": "Pedregosa et al. (2011) F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research 12 (2011), 2825–2830.",
+      "title_candidate": "Scikit-learn: Machine Learning in Python",
+      "status": "requires source verification"
+    },
+    {
+      "index": 60,
+      "source_id": "bib.bib61",
+      "blocks": [
+        "Nicola Perra and Luis EC Rocha. 2019.",
+        "Modelling opinion dynamics in the age of algorithmic personalisation.",
+        "Scientific reports 9, 1 (2019), 1–11.",
+        ""
+      ],
+      "citation": "Perra and Rocha (2019) Nicola Perra and Luis EC Rocha. 2019. Modelling opinion dynamics in the age of algorithmic personalisation. Scientific reports 9, 1 (2019), 1–11.",
+      "title_candidate": "Modelling opinion dynamics in the age of algorithmic personalisation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 61,
+      "source_id": "bib.bib62",
+      "blocks": [
+        "Al Mamunur Rashid, Istvan Albert, Dan Cosley, Shyong K Lam, Sean M McNee, Joseph A Konstan, and John Riedl. 2002.",
+        "Getting to know you: learning new user preferences in recommender systems. In Proceedings of the 7th international conference on Intelligent User Interfaces. 127–134.",
+        ""
+      ],
+      "citation": "Rashid et al. (2002) Al Mamunur Rashid, Istvan Albert, Dan Cosley, Shyong K Lam, Sean M McNee, Joseph A Konstan, and John Riedl. 2002. Getting to know you: learning new user preferences in recommender systems. In Proceedings of the 7th international conference on Intelligent User Interfaces. 127–134.",
+      "title_candidate": "Getting to know you: learning new user preferences in recommender systems. In Proceedings of the 7th international conference on Intelligent User Interfaces. 127–134",
+      "status": "requires source verification"
+    },
+    {
+      "index": 62,
+      "source_id": "bib.bib63",
+      "blocks": [
+        "Steffen Rendle, Christoph Freudenthaler, Zeno Gantner, and Lars Schmidt-Thieme. 2012.",
+        "BPR: Bayesian personalized ranking from implicit feedback.",
+        "arXiv preprint arXiv:1205.2618 (2012).",
+        ""
+      ],
+      "citation": "Rendle et al. (2012) Steffen Rendle, Christoph Freudenthaler, Zeno Gantner, and Lars Schmidt-Thieme. 2012. BPR: Bayesian personalized ranking from implicit feedback. arXiv preprint arXiv:1205.2618 (2012).",
+      "title_candidate": "BPR: Bayesian personalized ranking from implicit feedback",
+      "status": "requires source verification"
+    },
+    {
+      "index": 63,
+      "source_id": "bib.bib64",
+      "blocks": [
+        "Manoel Horta Ribeiro, Raphael Ottoni, Robert West, Virgílio AF Almeida, and Wagner Meira Jr. 2020.",
+        "Auditing radicalization pathways on YouTube. In Proceedings of the 2020 conference on fairness, accountability, and transparency. 131–141.",
+        ""
+      ],
+      "citation": "Ribeiro et al. (2020) Manoel Horta Ribeiro, Raphael Ottoni, Robert West, Virgílio AF Almeida, and Wagner Meira Jr. 2020. Auditing radicalization pathways on YouTube. In Proceedings of the 2020 conference on fairness, accountability, and transparency. 131–141.",
+      "title_candidate": "Auditing radicalization pathways on YouTube. In Proceedings of the 2020 conference on fairness, accountability, and transparency. 131–141",
+      "status": "requires source verification"
+    },
+    {
+      "index": 64,
+      "source_id": "bib.bib65",
+      "blocks": [
+        "Francesco Ricci, Lior Rokach, and Bracha Shapira. 2011.",
+        "Introduction to recommender systems handbook.",
+        "In Recommender systems handbook. Springer, 1–35.",
+        ""
+      ],
+      "citation": "Ricci et al. (2011) Francesco Ricci, Lior Rokach, and Bracha Shapira. 2011. Introduction to recommender systems handbook. In Recommender systems handbook. Springer, 1–35.",
+      "title_candidate": "Introduction to recommender systems handbook",
+      "status": "requires source verification"
+    },
+    {
+      "index": 65,
+      "source_id": "bib.bib66",
+      "blocks": [
+        "David Rohde, Stephen Bonner, Travis Dunlop, Flavian Vasile, and Alexandros Karatzoglou. 2018.",
+        "Recogym: A reinforcement learning environment for the problem of product recommendation in online advertising.",
+        "arXiv preprint arXiv:1808.00720 (2018).",
+        ""
+      ],
+      "citation": "Rohde et al. (2018) David Rohde, Stephen Bonner, Travis Dunlop, Flavian Vasile, and Alexandros Karatzoglou. 2018. Recogym: A reinforcement learning environment for the problem of product recommendation in online advertising. arXiv preprint arXiv:1808.00720 (2018).",
+      "title_candidate": "Recogym: A reinforcement learning environment for the problem of product recommendation in online advertising",
+      "status": "requires source verification"
+    },
+    {
+      "index": 66,
+      "source_id": "bib.bib67",
+      "blocks": [
+        "Matthew J Salganik, Peter Sheridan Dodds, and Duncan J Watts. 2006.",
+        "Experimental study of inequality and unpredictability in an artificial cultural market.",
+        "science 311, 5762 (2006), 854–856.",
+        ""
+      ],
+      "citation": "Salganik et al. (2006) Matthew J Salganik, Peter Sheridan Dodds, and Duncan J Watts. 2006. Experimental study of inequality and unpredictability in an artificial cultural market. science 311, 5762 (2006), 854–856.",
+      "title_candidate": "Experimental study of inequality and unpredictability in an artificial cultural market",
+      "status": "requires source verification"
+    },
+    {
+      "index": 67,
+      "source_id": "bib.bib68",
+      "blocks": [
+        "Thomas C Schelling. 1971.",
+        "Dynamic models of segregation.",
+        "Journal of mathematical sociology 1, 2 (1971), 143–186.",
+        ""
+      ],
+      "citation": "Schelling (1971) Thomas C Schelling. 1971. Dynamic models of segregation. Journal of mathematical sociology 1, 2 (1971), 143–186.",
+      "title_candidate": "Dynamic models of segregation",
+      "status": "requires source verification"
+    },
+    {
+      "index": 68,
+      "source_id": "bib.bib69",
+      "blocks": [
+        "Sven Schmit and Carlos Riquelme. 2018.",
+        "Human interaction with recommendation systems. In International Conference on Artificial Intelligence and Statistics. PMLR, 862–870.",
+        ""
+      ],
+      "citation": "Schmit and Riquelme (2018) Sven Schmit and Carlos Riquelme. 2018. Human interaction with recommendation systems. In International Conference on Artificial Intelligence and Statistics. PMLR, 862–870.",
+      "title_candidate": "Human interaction with recommendation systems. In International Conference on Artificial Intelligence and Statistics. PMLR, 862–870",
+      "status": "requires source verification"
+    },
+    {
+      "index": 69,
+      "source_id": "bib.bib70",
+      "blocks": [
+        "Ken Shoemake. 1985.",
+        "Animating rotation with quaternion curves. In Proceedings of the 12th annual conference on Computer graphics and interactive techniques. 245–254.",
+        ""
+      ],
+      "citation": "Shoemake (1985) Ken Shoemake. 1985. Animating rotation with quaternion curves. In Proceedings of the 12th annual conference on Computer graphics and interactive techniques. 245–254.",
+      "title_candidate": "Animating rotation with quaternion curves. In Proceedings of the 12th annual conference on Computer graphics and interactive techniques. 245–254",
+      "status": "requires source verification"
+    },
+    {
+      "index": 70,
+      "source_id": "bib.bib71",
+      "blocks": [
+        "Joan E. Solsman. 2018.",
+        "YouTube’s AI is the puppet master over most of what you watch.",
+        "CNET (2018).",
+        "https://www.cnet.com/news/youtube-ces-2018-neal-mohan/"
+      ],
+      "citation": "Solsman (2018) Joan E. Solsman. 2018. YouTube’s AI is the puppet master over most of what you watch. CNET (2018). https://www.cnet.com/news/youtube-ces-2018-neal-mohan/",
+      "title_candidate": "YouTube’s AI is the puppet master over most of what you watch",
+      "status": "requires source verification"
+    },
+    {
+      "index": 71,
+      "source_id": "bib.bib72",
+      "blocks": [
+        "Wenlong Sun, Sami Khenissi, Olfa Nasraoui, and Patrick Shafto. 2019.",
+        "Debiasing the human-recommender system feedback loop in collaborative filtering. In Companion Proceedings of The 2019 World Wide Web Conference. 645–651.",
+        ""
+      ],
+      "citation": "Sun et al. (2019) Wenlong Sun, Sami Khenissi, Olfa Nasraoui, and Patrick Shafto. 2019. Debiasing the human-recommender system feedback loop in collaborative filtering. In Companion Proceedings of The 2019 World Wide Web Conference. 645–651.",
+      "title_candidate": "Debiasing the human-recommender system feedback loop in collaborative filtering. In Companion Proceedings of The 2019 World Wide Web Conference. 645–651",
+      "status": "requires source verification"
+    },
+    {
+      "index": 72,
+      "source_id": "bib.bib73",
+      "blocks": [
+        "Cass R. Sunstein. 2001.",
+        "Republic.com.",
+        "Princeton University Press.",
+        ""
+      ],
+      "citation": "Sunstein (2001) Cass R. Sunstein. 2001. Republic.com. Princeton University Press.",
+      "title_candidate": "Republic.com",
+      "status": "requires source verification"
+    },
+    {
+      "index": 73,
+      "source_id": "bib.bib74",
+      "blocks": [
+        "Cass R Sunstein. 2009a.",
+        "Going to extremes: How like minds unite and divide.",
+        "Oxford University Press.",
+        ""
+      ],
+      "citation": "Sunstein (2009a) Cass R Sunstein. 2009a. Going to extremes: How like minds unite and divide. Oxford University Press.",
+      "title_candidate": "Going to extremes: How like minds unite and divide",
+      "status": "requires source verification"
+    },
+    {
+      "index": 74,
+      "source_id": "bib.bib75",
+      "blocks": [
+        "Cass R. Sunstein. 2009b.",
+        "Republic.com 2.0.",
+        "Princeton University Press.",
+        ""
+      ],
+      "citation": "Sunstein (2009b) Cass R. Sunstein. 2009b. Republic.com 2.0. Princeton University Press.",
+      "title_candidate": "Republic.com 2.0",
+      "status": "requires source verification"
+    },
+    {
+      "index": 75,
+      "source_id": "bib.bib76",
+      "blocks": [
+        "Marcella Tambuscio, Diego FM Oliveira, Giovanni Luca Ciampaglia, and Giancarlo Ruffo. 2018.",
+        "Network segregation in a model of misinformation and fact-checking.",
+        "Journal of Computational Social Science 1, 2 (2018), 261–275.",
+        ""
+      ],
+      "citation": "Tambuscio et al. (2018) Marcella Tambuscio, Diego FM Oliveira, Giovanni Luca Ciampaglia, and Giancarlo Ruffo. 2018. Network segregation in a model of misinformation and fact-checking. Journal of Computational Social Science 1, 2 (2018), 261–275.",
+      "title_candidate": "Network segregation in a model of misinformation and fact-checking",
+      "status": "requires source verification"
+    },
+    {
+      "index": 76,
+      "source_id": "bib.bib77",
+      "blocks": [
+        "Seth Tisue and Uri Wilensky. 2004.",
+        "Netlogo: A simple environment for modeling complexity. In International conference on complex systems, Vol. 21. Boston, MA, 16–21.",
+        ""
+      ],
+      "citation": "Tisue and Wilensky (2004) Seth Tisue and Uri Wilensky. 2004. Netlogo: A simple environment for modeling complexity. In International conference on complex systems, Vol. 21. Boston, MA, 16–21.",
+      "title_candidate": "Netlogo: A simple environment for modeling complexity. In International conference on complex systems, Vol. 21. Boston, MA, 16–21",
+      "status": "requires source verification"
+    },
+    {
+      "index": 77,
+      "source_id": "bib.bib78",
+      "blocks": [
+        "Petter Törnberg. 2018.",
+        "Echo chambers and viral misinformation: Modeling fake news as complex contagion.",
+        "PloS one 13, 9 (2018), e0203958.",
+        ""
+      ],
+      "citation": "Törnberg (2018) Petter Törnberg. 2018. Echo chambers and viral misinformation: Modeling fake news as complex contagion. PloS one 13, 9 (2018), e0203958.",
+      "title_candidate": "Echo chambers and viral misinformation: Modeling fake news as complex contagion",
+      "status": "requires source verification"
+    },
+    {
+      "index": 78,
+      "source_id": "bib.bib79",
+      "blocks": [
+        "Francesca Tripodi. 2018.",
+        "Searching for alternative facts.",
+        "Data & Society (2018).",
+        ""
+      ],
+      "citation": "Tripodi (2018) Francesca Tripodi. 2018. Searching for alternative facts. Data & Society (2018).",
+      "title_candidate": "Searching for alternative facts",
+      "status": "requires source verification"
+    },
+    {
+      "index": 79,
+      "source_id": "bib.bib80",
+      "blocks": [
+        "Zeynep Tufekci. 2018.",
+        "YouTube, the Great Radicalizer.",
+        "The New York Times (2018).",
+        "https://www.nytimes.com/2018/03/10/opinion/sunday/youtube-politics-radical.html"
+      ],
+      "citation": "Tufekci (2018) Zeynep Tufekci. 2018. YouTube, the Great Radicalizer. The New York Times (2018). https://www.nytimes.com/2018/03/10/opinion/sunday/youtube-politics-radical.html",
+      "title_candidate": "YouTube, the Great Radicalizer",
+      "status": "requires source verification"
+    },
+    {
+      "index": 80,
+      "source_id": "bib.bib81",
+      "blocks": [
+        "Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser, Jonathan Bright, Stéfan J. van der Walt, Matthew Brett, Joshua Wilson, K. Jarrod Millman, Nikolay Mayorov, Andrew R. J. Nelson, Eric Jones, Robert Kern, Eric Larson, C J Carey, İlhan Polat, Yu Feng, Eric W. Moore, Jake VanderPlas, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen, E. A. Quintero, Charles R. Harris, Anne M. Archibald, Antônio H. Ribeiro, Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 Contributors. 2020.",
+        "SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python.",
+        "Nature Methods 17 (2020), 261–272.",
+        "https://doi.org/10.1038/s41592-019-0686-2"
+      ],
+      "citation": "Virtanen et al. (2020) Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser, Jonathan Bright, Stéfan J. van der Walt, Matthew Brett, Joshua Wilson, K. Jarrod Millman, Nikolay Mayorov, Andrew R. J. Nelson, Eric Jones, Robert Kern, Eric Larson, C J Carey, İlhan Polat, Yu Feng, Eric W. Moore, Jake VanderPlas, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen, E. A. Quintero, Charles R. Harris, Anne M. Archibald, Antônio H. Ribeiro, Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 Contributors. 2020. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. Nature Methods 17 (2020), 261–272. https://doi.org/10.1038/s41592-019-0686-2",
+      "title_candidate": "SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python",
+      "status": "requires source verification"
+    },
+    {
+      "index": 81,
+      "source_id": "bib.bib82",
+      "blocks": [
+        "Soroush Vosoughi, Deb Roy, and Sinan Aral. 2018.",
+        "The spread of true and false news online.",
+        "Science 359, 6380 (2018), 1146–1151.",
+        ""
+      ],
+      "citation": "Vosoughi et al. (2018) Soroush Vosoughi, Deb Roy, and Sinan Aral. 2018. The spread of true and false news online. Science 359, 6380 (2018), 1146–1151.",
+      "title_candidate": "The spread of true and false news online",
+      "status": "requires source verification"
+    },
+    {
+      "index": 82,
+      "source_id": "bib.bib83",
+      "blocks": [
+        "Hao Wang, Naiyan Wang, and Dit-Yan Yeung. 2015.",
+        "Collaborative deep learning for recommender systems. In Proceedings of the 21th ACM SIGKDD international conference on knowledge discovery and data mining. 1235–1244.",
+        ""
+      ],
+      "citation": "Wang et al. (2015) Hao Wang, Naiyan Wang, and Dit-Yan Yeung. 2015. Collaborative deep learning for recommender systems. In Proceedings of the 21th ACM SIGKDD international conference on knowledge discovery and data mining. 1235–1244.",
+      "title_candidate": "Collaborative deep learning for recommender systems. In Proceedings of the 21th ACM SIGKDD international conference on knowledge discovery and data mining. 1235–1244",
+      "status": "requires source verification"
+    },
+    {
+      "index": 83,
+      "source_id": "bib.bib84",
+      "blocks": [
+        "Uri Wilensky. 1999.",
+        "NetLogo.",
+        "https://ccl.northwestern.edu/netlogo/.",
+        ""
+      ],
+      "citation": "Wilensky (1999) Uri Wilensky. 1999. NetLogo. https://ccl.northwestern.edu/netlogo/.",
+      "title_candidate": "NetLogo",
+      "status": "requires source verification"
+    },
+    {
+      "index": 84,
+      "source_id": "bib.bib85",
+      "blocks": [
+        "Sirui Yao and Bert Huang. 2017.",
+        "Beyond parity: fairness objectives for collaborative filtering. In Proceedings of the 31st International Conference on Neural Information Processing Systems. 2925–2934.",
+        ""
+      ],
+      "citation": "Yao and Huang (2017) Sirui Yao and Bert Huang. 2017. Beyond parity: fairness objectives for collaborative filtering. In Proceedings of the 31st International Conference on Neural Information Processing Systems. 2925–2934.",
+      "title_candidate": "Beyond parity: fairness objectives for collaborative filtering. In Proceedings of the 31st International Conference on Neural Information Processing Systems. 2925–2934",
+      "status": "requires source verification"
+    },
+    {
+      "index": 85,
+      "source_id": "bib.bib86",
+      "blocks": [
+        "Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li. 2018.",
+        "DRN: A deep reinforcement learning framework for news recommendation. In Proceedings of the 2018 World Wide Web Conference. 167–176.",
+        ""
+      ],
+      "citation": "Zheng et al. (2018) Guanjie Zheng, Fuzheng Zhang, Zihan Zheng, Yang Xiang, Nicholas Jing Yuan, Xing Xie, and Zhenhui Li. 2018. DRN: A deep reinforcement learning framework for news recommendation. In Proceedings of the 2018 World Wide Web Conference. 167–176.",
+      "title_candidate": "DRN: A deep reinforcement learning framework for news recommendation. In Proceedings of the 2018 World Wide Web Conference. 167–176",
+      "status": "requires source verification"
+    },
+    {
+      "index": 86,
+      "source_id": "bib.bib87",
+      "blocks": [
+        "Lei Zheng, Vahid Noroozi, and Philip S Yu. 2017.",
+        "Joint deep modeling of users and items using reviews for recommendation. In Proceedings of the tenth ACM international conference on web search and data mining. 425–434.",
+        ""
+      ],
+      "citation": "Zheng et al. (2017) Lei Zheng, Vahid Noroozi, and Philip S Yu. 2017. Joint deep modeling of users and items using reviews for recommendation. In Proceedings of the tenth ACM international conference on web search and data mining. 425–434.",
+      "title_candidate": "Joint deep modeling of users and items using reviews for recommendation. In Proceedings of the tenth ACM international conference on web search and data mining. 425–434",
+      "status": "requires source verification"
+    },
+    {
+      "index": 87,
+      "source_id": "bib.bib88",
+      "blocks": [
+        "Cai-Nicolas Ziegler, Sean M McNee, Joseph A Konstan, and Georg Lausen. 2005.",
+        "Improving recommendation lists through topic diversification. In Proceedings of the 14th international conference on World Wide Web. 22–32.",
+        ""
+      ],
+      "citation": "Ziegler et al. (2005) Cai-Nicolas Ziegler, Sean M McNee, Joseph A Konstan, and Georg Lausen. 2005. Improving recommendation lists through topic diversification. In Proceedings of the 14th international conference on World Wide Web. 22–32.",
+      "title_candidate": "Improving recommendation lists through topic diversification. In Proceedings of the 14th international conference on World Wide Web. 22–32",
+      "status": "requires source verification"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "audit": "independent_reaudit",
+  "selection": "Entries 21-25 in the requested order",
+  "audited_at": "2026-09-29",
+  "scope": "Read the initial audit and corrected notes, then checked claims against the primary PDF/HTML or publisher record. For #23, limited checks to the accessible publisher abstract as requested. No paper notes edited.",
+  "overall_status": "FAIL",
+  "notes": [
+    {
+      "number": 21,
+      "filename": "Construct User Guide.md",
+      "status": "FAIL",
+      "source": "https://www.cmu.edu/casos-center/publications/cmu-s3d-24-105.pdf",
+      "source_access": "Primary 96-page CMU technical report accessible and text-extractable; cover identifies June 2024 and report CMU-S3D-24-105.",
+      "verified": [
+        "Abstract, title, author list, date, and report source match the guide.",
+        "The corrected execution cycle has the proper five-phase order: Think, Update, Intercept, Communicate, Clean Up. Initialization is one-time and all models complete each phase before advancing; Intercept allows modification of items created by other models.",
+        "The corrected account distinguishes the knowledge network, directed interaction sphere, and realized interaction network. Its summary of proximity, knowledge similarity/expertise, activity/access eligibility, and dynamic pair formation is supported by the Standard Interaction Model section.",
+        "The model claims are appropriately scoped to the Standard Interaction Model rather than all Construct configurations."
+      ],
+      "bibliography": "The note contains 47 linked titles with no unresolved placeholders, but no item-level comparison was made against the report's References section. The note has no bibliography completeness/provenance caveat.",
+      "exact_issues": [
+        "Add an explicit note that the 47 imported links have not been reconciled against the report bibliography, or complete that reconciliation before implying the list is source-complete."
+      ],
+      "limits": "The phase and Standard Interaction Model corrections are source-supported."
+    },
+    {
+      "number": 22,
+      "filename": "Contact Patterns in a High School- A Comparison between Data Collected Using Wearable Sensors- Contact Diaries and Friendship Surveys.md",
+      "status": "PASS_WITH_BIBLIOGRAPHY_CAVEAT",
+      "source": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0136497&type=printable",
+      "source_access": "Complete 26-page primary PLOS ONE PDF accessible; abstract, methods/results, metadata, and references checked.",
+      "verified": [
+        "Abstract claims match the primary abstract, including short-contact under-reporting in diaries, duration overestimation, friendship/long-contact findings, low survey completion, class mixing, and a reduced-link backbone.",
+        "The research questions are reasonable summaries of the study comparisons and structural-preservation result.",
+        "No model section is appropriate for this empirical comparison study.",
+        "Authors, DOI 10.1371/journal.pone.0136497, and 2015-09-01 publication date match the primary article. The corrected PLOS publisher PDF is accessible."
+      ],
+      "bibliography": "The note explicitly says five unresolved links have not been matched item by item against the primary References section. This accurately limits the bibliography claim; no specific reference-title error was established in this re-audit.",
+      "exact_issues": [],
+      "limits": "The five unresolved references remain unverified; retain the caveat until they are resolved."
+    },
+    {
+      "number": 23,
+      "filename": "Dunbar-s Number in Motion- Agent-Based Simulations of Friendship Formation.md",
+      "status": "PASS_WITH_ACCESS_LIMIT",
+      "source": "https://orb.binghamton.edu/nejcs/vol6/iss1/7/",
+      "source_access": "Publisher landing page and abstract accessible; article PDF inaccessible. Audit limited to the abstract as requested.",
+      "verified": [
+        "The abstract-only summary accurately reports Lévy-flight versus random-walk simulations, agent attributes/time budget, one-year horizon, Dunbar circles, hypothesis, and the reported greater cumulative interaction under random walk.",
+        "Research questions are defensible paraphrases of the abstract.",
+        "The note explicitly skips model extraction because implementation rules are absent from the accessible abstract.",
+        "Title, authors, 2024 date, and DOI 10.22191/nejcs/vol6/iss1/7 are consistent with the publisher record."
+      ],
+      "bibliography": "The note says the bibliography could not be verified because the PDF was inaccessible and imports no references. This is an appropriate caveat, not a claim that the article has no bibliography.",
+      "exact_issues": [],
+      "limits": "Keep fulltext unavailable and model extraction skipped until the full PDF is accessible; no claims about implementation or bibliography are audited."
+    },
+    {
+      "number": 24,
+      "filename": "Exploring Trade-Offs for Online Mental Health Matching- Agent-Based Modeling Study.md",
+      "status": "FAIL",
+      "source": "https://formative.jmir.org/2024/1/e58241/PDF",
+      "source_access": "Complete 18-page original JMIR publisher PDF accessible and text-extractable; frontmatter source now points to this readable primary PDF.",
+      "verified": [
+        "Title, authors including Cristopher Firman, 2024-10-01 publication date, and DOI 10.2196/58241 match the primary article.",
+        "The abstract and research questions are supported by the article.",
+        "The corrected simulation description accurately states one-minute periods, support-seeker/counselor agents, data-based arrival and gender/birth-year/topic distributions, patience/cancellation, chat duration, the deferred-acceptance hold/reject loop, and the seven tested policies: FCFS, LCFS, similarity, age, gender, topic, and filter-based.",
+        "The filter policy's three pools target underage and gender-minority protection; the set of outcome metrics (predicted rating, blocked pairs, matching success, waiting time) is correct.",
+        "Reference caveat correctly notes 56 imported links including 11 unresolved against 51 numbered primary references and states reconciliation is needed."
+      ],
+      "bibliography": "Explicit mismatch/unresolved-reference caveat is adequate; exact mapping of 56 note links to the 51 primary references remains incomplete.",
+      "exact_issues": [
+        "The note identifies only generic 'chat rating and blocking classifiers' and says validation compared feature distributions. The primary article gives material predictor/validation detail that should be represented: random forest is selected for rating prediction (0.72 accuracy and F1) and blocking prediction (0.91 accuracy and F1); the prediction models use an 80/20 train/test split (rating training data is SMOTE-balanced). For site-replication validation, the authors compare real and simulated distributions with Pearson correlations, including 0.99 for rating and 0.949 for blocking, plus distribution checks for agent arrivals and waits. Add a concise account so the note's validation and outcome-prediction claims are assessable rather than generic. (Publisher PDF pp. 6–8.)",
+        "State the material replication limitation: the simulation permits each seeker/counselor to take one chat at a time, while the live site allows counselors to take multiple chats; this likely explains the lower simulated match rate (78.35% versus 83.27% in the source comparison). (Publisher PDF p. 8.)",
+        "The status-quo queue rule is currently only 'stochastically.' Specify that counselors choose randomly from available seekers and their decision time follows an exponential distribution (lambda 1.25), as described in the primary Methods. (Publisher PDF pp. 5–6.)"
+      ],
+      "limits": "The source URL change to the original publisher PDF is correct. Model structure and seven policies now pass; remaining failure is material predictor, validation, and status-quo detail omitted from the note."
+    },
+    {
+      "number": 25,
+      "filename": "Exposure to opposing views on social media can increase political polarization.md",
+      "status": "PASS_WITH_BIBLIOGRAPHY_CAVEAT",
+      "source": "https://dlab.epfl.ch/teaching/spring2019/cs718/papers/bail2018exposure.pdf",
+      "source_access": "Readable mirror of the original PNAS article accessible; article metadata and main text/reference list checked in the initial audit and spot-checked here. DOI identifies the canonical PNAS article.",
+      "verified": [
+        "The source is a readable copy of the primary PNAS article; retaining this mirror and DOI 10.1073/pnas.1804840115 preserves access and canonical identification.",
+        "Title, authors, online publication date 2018-08-28, abstract, and research questions match the primary article. The note correctly includes the one-month incentivized opposing-bot exposure and asymmetric Republican/Democratic result.",
+        "No model section is appropriate for this randomized field experiment."
+      ],
+      "bibliography": "The note says its 61 links (three unresolved) do not reconcile with the primary article's 47 numbered references and marks reconciliation pending. This is an adequate caveat; the links have not been item-by-item mapped in this re-audit.",
+      "exact_issues": [],
+      "limits": "Bibliography title mapping remains incomplete; keep the caveat. The current EPFL PDF is a mirror, not the canonical publisher host, while the DOI is correctly recorded."
+    }
+  ],
+  "summary": "#22 and #25 pass with explicit unresolved-bibliography caveats; #23 passes only for abstract-level content; #21's substantive correction passes but its 47-link bibliography remains uncaveated and unreconciled; #24's corrected dynamics and policies are supported but its predictor/validation summary and stated status-quo mechanics omit key source details."
+}

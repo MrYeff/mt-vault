@@ -1,0 +1,5 @@
+/* Make external links in Properties use normal text/link color instead of green */
+.metadata-property-value a.external-link,
+.metadata-property-value .external-link {
+	color: var(--text-normal) !important;
+}

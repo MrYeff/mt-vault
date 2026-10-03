@@ -1,0 +1,935 @@
+The Power of Social Cognition
+Geoffrey P. Morgan, Kenneth Joseph, and Kathleen M.
+Carley
+Institute for Software Research, Carnegie Mellon University, Pittsburgh, PA 15203
+Abstract
+As human beings, we understand and make sense of the social world using social cognition. Social
+cognitions are cognitive processes through which we understand, process, and recall our
+interactions with others. Most agent-based models do not account for social cognition; rather, they
+either provide detailed models of task-related cognition or model many actors and focus on social
+processes. In general, the more cognitively realistic the models, the less they explain human social
+behavior and the more computationally expensive it is to model a single agent. In contrast, in this
+research an agent-based model containing an explicit model of social cognition is developed.
+Results from this model demonstrate that adding social cognition both improves the model
+veridicality and decreases computation costs.
+Introduction
+Scholars define social cognition, broadly, as the way humans understand and process their
+interactions with others (Greenwald & Banaji 1995). This includes interpreting human interaction,
+drawing inferences from spoken and unspoken communication, and developing an understanding
+of group dynamics. Like any notion of cognition, social cognition can be studied at various levels
+of abstraction. At the neurological level, scholars have made inroads in understanding social
+cognition’s biological origins (Frith & Frith 2008). One level “up” on the abstraction hierarchy,
+cognitive psychologists have developed models of how stereotypes are embedded within
+interpretable, but cognitively faithful, mental representations (e.g. Bem 1981, Brashears et al.
+2013). Social psychologists have studied how human actions are a function of culturally shared
+affective meanings, represented as a parsimonious set of numerical values (Heise 2007), and the
+cognitive turn in sociology has wrought about similar sorts of empirical models of cognition and
+culture (Goldberg 2011; Lizardo 2014).
+
+Recent work has begun integrating theory and data at multiple cognitive abstraction levels. For
+example, Schröder and Thagard (2013) integrate biological, cognitive and social psychological
+research into a unified model of how social behavior emerges from a neuropsychological theory
+of semantic pointers. A long-standing question, however, is how to integrate model based theories
+of cognition with model based theories of social structural dynamics (e.g. Carley 1991; Lizardo &
+Strand 2010). One reason why theorizing about this intersection is difficult is that methods to
+capture empirical data for theories linking social structure and cognition are difficult to collect and
+measure (Brashears 2013). An alternative approach is to link cognition and structure via theory
+implemented as computer simulation (e.g. Carley 1991), specifically agent-based models. As
+suggested by Schröder and Thagard (2013 pg. 275), “Multiagent models, simulating
+communication between multiple virtual agents in artificial societies … might one day shed light
+on how stable, consensual structures of affective meaning are generated and maintained in
+cultures.”
+
+The present work focuses on an advancement of an existing, empirically validated agent-based
+model called Construct (Schreiber & Carley 2013) with an approach to social cognition that is
+significantly more faithful to cognition than prior iterations. Interestingly, this increase in
+faithfulness is achieved by more faithfully modeling limitations (rather than features) of human
+cognition. Within the agent-based modeling literature, the proposed approach is novel, but its goals
+are not (Bainbridge et al. 1994).
+
+Socially realistic models tend to be lax in terms of the “cognitive” representation of socio-cognitive
+processes. Extant dynamic network socio-cultural models (e.g., Carley & Ren 2001) may have
+representations of alters in the “cognitions” of agents, and what those alters think or believe, but
+the informative mechanisms of social cognition are deterministically noisy perceptions of the
+simulation’s ground-truth. This is not sufficient because it is not a good model of how we create
+or inform inferences of others. Humans can, and often do, draw and even act on inferences about
+what others think and know merely from their first glance at them, before they have even spoken
+their first word. Thus, agent-based models should be able to represent such a social cognitive
+
+
+
+                                                  1
+mechanism, while still retaining the computational efficiencies of socially realistic, cognitively-
+poor agent-based models.
+
+This research addresses this gap in simulation technologies and social theory. on the proposed
+approach connects existing cognitive, social psychological abstractions of social cognition into an
+overarching model of dynamic social structure. While the model described lacks faithfulness to
+many conceptualizations of social cognition, it provides an efficient formalization to span these
+abstraction levels while retaining complexity.
+
+The behavior of this model is examined and validated by examining its capability to replicate a
+number of “stylized facts” (Kaldor 1961) that have been shown to exist empirically. For example,
+the model’s capability to faithfully represent known interactional patterns between members of
+different social groups (Tajfel and Turner 1979) is explored. The model’s ability to accurately
+portray these facts is determined via both quantitative and qualitative evaluation of model output,
+a form of “docking” (Axtell, Axelrod, Epstein, & Cohen 1996). This approach is taken rather than
+simply running more simulations as statistical significance is guaranteed to be achieved by running
+more simulations; whereas, examining qualitative patterns provides better theoretical guidance.
+
+In all cases, model output is compared to an existing agent-based model that provides a less faithful
+and more computationally expensive representation of social cognition. The results of the virtual
+experiment demonstrate that the proposed model provides outputs that better match empirical data.
+Further, a combination of theoretical analysis and experimentation is used to prove that the
+proposed model is computationally more efficient than this prior work.
+
+Related Work
+This section contains a brief review of extant approaches to social cognition in agent-based models,
+and lessons that can be learned from these models, as well as prior implementations of a theory of
+mind implemented as transactive memory system. While significant work focuses on social
+cognition and its intersection with social interaction and social structure, the present discussion is
+restricted chiefly to work that is germane to computationally modeling these processes.
+
+Modeling Social Behavior
+Several models have employed aspects of social cognition to examine inter-agent behavior without
+ascribing to a rigorous general cognitive model. For example, De Weerd, Verbrugge, and Verheij
+(2013) showed the competitive advantage of modeling an adversary’s thought processes.
+Chavalarias (2005) used game-theoretic models to explore how imitation behaviors can lead to
+social differentiation. Paul, Pickett, Sherman, and Schank (2012) used Optimal Distinctiveness
+Theory (Brewer 1991) to inform a Schelling-esque model (1971) of how different social
+configurations could stabilize, showing that a social space’s initial configuration strongly affects
+the persistent patterns of group identity. Friedkin (2006) demonstrated the movement of
+individual’s to group norms via a social influence process on opinion formation.
+
+
+
+
+                                                  2
+Deep models of individual cognition, such as those implemented in Soar (Laird 2012) or ACT-R
+(Anderson et al. 2004), are rarely implemented in situations where inter-agent communication is
+required, let alone collaboration or coordination. When they are, model developers create specific
+code and working memory elements that represent alters but there are not explicit architectural
+mechanisms for social cognition or theory of mind. Examples of domain-specific implementations
+include inferences on enemy locations in adversarial agent-simulations (Best, Lebiere, &
+Scarpinatto 2002) or assigning tasks to flight squadron members (Jones et al. 1999). There has
+been interesting work placing ACT-R modeling within an organizational context (Helmhout
+2006). However, such models are computationally infeasible to utilize when one wishes to perform
+simulations of large numbers of agents. Recent cognitive models with some social cognition scale
+successfully into the hundreds of agents (Kaulakis et al. 2012).
+
+Prior Implementations of Theory of Mind
+The proposed model is a formalization of a theory of mind, an element of general social cognition,
+to improve agent-based simulation of human actors. At the core of this theory of mind is a multi-
+level transactive memory system. Transactive memory is an explanatory mechanism of “how
+groups process and structure information” (Wegner 1987). Wegner suggests that humans both
+encode information internally and encode the location of external information resources. These
+external resources can include notebooks, file cabinets, databases, and, most importantly, other
+human beings. A person may not know, for example, how to diagnose a problem with a car, but
+that same person may know that a mechanic is a good starting point. This encoding capacity is
+essential to both what allows groups to be efficient, and allows people to specialize usefully in
+their work.
+
+Prior simulation efforts have modeled this human capacity as a three-element tuple, ijs. Each agent
+i has for alter j a perception of alter j‘s knowledge of information set s. Palazzolo and his
+collaborators (2006) had a continuous value (from 0 to 1) for this three-element tuple, representing
+perceived likelihood of an alter having information of use related to that knowledge set. Carley
+and Ren (2001) represented each sub-element in each agent’s representation of alters as a binary.
+Thus, agents may believe an agent knows or does not know a specific piece of knowledge (an
+information element in one or more sets s). Construct (Carley 1991), the agent-based dynamic-
+network simulation model extended herein, integrates the model of transactive memory as
+described in Carley and Ren (2001), and then further extends it to account for multiple modes of
+interaction and diverse communication modalities (Carley, Martin, & Hirshman 2009).
+
+These prior efforts are functional, but are necessarily scale limited. As the agent population
+increases, the computer memory requirements increase exponentially. However, humans are able
+to function socially despite being conceptually aware of thousands, if not millions, of other human
+beings. Consistent with the Carnegie School (Cyert & March 1963; March & Simon 1958; Simon
+1957) theoretical position the proposed model is predicated on the assumption that human memory
+capacity is not functionally infinite. Instead, it is argued that humans are boundedly rational
+(Simon, 1991) and must have a mechanism that conserves memory capacity yet retains
+functionality.
+
+
+
+                                                 3
+Theoretical Approach: The Generalized Other to inform
+Transactive Memory
+As a candidate mechanism, humans are modeled as being capable of holding detailed transactive
+memory representations for a limited number of people. For others, humans hold coarser
+representations inferred from group membership. In other words, humans hold stereotypes, or
+prejudices, that inform their perceptions of what others know. While the terms stereotype and
+prejudice have functionally distinct meanings in the social psychological literature (Hewstone et
+al. 2002), the concept that group memberships inform one individual’s perceptions of others is a
+core component of social cognition.
+
+Mead’s (1925) Generalized Other is a foundational root in the study of human stereotyping. Mead
+argued that people make and retain persistent inferential statements on ethical behavior, such as
+“people of type X tend to do thing Y”. Multiple such statements may be active at the same time,
+and in aggregate, Mead called these the “Generalized Other’. People, Mead claimed, use the
+Generalized Other to regulate their own behavior by acting in compliance with the statements
+applicable to themselves. People can also use the Generalized Other to understand the behavior of
+others. It is assumed that Mead would also be comfortable with the idea that people can make
+similar inferential statements, “people of type X tend to know or believe thing Y” for he wrote
+(1925, pg. 275), “[s]ocial control depends, then, upon the degree to which the individuals in society
+are able to assume the attitudes of others who are involved with them in common endeavor.”
+
+From Mead’s work springs a rich collection of psychological, sociological and social
+psychological research on stereotypes. For example, Stryker’s (1980; 2008) sociological and
+structural take on symbolic interactionism definitively argues that humans perform stereotyping
+on different “types” of others. From a psychological perspective, many scholars have addressed
+an immediate following question, how are “types” of people identified? Mead suggested that there
+exists a large common group, called in his work “society”, but also that humans concurrently
+maintained additional inferential statements for all relevant types. In the proposed model,
+embodies the theory that external, that is, clearly visible group memberships may be sufficient to
+distinguish “types”. Thus, types are a fixed and uniformly agreed upon set, which is a
+simplification of human experience. This representation is a formalization of the “minimal” group
+paradigm suggested by Tajfel, Turner and their colleagues (1979; 1981). In the paradigm, group
+memberships are clearly and universally defined (by, e.g., the color of one’s shirt in an
+experimental setting; see Tajfel, Billig, Bundy, and Flament 1971). Importantly, this representation
+is a limitation of this implementation, not the overall model’s theoretical underpinnings. Even
+including this limitation, the salience and precise representations of different group memberships
+are informed entirely from individual experience. Thus, each agent may have its own wildly
+different understanding of its social context.
+
+From the literature referenced above, three transactive memory tiers essential to the proposed
+multi-level implementation are identifiable:
+
+   -       Personal: I know this individual and have specific perceptions about what they do and
+           do not know.
+
+                                                 4
+   -       Group: I do not know this individual, but I have perceptions about groups to which I
+           believe they belong.
+   -       Global: I do not know this individual, and I do not have perceptions about the groups
+           to which I believe they belong.
+    -
+Scholars often discuss both the Generalized Other and stereotyping within schema theory’s
+(Rumelhart 1978; 1980) cognitive framework. In this context, a schema represents a memory
+structure for retaining generic concepts. In schema theory, each individual has a hierarchy of
+schema applicable to specific environmental conditions. Schemata that help us understand who
+other people are and what they are likely to know “Social Schema” (Kuethe 1962). These produced
+social schema are culturally dependent (Little 1968), but their production mechanism is expected
+to be endemic to the human condition and not to be culturally dependent.
+
+In schema theory, environmental cues determine schema availability. Individuals use available
+schema to make inferences about their environment. Unavailable schema do not burden the
+individual’s resources. In cognitive agent systems (Anderson 1996), schema-like representations
+have been used to produce human-like cognition as agents learn tasks, and agents may have many
+schema (implemented as production rules, a specific form of schema that use if-then structures)
+active simultaneously. Work by Duong and Reilly (1995) used a hierarchy of neural-networks to
+implement schema theory and model Mead’s Symbolic Interactionism (Mead 1925), producing a
+hiring model showing racial bias.
+
+Anderson and his collaborators (2004) suggest, and give empirical evidence, that chunks of human
+memory are “activated” when they are used. This activation decays over time with non-use. An
+actor’s schemas can be associated with an “activation score”, allowing one to determine the
+accessibility of the schema to the agent. These activation scores, according to Anderson, determine
+if an agent is able to recall a chunk. If the agent cannot recall the chunk, it must do without it.
+
+The proposed model takes advantage of this approach’s computational tractability, but changes the
+activated chunk’s granularity. Rather than each chunk representing a single schema-object, of
+which there are many per alter, each chunk represents a specific alter or group. Each interaction
+with an alter is treated as an activation-event, and thus alters (and their groups), which are
+frequently contacted, will have high activation scores. An agent may also receive information
+about an alter or group, and this is also an activation-event. Thus, what schema are used to inform
+behavior are contextually dependent on recent activities and current social structure, an important
+aspect to realistic social cognition (Edmonds 2014). Brashears (2013) showed that social schema
+are active in understanding group structures. This research goes further to suggest that schemas
+are necessary to conserve limited cognitive resources and allow humans to interact intelligently (if
+heuristically) with unknown others.
+
+For more information on the approach’s implementation, see Joseph, Morgan, Martin, and Carley
+(2014). The remainder of the paper is organized as follows. First, the utility of a multi-level
+transactive memory system is reviewed. Then two virtual experiments for assessment are outlined.
+Then a proof of the computational savings from a multi-level system is provided. Finally, results
+from the virtual experiments are provided, followed by a discussion of limitations and potential
+future work. The results suggest that the multi-level implementation improves model fidelity,
+
+                                                 5
+conserve’s the agent’s limited cognitive resources, and improves the model’s sensitivity to
+important initial conditions.
+
+Modelable Social Phenomena
+The proposed model, Construct-SC, is an extension of Construct (Carley et al. 2009) to include a
+social-cognition adaptation of aforementioned multi-level transactive memory system. Construct
+is a network-centric agent-based simulation of knowledge diffusion within groups. Agents
+communicate information to other agents. Agents may forget knowledge they possess. How
+information diffuses within a group depends on multiple factors: the preferences of individual
+agents, the initial knowledge of each agent, and the social ties between those agents. In Construct,
+a central tenant is that as individuals learn and change what they know, they also change their
+position in the social network, and thus their most likely interaction partners. There are multiple
+biases for preference for interaction, including:
+
+   -       Homophily, agents prefer interacting with people like themselves (McPherson, Smith-
+           Lovin, & Cook 2001)
+   -       Expertise, agents prefer interacting with people with valuable knowledge (Carley &
+           Hill 2001)
+   -       Propinquity, agents prefer interacting with people nearby (Allen 1984)
+
+Both homophily and expertise require perceptions of people’s knowledge. Earlier iterations of
+Construct used an error-prone and stochastic perception of ground-truth. However, later work with
+Construct implemented transactive memory as outlined in Carley and Ren (2001). Agents maintain
+persistent alter representations as transactive memory vectors. Agent interactions inform these
+vectors. In Construct-SC (Social Cognition), the Construct system is modified by:
+
+   -       Adding transactive memory vectors for groups, of similar form to those for alters;
+   -       Assigning transactive memory vectors activation scores which change over time;
+   -       Allowing transactive memory vectors to be lost (or “forgotten”) through disuse.
+
+In both Construct-SC and Construct’s transactive memory system (Carley & Ren 2001), a
+“schema” is a transactive memory vector – a series of K bits, where K represents the number of
+knowledge pieces, or “facts”, in the system. Each bit represents the ego’s perception of the alter’s,
+group’s, or Generalized Other’s knowledge of a fact. While Construct has a single vector for each
+alter, in Construct-SC these schemas are arranged hierarchically. An ego determines what an alter
+knows by starting at the personal level. If that schema is activated above the threshold, then the
+agent uses the alter’s transactive memory vector. If not, the agent will “construct” the alter’s
+knowledge vector from the relevant group schema. If the alter belongs to no relevant groups, then
+the agent uses the Generalized Other’s transactive memory vector.
+
+With these changes, Construct-SC should be able to model social and human phenomena that
+Construct could not. Construct-SC should also replicate results from Construct. In Table 1, a set
+of observations on human social behavior are presented. For each of these observations, an “X”
+is used to denote whether that observation is reflected in Construct or Construct-SC respectively.
+
+
+                                                 6
+ Table 1. Stylized facts of Construct and Construct-SC
+ Designed                                   Citation                       Construct Construct-SC
+ Individuals interact with others.                                         X         X
+ People interact with others based on their                                X         X
+ perceptions of them.
+ Individuals reason about a generalized other.    Mead 1925                          X
+ Individuals have perceptions of groups.          Stryker 1980                       X
+ Perceptions of unknown individuals are based     Tajfel and Turner 1979             X
+ on their known group affiliations.
+ Group perceptions can be informed by             Carley 1991                        X
+ interactions with members of that group.
+
+ Emergent                                         Citation                 Construct Construct-SC
+ Diffusion of new information follows an S-       Rogers 2010              X         X
+ Shaped Curve.
+ Heterogeneous groups are more likely to          Granovetter 1983; 2005   X         X
+ discover novel information from outside the
+ group than are homophilous groups.
+                                                                           X         X
+ Groups with some heterogeneity outperform        Ancona & Caldwell 1992   X         X
+ purely homophilous groups.
+ Individuals are more likely to interact in-      Blau 1977; Tajfel &      X         X
+ group than out-group.                            Turner 1979
+ The improvement in task competency of            West, Barron, Dowsett,             X
+ cliquish groups will have significantly more     & Newton 1999
+ marginal variation over time.
+ Perceptions of others are often based upon       Greenwald & Banaji                 X
+ things such as expected roles, social norms,     1995; Heise 1979; 2007
+ and social categorizations.
+ Arbitrary and even meaningless distinctions      Tajfel et al. 1971                 X
+ between groups can trigger a tendency to favor
+ one's own group at the expense of others.
+ Transactive     memory      should   preserve    Wegner 1995                        X
+ computational resources.
+
+Those factors that are “designed” are actual mechanisms built in to the model implementation.
+Those factors that are “emergent” are results that emerge from the model in the virtual experiments.
+
+As Table 1 documents, Construct-SC is a formalized theory that allows for a richer representation
+of the social group phenomena. Table 1 is used to inform the construction and simulation outputs
+of interest for the primary virtual experiment outlined in the next section.
+
+Virtual Experiment Design
+Two different virtual experiments inform the results. Virtual Experiment 1 focuses on the question
+“Is this a better model of human behavior?”. Virtual Experiment 2 is used to address the quetion
+“Is this a more computationally efficient implementation of human behavior?”.
+
+
+
+
+                                                      7
+Virtual Experiment One: Modeling Human Behavior
+In the first experiment, Construct-SC is evaluated as a model of human behavior. It is anticipated
+that Construct-SC will model successfully the stylized facts from Table 1. For this experiment, the
+agent count, the knowledge count, the number of simulation turns, and the task-size (in bits) for
+performance evaluation are kept constant.
+
+Several factors are manipulated that influence the distribution of knowledge. One of these is the
+group structure of the social space. Group structure is controlled by two variables: 1) whether there
+was a single dominant social group, or whether all groups were the same size, and 2) the disparity
+in size between the dominant and non-dominant groups (if there was a dominant group).
+
+The distribution of knowledge across groups is also varied. Three knowledge distributions are
+considered: 1) Group-Based, 2) Random, and 3) Fuzzy Groups. In the Group-Based condition,
+knowledge is distributed based on group affiliation. Each group’s size, relative to the total number
+of agents, indicates how many of the knowledge bits ‘belonged’ to the group, and the group’s
+knowledge bits are assigned stochastically to group member. In the Random condition, knowledge
+is distributed without reference to group membership. In the Fuzzy Group condition, knowledge
+is distributed primarily, but not entirely, based on group membership.
+
+The social space is also differentiated by whether individuals may be members of multiple groups.
+In the “single” condition, all individuals are members of exactly one group. In the “multiple”
+condition, all individuals are initialized as members of a single group, and then are given a random
+chance (0.25^(number of group-memberships)) to be a member of an additional group, with the
+new group chosen at random from groups to which that individual does not already belong. The
+first group, Group 0, is assumed to be highly interstitial: a person is twice as likely to be assigned
+membership to Group 0 as other groups.
+
+Individuals in the social scene may be more or less driven by desire for interaction with others like
+themselves (Homophily), or with people with rare knowledge (Expertise). Frequently, these drives
+are co-present in people (Carley, Lee, & Krackhardt 2002), as shown, for example, by Valente
+(1996). Three settings are used for these values: 1) “100/0” where all interaction is driven by
+homophily preference; 2) “60/40” where homophily preference is dominant to expertise
+preference; and 3) “0/100” where all interaction is driven by expertise preference.
+
+To contrast Construct and Construct-SC, two variants of the Transactive memory model (TM-
+Model) are used. The experimental condition “Full” represents the earlier implementation of
+Construct’s Transactive Memory. The condition “Multi-Level” represents Construct-SC’s new
+Transactive Memory implementation.
+
+Agents are evaluated on several dependent variables, including in-group interaction probability,
+out-group interaction probability, knowledge diffusion over time, and task performance over time.
+In-group interaction probability is the average, across agents, of the summation of probabilities of
+interacting with fellow group members. Out-group interaction probability is, similarly, the
+
+                                                  8
+average, across agents, of the summation of probabilities of interacting with alters outside the
+group. Knowledge diffusion is the sum of each agent’s knowledge-bit count. Task performance
+is evaluated using a binary classification task (Carley 1992). In a binary classification task, agent
+knowledge is used as a mask over a binary string, and the task for the agent is to successfully guess
+whether a string is more 1s or 0s. To evaluate task performance, the set of knowledge bits is
+divided into ten contiguous blocks, each representing a task. Each turn, bits required per task are
+drawn at random from each block. An agent’s score each turn is the percentage of tasks they
+completed correctly.The first virtual experiment’s factors and constants are presented in Table 2.
+
+
+ Table 2. Virtual Experiment 1 - comparing behavior versus Full (Construct) and Multi-
+ Level (Construct-SC) implementations of transactive memory
+ Factors                 Values                                             # of Values
+ Group Size and Number Single-Dominant (60%, Large), Single-Dominant 4
+                         (60%, Small), All-Equal (Large), All-Equal (Small)
+
+ Knowledge Distribution Group-Based (0.01, .3), Random (.1, 0.0), Fuzzy 3
+ (Random,       Group- Groups (0.03, .25)
+ Based)
+ Group Membership       Single, Multiple                                2
+
+ Interaction    Drives 100/0, 60/40, 0/100                                           3
+ (Homophily/Expertise)
+ Transactive Memory    Full, Multi-Level                                             2
+                       Total Combinations                                            144
+                       Runs Per Condition                                            10
+                       Total Runs                                                    1440
+
+ Constants
+ Agent Count                200
+ Knowledge Count            400
+ Sub-Tasks                  10
+ Time                       800
+
+ Outcomes
+ In-Group    Interaction Average of each agent’s summed probabilities of
+ Probability             interacting in-group
+ Out-Group Interaction      Average of each agent’s summed probabilities of
+ Probability                interacting out-group
+ Knowledge Diffusion        Summation of each agent’s knowledge-bit count
+ Task Competencies          Binary Task Classification (see above)
+
+
+
+
+                                                 9
+ Table 3. Virtual Experiment 2 - comparing run-time results
+ Factors                   Values                                                   # of Values
+ Agent Count               1000, 5000, 10000, 15000                                 4
+ Transactive Memory        Full, Multi-Level                                        2
+                           Total Combinations                                       8
+                           Runs Per Condition                                       10
+                           Total Runs                                               80
+
+ Constants
+ Group Size and Number        All-Equal
+ Knowledge Distribution       Fuzzy Groups (0.03, .25)
+ (Random, Group-Based)
+ Group Membership             Multiple
+ Interaction       Drives     60/40
+ (Homophily/Expertise)
+ Knowledge Count              1000
+ Sub-Tasks                    10
+ Time                         365
+
+ Outcomes
+ Run Time                     Average turn length in seconds per agent
+
+Virtual Experiment Two: Empirical Observation of Achieved
+Efficiencies
+Virtual Experiment 2, described in Table 3, is used to evaluate Construct and Construct-SC’s run-
+time costs. It is anticipated that the simulations using Construct-SC will have a much faster run-
+time. A formal analysis of Construct-SC’s memory complexity is provided next; however,
+evaluating Construct-SC’s time-complexity is highly dependent on a modeler’s choices. Thus
+Virtual Experiment 2 was run to demonstrate achieved efficiencies for typical usage based on prior
+experience. For these experiments, the group structures, knowledge distribution, interaction
+drives, knowledge count, sub-task count, time, and machine configuration are controlled. A
+powerful machine with 60 processors and 0.5 TB of memory to minimize noise in run-time results
+was used to run the virtual experiment. In each case, Construct was run on a single thread.
+
+The number of agents (agent count) in the simulation world, and the transactive memory model
+were varied. The primary outcome variable was run-time, which was measured as average turn
+length per agent to make the results more easily comparable across the wide variation in number
+of agents.
+
+
+
+
+                                               10
+Figure 1. Information Diffusion in Construct and Construct-SC. Both Models predict overall
+diffusion of information at similar rates across other variables.
+
+
+Results
+Following the pattern established by the virtual experiments, the results are presented in sub-
+sections, related to the modeling of human behavior and to run-time results.
+
+An Improved Model of Human Behavior
+By improving the theory of mind implementation over that Construct, it is anticipated that the
+improved model, Construct-SC, will better represent the stylized facts described in Table 1. The
+results demonstrate that adding social cognition is a theoretical win; i.e. the model with improved
+theory of mind produces results which better match Table 1’s stylized facts.
+
+
+
+                                                11
+Figure 2. Construct-SC actors prefer to interact in-group unless only rare knowledge is
+valued and group membership is arbitrary
+
+
+In this section, Table 1 is used to guide the analysis of the results. First, both models should
+replicate information diffusion’s S-Shaped curve. The results in Figure 1, demonstrate that both
+models predict similar levels of information diffusion over time across all condition groups.
+Clearly, the curves represented do not show the traditional “bottom” of the expected S-shaped
+curve, but otherwise follow the expected pattern. The apparent difference from the traditional S-
+shaped curve, however, can be readily attributed to the initial conditions of the model, which was
+set to ensure a reasonable run time. More specifically, because initial information density was set
+high, simulations essentially skip the ‘discovery’ phase for most knowledge bits. As is
+demonstrated, when considering multiple knowledge bits together to measure task performance,
+the familiar S-shaped curve returns (Figure 3).
+
+Construct-SC allows for group reasoning and group biases. People often privilege interaction with
+people within their social groups, even when those groups do not imply shared knowledge or
+understanding. Figure 2 is a series of line plots, showing the distribution of in-group bias with
+Construct and Construct-SC compared in every sub-graph. The separate columns represent how
+knowledge is distributed a priori; the separate rows represent the weighting of the expertise drive.
+Each sub-graph represents cumulative bias towards the in-group, with the X-axis being time. As
+shown in Figure 2, Construct-SC agents prefer to interact more with members of their own group
+than Construct agents in nearly all cases. The exceptions occur in the somewhat unlikely social
+situation where only the expertise drive is active, and thus only rare knowledge is valued. In the
+
+                                                12
+Figure 3. Task performance of different groups are compared over time. Important social
+structures of the simulation drive variation in Construct-SC task adoption outcomes.
+
+fuzzy-group knowledge distribution, Construct-SC agents find value in interacting outside the
+group, at first, until enough members of their own group gain rare knowledge. In the random-case,
+Construct-SC agents tend to attribute knowledge they already possess to in-group members which
+does not offer any group cohesion.
+
+In task performance, it is anticipated that there will be variation over time in highly cliquish groups
+(West, et. al 1999), i.e., groups that prefer to interact with the in-group over interacting with people
+outside the group. Based on the findings from Figure 2, it is assumed that groups that are entirely
+homophily-driven (the top row) fit this definition. Construct-SC agents are, in general, more
+cliquish.
+
+Figure 3 is a series of line plots, showing the distribution of task performance with the Construct
+and Construct-SC compared in every sub-graph. Two separate graphs are presented, one where
+agents can be members of multiple groups, and one where they can only be a member of a single
+group. In both cases, every agent is a member of at least one group. Within each graph, the separate
+columns represent knowledge distribution, and the separate rows represent the weighting of the
+expertise drive. Each sub-graph represents the task performance of the population, with the Y-Axis
+being the summation of all agents’ capabilities to complete a large complicated task. The task was
+
+                                                  13
+Figure 4. Variation in task performance outcomes over time - Construct-SC shows a more
+pronounced U-Shape curve over time in all group-based knowledge distributions.
+
+defined as follows. First the knowledge was divided into ten parts using contiguous sets of
+knowledge bits. Then the bits required for each sub-task at each point in time were drawn from all
+bits related to that sub-task. Thus, performance on each task should be expected to vary over time,
+but as agents gain knowledge, they will become better able to contribute to the overall task, until
+nearly every agent can perform nearly all sub-tasks involved. The X-axis indicates time. Construct-
+SC allows for much more variation in outcomes, and that variation is due to the simulation’s social
+structure.
+
+Figure 3 shows that simulation outcomes are sensitive to social structure. The more agents are
+motivated by expertise, the faster performance tends to improve. Knowledge distributed a priori
+by group tends to diffuse slower, probably due to in-group biases shown in Figure 2. Construct-
+SC agents, with their stronger in-group biases in general, tend to distribute task-knowledge more
+slowly. Multi-group memberships mitigate the effect.
+
+Figure 4 shows that outcome metric variations are different between Construct and Construct-SC.
+Construct-SC’s task performance outcome variations have a distinctive U-shape curve over time
+when knowledge is not randomly distributed – this pattern is muted in original Construct. Note
+that this is not merely the addition of more noise to the simulation model – instead the perceived
+additional variability is, in the outcome variable, structural in nature. When group membership is
+salient to performance (because knowledge is distributed through group memberships), there is
+low variability in performance both at the beginning and at the end of the simulation, i.e. at both
+
+
+                                                14
+            Table 4. Symbols used in analysis of the computational complexity
+ Symbol        Meaning
+ ||            Number of instances (e.g. |SO-TMV|) is the number of instances in the SO-
+               TMV
+ G             Number of groups
+ N             Number of agents
+ K             Number of knowledge bits
+ SOTM          Agent perception of individuals (Significant Others Transactive Memory)
+ GTM           Agent perception of groups (Group Transactive Memory)
+ NIntPerTurn Number of interactions an agent can have per turn
+ Thresh        Threshold of activation at which agent “forgets” an agent or group
+
+
+observed areas of the diffusion curve. . Rather than adding noise, social cognition reduces variation
+and so noise when group membership is salient.
+
+Better Behavior, Better Performance
+In general, as models become more veridical they become more computationally complex. In other
+words, the better the model of cognition, the longer it takes to simulate group behavior, and the
+more computer resources are required. In this section, Construct-SC’s computational performance
+is analyzed. The results demonstrate that adding a multi-level theory of mind is a computational
+win; i.e. to model the same number of agents in Construct-SC versus Construct requires less
+memory and runs faster.
+
+From a computational perspective, the new mechanism’s chief advantage is that it reduces the
+computer memory required to maintain transactive memory by implementing a variant of ACT-
+R’s activation equations. In this section, a formal proof of this fact is provided, followed by an
+empirical demonstration that this space saving does not come at the cost of the simulation’s run-
+time speed. These memory and run-times make it feasible to run much larger simulations in
+Construct-SC. Table 4 provides an overview of the symbols used in the derivations in this section.
+
+In Construct-SC the implementation of ACT-R’s activation equations are a variant of Petrov’s
+(2006) approximation. In this variant, agents “forget” information if its activation score is below
+a threshold. In Construct-SC, agents “forget” their perceptions, or transactive memory, of other
+agents and groups if they have not interacted with them recently. “Time” is represented by
+simulation turns, and thus bounds can be set on the amount of time before an agent “forgets” based
+on the number of simulation turns that have elapsed and a particular setting of the variables in the
+ACT-R equation. The following derivation utilizes this idea to bound the model’s memory
+requirements.
+
+In Table 4, the variables needed to calculate the algorithm’s complexity are defined. Then in Table
+5, the major mechanisms for Construct and Construct-SC are compared – defining their space
+complexity. As is clear, retaining perceptions of alters dominates the space complexity in
+Construct. Assuming that there will be many more agents than groups (N > G), the same is true of
+
+
+                                                 15
+         Table 5. Computational complexity per agent of the social cognitive system
+             Object               Space Complexity-        Space Complexity- Construct-
+                                      Construct                          SC
+ Agent Knowledge               O(NK)                      O(NK)
+ Alter to Group Matrix         N/A                        O(NG)
+
+ Activation Mechanism               N/A                           O(N*(|SOTM| + |GTM|))
+ Perceptions of others’             O(N2K)                        O(N*(|SOTM|+|GTM|)*K)
+ knowledge
+ Total                              O(N2K)                        O(max(NG,
+                                                                  N*(|SOTM|+|GTM|)*K)
+
+Construct-SC. The primary question that must be answered is thus the size of |SOTM| + |GTM|
+relative to N, as this will identify the space savings obtained.
+
+To make this determination, assume that |GTM| == G, and again that G is small relative to N for
+this simulation model. In other words, assume that the number of groups that an agent can be in is
+insignificant as compared to the number of agents. The primary concern now becomes comparing
+|SOTM| and N. Assume that an agent has interacted with another agent T turns ago. Then, given
+the activation equations described by Petrov (2006) and the mechanism described, the following
+must be true for the agent to not “forget” the alter (where K is some initial, small, constant
+activation value to ensure Equation 1 is defined when T =0):
+
+
+                                                                                                   (1)
+
+
+With some straightforward algebraic manipulation, results in an equation which defines the
+number of time steps, or simulation turns before which an agent will “forget” an alter that it
+interacted with once, T turns ago:
+
+                                                                                                   (2)
+
+If an agent interacts with an alter only once, T turns ago, then the agent will forget the alter after a
+number of turns determined by the threshold parameter. In the pathological case where an alter
+interacts with NIntPerTurn unique alters each turn, then |SOTM| will be the minimum of N or the
+product NIntPerTurn * Equation 2. Modelers can tune parameters such that there are no space
+savings, where there are few agents and many allowed interactions. However, even at the most
+loose settings utilized in Virtual Experiment 2, where K=.1, NIntPerTurn=2, Thresh=-1, then
+|SOTM| is at most 15 agents large. This value is constant and does not depend on N, thus Construct-
+SC, with realistic parameter settings, is an order of magnitude (in N) more space efficient than
+Construct.
+
+A formal analysis of Construct-SC’s time complexity is not provided because such an analysis
+would be dependent on the modeler’s choices, and thus could not be broadly generalized. Instead,
+an empirical assessment is provided as guidance, via Virtual Experiment 2, of a typical use of
+
+                                                  16
+Figure 5. Construct-SC takes less time to run for a similar number of agents.
+
+Construct, noting the same limitation. In Virtual Experiment 2, knowledge sizes were kept
+constant, but the number of agents was varied (from 1000 to 15,000). Figure 5 above shows a run-
+time comparison of Construct and Construct-SC. Construct-SC runs faster across all population
+sizes. Note that Construct-SC’s time complexity does depend on the number of groups, but it is
+anticipated that the number used in Virtual Experiment 2 (10 groups) are typical of usage.
+
+Discussion
+In implementing Construct-SC, a multi-level model of group-based inferences, we see that
+stereotypes preserve resources and improve model behavior compared to models where agents
+retain transactive memory of all potential alters. Specifically, the model with group-based
+inferences:
+
+
+
+                                              17
+                   Table 6. Summarization of Results Using the Stylized Facts
+          Emergent Phenomenon                Citation           Construct     Construct-SC
+ Diffusion of new information follows an S-
+                                                      Rogers 2010           Fig.1, Fig. 3        Fig.1, Fig. 3
+ Shaped Curve.
+ Heterogeneous groups are more likely to
+ discover novel information from outside the    Granovetter 1983; 2005          Fig.2                Fig.2
+ group than are homophilous groups.
+ Groups with some heterogeneity
+                                                                                                Expertise: Fig.3
+ outperform purely homophilous groups.          Ancona & Caldwell 1992     Expertise: Fig.3
+                                                                                                K-Distro: Fig.3
+                                                                                                  All except
+ Individuals are more likely to interact in-      Blau 1977; Tajfel &       Homophily:
+                                                                                              Random+/Expertise:
+ group than out-group.                               Turner 1979              Fig.2
+                                                                                                    Fig. 2
+ The improvement in task competency of
+ cliquish groups will have significantly more   West, Barron, Dowsett, &
+                                                                                                     Fig. 4
+ marginal variation over time.                        Newton 1999
+
+ Our perceptions of other people are often
+ based upon things such as expected roles,       Greenwald & Banaji
+                                                                                                     Fig.2
+ social norms, and social categorizations.      1995; Heise 1979; 2007
+
+ Arbitrary and even meaningless
+ distinctions between groups can trigger a
+ tendency to favor one's own group at the           Tajfel et al. 1971                               Fig.2
+ expense of others.
+
+ Transactive memory should preserve                                                                 Table 4
+                                                     Wegner 1995
+ computational resources.                                                                            Fig.5
+
+
+
+    -       Allows for arbitrary groupings of agents to significantly impact interaction between
+            agents;
+    -       Shows significant in-group bias;
+    -       Supports wider variances in task performance, with that variance better supported by
+            the structure of the knowledge space;
+   -        Runs faster and requires less memory.
+   -
+Using the stylized facts from Table 1, the results of Virtual Experiment 1 are summarized in
+Table 6.
+
+Limiting the ability of agents to retain perceptions of alters and providing a group-based inference
+mechanism, resulted in agent behavior that is more true to established “stylized facts”. This
+suggests that people behave the way they do because they have finite cognitive resources which
+forces them to retain group-level schemas for actors they do not personally know. This research
+finding recalls the variety of work done with cognitive biases – and how these biases inform both
+extant social structures and how network researchers collect data on these structures. This work
+suggests an approach towards modeling the rich variety of socially relevant cognitive biases.
+
+
+                                                     18
+Although a significant advancement in agent modeling, this work still has several limitations. First,
+and most significantly, the model of groups could be improved in a variety of ways. In Construct-
+SC groups are universal and group membership is immediately visible to others. This
+implementation of groups is best fit for superficial grouping characteristics, such as coarse-grained
+representations of age, gender and race. A more advanced group model would include spontaneous
+group formation, a process by which agents infer group membership, and the ability for agents to
+leave groups. Despite these limitations, the relevance of groups in the current model is not uniform
+to every agent; it is based on who these actors tend to interact with. Thus, the abstractions of groups
+themselves may be lost over time.
+
+This model could be further explored by being placed in a specific interesting context, such as a
+small town or village with well-defined demographics; where group sizes are not roughly
+equivalent, and membership in multiple groups is constant. Comparing the spread of knowledge
+and beliefs in Construct and Construct-SC in such a context, with perhaps a comparison to a
+historical situation of interest, would be worthwhile.
+
+The group inference mechanisms assume that these group inferences are generally, if not perfectly,
+accurate. This model ignores the ability of agents to select media and other sources of information
+that bias their inferences. However, this model does allow for agents to have more or less personal
+bias in their understanding of alters, but this does not entirely overcome the issue of bias in media
+sources.
+
+The ability to use group membership to inform an implemented theory of mind is a useful extension
+to the agent literature that other models could learn from. The results demonstrate that group
+stereotypes allow agents to conserve resources, make decisions faster, and better emulate human
+behavior.
+
+Overall, this paper demonstrates the value of implementing social cognition in models of human
+social behavior. By adding a multi-level model of theory of mind to a network interaction model,
+the emergent behavior better reflects real human social behavior and reduces computational
+complexity. The complexity reduction reduces costs in time and in computational hardware,
+making it feasible to model substantially larger populations. For a modeler, this is a clear win.
+Theoretically, it suggests that social cognition provides humans with a fast heuristic approach for
+processing vast quantities of data with less effort. It further suggests that peculiarities of social
+behavior may be the consequence of cognitive limitations that admit inferences about individuals
+and groups given social generalizations.
+
+Acknowledgement
+This work was supported in part by the Office of Naval Research (ONR) through a MURI
+N00014081186 on adversarial reasoning and by the Airforce Office of Sponsored Research
+(AFOSR) FA9550-11-1-0179 for research on Multi-Level Cultural Models. Additional support
+was provided by the center for Computational Analysis of Social and Organizational Systems. The
+views and conclusions contained in this document are those of the authors and should not be
+interpreted as representing the official policies, either expressed or implied, of the Office of Naval
+Research, the Airforce Office of Sponsored Research or the US government.
+
+                                                  19
+References
+ALLEN, T. J. (1984). Managing the flow of technology: Technology transfer and the
+      dissemination of technological information within the R&D organization. MIT Press
+      Books, 1.
+ANCONA, D. G., & CALDWELL, D. F. (1992). Bridging the boundary: External activity and
+      performance in organizational teams. Administrative Science Quarterly, 634-665.
+ANDERSON, J. R. (1996). ACT: A simple theory of complex cognition. American Psychologist,
+      51(4), 355.
+ANDERSON, J. R., BOTHELL, D., BYRNE, M. D., DOUGLASS, S., LEBIERE, C., & QIN, Y.
+      (2004). An integrated theory of the mind. Psychological review, 111(4), 1036.
+AXTELL, R., AXELROD, R., EPSTEIN, J. M., & COHEN, M. D. (1996). Aligning simulation
+      models: A case study and results. Computational & Mathematical Organization Theory,
+      1(2), 123-141.
+BAINBRIDGE, W. S., BRENT, E. E., CARLEY, K. M., HEISE, D. R., MACY, M. W.,
+      MARKOVSKY, B., & SKVORETZ, J. (1994). Artificial social intelligence. Annual
+      review of sociology, 407-436.
+BEST, B. J., LEBIERE, C., & SCARPINATTO, K. C. (2002). Modeling synthetic opponents in
+      MOUT training simulations using the ACT-R cognitive architecture. Paper presented at
+      the proceedings of the 11th conference on computer generated forces and behavior
+      representation.
+BLAU, P. M. (1977). Inequality and heterogeneity: A primitive theory of social structure (Vol.
+      7): Free Press New York.
+BRASHEARS, M. E. (2013). Humans use compression heuristics to improve the recall of social
+      networks. Scientific reports, 3.
+BREWER, M. B. (1991). The social self: On being the same and different at the same time.
+      Personality and social psychology bulletin, 17(5), 475-482.
+CARLEY, K. M. (1991). A Theory of Group Stability. American Sociological Review, 56(3),
+      331-354. Retrieved from http://www.jstor.org/stable/2096108
+CARLEY, K. M. (1992). Organizational learning and personnel turnover. Organization science,
+      3(1), 20-46.
+CARLEY, K. M., & HILL, V. (2001). Structural change and learning within organizations. In A.
+      Lomi & E. R. Larsen (Eds.), Dynamics of organizations: Computational modeling and
+      organizational theories (pp. 63-92).
+CARLEY, K. M., LEE, J.-S., & KRACKHARDT, D. (2002). Destabilizing Networks.
+      Connections, 24(3), 79-92.
+CARLEY, K. M., MARTIN, M. K., & HIRSHMAN, B. R. (2009). The etiology of social
+      change. Topics in Cognitive Science, 1(4), 621-650.
+CARLEY, K. M., & REN, Y. (2001). Tradeoffs between performance and adaptability for C3I
+      architectures. Paper presented at the Proceedings of the 6th International Command and
+      Control Research and Technology Symposium.
+CHAVALARIAS, D. (2005). Metamimetic Games: Modeling Metadynamics in Social
+      Cognition. Journal of Artificial Societies and Social Simulation, 9(2).
+CYERT, R. M., & MARCH, J. G. (1963). A behavioral theory of the firm (2nd ed. Vol. 2).
+      Cambridge, MA: Blackwell.
+
+
+                                             20
+DE WEERD, H., VERBRUGGE, R., & VERHEIJ, B. (2013). How much does it help to know
+      what she knows you know? An agent-based simulation study. Artificial Intelligence, 199,
+      67-92.
+DUONG, D. V., & REILLY, K. D. (1995). A system of IAC neural networks as the basis for
+      self‐organization in a sociological dynamical system simulation. Behavioral science,
+      40(4), 275-303.
+EDMONDS, B. (2014). Contextual Cognition in Social Simulation Context in Computing (pp.
+      273-290): Springer.
+FRIEDKIN, N. E. (2006). A structural theory of social influence (Vol. 13): Cambridge
+      University Press.
+FRITH, C. D., & FRITH, U. (2008). Implicit and explicit processes in social cognition. Neuron,
+      60(3), 503-510.
+GOLDBERG, A. (2011). Mapping shared understandings using relational class analysis: the case
+      of the cultural omnivore reexamined1. American journal of sociology, 116(5), 1397-
+      1436.
+GRANOVETTER, M. (1983). The strength of weak ties: A network theory revisited.
+      Sociological theory, 1(1), 201-233.
+GRANOVETTER, M. (2005). The impact of social structure on economic outcomes. Journal of
+      economic perspectives, 33-50.
+GREENWALD, A. G., & BANAJI, M. R. (1995). Implicit social cognition: attitudes, self-
+      esteem, and stereotypes. Psychological review, 102(1), 4.
+HEISE, D. R. (1979). Understanding events: Affect and the construction of social action.
+      Cambrdige, UK/New York: Cambridge University Press.
+HEISE, D. R. (2007). Expressive Order: Springer.
+HELMHOUT, M. (2006). The Social Cognitive Actor A multi-actor simulation of organisations.
+JONES, R. M., LAIRD, J. E., NIELSEN, P. E., COULTER, K. J., KENNY, P., & KOSS, F. V.
+      (1999). Automated intelligent pilots for combat flight simulation. AI magazine, 20(1), 27.
+JOSEPH, K., MORGAN, G. P., MARTIN, M. K., & CARLEY, K. M. (2014). On the
+      Coevolution of Stereotype, Culture, and Social Relationships: An Agent-Based Model.
+      Social Science Computer Review, 32(3), 295-311. doi:10.1177/0894439313511388
+KALDOR, N. (1961). Capital accumulation and economic growth: Springer.
+KAULAKIS, R., ZHAO, C., MORGAN, J. H., HIAM, J. W., SANFORD, J. P., & RITTER, F.
+      E. (2012). Defining factors of interest for large-scale socio-cognitive simulations. Paper
+      presented at the Proceedings of ICCM-2012-Eleventh International Conference on
+      Cognitive Modeling.
+KUETHE, J. L. (1962). Social schemas. The Journal of Abnormal and Social Psychology, 64(1),
+      31.
+LAIRD, J. (2012). The Soar cognitive architecture: MIT Press.
+LITTLE, K. B. (1968). Cultural variations in social schemata. Journal of personality and social
+      psychology, 10(1), 1.
+LIZARDO, O. (2014). Omnivorousness as the bridging of cultural holes: A measurement
+      strategy. Theory and Society, 43(3-4), 395-419.
+LIZARDO, O., & STRAND, M. (2010). Skills, toolkits, contexts and institutions: Clarifying the
+      relationship between different approaches to cognition in cultural sociology. Poetics,
+      38(2), 205-228.
+MARCH, J. G., & SIMON, H. A. (1958). Organizations. New York, NY: Wiley.
+
+                                              21
+MCPHERSON, M., SMITH-LOVIN, L., & COOK, J. M. (2001). Birds of a feather: Homophily
+      in social networks. Annual review of sociology, 27, 415-444.
+MEAD, G. H. (1922). A behavioristic account of the significant symbol. The Journal of
+      Philosophy, 157-163.
+MEAD, G. H. (1925). The genesis of the self and social control. International journal of Ethics,
+      251-277.
+PALAZZOLO, E. T., SERB, D. A., SHE, Y., SU, C., & CONTRACTOR, N. S. (2006).
+      Coevolution of communication and knowledge networks in transactive memory systems:
+      Using computational models for theoretical development. Communication Theory, 16(2),
+      223-250.
+PAUL, S., PICKETT, C., SHERMAN, J., & SCHANK, J. (2012). An Agent-Based Model of
+      Social Identity Dynamics. Journal of Artificial Societies & Social Simulation, 15(4).
+PETROV, A. A. (2006). Computationally efficient approximation of the base-level learning
+      equation in ACT-R.
+ROGERS, E. M. (2010). Diffusion of innovations: Simon and Schuster.
+RUMELHART, D. E. (1978). Schemata: The building blocks of cognition: Center for Human
+      Information Processing, University of California, San Diego.
+RUMELHART, D. E. (1980). Schemata: The building blocks of cognition. In R. Spiro, B. Bruce,
+      & W. Brewer (Eds.), Theoretical Issues in Reading Comprehension: Hillsdale, NJ:
+      Erlbaum.
+SCHELLING, T. C. (1971). Dynamic models of segregation. Journal of mathematical sociology,
+      1(2), 143-186.
+SCHREIBER, C., & CARLEY, K. M. (2013). Validating agent interactions in construct against
+      empirical communication networks using the calibrated grounding technique. Systems,
+      Man, and Cybernetics: Systems, IEEE Transactions on, 43(1), 208-214.
+SCHRÖDER, T., & THAGARD, P. (2013). The affective meanings of automatic social
+      behaviors: Three mechanisms that explain priming. Psychological review, 120(1), 255.
+SIMON, H. A. (1957). Models of man: social and rational; mathematical essays on rational
+      human behavior in society setting. New York, NY: Wiley.
+STRYKER, S. (1980). Symbolic interactionism: A social structural version:
+      Benjamin/Cummings Publishing Company Menlo Park, CA.
+TAJFEL, H., BILLIG, M. G., BUNDY, R. P., & FLAMENT, C. (1971). Social categorization
+      and intergroup behaviour. European journal of social psychology, 1(2), 149-178.
+TAJFEL, H., & TURNER, J. C. (1979). An integrative theory of intergroup conflict. The social
+      psychology of intergroup relations, 33(47), 74.
+VALENTE, T. W. (1996). Mass-media-generated interpersonal communication as sources of
+      information about family planning. Journal of health communication, 1(3), 247-266.
+WEGNER, D. M. (1987). Transactive memory: A contemporary analysis of the group mind
+      Theories of group behavior (pp. 185-208): Springer.
+WEGNER, D. M. (1995). A computer network model of human transactive memory. Social
+      cognition, 13(3), 319-339.
+WEST, E., BARRON, D. N., DOWSETT, J., & NEWTON, J. N. (1999). Hierarchies and cliques
+      in the social networks of health care professionals: implications for the design of
+      dissemination strategies. Social science & medicine, 48(5), 633-646.
+
+
+
+
+                                              22
+

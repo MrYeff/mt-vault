@@ -1,0 +1,2262 @@
+
+
+
+
+
+    Redesigning algorithms to intervene on social norm misperceptions during a national election | Nature
+    
+    
+
+
+
+    
+        
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+     
+    
+    
+        
+    
+    
+
+
+
+
+    
+        
+            
+            
+                
+            
+        
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+
+
+
+
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    Skip to main content
+
+
+
+
+
+    
+
+        
+        
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain
+            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in
+            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles
+            and JavaScript.
+
+    
+
+
+    
+
+    
+
+    
+    
+        
+
+
+    
+        
+
+            
+Advertisement
+            
+        
+            
+    
+
+        
+        
+        
+            
+                
+        
+    
+
+        
+    
+        
+    
+
+    
+        
+    
+        
+
+            
+
+                
+
+                    
+                    
+                    
+
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                    
+                    
+                    
+                    
+                        
+
+                            
+                                View all journals
+                            
+                        
+                        
+                            
+
+                                
+                                    Saved research
+                                
+                            
+                        
+                        
+
+                            
+                                Search
+                            
+                        
+                        
+
+                            
+                                
+    
+        
+    Account
+
+
+    Log in
+
+
+                            
+                        
+                    
+                
+            
+        
+        
+            
+
+                
+
+                    
+
+                        
+                            
+                                
+
+                                    
+                                        Content
+                                        Explore content
+                                    
+                                
+                            
+                            
+                                
+
+                                    
+                                        About the journal
+                                    
+                                
+                                
+                                    
+
+                                        
+                                            Publish with us
+                                        
+                                    
+                                
+                            
+                            
+                                
+
+                                    
+                                        Subscribe
+                                    
+                                
+                            
+                        
+                        
+                            
+                                
+
+                                    
+                                        Sign up for alerts
+                                    
+                                
+                            
+                            
+                                
+
+                                    
+                                            RSS feed
+                                    
+                                
+                            
+                        
+                    
+                
+            
+        
+    
+
+    
+
+
+
+
+
+    
+        
+    
+
+
+
+    
+        
+    
+        
+            
+
+                
+                    
+nature
+                                    
+                                        
+                                    
+                                
+registered reports
+                                    
+                                        
+                                    
+                                
+
+                                    article
+                
+            
+        
+    
+
+    
+
+
+    
+
+
+
+
+
+    
+
+        
+            
+
+            
+                
+                
+
+                    
+                        
+                            
+        
+Registered report
+    
+    
+
+                            
+Published: 27 May 2026
+                        
+
+                        
+Redesigning algorithms to intervene on social norm misperceptions during a national election
+                        
+William J. Brady 
+            ORCID: orcid.org/0000-0001-6075-54461,2, 
+Meriel Doyle 
+            ORCID: orcid.org/0009-0008-9798-76281, 
+Abdo Elnakouri3, 
+Eli J. Finkel 
+            ORCID: orcid.org/0000-0002-0213-53181,2,4,5, 
+Joshua Conrad Jackson 
+            ORCID: orcid.org/0000-0002-2947-98156, 
+Nour Kteily 
+            ORCID: orcid.org/0000-0003-4331-40371,5, 
+Victoria Parker1, 
+Curtis Puryear1, 
+Trevor Spelman1, 
+Jacob Teeny 
+            ORCID: orcid.org/0000-0001-6112-534X1 & 
+…
+Mark Torres1 Show authors
+
+                        
+
+                        
+
+                            Nature
+                            volume 655, pages 942–956 (2026) Cite this article
+                        
+                        
+                            
+
+                                
+    
+
+        
+            
+            
+                
+            Save article
+            
+        
+        
+
+            
+                View saved research
+                
+            
+            
+        
+    
+
+                            
+                        
+                        
+        
+        
+
+            
+                
+                    
+
+                        
+5678 Accesses
+                    
+                
+                
+                    
+
+                        
+6 Citations
+                    
+                
+                
+                    
+                        
+
+                            
+104 Altmetric
+                        
+                    
+                
+                
+                    
+
+                        
+Metrics details
+                    
+                
+            
+        
+    
+                        
+                    
+
+                    
+    
+    
+
+    
+    
+
+                    
+                
+
+                
+
+                    
+
+
+Abstract
+
+For the first time in history, civic discourse commonly occurs in digital environments in which algorithms influence exposure to social information1,2. It is increasingly important to understand whether and how these algorithms affect political discourse3,4,5. Here we built custom feed-ranking algorithms with full control over their features, and randomly assigned 2,000 participants to use them for 8 weeks (before and after the 2024 US presidential election). We tested whether an engagement-based algorithm (used on major social media platforms6,7) amplifies intergroup, moralized and emotional (IME) information in ways that skew perceptions of social norms around political dialogue5,8, and whether it increased engagement with IME content and perceptions of partisan animosity (compared with a reverse-chronological feed9,10). We also developed and tested a ‘diversified extremity’ algorithm to reduce the influence of extreme users11,12,13 to improve the accuracy of social norm perception14,15,16 and reduce perceptions of partisan animosity. We found that engagement-based feeds amplified IME and toxic content relative to reverse-chronological feeds, with the largest increases in moral outrage and political content. Engagement-based feeds also reduced prescriptive norm perception accuracy (albeit in an unexpected direction) and increased perceived partisan animosity. However, they did not significantly alter users’ own engagement behaviours. The diversified extremity algorithm reduced IME and toxic content exposure, improved prescriptive norm accuracy, yet maintained comparable platform enjoyment—suggesting that reducing the influence of extreme users can curb algorithmic distortions without diminishing user experience.
+protocol registration The Stage 1 protocol for this Registered Report was accepted in principle on 17 September 2024. The protocol, as accepted by the journal, can be found at https://osf.io/c9a3m.
+                    
+    
+
+
+                    
+                        
+
+                        
+                            
+
+                                
+
+                                    This is a preview of subscription content, access via your institution
+                                
+                            
+                        
+
+                        
+Access options
+                        
+
+                        
+    
+
+        
+            
+                
+                Access through your institution
+            
+            
+        
+    
+
+
+
+                        
+    
+
+
+
+    
+
+      
+
+        Access Nature and 54 other Nature Portfolio journals
+      
+      
+
+        Get Nature+, our best-value online-access subscription
+      
+      
+
+        
+
+          27,99 € / 30 days
+        
+        
+cancel any time
+      
+      
+
+        Learn more
+      
+    
+    
+
+    
+
+      
+Subscribe to this journal
+      
+
+        Receive 52 print issues and online access
+      
+      
+    
+
+      
+199,00 € per year
+      
+only 3,83 € per issue
+    
+  
+      
+    
+
+      Learn more
+    
+  
+    
+  
+
+
+Buy this article
+Purchase on SpringerLink
+Instant access to the full article PDF.
+
+39,95 €
+
+
+Prices may be subject to local taxes which are calculated during checkout
+
+  
+                        
+                            
+Additional access options:
+                            
+                                
+
+                                    Log in
+                                
+                                
+
+                                    Learn about institutional subscriptions
+                                
+                                
+
+                                    Read our FAQs
+                                
+                                
+
+                                    Contact customer support
+                                
+                            
+                        
+
+                        
+
+                            
+Fig. 1: The effects of an engagement-based algorithm feed and a diversified extremity algorithm feed compared with a reverse-chronological feed on IME and related content before and after the 2024 US presidential election.
+
+
+Fig. 2: The top political entities appearing in each feed across the study period.
+
+
+Fig. 3: The effects of engagement-based and diversified extremity algorithm feeds compared with a reverse-chronological feed on norm accuracy before and after the 2024 US presidential election.
+
+
+Fig. 4: Effects of engagement-based and diversified extremity algorithm feeds compared with a reverse-chronological feed on perceived partisan animosity before and after the 2024 US presidential election.
+
+
+                        
+
+                        
+
+        
+            
+
+                
+Similar content being viewed by others
+                
+
+                    
+                        
+
+                            
+                                
+                                    
+
+                                
+                                
+
+                                    
+
+                                        Systematic partisan content skews in TikTok during the 2024 US elections
+                                        
+                                    
+                                    
+
+                                        Article
+                                         Open access
+                                         06 May 2026
+                                    
+                                
+                            
+                        
+                    
+                        
+
+                            
+                                
+                                    
+
+                                
+                                
+
+                                    
+
+                                        Public sentiment and explicit ethical expression in social media discourse on brain–computer interfaces: an observational analysis
+                                        
+                                    
+                                    
+
+                                        Article
+                                         Open access
+                                         10 July 2026
+                                    
+                                
+                            
+                        
+                    
+                        
+
+                            
+                                
+                                    
+
+                                
+                                
+
+                                    
+
+                                        Examining spread of emotional political content among Democratic and Republican candidates during the 2018 US mid-term elections
+                                        
+                                    
+                                    
+
+                                        Article
+                                         Open access
+                                         26 November 2021
+                                    
+                                
+                            
+                        
+                    
+                
+            
+        
+            
+        
+    
+                        
+    
+        
+
+            
+Explore related subjects
+            Discover the latest articles and news in related subjects.
+            
+                
+                    
+
+                        
+                            Human behaviour
+                    
+                
+                    
+
+                        
+                            Politics
+                    
+                
+                    
+
+                        
+                            Psychology
+                    
+                
+                    
+
+                        
+                            Discourse Dynamics in Digital Media Kontext
+                    
+                
+            
+        
+    
+
+                    
+
+                    
+
+                        
+
+
+Data availability
+
+              
+              
+All raw data and materials are available at the Open Science Framework (https://osf.io/k2crm/) and GitHub (http://github.com/METResearchGroup/bluesky-research).
+            
+
+
+Code availability
+
+              
+              
+All code for our data collection, storage and custom-feed ranking algorithms is available at our GitHub (http://github.com/METResearchGroup/bluesky-research). R scripts for the power analysis and data analyses are available at the Open Science Framework (https://osf.io/k2crm/).
+            
+
+
+
+References
+
+
+
+Shmargad, Y. & Klar, S. Sorting the news: how ranking by popularity polarizes our politics. Polit. Commun. 37, 423–446 (2020).
+Article 
+    
+                    Google Scholar 
+                
+
+Bavel, J. J. V., Rathje, S., Harris, E., Robertson, C. & Sternisko, A. How social media shapes polarization. Trends Cogn. Sci. 25, 913–916 (2021).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Carpenter, J., Brady, W., Crockett, M., Weber, R. & Sinnott-Armstrong, W. Political polarization and moral outrage on social media. Conn. L. Rev. 52, 1107 (2020).
+
+                    Google Scholar 
+                
+
+Wilson, A. E., Parker, V. A. & Feinberg, M. Polarization in the contemporary political and media landscape. Curr. Opin. Behav. Sci. 34, 223–228 (2020).
+Article 
+    
+                    Google Scholar 
+                
+
+Brady, W. J., Jackson, J. C., Lindström, B. & Crockett, M. J. Algorithm-mediated social learning in online social networks. Trends Cogn. Sci. https://doi.org/10.1016/j.tics.2023.06.008 (2023).
+
+Braghieri, L., Levy, R. & Trachtman, H. Frictions in news consumption: evidence from social media. Preprint at SSRN https://doi.org/10.2139/ssrn.5494670 (2025).
+
+Brady, W., Jackson, J., Doyle, M. & Baier, S. Engagement-based algorithms disrupt human social norm learning. Preprint at OSF https://doi.org/10.31219/osf.io/mgdwq_v3 (2025).
+
+Centola, D. Change: How to Make Big Things Happen (Little, Brown Spark, 2021).
+
+Guess, A. M. et al. How do social media feed algorithms affect attitudes and behavior in an election campaign? Science 381, 398–404 (2023).
+Article 
+    ADS 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Milli, S. et al. Engagement, user satisfaction, and the amplification of divisive content on social media. PNAS Nexus 4, pgaf062 (2025).
+
+Papakyriakopoulos, O., Serrano, J. C. M. & Hegelich, S. Political communication on social media: a tale of hyperactive users and bias in recommender systems. Online Soc. Netw. Media 15, 100058 (2020).
+Article 
+    
+                    Google Scholar 
+                
+
+McClain, C., Widjaya, R., Rivero, G. & Smith, A. The Behaviors and Attitudes of U.S. Adults on Twitter (Pew Research, 2021).
+
+Bail, C. Breaking the Social Media Prism: How to Make Our Platforms Less Polarizing (Princeton Univ. Press, 2021).
+
+Fernbach, P. M. & Van Boven, L. False polarization: cognitive mechanisms and potential solutions. Curr. Opin. Psychol. 43, 1–6 (2022).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Lees, J. & Cikara, M. Inaccurate group meta-perceptions drive negative out-group attributions in competitive contexts. Nat. Hum. Behav. 4, 279–286 (2020).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Brady, W. J. et al. Overperception of moral outrage in online social networks inflates beliefs about intergroup hostility. Nat. Hum. Behav. https://doi.org/10.1038/s41562-023-01582-0 (2023).
+Article 
+    PubMed 
+    PubMed Central 
+    
+                    Google Scholar 
+                
+
+Levy, R. Social media, news consumption, and polarization: evidence from a field experiment. Am. Econ. Rev. 111, 831–870 (2021).
+Article 
+    
+                    Google Scholar 
+                
+
+Yesilada, M. & Lewandowsky, S. Systematic review: YouTube recommendations and problematic content. Internet Policy Rev. 11, 1652 (2022).
+
+Tucker, J. A. et al. Social media, political polarization, and political disinformation: a review of the scientific literature. Preprint at SSRN https://doi.org/10.2139/ssrn.3144139 (2018).
+
+Terren, L. & Borge-Bravo, R. Echo chambers on social media: a systematic review of the literature. Rev. Commun. Res. 9, 99–118 (2021).
+
+                    Google Scholar 
+                
+
+Smith, J. R. & Louis, W. R. Do as we say and as we do: the interplay of descriptive and injunctive group norms in the attitude–behaviour relationship. Br. J. Soc. Psychol. 47, 647–666 (2008).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Burton, J. Algorithmic Amplification for Collective Intelligence (CBS, 2023).
+
+Törnberg, P., Valeeva, D., Uitermark, J. & Bail, C. Simulating social media using large language models to evaluate alternative news feed algorithms. Preprint at https://doi.org/10.48550/arXiv.2310.05984 (2023).
+
+Carmines, E. G., Ensley, M. J. & Wagner, M. W. Who fits the left-right divide? Partisan polarization in the American electorate. Am. Behav. Sci. 56, 1631–1653 (2012).
+Article 
+    
+                    Google Scholar 
+                
+
+Huszár, F. et al. Algorithmic amplification of politics on Twitter. Proc. Natl Acad. Sci. USA 119, e2025334119 (2022).
+Article 
+    PubMed 
+    PubMed Central 
+    
+                    Google Scholar 
+                
+
+Thorp, H. H. & Vinson, V. Context matters in social media. Science 385, 1393–1393 (2024).
+Article 
+    ADS 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Guess, A. M. et al. Reshares on social media amplify political news but do not detectably affect beliefs or opinions. Science 381, 404–408 (2023).
+Article 
+    ADS 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Nyhan, B. et al. Like-minded sources on Facebook are prevalent but not polarizing. Nature 620, 137–144 (2023).
+Article 
+    ADS 
+    PubMed 
+    PubMed Central 
+    
+                    Google Scholar 
+                
+
+Krosnick, J. A. & Petty, R. E. in Attitude Strength: Antecedents and Consequences (eds Petty, R. E. & Krosnick, J. A.) 1–24 (Lawrence Erlbaum, 1995).
+
+Luttrell, A. & Sawicki, V. Attitude strength: distinguishing predictors versus defining features. Soc. Pers. Psychol. Compass 14, e12555 (2020).
+Article 
+    
+                    Google Scholar 
+                
+
+Gelfand, M. J., Gavrilets, S. & Nunn, N. Norm dynamics: interdisciplinary perspectives on social norm emergence, persistence, and change. Ann. Rev. Psychol. 75, 341–378 (2024).
+Article 
+    
+                    Google Scholar 
+                
+
+Bluesky user counter. bsky-users.theo.io https://bsky-users.theo.io/ (accessed 1 September 2024).
+
+Budak, C., Nyhan, B., Rothschild, D. M., Thorson, E. & Watts, D. J. Misunderstanding the harms of online misinformation. Nature 630, 45–53 (2024).
+Article 
+    ADS 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Perspective API. perspectiveapi.com https://perspectiveapi.com/ (accessed 25 September 2024).
+
+Devlin, J., Chang, M.-W., Lee, K. & Toutanova, K. BERT: pre-training of deep bidirectional transformers for language understanding. In Proc. 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Vol. 1 (Long and Short Papers) 4171–4186 (Association for Computational Linguistics, 2019).
+
+Finkel, E. J. et al. Political sectarianism in America. Science 370, 533–536 (2020).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Luttrell, A. & Togans, L. J. The stability of moralized attitudes over time. Pers. Soc. Psychol. Bull. 47, 551–564 (2021).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Beknazar-Yuzbashev, G., Jiménez-Durán, R., McCrosky, J. & Stalinski, M. Toxic content and user engagement on social media: evidence from a field experiment. Preprint at SSRN https://doi.org/10.2139/ssrn.5130929 (2025).
+
+Vallone, R. P., Ross, L. & Lepper, M. R. The hostile media phenomenon: Biased perception and perceptions of media bias in coverage of the Beirut massacre. J. Pers. Soc. Psychol. 49, 577–585 (1985).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Matias, J. N. Preventing harassment and increasing group participation through social norms in 2,190 online science discussions. Proc. Natl Acad. Sci. USA 116, 9785–9789 (2019).
+Article 
+    ADS 
+    PubMed 
+    PubMed Central 
+    
+                    Google Scholar 
+                
+
+Bagchi, C. et al. Social media algorithms can curb misinformation, but do they? Zenodo https://doi.org/10.5281/zenodo.13787981 (2024).
+
+Scott, K. BlueSky benefits from X Brazilian ban as users hit nine million. Tech.co (9 September 2024).
+
+Felicity, T. Bluesky warns of tech outage after usage traffic surges in brazil following X Ban. Venture Capital Post (4 September 2024).
+
+Neely, S. R. Politically motivated avoidance in social networks: a study of Facebook and the 2020 presidential election. Soc. Media Soc. 7, 20563051211055438 (2021).
+Article 
+    
+                    Google Scholar 
+                
+
+Boulianne, S. & Larsson, A. O. Engagement with candidate posts on Twitter, Instagram, and Facebook during the 2019 election. N. Media Soc. 25, 119–140 (2023).
+Article 
+    
+                    Google Scholar 
+                
+
+Bluesky Social. feed-generator: ATProto Feed Generator Starter Kit. GitHub https://github.com/bluesky-social/feed-generator (2024).
+
+Twitter. Twitter’s recommendation algorithm. blog.x.com https://blog.x.com/engineering/en_us/topics/open-source/2023/twitter-recommendation-algorithm (2023).
+
+Zuckerberg, M. et al. Dynamically providing a news feed about a user of a social network. US patent US7669123B2 (2010).
+
+Yang, J. et al. Mixed negative sampling for learning two-tower neural networks in recommendations. In Companion Proceedings of the Web Conference 2020 (eds El Fallah Seghrouchni, A. et al.) 441–447 (Association for Computing Machinery, 2020).
+
+Covington, P., Adams, J. & Sargin, E. Deep neural networks for YouTube recommendations. In Proceedings of the 10th ACM Conference on Recommender Systems (eds Sen, S. et al.) 191–198 (Association for Computing Machinery, 2016).
+
+Muja, M. & Lowe, D. G. Scalable nearest neighbor algorithms for high dimensional data. IEEE Trans. Pattern Anal. Mach. Intell. 36, 2227–2240 (2014).
+Article 
+    ADS 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Liu, T., Moore, A., Yang, K. & Gray, A. An investigation of practical approximate nearest neighbor algorithms. In Advances in Neural Information Processing Systems vol. 17 (eds Saul, L. K., Weiss, Y. & Bottou, L.) https://proceedings.neurips.cc/paper_files/paper/2004/file/1102a326d5f7c9e04fc3c89d0ede88c9-Paper.pdf (MIT Press, 2005).
+
+Quelle, D. & Bovet, A. Bluesky: network topology, polarization, and algorithmic curation. PLoS ONE 20, e0318034 (2025).
+Article 
+    PubMed 
+    
+                    Google Scholar 
+                
+
+Bail, C. A. et al. Exposure to opposing views on social media can increase political polarization. Proc. Natl Acad. Sci. USA 115, 9216–9221 (2018).
+Article 
+    ADS 
+    PubMed 
+    PubMed Central 
+    
+                    Google Scholar 
+                
+
+Stats for Bluesky by Jaz (jaz.bsky.social). bsky.jazco.dev https://bsky.jazco.dev/stats (accessed 25 September 2024).
+
+Matsunaga, M. Familywise error in multiple comparisons: disentangling a knot through a critique of O’Keefe’s arguments against alpha adjustment. Commun. Methods Meas. 1, 243–265 (2007).
+Article 
+    
+                    Google Scholar 
+                
+
+Guess, A., Munger, K., Nagler, J. & Tucker, J. How accurate are survey responses on social media and politics? Polit. Commun. 36, 241–258 (2019).
+Article 
+    
+                    Google Scholar 
+                
+
+Brady, W. J. et al. Redesigning algorithms to intervene on social norm misperceptions during a national election [registered report stage 1 protocol]. OSF https://osf.io/c9a3m (2024).
+Download references
+
+
+Acknowledgements
+
+The authors received funding from the Litowitz Center for Enlightened Disagreement and discretionary funds of W.J.B., E.J.F., N.K., J.T. and J.C.J. We thank the members of the Kellogg Political Psychology group (FLOPP), the Mind and Technology Lab and the Kellogg Computational Social Science Lab for feedback on previous versions of the manuscript.
+
+
+Author information
+
+Authors and Affiliations
+
+Kellogg School of Management, Northwestern University, Evanston, IL, USA
+William J. Brady, Meriel Doyle, Eli J. Finkel, Nour Kteily, Victoria Parker, Curtis Puryear, Trevor Spelman, Jacob Teeny & Mark Torres
+
+Institute for Policy Research, Northwestern University, Evanston, IL, USA
+William J. Brady & Eli J. Finkel
+
+Department of Psychology, University of Houston, Houston, TX, USA
+Abdo Elnakouri
+
+Department of Psychology, Northwestern University, Evanston, IL, USA
+Eli J. Finkel
+
+Litowitz Center for Enlightened Disagreement, Northwestern University, Evanston, IL, USA
+Eli J. Finkel & Nour Kteily
+
+Booth School of Business, University of Chicago, Chicago, IL, USA
+Joshua Conrad Jackson
+Authors
+William J. Brady
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Meriel Doyle
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Abdo Elnakouri
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Eli J. Finkel
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Joshua Conrad Jackson
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Nour Kteily
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Victoria Parker
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Curtis Puryear
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Trevor Spelman
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Jacob Teeny
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Mark Torres
+
+View author publications
+
+Search author on:PubMed Google Scholar
+Contributions
+W.J.B. developed the research with input from A.E., E.J.F., J.C.J., N.K., V.P., C.P., T.S., J.T. and M.T.; W.J.B., M.D. and M.T. collected data and W.J.B. and M.T. performed research. W.J.B. and M.T. conducted formal analyses with input from A.E., E.J.F., J.C.J., N.K., C.P., J.T. and M.T.; W.J.B. wrote the original draft of the manuscript and A.E., E.J.F., J.C.J., N.K., C.P., T.S., J.T. and M.T. contributed to revisions.
+Corresponding author
+Correspondence to
+                William J. Brady.
+
+
+Ethics declarations
+
+              
+                
+Competing interests
+                
+The authors declare no competing interests.
+              
+            
+
+
+Peer review
+
+              
+              
+                
+Peer review information
+                
+Nature thanks Rafael Jimenez Duran and the other, anonymous, reviewer(s) for their contribution to the peer review of this work. Peer reviewer reports are available.
+              
+            
+
+
+Additional information
+
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+
+Extended data figures and tables
+
+
+
+
+Extended Data Table 1 Summary of measures
+Full size table
+
+Extended Data Table 2 Description of feed-ranking algorithms for each experimental condition
+Full size table
+
+Extended Data Table 3 Mean proportions of content estimated across condition feeds and English-speaking Bluesky, compared to user perceptions (descriptive norms)
+Full size table
+
+
+Supplementary information
+
+
+
+Supplementary Information (download PDF )
+
+Detailed documentation of participant procedures, platform details, algorithm development, pilot testing and comprehensive statistical results for all research questions. It contains Supplementary Information 1–9, Supplementary Figs. 1–46 and Supplementary Tables 1–139.
+
+Reporting Summary (download PDF )
+
+Supplementary Information (download PDF )
+
+An overview of Supplementary Information 1–9, and the titles and legends for the Supplementary Figures and Supplementary Tables.
+
+Peer Review File (download PDF )
+
+
+Rights and permissions
+
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.
+Reprints and permissions
+
+
+About this article
+
+
+
+
+Cite this article
+Brady, W.J., Doyle, M., Elnakouri, A. et al. Redesigning algorithms to intervene on social norm misperceptions during a national election.
+                    Nature 655, 942–956 (2026). https://doi.org/10.1038/s41586-026-10536-1
+Download citation
+
+Received: 30 November 2023
+
+Accepted: 13 April 2026
+
+Published: 27 May 2026
+
+Version of record: 27 May 2026
+
+Issue date: 23 July 2026
+
+DOI: https://doi.org/10.1038/s41586-026-10536-1
+
+
+Share this article
+Anyone you share the following link with will be able to read this content:Get shareable link
+
+Sorry, a shareable link is not currently available for this article.
+
+Copy shareable link to clipboard
+
+                            Provided by the Springer Nature SharedIt content-sharing initiative
+                        
+
+                    
+
+                    
+                        
+                    
+
+                    
+                
+            
+        
+        
+            
+
+                
+                    
+
+                        
+
+                        
+    
+
+        
+            
+                
+                Access through your institution
+            
+            
+                
+                    
+
+                        
+                            Buy or subscribe
+                        
+                    
+                
+            
+        
+    
+
+
+
+                        
+
+                        
+    
+        
+
+            
+
+                
+Associated content
+                
+                    
+                    
+                        
+
+                            
+    
+        
+
+            
+
+                
+
+                    Social‑media feeds are detoxified by a redesigned algorithm
+                
+                
+                
+    
+
+        
+            Nature
+        
+        Research Briefing
+        
+        
+            27 May 2026
+        
+    
+
+            
+        
+    
+
+
+                        
+                    
+                
+            
+        
+        
+    
+
+                        
+
+                        
+    
+
+        
+
+            
+
+                
+
+                    
+
+                        
+
+                            
+
+                                
+
+                                    
+Advertisement
+                                    
+    
+
+        
+        
+        
+            
+                
+        
+    
+
+                                
+                            
+                        
+                    
+                    
+
+                    
+
+                
+            
+        
+    
+
+                    
+                
+            
+
+        
+    
+
+    
+
+
+
+
+    
+        
+            
+
+                
+Explore content
+                
+                    
+                        
+                            
+
+                                
+                                    Research articles
+                                
+                            
+                        
+                            
+
+                                
+                                    News
+                                
+                            
+                        
+                            
+
+                                
+                                    Opinion
+                                
+                            
+                        
+                            
+
+                                
+                                    Research Analysis
+                                
+                            
+                        
+                            
+
+                                
+                                    Careers
+                                
+                            
+                        
+                            
+
+                                
+                                    Books & Culture
+                                
+                            
+                        
+                            
+
+                                
+                                    Podcasts
+                                
+                            
+                        
+                            
+
+                                
+                                    Videos
+                                
+                            
+                        
+                            
+
+                                
+                                    Current issue
+                                
+                            
+                        
+                            
+
+                                
+                                    Browse issues
+                                
+                            
+                        
+                            
+
+                                
+                                    Collections
+                                
+                            
+                        
+                            
+
+                                
+                                    Subjects
+                                
+                            
+                        
+                    
+                
+                
+                    
+                        
+
+                            Follow us on Facebook
+                            
+                        
+                    
+                    
+                        
+
+                            Follow us on Bluesky
+                            
+                        
+                    
+                    
+                        
+
+                            Follow us on X
+                            
+                        
+                    
+                    
+                        
+
+                            
+                                Subscribe
+                            
+                        
+                    
+                    
+                        
+
+                            Sign up for alerts
+                            
+                        
+                    
+                    
+                        
+
+                            
+                                RSS feed
+                            
+                        
+                    
+                
+            
+        
+    
+    
+        
+            
+                
+
+                    
+About the journal
+                    
+                        
+                            
+
+                                
+                                    Journal Staff
+                                
+                            
+                        
+                            
+
+                                
+                                    About the Editors
+                                
+                            
+                        
+                            
+
+                                
+                                    Research Cross-Journal Editorial Team
+                                
+                            
+                        
+                            
+
+                                
+                                    Journal Information
+                                
+                            
+                        
+                            
+
+                                
+                                    Journal Metrics
+                                
+                            
+                        
+                            
+
+                                
+                                    Our publishing models
+                                
+                            
+                        
+                            
+
+                                
+                                    Editorial Values Statement
+                                
+                            
+                        
+                            
+
+                                
+                                    Editorial policies
+                                
+                            
+                        
+                            
+
+                                
+                                    Journalistic Principles
+                                
+                            
+                        
+                            
+
+                                
+                                    History of Nature
+                                
+                            
+                        
+                            
+
+                                
+                                    Awards
+                                
+                            
+                        
+                            
+
+                                
+                                    Contact
+                                
+                            
+                        
+                            
+
+                                
+                                    Send a news tip
+                                
+                            
+                        
+                    
+                
+            
+        
+
+        
+            
+                
+
+                    
+Publish with us
+                    
+                        
+                            
+
+                                
+                                    For Authors
+                                
+                            
+                        
+                            
+
+                                
+                                    For Referees
+                                
+                            
+                        
+                        
+                            
+
+                                
+                                    Language editing services
+                                
+                            
+                        
+                        
+                            
+
+                                Open access funding
+                            
+                        
+                        
+                            
+
+                                Submit manuscript
+                                
+                            
+                        
+                    
+                
+            
+        
+    
+    
+
+
+
+
+    
+
+        
+Search
+        
+            Search articles by subject, keyword or author
+            
+
+                
+
+                    
+                
+                
+
+                    
+
+                        Show results from
+                        
+                            
+                                
+                                    All journals
+                                    This journal
+                                
+                            
+                        
+                    
+                    
+
+                        Search
+                    
+                
+
+            
+        
+
+        
+
+            
+                Advanced search
+            
+        
+
+        
+Quick links
+        
+            
+Explore articles by subject
+            
+Find a job
+            
+Guide to authors
+            
+Editorial policies
+        
+    
+
+
+
+        
+        
+
+        
+
+    
+
+        
+
+            
+
+            
+
+                
+
+                    
+                        Nature
+                    
+                    (Nature)
+                
+                
+    
+        
+
+            ISSN 1476-4687 (online)
+        
+    
+
+                
+    
+        
+
+            ISSN 0028-0836 (print)
+        
+    
+
+            
+        
+    
+
+
+    
+
+        
+
+    
+nature.com footer links
+    
+
+        
+
+            
+
+                
+About Nature Portfolio
+                
+                    
+About us
+                    
+Press releases
+                    
+Press office
+                    
+Contact us
+                
+            
+
+            
+
+                
+Discover content
+                
+                    
+Journals A-Z
+                    
+Articles by subject
+                    
+protocols.io
+                    
+Nature Index
+                
+            
+
+            
+
+                
+Publishing policies
+                
+                    
+Nature portfolio policies
+                    
+Open access
+                
+            
+
+            
+
+                
+Author & Researcher services
+                
+                    
+Reprints & permissions
+                    
+Research data
+                    
+Language editing
+                    
+Scientific editing
+                    
+Nature Masterclasses
+                    
+Research Solutions
+                
+            
+
+            
+
+                
+Libraries & institutions
+                
+                    
+Librarian service & tools
+                    
+Librarian portal
+                    
+Open research
+                    
+Recommend to library
+                
+            
+
+            
+
+                
+Advertising & partnerships
+                
+                    
+Advertising
+                    
+Partnerships & Services
+                    
+Media kits
+                    
+                    
+Branded
+                        content
+                
+            
+
+            
+
+                
+Professional development
+                
+                    
+Nature Awards
+                    
+Nature Careers
+                    
+Nature 
+                        Conferences
+                
+            
+
+            
+
+                
+Regional websites
+                
+                    
+Nature Africa
+                    
+Nature China
+                    
+Nature India
+                    
+Nature Japan
+                    
+Nature Middle East
+                
+            
+
+        
+    
+    
+
+        
+            
+Privacy
+                Policy
+            
+Use
+                of cookies
+            
+
+                Your privacy choices/Manage cookies
+                
+            
+            
+Legal
+                notice
+            
+Accessibility
+                statement
+            
+Terms & Conditions
+            
+Your US state privacy rights
+            
+                
+Cancel
+                    contracts here
+            
+        
+    
+
+
+
+        
+
+    
+        
+    
+    
+© 2026 Springer Nature Limited
+
+
+    
+    
+
+    
+    
+
+
+
+
+
+    
+
+    
+
+
+
+
+    
+    
+
+
+        
+
+
+    
+        
+            Close banner
+            
+            
+                
+                
+            
+        
+        Close
+    
+
+
+
+        
+
+
+            
+
+                
+
+                    
+                    
+Sign up for the Nature Briefing newsletter — what matters in science, free to your inbox daily.
+                
+                
+
+                    
+                        
+                        
+
+                        
+                        
+                        
+                        
+
+                        Email address
+
+                        
+
+                            
+                            
+                            
+                            Sign up
+                        
+
+                        
+
+                            
+                            I agree my information will be processed in accordance with the Nature and Springer Nature Limited Privacy Policy.
+                        
+                    
+                
+            
+
+        
+
+    
+
+    
+    
+
+
+        
+
+
+    
+        
+            Close banner
+            
+            
+                
+                
+            
+        
+        Close
+    
+
+
+
+        
+
+            Get the most important science stories of the day, free in your inbox.
+            Sign up for Nature Briefing
+            
+        
+
+    
+
+
+
+
+
+
+
+
+

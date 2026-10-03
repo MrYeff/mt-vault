@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-30",
+  "scope": "Independent read-only source audit of lexicographic entries 41–53",
+  "rules_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md"
+  ],
+  "result": "FAIL: model detail omissions and template/source metadata issues; notes not edited",
+  "entries": [
+    {
+      "entry": 41,
+      "title": "Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "primary_source": "https://arxiv.org/abs/1908.05437",
+      "findings": [
+        "Primary arXiv abstract matches note (1908.05437, Abstract). Model is materially under-specified despite available full text: paper describes six concrete agent models and data-derived action/repository probabilities, conditioning/profile features, simulation/evaluation setup and held-out prediction; note only gives generic stationary-distribution summary. Locator: arXiv HTML §§3–5, especially agent model definitions and evaluation; https://arxiv.org/html/1908.05437. DOI proceedings metadata source date differs from coarse frontmatter date only if precision expected (proceedings 2019). Footnotes link only abs page, not model passages. Exact original references/order retained; tags valid separate model/simulation."
+      ]
+    },
+    {
+      "entry": 42,
+      "title": "Mixing beliefs among interacting agents",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "primary_source": "https://hal.inrae.fr/hal-02580278v1",
+      "findings": [
+        "Abstract agrees with author-hosted full paper (Deffuant et al., abstract, RG PDF). Model omits update variants and essential network/parameter details: §2.1 pairwise bounded-confidence update and convergence parameter; §2.2 numerical setup; later sections extend to local networks and vector opinions. Existing note discloses omissions, but wrongly labels binary-vector results as later variants and cites only HAL landing page. Locators: https://www.researchgate.net/publication/235737446_Mixing_beliefs_among_interacting_agents, §§2.1–2.2, local-network section, vector-opinion section. HAL page remains blocked; RG PDF is accessible."
+      ]
+    },
+    {
+      "entry": 43,
+      "title": "Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "primary_source": "https://www.jasss.org/24/4/6.html",
+      "findings": [
+        "Date is wrong/over-coarsened: note says 2021-01-01; JASSS article published 2021-10-31 (article header). Model omits actor/object selection alternatives and operational detail: JASSS §§3–4 / equations (4)–(5) define EPA identities, coefficient matrix, deflection objective, action/event selection; most-deflected actor scheduled, object/task selection by minimum event tension or maximum deflection reduction. Note mentions actor scheduling but misses alternative object criteria and action-set details. Locators: https://www.jasss.org/24/4/6.html, §§3–4, eqs. (4)–(5), especially paragraphs on event selection. Abstract is exact."
+      ]
+    },
+    {
+      "entry": 44,
+      "title": "Modeling Social Cohesion: The Influence of Memory and Learning in Simulated Networks",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "primary_source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11",
+      "findings": [
+        "Publication date is wrong: Springer chapter online 2026-02-08, while note uses 2026-01-01 (Springer chapter metadata). Abstract matches. Methods/model are available but note gives an abstract-level mechanism: omits network initialization, status conferral, receiver feedback rule/threshold, memory contents/retention, satisfaction and learning update, probabilistic choice and tick sequence. “Positive reciprocal exchanges” / “group norms” overstate or blur the actual one-sided status-conferral and feedback-memory process. Locators: https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11, Methods/model description and algorithm/parameter paragraphs; Results for measures. Footnotes cite only the landing page without precise sections."
+      ]
+    },
+    {
+      "entry": 45,
+      "title": "Modelling Agents Endowed with Social Practices: Static Aspects",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "primary_source": "https://arxiv.org/abs/1811.10981",
+      "findings": [
+        "Abstract matches arXiv v1. Full accessible paper contains defining architecture and constraints omitted from note: §4–5 defines activities, context, meaning, practice/habit relations; activity hierarchy uses generalization (allOf) versus temporal partOf links, and context-to-activity habit triggering/constraints. Existing prose collapses these links into generic connections and leaves the operational static model unclear. Locators: https://arxiv.org/html/1811.10981v1, §§4–5 (UML/model and constraints). No model footnote to those passages."
+      ]
+    },
+    {
+      "entry": 46,
+      "title": "Modelling the Evolution of Social Structure",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "primary_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4948869/",
+      "findings": [
+        "Abstract/date match PLOS. Empirical/simulation design is materially under-described: Methods specify N=300, four social strategies (FtF/FtW/FtM/Staged), once-per-cycle action, 2,000 cycles/lifetime, 50 generations, no intergenerational relationships, fitness formula (R+WB+AL)−(RS+ST), component weights 1–5, selection/breeding of top 20%, and resource competition. Note only names generic strategies, fitness and clustering/sweeps. Locator: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605, Methods, Model and simulation parameters. Full source is available."
+      ]
+    },
+    {
+      "entry": 47,
+      "title": "OASIS: Open Agent Social Interaction Simulations with One Million Agents",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "primary_source": "https://arxiv.org/abs/2411.11581",
+      "findings": [
+        "Abstract/source-version appears consistent, but model summary omits the full architecture and run rules. Paper §3 defines Env Server, Info Filter, Agent Module, Time Engine and Scalable Inferencer; information visibility/filtering, recommendation inputs, LLM action/rationale and environment-state updates; experiments specify model, prompt/setup, data and step counts. Note says only generic components/actions and does not state observation/action space, timing/order or experimental parameters. Locators: https://arxiv.org/html/2411.11581, §3 and experiments/appendix. DOI and date consistent with arXiv record."
+      ]
+    },
+    {
+      "entry": 48,
+      "title": "On Generative Agents in Recommendation",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "primary_source": "https://openreview.net/pdf?id=yCSZBbKyqq",
+      "findings": [
+        "Abstract is broadly consistent with primary arXiv/SIGIR record. Model section is too shallow against accessible indexed paper/PDF: initialization of 1,000 agents from MovieLens-1M, action set (watch/rate/evaluate/exit/interview), persona/memory/reflection prompts and tested recommenders (random/popularity/MF/LightGCN/MultVAE) are omitted. Locators: https://arxiv.org/abs/2310.10108, full paper/PDF https://openreview.net/pdf?id=yCSZBbKyqq, method/experimental setup. OpenReview full PDF access was limited in this audit, so exact prompt internals not independently checked; omission of the listed method facts is still clear from indexed source. Date 2024-07-10 was not independently resolved against publisher metadata."
+      ]
+    },
+    {
+      "entry": 49,
+      "title": "On and Off the Net: Scales for Social Capital in an Online Era",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/On and Off the -Net- Scales for Social Capital in an Online Era.md",
+      "primary_source": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1083-6101.2006.00029.x",
+      "findings": [
+        "Empirical measurement paper; no simulation model needed. Current note has an Abstract section and it was not challenged for exactness in the earlier draft. The issue requiring verification is publication-date precision: frontmatter uses 2006-01-01; confirm against Wiley issue metadata before correction. LLM Justification contains an unused footnote, and transformed claims should be checked against source-located study details. Locator: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1083-6101.2006.00029.x, abstract/header. References/tags require mechanical parity check against snapshot."
+      ]
+    },
+    {
+      "entry": 50,
+      "title": "Parasocial Interaction and Parasocial Relationship: Conceptual Clarification and a Critical Assessment of Measures",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Parasocial Interaction and Parasocial Relationship- Conceptual Clarification and a Critical Assessment of Measures.md",
+      "primary_source": "https://onlinelibrary.wiley.com/doi/full/10.1111/hcre.12063",
+      "findings": [
+        "Empirical/measurement paper; model section is not required. Current note has a primary Abstract section; the prior draft's claim that it is absent was incorrect and is removed. Existing questions generally describe the paper; LLM Justification has unused footnote. Abstract and publication date are available at Wiley (first published 2015-03-17). Locator: https://onlinelibrary.wiley.com/doi/full/10.1111/hcre.12063, abstract/header. DOI/date are correct."
+      ]
+    },
+    {
+      "entry": 51,
+      "title": "Persistence of social signatures in human communication",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Persistence of social signatures in human communication.md",
+      "primary_source": "https://www.pnas.org/doi/10.1073/pnas.1308540110",
+      "findings": [
+        "Empirical observational paper; no model section required. Current note has a primary Abstract section; the prior draft's claim that it is absent was incorrect and is removed. Study-method claims/footnotes still need checking against full text; full text was not independently opened in this audit, so methods detail is LIMITED. Date/DOI appear correct. Locator: https://www.pnas.org/doi/10.1073/pnas.1308540110, Abstract and Methods."
+      ]
+    },
+    {
+      "entry": 52,
+      "title": "Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "primary_source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
+      "findings": [
+        "Abstract appears consistent and date/DOI match Oxford/PNA Nexus. Accessible full text defines an empirical network-based simulation with data construction and mechanisms omitted from note: sampled Twitter network/user threshold and low-quality-source condition; k-core/downsampling and authentic/adversary subnetworks; infiltration γ, deception φ, flooding θ, target modes, message quality/appeal and exposure/engagement rules. Note lists tactic names only and says rules are abstract-limited though full text is available. Locators: https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371, Methods §§ network/data, adversary strategies, simulation and parameterization."
+      ]
+    },
+    {
+      "entry": 53,
+      "title": "RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems",
+      "status": "FAIL",
+      "note_path": "Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "primary_source": "https://arxiv.org/html/2103.08057",
+      "findings": [
+        "Abstract/date match arXiv. The note correctly says RecSim NG has no single universal behavioral rule, but still omits the framework's defined model interface/runtime: entities, behaviors represented as dynamic Bayesian-network variables, stories/runtime trajectory generation, latent/user/platform state, inference/learning, and concrete example’s state and update structure. Framework section and examples in full text are accessible. Locator: https://arxiv.org/html/2103.08057, §§3.2–3.3 and examples (including user satisfaction and provider ecosystem). Need distinguish framework semantics from example-specific behavioral assumptions."
+      ]
+    }
+  ]
+}
