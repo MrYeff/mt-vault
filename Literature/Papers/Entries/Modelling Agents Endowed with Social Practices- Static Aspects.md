@@ -11,8 +11,6 @@ tags:
   - "model"
   - "social_practice"
 read status: Todo
-⚠️:
-  - audit failed
 ---
 
 ## Abstract
@@ -42,7 +40,7 @@ World:
   values: [Value]
   implementation: [Implementation]
   triggers: [Trigger]
-  meanings: [Meaning]
+  related_values: [RelatedValue]
   beliefs: [Belief]
   adherence: [Adherence]
   same: [ActivityId -> [ActivityId]]
@@ -70,7 +68,7 @@ Trigger:
   cue: CueId
   strength: f64
 
-Meaning:
+RelatedValue:
   activity: ActivityId
   value: ValueId
   strength: f64
@@ -88,7 +86,7 @@ Adherence:
 ```
 
 - `AllOf` represents generalization; `PartOf` requires completion of all component activities. The hierarchy does **not** specify their order or concurrency and does **not** model overlapping activities.[^s3]
-- Trigger strength links an activity to a cue; meaning strength links it to a value. Belief strengths distinguish an agent's agreement from its belief about others' agreement. Adherence measures how much the agent values a value; habit rate represents individual differences in habit acquisition.[^s2]
+- `HabitualTrigger` and `RelatedValue` are weighted associations from an activity to a context cue and a value, respectively; they are not separate “meaning” entities. Belief strengths distinguish an agent's agreement from its belief about others' agreement. `AdheredValue` records the agent's value strength; habit rate represents individual differences in habit acquisition.[^s2]
 - Formal constraints: the implementation graph is a directed tree with one root; actions are leaves, abstract actions intermediate nodes, and the top action the root. Every `PartOf` child has at least one sibling that is also `PartOf`.[^s4]
 - A parent inherits each value's mean association strength across its children; leaf strengths are supplied by the application. Habit strengths need not be inherited. `same` is reflexive, symmetric, and transitive.[^s4]
 - This extraction omits UML drawing details. The paper supplies no complete simulation loop, learning update, or action-selection rule; time cues and dynamic habit learning are deferred.[^s5]
@@ -158,6 +156,7 @@ Adherence:
 - [[PremackAndWoodruffChimpanzeeTheoryOfMind|Premack and Woodruff : Chimpanzee theory of mind]]
 
 ## Audit Log
+- 2026-10-03: Independent full-source re-audit passed. Full static architecture, formal constraints, commuting example, abstract and all 55 references independently checked; no simulation rules invented. `audit failed` removed after the pass.
 - 2026-09-30: Complete independent primary-source audit found the static model faithful, but only 6 of 55 source bibliography entries were imported. Restored all 55 entries in source order, preserving genuine imported targets where their titles match. Independent re-audit remains pending.
 - Audit invalidated (2026-09-30): auditor admitted relying on spot checks and previous reports before clearing flags. A full independent audit is still required.
 - 2026-09-30: Full-source design audit found invented ordered/overlapping execution; opaque associations omitted strengths and belief perspectives; missing tree and inheritance constraints; nonexistent §4.3 citation. Corrected against the source passages below; independent re-audit pending.[^design]

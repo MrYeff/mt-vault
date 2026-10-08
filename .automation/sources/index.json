@@ -149,6 +149,10 @@
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
           "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -160,7 +164,12 @@
       "original_paths": [
         "/tmp/acting-full.html.txt"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "61f2aaee01698acb99a8071eb6698121441f373b7c0d3427bf2a8d2395181c5f": {
       "path": ".automation/sources/files/61f2aaee01698acb99a8071eb6698121441f373b7c0d3427bf2a8d2395181c5f.txt",
@@ -190,6 +199,14 @@
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
           "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-agent4rec.json",
+          "context": {}
         }
       ]
     },
@@ -201,7 +218,16 @@
       "original_paths": [
         "/tmp/agent4rec-full.html.txt"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-agent4rec.json",
+          "context": {}
+        }
+      ]
     },
     "e9f9ded8242ed5af0a7b9505c2ca5f60cf271a19ec4625dbd9dfce1a40893348": {
       "path": ".automation/sources/files/e9f9ded8242ed5af0a7b9505c2ca5f60cf271a19ec4625dbd9dfce1a40893348.txt",
@@ -296,6 +322,14 @@
             "note": "The latent cognitive structures of social networks.md",
             "primary_source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-latent-cognitive-structures.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -332,6 +366,14 @@
             "note": "Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
             "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/repair-towards-operational-validation.json",
+          "context": {}
         }
       ]
     },
@@ -368,6 +410,10 @@
             "note": "When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
             "primary_source": "https://www.jasss.org/26/3/9.html"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-when-i-we.json",
+          "context": {}
         }
       ]
     },
@@ -404,6 +450,10 @@
             "note": "Y Social- an LLM-powered Social Media Digital Twin.md",
             "primary_source": "https://arxiv.org/html/2408.00818"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -424,6 +474,18 @@
         },
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion-reaudit.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
           "context": {}
         }
       ]
@@ -446,7 +508,16 @@
       "original_paths": [
         "/tmp/cohesion-full.txt"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion-reaudit.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion.json",
+          "context": {}
+        }
+      ]
     },
     "77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076": {
       "path": ".automation/sources/files/77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076.html",
@@ -462,6 +533,18 @@
           "context": {
             "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion-reaudit.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -479,6 +562,18 @@
           "context": {
             "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion-reaudit.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-cohesion.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -519,7 +614,12 @@
         "/tmp/deffuant-page4.png",
         "/tmp/deffuant2001-p4.png"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "e1765b0cb4993ffa6b7fa7bd892829057f8376e1450ed731fb8ed5d089f8dff8": {
       "path": ".automation/sources/files/e1765b0cb4993ffa6b7fa7bd892829057f8376e1450ed731fb8ed5d089f8dff8.png",
@@ -529,7 +629,12 @@
       "original_paths": [
         "/tmp/deffuant-vector10.png"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "e18f96b3d22567dca9760e47282269a772306eb263a253649e6360c0b97a3740": {
       "path": ".automation/sources/files/e18f96b3d22567dca9760e47282269a772306eb263a253649e6360c0b97a3740.png",
@@ -539,7 +644,12 @@
       "original_paths": [
         "/tmp/deffuant-vector9.png"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562": {
       "path": ".automation/sources/files/466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562.txt",
@@ -557,6 +667,14 @@
             "file": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
             "url": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-mixing-beliefs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -568,7 +686,12 @@
       "original_paths": [
         "/tmp/deffuant2001-p10.png"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "fc4128e39477706608d636399f3135d4b86b53a4d4c811ec0ea83a55e4e844df": {
       "path": ".automation/sources/files/fc4128e39477706608d636399f3135d4b86b53a4d4c811ec0ea83a55e4e844df.png",
@@ -625,6 +748,14 @@
             "file": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
             "url": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-mixing-beliefs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -645,6 +776,22 @@
         },
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-github-review.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-2-independent-review-resume.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-massive-github.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
           "context": {}
         }
       ]
@@ -687,6 +834,14 @@
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
           "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-oasis.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -708,7 +863,16 @@
       "original_paths": [
         "/tmp/oasis-full.txt"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-oasis.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f": {
       "path": ".automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html",
@@ -727,6 +891,14 @@
         },
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-recsim-ng.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
           "context": {}
         }
       ]
@@ -786,6 +958,10 @@
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
           "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -797,7 +973,12 @@
       "original_paths": [
         "/tmp/simsom-full.html.txt"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        }
+      ]
     },
     "c1ecf0affc6dd14875d9b203948b70c045012348829d8d84fcdbdd1737605b69": {
       "path": ".automation/sources/files/c1ecf0affc6dd14875d9b203948b70c045012348829d8d84fcdbdd1737605b69.txt",
@@ -876,6 +1057,14 @@
             "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
             "url": "https://arxiv.org/html/1811.10981v1"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-static-practices.json",
+          "context": {}
         }
       ]
     },
@@ -904,6 +1093,10 @@
             "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
             "url": "https://arxiv.org/pdf/1811.10981v1"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -922,6 +1115,18 @@
             "file": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
             "url": "https://arxiv.org/html/1811.10981v1"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-2-independent-review-resume.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-static-practices.json",
+          "context": {}
         }
       ]
     },
@@ -1110,6 +1315,14 @@
             "note": "The latent cognitive structures of social networks.md",
             "primary_source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-latent-cognitive-structures.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1134,6 +1347,14 @@
           "context": {
             "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/repair-towards-operational-validation.json",
+          "context": {}
         }
       ]
     },
@@ -1169,6 +1390,14 @@
             "note": "Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
             "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/repair-towards-operational-validation.json",
+          "context": {}
         }
       ]
     },
@@ -1198,6 +1427,10 @@
             "note": "User Behavior Simulation with Large Language Model based Agents.md",
             "primary_source": "https://arxiv.org/html/2306.02552v3"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1227,6 +1460,10 @@
             "note": "User Behavior Simulation with Large Language Model based Agents.md",
             "primary_source": "https://arxiv.org/html/2306.02552v3"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1334,6 +1571,10 @@
             "note": "Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
             "primary_source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1369,6 +1610,10 @@
             "note": "Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
             "primary_source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1404,6 +1649,14 @@
             "note": "When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
             "primary_source": "https://www.jasss.org/26/3/9.html"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-when-i-we.json",
+          "context": {}
         }
       ]
     },
@@ -1439,6 +1692,10 @@
             "note": "Y Social- an LLM-powered Social Media Digital Twin.md",
             "primary_source": "https://arxiv.org/html/2408.00818"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1486,6 +1743,14 @@
             "note": "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
             "source_url": "https://arxiv.org/html/1909.04847"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-recsim.json",
+          "context": {}
         }
       ]
     },
@@ -1538,6 +1803,14 @@
           "context": {
             "source_url": "https://www.nature.com/articles/s41586-026-10536-1"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-redesign-social-norm.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1556,6 +1829,14 @@
             "note": "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
             "source_url": "https://www.nature.com/articles/s41586-026-10536-1"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-redesign-social-norm.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1591,6 +1872,14 @@
             "note": "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
             "source_url": "https://www.jasss.org/27/2/4.html"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-reliable-efficient.json",
+          "context": {}
         }
       ]
     },
@@ -1643,6 +1932,14 @@
           "context": {
             "source_url": "https://arxiv.org/html/2311.16586"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-sardine.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1661,6 +1958,14 @@
             "note": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
             "source_url": "https://arxiv.org/html/2311.16586"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-sardine.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1696,6 +2001,14 @@
             "note": "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
             "source_url": "https://par.nsf.gov/servlets/purl/10187146"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-urban-patterns.json",
+          "context": {}
         }
       ]
     },
@@ -1742,7 +2055,12 @@
       "original_paths": [
         "/tmp/strong54-66-sources/62-fitness.png"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-social-relationships-focused-review.json",
+          "context": {}
+        }
+      ]
     },
     "f620b51d4411437783b24810487ae16c162e3fb52a287a871e9cc58a43126c21": {
       "path": ".automation/sources/files/f620b51d4411437783b24810487ae16c162e3fb52a287a871e9cc58a43126c21.html",
@@ -1768,6 +2086,18 @@
           "context": {
             "source_url": "https://www.jasss.org/15/4/3/3.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-relationships.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+          "context": {}
         }
       ]
     },
@@ -1786,6 +2116,22 @@
             "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
             "source_url": "https://www.jasss.org/15/4/3.html"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-relationships.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-social-relationships-focused-review.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+          "context": {}
         }
       ]
     },
@@ -1803,6 +2149,10 @@
           "context": {
             "source_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1821,6 +2171,10 @@
             "note": "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
             "source_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -1877,6 +2231,14 @@
           "context": {
             "source_url": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-stochastic-actor-oriented.json",
+          "context": {}
         }
       ]
     },
@@ -1899,6 +2261,14 @@
             "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
             "source_url": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-stochastic-actor-oriented.json",
+          "context": {}
         }
       ]
     },
@@ -1924,6 +2294,10 @@
           "context": {
             "source_url": "https://arxiv.org/html/2107.08959"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-t-recs.json",
+          "context": {}
         }
       ]
     },
@@ -1946,6 +2320,14 @@
             "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
             "source_url": "https://arxiv.org/html/2107.08959"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-t-recs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-2-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -2038,6 +2420,14 @@
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
           "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-modelling-social-structure.json",
+          "context": {}
         }
       ]
     },
@@ -2049,7 +2439,16 @@
       "original_paths": [
         "/tmp/structure-appendix-source.pdf"
       ],
-      "records": []
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-evolution-focused-review.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-modelling-social-structure.json",
+          "context": {}
+        }
+      ]
     },
     "18a0c63a3d3ac59dc438a4c719ffb79eac96063690bbd3c385b4612a3315d944": {
       "path": ".automation/sources/files/18a0c63a3d3ac59dc438a4c719ffb79eac96063690bbd3c385b4612a3315d944.txt",
@@ -2078,6 +2477,14 @@
         },
         {
           "record": ".automation/audit/remaining-audit-a-2026-09-30.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-3-repairs.json",
+          "context": {}
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-modelling-social-structure.json",
           "context": {}
         }
       ]
@@ -2213,6 +2620,10 @@
           "context": {
             "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -2230,6 +2641,10 @@
           "context": {
             "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md"
           }
+        },
+        {
+          "record": ".automation/audit/repair-2026-10-03/batch-1-repairs.json",
+          "context": {}
         }
       ]
     },
@@ -2719,8 +3134,261 @@
           }
         }
       ]
+    },
+    "f27aea6d3e91ae871d963f91031db37370b95c4f9f1d7784a267588e08b82d6d": {
+      "path": ".automation/sources/files/f27aea6d3e91ae871d963f91031db37370b95c4f9f1d7784a267588e08b82d6d.txt",
+      "sha256": "f27aea6d3e91ae871d963f91031db37370b95c4f9f1d7784a267588e08b82d6d",
+      "bytes": 99088,
+      "kind": "derived_text",
+      "original_paths": [],
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/audit-recsim-ng.json",
+          "context": {}
+        }
+      ]
+    },
+    "c111312304db8f0df14b828ee6cdf814b645f6aa120730d866bd8640da763c7c": {
+      "path": ".automation/sources/files/c111312304db8f0df14b828ee6cdf814b645f6aa120730d866bd8640da763c7c.png",
+      "sha256": "c111312304db8f0df14b828ee6cdf814b645f6aa120730d866bd8640da763c7c",
+      "bytes": 426730,
+      "kind": "source_artifact",
+      "original_paths": [],
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-evolution-focused-review.json",
+          "context": {}
+        }
+      ]
+    },
+    "4410d64db782fecfaa513810dda322ab51bcb9336832a6e15b6916e875ad2276": {
+      "path": ".automation/sources/files/4410d64db782fecfaa513810dda322ab51bcb9336832a6e15b6916e875ad2276.png",
+      "sha256": "4410d64db782fecfaa513810dda322ab51bcb9336832a6e15b6916e875ad2276",
+      "bytes": 370755,
+      "kind": "source_artifact",
+      "original_paths": [],
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-evolution-focused-review.json",
+          "context": {}
+        }
+      ]
+    },
+    "cb1b5a45d39762893457baeac16b19ace94491209356127880904dce56d606ec": {
+      "path": ".automation/sources/files/cb1b5a45d39762893457baeac16b19ace94491209356127880904dce56d606ec.png",
+      "sha256": "cb1b5a45d39762893457baeac16b19ace94491209356127880904dce56d606ec",
+      "bytes": 431347,
+      "kind": "source_artifact",
+      "original_paths": [],
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-evolution-focused-review.json",
+          "context": {}
+        }
+      ]
+    },
+    "a94ff84129dc926dd4b541a0184daa95b80202134f2d3d5d3832c567b757fe76": {
+      "path": ".automation/sources/files/a94ff84129dc926dd4b541a0184daa95b80202134f2d3d5d3832c567b757fe76.png",
+      "sha256": "a94ff84129dc926dd4b541a0184daa95b80202134f2d3d5d3832c567b757fe76",
+      "bytes": 424969,
+      "kind": "source_artifact",
+      "original_paths": [],
+      "records": [
+        {
+          "record": ".automation/audit/repair-2026-10-03/root-evolution-focused-review.json",
+          "context": {}
+        }
+      ]
+    },
+    "4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3": {
+      "path": ".automation/sources/files/4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3.pdf",
+      "sha256": "4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3",
+      "bytes": 560667,
+      "kind": "primary_source_pdf",
+      "source_url": "https://arxiv.org/pdf/2109.08862v1",
+      "source_version_or_coverage": "arXiv 2109.08862v1, 2021-09-18; published model text unavailable",
+      "accessed": "2026-10-03",
+      "records": [
+        "vault/.automation/audit/noted-simulations-2026-10-03/firman-source.json"
+      ]
+    },
+    "a0b737c461f8d294d00138c06c0982cde29d619751465f27bf528715758a1d28": {
+      "path": ".automation/sources/files/a0b737c461f8d294d00138c06c0982cde29d619751465f27bf528715758a1d28.txt",
+      "sha256": "a0b737c461f8d294d00138c06c0982cde29d619751465f27bf528715758a1d28",
+      "bytes": 52999,
+      "kind": "derived_text",
+      "source_url": "https://arxiv.org/pdf/2109.08862v1",
+      "source_version_or_coverage": "pdftotext -layout of archived 23-page PDF",
+      "accessed": "2026-10-03",
+      "records": [
+        "vault/.automation/audit/noted-simulations-2026-10-03/firman-source.json"
+      ]
+    },
+    "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee": {
+      "path": ".automation/sources/files/d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee.html",
+      "sha256": "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee",
+      "bytes": 200651,
+      "kind": "primary_source_html",
+      "source_url": "https://www.jasss.org/28/1/4.html",
+      "source_version_or_coverage": "Full published HTML including Appendix A and 71 references",
+      "accessed": "2026-10-03",
+      "records": [
+        "vault/.automation/audit/noted-simulations-2026-10-03/humat-repair.json"
+      ]
+    },
+    "b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9": {
+      "path": ".automation/sources/files/b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9.txt",
+      "sha256": "b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9",
+      "bytes": 42500,
+      "kind": "derived_text",
+      "source_url": "https://journals.sagepub.com/doi/10.1177/08944393231213960",
+      "coverage": "published abstract and all public reference entries; no published model fulltext",
+      "provenance": "derived web-tool indexed text, not raw HTML",
+      "accessed": "2026-10-03",
+      "records": [
+        "vault/.automation/audit/noted-simulations-2026-10-03/firman-source.json"
+      ]
+    },
+    "f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39": {
+      "path": ".automation/sources/files/f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39.txt",
+      "sha256": "f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39",
+      "bytes": 1117,
+      "kind": "derived_text",
+      "source_url": "https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf",
+      "coverage": "2-page supplemental indexed captions and code/data pointer only; no raw PDF, visual outcome or code inspection",
+      "provenance": "derived source-reader indexed caption text retrieved via publisher hyperlink; not rawPDF or visualinspection",
+      "accessed": "2026-10-03",
+      "records": [
+        "vault/.automation/audit/noted-simulations-2026-10-03/firman-source.json"
+      ]
+    },
+    "1ec4b04a477cf404eac25de4e677c10dcfe4f3a60fad97f12bf7ff3245c94b38": {
+      "path": ".automation/sources/files/1ec4b04a477cf404eac25de4e677c10dcfe4f3a60fad97f12bf7ff3245c94b38.pdf",
+      "sha256": "1ec4b04a477cf404eac25de4e677c10dcfe4f3a60fad97f12bf7ff3245c94b38",
+      "bytes": 82807,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/psychsim2005.pdf"
+      ],
+      "source_url": "https://www.ccs.neu.edu/home/marsella/publications/pdf/PynMarsIJCAI05.pdf",
+      "records": [
+        {
+          "record": ".automation/import/psychsim-2026-10-04.json",
+          "context": {
+            "paper": "PsychSim: Modeling Theory of Mind with Decision-Theoretic Agents"
+          }
+        }
+      ]
+    },
+    "0659966dbdd57b0751ea4a9b064e6b8e1fa918444ce57ce1977aa2530c98284c": {
+      "path": ".automation/sources/files/0659966dbdd57b0751ea4a9b064e6b8e1fa918444ce57ce1977aa2530c98284c.txt",
+      "sha256": "0659966dbdd57b0751ea4a9b064e6b8e1fa918444ce57ce1977aa2530c98284c",
+      "bytes": 46579,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/psychsim2005.txt"
+      ],
+      "source_url": "https://www.ccs.neu.edu/home/marsella/publications/pdf/PynMarsIJCAI05.pdf",
+      "records": [
+        {
+          "record": ".automation/import/psychsim-2026-10-04.json",
+          "context": {
+            "paper": "PsychSim: Modeling Theory of Mind with Decision-Theoretic Agents"
+          }
+        }
+      ]
+    },
+    "82e527f52fe9d4be3d5bc6708cdec2b2ca1dad08f2eadc7007e0c6bee70d97bb": {
+      "path": ".automation/sources/files/82e527f52fe9d4be3d5bc6708cdec2b2ca1dad08f2eadc7007e0c6bee70d97bb.pdf",
+      "sha256": "82e527f52fe9d4be3d5bc6708cdec2b2ca1dad08f2eadc7007e0c6bee70d97bb",
+      "bytes": 25412203,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/reputation2022.pdf"
+      ],
+      "source_url": "https://arxiv.org/pdf/2106.05414",
+      "records": [
+        {
+          "record": ".automation/import/reputation-game-2026-10-04.json",
+          "context": {
+            "paper": "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory"
+          }
+        }
+      ]
+    },
+    "6e1ca493dab7ca994881106af71a4e3e0b3be874c17afeabe1fb266c71352ba8": {
+      "path": ".automation/sources/files/6e1ca493dab7ca994881106af71a4e3e0b3be874c17afeabe1fb266c71352ba8.txt",
+      "sha256": "6e1ca493dab7ca994881106af71a4e3e0b3be874c17afeabe1fb266c71352ba8",
+      "bytes": 416181,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/reputation2022.txt"
+      ],
+      "source_url": "https://arxiv.org/pdf/2106.05414",
+      "records": [
+        {
+          "record": ".automation/import/reputation-game-2026-10-04.json",
+          "context": {
+            "paper": "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory"
+          }
+        }
+      ]
+    },
+    "cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb": {
+      "path": ".automation/sources/files/cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb.pdf",
+      "sha256": "cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb",
+      "bytes": 19488311,
+      "kind": "download",
+      "original_paths": [
+        "/tmp/reputation2022-published.pdf"
+      ],
+      "source_url": "https://d-nb.info/1255007265/34",
+      "records": [
+        {
+          "record": ".automation/import/reputation-game-2026-10-04.json",
+          "context": {
+            "paper": "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory"
+          }
+        }
+      ]
+    },
+    "30ad169133f9fccc8875a99fe72827c1b072330a9301e65d7c1065a51e786f4c": {
+      "path": ".automation/sources/files/30ad169133f9fccc8875a99fe72827c1b072330a9301e65d7c1065a51e786f4c.txt",
+      "sha256": "30ad169133f9fccc8875a99fe72827c1b072330a9301e65d7c1065a51e786f4c",
+      "bytes": 291192,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/reputation2022-published.txt"
+      ],
+      "source_url": "https://d-nb.info/1255007265/34",
+      "records": [
+        {
+          "record": ".automation/import/reputation-game-2026-10-04.json",
+          "context": {
+            "paper": "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory"
+          }
+        }
+      ]
+    },
+    "4b25475b20960e13353aa737d6dfbf6e8c2dc8d9e8e8a14de69c67dc33c3c146": {
+      "path": ".automation/sources/files/4b25475b20960e13353aa737d6dfbf6e8c2dc8d9e8e8a14de69c67dc33c3c146.txt",
+      "sha256": "4b25475b20960e13353aa737d6dfbf6e8c2dc8d9e8e8a14de69c67dc33c3c146",
+      "bytes": 205960,
+      "kind": "derived_text",
+      "original_paths": [
+        "/tmp/reputation2022-published-raw.txt"
+      ],
+      "source_url": "https://d-nb.info/1255007265/34",
+      "records": [
+        {
+          "record": ".automation/import/reputation-game-2026-10-04.json",
+          "context": {
+            "paper": "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory"
+          }
+        }
+      ]
     }
   },
-  "last_archived_at": "2026-09-30",
+  "last_archived_at": "2026-10-03",
   "scope": "Saved caches, extracted text, supplements and rendered pages. Cache availability does not establish source authenticity or audit completion."
 }

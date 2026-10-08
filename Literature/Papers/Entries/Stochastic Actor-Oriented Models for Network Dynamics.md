@@ -10,8 +10,6 @@ publication date: 2017-01-06
 source: "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf"
 doi: 10.1146/annurev-statistics-060116-054035
 read status: Todo
-⚠️:
-  - audit failed
 ---
 
 ## Abstract
@@ -77,23 +75,26 @@ objective(i: ActorId, previous: Network, candidate: Network) -> f64:
 
 - Standard choices include current-state effects `Σⱼ xᵢⱼ` (outdegree), `Σⱼ xᵢⱼxⱼᵢ` (reciprocity) and `Σⱼₖ xᵢⱼxⱼₖxᵢₖ` (transitive triplets). Persistent reciprocity uses `Σⱼ x⁰ᵢⱼx⁰ⱼᵢxᵢⱼxⱼᵢ`, making the objective path-dependent.[^r3]
 - Rates/effects may use covariates and vary between periods. Panel observations do not intervene in the process. Restricted admissible sets are possible; the loop uses the usual unrestricted keep/toggle set.[^r3]
+- Parameters are estimated by simulation-based procedures because exact calculations are infeasible except in simple cases. The method of moments matches observed to simulated change statistics (Hamming distance for rate, rate-statistic interactions for change effects, and network statistics for objective effects); RSiena uses three phases including Robbins–Monro updates. Generalized moments can add statistics, while likelihood methods augment the observed waves with unobserved intermediate networks and actor choices.[^r5]
+- For coevolving network and ordinal behavior, an event changes either one network variable or one actor’s behavior by at most one category; its network or behavior objective can depend on both current network and behavior, representing social selection and influence. Multiple networks similarly have separate rate/objective functions whose statistics can encode dyadic, actor-level or triadic cross-network dependencies.[^r5]
+- The article’s example fits three waves of friendship nominations from 129 pupils (from 160 enrolled) in a Scottish school cohort. RSiena method-of-moments estimates show positive reciprocity and GWESP transitivity, negative effects of distance and incoming popularity, and positive same-gender selection; the simulation constrains outdegree to six. These estimates are one application, not general parameter defaults.[^r5]
 
 ### What can it answer?
-- Estimate how actor/network effects relate to panel-network change, using simulated trajectories in moments, GMM or likelihood estimation.[^r4]
+- Estimate actor/network effects from panel-network change with simulation-based moments, generalized moments, or likelihood/data-augmentation procedures; assess fitted dynamics by comparing simulated and observed networks. Coevolution extensions address social selection/influence and interdependent network layers.[^r4][^r5]
 
 ### Where does it apply?
-- Longitudinal network panels. This core transition summary omits estimation algorithms, application-specific effects and extensions for actor-attribute or multivariate-network coevolution.[^r3][^r4]
+- Longitudinal network panels with two or more waves, when intermediate changes can reasonably be approximated as sequential single-tie changes. The article assumes observations do not interfere with the process and discusses turnover and model-fit limits; domain-specific effects and rates must be chosen for the application.[^r3][^r5]
 
 ## Metadata
 ### References
 - [[Estimation of stochastic actor-oriented models for the evolution of networks by generalized method of moments]]
-- [[Stochastic approximation: A generalisation of the Robbins-Monro procedure]]
+- [[Stochastic approximation- A generalisation of the Robbins-Monro procedure|Stochastic approximation: A generalisation of the Robbins-Monro procedure]]
 - [[Random Graphs]]
-- [[What is network science?]]
+- [[What is network science-|What is network science?]]
 - [[On unification of the asymptotic theory of nonlinear econometric models]]
 - [[Nonparametric bayes dynamic modelling of relational data]]
 - [[On the evolution of random graphs]]
-- [[The Development of Social Network Analysis: A Study in the Sociology of Science]]
+- [[The Development of Social Network Analysis- A Study in the Sociology of Science|The Development of Social Network Analysis: A Study in the Sociology of Science]]
 - [[A survey of statistical network models]]
 - [[Methods of identification in social networks]]
 - [[Diffusion of innovations in dynamic networks]]
@@ -103,13 +104,13 @@ objective(i: ActorId, previous: Network, candidate: Network) -> f64:
 - [[A dynamic model for social networks]]
 - [[Temporal networks]]
 - [[Statistical analysis of longitudinal network data with changing composition]]
-- [[Victims, bullies, and their defenders: A longitudinal study of the coevolution of positive and negative networks]]
+- [[Victims, bullies, and their defenders- A longitudinal study of the coevolution of positive and negative networks|Victims, bullies, and their defenders: A longitudinal study of the coevolution of positive and negative networks]]
 - [[Curved exponential family models for social networks]]
 - [[Goodness of fit of social network models]]
 - [[Social and Economic Networks]]
-- [[Statistical Analysis of Network Data: Methods and Models]]
+- [[Statistical Analysis of Network Data- Methods and Models|Statistical Analysis of Network Data: Methods and Models]]
 - [[Longitudinal models]]
-- [[Simultaneous modeling of initial conditions and time heterogeneity in dynamic networks: An application to Foreign Direct Investments]]
+- [[Simultaneous modeling of initial conditions and time heterogeneity in dynamic networks- An application to Foreign Direct Investments|Simultaneous modeling of initial conditions and time heterogeneity in dynamic networks: An application to Foreign Direct Investments]]
 - [[Bayesian inference for dynamic social network data]]
 - [[A separable model for dynamic networks]]
 - [[Stochastic Approximation and Recursive Algorithms and Applications]]
@@ -120,9 +121,9 @@ objective(i: ActorId, previous: Network, candidate: Network) -> f64:
 - [[Limited-dependent and Qualitative Variables in Econometrics]]
 - [[Networks. An Introduction]]
 - [[Markov Chains]]
-- [[A missing information principle: theory and applications]]
+- [[A missing information principle- theory and applications|A missing information principle: theory and applications]]
 - [[Hierarchical longitudinal models of relationships in social networks]]
-- [[Smoke rings: Social network analysis of friendship groups, smoking and drug-taking]]
+- [[Smoke rings- Social network analysis of friendship groups, smoking and drug-taking|Smoke rings: Social network analysis of friendship groups, smoking and drug-taking]]
 - [[New method of stochastic approximation type]]
 - [[On the geometry of discrete exponential families with application to exponential random graph models]]
 - [[Manual for Siena version 4.0]]
@@ -132,7 +133,7 @@ objective(i: ActorId, previous: Network, candidate: Network) -> f64:
 - [[Stochastic approximation]]
 - [[On a stochastic approximation procedure based on averaging]]
 - [[Instability, sensitivity, and degeneracy of discrete exponential families]]
-- [[Markov models for digraph panel data: Monte Carlo-based derivative estimation]]
+- [[Markov models for digraph panel data- Monte Carlo-based derivative estimation|Markov models for digraph panel data: Monte Carlo-based derivative estimation]]
 - [[Siena algorithms]]
 - [[The statistical evaluation of social network dynamics]]
 - [[Statistical models for social networks]]
@@ -147,17 +148,20 @@ objective(i: ActorId, previous: Network, candidate: Network) -> f64:
 - [[Social Network Dynamics by Examples]]
 - [[Modeling the co-evolution of networks and behavior]]
 - [[Introduction to actor-based models for network dynamics]]
-- [[Dynamic networks and behavior: Separating selection from influence]]
+- [[Dynamic networks and behavior- Separating selection from influence|Dynamic networks and behavior: Separating selection from influence]]
 - [[The calculation of posterior distributions by data augmentation]]
 - [[Dynamics of advice-seeking networks among judges at the commercial court of Paris]]
-- [[p2: A random effects model with covariates for directed graphs]]
+- [[p2- A random effects model with covariates for directed graphs|p2: A random effects model with covariates for directed graphs]]
 - [[Network–behavior dynamics]]
-- [[Logit models and logistic regression for social networks: I. An introduction to Markov graphs and p*]]
+- [[Logit models and logistic regression for social networks- I. An introduction to Markov graphs and p-|Logit models and logistic regression for social networks: I. An introduction to Markov graphs and p*]]
 - [[Collective dynamics of small-world networks]]
 - [[Background, rationale and design of the West of Scotland 11 to 16 study]]
 - [[A mixed effects model for longitudinal relational and network data, with applications to international trade and conflict]]
 
+[^r5]: Snijders, §§3.1–3.3 (method of moments, Robbins–Monro/RSiena, generalized moments and likelihood/data augmentation), §4.1–4.2 (network–behavior and multivariate-network coevolution), §5 (Scottish friendship example, covariates, fit and estimates), §7 (panel applicability and fit limitations). Accepted manuscript, pp. 10–29: https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf.
+
 ## Audit Log
+- 2026-10-03: Independent full-source re-audit passed. Full accepted manuscript, event/choice rules, estimator and coevolution, example and 70 source references verified; filename-safe target corrections independently rechecked. `audit failed` removed after the pass.
 - Bibliography correction (2026-09-30): replaced the incomplete or mixed imported list with all 70 references from the audited primary source. Original links remain in the import snapshot; independent re-audit required.
 - Independent bibliography audit (2026-09-30): the preserved import has 112 links against 70 references in the accepted manuscript and publisher list. It includes unresolved identifiers, container titles and works absent from this source; reference reconciliation is required.
 - Independent full-source audit (2026-09-30): core transition claims passed, but the publication date failed against the publisher's Review in Advance date. Corrected 16 January to 6 January 2017; independent re-audit required.

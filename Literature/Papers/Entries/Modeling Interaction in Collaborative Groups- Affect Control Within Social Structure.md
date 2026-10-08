@@ -42,7 +42,10 @@ World:
   behaviors: Continuous | [EPA]
   object_rule: MinEvent | MaxReduction | Random
   reciprocity: 0..1
-  group_action_rate: 0..1
+  group_actions_enabled: bool
+  group_action_rate: 0..1 # used when group actions are enabled
+  reciprocity_rate: 0..1
+  data_model: USUnisex | USMale | USFemale | CanadaUnisex | CanadaMale | CanadaFemale | ChinaUnisex | GermanyUnisex
   previous: Event?
   protocol: [Part]?
 
@@ -63,14 +66,15 @@ Event:
 Part:
   turns: u32
   behaviors: Continuous | [EPA]
-  actor_rule: ... # optional task-specific override
-  settings: ... # optional changes and before/after code
+  actor_rule: code? # optional task-specific override
+  settings: ... # parameter values for this protocol segment
+  before_after_code: (str, str)?
 ```
 
-- Each turn normally selects the member maximizing `sum((fundamental-transient)^2)`; a reciprocal turn instead reverses the preceding actor/object roles. Protocols can override actor selection.[^a2]
+- At each step, a reciprocal action occurs with `reciprocity_rate`; the prior object then becomes the actor. Otherwise, the agent with greatest deflection acts. Protocol segments may replace actor selection. The schedule advances, the actor chooses an eligible object/behavior, and involved transient identities and deflections are updated.[^a2]
 - For each eligible object, optimize behavior EPA to minimize event deflection. With discrete behaviors, restrict optimization to the supplied list. The network permits only directed actor→object edges; a group object can receive actions but cannot act.[^a3]
-- Impression formation expands the nine pre-event actor/behavior/object EPA components into a polynomial feature vector `t` containing a constant, main terms and cross-products up to first order in each event element. A survey-estimated matrix `M` gives `transient_after = M*t`; the objective is `D=sum((F-M*t)^2)` over the actor/behavior/object fundamental EPA vector. Continuous behavior solves `∂D/∂B_i=0` for the three behavior dimensions.[^a4]
-- `MinEvent` selects the object with least hypothetical event deflection; `MaxReduction` selects the greatest decrease from overall pre-event deflection; `Random` samples an eligible object. Perform the chosen event and update affected transient identities. In a group-directed action, every member except the actor experiences the object role.[^a3]
+- Impression formation expands the nine pre-event actor/behavior/object EPA components into polynomial feature vector `t` with a constant, main terms, and all products up to first order in each component. A survey-estimated coefficient matrix `M` gives `transient_after = M*t`; event deflection is the sum of squared differences between the nine fundamental and predicted transient EPA values. For continuous behavior, solve `∂D/∂B_i=0` for evaluation, potency, and activity; discrete behavior chooses among the supplied EPA vectors.[^a4]
+- `MinEvent` selects the object with least after-event deflection for the actor/object/behavior triple; `MaxReduction` selects the greatest decrease in overall group deflection; `Random` samples an eligible object. The network restricts actor→object pathways. A group-directed action updates every member except the actor as though each were the object.[^a3]
 
 The jury replication fixes these experiment constants; they are not universal model defaults.[^a5]
 
@@ -88,14 +92,18 @@ REPLICATIONS = 500
 TURNS = 1000
 ```
 
-- The jury study crosses three object rules with continuous/discrete behavior; the group identity starts at members' mean identity. Measured IPA behavior distributions and gender differences are compared with observed jury data.[^a5]
-- This compact extraction omits the numerical survey coefficient matrix, the twelve IPA EPA entries, and complete software-developer protocols; these remain application inputs in the source.[^a4][^a5][^a6]
+- The jury replication uses 12 jurors (8 male, 4 female), the cited male/female EPA identities, a group identity initialized to member means, individuality and initial tension 1.0, group-action rate .4, reciprocity .8, 500 replications and 1,000 turns. It crosses three object rules with continuous/discrete behavior against IPA annotations from 29 juries; the discrete/MaxReduction condition has the highest behavior-distribution correlation (0.96; gender-difference correlation 0.90). Discrete actions improve correlations under each rule, while MaxReduction notably lowers deflection.[^a5]
+- Initialization draws each agent’s fundamental EPA from a clipped normal around its target mean with standard deviation `individuality`; initial transient EPA is clipped normal around the fundamental with standard deviation `initial_tension`. The optional group identity defaults to the member mean. The ACT coefficient matrix and application-specific role/action EPA ratings remain inputs.[^a4][^a7]
+- In four three-agent toy network topologies, all agents share female-centered EPA [1.78, 0.83, 0.84], individuality and initial tension 1.0; no group object is used and results average 2,000 runs. Symmetric networks produce equal mean transients; asymmetric positions change potency and deflection, with greater action opportunity yielding lower deflection in the hierarchical topology.[^a6]
+- In the expectation-states experiment, a three-agent hierarchy crosses four male/female leader and group-composition settings using EPA [1.78, 0.83, 0.84] (female) and [1.07, 2.01, 1.05] (male), over 2,000 runs. Male-majority groups have greater overall deflection; at equal role composition, a female leader produces significantly greater deflection than a male leader in the model.[^a6]
+- The GitHub illustration reverses accepted-PR network edges to represent actions toward submitters, uses a group object, ignores self-loops, and cycles through submit, 0–10 discussion actions, then accept/reject by a merge-authorized candidate. A 17-user mini-survey supplies EPA ratings; 5,000 runs compare four experienced/novice assignments in each of two networks. Assigning experienced developers to high-status positions lowers group mean deflection versus random assignment.[^a6]
+- These are model demonstrations, not direct empirical validation of group-level ACT. Agents are assumed to share full information about one another’s transient identities/deflection; learning and long-term career goals are not modeled. ACT’s impression equations were estimated from dyadic vignettes, and turn-taking mechanisms remain a limitation.[^a6]
 
 ### What can it answer?
 - It tests how role identities, interaction opportunities, object selection, and task protocols affect status and affective deflection.[^a6]
 
 ### Where does it apply?
-- It applies to specified task groups with cultural EPA ratings; examples include juries, toy networks, expectation-state experiments, and software-development teams.[^a6]
+- It applies to specified task groups with cultural EPA ratings, interaction pathways, and optional protocols; examples include juries, toy networks, expectation-state experiments, and software-development teams. Group-level inference is idealized, not empirically validated by this paper.[^a6]
 
 ## Metadata
 ### References
@@ -175,6 +183,7 @@ TURNS = 1000
 - [[ATopologyOfGroupsWhatGithubCanTellUsAboutOnlineCollaboration]]
 
 ## Audit Log
+- 2026-10-03: Full publisher-source review expanded the state/control schema, initialization, and source-reported jury, toy-network, expectation-states and GitHub experiment settings/outcomes and limitations. References were checked against all 74 publisher entries and retained. Warning remains unchanged; independent re-audit pending.[^design]
 - Audit invalidated (2026-09-30): auditor admitted relying on spot checks and previous reports before clearing flags. A full independent audit is still required.
 - 2026-09-30: Full-source design audit found missing reciprocal actor selection and group-directed actions; unexplained ACT minimizer concealed polynomial and objective; missing network eligibility and protocol constraints; incomplete jury control settings. Corrected against the source passages below; independent re-audit pending.[^design]
 - Independent audit found the publication date and actor/object/action selection mechanisms incomplete. The note now gives the article date, EPA event/deflection basis, three object-selection rules, discrete action-space option, and jury replication setup from the full text. At that stage, independent re-audit remained pending.
@@ -195,6 +204,8 @@ TURNS = 1000
 
 [^a5]: Simulations → Application: Jury deliberations, Table 2 and experiment paragraphs specify all constants and the six crossed conditions; continuous actions are assigned to nearest IPA category by Euclidean distance.
 
-[^a6]: Simulations → restricted toy networks, expectation states theory, and open-source software teams; model purpose is role/status and network interplay.
+[^a6]: Simulations → restricted toy networks, expectation states theory, and GitHub collaboration; see Figures 3–12, Table 4 and protocol description for settings, replications, outcomes, and source limits.
 
-[^design]: Source audit checked the full text at https://www.jasss.org/24/4/6.html. Model footnotes identify the passages supporting the corrections.
+[^a7]: Appendix ODD → Initialization: clipped-normal initialization for fundamental/transient EPA and group identity mean default.
+
+[^design]: Source audit checked the complete publisher text and appendix at https://www.jasss.org/24/4/6.html. Model footnotes identify the passages supporting the extraction.

@@ -37,7 +37,13 @@ World:
 	agents: [Agent]
 	events: [Event]
 	topics: [Topic]
-	
+
+Agent:
+	identity: TopicId
+	hard_facts: ...
+	in_think: [Thought]
+	focus: [ThoughtId -> 0..1]
+
 Thought:
 	Correlation: 
 		a: TopicId
@@ -48,12 +54,6 @@ Thought:
 		thinker: AgentId
 		thought: Thought
 		certainty: 0..1
-
-Agent:
-	identity: TopicId
-	hard_facts: ...
-	in_think: [Thought]
-	focus: [ThoughtId -> 0..1]
 
 Event:
 	identity: TopicId

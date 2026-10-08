@@ -33,8 +33,6 @@ tags:
   - "social_media"
   - "llm_agents"
 read status: Todo
-⚠️:
-  - audit failed
 ---
 
 ## Abstract
@@ -73,7 +71,9 @@ HOT_MIN_COUNT = 1
 - **X feed:** rank followed users' posts by likes; score out-of-network posts by `recency * follower_score * similarity`. Similarity is TwHIN-BERT cosine similarity between post and user profile/recent-content embeddings; follower score is `max(1,log_1000(followers+1))`. Appendix D.3 defines recency as `ln((271.8-(current-created))/100)`; its time-unit/cutoff treatment is not specified in that formula.[^o4]
 - **Reddit feed:** with `votes=upvotes-downvotes`, Eq. (1) uses `log10(max(abs(votes),HOT_MIN_COUNT)) + sign(votes)*(created-REDDIT_EPOCH)/HOT_TIME_SCALE`. Rank by this score and retain top-k, with k chosen per experiment.[^o4]
 - RecSys stores a ranked recommendation pool; refresh samples a subset to display. LLM decisions depend on persona, visible posts, memory and prompts; no fixed numerical human-response probability is asserted.[^o4][^o2]
-- Information-spreading experiments compare 198 Twitter rumor instances using size/depth/breadth curves and normalized RMSE. Reddit herd experiments assign one initial like, one initial dislike, or no initial vote; group-polarization studies scale generated populations and rate opinion extremity/helpfulness.[^o5]
+- **X information propagation:** 198 Twitter15/Twitter16 rumor cascades (100–700 users each) use the actions like, repost, follow, and do nothing for up to 50 three-minute steps. Compare propagation scale, depth, and maximum breadth with real cascades using normalized RMSE; reported average error is about 30%, with simulated depth below the observed trend.[^o5]
+- **X group polarization:** 196 real users form the core group. In the dilemma scenario, collect advice every 10 steps across 80 steps and compare extremity with GPT-4o-mini for uncensored versus aligned Llama-3-8B. A separate 30-step scale study compares populations of 196, 10,196, and 100,196 while reusing the same core users; larger populations yield more diverse and rated-helpful opinions.[^o5]
+- **Reddit herd effects:** the human-comparison experiment uses 116,932 comments across seven topics, 3,600 generated agents, and 40 steps; a controlled poster adds 200 posts per step, each agent activates with probability 0.1, and the RecSys caches the top 300. For counterfactuals, use 21,919 items and 30 steps; the scale comparison uses 100/1,000/10,000 agents, activation 0.1, five sampled posts per active agent, and cache sizes 50/500/5,000. Both assign up-treated (one initial like), down-treated (one initial dislike), and untreated controls; larger groups show clearer herd effects, especially following initial dislikes.[^o5]
 - This compact extraction omits database schema details, full prompt templates, profile-generation sampling, and scenario-specific action subsets. Platform choice, LLM, activation vectors, recommendations and prompts are experiment inputs.[^o6]
 
 ### What can it answer?
@@ -145,6 +145,7 @@ HOT_MIN_COUNT = 1
 - [[SotopiaInteractiveEvaluationForSocialIntelligenceInLanguageAgents]]
 
 ## Audit Log
+- 2026-10-03: Independent full-source re-audit passed. Full arXiv v5 body, appendices A–I, scenario controls/outcomes and all 59 references independently checked. `audit failed` removed after the pass.
 - Audit invalidated (2026-09-30): auditor admitted relying on spot checks and previous reports before clearing flags. A full independent audit is still required.
 - 2026-09-30: Full-source design audit found missing recommendation ranking mechanics; omitted feed refresh sampling and activation timing; unexplained scenario control conditions; configurable framework scope insufficiently exposed. Corrected against the source passages below; independent re-audit pending.[^design]
 - Independent source audit found the architecture, information flow, observation/action process, and experiment setup too generic. The note now names the five components and their roles and clarifies the platform interaction loop and study-specific setup. At that stage, independent re-audit remained pending.
@@ -163,7 +164,7 @@ HOT_MIN_COUNT = 1
 
 [^o4]: §2.3 Eq. (1) supplies the exact Reddit hot-score expression. Appendix D.3 Eqs. (2)–(5) supplies X multiplicative score and recency/fan/embedding components, and describes recommendation-table subset sampling on refresh. The hot-score formula is transcribed from this paper, not replaced with another implementation.
 
-[^o5]: §§3.1–3.5 and evaluation metrics: 198 rumor instances, initial-vote treatment/control conditions, normalized RMSE and extremity/helpfulness assessments.
+[^o5]: §§3.1–3.5 and §3.2 settings; Appendix E.1–E.3 and F.1–F.4: 198 cascades, group-polarization and herd sample sizes, time steps, action subsets, activation and feed-cache controls, vote treatments, normalized RMSE and extremity/helpfulness measures.
 
 [^o6]: Appendices D–F contain platform, generation, prompt and experiment details; §§2–3 make scenario configurability explicit.
 

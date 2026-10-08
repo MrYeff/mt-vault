@@ -952,14 +952,27 @@
       "audit_status": "passed independent audit",
       "remaining_warnings": [],
       "current_note": {
-        "sha256": "61fbee14902c4d8f6d2021a9195e54bcd212ba1bbdc6b16f8bc3de7cf2742bbf",
+        "sha256": "85a9d5c93ee69a47c675580fd5f856602df4a7894c2b8fcd6aef32380146b17b",
         "warnings": [],
         "source": [
-          "https://doi.org/10.18564/jasss.5611",
           "https://www.jasss.org/28/1/4.html"
         ],
         "doi": "10.18564/jasss.5611"
-      }
+      },
+      "current_warnings": [],
+      "noted_simulations_import_2026_10_03": {
+        "date": "2026-10-03",
+        "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+        "status": "PASS",
+        "audited_sha256": "893fd0c4345a9553ccda09cb69d13cea3824df508ff0f5d0e38cdb6ac538e5d5",
+        "final_sha256": "85a9d5c93ee69a47c675580fd5f856602df4a7894c2b8fcd6aef32380146b17b",
+        "audit_report": "vault/.automation/audit/noted-simulations-2026-10-03/audit-humat-final-reaudit.json",
+        "audit_report_sha256": "6a2def1775d68be8b94ff9d117c094455ebb418bd82309952839bff5edefcc43",
+        "audit_verdict": "PASS_EXACT_HASH_WITH_SOURCE_LIMITS_RETAINED",
+        "status_only_finalization": "Removed only passed audit warnings and recorded audit result; scientific sections byte-identical.",
+        "warnings_retained": []
+      },
+      "reference_status": "Complete source-ordered bibliography: 71 entries; independently audited."
     },
     "Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md": {
       "reimport_started_at": "2026-09-30",
@@ -982,14 +995,34 @@
       "audit_status": "passed independent audit",
       "remaining_warnings": [],
       "current_note": {
-        "sha256": "d0285881145f4731e7cb39f07b6b076c5f75034f234016a4bcead8fc40d9de85",
-        "warnings": [],
+        "sha256": "a9b556231716cd77734d70d0ad51179a8774df4707f68a7f913591921172307e",
+        "warnings": [
+          "fulltext unavailable"
+        ],
         "source": [
-          "https://doi.org/10.1177/08944393231213960",
-          "https://arxiv.org/abs/2109.08862"
+          "https://arxiv.org/pdf/2109.08862v1",
+          "https://journals.sagepub.com/doi/10.1177/08944393231213960"
         ],
         "doi": "10.1177/08944393231213960"
-      }
+      },
+      "current_warnings": [
+        "fulltext unavailable"
+      ],
+      "noted_simulations_import_2026_10_03": {
+        "date": "2026-10-03",
+        "note": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+        "status": "PASS",
+        "audited_sha256": "e4a5a546f54b142020819c49f63277a8b8427e5d540485d48cc5391ab362dfd5",
+        "final_sha256": "a9b556231716cd77734d70d0ad51179a8774df4707f68a7f913591921172307e",
+        "audit_report": "vault/.automation/audit/noted-simulations-2026-10-03/audit-firman.json",
+        "audit_report_sha256": "dea1435f9f289927a0c941d0dd686ef64a33c3e874f4768256f35612734b6396",
+        "audit_verdict": "PASS_ACCESSIBLE_PREPRINT_BIBLIOGRAPHY_AND_BOUNDED_SUPPLEMENT_CAPTIONS",
+        "status_only_finalization": "Removed only passed audit warnings and recorded audit result; scientific sections byte-identical.",
+        "warnings_retained": [
+          "fulltext unavailable"
+        ]
+      },
+      "reference_status": "Complete source-ordered bibliography: 59 entries; independently audited."
     },
     "Literature/Papers/Entries/How many hours does it take to make a friend.md": {
       "reimport_started_at": "2026-09-30",
@@ -1354,12 +1387,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "94c869705ddd0348f08d6975c4d8a92959b967458fd9a9333df507871dac9546",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "fa7bf5f8ae6bbe357e0b8cb3a726d2bb9d01f91648090de91a4a0ad5b8b091cf",
+        "warnings": [],
         "source": "https://arxiv.org/html/1908.05437",
         "doi": "10.1007/978-3-030-24209-1_1"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-massive-github.json",
+        "scope": "Six tested candidate models, shared state, S3D distinction, source conflicts, all 22 references and publisher publication date independently checked.",
+        "audited_sha256": "d6cb7596e3919b1d4660b223b55698827624add05fbe55dee67c9adc5445cd17",
+        "final_sha256": "fa7bf5f8ae6bbe357e0b8cb3a726d2bb9d01f91648090de91a4a0ad5b8b091cf"
       }
     },
     "Literature/Papers/Entries/Mixing beliefs among interacting agents.md": {
@@ -1427,12 +1465,16 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "f3cf298efb54d9e6b27c7360bad7bf71cf5933cefcfbd42e28d0ac4f870c87aa",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "d102ff81d16aee31154008f638407902784c72ba6be3fe6ceb78b0e21a74be42",
+        "warnings": [],
         "source": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
         "doi": "10.1142/S0219525900000078"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-mixing-beliefs.json",
+        "source_read": "Full primary source; all model variants, abstract and bibliography",
+        "final_sha256": "d102ff81d16aee31154008f638407902784c72ba6be3fe6ceb78b0e21a74be42"
       }
     },
     "Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md": {
@@ -1626,12 +1668,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "663a30bbba6c53fa0d3a7337ab50eecf30180578b862a832c1502e13ea444293",
+        "sha256": "e263138f2a441551eda6477a0b52a2631994fde878978a87c66642d7e55c5cc3",
         "warnings": [
           "audit failed"
         ],
         "source": "https://www.jasss.org/24/4/6.html",
         "doi": "10.18564/jasss.4699"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "e263138f2a441551eda6477a0b52a2631994fde878978a87c66642d7e55c5cc3",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md": {
@@ -1724,12 +1772,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "cc0d5ce745bda19d5911b843e422326b4f3cab1c532d2edf3e1387477a86c417",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "770fd749b3f86a2ebbdb4c1eafd52ad35a897fbc46444ca3c237ca9d8bc4479a",
+        "warnings": [],
         "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11",
         "doi": "10.1007/978-3-032-01373-6_11"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-social-cohesion-reaudit.json",
+        "scope": "Memory state, initial settings, update sequence and all 20 references checked against the corrected publisher chapter and tables.",
+        "audited_sha256": "030ff1ee07829a9d5b231596b42be2ebca49eac78737422265d34174e6dbfcbe",
+        "final_sha256": "770fd749b3f86a2ebbdb4c1eafd52ad35a897fbc46444ca3c237ca9d8bc4479a"
       }
     },
     "Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md": {
@@ -1787,12 +1840,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "95727c281b4049eb3dd1c2c559f996596792b958b56434f0289107cc34009d54",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "afcf9d695d6259ed2bcf64f54e1ec98b1fc6751d4d5e8d8f35006fe91c1a7cd6",
+        "warnings": [],
         "source": "https://arxiv.org/html/1811.10981v1",
         "doi": "10.48550/arXiv.1811.10981"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-static-practices.json",
+        "scope": "Full static architecture, formal constraints, commuting example, abstract and all 55 references independently checked; no simulation rules invented.",
+        "audited_sha256": "632ada906842af006ee0a078c6e1b3c8c2eb6809f5fdb5551cdfbe6ceac58213",
+        "final_sha256": "afcf9d695d6259ed2bcf64f54e1ec98b1fc6751d4d5e8d8f35006fe91c1a7cd6"
       }
     },
     "Literature/Papers/Entries/Modelling the Evolution of Social Structure.md": {
@@ -2033,12 +2091,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "974459afe864f230483efabd10be9d51aa5fd9d6ab8d19946f7425f14de34348",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "e5bee81dfa6ab224d6b9cecf5a9752278db5a8e554fe4d05f1ad61d8f605c75b",
+        "warnings": [],
         "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605",
         "doi": "10.1371/journal.pone.0158605"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-modelling-social-structure.json",
+        "scope": "Full primary article, S1 appendix and 78 references checked; embedded trust/search equations independently read visually, with an additional focused review. Source conflicts and missing values remain explicit.",
+        "audited_sha256": "9ad79fb2382ea45ba4386ee716e4fd75f6beb1b2fb9a7ae602b5a34184b5b937",
+        "final_sha256": "e5bee81dfa6ab224d6b9cecf5a9752278db5a8e554fe4d05f1ad61d8f605c75b"
       }
     },
     "Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md": {
@@ -2223,12 +2286,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "6de79794ea2e007125db27f00a90cd096fa83087b6844e7adda76f5d68dfba4c",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "4af53734305c0af325694f0efece87aaa3cf4f69f7a79f37633483c537bce8d0",
+        "warnings": [],
         "source": "https://arxiv.org/html/2411.11581",
         "doi": "10.48550/arXiv.2411.11581"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-oasis.json",
+        "scope": "Full arXiv v5 body, appendices A–I, scenario controls/outcomes and all 59 references independently checked.",
+        "audited_sha256": "97a58fbe97b29112702b7b84579fe15b6fb2905162a3541ffb011e16e00ba41c",
+        "final_sha256": "4af53734305c0af325694f0efece87aaa3cf4f69f7a79f37633483c537bce8d0"
       }
     },
     "Literature/Papers/Entries/On Generative Agents in Recommendation.md": {
@@ -2426,12 +2494,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "bb2014bafe82373132029b49fb73a27d2ef1e5260a4e74955f0085e027b36917",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "588e9d03ef81735d66391a1bedcc163d16e10a809c78d2a02afd129017128487",
+        "warnings": [],
         "source": "https://arxiv.org/html/2310.10108",
         "doi": "10.1145/3626772.3657844"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-agent4rec.json",
+        "scope": "Full Agent4Rec v3 profile, memory, actions, experiment controls/results, limitations and all 70 source references independently checked.",
+        "audited_sha256": "ef6a883df79c3f9f64b516ae9555081ac290d6a0121bf3c317224f8a1ff4bf93",
+        "final_sha256": "588e9d03ef81735d66391a1bedcc163d16e10a809c78d2a02afd129017128487"
       }
     },
     "Literature/Papers/Entries/On and Off the -Net- Scales for Social Capital in an Online Era.md": {
@@ -3262,12 +3335,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "97e64d0e7b2d9715cb079963a03a68e6a1478c1c0a4a8dcb3c51af4074d9f22e",
+        "sha256": "306a9e8d66cafa89ecddc42528c0d1536be709a429157dda6d635bd7747baaff",
         "warnings": [
           "audit failed"
         ],
         "source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
         "doi": "10.1093/pnasnexus/pgae258"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "306a9e8d66cafa89ecddc42528c0d1536be709a429157dda6d635bd7747baaff",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md": {
@@ -3445,12 +3524,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "21e7fe6a4b77f12d393ee2c8b6351d194165fe3a2ad13eba85a3a16199a35f17",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "06a9f236e8c65fb870fb2c23dc2bd0012bdf7ebfcfb69292aff7a3bb98d60156",
+        "warnings": [],
         "source": "https://arxiv.org/html/2103.08057",
         "doi": "10.48550/arXiv.2103.08057"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-recsim-ng.json",
+        "scope": "Full primary source, three use cases and 64 references checked; unsupported covariance wording corrected and independently rechecked.",
+        "audited_sha256": "ff68d557959fa83c8ff80c4e7bf57231cbf253e2ea46b67c8e649ec1f7cd697b",
+        "final_sha256": "06a9f236e8c65fb870fb2c23dc2bd0012bdf7ebfcfb69292aff7a3bb98d60156"
       }
     },
     "Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md": {
@@ -3616,12 +3700,17 @@
       "current_doi": "10.48550/arxiv.1909.04847 - \"model\"",
       "current_warnings": [],
       "current_note": {
-        "sha256": "72635b0ba81244eea0c5e108623308efc3236a83be5239b1bca9867f8f312a5b",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "ee1f633842cfedf9372de9c5b0b21f57ee9901075a8ea132680340bf0e18471e",
+        "warnings": [],
         "source": "https://arxiv.org/html/1909.04847",
         "doi": "10.48550/arxiv.1909.04847"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-recsim.json",
+        "scope": "Full primary source and 63 references checked; history update indentation and reference-target fixes independently re-audited.",
+        "audited_sha256": "5d17ebc8c0754be9c28f35006a4f796725812a33655a20958d0d128c9ac4a473",
+        "final_sha256": "ee1f633842cfedf9372de9c5b0b21f57ee9901075a8ea132680340bf0e18471e"
       }
     },
     "Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md": {
@@ -4175,12 +4264,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "63deb00f9811953f92c6f37e4efaca51095a996b53c0927b64e8f76a40f46b72",
+        "sha256": "fca10179c5a9a8ef6487dbc0197b860985de38afee80c657ac3db689d92fed4c",
         "warnings": [
           "audit failed"
         ],
         "source": "https://arxiv.org/pdf/2007.16120v2",
         "doi": "10.1016/j.inffus.2020.12.001"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PARTIAL_REPAIR_INTERRUPTED",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "fca10179c5a9a8ef6487dbc0197b860985de38afee80c657ac3db689d92fed4c",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md": {
@@ -4350,13 +4445,19 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "38a250c4faf09fe9e043636020acf3e87b08d4a49dfd61c864de6192f5ba9006",
+        "sha256": "dffcaf1eab602d473fd2664d91672412a14174da43cf3837d949e526cbd23c1c",
         "warnings": [
-          "audit failed",
           "fulltext unavailable"
         ],
         "source": "https://www.nature.com/articles/s41586-026-10536-1",
         "doi": "10.1038/s41586-026-10536-1"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-redesign-social-norm.json",
+        "scope": "Accessible abstract claims and all58publisher references checked. Detailed model extraction skipped; fulltext unavailable retained.",
+        "audited_sha256": "b412af774a0bcb368fd7951b831f9ba07125dbd462a2f350d3a326588eb09128",
+        "final_sha256": "dffcaf1eab602d473fd2664d91672412a14174da43cf3837d949e526cbd23c1c"
       }
     },
     "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md": {
@@ -4511,12 +4612,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "4c2177daf9aeb07acc96e5efcd429336db8088bd35c52a919915b51f931530bb",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "87c84e863fd61be7acf6926bbc8e153484988b32058c4c84838951ac58254310",
+        "warnings": [],
         "source": "https://www.jasss.org/27/2/4.html",
         "doi": "10.18564/jasss.5300"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-reliable-efficient.json",
+        "scope": "Framework update order, tutorial, benchmark and calibration controls/outcomes and 50 references verified; printed density and speedup discrepancies remain explicit.",
+        "audited_sha256": "614ebfc6cea8e051b3789637e532298e7c17f7b837a8417524794a446bdbc90c",
+        "final_sha256": "87c84e863fd61be7acf6926bbc8e153484988b32058c4c84838951ac58254310"
       }
     },
     "Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md": {
@@ -4731,6 +4837,12 @@
         ],
         "source": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
         "doi": "10.1126/science.adu5584"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "NOT_STARTED",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "13742f2494f6ebf7335e2f87dfbc4a45fc6f8f378a3d68f90571dc4067be51da",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md": {
@@ -4909,12 +5021,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "e8d9285fb1145b2adb1bf294364c6f4f6529ced405be19e935632607a80e6ff5",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "b4e88549a4bc6a6af70cadb4fe32f56ac61334e3fb2ea4a69be4cb95ca2860fd",
+        "warnings": [],
         "source": "https://arxiv.org/html/2311.16586",
         "doi": "10.1145/3656481"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-sardine.json",
+        "scope": "Source mechanisms, settings, outcomes and all 55 references checked; the unsupported zero-click transition was removed and source gaps remain explicit.",
+        "audited_sha256": "e41d285614c5060f6ce44cea9d1ef4576791bfd2416a388342db912914c8ca5b",
+        "final_sha256": "b4e88549a4bc6a6af70cadb4fe32f56ac61334e3fb2ea4a69be4cb95ca2860fd"
       }
     },
     "Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md": {
@@ -4957,12 +5074,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "621fde3294f985310c71a7afaf668035327bff5a3e528bc038fe1d39a56ea7c7",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "75b319116b0d5c695e2d838e89322237500741d6af944cb35f0496a56797a70b",
+        "warnings": [],
         "source": "https://par.nsf.gov/servlets/purl/10187146",
         "doi": "10.1145/3347146.3359106"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-urban-patterns.json",
+        "scope": "Full four-page primary paper, demonstration rules and 26 references checked; filename-safe target changes independently rechecked and demonstration separated from empirical validation.",
+        "audited_sha256": "31fb11ca15d1a3f744e04a776ea9054f3bec0c5a81c372b31668807b7b920eac",
+        "final_sha256": "75b319116b0d5c695e2d838e89322237500741d6af944cb35f0496a56797a70b"
       }
     },
     "Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md": {
@@ -5170,6 +5292,12 @@
         ],
         "source": "https://www.jasss.org/26/2/6.html",
         "doi": "10.18564/jasss.5066"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "NOT_STARTED",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "c9f5cdce8a5586e95e35aa91b15570823102f056fc1877e3d40b03b615762c9b",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md": {
@@ -5332,20 +5460,61 @@
       ],
       "original_snapshot": ".automation/import/next-forty-original-2026-09-30.json",
       "reimport_started_at": "2026-09-30",
-      "audit_status": "pending",
+      "audit_status": "passed independent audit",
       "current_read_source": "https://www.jasss.org/15/4/3/3.pdf",
       "current_doi": "10.18564/jasss.2059 - \"model\"",
-      "current_warnings": [
-        "audit failed"
-      ],
+      "current_warnings": [],
       "current_note": {
-        "sha256": "faf624cb09f041a984e091008ad29aa25b9038cb07b7e6f7c3a7c22b08805c49",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+        "warnings": [],
         "source": "https://www.jasss.org/15/4/3/3.pdf",
         "doi": "10.18564/jasss.2059"
-      }
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+        "scope": "Full primary source, fitness equations and62references checked; missing footnote and source-bibliography typo corrected and independently re-audited. Inherited-rule gaps/source conflicts remain explicit.",
+        "audited_sha256": "44488790e5e1ace99279bdf34630549c3fdb50727bee894169b62b25eb68a5ca",
+        "final_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8"
+      },
+      "noted_simulations_import_2026_10_03": {
+        "status": "passed independent audit",
+        "current_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+        "scope": "Five simulation papers named in goals note; no empirical measurement placeholder imports in this scope",
+        "reports": "vault/.automation/audit/noted-simulations-2026-10-03",
+        "existing_audit_reused": true,
+        "verification": {
+          "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+          "current_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+          "repair_final_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+          "finalization_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+          "verdict": "PASS_UNCHANGED_FINALIZED_HASH",
+          "independent_full_source_report": {
+            "path": "vault/.automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+            "sha256": "8050cd094dc7c8af029748bc04f2a229fbb7d59d52638890ef21bf0cdf29c875",
+            "report_note_sha256": "44488790e5e1ace99279bdf34630549c3fdb50727bee894169b62b25eb68a5ca",
+            "scope": "Full JASSS publisher PDF and complete extracted text, §§1-6, all 62 bibliography entries, and PDF p.4 fitness-equation rendering."
+          },
+          "focused_root_review": {
+            "path": "vault/.automation/audit/repair-2026-10-03/root-social-relationships-focused-review.json",
+            "sha256": "f612b955b4e6faa027b1c946b6accbdc6d023cf205ce1dad4433270319518204",
+            "scope": "Focused review of simulation-relevant fitness/trust rules, equation image, source conflict, and corrected citation title; the review explicitly supplements rather than replaces the independent full-source audit."
+          },
+          "source_artifacts": [
+            {
+              "path": "vault/.automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+              "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34"
+            },
+            {
+              "path": "vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+              "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3"
+            }
+          ],
+          "bibliography_check": "PASS: report records 62/62 in source order; current note contains 62 reference items, meaningful wiki targets/title aliases, and no opaque unresolved-reference placeholder. The Reicher et al. source typo is corrected to the publisher-verified title.",
+          "open_source_gaps": "The note retains the §2.4/§2.6/§4.4 trust-rule conflict, leaves inherited partner-search/decay functions unresolved, and discloses undefined zero-denominator fitness cases."
+        }
+      },
+      "reference_status": "PASS: report records 62/62 in source order; current note contains 62 reference items, meaningful wiki targets/title aliases, and no opaque unresolved-reference placeholder. The Reicher et al. source typo is corrected to the publisher-verified title."
     },
     "Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md": {
       "original_frontmatter": {
@@ -5580,12 +5749,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "16ad946fcf54248a8d735f0e48a4e83e29c7db2c5f36b434bc3eff06eb58ef6c",
+        "sha256": "673a1d0607bedb24c49aa640ee0c2f82920b6d93e31d896139e278ddd10cf57f",
         "warnings": [
           "audit failed"
         ],
         "source": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
         "doi": "10.1145/3526113.3545616"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "673a1d0607bedb24c49aa640ee0c2f82920b6d93e31d896139e278ddd10cf57f",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md": {
@@ -5754,6 +5929,12 @@
         ],
         "source": "https://www.nature.com/articles/s41586-022-04997-3",
         "doi": "10.1038/s41586-022-04997-3"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "NOT_STARTED",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "c61c22ee4b9dc436caef2860b3c1688b06154688b1e908e6c8caf206651d8aa2",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md": {
@@ -6021,12 +6202,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "aded677376e599fc8c5c5eab44255ce38f32dad10ea9a07a73f57d97a14b85c3",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "37686daae8824e614f75a475de4042093e59cd9f36b7e70f03083826e726a4ab",
+        "warnings": [],
         "source": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
         "doi": "10.1146/annurev-statistics-060116-054035"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-stochastic-actor-oriented.json",
+        "scope": "Full accepted manuscript, event/choice rules, estimator and coevolution, example and 70 source references verified; filename-safe target corrections independently rechecked.",
+        "audited_sha256": "67eab7ed6a19ac03fde4250154017e6e0b3d92bb7862093e7b89d872950b2ed0",
+        "final_sha256": "37686daae8824e614f75a475de4042093e59cd9f36b7e70f03083826e726a4ab"
       }
     },
     "Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md": {
@@ -6191,20 +6377,57 @@
       ],
       "original_snapshot": ".automation/import/next-forty-original-2026-09-30.json",
       "reimport_started_at": "2026-09-30",
-      "audit_status": "pending",
+      "audit_status": "passed independent audit",
       "current_read_source": "https://arxiv.org/html/2107.08959",
       "current_doi": "10.48550/arxiv.2107.08959 - \"model\" - \"simulation\"",
-      "current_warnings": [
-        "audit failed"
-      ],
+      "current_warnings": [],
       "current_note": {
-        "sha256": "17c2651f22784d5e0017876c5adf647a8fd6fd29641c4d1fadc4844388920e38",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+        "warnings": [],
         "source": "https://arxiv.org/html/2107.08959",
         "doi": "10.48550/arxiv.2107.08959"
-      }
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-t-recs.json",
+        "scope": "Full primary source, all appendices, three case studies and 87 references verified. Publication date checked against initial arXiv submission; version date stored separately.",
+        "audited_sha256": "71edb5fb0e04301bbb9f5ec5f37c0ef28e1192cf41c449ee63717d18b841b65e",
+        "final_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f"
+      },
+      "noted_simulations_import_2026_10_03": {
+        "status": "passed independent audit",
+        "current_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+        "scope": "Five simulation papers named in goals note; no empirical measurement placeholder imports in this scope",
+        "reports": "vault/.automation/audit/noted-simulations-2026-10-03",
+        "existing_audit_reused": true,
+        "verification": {
+          "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+          "current_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+          "repair_final_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+          "finalization_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+          "verdict": "PASS_UNCHANGED_FINALIZED_HASH",
+          "independent_full_source_report": {
+            "path": "vault/.automation/audit/repair-2026-10-03/audit-t-recs.json",
+            "sha256": "1eb5662eeee8ad4a0ab0178473fc653c34ccffab151dbff95e8d409f0424e900",
+            "report_note_sha256": "71edb5fb0e04301bbb9f5ec5f37c0ef28e1192cf41c449ee63717d18b841b65e",
+            "scope": "Full arXiv v2 primary text including §§1-6, all three case studies, appendices A.1-A.4, and all 87 bibliography entries; source-located claims and disclosures reviewed."
+          },
+          "source_artifacts": [
+            {
+              "path": "vault/.automation/sources/files/f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9.txt",
+              "sha256": "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9"
+            },
+            {
+              "path": "vault/.automation/sources/files/abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68.html",
+              "sha256": "abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68"
+            }
+          ],
+          "bibliography_check": "PASS: report records 87/87 in source order; current note contains 87 reference items, meaningful wiki targets/title aliases, and no opaque unresolved-reference placeholder.",
+          "metadata_check": "PASS: publication date is the initial arXiv submission date (2021-07-19); separately audited v2 source date is 2021-07-28, as resolved by root metadata review and retained in provenance.",
+          "open_source_gaps": "The prior full-source report records conceptual-replication scope, unspecified distribution parameters deferred to a cited source, and adaptive creator behavior as a hypothesized constructive extension; these are disclosed in the note."
+        }
+      },
+      "reference_status": "PASS: report records 87/87 in source order; current note contains 87 reference items, meaningful wiki targets/title aliases, and no opaque unresolved-reference placeholder."
     },
     "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md": {
       "original_frontmatter": {
@@ -6337,23 +6560,42 @@
       ],
       "original_snapshot": ".automation/import/next-forty-original-2026-09-30.json",
       "reimport_started_at": "2026-09-30",
-      "audit_status": "pending",
+      "audit_status": "passed independent audit",
       "bibliography_caveats": [
         "Bibliography caveat: the pre-reimport reference links and order are preserved; their completeness has not been independently reconciled with the source."
       ],
       "current_read_source": "https://ojs.aaai.org/index.php/ICWSM/article/view/19275",
       "current_doi": "10.1609/icwsm.v16i1.19275",
-      "current_warnings": [
-        "audit failed"
-      ],
+      "current_warnings": [],
       "current_note": {
-        "sha256": "e8e5392c7ba72e1c86da58e3a1044d3f2985cc24bab08ffb8c7d7a89f4105b98",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "333f512c8b88d44c4cd3f5087dd027d9ee38955abc4a0ad891e4434ee686ea5c",
+        "warnings": [],
         "source": "https://arxiv.org/pdf/2112.00626",
         "doi": "10.1609/icwsm.v16i1.19275"
-      }
+      },
+      "content_reimport_2026_10_03": {
+        "requested_source": "https://arxiv.org/abs/2112.00626",
+        "version": "arXiv v1, 2021-12-01; only listed version",
+        "fulltext": ".automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+        "derived_text": ".automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+        "reference_resolution": "Skipped at user request; existing references preserved",
+        "abstract": "Existing publisher-version abstract retained; source distinction in r1",
+        "audit": "PASS after independent content audit, corrections, and re-audit; reference resolution excluded at user request",
+        "audit_report": ".automation/audit/prod-content-2026-10-03.json"
+      },
+      "noted_simulations_import_2026_10_03": {
+        "date": "2026-10-03",
+        "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+        "status": "PASS",
+        "audited_sha256": "cebff352a2d15376c12e6d5aeac20374492661f2c57f68ea5d88998d1f94e29b",
+        "final_sha256": "333f512c8b88d44c4cd3f5087dd027d9ee38955abc4a0ad891e4434ee686ea5c",
+        "audit_report": "vault/.automation/audit/noted-simulations-2026-10-03/prod-independent-reaudit.json",
+        "audit_report_sha256": "f989697c9bcecd12e1f7d9fe73af1454490036f720ac891d93c61e2c9f9692fa",
+        "audit_verdict": "PASS",
+        "status_only_finalization": "Removed only passed audit warnings and recorded audit result; scientific sections byte-identical.",
+        "warnings_retained": []
+      },
+      "reference_status": "Complete source-ordered bibliography: 35 entries; independently audited."
     },
     "Literature/Papers/Entries/The Focused Organization of Social Ties.md": {
       "original_frontmatter": {
@@ -6456,6 +6698,12 @@
         ],
         "source": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf",
         "doi": "10.1086/227352"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "NOT_STARTED",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "e29fe0c54277954f8681c13e791d7876299545d2707b037a67b74a2b63545cc7",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/The ODD Protocol for Describing Agent-Based and Other Simulation Models- A Second Update to Improve Clarity- Replication- and Structural Realism.md": {
@@ -6765,12 +7013,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "6571ee09ad129714e7965d229f9b080a60650e73f2dfd5858a21b63033a6f027",
+        "sha256": "7fb87b9fe2e3c56d9629c899fbadaab51691c16af9027ae12e42b0744b1b432a",
         "warnings": [
           "audit failed"
         ],
         "source": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf",
         "doi": "10.21307/joss-2018-002"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "7fb87b9fe2e3c56d9629c899fbadaab51691c16af9027ae12e42b0744b1b432a",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md": {
@@ -7483,12 +7737,17 @@
         "not audited"
       ],
       "current_note": {
-        "sha256": "391077b7e17c14266818579ab1da97b59245a3d19026b74a4a25dfe826b77902",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "2206f362039696fd9a137a25483f0b5dac9a201b989535e9d5b582e55fbf0b59",
+        "warnings": [],
         "source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
         "doi": "10.1017/nws.2024.7"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-latent-cognitive-structures.json",
+        "scope": "Independent full-source model/content audit passed; root separately compared all71source reference titles and order, including four titles outside article-title spans.",
+        "audited_sha256": "2ba6e8fb81882823563932ece3c2d5cd3139954393e2a8c0dd4f6397de7324df",
+        "final_sha256": "2206f362039696fd9a137a25483f0b5dac9a201b989535e9d5b582e55fbf0b59"
       }
     },
     "Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md": {
@@ -7644,12 +7903,18 @@
         "not audited"
       ],
       "current_note": {
-        "sha256": "3c8698c945deeca0c77ddab2b1cff3cc9189cc33513e58fc6ec4ed7844ef08a6",
+        "sha256": "93cc1e23d2bfbcd30c3d381f6f80af6f21e8def50dbeb3879db4d9c697db235b",
         "warnings": [
           "audit failed"
         ],
         "source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
         "doi": "10.1140/epjds/s13688-026-00674-x"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "93cc1e23d2bfbcd30c3d381f6f80af6f21e8def50dbeb3879db4d9c697db235b",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md": {
@@ -7781,12 +8046,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "8b713425c5125593cb9c74c4f118c54d1d13cda25307c1f9d8a7383144c75d18",
+        "sha256": "cb012cc1c541b2f2646c75c68d1c0898ffbef6ebacaa78aa93b3de2efc01cafd",
         "warnings": [
           "audit failed"
         ],
         "source": "https://arxiv.org/html/2306.02552v3",
         "doi": "10.48550/arxiv.2306.02552"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "cb012cc1c541b2f2646c75c68d1c0898ffbef6ebacaa78aa93b3de2efc01cafd",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md": {
@@ -7827,12 +8098,18 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "e2c2d881335227dcb2f11bb28ff3f85191265bc1e4285d4c1b9b2e8e94ac3904",
+        "sha256": "d7ea867da5c23898b9c840aa35b30c547d39ccd80ddf13df42ce21826686477a",
         "warnings": [
           "audit failed"
         ],
         "source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
         "doi": "10.4337/9781781957240.00014"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "d7ea867da5c23898b9c840aa35b30c547d39ccd80ddf13df42ce21826686477a",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
       }
     },
     "Literature/Papers/Entries/Value-based large language model agent simulation for mutual evaluation of trust and interpersonal closeness.md": {
@@ -8133,12 +8410,17 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "5d5463c41d1f8e3f7ae5a81f9942c94b4a6309d29b16ee185ad7eb7600931786",
-        "warnings": [
-          "audit failed"
-        ],
+        "sha256": "e59661a43bdfce5e99b19eaea4a7af8e7ea27e0c806c505465802b2d8724a643",
+        "warnings": [],
         "source": "https://www.jasss.org/26/3/9.html",
         "doi": "10.18564/jasss.5146"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PASS",
+        "independent_report": ".automation/audit/repair-2026-10-03/audit-when-i-we.json",
+        "scope": "Prior full-source content pass retained; all52references and six filename-safe target changes independently rechecked, preserving source titles/order.",
+        "audited_sha256": "d34bf5968c2c3a553b4f00085dd3e5eb4a35acea4b036449577ad9029e478060",
+        "final_sha256": "e59661a43bdfce5e99b19eaea4a7af8e7ea27e0c806c505465802b2d8724a643"
       }
     },
     "Literature/Papers/Entries/Why Does Facebook Fail to Catalyze Diverse Friendship Formations.md": {
@@ -8568,12 +8850,58 @@
         "audit failed"
       ],
       "current_note": {
-        "sha256": "e22f471c37d953b5534db3243855b96c2c03798d2489c4ce9dbf838ed40a4e59",
+        "sha256": "c8330e32e11ad324fca4380b2b2e0c6d166f0243875f6707910a421dee37493a",
         "warnings": [
           "audit failed"
         ],
         "source": "https://arxiv.org/pdf/2408.00818",
         "doi": "10.48550/arXiv.2408.00818"
+      },
+      "audit_repair_2026_10_03": {
+        "status": "PENDING_INDEPENDENT_AUDIT",
+        "checkpoint": ".automation/audit/repair-2026-10-03/checkpoint.json",
+        "current_sha256": "c8330e32e11ad324fca4380b2b2e0c6d166f0243875f6707910a421dee37493a",
+        "interruption": "Cheap agents reached usage limit; user requested wrap-up without starting new papers."
+      }
+    },
+    "Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md": {
+      "imported_at": "2026-10-04",
+      "metadata_record": ".automation/import/psychsim-2026-10-04.json",
+      "reference_status": "Source bibliography retained; cited-paper imports and external resolution skipped at user request.",
+      "audit_status": "passed independent audit",
+      "audit": {
+        "verdict": "PASS",
+        "audited_sha256": "3eb2c17e4a2c7f50702add7fe657ef7049b916b918f8bd9adaabee7655fe416b",
+        "report": ".automation/audit/cognitive-simulations-2026-10-04/psychsim-reaudit.json",
+        "report_sha256": "8c0c1b6539ad6636031ff13d4e1817b7bb594d613d15c449ddf3888749812d81",
+        "auditor": "gpt-6-luna",
+        "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded."
+      },
+      "current_note": {
+        "sha256": "b75f29baadc2c57c62515a1d26b4edbdf469bb3fa3acdc983ce314d524dbbdd4",
+        "warnings": [],
+        "source": "https://www.ijcai.org/Proceedings/05/Papers/1559.pdf",
+        "doi": null
+      }
+    },
+    "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md": {
+      "imported_at": "2026-10-04",
+      "metadata_record": ".automation/import/reputation-game-2026-10-04.json",
+      "reference_status": "Source bibliography retained; cited-paper imports and external resolution skipped at user request.",
+      "audit_status": "passed independent audit",
+      "audit": {
+        "verdict": "PASS",
+        "audited_sha256": "cfe070f29bc1da4116a05ea49292a8bbad0e69148ce2dc145adf164a672edebd",
+        "report": ".automation/audit/cognitive-simulations-2026-10-04/reputation-final-reaudit.json",
+        "report_sha256": "51a9d4624cfe5e5d30ca7e47e6d40feb160b947cc1ddc54eaf0c7912db7dcc1c",
+        "auditor": "gpt-6-luna",
+        "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded."
+      },
+      "current_note": {
+        "sha256": "161a0a61ac7271175cd5db5d358484a17b9eb43689c454a78af8ad5ac89bc3fe",
+        "warnings": [],
+        "source": "https://d-nb.info/1255007265/34",
+        "doi": "10.1002/andp.202100277"
       }
     }
   }

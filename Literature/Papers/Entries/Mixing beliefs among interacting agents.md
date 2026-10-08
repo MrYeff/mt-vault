@@ -12,8 +12,6 @@ tags:
   - "model"
   - "simulation"
 read status: Todo
-⚠️:
-  - audit failed
 ---
 
 ## Abstract
@@ -64,6 +62,47 @@ sim_step(
 - Binary-vector variant: use Hamming distance over `m` binary subjects. For each differing subject, choose one agent randomly and let it copy the other's bit with probability μ; retain equal bits. This variant uses complete mixing.[^d3]
 - Source conflict: the vector section allows agreement on at least `m-d` subjects but restates this as disagreement on at most `d-1` subjects. These differ at the boundary; no single threshold implementation is asserted here.[^d3]
 
+```yml
+VectorWorld:
+  agents: [VectorAgent]
+  subjects: m
+  confidence_cutoff: d
+  cutoff_formulation: AgreementAtLeastMMinusD | DisagreementAtMostDMinus1
+  persuasion: 0..1
+
+VectorAgent:
+  opinions: [0 | 1] # one bit per shared subject
+```
+
+The vector encounter procedure records the source's two alternative cutoff phrasings instead of silently resolving their one-bit boundary difference. Once a pair qualifies, every differing subject gets a separate random persuasion trial.[^d3]
+
+```
+vector_encounter(
+  mut world: VectorWorld
+):
+  i, j = random_pair(world.agents) # complete mixing
+  disagreements = hamming_distance(
+    world.agents[i].opinions,
+    world.agents[j].opinions,
+  )
+
+  qualifies = match world.cutoff_formulation:
+    AgreementAtLeastMMinusD:
+      world.subjects - disagreements >=
+        world.subjects - world.confidence_cutoff
+    DisagreementAtMostDMinus1:
+      disagreements <= world.confidence_cutoff - 1
+  if qualifies:
+    for subject in differing_subjects(i, j):
+      persuaded = random_choice(i, j)
+      other = j if persuaded == i else i
+      if random() < world.persuasion:
+        world.agents[persuaded].opinions[subject] =
+          world.agents[other].opinions[subject]
+```
+
+- For the continuous complete-mixing experiments, one displayed time unit samples 1,000 random pairs; each lattice experiment selects from four-connected neighbor pairs and runs to the stated large-time equilibrium. These are separate sampling conventions, not a shared fixed-duration step.[^d2]
+
 The source's continuous-population counts conflict.[^d4]
 
 ```
@@ -94,6 +133,7 @@ FIGURE_1_AGENT_COUNT = 2000
 - [[DynamicalAspectsInTheAdoptionOfAgriEnvironmentalMeasures|Dynamical aspects in the Adoption of Agri-Environmental Measures]]
 
 ## Audit Log
+- 2026-10-03: Independent full-source re-audit passed after repairs. All three model variants, source conflicts, abstract and 10-entry bibliography checked; `audit failed` removed only after this pass.
 - 2026-09-30: Complete independent primary-source audit confirmed the model and recorded source conflicts. Rebuilt the 10-entry bibliography in source order: removed an unrelated imported work and two unresolved duplicate metadata tokens; restored Laslier, Latané/Nowak and Neau. Corrected publication precision to January 2000: the registry supplies no day, while the HAL cover cites 2001. Independent re-audit remains pending.[^metadata]
 - Audit invalidated (2026-09-30): auditor admitted relying on spot checks and previous reports before clearing flags. A full independent audit is still required.
 - 2026-09-30: Full-source design audit found continuous rules lacked readable state/procedure; vector-boundary and figure population conflicts require preservation. Corrected against the source passages below; independent re-audit pending.[^design]

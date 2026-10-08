@@ -17,8 +17,6 @@ publication date: 2019-11
 source: "https://par.nsf.gov/servlets/purl/10187146"
 doi: 10.1145/3347146.3359106
 read status: Todo
-⚠️:
-  - audit failed
 ---
 
 ## Abstract
@@ -53,7 +51,7 @@ Agent:
 Behavior:
   trigger: ()
   actions: [Action]
-  priority: 0..
+  priority: ModelerDefinedOrder # no numeric priority scale specified
 
 Action:
   steps: ()
@@ -63,15 +61,18 @@ GeoSocialEnvironment: ()
 ```
 
 ### How does it work?
-- A change in internal state or environment fires a trigger. Its behavior runs one or more actions until each action's goal is met; an action's output may feed the next action.[^r3]
-- The builder encodes library components/configuration; the simulator decodes them, creates agents, runs their behavior and writes check-ins, transactions and meetings to a file or stream.[^r3]
-- Demonstration only: hunger above 50 triggers restaurant selection, shortest-path travel, eating until full, then payment. MASON/GeoMASON runs 10,000 agents on a synthetic network of 14,181 road segments.[^r4]
+- A trigger responds to a change or event in an internal factor (need, belief, characteristic) or an external factor (environment or another individual). It initiates a behavior, which can contain multiple actions; each action can have one or more steps, emits an output, and continues until its explicit goal is met. An action output can feed the next action.[^r3]
+- Agents may have competing behaviors. The modeler specifies their execution priority; the paper offers Maslow’s hierarchy only as one possible hypothesis and gives no universal priority rule or numeric scale.[^r3]
+- Architecture has three parts: a shared library of function-block components; a drag-and-drop Model Builder whose encoder saves model files; and a Simulator whose decoder loads those files, instantiates agents, and writes check-ins, transactions, or meetings to a file or stream. The demonstration’s builder uses Java/JGraphX.[^r3][^r4]
+- Demonstration only: the sample model has food and sleep triggers, eight listed properties (money, wage, workHour, buildings, homeLocation, workLocation, destination, currentLocation), and eating/sleeping/working/doNothing behaviors. Food need strength above 50 triggers restaurant choice, shortest-path travel, eating to the `untilFULL` goal (100% food level), and bill payment from money.[^r4]
+- MASON/GeoMASON runs 10,000 agents on synthetic spatial data containing 14,181 road segments. The displayed daily routine (home around 6 a.m., rush hour around 7 a.m., work around 8:30 a.m., lunch at noon) is visual demonstration; the authors say trace-based empirical validation is possible, so screenshots alone do not establish empirical validity.[^r4]
+- The stream reports agent ID, simulation timestamp and tick, current location and status; the implementation uses the ZeroMQ client library. The demonstration connects this stream to Zeppelin and Spark Streaming for analysis.[^r4]
 
 ### What can it answer?
 - Generate and stream trajectories and associated geo-social events under user-defined behavior rules; explore a configurable model's mobility consequences.[^r4]
 
 ### Where does it apply?
-- Urban data generation. The demonstration is highly stylized; the paper does not supply a universal restaurant-choice function or empirically validated full pattern-of-life model.[^r3][^r4]
+- Urban data generation. The demonstration is highly stylized, and the conclusion describes a plausible pattern-of-life model as future work. The paper does not supply a universal restaurant-choice function or report completed empirical trace validation.[^r3][^r4]
 
 ## Metadata
 ### References
@@ -81,29 +82,30 @@ GeoSocialEnvironment: ()
 - [[New York City Taxi and Limousine Commission trip record data]]
 - [[An empirical test of a new theory of human needs]]
 - [[A Framework for Generating Network-Based Moving Objects]]
-- [[Agent-Based Modelling and Geographical Information Systems: A Practical Primer]]
-- [[Unique in the crowd: The privacy bounds of human mobility]]
+- [[Agent-Based Modelling and Geographical Information Systems- A Practical Primer|Agent-Based Modelling and Geographical Information Systems: A Practical Primer]]
+- [[Unique in the crowd- The privacy bounds of human mobility|Unique in the crowd: The privacy bounds of human mobility]]
 - [[Intrinsic motivation and self-determination in human behavior]]
 - [[Applying statistical debugging for enhanced trace validation of agent-based models]]
 - [[Location-based social simulation]]
 - [[Procedural city generation beyond game development]]
 - [[Discovering spatio-temporal causal interactions in traffic data streams]]
-- [[MASON: A multiagent simulation environment]]
+- [[MASON- A multiagent simulation environment|MASON: A multiagent simulation environment]]
 - [[The image of the city]]
 - [[A theory of human motivation]]
 - [[The achievement motive]]
-- [[MNTG: An extensible web-based traffic generator]]
-- [[Protecting user privacy: Obfuscating discriminative spatio-temporal footprints]]
+- [[MNTG- An extensible web-based traffic generator|MNTG: An extensible web-based traffic generator]]
+- [[Protecting user privacy- Obfuscating discriminative spatio-temporal footprints|Protecting user privacy: Obfuscating discriminative spatio-temporal footprints]]
 - [[Generating semantics-based trajectories of moving objects]]
-- [[SMARTS: Scalable microscopic adaptive road traffic simulator]]
+- [[SMARTS- Scalable microscopic adaptive road traffic simulator|SMARTS: Scalable microscopic adaptive road traffic simulator]]
 - [[Predicting disease transmission from geo-tagged micro-blog data]]
-- [[GeoMASON: Geospatial support for MASON]]
+- [[GeoMASON- Geospatial support for MASON|GeoMASON: Geospatial support for MASON]]
 - [[Constructing popular routes from uncertain trajectories]]
 - [[Destination prediction by sub-trajectory synthesis and privacy protection against such prediction]]
-- [[T-Drive: Driving directions based on taxi trajectories]]
+- [[T-Drive- Driving directions based on taxi trajectories|T-Drive: Driving directions based on taxi trajectories]]
 - [[Where to find my next passenger]]
 
 ## Audit Log
+- 2026-10-03: Independent full-source re-audit passed. Full four-page primary paper, demonstration rules and 26 references checked; filename-safe target changes independently rechecked and demonstration separated from empirical validation. `audit failed` removed after the pass.
 - Audit invalidated (2026-09-30): auditor admitted clearing flags before completing independent source checks. A new independent audit is required.
 - Strong source review (2026-09-30): Verified NSF full paper is four pages; retained all 26 ordered bibliography links and clarified component interfaces, goal ownership and demonstration scope. Independent re-audit pending.
 - Initial independent audit: failed on missing model mechanisms, abstract fidelity, or source-access reporting; see `vault/.automation/audit/next-forty-54-66-initial-2026-09-30.json`. Revisions added source-located model detail; independent re-audit remains pending.

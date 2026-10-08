@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "6f39f81f2716f5bc",
+        "id": "5d34648a440cf9ac",
         "type": "tabs",
         "children": [
           {
-            "id": "565965894a79eb72",
+            "id": "552e3719de3838ac",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What are my goal - LLM Asisted.md",
+                "file": "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "What are my goal - LLM Asisted"
+              "title": "The Effect of People Recommenders on Echo Chambers and Polarization"
+            }
+          },
+          {
+            "id": "3d180917aed56897",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A Reputation Game Simulation- Emergent Social Phenomena from Information Theory"
+            }
+          },
+          {
+            "id": "2525b9bca50734b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What are my goal - LLM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "What are my goal - LLM"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -55,8 +84,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "``yml",
-                "matchingCase": false,
+                "query": "PROD",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -83,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 290.45703125
   },
   "right": {
     "id": "110a221805e66a06",
@@ -184,7 +213,6 @@
       "daily-notes:Open today's daily note": true,
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
-      "markdown-importer:Open format converter": true,
       "bases:Create new base": true,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
@@ -194,45 +222,45 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "565965894a79eb72",
+  "active": "d910f61147ab2936",
   "lastOpenFiles": [
-    "Questions/What are my goals?.md",
-    "What are my goal - LLM Asisted.md",
+    "Simulation Reading List.md",
+    "Todo.md",
     "Model.md",
-    "Questions/Untitled.md",
-    "Literature/Papers/Index.base",
-    "Guides/Model Notation.md",
-    "Questions/When does an interaction between agents lead to what outcome?.md",
-    "Questions/What is set in stone for my model?.md",
-    "Questions/What do i need to befor the expose?.md",
-    "Questions/What are the key questions the simulation should be able to answer?.md",
-    "Questions/How is the thesis structured?.md",
-    "Questions/_index.base",
+    "Expose.md",
+    "What are my goal - LLM.md",
+    "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+    "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
     "Guides/LLM Extraction Rules.md",
-    "Literature/Papers/Template.md",
+    "Guides/Model Notation.md",
+    "Guides/Paper Model to FSharp.md",
+    "Literature/Papers/Entries/An Agent-Based Approach to Modeling Online Social Influence.md",
+    "Literature/Authors/Bob van der Vecht.md",
+    "Literature/Authors/Peter-Paul van Maanen.md",
+    "Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
+    "Questions/What is the foundation for the next meeting?.md",
+    "Literature/Papers/Index.base",
+    "PsychsimModelingTheoryOfMindWithDecisionTheoreticAgents.md",
+    "Literature/Papers/Entries/XXkyjikU",
+    "Literature/Papers/Entries/XXdcId0i",
+    "Literature/Authors/Céline Bœhm.md",
+    "Literature/Authors/Viktoria Kainz.md",
+    "Literature/Authors/Torsten Enßlin.md",
+    "Literature/Authors/Stacy C. Marsella.md",
+    "Literature/Authors/David V. Pynadath.md",
+    "Questions/_index.base",
+    "Wiki/People Recomender Systems.md",
     "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
-    "Literature/Papers/Entries/A causal test of the strength of weak ties.md",
-    "Literature/Papers/Entries/Construct User Guide.md",
-    "Literature/Papers/Entries/Persistence of social signatures in human communication.md",
-    "Literature/Papers/Entries/How many hours does it take to make a friend.md",
-    "Literature/Papers/Entries/Contact Patterns in a High School- A Comparison between Data Collected Using Wearable Sensors- Contact Diaries and Friendship Surveys.md",
-    "Literature/Papers/Entries/Exposure to opposing views on social media can increase political polarization.md",
-    "Literature/Papers/Entries/The contact hypothesis re-evaluated.md",
-    "Literature/Papers/Entries/The Prosocial Ranking Challenge- Reducing Polarization on Social Media without Sacrificing Engagement.md",
-    "Literature/Papers/Entries/Bridging Systems- Open Problems for Countering Destructive Divisiveness across Ranking- Recommenders- and Governance.md",
-    "Literature/Authors/Yph Lelkes.md",
-    "Literature/Papers/Entries/Building Successful Online Communities- Evidence-Based Social Design.md",
-    "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
-    "Literature/Authors/Hao Sun.md",
+    "Questions/How is the thesis structured?.md",
+    "Wiki",
+    "Questions/What are my goals?.md",
+    "Questions/What do i need to befor the expose?.md",
     "_Attachments/Pasted image 20260614132119.png",
     "Guides",
     "Literature/Models",
     "Literature/Authors/Index.base",
     "Literature/Authors/Entries",
     "Literature/Papers/Entries",
-    "Literature",
-    "Literature/Authors",
-    "Model.ipynb",
     "Pasted image 20260614131652.png",
     "Pasted image 20260506134947.png",
     "Untitled.canvas",

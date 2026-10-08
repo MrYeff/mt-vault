@@ -19,7 +19,7 @@
 - **Q:** How do we decide if algorithm is good - pre deploy?
 	- Build a simulation
 
-*>>> instrumental goal>>>*
+*>>> instrumental goal >>>*
 
 - **G:** Use simulation to predict change in *social network metrics* based on *information enviroment* accurately 
 - **Q:** what are relevant social network metrics?
@@ -29,9 +29,11 @@
 		- TODO
 	- **Q:** wich of these can model the impact of information on social networks?
 		- TODO
+	-  **Q:** what are limitations of these simulations?
+		- TODO
 	- TODO
 
-*>>> instrumental goal>>>*
+*>>> instrumental goal >>>*
 
 - **G:** evaluate simulation
 - **Q:** how to measure accuracy?
@@ -41,7 +43,8 @@
 	- **Q:** what parts of the domain do they model?
 		- TODO
 
-*>>> instrumental goal (if not exist)>>>*
+
+*>>> instrumental goal (if not exist) >>>*
 
 - **G:** build simulation
 	- **Q:** how is information represented?

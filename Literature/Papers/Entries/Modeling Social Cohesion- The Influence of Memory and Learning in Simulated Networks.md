@@ -14,8 +14,6 @@ tags:
   - "simulation"
   - "social_cohesion"
 read status: Todo
-⚠️:
-  - audit failed
 ---
 
 ## Abstract
@@ -49,23 +47,30 @@ Group:
   members: [AgentId]
   status: 0..1 # mean member status
 
+FeedbackRecord:
+  value: -1 | 1
+  time_step: u32
+
 Agent:
   group: GroupId
   status: 0..1
   individualism: 0..1
-  feedback: [-1 | 1]
+  feedback_memory: [FeedbackRecord] # signed feedback retained with its time step
+  memory_length: 1..10 # number of time steps remembered; initialized to 5
   satisfaction: -1..1
-  leave: bool
+  leave: bool # initialized to false
 ```
 
 ```
 INITIAL_MEAN = 0.5
 INITIAL_STD = 0.1
-MEMORY_LENGTH = 5
+MEMORY_LENGTH_RANGE = 1..10
+INITIAL_MEMORY_LENGTH = 5
+INITIAL_GROUP_SIZE_RANGE = 1..100 # initial group size is randomly assigned within range
 PA_LINK_DENSITY = 0.15
 ```
 
-- Initially assign groups randomly; status and individualism have normal initial draws with `INITIAL_MEAN` and `INITIAL_STD`. Table 11.1 declares `[0,1]` ranges without specifying how out-of-range draws are handled.[^c2]
+- Initially assign groups randomly; initial group size is randomly assigned in the range 1–100. This is an initial setting, not a bound on later group membership. Status and individualism have normal initial draws with `INITIAL_MEAN` and `INITIAL_STD`. Table 11.1 declares `[0,1]` ranges without specifying how out-of-range draws are handled. Memory length is the number of time steps remembered (range 1–10, initial value 5); the retained history therefore needs time-step indexing, rather than treating the parameter as a count of feedback events. The leave-group flag starts false.[^c2]
 - Each tick resets interaction state, finds neighboring mates within groups, interacts, computes satisfaction, decides exits, restructures groups, and records outcomes. An isolated agent with no mate is flagged to leave and seek/form a group.[^c3]
 - Sender conferral combines receiver status and mean group status: individualism favors personal status, collectivism group status; add a small random component. The receiver compares actual conferral with its expectation; below expectation beyond tolerance gives −1, otherwise +1. Store this feedback in the **sender's** memory.[^c1]
 - Satisfaction uses linearly increasing recency weights on positive feedback, divided by a normalization factor. Memory may persist or reset after group changes. Learning adapts individualism to the current group, changing conferral and feedback expectations; group exit is probabilistic in satisfaction and individualism.[^c4]
@@ -80,30 +85,30 @@ PA_LINK_DENSITY = 0.15
 
 ## Metadata
 ### References
+
+- [[Network Science]]
 - [[EmergenceOfScalingInRandomNetworks]]
+- [[HandbookOfSocialPsychology|Social exchange theory]]
+- [[Exchange theory, part I- A psychological basis for social exchange|Exchange theory, part I: A psychological basis for social exchange]]
+- [[Exchange theory, part II- Exchange relations and networks|Exchange theory, part II: Exchange relations and networks]]
+- [[GrowingArtificialSocieties]]
+- [[SimulationForTheSocialScientist]]
+- [[ToStayOrNotToStayArtificialSocialityInGraspWorld]]
+- [[Stimulating diffusion of technological innovations]]
+- [[A Social Interactional Theory of Emotions]]
+- [[Emotion and group cohesion in productive exchange]]
 - [[PowerAndTheEmergenceOfCommitmentBehaviorInNegotiatedExchange]]
 - [[CommitmentInExchangeRelationsTestOfATheoryOfRelationalCohesion]]
-- [[TheLargeScaleStructureOfSemanticNetworksStatisticalAnalysesAndAModelOfSemanticGrowth]]
-- [[UnresolvedReference781063FC869F694C]]
 - [[NetworkStructureAndEmotionInExchangeRelations]]
+- [[A new theory of group solidarity]]
 - [[DependenceAndRiskTransformingTheStructureOfSocialExchange]]
-- [[GrowingArtificialSocieties]]
-- [[ToStayOrNotToStayArtificialSocialityInGraspWorld]]
-- [[UnresolvedReference7E1E7139CB4E8CE5]]
 - [[CoercivePowerInSocialExchange]]
-- [[Emotionssoziologie]]
 - [[SocialExchangeNetworksAReviewOfExperimentalStudies]]
-- [[UnresolvedReference45D5BFCECA740CFA]]
-- [[HandbookOfSocialPsychology]]
-- [[UnresolvedReference4EB8ADF755B765B6]]
-- [[UnresolvedReference905EF4FB5202DE93]]
-- [[SimulationForTheSocialScientist]]
-- [[UnresolvedReference06CF45A8D27251FA]]
-- [[UnresolvedReference81C4134F2DA821CC]]
-- [[UnresolvedReference0CA0A20E53F00DA7]]
-- [[UnresolvedReference8372B23856572B2D]]
+- [[Emotionssoziologie]]
+- [[TheLargeScaleStructureOfSemanticNetworksStatisticalAnalysesAndAModelOfSemanticGrowth]]
 
 ## Audit Log
+- 2026-10-03: Independent full-source re-audit passed. Memory state, initial settings, update sequence and all 20 references checked against the corrected publisher chapter and tables. `audit failed` removed after the pass.
 - Audit invalidated (2026-09-30): auditor admitted relying on spot checks and previous reports before clearing flags. A full independent audit is still required.
 - 2026-09-30: Full-source design audit found missing parameter and scheduling tables; recency weighting insufficiently specified; satisfaction range/positive-feedback reporting tension unflagged; omitted numerical transition rules not disclosed. Corrected against the source passages below; independent re-audit pending.[^design]
 - Independent source audit found the earlier account blurred the model into reciprocal exchange and omitted update/tick mechanics. It now specifies one-sided status conferral, receiver feedback, recency-weighted memory, optional reset, individualism learning, probabilistic exit, network initialization, and measured outcomes. At that stage, independent re-audit remained pending.

@@ -96,7 +96,7 @@ choose_investment(agent: Agent, previous_mean: f64) -> f64:
 
 ### What can it answer?
 - Compare Homo economicus (only deliberates) against Homo psychologicus (`N_MIN=0.5`, `U_MAX=0.1`, all four modes); needs configurations personal, personal+social, personal+exploration, and all three; vary all counts of individualistic/competitive/cooperative agents summing to8. Initial total expectations are64 for individualists/competitors and36 for cooperators.[^r5]
-- Test homogeneous needs/SVO and heterogeneous normalized need weights: draw each weight uniformly on(0,1), divide by their sum; average25 random weight allocations per SVO combination. Compare10/25-token conditions with six lab experiments using mean investment, mean within-round investment SD, and cumulative absolute round changes (Tables6.2–6.4; composite difference Eq.6.9). The10-token lab summaries cover30 rounds and25-token summaries20.[^r5]
+- Test homogeneous needs/SVO and heterogeneous normalized need weights: draw each weight uniformly on(0,1), divide by their sum; average 1,000 runs per SVO combination. Compare10/25-token conditions with six lab experiments using mean investment, mean within-round investment SD, and cumulative absolute round changes (Tables6.2–6.4; composite difference Eq.6.9). The10-token lab summaries cover30 rounds and25-token summaries20.[^r5]
 - Psychological modes and heterogeneous needs/SVO can better reproduce fluctuations than universal rational deliberation; the chapter proposes follow-up human experiments rather than claiming these mechanisms are uniquely validated.[^r5][^r6]
 
 ### Where does it apply?
