@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "task": "independent source audit of PROD note after reference-target repair",
+  "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+  "note_sha256_audited": "3da353079d09bbf4a57d3c69253b118670f99ed25bb333d6b1458b340820882e",
+  "source": {
+    "primary": "vault/.automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+    "primary_sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4",
+    "companion_text": "vault/.automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+    "companion_text_sha256": "53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60",
+    "coverage": "Audited all 12 pages of the primary paper against extracted text, including algorithm, equations, model variants, figures, table, results, discussion, and complete bibliography."
+  },
+  "result": {
+    "overall": "audit failed; scientific model claims checked are supported, but required exact title alias and inline source-marker completeness each have a documented gap",
+    "scientific_content": "No unsupported or materially contradicted model claims found in the current note. The note preserves the source's directed-Jaccard u/v mismatch and OBA denominator mismatch, and discloses under-specified candidate retrieval, OBA zero-distance behavior, epistemological action/evidence schedule, and RWC treatment of opinions exactly 0.5.",
+    "model_checks": [
+      "Directed follow-edge convention, fixed out-degree replacement, accepted recommendation schedule, no interaction counter increment on rejection, and link-budget cutoff match Algorithm 1.",
+      "BCM updates only the listener/follower when opinion distance is strictly below confidence threshold; configured shift and threshold match the paper.",
+      "Epistemological variant and Bayesian update exponent/likelihood ratio match Section 3.1; omitted action selection and experiment refresh rules are correctly disclosed.",
+      "LFR-style network with opinion assignment, eta/mu settings, NCI and RWC definitions, KS paired comparison, settings, results, rewiring/susceptibility checks, and intervention variants agree with Sections 4–5 and Table 1.",
+      "The RWC partition uses opinions below and above 0.5; the paper leaves exactly 0.5 outside either partition. The note flags this.",
+      "NCI is the Pearson correlation of opinions and outgoing-neighbor means, as stated in the paper."
+    ],
+    "reference_check": {
+      "source_bibliography_entries": 35,
+      "note_references": 35,
+      "one_to_one_order": true,
+      "natural_title_targets_after_author_repair": true,
+      "exact_title_alias_gap": "The source cites ‘Mixing Beliefs Among Interacting Agents’; the note links the existing lower-case note stem without a display alias, so the visible title does not reproduce the source title exactly. The existing note itself is named ‘Mixing beliefs among interacting agents’.",
+      "scope": "The remaining 34 display aliases match the source titles; no citation is omitted, duplicated, or out of order."
+    },
+    "metadata_check": {
+      "title": "matches published record",
+      "authors_and_order": "match published record",
+      "doi": "10.1609/icwsm.v16i1.19275; matches publisher",
+      "publication_date": "2022-05-31; matches publisher",
+      "source": "Direct arXiv full-text PDF URL; accessible paper version identified as arXiv:2112.00626v1, 2021-12-01.",
+      "abstract": "The abstract in the note is the publisher's published abstract, not the arXiv v1 abstract; LLM Justification explains this source choice."
+    },
+    "extraction_rules_gaps": [
+      "The abstract is copied verbatim but has no inline footnote marker; the LLM Justification has the publisher source in [^r1].",
+      "The ‘Model extracted via LLM according to [[Model Notation]]’ preamble has no inline footnote marker introducing the formal extraction."
+    ],
+    "status_guidance": "Keep the note's not audited warning until the documented title-alias and inline-marker gaps are corrected and an independent re-audit passes. This auditor did not edit the PROD note or its warning."
+  },
+  "reference_target_change_record": "vault/.automation/audit/noted-simulations-2026-10-03/prod-reference-targets.json",
+  "policy_read": "vault/.automation/audit/repair-2026-10-03/reference-target-policy.json",
+  "extraction_rules_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md",
+    "vault/Literature/Papers/Template.md"
+  ],
+  "independent_auditor": "Codex subagent /root/import_humat_complete",
+  "audit_date": "2026-10-03"
+}

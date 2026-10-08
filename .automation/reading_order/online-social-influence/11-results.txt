@@ -1,0 +1,63 @@
+V. RESULTS
+The results of the ROC-analysis based on Monte Carlo
+simulation data of each agent-based model (250 runs per
+model) are shown in Fig. 3. As one can see, NCLLC has
+the highest true positive rates, but also the highest false
+positive rates. The models CLNC and CL have comparable
+performances and are both better than the passive model (in
+which agents never tweet). Furthermore, NCL and NCLLC are
+clearly improvements with respect to CLNC and CL.
+Using the above ROC-analysis results, the mean sensitivity
+indices could be calculated per model over all runs. These
+mean d0
+s are depicted in Fig. 4. A repeated measures anal-
+ysis of variance (RM-ANOVA) showed a significant main
+effect of model type on the sensitivity indices of the models
+(F(4, 249) = 479.67, p = 0).
+Post-hoc pair-wise comparisons are shown in Table V (with
+n = 250 and df = 249). All mean sensitivity indices are
+significantly different, except CLNC vs. CL (Hypothesis 1).
+This confirms the above mentioned observations from Fig. 3.
+TABLE II
+INTERCEPT VARIABLES SPECIFIED PER CHOICE.
+Choice CLNC CL NCL NCLLC and NCLLC+
+Class 1 Class 2 Class 3 Class 4
+No Tweet 5.30 5.30 4.66 5.96 5.74 6.90 2.51
+Candidate1 −5.31 −5.31 −3.26 −3.40 −2.66 −3.08 −3.37
+Candidate2 −5.52 −5.52 −3.42 −3.59 −3.18 −3.07 −3.66
+Candidate3 −5.73 −5.73 −3.58 −3.71 −3.07 −3.38 −3.87
+Candidate4 −5.61 −5.61 −3.64 −3.64 −3.18 −3.60 −3.59
+Candidate5 −6.32 −6.32 −4.32 −4.11 −4.02 −4.48 −4.60
+Candidate6 −6.86 −6.86 −4.88 −4.64 −4.82 −5.18 −4.96
+General Tweet −3.11 −3.11 −1.33 −1.76 −1.45 −1.62 −2.84
+τ − − 3.87 2.87 6.63 6.01 4.65
+TABLE III
+WEIGHTS OF PERSUASION FACTORS.
+Variable CLNC CL NCL NCLLC and NCLLC+
+Class 1 Class 2 Class 3 Class 4
+Liking − 0.05 0.02 0.10 0.03 0.003 0.34
+Social proof − 3.01 2.05 2.14 1.71 1.71 3.14
+Consistency − 0.27 0.23 0.23 0.51 0.12 0.89
+TABLE IV
+WEIGHTS OF INDIVIDUAL AND EXTERNAL VARIABLES.
+Variable CLNC CL NCL NCLLC and NCLLC+
+Class 1 Class 2 Class 3 Class 4
+Product display 1.37 1.37 0.78 2.26 −0.05 0.19 1.03
+Television show 2.37 2.37 0.60 0.89 0.21 0.53 1.10
+Friends − − 0.27 −0.25 −0.29 −0.38 0.09
+Followers − − −0.15 0.12 0.21 0.04 0.54
+TABLE V
+POST-HOC PAIR-WISE COMPARISONS OF THE MEAN SENSITIVITY INDICES OF EACH MODEL.
+Hypothesis Comparison µ1 µ2 t p
+1 CLNC vs. CL −.5541 −.5527 −0.5523 .5812
+2 CLNC vs. NCL −.5541 .4493 −433.8056 0*
+3 CLNC vs. NCLLC −.5541 .0459 −10.7789 0*
+4 CLNC vs. NCLLC+ −.5541 .6116 −429.0597 0*
+5 CL vs. NCL −.5527 .4493 −502.6873 0*
+6 CL vs. NCLLC −.5527 .0459 −10.8381 0*
+7 CL vs. NCLLC+ −.5527 .6116 −365.4620 0*
+8 NCL vs. NCLLC .4493 .0459 7.2947 0*
+9 NCL vs. NCLLC+ .4493 .6116 −56.9468 0*
+10 NCLLC vs. NCLLC+ .0459 .6116 −10.0626 0*
+* p < α, where α = .05/10 = .005 (Bonferroni corrected).
+Fig. 3. ROC-curves of each agent-based model. The passive model (triangle) contains agents that never tweet and can be used as reference.

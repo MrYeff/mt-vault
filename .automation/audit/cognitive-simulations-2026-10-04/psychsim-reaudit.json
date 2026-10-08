@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "audit": "independent_reaudit",
+  "audited_at": "2026-10-04",
+  "note": "vault/Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
+  "note_sha256": "3eb2c17e4a2c7f50702add7fe657ef7049b916b918f8bd9adaabee7655fe416b",
+  "status": "PASS",
+  "prior_audit": "vault/.automation/audit/cognitive-simulations-2026-10-04/psychsim-audit.json",
+  "audit_scope": "Rechecked the sole finding from the initial independent audit against the corrected note and verified the primary URL. Confirmed the scientific content remains as previously audited, with no additional content changes or new content issues. Did not edit the note or clear its audit flag.",
+  "audit_note": "The initial audit report described 39 justification links; recounting the existing footnotes confirms 37 ([^r1]-[^r21] and [^r24]-[^r39]), plus the frontmatter source URL. This counting discrepancy does not affect the finding that every existing URL has been corrected.",
+  "checks": {
+    "frontmatter_source": {
+      "status": "resolved",
+      "value": "https://www.ijcai.org/Proceedings/05/Papers/1559.pdf",
+      "verification": "Official IJCAI PDF opens as the matching six-page paper by David V. Pynadath and Stacy C. Marsella."
+    },
+    "justification_urls": {
+      "status": "resolved",
+      "count": 37,
+      "result": "All 37 existing LLM Justification links ([^r1]-[^r21] and [^r24]-[^r39]) now use the verified /1559.pdf URL; no /1648.pdf source links remain."
+    },
+    "audit_log_and_flag": {
+      "status": "correctly_pending_finalization",
+      "result": "The note retains ⚠️ audit failed and its Audit Log records the source correction and says re-audit pending. This report records the independent PASS; the note flag and log were left unchanged as instructed."
+    },
+    "scientific_content": {
+      "status": "no_new_issues",
+      "result": "No scientific content changes were made after the initial audit. The initial source-first checks of all claims, model rules and notation, visually checked equations (2)-(4), Table 1 outcomes, and all 15 retained bibliography entries remain applicable; no additional content issue was found."
+    }
+  },
+  "resolved_findings": [
+    {
+      "initial_finding": "The frontmatter source property and all 37 justification links pointed to /1648.pdf instead of the matching official primary PDF.",
+      "resolution": "All now point to the verified official IJCAI /1559.pdf."
+    }
+  ],
+  "new_findings": [],
+  "note_modified": false,
+  "flags_modified": false
+}

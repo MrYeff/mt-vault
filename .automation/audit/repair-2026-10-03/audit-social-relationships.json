@@ -1,0 +1,126 @@
+{
+  "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+  "verdict": "FAIL",
+  "note_sha256": "97c43f574ced735af1218164e160b3d0f19cec08c98f5f8cf52b6f75836cd8c8",
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+      "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34",
+      "role": "full publisher PDF; equation image inspected on PDF p.4 and model/control/figure pages"
+    },
+    {
+      "path": "vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+      "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3",
+      "role": "full JASSS HTML-derived text; entire paper and bibliography read"
+    }
+  ],
+  "source_read_coverage": [
+    "publisher title/authors/abstract/date/DOI",
+    "§§1.1–1.6 and both research questions",
+    "§§2.1–2.6 including trust mechanism, four strategies, turn order, printed algorithm and stated limitations",
+    "§§3.1–3.6 parameters and behavioural-time results",
+    "§§4.1–4.15 exact wellbeing/resource equations, selection controls, fitness sweeps, kin and defection experiments",
+    "§§5.1–5.8 genes, seed distributions, crossover/mutation, multirun outcomes and defection reward",
+    "§§6.1–6.10 conclusions, interpretation, scope and limitations",
+    "all 62 bibliography items; equation image on PDF p.4 visually checked"
+  ],
+  "abstract_check": {
+    "status": "PASS",
+    "evidence": "The note abstract matches the primary abstract verbatim, including the source wording “more less-intense, or fewer more-intense partners.” The article’s abstract is not confused with an LLM-generated summary."
+  },
+  "claim_checks": [
+    {
+      "claim": "Four strategies (strong/favour-few, medium, weak/favour-many, staged) use prior successful interaction history; staged moves from strong to weak/unknown alters.",
+      "status": "PASS",
+      "evidence": "§2.5; probabilities are delegated to earlier Sutcliffe & Wang work, and the note appropriately leaves the exact selection functions unspecified."
+    },
+    {
+      "claim": "Trust is directional, accumulates/decreases after response, and wanes; the prose and printed pseudocode differ.",
+      "status": "PASS_WITH_DISCLOSURE",
+      "evidence": "§§2.3–2.6. The note preserves the conflicting §2.4 prose, §2.6 compression/waning pseudocode and §4.4 selected log-increase/linear-decrease setting; it does not claim an exact resolved transition equation."
+    },
+    {
+      "claim": "Fitness equations and basic selection setup.",
+      "status": "PASS",
+      "evidence": "§4.2 PDF p.4 shows WB=((sum of ego-to-alter trust)×incoming interactions/outgoing interactions)/number of ties and R=forage turns×number of ties. Note equations match. §4.3 confirms lifetime 2000, N=300, equal strategies, weighted fitness ranks, removal of bottom 20% and replacement by random copies of top 20%."
+    },
+    {
+      "claim": "Baseline evolutionary parameters and strategy outcomes.",
+      "status": "PASS",
+      "evidence": "§§4.4–4.11: log increase/linear decrease, MC=10, waning=.08, 20 generations; FM and R:WB are experimental controls; best SBH fit at FM=1:4 and R:WB=1:3 in this experiment, with the paper separately noting best total 150 ties only at FM=1:3."
+    },
+    {
+      "claim": "Kin, defection, heritable genes, crossover/mutation and outcomes.",
+      "status": "PASS",
+      "evidence": "§§4.12–4.15 and 5.1–5.8 support the note’s parent/sibling kin carry-over, five-kin substitution and larger-seed effects, defection trends, three four-allele genes, 0.9 crossover, random-gene recombination, 0.01 mutation, parameter ranges, and stochastic wellbeing/resource results. Note describes thresholds as experiment-dependent."
+    },
+    {
+      "claim": "Abstract-level strategy conclusions and limits.",
+      "status": "PASS",
+      "evidence": "Abstract and §§6.3–6.10; note frames findings as simulation outcomes, distinguishes wellbeing from resource fitness, and states that the model is ego-network based, omits spatial effects, and does not use prior defections for partner selection."
+    }
+  ],
+  "bibliography_check": {
+    "status": "FAIL",
+    "primary_source_entry_count": 62,
+    "note_item_count": 62,
+    "evidence": "The count and ordering correspond to the source list, but the note uses compact opaque identifiers as link labels (e.g. IsFriendshipAkinToKinship; SmallGroupsAsComplexSystemsFormationCoordinationDevelopmentAndAdaptation) rather than source-verified natural titles. A workspace search found no corresponding targets for representative compact identifiers. Thus 62/62 item count does not establish title/target integrity; convert to verified source titles and existing note targets where available."
+  },
+  "source_metadata_check": {
+    "status": "PASS",
+    "evidence": "The primary publisher header gives JASSS 15(4), article 3, Published 31-Oct-2012 and DOI 10.18564/jasss.2059; note metadata matches."
+  },
+  "coverage_scope": "Full primary source (not abstract-only), including equations and all bibliography entries.",
+  "unresolved_or_conflicting_source_details": [
+    "The source itself conflicts on trust decreases/compression/waning and selects a different increase/decrease setting in §4.4; note discloses this and avoids resolving it.",
+    "The source refers detailed partner-selection/trust functions to Sutcliffe & Wang (2012); those are intentionally not inferred as exact formulas here.",
+    "The source equations do not define zero-tie or zero-outgoing handling; the note explicitly discloses this."
+  ],
+  "note_or_warning_edited": false,
+  "independent_audit": true,
+  "latest_reaudit": {
+    "verdict": "FAIL",
+    "note_sha256": "facaaa17fee9f06ec2aa608630874c844cf74898fa8b3082fbc66a3cc325ec03",
+    "source_read_coverage": "Full publisher PDF and full derived JASSS text were read in preceding audit; all §1–§6 sections, PDF equation p.4 and all 62 primary bibliography entries remain source basis. Latest corrected parameter and title aliases were checked against these full-source files.",
+    "source_files": [
+      {
+        "path": "vault/.automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+        "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34"
+      },
+      {
+        "path": "vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+        "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3"
+      }
+    ],
+    "claim_reaudit": "PASS: corrected four FM genotypes (8:1, 5:1, 4:1, 1:1), response-defection genotypes (0.01, 0.025, 0.05, 0.075), and source-compatible genotype/crossover/mutation summaries. Fitness equations, model controls, outcome boundaries, abstract, and source-conflict disclosures remain supported.",
+    "bibliography_check": {
+      "status": "FAIL",
+      "source_entries": 62,
+      "note_entries": 62,
+      "evidence": "The newly added title-bearing aliases materially improve the bibliography. One alias still does not match the primary source: note reference “A social identity model for deindividuation phenomena” differs from the source title “A social identity model for deindividualisation phenomena” (JASSS source text line 856; Reicher, Spears & Postmes 1995). Correct the natural title alias while retaining whichever target path is appropriate. Other title aliases and the count/order checked appear consistent. This leaves 61/62 title labels verified."
+    },
+    "other_source_conflicts": [
+      "The trust description in §2.4 says plus/minus one and logarithmic compression, while §2.6 pseudocode gives MaxCR-CI×Trust and W waning; §4.4 selects log increase/linear decrease. Current note faithfully discloses the conflicts and does not select one implementation.",
+      "Exact trust/waning and alter-selection functions are inherited/referred to another paper and remain unspecified.",
+      "Zero ties/outgoing interactions are not defined by source equations; note discloses this."
+    ],
+    "warning_edited": false
+  },
+  "current_verdict": "FAIL",
+  "current_note_sha256": "facaaa17fee9f06ec2aa608630874c844cf74898fa8b3082fbc66a3cc325ec03",
+  "final_reaudit": {
+    "verdict": "PASS",
+    "note_sha256": "44488790e5e1ace99279bdf34630549c3fdb50727bee894169b62b25eb68a5ca",
+    "report": "vault/.automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+    "bibliography_check": {
+      "status": "PASS",
+      "primary_source_entry_count": 62,
+      "note_item_count": 62,
+      "evidence": "All 62 items are in source order with source-title aliases. Titles were compared against all bibliography entries in the full primary text. The source misspells Reicher et al. as “deindividualisation”; the note uses the canonical title “A Social Identity Model of Deindividuation Phenomena,” checked against the work’s publisher/DOI record per source correction review."
+    },
+    "changes_checked": [
+      "Restored missing r6 footnote; title alias updated to canonical DOI/publisher title."
+    ],
+    "warning_edited": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "audit": "initial_independent_audit",
+  "audited_at": "2026-10-04",
+  "note": "vault/Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
+  "note_sha256": "35e8b54bffa955e47614c00c14de4c5749981e9656a96611681ab3e324320b50",
+  "status": "FAIL",
+  "auditor_scope": "Independent source-first check of the frozen note against the complete six-page primary paper, its equations and Table 1, plus the extraction rules, notation guide, and note template. No note edits or flag changes were made. Cited references were checked for faithful retention against the paper's bibliography; no external cited-paper metadata was requested or checked.",
+  "guides_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md",
+    "vault/Literature/Papers/Template.md"
+  ],
+  "fulltext_read": [
+    {
+      "file": "/tmp/psychsim2005.pdf",
+      "sha256": "1ec4b04a477cf404eac25de4e677c10dcfe4f3a60fad97f12bf7ff3245c94b38",
+      "pages": "1-6; full primary PDF checked"
+    },
+    {
+      "file": "/tmp/psychsim2005.txt",
+      "sha256": "0659966dbdd57b0751ea4a9b064e6b8e1fa918444ce57ce1977aa2530c98284c",
+      "pages": "1-6; complete extracted text read"
+    },
+    {
+      "file": "/tmp/psychsim-page-3.png",
+      "pages": "3; equations (2)-(3) visually checked"
+    },
+    {
+      "file": "/tmp/psychsim-page-4.png",
+      "pages": "4; equation (4) and influence model visually checked"
+    },
+    {
+      "file": "/tmp/psychsim-check-6.png",
+      "pages": "6; Table 1 visually checked"
+    }
+  ],
+  "primary_source_verification": {
+    "verified_source": "https://www.ijcai.org/Proceedings/05/Papers/1559.pdf",
+    "verification": "The official IJCAI PDF opens as a six-page paper with the matching title and authors. The IJCAI-05 paper list maps this paper to page 1175. The locally downloaded author PDF used for the line-by-line check matches this paper.",
+    "note_source_problem": "The note instead gives https://www.ijcai.org/Proceedings/05/Papers/1648.pdf in its source property and all 39 LLM Justification links. That URL is inaccessible through the browser and is not the official file mapped to this paper; the official proceedings link is /1559.pdf."
+  },
+  "claims_checked": {
+    "abstract": "Faithful transcription of the primary abstract.",
+    "research_questions": "Both questions are fair LLM-marked summaries of the paper's stated purpose and the school-violence experiment; they are not falsely presented as verbatim author-stated questions.",
+    "model_representation": "The world, state features, actions, stochastic transition, weighted preferences, subjective and nested beliefs, policies, messages, and mental models are supported by §§2.1-2.4. Omitted numerical parameters are correctly identified as not reported. The global schedule caveat is accurate.",
+    "equations_and_rules": "Equations (2)-(3) on p. 3 were checked visually: the note preserves the goal-weighted current belief, expected continuation values, candidate action and modeled other-agent policies at the first step, and all-agent policies in subsequent projection. The finite lookahead horizon and absence of a displayed discount factor are correctly described. Equation (4) and the five weighted message factors were checked visually on p. 4; the note's descriptions of consistency, self-interest, sender self-interest, trust/support, observed-action update, and deception incentive are supported.",
+    "scenario_and_outcomes": "Sections 3.1-3.2 and Table 1 support the bully goals, fitted qualitative types, student and teacher mental-model labels, intervention point, and binary no-next-attack outcome. Every configuration/outcome in the note's table matches the source. The barred severe label means normal or weak, exactly as the accompanying text specifies.",
+    "application_and_scope": "The application and ongoing-exploration statements are supported by the Introduction and Conclusion and are not inflated into population-level claims.",
+    "bibliography": "All 15 bibliography items are retained and their author/title/year details match the primary References section. No cited-reference import or external cited-paper metadata check was performed."
+  },
+  "findings": [
+    {
+      "severity": "major_source_citation_error",
+      "note_location": "Frontmatter source property (line 10) and LLM Justification [^r1]-[^r39] (lines 150-186)",
+      "source_location": "Official IJCAI-05 paper list and matching official PDF at /Proceedings/05/Papers/1559.pdf; primary paper title page, p. 1.",
+      "finding": "The source property and every justification footnote point to IJCAI PDF /1648.pdf rather than the official /1559.pdf for this paper. Thus readers following the note's citations do not reach the verified primary source, contrary to the extraction rule requiring passage-specific, supporting citations. The note's substantive claims were independently supported against the matching local author PDF and the verified official /1559.pdf; the content itself did not fail this audit.",
+      "required_fix": "Replace /1648.pdf with the verified official /1559.pdf in the source property and all 39 LLM Justification links. Then rerun an independent audit against the corrected note; retain the audit failure flag until that re-audit passes.",
+      "correction_status": "pending"
+    }
+  ],
+  "footnotes": "Substantive claims have section/page/equation/table references and were supported by the matching primary paper. The URLs themselves are wrong throughout, producing the major source-citation finding above.",
+  "note_modified": false,
+  "flags_modified": false,
+  "re_audit_status": "pending"
+}

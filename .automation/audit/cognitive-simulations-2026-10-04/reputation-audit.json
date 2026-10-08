@@ -1,0 +1,67 @@
+{
+  "audit_id": "reputation-audit-2026-10-04-initial",
+  "verdict": "FAIL",
+  "auditor": "independent source-first audit",
+  "audited_note": "vault/Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+  "audited_note_sha256": "d9077f8658a0ed5d2854b7e144043d248545ee1893b9ca8eeff7c09a06ac812d",
+  "primary_source": "/tmp/reputation2022-published.pdf",
+  "primary_source_sha256": "cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb",
+  "source_text_sha256": "30ad169133f9fccc8875a99fe72827c1b072330a9301e65d7c1065a51e786f4c",
+  "source_pages_and_sections_read": [
+    "Full final published PDF, all 46 pages, including Sections 1–8 and Appendices A–D, acknowledgements, and numbered references/notes.",
+    "Table B1 and Appendix B.1 likelihood rules, equations (B1)–(B22), visually checked against final PDF pages 34–35 because these conflict across prose/table/equations.",
+    "Appendix A belief representation, update, KL compression, and numerical details; Appendix B.2–B.4 lie construction, ToM, and surprise-scale updates; Appendix C and Table C1 strategy definitions.",
+    "The 100-run result sections, propaganda/receiver comparisons, discussion, robustness limits, and Appendix D figures were checked in the full extracted source text.",
+    "Publisher Wiley DOI page checked for first-publication date (05 April 2022)."
+  ],
+  "claim_issues": [
+    {
+      "id": "RGS-01",
+      "severity": "major omission",
+      "note_location": "Model / How does it work? / strategy summary and credibility procedure",
+      "source_location": "Appendix B.2, equations (B23)–(B24), published pp. 36–37",
+      "issue": "The note says only that lies follow a configured deception rule and summarizes friend/enemy directions. It omits how the defining lie is generated: start from the speaker's ToM estimate of the receiver's belief about the topic (I_abc), choose a positive or negative direction based on friend/enemy status, sample a target surprise under the honest-message surprise distribution, scale it by the speaker's kappa_a times f_caution=0.3, and find the distortion alpha by numerical line search to match the KL divergence. This is a central mechanism for lie construction and the role of ToM. Neutral agents receive white lies. The note should state this procedure or explicitly identify it as omitted in its simplification."
+    },
+    {
+      "id": "RGS-02",
+      "severity": "major omission",
+      "note_location": "Model / What can it answer?",
+      "source_location": "Sections 6.1–6.4 and 7.3, published pp. 12–22, 26–27",
+      "issue": "The note names the phenomena measured and says ensembles were run, but it does not report the main comparative outcomes. The source reports, among other results, greater propaganda resilience from smart than critical receivers in the tested setup; manipulative agents most often attain the highest relative reputation in small groups; dominant agents most often reach the highest absolute reputation; and destructive agents become more effective relative to the others in larger groups. It also stresses the chaotic dynamics and that these are scenarios rather than proofs. Include representative results and the source's caveat so the note records what the simulations found, not only what they explore."
+    },
+    {
+      "id": "RGS-03",
+      "severity": "accuracy error",
+      "note_location": "Model / How does it work? / final strategy paragraph",
+      "source_location": "Section 5.2, published pp. 11–12; Appendix C, Table C1, published p. 38",
+      "issue": "The note calls the destructive strategy descriptions in Section 5.2 and Table C1 a discrepancy. They agree: Section 5.2 says destructive agents target reputed partners, which is the strategic partner-selection rule in Table C1; their enemy-focused topic choice follows the aggressive rule. Remove the claim that the source contains a discrepancy."
+    },
+    {
+      "id": "RGS-04",
+      "severity": "citation accuracy error",
+      "note_location": "LLM Justification footnotes [^r11] and [^r12]",
+      "source_location": "Appendix A ends at equation (A44), published pp. 28–34; Appendix B.4 equations (B32)–(B34), published pp. 37–38",
+      "issue": "The note cites equations A17–A47 in [^r11], but the final published Appendix A ends at A44. It cites B39–B41 in [^r12], while the ToM blending and surprise-scale update it describes are B32–B34. Correct these equation references so the justifications point to the actual supporting passages."
+    },
+    {
+      "id": "RGS-05",
+      "severity": "metadata fidelity error",
+      "note_location": "Metadata / References",
+      "source_location": "Published article references, published pp. 43–46; complete source-ordered reference text in /tmp/reputation2022-published-raw.txt",
+      "issue": "Multiple imported bibliography entries end mid-word or mid-title and are not faithful records. Examples: item [1] ends in a lone “S”; item [3] ends “Association for t”; item [4] cuts off after “Oxfo”; item [5] cuts off within its URL; items [19], [20], [36], [67], [72], and [123] are also visibly cut short. The separate numbered source notes are appropriately represented, and no external reference resolution is required, but the actual bibliography records need their full source text retained."
+    }
+  ],
+  "source_internal_conflicts_checked": [
+    {
+      "topic": "whether uncritical receivers use confession detection",
+      "source_conflict": "Section 4.1 says uncritical receivers use confessions; Table B1 marks confession for Uncritical, Critical, and Smart; Appendix B.1 introductory prose assigns confessions to Critical, and the explicit Uncritical likelihood (B13) includes blushing only while Critical's likelihood (B22) includes confession.",
+      "note_handling": "The note explicitly preserves this disagreement. This part passes; do not silently resolve it."
+    }
+  ],
+  "metadata_check": {
+    "title_authors_doi": "Pass against the published PDF.",
+    "publication_date": "2022-04-05 is confirmed by the publisher Wiley DOI page as First published: 05 April 2022.",
+    "source_version": "The audited source is the final published version, not the preprint."
+  },
+  "limitations": "The complete 46-page PDF text was read. Visual inspection was used for the key conflicting Table B1 and Appendix B.1 pages; other source pages were checked in the full extracted text. The audit does not validate cited works externally, per instruction."
+}

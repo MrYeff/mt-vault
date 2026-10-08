@@ -1,0 +1,64 @@
+{
+  "audit_id": "reputation-audit-2026-10-04-reaudit-1",
+  "verdict": "FAIL",
+  "audited_note": "vault/Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+  "audited_note_sha256": "249f81a50f9b4577a795cd5d8c0009eb3188cd37844c2d2ae8946d2e0769bfa1",
+  "primary_source": "/tmp/reputation2022-published.pdf",
+  "primary_source_sha256": "cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb",
+  "scope": "Re-audited the changed lie-construction procedure, strategy description, reported outcomes, all five initial findings, and every LLM Justification locator against the previously read full 46-page final source. Reused the source-first reading of all sections and appendices; rechecked changed claims in Appendix B.2, Section 6, Sections 6.4/7.3, Table C1, and the cited final-PDF pages. Did not resolve cited references externally.",
+  "initial_findings_disposition": [
+    {
+      "id": "RGS-01 lie construction",
+      "status": "resolved",
+      "evidence": "The note now gives the I_abc baseline, friend/enemy direction, target surprise sampled under the honest-message distribution, kappa_a times F_CAUTION=0.3 scaling, KL line search for alpha, and neutral white lies, matching Appendix B.2, Eqs. (B23)–(B24)."
+    },
+    {
+      "id": "RGS-02 reported outcomes",
+      "status": "resolved",
+      "evidence": "The note now reports the tested smart-versus-critical propaganda resilience and the qualified comparative results for manipulative, dominant, and destructive strategies, with chaotic-run and group-composition caveats. These match Sections 6.2, 6.4, and 7.3."
+    },
+    {
+      "id": "RGS-03 destructive-strategy discrepancy",
+      "status": "resolved",
+      "evidence": "The false source-conflict claim is removed. The note now accurately combines reputed partner targeting (strategic) and enemy topic selection (aggressive), consistent with Section 5.2 and Table C1."
+    },
+    {
+      "id": "RGS-04 equation locators",
+      "status": "resolved in equation numbers; page locators still inaccurate",
+      "evidence": "The Appendix A citation now ends at A44, the Appendix B.4 citations use B32–B34, and Appendix B.2 uses B23–B24. However, multiple cited printed-page ranges remain wrong for the final 46-page published version; see RGS-R1."
+    },
+    {
+      "id": "RGS-05 bibliography fidelity",
+      "status": "resolved",
+      "evidence": "The formerly truncated bibliography strings have been restored. Spot checks of entries [1], [3]–[5], [19]–[21], [36], [67], [72], and [123], plus the separate numbered source notes, now match the final source text. No external reference resolution was performed."
+    }
+  ],
+  "claim_issues": [
+    {
+      "id": "RGS-R1",
+      "severity": "citation accuracy error",
+      "note_location": "LLM Justification footnotes [^r3]–[^r11] and [^r13]–[^r18]",
+      "source_location": "Final published PDF pagination, Sections 3–7 and Appendices A–C",
+      "issue": "Several printed-page ranges still reflect different pagination and do not support the named final-version sections. Examples include [^r4] placing Section 7.5 at pp. 30–31 (it is p. 27), [^r5] placing Appendix B.4.1 at pp. 34–35 (it is p. 37), [^r7] placing Appendix A.2 at pp. 26–27 (it is p. 30), [^r9] placing Appendix A.3 at pp. 27–29 (it is pp. 30–32), [^r10] placing Appendix B.1/Table B1 at pp. 35–37/p. 35 (they are pp. 34–35/p. 34), and [^r16] placing Sections 7.5–7.6 at pp. 30–31 (they are pp. 27–28). Other ranges in this group also overrun or precede the named sections. The section and equation identifiers themselves are generally correct. Remove or correct all inaccurate printed-page ranges; retaining the exact section/equation identifiers is sufficient."
+    }
+  ],
+  "source_internal_conflicts_checked": [
+    {
+      "topic": "whether uncritical receivers use confession detection",
+      "status": "correctly preserved",
+      "detail": "Section 4.1 and Table B1 indicate confession detection for uncritical receivers; Appendix B.1 prose and the difference between Eqs. (B13) and (B22) place it only in the critical/smart calculation. The revised note describes this disagreement without choosing silently."
+    }
+  ],
+  "changed_claims_review": {
+    "lie_generation": "Supported by Appendix B.2 Eqs. (B23)–(B24).",
+    "strategy_composition": "Supported by Sections 5.1–5.2 and Appendix C/Table C1; destructive is correctly represented as clever, strategic, aggressive, and shameless.",
+    "simulation_outcomes": "Supported by Sections 6.2.4–6.2.5, 6.4, and 7.3; qualifications about chaotic trajectories, tested setup, and group size are retained.",
+    "bibliography": "Full entries and numbered source notes are retained in source order; no external bibliographic verification was requested."
+  },
+  "metadata_check": {
+    "title_authors_doi": "Pass against the final published source.",
+    "publication_date": "2022-04-05; publisher Wiley confirms First published: 05 April 2022.",
+    "source_version": "Final published version, not the preprint."
+  },
+  "limitations": "The full source read and initial audit are preserved in reputation-audit.json. This re-audit does not validate cited works externally."
+}

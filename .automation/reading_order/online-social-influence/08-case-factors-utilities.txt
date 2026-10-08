@@ -1,0 +1,57 @@
+B. Model Operationalization
+1) Multi-Agent Model: Environmental influence (television
+show and product display) is based on empirical data. The
+actual candidate list is used and the scenario describes per
+time step when the show is broadcast on television and when
+the individual candidates are performing.
+The actors and the network are one-on-one mappings from
+the empirical data. All twitter users are represented by an
+agent in the agent-based simulation. Friends and follower
+information from their user profile is used. Their position in
+the network is the same as the real twitter data, i.e., we use
+all friends followers connections from the empirical data. Note
+that the users and the network consist only of the users that
+have tweeted about the talent show.
+2) Single-Agent Model: The behavior model in the ABM
+follows the behavior model described earlier. The agents
+determine each time step whether they will send a tweet and if
+they do, whether it is a general tweet about the show or a tweet
+about a specific candidate. For the case of the talent show on
+Twitter we have defined the following influence factors.
+a) Individual Factors: The individual factors that could
+be extracted from the data and that we considered in context
+of the case are number of friends and number of followers.
+We found that the logarithm of these numbers lead to a better
+fit than the absolute numbers, as it corrects for the very high
+values:
+• Nr. of friends: Logarithm of 1 plus number of friends as
+obtained from the user profile.
+• Nr. of followers: Logarithm of 1 plus number of followers
+as obtained from the user profile.
+b) Persuasion Factors: The persuasion factors in the
+model are based on Cialdini’s principles of persuasion. We
+recall the three principles that were quantified for this case:
+• Liking: Number of messages about a certain topic an
+agent receives in the last hour.
+• Social Proof: Percentage of tweets about a certain topic
+during the last hour.
+• Consistency: Total number of tweets about a topic a user
+has sent.
+c) External Factors: Influence parameters that follow
+from external events are:
+• Television show: Binary variable indicating whether the
+show is broadcasted on television at time t.
+• Product display: Binary variable indicating whether a
+candidate is performing in the show at time t.
+The values for the individual factors remain static through-
+out the simulation. The values for the social influence factors
+and the external factors are determined by the agents every
+time step. For the utility calculation of the General Tweet only
+one of the persuasion factors is used for the utility calculation,
+which is Liking. Also the candidate specific event Product
+display is ignored in the utility calculation for General Tweet.
+The nested choice model compares the utilities of No
+Tweet and Tweet. The utility of No Tweet is dependent on
+individual factors. The rationale is that the number of friends
+and followers is a predictor of a user’s activity on Twitter. The
+utility of Tweet is the sum of the utilities of all topic tweets.

@@ -1,0 +1,98 @@
+{
+  "note": "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+  "verdict": "FAIL",
+  "note_sha256": "6c3bb3059d60acb32f34e0b090f7daa62798f1446fd43bc8d5386c2cf922da15",
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c.html",
+      "sha256": "eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c"
+    },
+    {
+      "path": "vault/.automation/sources/files/7b9eb6d7d02d4cef2b39ae7999801831acc7914dcee5cd3c44d8bd537ca04bcc.txt",
+      "sha256": "7b9eb6d7d02d4cef2b39ae7999801831acc7914dcee5cd3c44d8bd537ca04bcc"
+    },
+    {
+      "path": "vault/.automation/sources/files/77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076.html",
+      "sha256": "77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076"
+    },
+    {
+      "path": "vault/.automation/sources/files/4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224.html",
+      "sha256": "4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224"
+    }
+  ],
+  "source_read_coverage": {
+    "primary_version": "Full publisher chapter HTML served at Springer; the page states the original chapter was revised, with correction DOI 10.1007/978-3-032-01373-6_13 and a 06 May 2026 correction history. Main full chapter text, both complete supplementary table pages and complete bibliography were read. The separately linked correction contents could not be opened from available source tools, so its specific changes are unresolved.",
+    "sections": [
+      "Chapter title/author/DOI/publisher metadata and abstract",
+      "\u00a711.1 Introduction and aims",
+      "\u00a711.2 social exchange theory",
+      "\u00a711.3 model mechanism and full tick sequence/description",
+      "Table 11.1 agent fields, ranges and initial settings",
+      "Table 11.2 simulation phases",
+      "memory and learning mechanism, group-exit/network paragraphs",
+      "\u00a711.4 metric definitions and all FC/PA results/Figures 11.2\u201311.5 captions",
+      "\u00a711.5 conclusion and future-work",
+      "full References section (20 entries)"
+    ],
+    "full_text_not_abstract_only": true
+  },
+  "bibliography_check": {
+    "source_entry_count": 20,
+    "note_entry_count": 20,
+    "result": "PASS on count, title mapping, and source order. The note\u2019s 20 titles correspond to the 20 source references in order (Network Science through The large-scale structure of semantic networks); existing wiki targets are preserved, no opaque placeholders or extra references.",
+    "entries_checked": [
+      "Network Science",
+      "EmergenceOfScalingInRandomNetworks",
+      "HandbookOfSocialPsychology|Social exchange theory",
+      "Exchange theory, part I- A psychological basis for social exchange|Exchange theory, part I: A psychological basis for social exchange",
+      "Exchange theory, part II- Exchange relations and networks|Exchange theory, part II: Exchange relations and networks",
+      "GrowingArtificialSocieties",
+      "SimulationForTheSocialScientist",
+      "ToStayOrNotToStayArtificialSocialityInGraspWorld",
+      "Stimulating diffusion of technological innovations",
+      "A Social Interactional Theory of Emotions",
+      "Emotion and group cohesion in productive exchange",
+      "PowerAndTheEmergenceOfCommitmentBehaviorInNegotiatedExchange",
+      "CommitmentInExchangeRelationsTestOfATheoryOfRelationalCohesion",
+      "NetworkStructureAndEmotionInExchangeRelations",
+      "A new theory of group solidarity",
+      "DependenceAndRiskTransformingTheStructureOfSocialExchange",
+      "CoercivePowerInSocialExchange",
+      "SocialExchangeNetworksAReviewOfExperimentalStudies",
+      "Emotionssoziologie",
+      "TheLargeScaleStructureOfSemanticNetworksStatisticalAnalysesAndAModelOfSemanticGrowth"
+    ]
+  },
+  "claim_checks": [
+    {
+      "claim": "The note Abstract reproduces the current publisher abstract and the research questions paraphrase its stated aims.",
+      "result": "PASS"
+    },
+    {
+      "claim": "Status exchange is represented as one sender conferring status on a receiver, who compares actual with expected conferral and returns signed feedback; this feedback is stored in sender memory.",
+      "result": "PARTIAL: direction and storage are supported, but the note\u2019s claim of a source-level \u201ctension\u201d between the abstract\u2019s reciprocal-exchange framing and the \u00a711.3 sequence is unsupported. In \u00a711.3 the receiver returns signed feedback to the sender after receiving status, so the described interaction can itself be reciprocal; the source provides no contradiction here."
+    },
+    {
+      "claim": "Satisfaction is based on recency-weighted positive feedback; memory can persist/reset; learning changes individualism; exiting is probabilistic and depends on satisfaction/individualism.",
+      "result": "PASS at prose level; the source itself omits numerical formulas for weights, normalization, learning and exit."
+    },
+    {
+      "claim": "Experiment setup and reported group cohesion effects.",
+      "result": "PASS at summarized level: FC and PA \u00d7 NoMemory/Memory/Memory+Learning; membership persistence rises with memory; group existence declines under memory in FC but increases with Memory+Learning in PA; satisfaction is broadly similar; group-size/status outcomes are included in source."
+    },
+    {
+      "claim": "Model state faithfully represents the mechanism.",
+      "result": "FAIL: Agent has only `feedback: [-1 | 1]` and World has a reset flag, but no feedback-memory sequence/container or per-agent memory-length state. \u00a711.3 explicitly stores and recalls historical feedback with recency weights (and Table 11.1 specifies memory length 1\u201310, initial value 5). `MEMORY_LENGTH = 5` alone does not represent the retained history, and the type therefore leaves the defining memory mechanism under-specified."
+    },
+    {
+      "claim": "Source-version coverage.",
+      "result": "GAP: publisher chapter states that the original version was revised and links a correction chapter dated 06 May 2026. The correction landing page could not be opened; this audit cannot establish whether correction affects the extracted model, tables or results."
+    },
+    {
+      "claim": "A source-level conflict exists between the abstract\u2019s \u201creciprocal exchanges\u201d and the detailed interaction sequence.",
+      "result": "FAIL: this interpretation is not justified; returning feedback is a reciprocal response to status conferral. The note should explain the ordered interaction directly and remove the claimed tension."
+    }
+  ],
+  "warning_status": "No note edits; source note warning remains audit failed.",
+  "reason_for_fail": "The typed state omits the explicit feedback-history container/range despite memory being defining; the note also asserts an unsupported source conflict about reciprocal exchange. Correction history is additionally linked on the current publisher page but its separate chapter was unavailable to inspect."
+}

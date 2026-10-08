@@ -1,0 +1,53 @@
+C. Multi-Agent Model
+The single-agent behavior model as described above is used
+for individual behavior prediction. This means that individuals
+are observed in isolation. When extending the behavior model
+to a population level a common approach is to use system
+dynamics. In system dynamics actions are not executed ex-
+plicitly, but the choice probabilities are propagated through the
+network. No final decision needs to be taken. All individual
+results are added to determine the population result.
+TABLE I
+INFLUENCE FACTORS PER MODEL TYPE.
+CLNC CL NCL NCLLC NCLLC+
+Individual factors − − + + +
+Persuasion factors − + + + +
+External factors + + + + +
+Heterogeneous − − − + +
+Cool down period − − − − +
+In agent-based simulations, however, the agents influence
+each other by sending messages or executing actions. There-
+fore they need to make discrete decisions. Due to the net-
+worked environment in which the agents influence each other,
+a choice for a specific action of one agent influences others.
+Goldenberg et al., [18] describe this network effect extensively
+by comparing a system dynamics model with an agent-based
+model for product innovation. In our case a single message
+of an agent can have a large effect on the network due to
+persuasion factors. Therefore, we have chosen to execute the
+described single-agent behavior model (using either one of the
+decision models) in an multi-agent-based simulation.
+The multi-agent behavior model structure used in this study
+reflects the social media network of Twitter. Individual agents
+are connected through follower-links, which means that if
+agent A follows agent B, agent A receives the messages sent
+by agent B.
+The model works with discrete time steps. Every step, an
+agent executes its individual behavior, and decides whether or
+not to tweet, using the described single-agent behavior model.
+If it tweets, it creates a Twitter message. Twitter messages
+are distributed by the Twitter medium and delivered at the
+receiving agents at the start of the next time step.
+In the current model, the agents do not start conversations
+about unknown topics. Therefore all topics need to be defined
+in advance and are input for the model. External events are
+made available to the agents via a public black board.
+The multi-agent model takes the following parameters as
+input:
+1) List of individual agents.
+2) The follower network of these individuals.
+3) List of topics.
+4) A scenario containing environmental influence over
+time.
+The output of the simulation is a list of tweets over time,
+sent by the agents.

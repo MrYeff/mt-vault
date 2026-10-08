@@ -1,0 +1,32 @@
+{
+  "scope": "Focused stronger root review of simulation-relevant fitness/trust rules, supplementing independent cheap full-source audits; not a full-source root audit",
+  "source_text": "vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+  "source_equation_image": "vault/.automation/sources/files/9ca771c349852b8db82c9421fc4a2228e44868df3be4ecd0c32f96284fda5bf0.png",
+  "checks": [
+    {
+      "location": "PDF p4 rendered fitness equations, \u00a7\u00a74.2\u20134.4",
+      "finding": "Note wellbeing and resource equations match source image; missing zero-denominator cases disclosed, no invented fallback. Selection bottom/top20% and log increase/linear decrease baseline match \u00a7\u00a74.3\u20134.4."
+    },
+    {
+      "location": "\u00a7\u00a72.4,2.6,4.4",
+      "finding": "Source log-ratio prose differs from printed \u00b1(MaxCR\u2212CI\u00d7Trust) control algorithm and selected log increase/linear decrease baseline. Note correctly retains disagreement and does not choose an exact inherited trust function."
+    },
+    {
+      "location": "\u00a75.1",
+      "finding": "Four starting FM settings and four defection rates now included; hereditary crossover/mutation details no longer hidden by a vague omitted-experiment statement."
+    }
+  ],
+  "remaining_note_fixes": [
+    "Undefined r6 footnote must be restored before passing.",
+    "Correct Reicher et al. citation title using authoritative DOI publisher record; source bibliography itself has a typo."
+  ],
+  "bibliography_correction": {
+    "doi": "10.1080/14792779443000049",
+    "source_bibliography_title": "A social identity model for deindividualisation phenomena",
+    "verified_title": "A Social Identity Model of Deindividuation Phenomena",
+    "publisher": "https://www.tandfonline.com/doi/abs/10.1080/14792779443000049",
+    "verification": "Official publisher search result plus author institutional record https://research.rug.nl/en/publications/a-social-identity-model-of-deindividuation-phenomena/; publisher direct fetch403. Canonical reference need not propagate source typo."
+  },
+  "status": "focused_rules_review_and_independent_latest_hash_reaudit_passed",
+  "resolved_note_fixes": "r6 restored; official DOI title correction independently accepted; compact formatting checked"
+}

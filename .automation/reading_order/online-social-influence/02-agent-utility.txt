@@ -1,0 +1,32 @@
+III. MODEL
+In this section we describe the agent-based model for online
+social influence. First we describe the individual behavior of
+the agent, which includes Cialdini’s principles of persuasion.
+Then we describe the multi-agent model, which reflects online
+context of Twitter, and constitutes a multitude of the previously
+modeled agents.
+A. Single-Agent Behavior
+Fig. 1 shows the structure of the single-agent behavior
+model. This single-agent behavior model is based on the
+discrete decision model as described by [17]. Every time
+step the agent observes the environment and receives new
+messages. Based on its memory it calculates utilities for each
+possible choice. Consequently it selects one action based
+on the utilities, and it executes the action. The utilities are
+influenced by influence factors: individual factors, persuasion
+factors and external factors. The choices of the agent are either
+to do nothing, or to send a message about a topic. Every time
+step one of the options is selected.
+The utility Ui(t) of choice i is determined by a base value
+of the choice, called the intercept coefficient αi, plus the
+weighted sum of the influence factors:
+Ui(t) = αi +
+X
+j
+Ii,j(t) · βj
+where Ii,j(t) is the value of influence factor j for choice i, and
+βj its weight, for time step t. Note that the influence factor
+values differ per individual agent and differ per time step t.
+For example, an influence factor value can reflect the number
+of messages an individual has sent over a certain period.
+Fig. 1. Single-agent behavior model structure.

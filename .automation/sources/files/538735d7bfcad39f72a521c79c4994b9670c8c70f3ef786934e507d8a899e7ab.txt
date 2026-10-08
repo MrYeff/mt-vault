@@ -1,0 +1,419 @@
+               An Agent-Based Approach to Modeling
+                     Online Social Influence
+                                        Peter-Paul van Maanen∗† and Bob van der Vecht∗
+                      ∗ Netherlands Organisation for Applied Scientific Research (TNO), The Netherlands
+
+                                     Email: {peter-paul.vanmaanen,bob.vandervecht}@tno.nl
+                                       † Vrije Universiteit Amsterdam, The Netherlands
+
+
+
+    Abstract—The aim of this study is to better understand           model uses psychological principles that are quantified for the
+social influence in online social media. Therefore, we propose       Twitter network. As a means for exploring the best way of
+a method in which we implement, validate and improve an              operationalization of the behavioral theory, different variants
+individual behavior model. The behavior model is based on three
+fundamental behavioral principles of social influence from the       of the behavioral model have been implemented.
+literature: 1) liking, 2) social proof and 3) consistency. We have      For the case on talent shows we use empirical data that
+implemented the model using an agent-based modeling approach.        consists of Twitter activity about the specific show. At initial-
+The multi-agent model contains the social network structure, in-     ization the model parameters are fit to the empirical data. After
+dividual behavior parameters and the scenario that are obtained      running the simulation, we compare the simulation output with
+from empirical data. The model is validated by comparing the
+output of the multi-agent simulation with empirical data. We         empirical data for validation. As all variants of the behavior
+demonstrate the method by evaluating five versions of behavior       model are validated with the empirical data, we can test
+models applied to the use case of Twitter behavior about a talent    the model variants against each other to determine the best
+show on Dutch television.                                            performing model.
+  Keywords-Agent-Based Modeling; Twitter; Social Network
+Analysis; Online Social Influence                                                          II. BACKGROUND
+                                                                        In this section we describe the theoretical background of
+                      I. I NTRODUCTION                               the model for online social influence. Online social influence
+   Agent-based models (ABM) are common in the study of               is related to opinion spread and information flow through
+complex adaptive systems [1]. Nowadays, human behavior               networks. In the literature of these research areas, two impor-
+itself is a more central theme within agent-based modeling [2].      tant fundamental models are the threshold model [7] and the
+Human behavior in (social) networks [3] is an example of             Susceptible-Infected-Recovered model (SIR model) [8]. The
+this. Although systems can be equivalently modeled by either         threshold model says that a person adopts an innovation or
+System Dynamics and ABM [4], in social networks ABM                  opinion if the percentage of persons in his network that have
+is preferred [5] for a number of reasons: 1) the interactions        adopted already exceeds a certain threshold. SIR models have
+between the agents are complex, nonlinear, discontinuous,            a stochastic approach and are also applied to epidemics: the
+or discrete; 2) the population is heterogeneous and 3) the           probability of someone getting infected increases by the ratio
+topology of the interactions is heterogeneous and complex.           of infected people in his network. Both threshold and SIR
+The structure and behavior of ABM have potential to resemble         models have been evaluated mathematically in the context of
+reality better than (simplified) mathematical models, especially     information spread in a social network (e.g., [9]). However, the
+when the underlying real relationships are complex [6]. How-         models are very simplified and the psychological foundation
+ever, the agent-based models are often not based on theory,          of these models is limited. Therefore conclusions are based on
+the output of the model is often not validated against real-life     corresponding assumptions.
+data, and often no real-life online network structure is used.          Other approaches use theoretically founded models that
+   In this paper, we propose a multi-disciplinary approach for       explain cognitive mechanisms. For example, Weng, Flammini,
+studying online social influence, that is based on theory, model     Vespignani and Menczer [10] apply the behavior model for
+validation, and for which a real-life online network structure       rational choice introduced by Simon [11] to model information
+is used: Twitter. As a basis we use a theoretical framework          diffusion in Twitter networks. The mechanism is based on
+of social influence taken from psychological research and            limited attention span of human beings. Although the model
+implement this framework in an agent-behavior model. The             explains information diffusion through networks, we believe
+online context of social media is captured in a multi-agent          that limited attention is not the (most important) underlying
+model, where the individual agents exchange messages and             mechanism for social influence.
+may influence each other.                                               Agent-based modeling allows for more complex reasoning
+   We apply the agent-based model to a real-world case:              models. Several psychological models have been translated
+communication activity through the online social network             to computational decision-making modules for agents. The
+Twitter about talent shows on Dutch television. The behavior         belief-desire-intention (BDI) [12] was for instance formalized
+by Rao and Georgeff [13] and is popular for the agent
+reasoning paradigm. The theory of planned behavior [14]
+used in [15] is another popular example. Both models have
+a focus on goal-directed and intentional activity of agents.
+Online social influence, however, is not much goal-directed
+and if so, it concerns a sub-conscious process. A theory that
+better matches this process is presented by Cialdini [16]. In his
+theory he presents six principles that combine into persuasive
+behavior:
+   1) Reciprocity: people tend to return a favor.
+   2) Commitment and consistency: if people commit they are
+       likely to honor that commitment.
+   3) Social proof: people will follow what other people do
+       (also: conformity).
+   4) Authority: people tend to obey authority figures.
+   5) Liking: people are easily persuaded by other people that
+       they like.                                                                 Fig. 1.   Single-agent behavior model structure.
+   6) Scarcity: perceived scarcity will generate demand.
+The principles of persuasion are presented by Cialdini in a
+qualitative manner and need to be formalized in order to                The probability Pi (t) to select choice i is based on the
+use them in a computational model. Furthermore, we need               exponential utility:
+to translate them into an online context, and specifically into
+                                                                                                      exp (Ui (t))
+a Twitter context, leading to a multi-agent model of online                                 Pi (t) = P
+social influence.                                                                                     k exp (Uk (t))
+
+                          III. M ODEL                                 where Uk (t) is the utility for each possible choice k.
+                                                                         The utility of a choice is calculated based on a weighted
+   In this section we describe the agent-based model for online
+                                                                      sum of influence factor values. They are defined as follows.
+social influence. First we describe the individual behavior of
+                                                                         1) Individual Factors: The individual factors in the context
+the agent, which includes Cialdini’s principles of persuasion.
+                                                                      of Twitter is the information as can be found in the user profile
+Then we describe the multi-agent model, which reflects online
+                                                                      that have impact on the behavior of the agent. These factors are
+context of Twitter, and constitutes a multitude of the previously
+                                                                      (relatively) static. Think of the number of friends or followers,
+modeled agents.
+                                                                      or the user’s age.
+A. Single-Agent Behavior                                                 2) Persuasion Factors: The persuasion parameters in the
+   Fig. 1 shows the structure of the single-agent behavior            model are based on Cialdini’s principles of persuasion. At this
+model. This single-agent behavior model is based on the               point three of the principles have been operationalized for the
+discrete decision model as described by [17]. Every time              Twitter context: liking, social proof and consistency.
+step the agent observes the environment and receives new                 • Liking: We assume a person likes the people in his direct
+messages. Based on its memory it calculates utilities for each              environment. On Twitter this means that someone likes
+possible choice. Consequently it selects one action based                   the people he or she follows. The preferences of these
+on the utilities, and it executes the action. The utilities are             people are reflected in the messages the person receives.
+influenced by influence factors: individual factors, persuasion             Liking is the number of messages about a certain topic
+factors and external factors. The choices of the agent are either           an agent receives in the last hour.
+to do nothing, or to send a message about a topic. Every time            • Social proof: Think of the trending topics on Twitter that
+step one of the options is selected.                                        are published continuously. These topics are popular and
+   The utility Ui (t) of choice i is determined by a base value             therefore a person is more likely to send a message about
+of the choice, called the intercept coefficient αi , plus the               it. Social proof reflects the trends in the whole network.
+weighted sum of the influence factors:                                      Social proof is the percentage of tweets about a certain
+                                 X                                          topic during the last hour.
+                  Ui (t) = αi +      Ii,j (t) · βj                       • Consistency: The consistency factor is defined as the total
+                                  j                                         number of tweets about a topic a user has sent. The
+where Ii,j (t) is the value of influence factor j for choice i, and         factor ensures that people demonstrate some consistent
+βj its weight, for time step t. Note that the influence factor              behavior.
+values differ per individual agent and differ per time step t.           As we wanted to limit the complexity of the behavior
+For example, an influence factor value can reflect the number         models, we have only quantified a subset of the original
+of messages an individual has sent over a certain period.             six Cialdini principles. Though, from the three remaining
+                                                                                                 TABLE I
+principles we believe that only authority of a sender might                        I NFLUENCE FACTORS PER MODEL TYPE .
+have significant impact on people’s choices to react to a
+message, and reciprocity and scarcity are less relevant in the
+                                                                                           CLNC     CL    NCL     NCLLC      NCLLC+
+Twitter context.
+   3) External Factors: For a topic, influence parameters may        Individual factors      −       −      +        +           +
+exist that follow from external events. News events or user          Persuasion factors      −       +      +        +           +
+experiences are examples of this. These factors are considered       External factors        +       +      +        +           +
+to be case specific.                                                 Heterogeneous           −       −      −        +           +
+                                                                     Cool down period        −       −      −        −           +
+B. Decision Models
+   In the context of Twitter, again following [17], there are
+two versions of the single-agent behavior model: The Single             In agent-based simulations, however, the agents influence
+Choice model: the agent makes one decision between No                each other by sending messages or executing actions. There-
+Tweet, Tweet on Topic1 , . . . , Tweet on Topicn . The Nested        fore they need to make discrete decisions. Due to the net-
+Choice model: first the choice between either Tweet or No            worked environment in which the agents influence each other,
+Tweet is made. If the agent decides on a tweet then the second       a choice for a specific action of one agent influences others.
+choice is between Tweet on Topic1 , . . . , Tweet on Topicn .        Goldenberg et al., [18] describe this network effect extensively
+   The above leads to the following five models, where two           by comparing a system dynamics model with an agent-based
+are single choice and three of nested choice models:                 model for product innovation. In our case a single message
+   • CLNC: Single choice with only external factors. The             of an agent can have a large effect on the network due to
+      agents make a single choice between No Tweet or a              persuasion factors. Therefore, we have chosen to execute the
+      Topicn Tweet. The population is homogeneous, meaning           described single-agent behavior model (using either one of the
+      that all agents have the same behaviour parameters. This       decision models) in an multi-agent-based simulation.
+      is our base line model.                                           The multi-agent behavior model structure used in this study
+   • CL: Single choice with external factors and persuasion          reflects the social media network of Twitter. Individual agents
+      factors. The agents make a single choice between No            are connected through follower-links, which means that if
+      Tweet, or a Topicn Tweet. The population is homogeneous        agent A follows agent B, agent A receives the messages sent
+   • NCL: Nested choice with homogeneous population. The             by agent B.
+      agents make a first choice between Tweet and No Tweet             The model works with discrete time steps. Every step, an
+      based on individual factors. If they choose to Tweet they      agent executes its individual behavior, and decides whether or
+      choose which topic to tweet about based on external            not to tweet, using the described single-agent behavior model.
+      factors and persuasion factors.                                If it tweets, it creates a Twitter message. Twitter messages
+   • NCLLC: Nested choice with heterogeneous population              are distributed by the Twitter medium and delivered at the
+      divided in classes. The decision model is similar to NCL.      receiving agents at the start of the next time step.
+      Each class of agents has its own behavior parameters.             In the current model, the agents do not start conversations
+   • NCLLC+: Similar to NCLLC but extended with a cool               about unknown topics. Therefore all topics need to be defined
+      down period after a tweet of 4 time steps. This ex-            in advance and are input for the model. External events are
+      tension on the NCLLC was constructed, because first            made available to the agents via a public black board.
+      runs demonstrated an recursive influence effect that made         The multi-agent model takes the following parameters as
+      agents tweet continuously. The cool down period reflects       input:
+      the number of time steps the agent is forced not to tweet         1) List of individual agents.
+      after sending a tweet.                                            2) The follower network of these individuals.
+   In Table I an overview is given of the separate models indi-         3) List of topics.
+cating which influence factors are used to calculate the utilities      4) A scenario containing environmental influence over
+and indicating whether the population is heterogeneous and                  time.
+whether a cool down period is applied.                                  The output of the simulation is a list of tweets over time,
+                                                                     sent by the agents.
+C. Multi-Agent Model
+   The single-agent behavior model as described above is used                                IV. M ETHOD
+for individual behavior prediction. This means that individuals        In Fig. 2 the method used for studying online social influ-
+are observed in isolation. When extending the behavior model         ence is shown. As can be seen from this figure, in order to
+to a population level a common approach is to use system             simulate online social influence in the real world, a specific
+dynamics. In system dynamics actions are not executed ex-            case study has been used to implement a simulation environ-
+plicitly, but the choice probabilities are propagated through the    ment. Within this simulation environment, human behavior is
+network. No final decision needs to be taken. All individual         simulated using a multi-agent system, which contains an agent
+results are added to determine the population result.                behavior model with specific input parameters, representing
+                                                                           B. Model Operationalization
+                                                                              1) Multi-Agent Model: Environmental influence (television
+                                                                           show and product display) is based on empirical data. The
+                                                                           actual candidate list is used and the scenario describes per
+                                                                           time step when the show is broadcast on television and when
+                                                                           the individual candidates are performing.
+                                                                              The actors and the network are one-on-one mappings from
+                                                                           the empirical data. All twitter users are represented by an
+                                                                           agent in the agent-based simulation. Friends and follower
+                                                                           information from their user profile is used. Their position in
+                                                                           the network is the same as the real twitter data, i.e., we use
+                                                                           all friends followers connections from the empirical data. Note
+                                                                           that the users and the network consist only of the users that
+                                                                           have tweeted about the talent show.
+                                                                              2) Single-Agent Model: The behavior model in the ABM
+Fig. 2.    The multi-disciplinary method used for studying online social   follows the behavior model described earlier. The agents
+influence.
+                                                                           determine each time step whether they will send a tweet and if
+                                                                           they do, whether it is a general tweet about the show or a tweet
+certain properties of the previously described behavior theory.            about a specific candidate. For the case of the talent show on
+By means of comparing the simulation data with actual                      Twitter we have defined the following influence factors.
+empirical data, the multi-agent system validation can occur,                     a) Individual Factors: The individual factors that could
+which can be used to optimize the model. At initiation the                 be extracted from the data and that we considered in context
+empirical data is used to tune the parameters. Because the                 of the case are number of friends and number of followers.
+validation of a model is always against empirical data, we can             We found that the logarithm of these numbers lead to a better
+compare different models with this method.                                 fit than the absolute numbers, as it corrects for the very high
+                                                                           values:
+A. Case Study                                                                 • Nr. of friends: Logarithm of 1 plus number of friends as
+   In this study we apply modeling and simulation to Twitter                     obtained from the user profile.
+behavior around the talent show The Voice Kids [19]. In this                  • Nr. of followers: Logarithm of 1 plus number of followers
+television show, the public votes on the best singing child.                     as obtained from the user profile.
+During the show, viewers are encouraged to tweet using the                       b) Persuasion Factors: The persuasion factors in the
+show’s hashtag (i.e., #thevoicekids).                                      model are based on Cialdini’s principles of persuasion. We
+   For modeling and simulation of the case we use as much                  recall the three principles that were quantified for this case:
+empirical data as input as possible in order to argue the                     • Liking: Number of messages about a certain topic an
+validation of the model. For this purpose we have reused                         agent receives in the last hour.
+the data gathered by Koster [17]. It contains the twitter                     • Social Proof : Percentage of tweets about a certain topic
+data of the show’s finals with a short period in advance.                        during the last hour.
+Koster used the Twitter API to gather 93, 404 tweets, sent by                 • Consistency: Total number of tweets about a topic a user
+20, 822 individuals, who are were connected by a network with                    has sent.
+102, 638 connections.                                                            c) External Factors: Influence parameters that follow
+   To summarize, the data set used consists of the following               from external events are:
+data types:
+                                                                              • Television show: Binary variable indicating whether the
+   • List of topics: Candidate1 , . . . , Candidate6 , or a                      show is broadcasted on television at time t.
+     General Tweet about the show.                                            • Product display: Binary variable indicating whether a
+   • Schedule of final show and candidate performances                           candidate is performing in the show at time t.
+     within the show timed per minute.                                        The values for the individual factors remain static through-
+   • All tweets about the show from several weeks before the
+                                                                           out the simulation. The values for the social influence factors
+     final show until and including the final show.                        and the external factors are determined by the agents every
+   • User profile data of twitter users from the above tweet
+                                                                           time step. For the utility calculation of the General Tweet only
+     list:                                                                 one of the persuasion factors is used for the utility calculation,
+        – Nr. of friends (in all of Twitter).                              which is Liking. Also the candidate specific event Product
+        – Nr. of followers (in all of Twitter).                            display is ignored in the utility calculation for General Tweet.
+   • Network structure of twitter users from the above tweet                  The nested choice model compares the utilities of No
+     list: Friends-follower connections within this case net-              Tweet and Tweet. The utility of No Tweet is dependent on
+     work.                                                                 individual factors. The rationale is that the number of friends
+and followers is a predictor of a user’s activity on Twitter. The    where the true positive rate (T P ) and the false positive rate
+utility of Tweet is the sum of the utilities of all topic tweets.    (F P ) is calculated as follows:
+      d) Estimating Behavior Parameters: Both the intercept
+                                                                                           n X
+                                                                                             m
+coefficients ai for each choice and the parameter weights bj of                            X
+the influence factors are estimated using regression methods on                T P (r) =             min(Mx (a, i, r), v(a, i))
+                                                                                           a=1 i=1
+the empirical data of the specific talent show. The regression
+method used is based on an Expectation-Maximization (EM)                                 n X
+                                                                                           m
+Model [20]. The data set contains user decisions per minute.
+                                                                                         X
+                                                                             F P (r) =             max(Mx (a, i, r) − v(a, i), 0)
+As this leads to a very high number of No Tweet decisions,                               a=1 i=1
+selective sampling of the data has been used to estimate
+parameters: 99.5% of the No Tweet decisions were randomly            where n is the total number of agents in the network (20822)
+left out. This affects the Tweet-No Tweet ratio. In order to         and m is the total number of choices (in this case the number
+correct for this effect, the utility of Tweet needs to be written    of candidates of the talent show, which is 6). The argument r
+as:                                                                  is the index of the simulation (in total 250). The variable
+                                   X                                 Mx (a, i, r) is the number of predicted tweets of model x
+                UTweet (t) = τ log     exp (Uk (t))                  (either CLNC, CL, NCL, NCLLC, or NCLLC+) by agent a
+                                   k                                 about choice i. The variable v(a, i) is the actual number of
+                                                                     tweets by agent a about choice i.
+where τ is a correction factor and Uk (t) is the utility for a
+tweet on topic k.                                                       The z-score is calculated as follows:
+  A detailed mathematical description of this regression
+                                                                                                         Y (r) − µY
+method including the correction procedure is given by                                     Z(Y (r)) =
+Koster [17].                                                                                                 σY
+
+C. Independent Variable: Model Type                                  where µY is the mean and σY the standard deviation of either
+                                                                     the true positive rate (i.e., Y = T P ) or false positive rate (i.e.,
+   The single and multiagent models described have been
+                                                                     Y = F P ) over all simulations r.
+implemented in Repast Simphony [21], a java-based multiagent
+simulation framework.
+                                                                     E. Data Analyses
+   The Tables II, III and IV describe all parameters that
+resulted from the regression methods for each of the decision           For each model, there are 250 z-scores of true and false
+models [17]. All five models were compared in this study. Note       positives. We plot these values in a Receiver Operating
+that no intercept variables have been calculated for the choice      Characteristic (ROC)-plot for visual analysis. Consequently, a
+Tweet. Those values are not necessary as they are only used          repeated measures analysis of variance (RM-ANOVA) shows
+in the nested choice model, where the probabilities of Tweet         the differences between the mean sensitivity indices for each
+and No Tweet add up to one. The values of the parameters can         model. Finally post-hoc pair-wise comparisons can be carried
+interpreted as the importance of the related influence factors. In   out to determine which of these differences are significant.
+the present study, for instance, ’social proof’ is more important
+than ’liking’ and ’consistency’, given that in Table III its                                    V. R ESULTS
+related weights are always higher.
+                                                                        The results of the ROC-analysis based on Monte Carlo
+D. Dependent Variable: Validity                                      simulation data of each agent-based model (250 runs per
+   We evaluate the predictions of the models for the individual      model) are shown in Fig. 3. As one can see, NCLLC has
+agents by comparing them to the empirical data set. For              the highest true positive rates, but also the highest false
+each model, for each agent, and for each choice (note that           positive rates. The models CLNC and CL have comparable
+we have limited this choice to only Candidate Tweets), the           performances and are both better than the passive model (in
+number of true positives and false positives is counted. As the      which agents never tweet). Furthermore, NCL and NCLLC are
+behavior model is probability-based, we have used a Monte            clearly improvements with respect to CLNC and CL.
+Carlo approach, with 250 runs per model. The result contains            Using the above ROC-analysis results, the mean sensitivity
+per model an average true positive rate T P and a false positive     indices could be calculated per model over all runs. These
+rate F P , which together determine the validity of each model.      mean d0 s are depicted in Fig. 4. A repeated measures anal-
+This validity measure is then used to compare the different          ysis of variance (RM-ANOVA) showed a significant main
+models to each other.                                                effect of model type on the sensitivity indices of the models
+   Mathematically, the validity of the different models is           (F (4, 249) = 479.67, p = 0).
+determined by means of the sensitivity index. This index is             Post-hoc pair-wise comparisons are shown in Table V (with
+calculated in the following manner:                                  n = 250 and df = 249). All mean sensitivity indices are
+                                                                     significantly different, except CLNC vs. CL (Hypothesis 1).
+               d0 (r) = Z(T P (r)) − Z(F P (r))                      This confirms the above mentioned observations from Fig. 3.
+                                                                   TABLE II
+                                                  I NTERCEPT VARIABLES SPECIFIED PER CHOICE .
+
+
+Choice                    CLNC                 CL              NCL                               NCLLC and NCLLC+
+                                                                              Class 1            Class 2         Class 3   Class 4
+No Tweet                   5.30              5.30             4.66              5.96               5.74            6.90      2.51
+Candidate1                −5.31             −5.31            −3.26             −3.40              −2.66           −3.08     −3.37
+Candidate2                −5.52             −5.52            −3.42             −3.59              −3.18           −3.07     −3.66
+Candidate3                −5.73             −5.73            −3.58             −3.71              −3.07           −3.38     −3.87
+Candidate4                −5.61             −5.61            −3.64             −3.64              −3.18           −3.60     −3.59
+Candidate5                −6.32             −6.32            −4.32             −4.11              −4.02           −4.48     −4.60
+Candidate6                −6.86             −6.86            −4.88             −4.64              −4.82           −5.18     −4.96
+General Tweet             −3.11             −3.11            −1.33             −1.76              −1.45           −1.62     −2.84
+τ                            −                 −              3.87              2.87               6.63            6.01      4.65
+
+
+                                                                  TABLE III
+                                                      W EIGHTS OF PERSUASION FACTORS .
+
+
+Variable                CLNC                CL              NCL                                  NCLLC and NCLLC+
+                                                                            Class 1             Class 2       Class 3      Class 4
+Liking                       −             0.05             0.02              0.10                0.03            0.003      0.34
+Social proof                 −             3.01             2.05              2.14                1.71             1.71      3.14
+Consistency                  −             0.27             0.23              0.23                0.51             0.12      0.89
+
+
+                                                                TABLE IV
+                                             W EIGHTS OF INDIVIDUAL AND EXTERNAL VARIABLES .
+
+
+Variable                    CLNC               CL             NCL                                NCLLC and NCLLC+
+                                                                              Class 1            Class 2         Class 3   Class 4
+Product display               1.37           1.37             0.78              2.26              −0.05            0.19      1.03
+Television show               2.37           2.37             0.60              0.89               0.21            0.53      1.10
+Friends                         −              −              0.27             −0.25              −0.29           −0.38      0.09
+Followers                       −              −             −0.15              0.12               0.21            0.04      0.54
+
+
+                                                                  TABLE V
+                            P OST- HOC PAIR - WISE COMPARISONS OF THE MEAN SENSITIVITY INDICES OF EACH MODEL .
+
+
+Hypothesis               Comparison                                   µ1                   µ2                        t          p
+            1            CLNC vs. CL                               −.5541               −.5527               −0.5523        .5812
+            2            CLNC vs. NCL                              −.5541                .4493             −433.8056           0*
+            3            CLNC vs. NCLLC                            −.5541                .0459              −10.7789           0*
+            4            CLNC vs. NCLLC+                           −.5541                .6116             −429.0597           0*
+            5            CL vs. NCL                                −.5527                .4493             −502.6873           0*
+            6            CL vs. NCLLC                              −.5527                .0459              −10.8381           0*
+            7            CL vs. NCLLC+                             −.5527                .6116             −365.4620           0*
+            8            NCL vs. NCLLC                              .4493                .0459                7.2947           0*
+            9            NCL vs. NCLLC+                             .4493                .6116              −56.9468           0*
+           10            NCLLC vs. NCLLC+                           .0459                .6116              −10.0626           0*
+ * p < α, where α = .05/10 = .005 (Bonferroni corrected).
+      Fig. 3.   ROC-curves of each agent-based model. The passive model (triangle) contains agents that never tweet and can be used as reference.
+
+
+
+                         VI. C ONCLUSIONS                                    in the principles themselves.
+                                                                                According to our results, the NCLLC model has the most
+   Our aim is to work towards a general model that describes                 true positives in its predictions, but also the most false posi-
+online social influence. We have presented a method that                     tives. In our opinion this shows the potential of the NCLLC
+allows us to validate formalized models of social influence                  model: if one manages to lower the amount of false positives,
+theory. To do so, we use agent-based modeling: we construct                  it will be the better model. The false positives are caused by
+decision models based on fundamental behavioral principles                   ‘overheating’ agents, that cannot stop tweeting anymore. In
+of social influence from the literature, and run them in multi-              the NCLLC+ model we did a first rough attempt by adding a
+agent simulation. We simulate specific use cases and evaluate                hard coded cool-down period in the decision model, which led
+the output against the empirical data. We have shown that                    to the best performing model. We believe that a more elegant
+by doing so we can compare different implementations of                      solution could improve the results further.
+decision models, and improve the model iteratively.                             Finally, in this paper we have presented the use case of
+   The comparison between all models shows that there is a                   Twitter behavior around a talent show. But in order to arrive
+continuous improvement in the models except no significant                   at a more general model for online social influence, the model
+difference between CLNC and CL, while NCL still outper-                      needs to be tested on other use cases as well.
+forms NCLLC. The results suggest that further research should
+investigate whether the insignificance between CLNC and CL                                                R EFERENCES
+is caused by a limitation in the single-agent formalization of                 [1] J. Holland, Hidden Order: How Adaptation Builds Complexity. Read-
+the used behavioral principles, or by a more fundamental flaw                      ing, MA: Addison Wesley, 1995.
+                                                 Fig. 4.   Boxplot of the sensitivity indices of each model.
+
+
+
+ [2] M. Johns, “Human behavior modeling within an integrative framework,”       [13] A. Rao and M. P. Georgeff, “BDI-agents: From theory to practice,” in
+     Ph.D. dissertation, University of Pennsylvania, 2007.                           Proceedings of the First International Conference on Multiagent Systems
+ [3] P. R. Monge and N. S. Contractor, Theories of Communication Networks.           (ICMAS’95), 1995, pp. 312–319.
+     Oxford University Press, 2003.                                             [14] I. Ajzen, “The theory of planned behavior,” Organizational behavior
+ [4] C. M. Macal, “To agent-based simulation from system dynamics,” in               and human decision processes, vol. 50 (2), pp. 179–211, 1991.
+     Proceedings of the 2010 Winter Simulation Conference, B. Johansson,        [15] Z. D. Zhang T., “Agent-based simulation of consumer purchase decision-
+     S. Jain, J. Montoya-Torres, J. Hugan, and E. Ycesan, Eds., 2010.                making and the decoy effect,” Journal of Business Research, vol. 60,
+ [5] E. Bonabeau, “Agent-based modeling: Methods and techniques for                  pp. 912–922, 2007.
+     simulating human systems,” Proceedings of the National Academy of          [16] R. B. Cialdini, Influence: Science and practice, 4th ed. Boston: Allyn
+     Sciences of the United States of America, vol. 99, no. 3, pp. 7280–7287,        & Bacon, 2001.
+     May 14 2002.                                                               [17] S. Koster, “Modelling individual and collective choice behaviour in
+ [6] M. Remondino, “Reactive and deliberative agents applied to simulation           social networks: An approach combining a nested conditional logit
+     of socio-economical and biological systems,” International Journal of           model with latent classes and an agent based model,” Master’s thesis,
+     Simulation, vol. 6, no. 12-13, pp. 11–25, 2005.                                 Erasmus University Rotterdam, 2012.
+ [7] T. C. Schelling, Micromotives and Macrobehavior.           Norton, 1978,   [18] J. Goldenberg, O. Lowengart, and D. Shapira, “Zooming in: Self-
+     vol. 17.                                                                        emergence of movements in new product growth,” Marketing Science,
+ [8] F. M. Bass, “A new product growth for model consumer durables,”                 vol. 28, no. 2, p. 274292, 2009.
+     Management Science, vol. 15, p. 215227, 1969.                              [19] “The Voice Kids,” Talpa Media Holding, February-March
+                                                                                     (season 1) 2012, premiered on RTL 4. [Online]. Available:
+ [9] J. D. Watts and P. S. Dodds, “Influentials, networks, and public opinion
+                                                                                     http://www.thevoicekids.nl
+     formation,” Journal of Consumer Research, vol. 34, no. 4, pp. 441–58,
+                                                                                [20] M. Wedel and W. DeSarbo, “A mixture likelihood approach for general-
+     2007.
+                                                                                     ized linear models,” Journal of Classification, vol. 12, no. 1, pp. 21–55,
+[10] L. Weng, A. Flammini, A. Vespignani, and F. Menczer, “Competition               1995.
+     among memes in a world with limited attention,” Scientific Reports,        [21] M. North, N. Collier, J. Ozik, E. Tatara, M. Altaweel, C. Macal,
+     vol. 2, 2012, 29 March.                                                         M. Bragen, and P. Sydelko, “Complex adaptive systems modeling with
+[11] H. Simon, “A behavioral model of rational choice,” Quarterly Journal            repast simphony,” Complex Adaptive Systems Modeling, vol. 1, no. 3,
+     of Economics, vol. 69, p. 99188, 1955.                                          2013.
+[12] M. Bratman, Intention, plans, and practical reason. Harvard University
+     Press Cambridge, MA., 1987.
+

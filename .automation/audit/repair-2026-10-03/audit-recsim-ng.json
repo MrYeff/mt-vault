@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+  "note_sha256": "9e8d244c56a70a0b74b87c7c6575dbd96705277eae94e74b68e0b05e4c890771",
+  "verdict": "PASS_CONTENT_ON_REAUDIT",
+  "warning_preserved": "audit failed",
+  "note_or_warning_modified": false,
+  "primary_source": {
+    "version": "arXiv:2103.08057v1 (2021-03-14)",
+    "html_path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html",
+    "html_sha256": "99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f",
+    "full_text_path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/f27aea6d3e91ae871d963f91031db37370b95c4f9f1d7784a267588e08b82d6d.txt",
+    "full_text_sha256": "f27aea6d3e91ae871d963f91031db37370b95c4f9f1d7784a267588e08b82d6d",
+    "full_text_bytes": 99088,
+    "full_text_lines": 3892,
+    "coverage": "Read the extracted paper sequentially from title/abstract through §§1–5, including all formal DBN equations and code examples, behavioral-library descriptions, runtime and inference/learning APIs, all three use cases, conclusions, and all bibliography entries. Checked note abstract, model claims and footnotes against source passages; checked metadata and source version. Guides LLM Extraction Rules, Model Notation, and paper Template were consulted. The paper refers detailed tutorial model values/specifications externally; did not infer them."
+  },
+  "claim_checks": [
+    {
+      "claim": "Abstract characterizes RecSim NG as a probabilistic, scalable/modular/differentiable multi-agent recommender simulator implemented in Edward2 and TensorFlow with inference/latent learning and accelerated runtime support.",
+      "result": "PASS; note abstract matches source abstract wording and substance.",
+      "source_location": "Abstract; §5."
+    },
+    {
+      "claim": "State/process schema factors a Markov state into component variables, initial distributions and transition factors conditioned on current- and previous-slice parents; runtime observability differs from each agent's observation subset.",
+      "result": "PASS; schema and description preserve both dependency types and partial observability distinction.",
+      "source_location": "§3.1, DBN transition factorization and runtime-observability discussion."
+    },
+    {
+      "claim": "Entities encapsulate batched population parameters/behaviors; stories instantiate and bind variables and behavior dependencies; choice/state libraries include the listed families.",
+      "result": "PASS; correctly presented as architecture/library abstractions rather than universal behavior.",
+      "source_location": "§§3.2–3.3."
+    },
+    {
+      "claim": "Specific §3.3 user example initializes unit-normal interests, chooses by softmax/MNL weights proportional to exp of negative Euclidean feature distance, observes quality on consumption, and updates interest by sensitivity times quality-weighted feature displacement plus Gaussian noise.",
+      "result": "PASS on model rule, choice and update order; schema explicitly scopes it to the §3.3 illustration. ACTION: note says 'Noise covariance, sensitivity and recommendation slates are configuration inputs.' The paper specifies Gaussian noise and a sensitivity parameter, but does not supply/configure a covariance value or characterize covariance as an input. Rephrase as unspecified noise covariance/parameters or cite an actual supplied configuration; tutorials are outside this source.",
+      "source_location": "§3.3 illustration and code discussion."
+    },
+    {
+      "claim": "§4.1 partially observable RL use case uses finite 15-consumed-item history, learned belief/embeddings, REINFORCE, slate size 2, dimension 20, 1,000 users, horizon 100 and 20-run figure average.",
+      "result": "PASS; stated controls match paper. The note properly avoids inventing optimizer/initialization settings not reported there.",
+      "source_location": "§4.1, Figure 1 and footnote 8."
+    },
+    {
+      "claim": "§4.2 learning use case has static interests, dynamic satisfaction based on adjacent-slate best-affinity trend, per-user latent sensitivity, randomized data-generation recommender, and HMC within Monte Carlo EM; learning sensitivity initialized Uniform(0,1).",
+      "result": "PASS; scope and non-reproduced tutorial details are disclosed.",
+      "source_location": "§4.2, Figure 2 and footnote 9."
+    },
+    {
+      "claim": "§4.3 ecosystem example describes static observable user interests, provider/user community mixtures, discounted engagement-dependent provider item generation, comparison of myopic and capped boost policies, and reported utility controls/outcomes.",
+      "result": "PASS; 2,000 users, 80 providers, 400 items/period, horizon 300, 40 runs, L=1.2 utility 161.34 vs 130.77, and approximately 6x TPUv2 speedup are source-supported. The opposite-signed boost prose is accurately retained as unresolved source tension.",
+      "source_location": "§4.3 and Figure 3."
+    },
+    {
+      "claim": "Capabilities and use scope include trajectory simulation, log-probability evaluation, gradient-based fitting, posterior inference/latent learning, policy-gradient and other inference/training uses.",
+      "result": "PASS; note makes no unsupported claim of performance guarantee or empirical validation beyond the cited use cases.",
+      "source_location": "§§3.4–3.5; §§4.1–4.3; §5."
+    }
+  ],
+  "bibliography_check": {
+    "source_entries": 64,
+    "note_items": 63,
+    "result": "FAIL: note entries 1–63 match the source bibliography in order; it omits source reference 64, Stephan Zheng et al. (2020), 'The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies' (arXiv:2004.13332). Add this item as the final bibliography entry using a verified title-derived target. No other ordering or title mismatch found among the 63 existing entries.",
+    "list_complete": false,
+    "source_last_entry": "The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies",
+    "note_items_after_reaudit": 64,
+    "reaudit_result": "PASS: all 64 note items match source titles in source order, including final AI Economist entry; prior 63 count resulted from section-boundary parsing that consumed final entry with separator."
+  },
+  "abstract_provenance": "Compared note abstract against the complete source Abstract; wording matches.",
+  "gaps_or_conflicts": [],
+  "candidate_for_repair": false,
+  "reaudits": [
+    {
+      "date": "2026-10-03",
+      "note_sha256": "ff68d557959fa83c8ff80c4e7bf57231cbf253e2ea46b67c8e649ec1f7cd697b",
+      "verdict": "PASS_CONTENT",
+      "checks": [
+        {
+          "check": "References section boundary and complete bibliography",
+          "result": "PASS: Parsed References only up to the blank-line-delimited ## Audit Log. The note contains 64 reference links. The first 63 match the source bibliography in source order; item 64 is “The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies”, matching the source final entry. Earlier apparent omission came from using an incorrect section boundary."
+        },
+        {
+          "check": "§3.3 Gaussian noise/covariance wording",
+          "result": "PASS: Updated text says Gaussian noise is added and covariance plus sensitivity/slate values are not specified in this source. It no longer claims covariance is a configuration input."
+        }
+      ],
+      "coverage": "Rechecked the complete References section against the full source bibliography and the changed §3.3 model sentence against source §3.3. This re-audit addresses all actionable findings from the preceding audit; other source-verified claims were unchanged.",
+      "note_or_warning_modified_by_auditor": false
+    }
+  ],
+  "initial_verdict": "FAIL_ACTIONABLE"
+}

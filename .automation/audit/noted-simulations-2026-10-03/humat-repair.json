@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "task": "complete import and repair of HUMAT paper note",
+  "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+  "note_sha256": "bbcee1130dd8c678f414ef2c71adde117fcb05d2b6e07b832eeb35b1e63347a2",
+  "source": {
+    "title": "HUMAT: An Integrated Framework for Modelling Individual Motivations, Social Exchange and Network Dynamics",
+    "authors": [
+      "Wander Jager",
+      "Patrycja Antosz",
+      "Loes Bouman",
+      "Teng Li",
+      "J. Gareth Polhill",
+      "Timo Szczepanska",
+      "Shaoni Wang"
+    ],
+    "publication": "Journal of Artificial Societies and Social Simulation 28(1), article 4",
+    "published": "2025-01-31",
+    "doi": "10.18564/jasss.5611",
+    "primary_reading_url": "https://www.jasss.org/28/1/4.html",
+    "accessed": "2026-10-03",
+    "coverage": "Full published HTML downloaded and read, including abstract, main text, all three application cases/results, complete ODD Appendix A and 71-entry bibliography.",
+    "cache_path": "vault/.automation/sources/files/d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee.html",
+    "cache_kind": "primary_source_html",
+    "bytes": 200651,
+    "sha256": "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee"
+  },
+  "import": {
+    "state": "complete; corrected after failed independent audit; pending independent re-audit",
+    "note_warning": ["audit failed"],
+    "bibliography": {
+      "primary_entries": 71,
+      "note_entries": 71,
+      "one_to_one_source_order_reconciliation": true,
+      "display_aliases": "Source bibliography titles",
+      "targets": "Filename-safe source-title targets, preferring actual note stems where present; all visible aliases retain the exact primary-source title. No matching reference notes existed for these entries at import time.",
+      "reference_notes_created": 0
+    },
+    "source_coverage": [
+      "Abstract and publication metadata",
+      "Sections 1–2: theory, core processes, networks, design concepts, sensing, interaction, stochasticity, observations, outputs, parameterization, implementation limits and validation discussion",
+      "Section 3: dialogue-tool example, Groningen referendum case, COVID-19 vaccination extension and reported outcomes",
+      "Appendix A: complete ODD description, variables, scheduling, initialization, submodels, equations/rules, observations and input data",
+      "References: all 71 entries"
+    ],
+    "model_audit_checks": [
+      "separate receiver update under signalling and initiator update under inquiry",
+      "initialization and parameter distributions",
+      "initial knowledge and alter representation",
+      "motive evaluations, social satisfaction, dissonance and dilemma definitions",
+      "partner eligibility and ranking",
+      "interaction/update order and random order statements",
+      "choice thresholds and habit handling",
+      "basic observations and broader analyses",
+      "all three illustrative case outcomes and case-specific extensions",
+      "reported aspiration-range conflict and prose/procedure habit-choice conflict",
+      "narrative versus Appendix A exchange activation and social-need criteria",
+      "full-list ordering versus unspecified filtering/exhaustion and cached alter views",
+      "signalling versus inquiry participant update order",
+      "random heading and nearest-neighbor tie-breaking",
+      "singular chosen-alternative dissonance gate versus per-alternative stored strengths",
+      "literal self-inclusive signalling item-30 definition"
+    ],
+    "source_conflicts_or_unspecified_rules": [
+      "Aspiration is stated as uniform [0,1] in Table 1/Create agents but as 0 to <3 in Stochasticity.",
+      "Section 2.2 says habit changes only for a significantly more satisfying and less dissonant choice; Appendix A's procedure compares dissonance only when satisfaction is within threshold.",
+      "Appendix A does not specify dissonance behavior when positive and negative evaluation sums are both zero.",
+      "The framework permits case-specific network tie changes but does not provide a generic tie-update rule.",
+      "Section 2's exchange activation criterion conflicts with Appendix A's positive singular dissonance-strength gate.",
+      "Section 2's social-importance threshold conflicts with Appendix A's linear rescaling/sign criterion.",
+      "Appendix A ranks the full cached alter list but leaves explicit filtering and exhausted-list behavior unspecified.",
+      "Table 1 describes singular dissonance-strength as that of the chosen alternative, while Table 2 stores per-alternative strengths without stating synchronization after choice changes.",
+      "Signal item 30 is defined as the sum of items 25–30 including item 30 itself; intended aggregation is unresolved."
+    ],
+    "known_source_access_limitations": [],
+    "independent_audit": "First independent audit failed with H1–H7; corrections incorporated in note hash bbcee113…3347a2, pending independent re-audit. Keep audit failed until it passes."
+  },
+  "corrections": [
+    "Replaced the stale cross-paper audit claim in the HUMAT Audit Log with the current pending-audit status.",
+    "Expanded the model state into Model Notation YAML and documented initialization, asymmetric social exchange, dissonance, choice, outputs and case findings with section-specific footnotes.",
+    "Made the aspiration and habitual-choice inconsistencies explicit and retained the unspecified zero-denominator edge case.",
+    "Reconciled all 71 primary bibliography records one-to-one in source order with exact source-title aliases and readable title-based targets.",
+    "Addressed audit-humat.json findings H1–H7: disclosed prose/ODD conflicts, clarified cached list ordering and unspecified exhaustion, recorded asymmetric update sequence, included initialization heading/tie rules, and flagged item-30 self-inclusion and singular/per-option dissonance ambiguity.",
+    "Reorganized the model into the template's four subsections and split research questions into one question per bullet."
+  ]
+}

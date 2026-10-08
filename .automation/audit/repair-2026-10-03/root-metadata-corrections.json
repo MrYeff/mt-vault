@@ -1,0 +1,11 @@
+{
+  "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md": {
+    "source": "arXiv:2311.16586v2, full cached title/author header",
+    "changes": [
+      "Restored article A in title",
+      "Author display matches manuscript Vassilissa Lehoux; canonical existing author-note target retained"
+    ],
+    "note_sha256": "503921900374bcc9911feec266a464b7d1d8108cc6d6e1d200e8497bef174226",
+    "warning": "unchanged"
+  }
+}

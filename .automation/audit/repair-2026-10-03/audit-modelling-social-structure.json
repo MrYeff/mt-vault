@@ -1,0 +1,98 @@
+{
+  "note": "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+  "note_sha256": "9ad79fb2382ea45ba4386ee716e4fd75f6beb1b2fb9a7ae602b5a34184b5b937",
+  "verdict": "PASS",
+  "warning_status": "audit failed preserved",
+  "note_or_warning_edited": false,
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa.html",
+      "sha256": "5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa",
+      "role": "complete published PLOS article HTML; full text and 78-entry reference list"
+    },
+    {
+      "path": "vault/.automation/sources/files/d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d.docx",
+      "sha256": "d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d",
+      "role": "complete published S1 Appendix DOCX; all paragraphs/tables extracted and read, including embedded-equation captions/text; source equations discussed with exact gaps preserved"
+    },
+    {
+      "path": "vault/.automation/sources/files/a5336791787e28836662de4978e4ed546c5ee0be980db66b7e5f7af490b883c4.pdf",
+      "sha256": "a5336791787e28836662de4978e4ed546c5ee0be980db66b7e5f7af490b883c4",
+      "role": "published rendered S1 Appendix PDF; visually inspected appendix pp. 2–5, Eqs. (1)–(10), including trust update/waning, partner-selection strategies, FtM mismatch, staged schedule"
+    }
+  ],
+  "source_coverage": [
+    "PLOS metadata and abstract",
+    "Main article §§Introduction, Social Simulation Model, Experimental Design, Results (all conditions/sensitivity analyses), Discussion, Conclusion",
+    "Complete 78 numbered publisher references, reconciled against note source-order titles",
+    "Rendered S1 Appendix PDF visually inspected, pp. 2-5, Eqs. (1)-(10), trust/search equations and strategy probability formulas; checked against latest note hash."
+  ],
+  "claim_checks": [
+    {
+      "claim": "Population schedule, directed trust/response mechanism, four interaction strategies and partner selection",
+      "source_location": "Main Social Simulation Model; S1 Appendix Interaction and Trust Model, Agent Strategies, Interaction Process and Relationship Formation, Model Control Process",
+      "status": "PASS",
+      "detail": "Extraction matches equal agent turns, random initial stranger selection, memory-dependent choice, cooperation/rejection update, waning, and new/existing partner selection. FtF/FtW/FtM/Staged summaries and stated formula/prose tensions are disclosed."
+    },
+    {
+      "claim": "Trust update/waning and source ambiguities",
+      "source_location": "S1 Appendix Eqs. (1)–(7), trust model, waning, and parameter summary",
+      "status": "PASS_WITH_SOURCE_CONFLICTS_DISCLOSED",
+      "detail": "Note gives compression, signed interaction increments, lagged-trust waning and the missing MIN_WANING value, and preserves equation/prose mismatch. It does not supply an unsupported minimum value."
+    },
+    {
+      "claim": "Fitness objectives and evolutionary process",
+      "source_location": "S1 Appendix Objective Functions and Model Control Process; main article Social Simulation Model",
+      "status": "PASS_WITH_SOURCE_CONFLICTS_DISCLOSED",
+      "detail": "Objective terms and positive/negative weighting, rank-normalization, top/bottom replacement, no inherited relationships and settings are represented. Resource/risk labels and stress/risk direction conflicts are explicitly left unresolved."
+    },
+    {
+      "claim": "Experiments and reported social-structure outcomes",
+      "source_location": "Main Experimental Design and Results, Tables 1–6 and sensitivity analysis",
+      "status": "PASS",
+      "detail": "3125 weight combinations, clustering and tie categories, strategy competition, population/selection sensitivity and output measures match reported text/tables; scope is model simulation, not empirical validation."
+    },
+    {
+      "claim": "Metadata, abstract, and bibliography",
+      "source_location": "PLOS publisher HTML metadata/abstract and full References; note frontmatter and References",
+      "status": "PASS",
+      "detail": "Abstract, DOI/date/title align. At latest hash the note contains 78 bibliography links matching the source list in source order; exact source title aliases preserved; no opaque IDs and no forbidden filename characters in targets."
+    }
+  ],
+  "actionable_fixes": [],
+  "source_gaps": [
+    "PLOS appendix does not resolve its own trust/search discrepancies; summary discloses them.",
+    "Publisher appendix prose/formula conflicts and missing MIN_WANING remain source gaps; note discloses these and does not invent values."
+  ],
+  "independent_audit": true,
+  "visual_source_check": {
+    "pages_viewed": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "equations_checked": [
+      "(1)–(4) compression/update",
+      "(5)–(7) waning",
+      "(8)–(10) new/existing partner and total-trust definitions",
+      "FtF, FtW, FtM and staged strategy probabilities"
+    ],
+    "result": "PASS at latest exact note hash; all rendered source equations and strategy formulas inspected and compared. Note matches visible equations and explicitly discloses the source FtM formula-vs-prose conflict, log-prose vs linear increment, lagged-trust waning and missing MIN_WANING value."
+  },
+  "prior_pending_record": {
+    "verdict": "PENDING_LATEST_HASH_BIBLIOGRAPHY_RECHECK",
+    "note_sha256": "c649fbdaf0cf1d5081c4afd4e716f6a217d1a2da3b0cc29cf1dde774187d039e",
+    "reason": "Latest-author-hash reference-target recheck was pending."
+  },
+  "bibliography_reaudit": {
+    "note_sha256": "9ad79fb2382ea45ba4386ee716e4fd75f6beb1b2fb9a7ae602b5a34184b5b937",
+    "source_reference_count": 78,
+    "note_reference_count": 78,
+    "forbidden_target_count": 0,
+    "opaque_unresolved_count": 0,
+    "result": "PASS",
+    "check": "Latest note bibliography parsed; all 78 links present, source title aliases/order unchanged, 27 targets now filename-safe, no opaque unresolved identifiers."
+  },
+  "candidate_for_finalization": true
+}

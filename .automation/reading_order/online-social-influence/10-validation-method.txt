@@ -1,0 +1,58 @@
+D. Dependent Variable: Validity
+We evaluate the predictions of the models for the individual
+agents by comparing them to the empirical data set. For
+each model, for each agent, and for each choice (note that
+we have limited this choice to only Candidate Tweets), the
+number of true positives and false positives is counted. As the
+behavior model is probability-based, we have used a Monte
+Carlo approach, with 250 runs per model. The result contains
+per model an average true positive rate TP and a false positive
+rate FP, which together determine the validity of each model.
+This validity measure is then used to compare the different
+models to each other.
+Mathematically, the validity of the different models is
+determined by means of the sensitivity index. This index is
+calculated in the following manner:
+d0
+(r) = Z(TP(r)) − Z(FP(r))
+where the true positive rate (TP) and the false positive rate
+(FP) is calculated as follows:
+TP(r) =
+n
+X
+a=1
+m
+X
+i=1
+min(Mx(a, i, r), v(a, i))
+FP(r) =
+n
+X
+a=1
+m
+X
+i=1
+max(Mx(a, i, r) − v(a, i), 0)
+where n is the total number of agents in the network (20822)
+and m is the total number of choices (in this case the number
+of candidates of the talent show, which is 6). The argument r
+is the index of the simulation (in total 250). The variable
+Mx(a, i, r) is the number of predicted tweets of model x
+(either CLNC, CL, NCL, NCLLC, or NCLLC+) by agent a
+about choice i. The variable v(a, i) is the actual number of
+tweets by agent a about choice i.
+The z-score is calculated as follows:
+Z(Y (r)) =
+Y (r) − µY
+σY
+where µY is the mean and σY the standard deviation of either
+the true positive rate (i.e., Y = TP) or false positive rate (i.e.,
+Y = FP) over all simulations r.
+E. Data Analyses
+For each model, there are 250 z-scores of true and false
+positives. We plot these values in a Receiver Operating
+Characteristic (ROC)-plot for visual analysis. Consequently, a
+repeated measures analysis of variance (RM-ANOVA) shows
+the differences between the mean sensitivity indices for each
+model. Finally post-hoc pair-wise comparisons can be carried
+out to determine which of these differences are significant.

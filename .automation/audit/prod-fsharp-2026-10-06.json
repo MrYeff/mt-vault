@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-06",
+  "scope": "PROD F# World/map migration, library helpers and experiment recipes",
+  "review": "Self-review against the primary paper; not an independent agent audit",
+  "primary_source": "https://arxiv.org/pdf/2112.00626",
+  "paper_pdf_sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4",
+  "paper_sections": [
+    "Algorithm 1",
+    "3.1",
+    "3.2",
+    "4",
+    "4.1",
+    "4.2",
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "Figures 2\u20135",
+    "Table 1"
+  ],
+  "packages": {
+    "FSharp.Stats": "0.6.0",
+    "FSharpPlus": "1.9.1"
+  },
+  "validation": {
+    "project_build": "passed; zero warnings/errors",
+    "checks": "passed using installed package assemblies",
+    "experiment_scripts": "A\u2013F load/compile passed using installed package assemblies",
+    "paper_scale_runs": "not run; require LFR worlds and unreported settings"
+  },
+  "limitations_documented_in": "models/src/prod/README.md",
+  "cli_arguments": false,
+  "files": {
+    "models/src/prod/0_Framework.fs": "6886ec920b2e25a6d5cbf4a07f43742366aa8053c33b02ef6b3ba5d878d02d20",
+    "models/src/prod/1_Initialisation.fs": "156306128c98b67abcc7544e7df9d4c5d65e3b46ecd1cd1e2859ce2e02535ca0",
+    "models/src/prod/2_UpdateRules.fs": "bfb17801312c8b2e70aa23afecbd1bdfc47bd0331181ba724eaf0a16fef1cee7",
+    "models/src/prod/3_Recomenders.fs": "370213aba29c7b5d1767c208b004c1a7996326f85aee7ca244d43611c80c82b1",
+    "models/src/prod/4_Measures.fs": "76c0cd272aa7bfc417ab42baf728b59965c9607b39e8ac8a61e240c6d0e969b6",
+    "models/src/prod/Checks.fsx": "b47ed47e426aba7188810431f5abcdfeacb59c14de916845fb57229f3b552e49",
+    "models/src/prod/Helpers.fs": "5656e3583a5c81d0f4c9c8ff2f7d7f3541421c6a008512079bdae97926e4983d",
+    "models/src/prod/Prod.fsx": "7ab580940948a34bf1843dbc9d000ab005aa6e4081245c61bd3487cfaaefa741",
+    "models/src/prod/README.md": "aec28acb9faae5d050fd8cd6b908d7cf158f2a1ac909291811fedff5cc8e9d09",
+    "models/src/prod/experiments/5_Experiments.fs": "6bb99fc20bea97f5aa45f7f956b4277c8faa03d54c958d2d20c26d43742354dd",
+    "models/src/prod/experiments/A_EchoChambers.fsx": "0787bfd4ae3bb4a30edced029467e215457302c55cf86ee12081b5701f003a1a",
+    "models/src/prod/experiments/B_Polarization.fsx": "ad64729db77e861bd7581d9a34a42b0b1ade04c4882519a68556c34ff9c43fe1",
+    "models/src/prod/experiments/C_Rewiring.fsx": "76fc2830d31ebfa77e0b27647e3d2ff0b315590ad04c24afc89cdf4ecd9df7ea",
+    "models/src/prod/experiments/D_Susceptibility.fsx": "3913bdce4071545e3df4bb09ee85371141d87cd3e2f879f02626c4251d821432",
+    "models/src/prod/experiments/E_Interventions.fsx": "87dcc116ff58e57ebd083bcb589f689d2a42a4a41f16fc9ad9fa3e520dc7c863",
+    "models/src/prod/experiments/ExperimentSettings.example.json": "5a723597001435ee6e9589cd62e8bd56ee313a8c1a638909deccde3e44f5ed14",
+    "models/src/prod/experiments/F_WorldEvolution.fsx": "64e11fd29670222b1883a215feb2474df26c622a0256df7929cdeaf1f30d0975",
+    "models/src/prod/experiments/Harnes.fsx": "9acd5a829118caaec011642204257870b8d9d101f1e7833ed077ff1db88fe844",
+    "models/src/prod/experiments/_experiments.txt": "7e164b8cb3067e8024617af9c6b8e4a1cfeb30d1cf5c54937f04740af01ac96e"
+  },
+  "shared_experiment_helper": "models/src/prod/experiments/Harnes.fsx",
+  "settings": "Shared defaults in Harnes.fsx, per-script settings and overrides, documented in _experiments.txt; unreported defaults marked MOCK"
+}

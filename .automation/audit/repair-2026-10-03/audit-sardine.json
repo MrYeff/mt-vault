@@ -1,0 +1,138 @@
+{
+  "note": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+  "verdict": "FAIL",
+  "note_sha256": "f7cfa0222fe4e12e28fd15ec36f5c1fe4d10cee29e04125f2ca51bfeac02af69",
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a.html",
+      "sha256": "7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a",
+      "role": "full primary arXiv v2 HTML"
+    },
+    {
+      "path": "vault/.automation/sources/files/46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192.txt",
+      "sha256": "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192",
+      "role": "full HTML-derived text"
+    }
+  ],
+  "source_read_coverage": [
+    "Abstract and metadata",
+    "§1.1–1.3 motivation, specifications, agenda and contributions",
+    "§2 MDP, action and reward definition",
+    "§3.1–3.5 item/user embeddings, initial recommendation, exact relevance/attractiveness/click equations, boredom and influence, observability",
+    "§4.1–4.4 all nine environments, methods, Table 3 simulator and agent settings, evaluation protocol and metrics",
+    "§5.1–5.3 all principal results, Figures 2–6 and Table 4 values/interpretations",
+    "§6 related work and Table 5",
+    "§7 conclusions/findings/future work",
+    "Appendices A–D (efficiency, webtoon environment/results, influence experiment, item scores)",
+    "all 55 source bibliography entries"
+  ],
+  "coverage_scope": "Full primary source, appendices and references; not abstract-only.",
+  "abstract_check": {
+    "status": "PASS",
+    "evidence": "Note abstract matches the primary arXiv v2 abstract; source-version metadata was checked against arXiv v2 dated 2024-04-08."
+  },
+  "claim_checks": [
+    {
+      "claim": "Synthetic sparse unit-normalized item/user embeddings and random cold-start slate; item relevance dot product; sigmoid attractiveness times rank examination; Bernoulli clicks.",
+      "status": "PASS",
+      "evidence": "§§2–3.3; note equations and dimensional/control description align with source."
+    },
+    {
+      "claim": "Boredom triggers when main-topic frequency exceeds threshold over recent clicked items; two variants, with churn-and-return used in experiments.",
+      "status": "PASS",
+      "evidence": "§3.4 and §4.1. Note distinguishes temporary topic loss from all-vector churn, and states experiments use churn-and-return only."
+    },
+    {
+      "claim": "Clicked-item influence uses weighted old user vector plus mean of clicked item embeddings.",
+      "status": "FAIL",
+      "evidence": "§3.4 gives e_u := omega e_u + (1-omega) mean(clicked embeddings), but for an empty clicked set the mean is undefined. The note’s typed pseudocode adds `if clicked.is_empty(): out = user`. Labeling this an extraction convention does not make it source-derived; it defines a new transition. Replace with an explicitly unspecified zero-click update case, while retaining the source’s denominator gap."
+    },
+    {
+      "claim": "Zero-vector churn and sigmoid-at-zero inconsistency.",
+      "status": "PASS_WITH_DISCLOSURE",
+      "evidence": "§3.4 says all-zero user embedding implies absence of clicks, but §3.3’s finite sigmoid yields positive attractiveness at zero relevance (e.g. alpha/(1+exp(lambda*mu)) for stated positive finite settings). Note discloses that mismatch and does not add a no-click gate."
+    },
+    {
+      "claim": "Table 3/agent controls and evaluation protocol.",
+      "status": "PASS",
+      "evidence": "§§4.2–4.4; values match table: L=100/S=1 or 10/nI=1000/nT=10 for main tasks; reranking L=10/S=nI=10, lambda=5/mu=.30; boredom parameters 10/5/5; influence omega=.95 where enabled; 500k RL training steps, five seeds, 25 fresh-user episodes every 50k steps. Note accurately summarizes encoder/method settings and distinguishes configured settings."
+    },
+    {
+      "claim": "Main results and outcome interpretation.",
+      "status": "PASS",
+      "evidence": "§§5.1–5.3 and Tables 3–4: single-item static oracle 100 and SAC near optimal by 200k; dynamic SAC near 70 and greedy near 50; slate embedding-quality caveat; transformer-vs-GRU partial-observation trends; uncertainty results; reranking returns (PBM 21.17/13.14, dCTR 9.28/8.97, SAC 19.01/14.82) and normalized propensity MSE .570/.915. Note preserves these as paper-specific experimental findings."
+    },
+    {
+      "claim": "Appendix environmental/data/results included in note.",
+      "status": "PASS",
+      "evidence": "Appendix B semi-synthetic Webtoon setting and outcomes, C influence values/results, and D item-score result are covered or appropriately summarized at note’s level; note states scope limitations without claiming real-world validation."
+    }
+  ],
+  "bibliography_check": {
+    "status": "PASS",
+    "primary_source_entries": 55,
+    "note_items": 55,
+    "evidence": "The source bibliography has 55 entries; note contains 55 title-bearing links, and checked titles/order against primary HTML blocks. Existing target mappings or natural title labels are used; no opaque ID placeholders or count mismatch observed."
+  },
+  "metadata_check": {
+    "status": "PASS",
+    "evidence": "The primary is arXiv:2311.16586v2 dated 2024-04-08; source DOI and corrected title/authors are consistent with note metadata."
+  },
+  "unresolved_or_conflicting_source_details": [
+    "Clicked-item mean is undefined when the click set is empty; source does not specify a fallback/update behavior.",
+    "The churn explanation says all-zero embedding entails no clicks, but the finite sigmoid and positive alpha yield nonzero click probability at zero relevance; this source-internal inconsistency is correctly disclosed.",
+    "Composition of simultaneous boredom and influence and timer reset semantics are not fully specified; note discloses these gaps."
+  ],
+  "note_or_warning_edited": false,
+  "independent_audit": true,
+  "latest_reaudit": {
+    "verdict": "FAIL",
+    "note_sha256": "f7cfa0222fe4e12e28fd15ec36f5c1fe4d10cee29e04125f2ca51bfeac02af69",
+    "claim_checks": [
+      {
+        "claim": "Zero-click behavior for clicked-item influence.",
+        "status": "FAIL",
+        "evidence": "Although the adjacent prose now says the zero-click case is unspecified, the pseudocode still explicitly contains `if clicked.is_empty(): out = user`. That is an invented unchanged-user transition and conflicts with the stated disclosure. Remove that branch and leave the empty-set transition explicitly undefined/unspecified; retain the denominator gap."
+      },
+      {
+        "claim": "All other previously audited mechanisms, parameter settings, outcomes, metadata and 55 references.",
+        "status": "PASS",
+        "evidence": "Spot-checked current note against the complete primary arXiv v2 full text and source bibliography; no other changes identified beyond the zero-click disclosure and reference whitespace normalization."
+      }
+    ],
+    "source_files": [
+      {
+        "path": "vault/.automation/sources/files/7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a.html",
+        "sha256": "7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a"
+      },
+      {
+        "path": "vault/.automation/sources/files/46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192.txt",
+        "sha256": "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192"
+      }
+    ],
+    "bibliography_check": "55/55 source titles/order still pass after whitespace normalization.",
+    "warning_edited": false,
+    "coverage": "Full source was read in the preceding independent audit; current edit rechecked against §3.4 and other revised lines."
+  },
+  "final_reaudit": {
+    "verdict": "PASS",
+    "note_sha256": "e41d285614c5060f6ce44cea9d1ef4576791bfd2416a388342db912914c8ca5b",
+    "source_read_coverage": "Independent full-source coverage from preceding audit: full arXiv v2 paper, appendices A–D, tables/figures and 55 bibliography entries; latest edit rechecked directly against §3.4.",
+    "claim_check": "PASS: empty-click branch now contains an explicit unspecified placeholder (`... # update unspecified in the paper`) and performs no invented unchanged-user transition. Adjacent prose accurately states the source formula’s zero-click gap.",
+    "bibliography_check": "PASS: 55 source bibliography titles/order, current 55 references; prior title/order check remains applicable; whitespace normalized.",
+    "other_claims": "PASS: all other previously checked model mechanisms, settings, results, metadata, abstract and source limitations are unchanged from the full-source audit.",
+    "source_files": [
+      {
+        "path": "vault/.automation/sources/files/7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a.html",
+        "sha256": "7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a"
+      },
+      {
+        "path": "vault/.automation/sources/files/46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192.txt",
+        "sha256": "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192"
+      }
+    ],
+    "warning_edited": false
+  },
+  "current_verdict": "PASS",
+  "current_note_sha256": "e41d285614c5060f6ce44cea9d1ef4576791bfd2416a388342db912914c8ca5b"
+}

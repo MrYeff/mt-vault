@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-04",
+  "status": "pending independent re-audit",
+  "current_note_sha256": "cfe070f29bc1da4116a05ea49292a8bbad0e69148ce2dc145adf164a672edebd",
+  "corrections": [
+    "Restored DOI damaged by interim broad citation regex.",
+    "Rebuilt 132 source bibliography entries from published raw text, removing page headers before parsing; restored item 123 continuation.",
+    "Replaced 18 footnotes explicitly with sections and equations from published version; removed incorrect preprint page ranges."
+  ],
+  "interim_edit": "interim-citation-edit.txt",
+  "scientific_content": "Previous audited model retained; final source and citation repairs require independent verification."
+}

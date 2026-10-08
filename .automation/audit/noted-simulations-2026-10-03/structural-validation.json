@@ -1,0 +1,42 @@
+{
+  "scope": "Structural checks only; independent full-source audits are separate and required.",
+  "papers": [
+    {
+      "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "sha256": "333f512c8b88d44c4cd3f5087dd027d9ee38955abc4a0ad891e4434ee686ea5c",
+      "warnings": [],
+      "references": 35,
+      "issues": []
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+      "warnings": [],
+      "references": 87,
+      "issues": []
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "sha256": "85a9d5c93ee69a47c675580fd5f856602df4a7894c2b8fcd6aef32380146b17b",
+      "warnings": [],
+      "references": 71,
+      "issues": []
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+      "warnings": [],
+      "references": 62,
+      "issues": []
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "sha256": "a9b556231716cd77734d70d0ad51179a8774df4707f68a7f913591921172307e",
+      "warnings": [
+        "fulltext unavailable"
+      ],
+      "references": 59,
+      "issues": []
+    }
+  ]
+}

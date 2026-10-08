@@ -1,0 +1,51 @@
+{
+  "scope": "Focused stronger root visual review of simulation-relevant trust/search equations and fitness definitions, supplement to cheap full-source audit",
+  "source_pdf": "vault/.automation/sources/files/a5336791787e28836662de4978e4ed546c5ee0be980db66b7e5f7af490b883c4.pdf",
+  "images_visually_read": [
+    {
+      "page": 2,
+      "path": "vault/.automation/sources/files/cb1b5a45d39762893457baeac16b19ace94491209356127880904dce56d606ec.png",
+      "sha256": "cb1b5a45d39762893457baeac16b19ace94491209356127880904dce56d606ec"
+    },
+    {
+      "page": 3,
+      "path": "vault/.automation/sources/files/a94ff84129dc926dd4b541a0184daa95b80202134f2d3d5d3832c567b757fe76.png",
+      "sha256": "a94ff84129dc926dd4b541a0184daa95b80202134f2d3d5d3832c567b757fe76"
+    },
+    {
+      "page": 4,
+      "path": "vault/.automation/sources/files/c111312304db8f0df14b828ee6cdf814b645f6aa120730d866bd8640da763c7c.png",
+      "sha256": "c111312304db8f0df14b828ee6cdf814b645f6aa120730d866bd8640da763c7c"
+    },
+    {
+      "page": 5,
+      "path": "vault/.automation/sources/files/4410d64db782fecfaa513810dda322ab51bcb9336832a6e15b6916e875ad2276.png",
+      "sha256": "4410d64db782fecfaa513810dda322ab51bcb9336832a6e15b6916e875ad2276"
+    }
+  ],
+  "checks": [
+    {
+      "location": "S1p2\u20133 Eqs1\u20137",
+      "result": "PASS: note compression CI, signed increments and lagged-trust waning match printed equations; numerical MaxTrust100/MaxCR10/MinCR0 and undefined MIN_WANING preserved."
+    },
+    {
+      "location": "S1p4\u20135 Eqs8\u201310 plus strategies(a\u2013d)",
+      "result": "PASS: note new/existing and FtF/FtW/Staged probabilities match formulas. FtM actual formula/prose reversal correctly disclosed; no invented selection normalization."
+    },
+    {
+      "location": "S1p7 Objective Functions, full rendered text",
+      "result": "PASS: wellbeing/resource/alliance/risk/stress formulas match source text and stated coefficients; source risk prose direction conflicts with ratio and note discloses."
+    }
+  ],
+  "required_before_finalization": [
+    "Independent cheap visual source check must complete rather than rely on paragraph extraction of EMF equations.",
+    "Filename-safe target corrections must be audited.",
+    "Do not call different baseline/competition forage-social configurations a source contradiction without proof they refer to same condition."
+  ],
+  "status": "focused_review_complete_and_independent_latest_hash_reaudit_passed",
+  "resolved_before_finalization": [
+    "Independent cheap auditor visually checked rendered source formulas.",
+    "Filename-safe references verified against latest exact note hash.",
+    "Different baseline and competition configurations correctly distinguished."
+  ]
+}

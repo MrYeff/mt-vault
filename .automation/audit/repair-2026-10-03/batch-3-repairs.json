@@ -1,0 +1,258 @@
+{
+  "date": "2026-10-03",
+  "batch": 3,
+  "records": {
+    "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md": {
+      "status": "source_review_complete_pending_independent_reaudit",
+      "primary_source": "https://www.jasss.org/26/3/9.html",
+      "source_availability": "Full journal HTML accessible; current published article/version, 154474-byte cached download.",
+      "source_path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705.html",
+      "source_sha256": "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705",
+      "source_sections_read": [
+        "Journal header/abstract and metadata",
+        "Introduction and model integration/architecture",
+        "Social context, agents, and normative group inputs",
+        "Model formalization: clustering and salience, Eqs. (1)-(10), including Eq. (10) under-specified accessibility rule",
+        "Dictator Game use case, Eq. (11), parameters, scenarios and results",
+        "Trash Collection use case, Eq. (12), parameters, scenarios and results",
+        "Discussion, conclusion and complete references section"
+      ],
+      "note_path": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "note_sha256": "c08d9dc1f6dc367d8c63f0f06ec64d7e820e180300b3dfe2aa1d240958f96326",
+      "warning_preserved": "audit failed",
+      "changes_made": [
+        "Rebuilt the complete References list from the current published journal HTML in source order. Replaced all 18 opaque UnresolvedReference IDs with verified title-bearing links; retained existing mapped targets where their title matches the source."
+      ],
+      "source_based_review": "Current extraction already contains the corrections required by prior source findings: normative prototype match is separate from comparative fit; accessibility update is explicitly scenario-dependent and left unspecified by Eq. (10); both use cases include source-defined actions/settings/outcomes. No additional unsupported claim identified in this review.",
+      "abstract_and_metadata": "Abstract and bibliographic metadata match journal page; prior exact/full-source check confirms.",
+      "references": {
+        "source_entries_current_publisher_html": 52,
+        "note_entries_after_repair": 52,
+        "opaque_unresolved_targets_after_repair": 0,
+        "source_sha256": "d3ea1d4f2f1a453b4c2b6cab961eb1b50e2d50df49168dee2abc304a9c9c3705",
+        "status": "All 52 reference titles reconciled one-to-one in exact source order against the complete cached publisher References section.",
+        "count_discrepancy": "Earlier audit-when-i-we.json reported 55 source entries. Direct recount of the complete cached current publisher HTML finds 52 reference paragraphs. The note now follows the primary source; three unsupported surplus entries were excluded."
+      },
+      "fulltext_vs_abstract": "Bibliography correction uses full publisher HTML References section.",
+      "conflicts_or_gaps": [
+        "Equation (10) leaves the exact accessibility function scenario-dependent; the note correctly does not invent a universal function.",
+        "Bibliographic unresolved-reference placeholders remain a disclosed limitation."
+      ],
+      "candidate_for_independent_audit": true
+    },
+    "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md": {
+      "status": "source_review_complete_pending_independent_audit",
+      "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+      "source_availability": "Full published Springer HTML plus separate Table 4 and derived full-text cache accessible; source is the 2026 published article/version.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e.html",
+          "sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e",
+          "kind": "published full article HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab.html",
+          "sha256": "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab",
+          "kind": "Table 4 HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+          "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f",
+          "kind": "derived full text"
+        }
+      ],
+      "source_sections_read": [
+        "Publisher header, abstract, author/date/DOI metadata",
+        "Introduction and contribution/operational validity framing",
+        "§2.3 platform architecture",
+        "§3.1 calibration data and windows",
+        "§3.2 persona sampling, state, actions/interests, server-side handler, feed sorting/visibility/thread context",
+        "§3.3 initialization, stochastic menu, budget, action likelihoods, churn/growth schedule and Table 4",
+        "§3.4 five validation measures, benchmark matching and graph construction",
+        "Results §§4.1–4.5: activity, network, toxicity, topics/embeddings and convergence",
+        "Discussion, limitations and conclusion",
+        "Full publisher references section"
+      ],
+      "note_path": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "note_sha256": "93cc1e23d2bfbcd30c3d381f6f80af6f21e8def50dbeb3879db4d9c697db235b",
+      "warning_preserved": "audit failed",
+      "changes_made": [
+        "Rebuilt all publisher References in source order, replacing 30 opaque identifiers with verified titles; corrected bibliography count from 49 to 50 after parsing complete publisher HTML."
+      ],
+      "source_based_review": "Full article and separate Table 4 reread against current model claims and footnotes (r1–r6). No additional model-body correction identified in this pass; activation and interest-update algorithms and heuristic weights remain accurately disclosed as unspecified/heuristic.",
+      "abstract_and_metadata": "Abstract matches publisher abstract; title, authors, published date and DOI match publisher page.",
+      "references": {
+        "source_entries": 50,
+        "note_entries": 50,
+        "opaque_targets_remaining": 0,
+        "title_and_order_check": "PASS: each display title matches source entry at same index; complete publisher HTML count confirmed.",
+        "primary_source_sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e",
+        "table4_sha256": "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab"
+      },
+      "fulltext_vs_abstract": "Method and outcome extraction checked against full publisher article and Table 4, not abstract alone.",
+      "conflicts_or_gaps": [
+        "The paper does not provide a full daily activation algorithm or numerical formula for interest updates; current note labels both limits.",
+        "Read/search weights and persona distributions are described as heuristic in the source and note."
+      ],
+      "candidate_for_independent_audit": true,
+      "repair_report": "vault/.automation/audit/repair-2026-10-03/repair-towards-operational-validation.json"
+    },
+    "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md": {
+      "status": "source_review_complete_pending_independent_audit",
+      "primary_source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605",
+      "source_availability": "Full PLOS article HTML and its S1 Appendix DOCX are cached; full article sections, numbered References, appendix formulas, methods, outputs and parameter tables reviewed.",
+      "source_paths": [
+        {
+          "path": "vault/.automation/sources/files/5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa.html",
+          "sha256": "5b7225c76e0ecd074c1a92cee28dccbd6994ea0850c4b8f0939fb063338758fa",
+          "kind": "published PLOS full article HTML"
+        },
+        {
+          "path": "vault/.automation/sources/files/d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d.docx",
+          "sha256": "d37769f8aeee2dd768d0f02930a6a9666d94974a2fb7713d2e9f1aa59897a79d",
+          "kind": "published S1 Appendix DOCX"
+        }
+      ],
+      "source_sections_read": [
+        "PLOS abstract and publication metadata",
+        "Introduction and research questions",
+        "Social Simulation Model and experimental design",
+        "Results: initial fitness landscape, strategy competition, initial-condition sensitivity, population-size and selection-rate sensitivity",
+        "Discussion and conclusion",
+        "Complete PLOS References (78 entries)",
+        "S1 Appendix: trust increment and waning Eqs. (1)–(7); four strategies and new/existing partner probabilities Eqs. (8)–(10); model-control process; objective functions; experimental design and complete parameter summary; supplementary references"
+      ],
+      "note_path": "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "note_sha256": "9ad79fb2382ea45ba4386ee716e4fd75f6beb1b2fb9a7ae602b5a34184b5b937",
+      "warning_preserved": "audit failed",
+      "changes_made": [
+        "Expanded model setup and measured results with the 3,125-run 1–5 fitness landscape, k-means settings and tie-pattern frequencies.",
+        "Recorded the source discrepancy between initial F:S=1:8 and competition F:S settings 8:1, 5:1, 4:1 and 1:1; noted selection and mutation settings.",
+        "Rebuilt References from the 78 numbered PLOS entries in exact publisher order with source-title links; removed six opaque placeholders and 13 surplus imported targets outside the publisher bibliography.",
+        "Clarified that baseline F:S=1:8 and competition F:S=8:1, 5:1, 4:1, 1:1 are separate configurations, not an unresolved contradiction; explicitly identifies zero-denominator cases left unspecified in source.",
+        "Sanitized 27 reference targets containing filesystem-forbidden characters, preserving source display titles and order; reused exact existing-paper targets where available."
+      ],
+      "abstract_and_metadata": "Abstract text, title, authors, DOI and 2016-07-18 publication date match the PLOS primary article; abstract retained.",
+      "bibliography_check": {
+        "publisher_reference_entries": 78,
+        "note_reference_items_after_repair": 78,
+        "opaque_targets_after_repair": 0,
+        "status": "Complete one-to-one source-order list; titles transcribed from PLOS reference data-title attributes or the visible full bibliography text. The four S1 Appendix supplementary citations are included among the numbered PLOS references.",
+        "surplus_imported_targets_removed": 19
+      },
+      "source_conflicts_or_gaps": [
+        "Main text swaps R/RS labels for resource and risk in the objective equation versus appendix definitions; note retains this conflict.",
+        "Stress and risk prose are in tension with appendix formula directions; note retains both.",
+        "FtM equation and prose assign direct/reversed trust weights to opposite rank halves; note retains the conflict.",
+        "Waning Eq. (7) uses lagged trust while parameter summary calls the decrease linear at 8%; MIN_WANING has no reported value.",
+        "The source does not specify handling when incoming/outgoing has a zero denominator or incoming+outgoing is zero."
+      ],
+      "candidate_for_independent_audit": true,
+      "last_change_scope": "Clarification of distinct experimental configurations and explicit zero-denominator gaps; warning unchanged.",
+      "reference_target_sanitization": {
+        "changed_targets": 27,
+        "mapping_preferred": true,
+        "exact_display_titles_preserved": true,
+        "order_unchanged": true,
+        "forbidden_characters_removed": true
+      }
+    },
+    "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md": {
+      "status": "source_review_complete_pending_independent_reaudit",
+      "primary_source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
+      "source_version": "PNAS Nexus 3(7), pgae258 (2024); publisher masthead publication date 2024-06-29, corrected/typeset 2024-07-11.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0.html",
+          "sha256": "b832da9ab85826adde24257e74f0948d6f0ad2ca035ac0d8c4543e40c2fbf2c0",
+          "role": "full publisher HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/6e2f4d59b6a15632494861ebce47a4330cac154a5b31f8057b2a8e800d2c17da.txt",
+          "sha256": "6e2f4d59b6a15632494861ebce47a4330cac154a5b31f8057b2a8e800d2c17da",
+          "role": "derived full-text extraction used for sequential review"
+        }
+      ],
+      "sections_read": [
+        "publisher metadata and complete abstract/significance statement",
+        "Introduction",
+        "Results: network vulnerabilities, infiltration/deception/flooding, cascade analyses, exposure scaling, targeting",
+        "Methods: diffusion process, quality/appeal densities, empirical graph selection/construction, bad-actor subnetwork/growth/targeting, quality metric/stopping rule, cascade definitions and run parameters",
+        "Discussion and limitations",
+        "complete 101-entry publisher References list"
+      ],
+      "scope": "Complete primary publisher article read sequentially from cached full-text extraction; all model rules, source-reported controls/outcomes, limitations and all reference titles were checked. The separate supplementary material is cited by the article but was not needed to support the extracted equations and reported article-level outcomes.",
+      "note_path": "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "note_sha256": "306a9e8d66cafa89ecddc42528c0d1536be709a429157dda6d635bd7747baaff",
+      "warning_preserved": "audit failed",
+      "changes_made": [
+        "Corrected publication date to publisher masthead date 2024-06-29.",
+        "Expanded provenance for the sampled Twitter graph and distinguished exact hub, cluster and random rewiring controls.",
+        "Added primary-source reported network/tactic quality and exposure/reshare cascade findings with parameters and significance where stated.",
+        "Rebuilt References to the publisher’s complete 101-entry bibliography in exact source order, replacing 43 opaque UnresolvedReference targets with verified title-derived links and removing 23 surplus imported references."
+      ],
+      "abstract_and_metadata": "Abstract text matches publisher abstract. Title/authors/DOI match. Publication date corrected from 2024-06-28 to 2024-06-29 per publisher masthead (article history also reports 2024-07-11 corrected/typeset).",
+      "bibliography_check": {
+        "source_entries": 101,
+        "note_entries_after_repair": 101,
+        "opaque_unresolved_targets_after_repair": 0,
+        "surplus_imported_items_removed": 23,
+        "status": "PASS: all 101 title blocks reconciled one-to-one in exact publisher source order; unresolved IDs replaced by source-title-derived links."
+      },
+      "source_based_review": "Existing distribution equations, mechanics, parameter settings, stopping rule, target feature weighting, cascade definitions and stated limitations were checked against the full Methods and Results. The revised summary preserves simple contagion/static network assumptions and does not claim that the simulation evaluates live intervention effects.",
+      "conflicts_or_gaps": [
+        "The article refers readers to separate Supplementary Material for additional robustness/convergence detail and empirical distribution diagnostics; this note captures the article’s equations and explicitly does not reproduce those supplements."
+      ],
+      "candidate_for_independent_audit": true
+    },
+    "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md": {
+      "status": "source_review_complete_pending_independent_reaudit",
+      "primary_source": "https://www.jasss.org/24/4/6.html",
+      "source_version": "Journal of Artificial Societies and Social Simulation 24(4), article 6; published 2021-10-31.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888.html",
+          "sha256": "ec2a1ab70322224cb020767c5dac0711fc29b0c26db16d01f799b348d2671888",
+          "role": "full publisher HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/febdb4fffdd87b3e007f22169d7f6e2852c8a8b515d5c28169366ed11c45578f.txt",
+          "sha256": "febdb4fffdd87b3e007f22169d7f6e2852c8a8b515d5c28169366ed11c45578f",
+          "role": "derived full-text extraction used for sequential review"
+        }
+      ],
+      "sections_read": [
+        "publisher metadata and full abstract",
+        "Introduction and theoretical background",
+        "ACT and expectation-states theory background",
+        "model entities/state variables, group/protocol environment, ODD process and initialization",
+        "equations (1)–(5), polynomial EPA transformation, objective and action optimization",
+        "actor/object selection, reciprocal actions, group actions, network restrictions, discrete behaviors and protocols",
+        "jury replication, toy network experiments, expectation-states experiment, GitHub collaboration experiments",
+        "discussion, limitations, model documentation and notes",
+        "all 74 references"
+      ],
+      "scope": "Full publisher article and complete ODD appendix read sequentially from the cached derived text. Abstract, every model mechanism and application control/outcome were checked against source. Bibliography count and sequence were checked against all 74 publisher-reference entries.",
+      "note_path": "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "note_sha256": "e263138f2a441551eda6477a0b52a2631994fde878978a87c66642d7e55c5cc3",
+      "warning_preserved": "audit failed",
+      "changes_made": [
+        "Expanded state/control schema with group-action enablement, reciprocity, coefficient dataset and protocol segment settings/hooks.",
+        "Clarified actor selection order, reciprocal handling, event-level deflection and criteria scope, and protocol/network-constrained actions.",
+        "Added clipped-normal initialization rules and source-reported jury correlation, toy-network, expectation-states and GitHub experiment controls/outcomes; disclosed full-information, group-validation, learning and long-term-goal limitations."
+      ],
+      "abstract_and_metadata": "Abstract text matches full publisher abstract; authors, DOI and publication date (2021-10-31) match publisher masthead.",
+      "bibliography_check": {
+        "source_entries": 74,
+        "note_entries": 74,
+        "opaque_unresolved_targets": 0,
+        "status": "PASS count and source-order list checked; existing title-derived links retained. No bibliography rewrite was required."
+      },
+      "source_based_review": "The model remains an extraction of the published simulation, not an executable recipe; the numeric ACT coefficient matrix and application EPA data remain source/application inputs rather than invented constants.",
+      "conflicts_or_gaps": [
+        "The authors note ACT impression equations derive from dyadic vignette studies and are not empirically tested in group settings; turn-taking and shared full-state awareness are idealized. These limits are now explicit."
+      ],
+      "candidate_for_independent_audit": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "note": "What are my goal - LLM Asisted.md",
+  "scope": "Replace online paper references with Obsidian entries. New entries are metadata-only placeholders; no content extraction/audit performed.",
+  "papers": [
+    {
+      "title": "Very Happy People",
+      "source": "https://www.csuchico.edu/_assets/documents/office/bss/diener-seligman-very-happy-people-2002.pdf",
+      "doi": "10.1111/1467-9280.00415",
+      "old": "[Diener & Seligman (2002), Very Happy People](https://www.psychologicalscience.org/journals/psychological-science/1467-9280.00415/)",
+      "note": "Literature/Papers/Entries/Very Happy People.md",
+      "status": "not importet",
+      "sha256": "e5983f7eb60b7710f8b7b31803fc71c4bf95502a6d737a12c7a1565d75b9e80d"
+    },
+    {
+      "title": "A Systematic Review and Meta-Analysis of the Association Between Physical Capability, Social Support, Loneliness, Depression, Anxiety, and Life Satisfaction in Older Adults",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11512076/",
+      "doi": "10.1093/geront/gnae128",
+      "old": "[2024 meta-analysis](https://pubmed.ncbi.nlm.nih.gov/39233622/)",
+      "note": "Literature/Papers/Entries/A Systematic Review and Meta-Analysis of the Association Between Physical Capability, Social Support, Loneliness, Depression, Anxiety, and Life Satisfaction in Older Adults.md",
+      "status": "not importet",
+      "sha256": "7c3e0a5b1b36f4a9ae934acc90a127c2b4a4b1ad60fd63418a7069a6617451be"
+    },
+    {
+      "title": "The Satisfaction With Life Scale",
+      "source": "https://labs.psychology.illinois.edu/~ediener/Documents/Diener-Emmons-Larsen-Griffin_1985.pdf",
+      "doi": "10.1207/s15327752jpa4901_13",
+      "old": "[Diener et al. (1985), SWLS](https://pubmed.ncbi.nlm.nih.gov/16367493/)",
+      "note": "Literature/Papers/Entries/The Satisfaction With Life Scale.md",
+      "status": "not importet",
+      "sha256": "3a2912689215d197e5e5f5ef8571251e4a5c6a31272d30afe5a442989f42e6b6"
+    },
+    {
+      "title": "Social Integration and Health: The Case of the Common Cold",
+      "source": "https://www.cmu.edu/joss/content/articles/volume1/cohen.html",
+      "doi": null,
+      "old": "[Cohen et al., Social Integration and Health](https://www.cmu.edu/joss/content/articles/volume1/cohen.html)",
+      "note": "Literature/Papers/Entries/Social Integration and Health- The Case of the Common Cold.md",
+      "status": "not importet",
+      "sha256": "1d26fd00fbed35d84484ea020f54a840d1582365b017938265a86a452536a503"
+    },
+    {
+      "title": "Social connectedness, dysfunctional interpersonal behaviors, and psychological distress: Testing a mediator model",
+      "source": "https://psycnet.apa.org/record/2001-07409-008",
+      "doi": "10.1037/0022-0167.48.3.310",
+      "old": "[Lee, Draper & Lee (2001), SCS-R](https://www.mhpss.net/toolkit/mhpss-m-and-e-mov-toolkit/resource/social-connectedness-scale-revised)",
+      "note": "Literature/Papers/Entries/Social connectedness, dysfunctional interpersonal behaviors, and psychological distress- Testing a mediator model.md",
+      "status": "not importet",
+      "sha256": "8e7c19027112e25b376ccda5bf6049bd87e16267abc55ca826a71eef1d237b44"
+    }
+  ],
+  "remaining_external_links": "Two measurement documentation pages (Short Loneliness Scale and SNI); these are not paper links."
+}

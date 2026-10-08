@@ -1,0 +1,177 @@
+{
+  "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+  "note_sha256": "3da353079d09bbf4a57d3c69253b118670f99ed25bb333d6b1458b340820882e",
+  "changes": [
+    {
+      "old": "ExposureToIdeologicallyDiverseNewsAndOpinionOnFacebook",
+      "new": "Exposure to ideologically diverse news and opinion on Facebook",
+      "title": "Exposure to ideologically diverse news and opinion on Facebook"
+    },
+    {
+      "old": "LearningFromNeighbours",
+      "new": "Learning from neighbours",
+      "title": "Learning from neighbours"
+    },
+    {
+      "old": "TweetingFromLeftToRight",
+      "new": "Tweeting From Left to Right- Is Online Political Communication More Than an Echo Chamber-",
+      "title": "Tweeting From Left to Right: Is Online Political Communication More Than an Echo Chamber?"
+    },
+    {
+      "old": "WhoToFollowAndWhy",
+      "new": "Who to follow and why- link prediction with explanations",
+      "title": "Who to follow and why: link prediction with explanations"
+    },
+    {
+      "old": "TheGeographicEmbeddingOfOnlineEchoChambersEvidenceFromTheBrexitCampaign",
+      "new": "The geographic embedding of online echo chambers- Evidence from the Brexit campaign",
+      "title": "The geographic embedding of online echo chambers: Evidence from the Brexit campaign"
+    },
+    {
+      "old": "TheEchoChamberEffectOnSocialMedia",
+      "new": "The echo chamber effect on social media",
+      "title": "The echo chamber effect on social media"
+    },
+    {
+      "old": "ModelingHowSocialNetworkAlgorithmsCanInfluenceOpinionPolarization",
+      "new": "Modeling how social network algorithms can influence opinion polarization",
+      "title": "Modeling how social network algorithms can influence opinion polarization"
+    },
+    {
+      "old": "CanCelebritiesBurstYourBubble",
+      "new": "Can celebrities burst your bubble-",
+      "title": "Can celebrities burst your bubble?"
+    },
+    {
+      "old": "TwitterAsArenaForTheAuthenticOutsiderExploringTheSocialMediaCampaignsOfTrumpAndClintonInThe2016UsPresidentialElection",
+      "new": "Twitter as arena for the authentic outsider- Exploring the social media campaigns of Trump and Clinton in the 2016 US presidential election",
+      "title": "Twitter as arena for the authentic outsider: Exploring the social media campaigns of Trump and Clinton in the 2016 US presidential election"
+    },
+    {
+      "old": "TheEffectOfHomophilyOnDisparateVisibilityOfMinoritiesInPeopleRecommenderSystems",
+      "new": "The effect of homophily on disparate visibility of minorities in people recommender systems",
+      "title": "The effect of homophily on disparate visibility of minorities in people recommender systems"
+    },
+    {
+      "old": "ArePeopleIncidentallyExposedToNewsOnSocialMediaAComparativeAnalysis",
+      "new": "Are people incidentally exposed to news on social media- A comparative analysis",
+      "title": "Are people incidentally exposed to news on social media? A comparative analysis"
+    },
+    {
+      "old": "QuantifyingControversyOnSocialMedia",
+      "new": "Quantifying controversy on social media",
+      "title": "Quantifying controversy on social media"
+    },
+    {
+      "old": "EchoChambersOnlinePoliticallyMotivatedSelectiveExposureAmongInternetNewsUsers",
+      "new": "Echo chambers online-- Politically motivated selective exposure among Internet news users",
+      "title": "Echo chambers online?: Politically motivated selective exposure among Internet news users"
+    },
+    {
+      "old": "PagerankBeyondTheWeb",
+      "new": "PageRank beyond the web",
+      "title": "PageRank beyond the web"
+    },
+    {
+      "old": "TheWhoToFollowSystemAtTwitterStrategyAlgorithmsAndRevenueImpact",
+      "new": "The who-to-follow system at Twitter- Strategy, algorithms, and revenue impact",
+      "title": "The who-to-follow system at Twitter: Strategy, algorithms, and revenue impact"
+    },
+    {
+      "old": "RhythmsOfSocialInteractionMessagingWithinAMassiveOnlineNetwork",
+      "new": "Rhythms of social interaction- Messaging within a massive online network",
+      "title": "Rhythms of social interaction: Messaging within a massive online network"
+    },
+    {
+      "old": "Wtf",
+      "new": "WTF- the who to follow service at Twitter",
+      "title": "WTF: the who to follow service at Twitter"
+    },
+    {
+      "old": "PeopleRecommendationOnSocialMedia",
+      "new": "People recommendation on social media",
+      "title": "People recommendation on social media"
+    },
+    {
+      "old": "SocialNetworksThatMatterTwitterUnderTheMicroscope",
+      "new": "Social networks that matter- Twitter under the microscope",
+      "title": "Social networks that matter: Twitter under the microscope"
+    },
+    {
+      "old": "RoleOfTheNewMediaInTheArabSpring",
+      "new": "Role of the new media in the Arab Spring",
+      "title": "Role of the new media in the Arab Spring"
+    },
+    {
+      "old": "AuthoritativeSourcesInAHyperlinkedEnvironment",
+      "new": "Authoritative sources in a hyperlinked environment",
+      "title": "Authoritative sources in a hyperlinked environment"
+    },
+    {
+      "old": "SpringEmbeddersAndForceDirectedGraphDrawingAlgorithms",
+      "new": "Spring embedders and force directed graph drawing algorithms",
+      "title": "Spring embedders and force directed graph drawing algorithms"
+    },
+    {
+      "old": "LinkPredictionTechniquesApplicationsAndPerformanceASurvey",
+      "new": "Link prediction techniques, applications, and performance- A survey",
+      "title": "Link prediction techniques, applications, and performance: A survey"
+    },
+    {
+      "old": "BenchmarkGraphsForTestingCommunityDetectionAlgorithms",
+      "new": "Benchmark graphs for testing community detection algorithms",
+      "title": "Benchmark graphs for testing community detection algorithms"
+    },
+    {
+      "old": "Salsa",
+      "new": "SALSA- the stochastic approach for link-structure analysis",
+      "title": "SALSA: the stochastic approach for link-structure analysis"
+    },
+    {
+      "old": "TheLinkPredictionProblemForSocialNetworks",
+      "new": "The link-prediction problem for social networks",
+      "title": "The link-prediction problem for social networks"
+    },
+    {
+      "old": "NoEchoInTheChambersOfPoliticalInteractionsOnReddit",
+      "new": "No echo in the chambers of political interactions on Reddit",
+      "title": "No echo in the chambers of political interactions on Reddit"
+    },
+    {
+      "old": "MeasuringOnlineSocialBubbles",
+      "new": "Measuring online social bubbles",
+      "title": "Measuring online social bubbles"
+    },
+    {
+      "old": "ThePagerankCitationRankingBringingOrderToTheWeb",
+      "new": "The PageRank citation ranking- Bringing order to the web",
+      "title": "The PageRank citation ranking: Bringing order to the web"
+    },
+    {
+      "old": "TheFilterBubbleWhatTheInternetIsHidingFromYou",
+      "new": "The Filter Bubble- What the Internet Is Hiding from You",
+      "title": "The Filter Bubble: What the Internet Is Hiding from You"
+    },
+    {
+      "old": "ModellingOpinionDynamicsInTheAgeOfAlgorithmicPersonalisation",
+      "new": "Modelling opinion dynamics in the age of algorithmic personalisation",
+      "title": "Modelling opinion dynamics in the age of algorithmic personalisation"
+    },
+    {
+      "old": "EchoChambersOnFacebook",
+      "new": "Echo Chambers on Facebook",
+      "title": "Echo Chambers on Facebook"
+    },
+    {
+      "old": "SocialInfluenceAndUnfollowingAccelerateTheEmergenceOfEchoChambers",
+      "new": "Social influence and unfollowing accelerate the emergence of echo chambers",
+      "title": "Social influence and unfollowing accelerate the emergence of echo chambers"
+    },
+    {
+      "old": "AlgorithmicBiasAmplifiesOpinionFragmentationAndPolarizationABoundedConfidenceModel",
+      "new": "Algorithmic bias amplifies opinion fragmentation and polarization- A bounded confidence model",
+      "title": "Algorithmic bias amplifies opinion fragmentation and polarization: A bounded confidence model"
+    }
+  ],
+  "scope": "Reference targets only; source title aliases and order unchanged; no warning changes."
+}

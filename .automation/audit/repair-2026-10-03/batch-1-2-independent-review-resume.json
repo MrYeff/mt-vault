@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-03",
+  "reviewer": "independent continuation review",
+  "policy": "Review records findings only; per-note audit-failed flags remain for root verification.",
+  "records": [
+    {
+      "note": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "note_sha256": "632ada906842af006ee0a078c6e1b3c8c2eb6809f5fdb5551cdfbe6ceac58213",
+      "source_path": "vault/.automation/sources/files/9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a.txt",
+      "source_sha256": "9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a",
+      "status": "review_incomplete_pending_full_bibliography_reconciliation",
+      "findings": [
+        "Checked the §5.1 activity tree and §5.5 formalization directly: allOf is generalization; partOf composes activities and requires all children for parent completion; order and simultaneity are unspecified; overlapping activities are unsupported.",
+        "Checked §§5.2–5.4 and Eqs. (1)–(7): association strengths, separate personal/shared belief fields, activity hierarchy constraints, sibling constraint for partOf, and mean child-to-parent value inheritance are represented accurately in the note.",
+        "The note accurately states that this paper provides a static representation and does not give a complete action-selection or learning procedure; time cues and dynamic learning are deferred.",
+        "Note records a 55-item bibliography restoration, but this continuation review did not independently reconcile all 55 source entries against the note. No PASS is asserted."
+      ],
+      "warning_preserved": "audit failed"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "note_sha256": "9812cf1d98fc933d2d13990fa7e6d38173b9e843be37080d3eceafe27c122401",
+      "source_path": "vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html",
+      "source_sha256": "575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf",
+      "status": "review_incomplete_pending_full_claim_and_bibliography_reconciliation",
+      "findings": [
+        "The current note reports six evaluated candidates and treats S3D separately; its model claims explicitly distinguish the Null, baseline, GroundEvent, preferential-attachment, link-prediction, and Bayesian mechanisms.",
+        "The current note reports the source's distinct event-type/network/model counts as a conflict and identifies learned probabilities, embeddings, and predictors as omitted fitted details.",
+        "The source and note hashes match the repair record, but this continuation review did not independently reconcile every claim and all 22 reference titles. No PASS is asserted."
+      ],
+      "warning_preserved": "audit failed"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "task": "independent re-audit of PROD after targeted repairs",
+  "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+  "note_sha256": "cebff352a2d15376c12e6d5aeac20374492661f2c57f68ea5d88998d1f94e29b",
+  "verdict": "PASS",
+  "audit_date": "2026-10-03",
+  "source_basis": {
+    "prior_full_source_audit": "vault/.automation/audit/noted-simulations-2026-10-03/prod-independent-audit.json",
+    "prior_audited_note_sha256": "3da353079d09bbf4a57d3c69253b118670f99ed25bb333d6b1458b340820882e",
+    "primary_pdf": "vault/.automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+    "primary_pdf_sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4",
+    "companion_text": "vault/.automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+    "coverage": "Re-read the whole current note and compared scientific content with the prior full-source audit of all 12 pages, including algorithm, equations, both model variants, figures, table, results, discussion, and all references. Rechecked each requested repair directly in the current note and verified the exact alias against the cached primary-source bibliography."
+  },
+  "checks": {
+    "note_hash_matches_requested_candidate": true,
+    "scientific_content": "PASS; unchanged substantive claims remain supported by the full-source audit. The note retains the source's directed-Jaccard u/v mismatch and OBA denominator mismatch, and discloses incomplete candidate selection, OBA zero-distance handling, epistemological action/evidence scheduling, and RWC treatment of opinions equal to 0.5.",
+    "references": {
+      "source_count": 35,
+      "note_count": 35,
+      "one_to_one_order": true,
+      "all_visible_aliases_match_source_titles": true,
+      "formerly_missing_exact_alias": "Mixing Beliefs Among Interacting Agents",
+      "repair_verified": true,
+      "existing_note_stem_preserved": "Mixing beliefs among interacting agents"
+    },
+    "copied_abstract_inline_source_marker": "PASS; copied abstract ends with [^r1], whose justification identifies the publisher abstract record and distinguishes it from the arXiv manuscript abstract.",
+    "formal_extraction_preamble_inline_source_marker": "PASS; Model Notation extraction preamble ends with [^r2].",
+    "audit_log_and_state": "PASS; audit log records the prior failure, the targeted corrections, and pending re-audit; the note still carries the audit failed warning for the root workflow to update after this independent pass."
+  },
+  "limitations": [],
+  "auditor": "Codex subagent /root/import_humat_complete"
+}

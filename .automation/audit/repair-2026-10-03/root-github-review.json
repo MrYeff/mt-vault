@@ -1,0 +1,14 @@
+{
+  "note": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+  "note_sha256": "d6cb7596e3919b1d4660b223b55698827624add05fbe55dee67c9adc5445cd17",
+  "source": "vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html",
+  "coverage": "Full primary body §§1–7, all22 references; gap in first tool output reread separately §§4.3–5",
+  "findings": "Six evaluated candidates and prospective S3D scope, stationary models, GF selection/truncation, Bayesian ordering and social walk, event-count discrepancies and evaluation are supported; added concise shared-state notation with fitted internals explicitly opaque. Bibliography22/22.",
+  "metadata_correction": {
+    "previous": "2019-01-01",
+    "verified": "2019-06-26",
+    "source": "https://link.springer.com/chapter/10.1007/978-3-030-24209-1_1",
+    "source_location": "First Online:26 June2019"
+  },
+  "status": "Awaiting independent re-audit; warning unchanged"
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-06",
+  "doi": "10.1145/2492517.2492564",
+  "source_url": "https://publications.tno.nl/publication/34613618/ak4IzY/maanen-2013-agent.pdf",
+  "source_pdf": "vault/.automation/sources/files/8f6fdc4acecac0f7f4e73d73cd11c008a53273671d7f4a63696c0bb536e94809.pdf",
+  "source_text": "vault/.automation/sources/files/538735d7bfcad39f72a521c79c4994b9670c8c70f3ef786934e507d8a899e7ab.txt",
+  "implementation": "models/src/online_social_influence",
+  "scope": "F# core model, all five decision variants and published parameter tables. No experiment suite, EM fitting or references.",
+  "source_review": "Implementation reviewed against full paper; parameter Tables II\u2013IV visually checked. Not independently audited.",
+  "choices": [
+    "Use printed tau log-sum-exp equation over preceding sum-of-utilities prose.",
+    "Social-proof percentage interpreted as fraction; absent recent tweets imply zero trend.",
+    "Sixty previous minutes, next-step delivery and four subsequent cooldown minutes.",
+    "Historical input seeds consistency and prior cooldown; empty history is an illustrative cold start.",
+    "NoTweet has no topic/external factors; only nested models add profile factors."
+  ],
+  "validation": [
+    "Project builds with zero warnings/errors.",
+    "Checks.fsx passes utility, single/nested probabilities, profile and influence factors, delayed delivery, cooldown, historical windows and five variants.",
+    "Example completes 120 minutes and emits 26 tweets with seed 1."
+  ],
+  "files": {
+    "models/src/online_social_influence/0_Framework.fs": "1a5b8a69e3ea30e825b275cb2358c66d6022150d24baf272a36b7463df565406",
+    "models/src/online_social_influence/1_Initialisation.fs": "7b9286249ab735e1e194677c556cdc69cfc6c422d40e7ef4624814de9cdca236",
+    "models/src/online_social_influence/2_DecisionModels.fs": "2799f64e9397aa9e6e430c8562ee1363c5125444f91d56b37992fd94e293df31",
+    "models/src/online_social_influence/3_Parameters.fs": "5ad9189d6bfffa37c0d86ad6a57757e196ecf7758419a0308c6d609aebb0c765",
+    "models/src/online_social_influence/Checks.fsx": "229c83547a8b8607d15a1c38db9be4a72e900e9bd28d0761e235ee50cdf683d9",
+    "models/src/online_social_influence/OnlineSocialInfluence.fsx": "0f925b8dda87617c4f030434063f3e2b390132ee26bec31e3eae1503719717af",
+    "models/src/online_social_influence/README.md": "0fcbf5f6963c03e0e2ea9f1d81e1b8d0b831341d6834c9233cb6c1fc0576b075"
+  }
+}

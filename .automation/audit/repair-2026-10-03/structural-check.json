@@ -1,0 +1,188 @@
+{
+  "scope": "Structure only; independent source audits determine finalization",
+  "notes": [
+    {
+      "note": "Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "warnings": [
+        "fulltext unavailable"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The Power of Social Cognition.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "warnings": [],
+      "issues": []
+    },
+    {
+      "note": "Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "warnings": [
+        "audit failed"
+      ],
+      "issues": []
+    }
+  ]
+}

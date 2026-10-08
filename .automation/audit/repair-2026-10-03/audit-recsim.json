@@ -1,0 +1,64 @@
+{
+  "note": "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+  "note_sha256": "5d17ebc8c0754be9c28f35006a4f796725812a33655a20958d0d128c9ac4a473",
+  "verdict": "PASS",
+  "warning_status": "audit failed preserved",
+  "note_or_warning_edited": false,
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88.txt",
+      "sha256": "b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88",
+      "role": "full primary arXiv v2 HTML-derived text; \u00a7\u00a71\u20136 and complete References read"
+    }
+  ],
+  "source_coverage": "Independent full-source re-audit: abstract; \u00a7\u00a71.1\u20131.4, 2.1\u20132.2, 3.1\u20133.2, 4.1\u20134.3, 5.1\u20135.3, \u00a76; all 63 references.",
+  "claim_checks": [
+    {
+      "claim": "World trajectory code presents recommendation, choice, user transition, policy update, and response history in the simulator step.",
+      "source_location": "\u00a74.1 Fig. 2 and note sim_step block",
+      "status": "PASS",
+      "detail": "Current note indents history append and output return within sim_step, matching sequence."
+    },
+    {
+      "claim": "Reference #25 title",
+      "source_location": "Complete source References; note Metadata/References item 25",
+      "status": "PASS",
+      "detail": "Now says Contextual markov decision processes, including \u2018decision\u2019; title matches source."
+    },
+    {
+      "claim": "Remaining framework, SlateQ configuration, and case-study claims",
+      "source_location": "\u00a7\u00a71\u20136, especially \u00a7\u00a73.2, 4.1\u20134.3, 5.1\u20135.3",
+      "status": "PASS",
+      "detail": "Previously audited claims remain scoped to configurable examples; source leaves reward/dynamics environment-specific, and note preserves that limitation."
+    },
+    {
+      "claim": "Bibliography completeness",
+      "source_location": "Complete source References and note Metadata/References",
+      "status": "PASS",
+      "detail": "63 primary-source entries and 63 ordered note items; titles visually reconcile."
+    }
+  ],
+  "actionable_fixes": [],
+  "source_gaps": [
+    "Paper is an extensible framework description; configured environment details are not universal dynamics."
+  ],
+  "independent_audit": true,
+  "initial_audit": {
+    "verdict": "FAIL_ACTIONABLE",
+    "note_sha256": "51c6705aad85d157cc9950deee9ea8eece6f60b6606580076fb2c8ffcc19e066",
+    "source_sha256": "b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88",
+    "actionable_findings": [
+      "sim_step code had history append / return visually outside the function body",
+      "reference 25 omitted the word decision from Contextual Markov Decision Processes"
+    ],
+    "later_status": "Both issues corrected at current hash and independently rechecked; warning remains."
+  },
+  "target_safety_reaudit": {
+    "scope": "Bounded exact-hash recheck after target sanitization; source/title checks and content audit remain as previously recorded.",
+    "unsafe_targets": 0,
+    "opaque_labels": 0,
+    "reference_items": 63,
+    "targets_sanitized": 20,
+    "status": "PASS"
+  }
+}

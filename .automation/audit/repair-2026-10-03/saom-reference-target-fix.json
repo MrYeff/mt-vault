@@ -1,0 +1,68 @@
+{
+  "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+  "before_sha256": "5b9c607a4b3ebee2299d7b5de41d48c5293de3bf5d4726dfcae9483b3be0045c",
+  "after_sha256": "67eab7ed6a19ac03fde4250154017e6e0b3d92bb7862093e7b89d872950b2ed0",
+  "changes": [
+    {
+      "old_target": "Stochastic approximation: A generalisation of the Robbins-Monro procedure",
+      "new_target": "Stochastic approximation- A generalisation of the Robbins-Monro procedure",
+      "display_title": "Stochastic approximation: A generalisation of the Robbins-Monro procedure"
+    },
+    {
+      "old_target": "What is network science?",
+      "new_target": "What is network science-",
+      "display_title": "What is network science?"
+    },
+    {
+      "old_target": "The Development of Social Network Analysis: A Study in the Sociology of Science",
+      "new_target": "The Development of Social Network Analysis- A Study in the Sociology of Science",
+      "display_title": "The Development of Social Network Analysis: A Study in the Sociology of Science"
+    },
+    {
+      "old_target": "Victims, bullies, and their defenders: A longitudinal study of the coevolution of positive and negative networks",
+      "new_target": "Victims, bullies, and their defenders- A longitudinal study of the coevolution of positive and negative networks",
+      "display_title": "Victims, bullies, and their defenders: A longitudinal study of the coevolution of positive and negative networks"
+    },
+    {
+      "old_target": "Statistical Analysis of Network Data: Methods and Models",
+      "new_target": "Statistical Analysis of Network Data- Methods and Models",
+      "display_title": "Statistical Analysis of Network Data: Methods and Models"
+    },
+    {
+      "old_target": "Simultaneous modeling of initial conditions and time heterogeneity in dynamic networks: An application to Foreign Direct Investments",
+      "new_target": "Simultaneous modeling of initial conditions and time heterogeneity in dynamic networks- An application to Foreign Direct Investments",
+      "display_title": "Simultaneous modeling of initial conditions and time heterogeneity in dynamic networks: An application to Foreign Direct Investments"
+    },
+    {
+      "old_target": "A missing information principle: theory and applications",
+      "new_target": "A missing information principle- theory and applications",
+      "display_title": "A missing information principle: theory and applications"
+    },
+    {
+      "old_target": "Smoke rings: Social network analysis of friendship groups, smoking and drug-taking",
+      "new_target": "Smoke rings- Social network analysis of friendship groups, smoking and drug-taking",
+      "display_title": "Smoke rings: Social network analysis of friendship groups, smoking and drug-taking"
+    },
+    {
+      "old_target": "Markov models for digraph panel data: Monte Carlo-based derivative estimation",
+      "new_target": "Markov models for digraph panel data- Monte Carlo-based derivative estimation",
+      "display_title": "Markov models for digraph panel data: Monte Carlo-based derivative estimation"
+    },
+    {
+      "old_target": "Dynamic networks and behavior: Separating selection from influence",
+      "new_target": "Dynamic networks and behavior- Separating selection from influence",
+      "display_title": "Dynamic networks and behavior: Separating selection from influence"
+    },
+    {
+      "old_target": "p2: A random effects model with covariates for directed graphs",
+      "new_target": "p2- A random effects model with covariates for directed graphs",
+      "display_title": "p2: A random effects model with covariates for directed graphs"
+    },
+    {
+      "old_target": "Logit models and logistic regression for social networks: I. An introduction to Markov graphs and p*",
+      "new_target": "Logit models and logistic regression for social networks- I. An introduction to Markov graphs and p-",
+      "display_title": "Logit models and logistic regression for social networks: I. An introduction to Markov graphs and p*"
+    }
+  ],
+  "claims": "No scientific claims changed. Source display titles and order unchanged. Existing failure flag retained."
+}

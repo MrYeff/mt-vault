@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-04",
+  "paper": "vault/Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+  "before_sha256": "249f81a50f9b4577a795cd5d8c0009eb3188cd37844c2d2ae8946d2e0769bfa1",
+  "after_sha256": "4ac64953d758917490831358e7fd906ad8c41128d0c5798f2ac36a4f225cd096",
+  "changes": [
+    "Removed inaccurate printed-page locators, preserving exact section/equation references.",
+    "Added direct verified published PDF links to footnotes lacking a source URL.",
+    "Included Appendix A.2 self-observation equations and Section 6 experiment setup in relevant citations."
+  ],
+  "audit_status": "Final independent re-audit pending; audit failed flag retained."
+}

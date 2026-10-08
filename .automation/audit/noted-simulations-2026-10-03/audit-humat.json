@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+  "note_sha256": "213ad7711aa8694b0eb94e9f9f33d5a5237d6e32efe7752859178953c4bee33c",
+  "post_review_observed_note_sha256": "163a5c4470f8c918b09f7842fc9f7b756b157071ef6949bdb947cd811c91e6e4",
+  "hash_scope": "Findings apply only to the requested 213ad771…e33c snapshot. A later checksum during the audit showed a concurrent edit to 163a5c44…1e6e4; that version was not reviewed.",
+  "source": {
+    "path": "vault/.automation/sources/files/d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee.html",
+    "sha256": "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee",
+    "version": "Published JASSS HTML, 28(1), article 4 (2025-01-31), DOI 10.18564/jasss.5611",
+    "coverage": "Read the full cached publication independently: abstract and metadata; §§1-2; all three §3 applications and reported outcomes; §2.5 outputs; full ODD Appendix A including tables 1-4, process schedule, initialization, state representations, all submodels/equations, stochasticity, observations, and input-data statement; all 71 references. No repair report was used as evidence for source claims."
+  },
+  "verdict": "FAIL_CORRECTIONS_REQUIRED",
+  "summary": "Most reported model state, parameter values, equations, examples, case-specific results, and explicitly stated conflicts are supported. However, the note omits additional source conflicts and implementation-critical ambiguities in information-exchange activation and partner selection. Its shortened procedures also leave several source rules implicit, and its title aliases point to citation-key targets rather than readable reference targets. Keep `not audited` until correction and independent re-audit.",
+  "claims_review": [
+    {
+      "claim_group": "Framework scope, needs, state, and observations",
+      "locations": "§2, Appendix A: Purpose and patterns, Tables 1-3, Observation",
+      "result": "SUPPORTED_WITH_OMISSION",
+      "detail": "Three motive groups, alternative-specific satisfaction, initial knowledge of alter choices, progressively learned alter information, basic outputs, and case-specific extensibility are supported. The note correctly distinguishes the framework from its application-specific settings."
+    },
+    {
+      "claim_group": "Initialization, distributions, and network construction",
+      "locations": "Appendix A: Stochasticity, Initialisation, Create agents, Create networks, Tables 3-4",
+      "result": "SUPPORTED_WITH_OMISSION",
+      "detail": "Truncated Normal(0.5, 0.14), configured Beta shape pairs, initial aspiration [0,1], 20% random alter selection within 35-cell Euclidean distance, and nearest-alter fallback are supported. The note omits random heading (0-359 degrees) before the 0-39 step movement and the random tie-break when multiple alters share minimum distance. The separate aspiration range [0,3) conflict is correctly disclosed."
+    },
+    {
+      "claim_group": "Need evaluations, satisfaction, dissonance, and choice",
+      "locations": "Appendix A: Set non-social motives, Set basic choice, Set social motive, Update dissonances, Identify dilemmas, Choose alternative; §2.2",
+      "result": "SUPPORTED_WITH_UNDISCLOSED_SOURCE_CONFLICTS",
+      "detail": "The note's multiplication, averaging, dissonance equation, tolerance adjustment, dilemma signs, and 10%-of-range lexicographic choice procedure match Appendix A. It correctly reports the §2.2 habit narrative versus Appendix A choice-rule conflict and undefined zero denominator. It misses a separate social-threshold conflict described below."
+    },
+    {
+      "claim_group": "Information exchange and update schedule",
+      "locations": "§2, especially Information exchange and Interaction; Appendix A: Process overview and scheduling, Signal or inquire, Signal, Inquire, Set dissonances",
+      "result": "PARTIAL; MATERIAL_CONFLICTS_AND_GAPS",
+      "detail": "The note correctly captures the appendix's positive-dissonance trigger, 50/50 branch when both dilemma flags are set, signal/inquire direction, persuasion ingredients, and later retry rationale. It omits conflicts and ambiguities below concerning activation threshold, cached partner attributes, candidate-list filtering/exhaustion, and per-participant state updates."
+    },
+    {
+      "claim_group": "Illustrative applications and findings",
+      "locations": "§3.1 Dialogue Tool, §3.2 Groningen case, §3.3 COVID-19 vaccination case; Figures 1-5",
+      "result": "SUPPORTED",
+      "detail": "The stylized dialogue can reach unanimous support while some agents remain dissatisfied; Groningen uses 14,165 synthetic agents and 1,000 runs with reported vote mean/peak 49.54 and SD 0.72, with campaigns or a safety event tipping results; the COVID extension adds availability heuristic, confirmation bias, and fear, and reports higher vaccination under higher disease-severity beta plus differing group satisfaction. The note bounds these outcomes to the stated cases."
+    },
+    {
+      "claim_group": "Bibliography",
+      "locations": "Published HTML References section",
+      "result": "SOURCE_ORDER_AND_COUNT_PASS; TARGET_STYLE_REQUIRES_REPAIR",
+      "detail": "The source contains 71 unique bibliography IDs. The note has 71 entries, in identical order, and all visible aliases present titles. The targets are the source citation keys (for example, Ajzen1985), not title-based links or existing note stems. An exact normalized filename scan found no file stem matching any of the 71 visible titles; where the vault has any matching item under a variant stem, select that real stem. Use readable title targets for unavailable notes instead of cryptic citation-key targets. No reference notes were created by this audit."
+    }
+  ],
+  "required_corrections": [
+    {
+      "id": "H1",
+      "severity": "major_source_conflict",
+      "source_locations": "§2, Information exchange / Interaction; Appendix A, Process overview and scheduling / Signal or inquire",
+      "finding": "The narrative says exchange occurs when the preferred alternative causes a dilemma and the satisfaction and dissonance differences between alternatives are negligible. Appendix A instead calls Signal or inquire whenever dissonance-strength > 0 and selects from dilemma-social?/dilemma-non-social?. The current note presents only the appendix trigger as the procedure and does not disclose the narrative/ODD discrepancy.",
+      "required_action": "Record both descriptions and identify the appendix trigger as the executable rule only if the note explicitly qualifies that choice; leave the source conflict visible. Do not add the missing cross-alternative proximity condition as an invented implementation."
+    },
+    {
+      "id": "H2",
+      "severity": "major_source_conflict",
+      "source_locations": "§2, social-need explanation; Appendix A, Set social motive and Identify dilemmas",
+      "finding": "The narrative says social need is satisfied when the same-choice fraction reaches the agent's social-importance value. Appendix A instead scales the fraction linearly to [-1,1], multiplies by social importance, and treats a negative social evaluation as socially unsatisfied; its sign threshold is one-half for positive importance, independent of the stated social-importance threshold. The note gives the appendix formula and dilemma rule without flagging this conceptual/operational conflict.",
+      "required_action": "State the narrative threshold and the appendix formula/sign test side by side; do not silently reconcile them."
+    },
+    {
+      "id": "H3",
+      "severity": "major_implementation_gap",
+      "source_locations": "Appendix A, Tables 1 and 3; Set alter representations; Signal; Inquire",
+      "finding": "Partner ranking operates on each ego's alter-representation-list, which stores perceived choices and other cached attributes; only interacted alters' selected fields are refreshed. The note calls candidates opposite-choice/same-choice alters without saying these comparisons use the ego's potentially stale stored views. The appendix sorts whole lists with prior-contact flags first and then choice match, but does not define an explicit filter or behavior when no uncontacted eligible alter remains. The note converts sorting/narrative retry language into definite eligibility behavior without disclosing this implementation gap.",
+      "required_action": "Clarify that choice and persuadability are evaluated from the ego's stored alter representations; distinguish list ordering from filtering; record that empty/exhausted candidate handling is unspecified."
+    },
+    {
+      "id": "H4",
+      "severity": "major_source_conflict",
+      "source_locations": "Appendix A, Signal (Table 3 item 30) and Set alter representations",
+      "finding": "The printed Signal procedure sets item 30 to the sum of items 25-30, then ranks the signalling list by item 30. This sum includes item 30 itself and does not define a non-circular calculation. The note reduces this to 'ranked by persuadability' and therefore hides a source ambiguity.",
+      "required_action": "Flag the literal self-inclusive item-30 sum and state that the intended aggregation is unspecified; do not silently change it to items 25-28."
+    },
+    {
+      "id": "H5",
+      "severity": "implementation_omission",
+      "source_locations": "Appendix A, Signal and Inquire",
+      "finding": "The note reports that the recipient/initiator updates satisfaction but does not fully state the source's immediate second-party updates: after Signal the signalling agent updates its stored view, dissonance, and choice; after Inquire the inquired alter updates its view of the inquirer, increments its count, and runs dissonance/choice updates. 'Exchanges can update choices' is too general to preserve this order and whose state changes.",
+      "required_action": "State both parties' state-update sequence for each exchange direction in the procedure summary."
+    },
+    {
+      "id": "H6",
+      "severity": "implementation_omission",
+      "source_locations": "Appendix A, Stochasticity and Create agents",
+      "finding": "Initialization omits the random heading in [0,359] before forward movement by 0-39 patches and omits random tie-breaking between equally near fallback alters.",
+      "required_action": "Add the stated initialization details to the procedure/parameters."
+    },
+    {
+      "id": "H7",
+      "severity": "implementation_omission",
+      "source_locations": "Appendix A, Signal or inquire; Tables 1-2",
+      "finding": "The appendix stores dissonance-strength per alternative (Table 2) but its interaction gate refers to singular dissonance-strength. It does not explain whether the gate uses the chosen alternative, either alternative, or an aggregate. The note says positive dissonance strength triggers interaction without identifying this mismatch.",
+      "required_action": "Expose the singular/plural state mismatch and leave the triggering aggregation unresolved."
+    }
+  ],
+  "presentation_and_references": [
+    "The explanation before Formal core repeats most of the same initialization, exchange, choice, output, and case-result facts. Consolidate to one concise statement followed by the formal state and procedures.",
+    "Formal core currently supplies state types and prose bullets, but no sim_loop/sim_step, update_dissonances, choose_alternative, signal, inquire, or initialization procedures. For a simulation import, make scheduling and update order explicit in Model Notation and name numerical constants rather than leaving the reader to reconstruct rules from prose.",
+    "The 71 reference aliases are visible titles, but targets are citation keys. Use existing actual note stems where available; otherwise use natural title targets with safe aliases."
+  ],
+  "process_checks": {
+    "frontmatter_warning": "The note still carries only `not audited`; it was not changed.",
+    "audit_log": "Current log says the independent audit is pending; no edit made.",
+    "footnotes": "Major source claims are footnoted; each location above specifies exact primary sections/tables."
+  }
+}

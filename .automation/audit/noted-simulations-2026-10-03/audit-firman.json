@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+  "note_sha256": "e4a5a546f54b142020819c49f63277a8b8427e5d540485d48cc5391ab362dfd5",
+  "verdict": "PASS_ACCESSIBLE_PREPRINT_BIBLIOGRAPHY_AND_BOUNDED_SUPPLEMENT_CAPTIONS",
+  "method": "Independently read the complete cached arXiv v1 primary text (all 23 pages, including equations, tables, figures/captions, discussion, limitations, and references), checked the rendered Figure 3, and compared every current note claim against the preprint. Separately compared the note bibliography against the publisher's publicly indexed References section. Did not use the repair report as evidence for model claims. Read the required extraction rules, model notation, and paper template.",
+  "sources": [
+    {
+      "path": "vault/.automation/sources/files/4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3.pdf",
+      "sha256": "4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3",
+      "version": "arXiv 2109.08862v1, submitted 2021-09-18",
+      "coverage": "Complete 23-page preprint; PDF and extracted text independently checked."
+    },
+    {
+      "path": "vault/.automation/sources/files/b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9.txt",
+      "sha256": "b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9",
+      "version": "Publisher public indexed record, DOI 10.1177/08944393231213960",
+      "coverage": "Publisher abstract, metadata, and all 59 public references; publisher full text is restricted. This does not verify the published article's model rules."
+    }
+  ],
+  "claims_review": [
+    {
+      "claim_group": "Identity distance, tie length, and friendship conditions",
+      "source_locations": "Preprint §§2.1-2.2, Equations 1-2, Figures 1-2, Table 1, pp. 4-7",
+      "result": "SUPPORTED_WITH_SOURCE_CONFLICTS_DISCLOSED",
+      "detail": "The single binary ethnicity specialization gives distance 0 for same-group and 1 for different-group pairs with weight 1. Friendship is reciprocal and requires distance no greater than both agents' outreachability and both friend counts strictly below capacity. The note accurately follows Equation 2 and explicitly preserves Figure 3's printed outreachability-vs-capacity discrepancy and Table 1's F-as-own-friend typo."
+    },
+    {
+      "claim_group": "Initialization and simulation procedure",
+      "source_locations": "Preprint Simulation Design and Simulation Procedure, Table 2, Figure 3, pp. 8-10",
+      "result": "SUPPORTED_WITH_UNSPECIFIED_IMPLEMENTATION_DETAILS_DISCLOSED",
+      "detail": "Minority probability .22, outreachability Bernoulli q, normal capacity with variance .25 and means 3/30, populations 30/300, 100 runs per case-scenario, and 600 simulations total are accurate. Agents only form ties within their population, a candidate invitation is not declined except under identity/capacity constraints, and formation continues until none can be formed. Stochastic initiator/target order is not specified; capacity discretization is delegated to source code and unavailable in the paper text. The note correctly does not invent the selection law, rounding, or negative-value handling. Figure 3 was visually checked; the note discloses its friend-count condition discrepancy."
+    },
+    {
+      "claim_group": "Measured outcomes and findings",
+      "source_locations": "Preprint Analytic Strategy, Results §§3-4, Figures 5-9, Tables 3-4, pp. 10-16",
+      "result": "SUPPORTED_WITH_CONFLICTS_AND_MEASUREMENT_LIMITS_DISCLOSED",
+      "detail": "Group-level homogeneous/heterogeneous dyads, ego-alter ethnic similarity, and satisfaction at at least half of capacity are source-defined. The note appropriately treats satisfaction as a count proxy and reports the undefined zero-friend similarity convention. The broad results summary is supported. It records the mismatched q values across Methods/Table 2 (.2/.5/.8), results prose (.2/.5/.9), Figure 6 prose (.3), Table 4 (.3/.5/.8), and later prose (q=3); it also states the Table 4 subtraction/sign inconsistency."
+    },
+    {
+      "claim_group": "Comparison, scope, and limitations",
+      "source_locations": "Preprint Simulation Design, validation comparison, Discussion and Limitations, pp. 8, 13-18",
+      "result": "SUPPORTED",
+      "detail": "Offline/Facebook scenarios change population and capacity together, so their effects are not separated. The comparison uses Hofstra et al.; this paper collapses five minority categories to one and aggregate agreement does not validate the mechanism. The note correctly limits the model to reciprocal ethnic friendship without strength, recommendation, feed, preferences, beliefs, or parasocial ties and says racial/ideological extensions are proposed rather than tested."
+    },
+    {
+      "claim_group": "Abstract and publication metadata",
+      "source_locations": "Publisher public record, lines 20-34 and 402-414",
+      "result": "SUPPORTED",
+      "detail": "The abstract reproduces the publisher public abstract, first-online date 2023-11-22 and DOI are correct. The note distinguishes this publisher metadata from the arXiv v1 used for model extraction and retains both `not audited` and `fulltext unavailable`."
+    },
+    {
+      "claim_group": "Published bibliography and links",
+      "source_locations": "Publisher public record, References section, lines 42-340",
+      "result": "COUNT_AND_ORDER_PASS; TARGETS_MEANINGFUL",
+      "detail": "The note has 59 entries in publisher order and the visible title aliases match the source titles. Unimported cited works remain meaningful title links without creating paper notes. One exact existing vault stem is reused (`The Focused Organization of Social Ties`); a vault-wide stem scan found no other exact title-stem matches. Targets are readable safe title slugs with title aliases, not opaque citation keys. The publisher list is explicitly distinguished from the shorter preprint bibliography."
+    },
+    {
+      "claim_group": "Supplement threshold variant",
+      "source_locations": "Published supplementary PDF, Figures 10-11 captions (referenced by note footnote)",
+      "result": "CAPTION_TEXT_VERIFIED; NO_FIGURE_OUTCOMES_INFERRED",
+      "detail": "Independently checked the publisher-linked source-reader indexed text at vault/.automation/sources/files/f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39.txt (SHA-256 f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39). It gives Figure 10 satisfaction threshold 0.25 and Figure 11 threshold 0.75, and points to an anonymous COMSES code/data repository. This is derived indexed caption text, not raw PDF or visual inspection; the note claims only those measurement variants and makes no graph-outcome or code-behavior claims."
+    }
+  ],
+  "source_conflicts_and_gaps": [
+    "Equation 2 uses tie capacity in the friend-count conditions, whereas the Figure 3 diagram prints tie outreachability there; both are disclosed and the note does not silently repair the diagram.",
+    "Table 1 lists F as F's own friend, despite the undirected different-person friendship rule and Figure 2/prose depicting E-F; the note flags this source typo.",
+    "The simulation procedure's stochastic initiator/target selection distribution and the source-code-only discretization/negative handling for normal capacities are unavailable in the article text and remain explicit gaps.",
+    "The q parameter is inconsistent across Methods/Table 2, results prose, Figure 6 prose, Table 4 and the following paragraph. Table 4's stated subtraction order disagrees with displayed signs. The note retains each discrepancy rather than resolving it from inaccessible code.",
+    "The article uses `agents would be satisfied` for the half-capacity threshold, while a footnote says the supplement varies that measurement threshold. The note does not infer alternate dynamics from the supplement."
+  ],
+  "limitations": {
+    "published_full_text": "Unavailable through the publisher's restricted-access record. All model claims audited here are explicitly scoped to arXiv v1; publisher abstract and bibliography were checked separately.",
+    "supplement": "Caption text was independently verified through the publisher hyperlink's indexed source-reader text; this was not raw-PDF or visual inspection. The anonymous code/data repository was not inspected, and no figure outcomes or code behavior are claimed."
+  },
+  "process_checks": {
+    "current_note_sha256_rechecked_after_review": "e4a5a546f54b142020819c49f63277a8b8427e5d540485d48cc5391ab362dfd5",
+    "frontmatter_flags": "Unchanged: `not audited` and `fulltext unavailable`; this report does not clear either flag.",
+    "edits": "No paper note, import manifest, shared flags, or source artifact was edited."
+  }
+}

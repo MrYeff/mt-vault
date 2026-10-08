@@ -1,0 +1,8 @@
+{
+  "verdict": "PASS",
+  "audited_sha256": "cfe070f29bc1da4116a05ea49292a8bbad0e69148ce2dc145adf164a672edebd",
+  "report": ".automation/audit/cognitive-simulations-2026-10-04/reputation-final-reaudit.json",
+  "report_sha256": "51a9d4624cfe5e5d30ca7e47e6d40feb160b947cc1ddc54eaf0c7912db7dcc1c",
+  "auditor": "gpt-6-luna",
+  "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded."
+}

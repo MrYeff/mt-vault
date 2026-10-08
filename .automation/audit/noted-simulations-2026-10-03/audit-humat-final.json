@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+  "note_sha256": "bbb8b550a56924c135d65bf61dc9037bf0409898a8f3bb3dae230561acb92523",
+  "source": {
+    "path": "vault/.automation/sources/files/d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee.html",
+    "sha256": "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee",
+    "version": "Published JASSS HTML, 28(1), article 4 (2025-01-31), DOI 10.18564/jasss.5611",
+    "coverage": "Previously read the complete primary HTML, including all sections, cases, Appendix A, tables, and references. For this frozen-candidate audit I re-read the note and checked every changed procedure/type, relevant source passages, conflicts, results, and all reference title aliases against the full cached publication. No repair report was treated as scientific evidence."
+  },
+  "verdict": "FAIL_CORRECTIONS_REQUIRED",
+  "summary": "The rewrite fixes the prior major path errors: IDs are resolved through the world, inquiry refreshes the selected view before blending, social satisfaction is stored, initialization order is explicit, narrative-vs-ODD conflicts and perfect-choice-knowledge tension are disclosed, and the singular gate is explicitly partial. The source still has two undisclosed implementation issues in the current candidate: it silently selects one of two different network-distance statements, and it uses partner persuasion scores without specifying the source-defined inquiry score calculation/sort directions. Signal/inquiry indicator state is reset but never declared or set, so the stated per-tick outputs are not operationally represented. Keep the audit failure flag pending correction and re-audit.",
+  "claims_review": [
+    {
+      "claim_group": "State types, motives, social satisfaction, and choice",
+      "source_locations": "Appendix A, Tables 1-3; Set Social Motive; Update Dissonances; Identify Dilemmas; Choose Alternative",
+      "result": "SUPPORTED_WITH_EXPLICIT_OMISSIONS",
+      "detail": "The typed motives/options, numeric-zero neighbor importance and non-social satisfactions, social-satisfaction rescaling/storage, evaluations, total satisfaction, dissonance, dilemma tests, and ordered choice rule now follow the source. The singular `current_strength` mapping is correctly left partial: Table 1 describes the chosen alternative's value, Table 2 stores per-choice strengths, and the update/synchronization rule after choice changes is unstated."
+    },
+    {
+      "claim_group": "Perfect knowledge and cached alter views",
+      "source_locations": "Appendix A, Entities / Table 3 introduction, Set Social Motive, Signal, Inquire",
+      "result": "PASS_CONFLICT_EXPLICITLY_RETAINED",
+      "detail": "The source's perfect knowledge assumption for all alter choices is now stated alongside the operational use and selected refresh of per-ego alter representations. The note does not resolve the source's tension about how global choice observations remain synchronized with stored views. Inquiry refreshes the selected view before blending as specified."
+    },
+    {
+      "claim_group": "Narrative activation/social criteria and operational ODD rules",
+      "source_locations": "Appendix A, Design Concepts > Interaction; Appendix A, Submodels > Signal or inquire / Set Social Motive / Identify Dilemmas",
+      "result": "PASS_CONFLICT_AND_LOCATION_CORRECTED",
+      "detail": "The note locates the negligible-gap and social-importance criteria in the narrative Interaction subsection and contrasts them with the ODD gate and 50% sign boundary. The singular/per-choice strength mismatch is explicitly left incomplete rather than supplied with an invented update."
+    },
+    {
+      "claim_group": "Initialization and network construction",
+      "source_locations": "Appendix A, Stochasticity; Initialisation > Create Agents/Create Networks/Setup Humats",
+      "result": "PARTIAL; DISTANCE_WORDING_CONFLICT_OMITTED",
+      "detail": "The ordered setup now includes origin, aspiration/heading/movement, network construction, distributions, basic choice, initial social choice, representations and final dissonance setup. The note gives a radius of 35, matching Create Networks ('within a 35-cell Euclidean distance') but omits Stochasticity's separate wording ('distance smaller than 36 patches'). These are not guaranteed equivalent for non-integer Euclidean distances; the discrepancy should remain visible unless the paper defines a shared interpretation. The initialization text also should say heading is a random integer 0-359, as the source does."
+    },
+    {
+      "claim_group": "Partner ranking and persuasion scores",
+      "source_locations": "Appendix A, Table 3; Set Alter Representations; Signal; Inquire",
+      "result": "PARTIAL; SOURCE_DEFINED_HELPER_NOT_FULLY_SPECIFIED",
+      "detail": "The note correctly represents partner IDs, previous-contact and choice-match priorities, selection of the first ranked neighbor, lack of an exhaustion/filter rule, and item 30's self-inclusive sum as unresolved. It does not state the sorting directions (uncontacted first, match/mismatch priority, persuasion descending) in a way the pseudocode can unambiguously apply, and it omits the source-defined inquiry persuasion score: item 29 is the sum of items 21-24. `inquiry_score` and `signalling_score` are typed and `sorted_neighbor_ids` sorts by persuasion, but the score/update rules remain hidden or incomplete. The signalling score's self-sum remains genuinely unresolved in the source and should stay so."
+    },
+    {
+      "claim_group": "Exchange procedure state paths and scheduling",
+      "source_locations": "Appendix A, Process Overview and Scheduling; Signal or Inquire; Signal; Inquire; Set Dissonances",
+      "result": "MOSTLY_SUPPORTED; INDICATOR_STATE_MISSING",
+      "detail": "Selected AgentIds now resolve to world records, Signal refreshes the recipient's view of the sender, Inquire refreshes the initiator's view before blending, each direction's update order is correct, and mutation uses `mut` parameters. However, `sim_step` calls `reset_signal_and_inquiry_indicators`, and `exchange` comments on setting a signalling indicator, but Agent declares no signalling/inquiring indicator fields and no branch assigns them. Table 1 declares both flags; Signal explicitly sets signalling? to 1, while the Inquire submodel does not specify setting inquiring? to 1 even though Observation reports the number of inquiring agents. The note must preserve that source omission rather than invent the missing Inquire setter. As written, neither indicator is implemented in the state/type path."
+    },
+    {
+      "claim_group": "Dissonance and choice procedure",
+      "source_locations": "Appendix A, Update Dissonances; Choose Alternative; Table 1-2",
+      "result": "PASS_WITH_SOURCE_GAPS_EXPLICIT",
+      "detail": "The stored social satisfaction/evaluation, means, P/N dissonance, per-choice strength, chosen-option dilemmas, range-scaled tie comparisons, and habit fallback match the ODD. The undefined P+N zero case and unresolved singular gate remain explicit. The initialization's two-stage basic/final choice ordering is present."
+    },
+    {
+      "claim_group": "Application claims and scope",
+      "source_locations": "Appendix A Observation/Input Data; §§3.1-3.3 and Figures 1-5; §2.3",
+      "result": "SUPPORTED",
+      "detail": "The summary of basic observations, dialogue outcome, Groningen population/runs/peak and campaign/safety-event result, COVID extension and direction of findings, case-specific limits, absence of time-series input, and lack of a generic tie-update procedure agrees with the paper."
+    },
+    {
+      "claim_group": "Bibliography",
+      "source_locations": "Primary HTML References section",
+      "result": "PASS_71_OF_71_SOURCE_ORDER_AND_TITLES",
+      "detail": "The note has 71 references. Each display alias corresponds to its source title in order; the complete primary reference block sequence was checked, including the two titles that are substrings of adjacent longer titles. No exact matching reference-note stems exist in the current vault; filename-safe natural title targets are appropriate for unimported papers."
+    }
+  ],
+  "required_corrections": [
+    {
+      "id": "F1",
+      "severity": "source_conflict",
+      "source_locations": "Appendix A, Stochasticity vs Initialisation > Create Networks",
+      "finding": "Stochasticity says eligible neighbors are at distance <36 patches; Create Networks says within 35-cell Euclidean distance. `NETWORK_RADIUS = 35` silently chooses one statement, and the two wordings need not select the same nodes for real-valued Euclidean distance.",
+      "required_action": "Record both statements and leave the source's radius interpretation unresolved."
+    },
+    {
+      "id": "F2",
+      "severity": "major_missing_procedure",
+      "source_locations": "Appendix A, Table 3; Set Alter Representations; Inquire; current sorted_neighbor_ids helper",
+      "finding": "The helper sorts by persuasion but the note does not define inquiry score or precise sort direction; the ODD defines item 29 as the sum of items 21-24 and sorts descending. The signalling item 30 also sorts descending but its specified sum includes itself, which is correctly flagged as unresolved.",
+      "required_action": "Specify inquiry score and both ranking directions from the source; keep only the signalling self-inclusive aggregation unresolved."
+    },
+    {
+      "id": "F3",
+      "severity": "implementation_omission",
+      "source_locations": "Appendix A, Table 1, Process Overview and Scheduling, Signal or Inquire, Observation",
+      "finding": "The source declares signalling?/inquiring? fields in Table 1, resets them before the gate, explicitly sets signalling? to 1 in Signal, and lists numbers of signalling and inquiring agents as observations. It does not specify a corresponding assignment of inquiring? to 1 in Inquire. The candidate declares neither field and implements neither assignment.",
+      "required_action": "Represent both declared indicator fields, implement the specified signalling? assignment, and explicitly leave the inquiring? setter unspecified by the source. Do not claim the per-tick inquiring-agent count can be computed from an undocumented setter."
+    },
+    {
+      "id": "F4",
+      "severity": "small_initialization_precision",
+      "source_locations": "Appendix A, Stochasticity and Initialisation > Create Agents",
+      "finding": "The source draws an integer heading from 0 to 359; the candidate states only a heading from 0-359 degrees.",
+      "required_action": "State that the heading is a random integer."
+    }
+  ],
+  "retained_source_gaps": [
+    "Singular chosen-alternative strength versus per-choice strengths has no specified synchronization after choice changes; source_current_strength is deliberately partial.",
+    "Table 3 assumes perfect knowledge of all neighbor choices while the operational representation procedures update selected stored fields; the source does not explain global synchronization.",
+    "Signal item 30 sums items 25-30 including itself, so its persuasion score is self-referential; do not invent a corrected aggregation.",
+    "Partner-list behavior when every neighbor has already been contacted is unspecified.",
+    "The P+N dissonance expression is undefined when both sums are zero."
+  ],
+  "process_checks": {
+    "note_sha256_rechecked_after_review": "bbb8b550a56924c135d65bf61dc9037bf0409898a8f3bb3dae230561acb92523",
+    "frontmatter_flags": "The note retains `audit failed`; no flag was changed.",
+    "previous_failed_reports": "Preserved; this report is a separate exact-hash audit.",
+    "edits": "No paper note, manifest, shared flag, or source artifact was edited."
+  }
+}

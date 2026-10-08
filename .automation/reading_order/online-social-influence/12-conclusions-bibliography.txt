@@ -1,0 +1,92 @@
+VI. CONCLUSIONS
+Our aim is to work towards a general model that describes
+online social influence. We have presented a method that
+allows us to validate formalized models of social influence
+theory. To do so, we use agent-based modeling: we construct
+decision models based on fundamental behavioral principles
+of social influence from the literature, and run them in multi-
+agent simulation. We simulate specific use cases and evaluate
+the output against the empirical data. We have shown that
+by doing so we can compare different implementations of
+decision models, and improve the model iteratively.
+The comparison between all models shows that there is a
+continuous improvement in the models except no significant
+difference between CLNC and CL, while NCL still outper-
+forms NCLLC. The results suggest that further research should
+investigate whether the insignificance between CLNC and CL
+is caused by a limitation in the single-agent formalization of
+the used behavioral principles, or by a more fundamental flaw
+in the principles themselves.
+According to our results, the NCLLC model has the most
+true positives in its predictions, but also the most false posi-
+tives. In our opinion this shows the potential of the NCLLC
+model: if one manages to lower the amount of false positives,
+it will be the better model. The false positives are caused by
+‘overheating’ agents, that cannot stop tweeting anymore. In
+the NCLLC+ model we did a first rough attempt by adding a
+hard coded cool-down period in the decision model, which led
+to the best performing model. We believe that a more elegant
+solution could improve the results further.
+Finally, in this paper we have presented the use case of
+Twitter behavior around a talent show. But in order to arrive
+at a more general model for online social influence, the model
+needs to be tested on other use cases as well.
+REFERENCES
+[1] J. Holland, Hidden Order: How Adaptation Builds Complexity. Read-
+ing, MA: Addison Wesley, 1995.
+Fig. 4. Boxplot of the sensitivity indices of each model.
+[2] M. Johns, “Human behavior modeling within an integrative framework,”
+Ph.D. dissertation, University of Pennsylvania, 2007.
+[3] P. R. Monge and N. S. Contractor, Theories of Communication Networks.
+Oxford University Press, 2003.
+[4] C. M. Macal, “To agent-based simulation from system dynamics,” in
+Proceedings of the 2010 Winter Simulation Conference, B. Johansson,
+S. Jain, J. Montoya-Torres, J. Hugan, and E. Ycesan, Eds., 2010.
+[5] E. Bonabeau, “Agent-based modeling: Methods and techniques for
+simulating human systems,” Proceedings of the National Academy of
+Sciences of the United States of America, vol. 99, no. 3, pp. 7280–7287,
+May 14 2002.
+[6] M. Remondino, “Reactive and deliberative agents applied to simulation
+of socio-economical and biological systems,” International Journal of
+Simulation, vol. 6, no. 12-13, pp. 11–25, 2005.
+[7] T. C. Schelling, Micromotives and Macrobehavior. Norton, 1978,
+vol. 17.
+[8] F. M. Bass, “A new product growth for model consumer durables,”
+Management Science, vol. 15, p. 215227, 1969.
+[9] J. D. Watts and P. S. Dodds, “Influentials, networks, and public opinion
+formation,” Journal of Consumer Research, vol. 34, no. 4, pp. 441–58,
+2007.
+[10] L. Weng, A. Flammini, A. Vespignani, and F. Menczer, “Competition
+among memes in a world with limited attention,” Scientific Reports,
+vol. 2, 2012, 29 March.
+[11] H. Simon, “A behavioral model of rational choice,” Quarterly Journal
+of Economics, vol. 69, p. 99188, 1955.
+[12] M. Bratman, Intention, plans, and practical reason. Harvard University
+Press Cambridge, MA., 1987.
+[13] A. Rao and M. P. Georgeff, “BDI-agents: From theory to practice,” in
+Proceedings of the First International Conference on Multiagent Systems
+(ICMAS’95), 1995, pp. 312–319.
+[14] I. Ajzen, “The theory of planned behavior,” Organizational behavior
+and human decision processes, vol. 50 (2), pp. 179–211, 1991.
+[15] Z. D. Zhang T., “Agent-based simulation of consumer purchase decision-
+making and the decoy effect,” Journal of Business Research, vol. 60,
+pp. 912–922, 2007.
+[16] R. B. Cialdini, Influence: Science and practice, 4th ed. Boston: Allyn
+& Bacon, 2001.
+[17] S. Koster, “Modelling individual and collective choice behaviour in
+social networks: An approach combining a nested conditional logit
+model with latent classes and an agent based model,” Master’s thesis,
+Erasmus University Rotterdam, 2012.
+[18] J. Goldenberg, O. Lowengart, and D. Shapira, “Zooming in: Self-
+emergence of movements in new product growth,” Marketing Science,
+vol. 28, no. 2, p. 274292, 2009.
+[19] “The Voice Kids,” Talpa Media Holding, February-March
+(season 1) 2012, premiered on RTL 4. [Online]. Available:
+http://www.thevoicekids.nl
+[20] M. Wedel and W. DeSarbo, “A mixture likelihood approach for general-
+ized linear models,” Journal of Classification, vol. 12, no. 1, pp. 21–55,
+1995.
+[21] M. North, N. Collier, J. Ozik, E. Tatara, M. Altaweel, C. Macal,
+M. Bragen, and P. Sydelko, “Complex adaptive systems modeling with
+repast simphony,” Complex Adaptive Systems Modeling, vol. 1, no. 3,
+2013.

@@ -1,0 +1,580 @@
+{
+  "date": "2026-10-03",
+  "batch": 1,
+  "records": [
+    {
+      "note": "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "note_sha256": "030ff1ee07829a9d5b231596b42be2ebca49eac78737422265d34174e6dbfcbe",
+      "warning_preserved": "audit failed",
+      "source_availability": "Published Springer chapter full text accessible in cached HTML; table pages also cached.",
+      "source_version": "Current publisher chapter _11 full text, which the publisher identifies as revised; publisher links a correction DOI _13 dated 2026-05-06, but correction notice content was not independently accessible. Parent/root fetched the current revised chapter; extraction is grounded in that current text and does not infer unseen correction contents.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c.html",
+          "sha256": "eaf6178b4b0cdf7bfd665c60013bbaae6a2d21de5530c35fadfd107332d1e56c",
+          "role": "full chapter HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076.html",
+          "sha256": "77852455569620609b5710c0dc5fb6c2b19323812aeaf7c7b36e39be611fe076",
+          "role": "Table 11.1"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224.html",
+          "sha256": "4e0e94d3d369dfd0e48c707cfcd9253600273e823b2383fab90f6cafd9c51224",
+          "role": "Table 11.2"
+        }
+      ],
+      "sections_read": [
+        "publisher abstract and metadata",
+        "\u00a711.3 Model (status conferral, receiver feedback, memory, individualism learning, exit, network and tick sequence)",
+        "Tables 11.1\u201311.2 (parameters and schedule)",
+        "\u00a711.4 measures and results",
+        "publisher References list"
+      ],
+      "scope": "Full text, including relevant tables; abstract compared against publisher abstract. This is a model extraction, not abstract-only.",
+      "concrete_changes": [
+        "Preserved the existing unsupported-parameter omissions and satisfaction reporting tension; did not invent transition equations.",
+        "Rebuilt Metadata/References against the complete publisher bibliography in source order: 20 items, replacing 22 imported note items. Preserved existing targets where identifiable, converted seven opaque unresolved IDs to exact title-derived targets verified in the publisher bibliography, and removed two unsupported imported unresolved items.",
+        "After independent audit, added a feedback-history container and per-agent memory_length \u2208 1..10 initialized to 5, as required by Table 11.1; removed the unsupported claim that the abstract\u2019s reciprocal-exchange description conflicts with \u00a711.3. The detailed sender/receiver feedback sequence remains described.",
+        "Completed Table 11.1 state coverage: added randomly assigned initial group size range 1\u2013100 (not a permanent membership bound), a false-initialized leave flag, and time-indexed signed-feedback history; clarified memory_length means number of time steps remembered, range 1\u201310, initial 5. No distribution within group-size range was invented."
+      ],
+      "abstract_provenance": "Current note Abstract matches the publisher abstract wording, including its description of reciprocal exchanges. \u00a711.2 itself calls the model reciprocal exchange; no abstract/method contradiction is claimed.",
+      "bibliography_check": {
+        "publisher_reference_entries": 20,
+        "note_reference_items_after_repair": 20,
+        "status": "Exact one-to-one source-order list; seven target titles were publisher-verified and their opaque unresolved IDs replaced by title-derived targets. No notes created."
+      },
+      "conflicts_or_gaps": [
+        "Table 11.1 satisfaction range permits negative values, while \u00a711.3 normalizes positive feedback only; source leaves exact normalization and other transition functions unspecified.",
+        "Seven reference targets now use exact source-title-derived wiki targets; whether dedicated vault notes should be created is outside this body repair.",
+        "The publisher identifies the current chapter as revised and links correction DOI 10.1007/978-3-032-01373-6_13 (2026-05-06); the correction notice contents were not independently accessible. Claims were checked against the full current revised chapter, not inferred from the inaccessible notice."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Verify all Table 11.1 fields together: individualism/status ranges and distributions, memory length/time-step semantics/range/initial value, random group-size range, satisfaction range, and false-initialized leave flag.",
+        "Verify feedback/update sequence, tables, measures, results, and all 20 references.",
+        "Assess current revised chapter provenance and whether the inaccessible correction notice leaves any material uncertainty."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "note_sha256": "9812cf1d98fc933d2d13990fa7e6d38173b9e843be37080d3eceafe27c122401",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full arXiv HTML cached and read; accessible arXiv:1908.05437 version.",
+      "source_version": "arXiv HTML for 1908.05437, 2019; DOI points to Springer proceedings chapter 10.1007/978-3-030-24209-1_1.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html",
+          "sha256": "575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf",
+          "role": "full primary arXiv HTML"
+        }
+      ],
+      "sections_read": [
+        "publisher/arXiv abstract and metadata",
+        "\u00a71 Introduction",
+        "\u00a72 Challenge problem description",
+        "\u00a73 Agent framework and domain implementation",
+        "\u00a74.1 Stationary probabilistic models",
+        "\u00a74.2 Link prediction through embedding",
+        "\u00a74.3 Bayesian model",
+        "\u00a74.4 Modeling new users and repositories",
+        "\u00a75 Candidate Agents and Results including Figures 1\u20133 and Table 1",
+        "\u00a76 Related work",
+        "\u00a77 Discussion",
+        "Acknowledgments",
+        "all 22 primary bibliography entries"
+      ],
+      "scope": "Full text; abstract and every model/results section plus complete bibliography inspected. Model extraction supports source-transformed claims with section locators.",
+      "abstract_provenance": "Note Abstract compared sentence by sentence to arXiv \u00a7Abstract; exact wording matches. No abstract change needed.",
+      "concrete_changes": [
+        "Rebuilt note References to the source\u2019s 22-entry bibliography in its published order. Removed the extra \u201cAgents for Games and Simulations\u201d entry, which appears only as a container title within reference [17], not as a separate bibliography item. Added source-title-derived links for references [10] and [15], whose prior opaque IDs did not establish titles."
+      ],
+      "bibliography_check": {
+        "primary_entries": 22,
+        "note_items_after_repair": 22,
+        "status": "One-to-one list in source order. All 22 titles match the bibliography; existing mapped note targets retained. [10] and [15] use the exact source titles in new title-derived targets."
+      },
+      "conflicts_or_gaps": [
+        "\u00a72 reports ten event types; \u00a74.2 builds twelve event-specific networks excluding create/delete; \u00a74.4 describes fourteen event-count models. Note transparently retains all three counts.",
+        "Specific fitted probabilities, embeddings, and feature coefficients are learned from data and omitted; note discloses this model-configuration limit."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Verify 22-entry bibliography and source-title links against the final References section.",
+        "Audit all six candidates, S3D extension distinction, implementation update order, and event-count conflict in note at recorded hash."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "note_sha256": "97a58fbe97b29112702b7b84579fe15b6fb2905162a3541ffb011e16e00ba41c",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full arXiv HTML and a derived full-text extraction are cached and were read through the complete paper and appendices.",
+      "source_version": "arXiv:2411.11581 v5, version date 2025-03-23, as indicated by cached full text/index metadata.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39.html",
+          "sha256": "7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39",
+          "role": "full primary arXiv HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be.txt",
+          "sha256": "54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be",
+          "role": "derived full-text extraction used for sequential reading"
+        }
+      ],
+      "sections_read": [
+        "arXiv abstract and metadata",
+        "\u00a71 Introduction",
+        "\u00a72.1\u20132.5 framework, database, X/Reddit platforms, agent/action and activation modules",
+        "\u00a73.1\u20133.5 experiments and results",
+        "Appendices A\u2013I, including platform equations, data creation, prompts, and experiment controls",
+        "all 59 bibliography entries"
+      ],
+      "scope": "Full source including all appendices and references; abstract wording checked directly. Experiments and controls read in full, not inferred from abstract.",
+      "abstract_provenance": "Current note abstract was compared with source \u00a7Abstract and matches the source wording; no abstract correction was needed.",
+      "concrete_changes": [
+        "Expanded the model description with source-reported experiment setups, sample sizes, step limits, activation/cache settings, and measured outcomes for X information propagation, X group polarization, and Reddit herd effects.",
+        "Updated the locator for the X-recommendation/experiment footnote to include \u00a73.2 and Appendices E\u2013F. Existing reference list has 59 items; a title check found one-to-one matches against the source\u2019s 59-entry bibliography, so it was retained."
+      ],
+      "bibliography_check": {
+        "primary_entries": 59,
+        "note_reference_items": 59,
+        "status": "Every note reference title matched one primary-source reference title; no bibliography rewrite was needed."
+      },
+      "conflicts_or_gaps": [
+        "Paper\u2019s equations and appendices report platform-specific time/scoring details; the X recency expression does not specify units or a cutoff treatment, which the note explicitly discloses.",
+        "The note intentionally does not reproduce full prompt templates or every database field; those are not needed to state the extracted mechanism and the source appendix locations are cited."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Verify X propagation and group-polarization controls/outcomes against \u00a7\u00a73.1\u20133.2 and Appendix E.",
+        "Verify Reddit sample sizes, activation, cache and vote-treatment details against \u00a73.3 and Appendix F.",
+        "Check X and Reddit ranking equations, time-step/action facts, and source bibliography one-to-one match."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "note_sha256": "ff68d557959fa83c8ff80c4e7bf57231cbf253e2ea46b67c8e649ec1f7cd697b",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full arXiv HTML cached and read in sequential text chunks through the complete main text and bibliography.",
+      "source_version": "arXiv:2103.08057v1, dated 2021-03-14; full source identifies this as v1.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f.html",
+          "sha256": "99cee34bfc16261465871fd665cd9163f65321d60e1878f296a0c8ef5753220f",
+          "role": "full arXiv HTML"
+        },
+        {
+          "path": "/tmp/recsimng-full-text.txt",
+          "sha256": "f27aea6d3e91ae871d963f91031db37370b95c4f9f1d7784a267588e08b82d6d",
+          "role": "derived full-text reading copy"
+        }
+      ],
+      "sections_read": [
+        "source abstract and metadata",
+        "\u00a71 Introduction and contributions",
+        "\u00a72 Related Work",
+        "\u00a73.1 Markov process/DBN formalism and runtime observability",
+        "\u00a73.2 Variables, entities/behaviors, and stories",
+        "\u00a73.3 choice/state/algorithm primitives and user interest example",
+        "\u00a73.4 runtime architecture",
+        "\u00a73.5 Edward2, trajectory likelihood, gradients and posterior inference",
+        "\u00a74.1 partially observable RL and Figure 1",
+        "\u00a74.2 latent-variable learning and Figure 2",
+        "\u00a74.3 ecosystem model and Figure 3",
+        "\u00a75 concluding remarks",
+        "all References entries (full list read; title-level one-to-one bibliography verification remains open)"
+      ],
+      "scope": "Full paper read, including all use cases; abstract compared directly.",
+      "abstract_provenance": "Note abstract matches source \u00a7Abstract.",
+      "concrete_changes": [
+        "Added the source-specific \u00a74.1 experiment structure (15-item history, REINFORCE, slate size, dimension, users/batch, horizon, and reported averaging) rather than leaving the demonstrations generic.",
+        "Added the \u00a74.2 latent-variable learning sequence and control details (fixed randomized data policy, static interest, adjacent-slate satisfaction trend, user sensitivity and HMC/Monte Carlo EM).",
+        "Rebuilt References from the full primary-source bibliography (64 entries in publisher/arXiv order); matched titles against source bibliography blocks and mapped existing paper notes by normalized exact title, using source-title-derived wiki targets otherwise. Removed six opaque unresolved IDs and corrected shortened imported titles; expanded 62 note items to the exact 64 source entries.",
+        "After independent review, clarified that the source only states Gaussian noise and does not specify its covariance or characterize covariance as a supplied configuration input. Confirmed the 64th AI Economist reference was already the final source-derived item; normalized the bibliography/audit-log boundary so parsers include all 64."
+      ],
+      "bibliography_check": {
+        "primary_entries": 64,
+        "note_items_after_repair": 64,
+        "status": "Verified note has 64 source-ordered entries including final AI Economist reference; independent reviewer counted 63 because final ref lacked a blank separator before Audit Log; boundary normalized."
+      },
+      "conflicts_or_gaps": [
+        "\u00a74.3 states the provider boost proportional to engagement above the mean but also says it increases low-engagement exposure; note preserves this source tension without selecting an implementation.",
+        "Complete model parameters for all three use cases are deferred to external tutorials; note states this and does not claim the article alone gives executable full specifications."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Check all 64 bibliography entries and titles/source-order against the full source bibliography, especially formerly opaque or shortened references.",
+        "Check \u00a74.1 and \u00a74.2 added experiment/model details and \u00a74.3 boost-sign source tension.",
+        "Check framework definitions and note\u2019s explicit tutorial/model-parameter limitations."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "note_sha256": "f7cfa0222fe4e12e28fd15ec36f5c1fe4d10cee29e04125f2ca51bfeac02af69",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full arXiv HTML and derived full-text extraction cached; primary technical, experimental, and bibliographic sections read.",
+      "source_version": "arXiv:2311.16586v2, 2024-04-08.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a.html",
+          "sha256": "7e958f9da51b19c56ec7d3191c71df8a746de3cb2f96aa20cfc61a304ca2321a",
+          "role": "full primary arXiv HTML"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192.txt",
+          "sha256": "46ca2940a0fafc839100dcab49b6bb64b9d804b823d1841478cebf4dd5cba192",
+          "role": "derived full-text extraction"
+        }
+      ],
+      "sections_read": [
+        "Abstract and metadata",
+        "\u00a71 Introduction and agenda",
+        "\u00a72 MDP problem definition",
+        "\u00a73.1\u20133.5 embeddings, initial random slate, relevance/sigmoid position click model, boredom and clicked-item influence, full/partial observations",
+        "\u00a74.1 all nine environment variants",
+        "\u00a74.2 baselines and embedding access",
+        "\u00a74.3 Table 3 simulator/agent parameters",
+        "\u00a74.4 seeded evaluation protocol and metrics",
+        "\u00a75.1\u20135.3 results, Figures 2\u20136 and Table 4",
+        "\u00a76 Related Work",
+        "\u00a77 Conclusion",
+        "Appendices A\u2013D, including webtoon/clicked-item-influence experiments and item scores",
+        "all 55 bibliography entries"
+      ],
+      "scope": "Full paper, appendices and bibliography read. Abstract directly compared.",
+      "abstract_provenance": "Note Abstract matches the source abstract wording; no abstract edit was necessary.",
+      "concrete_changes": [
+        "Added source-based comparison protocol and Table 3 settings (click parameters, environment-scale settings, uncertainty variants, dynamic settings, methods, training/evaluation cadence) to make the study controls explicit.",
+        "Added cross-environment findings for single-item, slate top-K, partial-observation, uncertainty, embedding-quality and reranking experiments, including Table 4 returns and propensity MSE.",
+        "Rebuilt the note bibliography from all 55 source HTML bibliography blocks in source order; removed eight excess/imported items, replaced opaque placeholders, and used verified titles with existing mapped note targets where available.",
+        "After root review, removed the unsupported zero-click unchanged-user extraction convention; the note now leaves the source-undefined mean/update case unspecified. Normalized all 55 reference links to single-line wiki syntax."
+      ],
+      "bibliography_check": {
+        "primary_source_entries": 55,
+        "note_items_after_repair": 55,
+        "status": "Exact source order and 55 blocks; title text checked against each primary HTML bibliography title block; existing-paper target map used when normalized title matched, otherwise source-title-derived wiki target."
+      },
+      "conflicts_or_gaps": [
+        "The printed clicked-item influence equation divides by clicked-item count without specifying the zero-click case. The note\u2019s unchanged-user empty-click guard is labeled an extraction convention, not a source equation.",
+        "Churn prose says all-zero user embeddings imply no clicks, but the sigmoid yields positive probability at zero relevance for finite parameters; the note discloses the internal source inconsistency.",
+        "Composition of simultaneous boredom and influence and repeated timer resets are not fully specified."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Verify 55 source bibliography entries/order/titles; check formerly opaque and excess targets.",
+        "Verify Table 3 and evaluation protocol controls and the new results summary.",
+        "Recheck click formula, observation vectors, boredom/influence update limits, and disclosed zero-click/churn conflicts."
+      ],
+      "metadata_correction_by_root": "Title and display author corrected by root; YAML warning preserved; details in root-metadata-corrections.json."
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "note_sha256": "44488790e5e1ace99279bdf34630549c3fdb50727bee894169b62b25eb68a5ca",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full JASSS publisher HTML and journal PDF cached; full article text, including all numbered sections and references, inspected.",
+      "source_version": "JASSS 15(4), article 3; published 2012-10-31; DOI 10.18564/jasss.2059. Primary source agrees with note metadata date and DOI.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+          "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34",
+          "role": "primary JASSS full article PDF; used to inspect equation images and source pages"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+          "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3",
+          "role": "derived full-text copy read sectionwise; 933 lines / 64,003 bytes"
+        }
+      ],
+      "sections_read": [
+        "publisher title/authors/abstract/publication metadata",
+        "\u00a7\u00a71.1\u20131.6 motivation and research questions",
+        "\u00a7\u00a72.1\u20132.6 baseline interaction, trust, partner selection and printed algorithm",
+        "\u00a7\u00a73.1\u20133.6 controls, measures and results",
+        "\u00a7\u00a74.1\u20134.15 fitness functions, selection, parameters, kin and defection experiments",
+        "\u00a7\u00a75.1\u20135.8 genotype, crossover/mutation and evolutionary results",
+        "\u00a7\u00a76.1\u20136.10 discussion, interpretation and limitations",
+        "all 62 primary bibliography entries"
+      ],
+      "scope": "Full text including PDF equation pages and full bibliography. Abstract wording compared directly and matches source, including the awkward phrase \u201cmore less-intense, or fewer more-intense partners\u201d; it was not silently rewritten.",
+      "abstract_provenance": "Exact source abstract; bibliography and factual statements were checked against full text rather than abstract alone.",
+      "concrete_changes": [
+        "Added \u00a74 baseline settings and outcome framing, kin seeding/substitution, and \u00a75 heritable genotype, crossover/mutation and evolutionary result details with source locators.",
+        "Clarified that the approximately 150 tie fit and strategy outcomes are parameter-dependent findings, while the two fitness criteria and FM/R:WB settings are model controls.",
+        "Retained the existing trust-rule conflict disclosure and explicit gaps; no exact inherited probability functions were invented.",
+        "After independent audit identified compact opaque link labels, replaced all 62 link labels with source-verified bibliography titles and corrected targets; no vault paper notes were created.",
+        "Clarified that only exact inherited trust/search functions and full simulator code remain omitted; the kin/evolutionary mechanisms are summarized, with exact \u00a75.1 FM and defection initial settings added."
+      ],
+      "bibliography_check": {
+        "primary_entries": 62,
+        "note_items_after_repair": 62,
+        "status": "Exact 62 source titles, source order; all reference labels are now human-readable titles, mapped to known paper notes when an exact target exists, with title-derived targets otherwise."
+      },
+      "conflicts_or_gaps": [
+        "\u00a72.4 prose describes trust reduction by one unit, while its printed \u00a72.6 algorithm uses compression and waning terms; \u00a74.4 reports log increase/linear decrease. Existing disclosure remains.",
+        "Detailed trust, waning and alter-selection functions are referred to Sutcliffe & Wang (2012) and are not fully specified in this paper; exact equations are not inferred.",
+        "The published formula images do not define handling for zero ties or zero outgoing interactions; current note discloses this.",
+        "The article\u2019s evolutionary result thresholds vary across experiments and are stochastic; note phrases them as parameter-specific, not universal."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Verify new \u00a74\u20135 controls, kin/defection mechanisms and outcomes against source sections.",
+        "Check bibliography 62/62 titles and source order/targets against primary list.",
+        "Check abstract fidelity, trust conflict disclosure, equations and footnote locators; warning must remain.",
+        "Recheck final 62 title aliases and target resolution at latest note hash."
+      ],
+      "followup_changes": [
+        "Restored definition for [^r6], documenting the source locations for baseline/kin/evolutionary details.",
+        "Split long baseline, kin, and heredity content into compact bullets; removed duplicated baseline selection description; represented four FM alternatives as 8:1 | 5:1 | 4:1 | 1:1.",
+        "Corrected the source bibliography entry to publisher-verified canonical title A Social Identity Model of Deindividuation Phenomena; DOI source: https://www.tandfonline.com/doi/abs/10.1080/14792779443000049."
+      ],
+      "reference_check": "62 titles/source order; ref 40 canonical publisher title verified at DOI 10.1080/14792779443000049; aliases descriptive and human-readable.",
+      "independent_audit_status": "pending re-audit after footnote/reference corrections"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "note_sha256": "5b9c607a4b3ebee2299d7b5de41d48c5293de3bf5d4726dfcae9483b3be0045c",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full accepted manuscript PDF cached; full 44-page text extraction available. Read the entire source body, including all model equations, estimation procedures, coevolution, examples, discussion and bibliography.",
+      "source_version": "Accepted manuscript for Annual Review of Statistics and Its Application, volume 4 (2017); source cover identifies accepted publication and author affiliations.",
+      "source_paths": [
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707.pdf",
+          "sha256": "c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707",
+          "role": "primary accepted Annual Review manuscript PDF"
+        },
+        {
+          "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222.txt",
+          "sha256": "43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222",
+          "role": "full derived text, 2,168 lines / 80,722 bytes"
+        }
+      ],
+      "sections_read": [
+        "title/abstract and \u00a71 Introduction",
+        "\u00a72 and \u00a7\u00a72.1\u20132.2 (CTMC state, rates, opportunities, options, objective multinomial choice, effects, simulation order, time homogeneity)",
+        "\u00a73 and \u00a7\u00a73.1\u20133.3 (method of moments, Robbins\u2013Monro/RSiena, generalized moments, likelihood and data augmentation)",
+        "\u00a74 and \u00a7\u00a74.1\u20134.3 (network/behavior coevolution, multivariate networks, actor composition, structural ties, ordinal ties, duration and undirected extensions)",
+        "\u00a75 empirical Scottish friendship example and estimates",
+        "\u00a76 comparison models",
+        "\u00a77 discussion, assumptions, goodness of fit, limitations",
+        "all 70 bibliography entries"
+      ],
+      "scope": "Full accepted manuscript. Abstract wording was checked against source. Model coverage expanded to include source-reported estimation procedures, coevolution, and empirical example rather than stopping at core network transitions.",
+      "abstract_provenance": "Note abstract compared with manuscript abstract and is faithful.",
+      "concrete_changes": [
+        "Added source-grounded account of simulation-based method-of-moments estimation, the three-phase RSiena/Robbins\u2013Monro procedure, generalized moments, and likelihood/data augmentation.",
+        "Added joint network\u2013ordinal-behavior event updates and multivariate-network dependency families, including the interpretation as social selection/influence.",
+        "Added the Scottish school friendship example, sample/waves, six-outdegree constraint, and qualitative parameter results as application-specific findings.",
+        "Clarified panel applicability and process assumptions in Where does it apply."
+      ],
+      "bibliography_check": {
+        "primary_entries": 70,
+        "note_items": 70,
+        "status": "Current note list has 70 human-readable titles, matching the source entry count and listed order; audit must verify target/title correspondence and exact aliases against all source bibliography blocks."
+      },
+      "conflicts_or_gaps": [
+        "The source is a methodological review and its effect set, rate parameters and constraints must be specified for each empirical application; no universal parameter defaults are asserted.",
+        "The example parameters are one case-specific fit; they are not general network dynamics estimates.",
+        "As discussed in source \u00a77, model adequacy depends on modest single-tie turnover assumptions and empirical goodness of fit."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Verify every transition and event-order detail in the pseudocode against Eqs. 1\u201311 and source \u00a72.2.",
+        "Check all added estimation and coevolution details against \u00a7\u00a73\u20135.",
+        "Verify all 70 references and exact title aliases/targets against the primary list; warning remains."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "note_sha256": "b412af774a0bcb368fd7951b831f9ba07125dbd462a2f350d3a326588eb09128",
+      "warning_preserved": [
+        "audit failed",
+        "fulltext unavailable"
+      ],
+      "source_availability": "Primary Nature publisher page available as subscription preview; full article text and extended data inaccessible. Publisher page exposes abstract, metadata and 58 citation-reference records; no fulltext claims are extracted.",
+      "source_version": "Nature article s41586-026-10536-1; publisher metadata date 2026-05-27.",
+      "source_paths": [
+        {
+          "path": "vault/.automation/sources/files/f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78.html",
+          "sha256": "f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78",
+          "role": "primary publisher preview and citation-reference metadata"
+        },
+        {
+          "path": "vault/.automation/sources/files/e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871.txt",
+          "sha256": "e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871",
+          "role": "derived page text, including preview/metadata"
+        }
+      ],
+      "sections_read": [
+        "Nature publisher title/authors/publication metadata",
+        "complete accessible publisher abstract",
+        "subscription-preview/access notice",
+        "all 58 citation_reference metadata records and title fields"
+      ],
+      "scope": "Abstract-only for study design and outcomes. Full text, methods, allocation details, algorithm rules, figures and extended data remain unavailable; no unsupported details added.",
+      "abstract_provenance": "Note abstract compared against publisher abstract; wording matches. Research questions are abstract-level paraphrases.",
+      "concrete_changes": [
+        "Preserved the explicitly abstract-only study-design limitation and both warning flags.",
+        "Rebuilt References from the 58 title-bearing primary publisher citation-reference records in source order. Removed the extra self-title and the old imported unresolved identifiers; no title is inferred from an opaque identifier.",
+        "Updated the citation footnote to distinguish the preview abstract from the accessible bibliography records."
+      ],
+      "bibliography_check": {
+        "primary_publisher_entries": 58,
+        "note_items_after_repair": 58,
+        "status": "58 publisher citation-reference records represented in publisher order with source-derived titles; no opaque unresolved IDs or extra self-title remain."
+      },
+      "conflicts_or_gaps": [
+        "Full article remains subscription-limited; experimental allocation, feed-ranking features, implementation, detailed outcomes and extended-data controls cannot be verified from the accessible source.",
+        "Bibliographic records 32, 34, 42, 43, 46, 47, 48 and 55 are web/patent/source entries rather than journal article titles; labels reproduce publisher reference records."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_focus": [
+        "Check abstract wording and explicit fulltext-unavailable scope.",
+        "Verify all 58 title strings/order against publisher citation-reference metadata, particularly source/web/patent records.",
+        "Ensure both YAML warning values remain unchanged."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+      "note_sha256": "7fb87b9fe2e3c56d9629c899fbadaab51691c16af9027ae12e42b0744b1b432a",
+      "warning_preserved": "audit failed",
+      "source_availability": "Complete primary source PDF cached with full derived text; source/version identified by publisher URL and DOI.",
+      "source_version": "Morgan, Joseph & Carley, published 2017, JOSS volume 18; DOI 10.21307/joss-2018-002.",
+      "source_paths": [
+        {
+          "path": "vault/.automation/sources/files/6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534.pdf",
+          "sha256": "6d3d99020ffbe3aef1566d10251c29b9a2841269163900149b21f9ebc80dc534",
+          "role": "complete 23-page primary publisher PDF"
+        },
+        {
+          "path": "vault/.automation/sources/files/1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543.txt",
+          "sha256": "1b2f7dc4b9d207123a1f69b4c3eb1ea8069dc5fd5e4e7a7db5967776d9f2e543",
+          "role": "complete 934-line extracted full text, read from title/abstract through references"
+        }
+      ],
+      "sections_read": [
+        "Title, author line, abstract and publication data",
+        "Introduction and related work",
+        "Theoretical Approach: Generalized Other and Transactive Memory",
+        "Modelable Social Phenomena, Table 1",
+        "Virtual Experiment Design and both experiment methods/Tables 2\u20133",
+        "Computational complexity argument, Tables 4\u20135 and Eqs. (1)\u2013(2)",
+        "Results and discussion, Tables 6 and all figure descriptions/outcomes",
+        "Limitations/conclusion",
+        "Complete References section (60 source entries)"
+      ],
+      "scope": "Full primary PDF and complete extracted text; not abstract-only. Previously extracted activation-bound equations were checked against the paper text/record; no wider activation update rule is asserted.",
+      "concrete_changes": [
+        "Replaced imported 62-item bibliography with exactly 60 entries in publisher source order and source-derived titles. Replaced 12 unresolved opaque IDs and removed two surplus/non-source items.",
+        "Used existing paper targets when an exact normalized-title mapping exists; otherwise created safe title-derived targets. Preserved two same-titled Schemata references as separate source entries.",
+        "Added audit-log statement of source reconciliation; did not modify abstract or YAML frontmatter/warning."
+      ],
+      "reference_check": {
+        "publisher_entries": 60,
+        "note_items": 60,
+        "status": "Exact source-order title list; labels readable; no unresolved opaque targets or extra imported references."
+      },
+      "conflicts_or_gaps": [
+        "The paper gives a bounded memory estimate for one interaction using a Petrov variant, not a full repeated-interaction activation or all implementation details; note states this limitation.",
+        "Fixed, globally visible group membership and perfect general group inference are explicit model assumptions and limitations.",
+        "Source PDFs/derived extraction provide scenario-level experiment results; note limits runtime claims to tested settings."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "note_sha256": "cb012cc1c541b2f2646c75c68d1c0898ffbef6ebacaa78aa93b3de2efc01cafd",
+      "warning_preserved": "audit failed",
+      "source_availability": "Full arXiv v3 HTML and complete extracted text cached.",
+      "source_version": "arXiv:2306.02552v3, 2024-02-15; note abstract and source locator align.",
+      "source_paths": [
+        {
+          "path": "vault/.automation/sources/files/26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb.html",
+          "sha256": "26e9eca2356de9042572203a486025c86c2088ca9137296f878613a2ca904cbb",
+          "role": "complete primary arXiv v3 HTML"
+        },
+        {
+          "path": "vault/.automation/sources/files/a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55.txt",
+          "sha256": "a0aed3c1c900ef816b7f0851454669531e7dbea116e4c544e9a98c197768db55",
+          "role": "complete extracted primary full text"
+        }
+      ],
+      "sections_read": [
+        "Publisher title/authors/abstract and introductory aims",
+        "Results framework: six user actions, round-based activity and Pareto density",
+        "Recommendation discrimination and generation experiments; chat/broadcast ratings",
+        "Memory-function and whole-memory evaluations",
+        "Information-cocoon and conformity interventions/results",
+        "Discussion and limits",
+        "Methods: agent profile, sensory/short/long memory, writing/reading/reflection, action prompts, modular recommender, human role playing and system interventions",
+        "Appendix A.3 mode/leave/nothing controls and profile details",
+        "Complete 34-entry References section"
+      ],
+      "scope": "Full arXiv v3 source (HTML and extracted full text), not abstract-only.",
+      "concrete_changes": [
+        "Rebuilt Metadata/References from all 34 primary-source reference entries, exact order and source display titles. Replaced compact imported opaque targets with readable title aliases; used helper target map where matched and safe title-derived targets otherwise.",
+        "Added source-audit entry to note; body model/experiment claims, abstract and frontmatter not otherwise changed. Existing source-grounded limits concerning unspecified schedule/normalization remain."
+      ],
+      "reference_check": {
+        "source_entries": 34,
+        "note_items": 34,
+        "status": "Complete title-bearing source-order bibliography; no opaque labels or omitted/extra source items."
+      },
+      "conflicts_or_gaps": [
+        "The source gives activity density but not its conversion to per-round activation probability.",
+        "Memory paragraph inconsistently names s in sensory-memory tuple as importance and later as normalized recency; note discloses this.",
+        "Exact normalization, merge/activation thresholds, K/N, and reflection/forgetting schedule are not fully specified; note does not invent values."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "note_sha256": "c8330e32e11ad324fca4380b2b2e0c6d166f0243875f6707910a421dee37493a",
+      "warning_preserved": "audit failed",
+      "source_availability": "Complete primary arXiv HTML and full extracted text are cached.",
+      "source_version": "arXiv:2408.00818 (posted 2024-08-01); source note points to arXiv PDF and DOI.",
+      "source_paths": [
+        {
+          "path": "vault/.automation/sources/files/b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96.html",
+          "sha256": "b42ab0617f1a18a5ef1c6bff4b7a6e8e19904ff14b1a966a6064930596bfcb96",
+          "role": "complete primary arXiv HTML"
+        },
+        {
+          "path": "vault/.automation/sources/files/aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32.txt",
+          "sha256": "aff0b975c854294e0e3cbcae15c0b56e59bfdc9e3c29de130c2733a4cafceb32",
+          "role": "full primary text extraction; article and reference sections"
+        }
+      ],
+      "sections_read": [
+        "Abstract and introduction",
+        "\u00a72 LLM-enhanced simulation and related motivation",
+        "\u00a73.1 architecture, REST/API and recommenders",
+        "\u00a73.2 agent profile dimensions, Big Five 32 combinations, prompts/actions",
+        "Algorithm 1 and timing/follow-loop discrepancy",
+        "\u00a74 political demonstration setup and descriptive outputs",
+        "Discussion and scope",
+        "Full 162-entry arXiv References list"
+      ],
+      "scope": "Full primary article text, not abstract-only; figures checked via captions and note uses only reported qualitative/descriptive outputs.",
+      "concrete_changes": [
+        "Rebuilt References from all 162 numbered primary-source entries in exact source order with publisher-visible title labels; previous import represented only 99 entries and all were opaque compact targets. Added 63 omitted entries and no title was inferred from an old identifier.",
+        "Added a concise audit log entry. Abstract, extracted model body and YAML warning unchanged."
+      ],
+      "reference_check": {
+        "source_entries": 162,
+        "note_items": 162,
+        "status": "All 162 publisher-visible titles in source order; readable aliases; safe filename targets or mapped existing note targets."
+      },
+      "conflicts_or_gaps": [
+        "Algorithm 1 loops over all agents when selecting Follow/None, while adjacent text describes a configured daily-follow fraction among active agents; note reports literal loop and comment mismatch.",
+        "The config block gives days=365 while adjacent case prose specifies 100; note preserves separate settings and scopes reported case to \u00a74.1.",
+        "This is a descriptive platform/demonstration paper; reported data does not validate human behavioral fidelity."
+      ],
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    }
+  ]
+}

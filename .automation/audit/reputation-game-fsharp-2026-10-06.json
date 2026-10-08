@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-06",
+  "task": "Direct F# translation of A Reputation Game Simulation: Emergent Social Phenomena from Information Theory",
+  "source": {
+    "version": "published final",
+    "url": "https://d-nb.info/1255007265/34",
+    "pdf": "vault/.automation/sources/files/cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb.pdf",
+    "text": "vault/.automation/sources/files/4b25475b20960e13353aa737d6dfbf6e8c2dc8d9e8e8a14de69c67dc33c3c146.txt"
+  },
+  "scope": "Framework loop, initialization, Beta/KL mathematics, all receiver/communication strategies, auxiliary updates, trajectory measurements, runnable example.",
+  "verdict": "PASS after solver fix and independent re-audit",
+  "auditors": [
+    {
+      "agent": "reputation_math_audit",
+      "model": "gpt-6-luna",
+      "scope": "Appendices A/B mathematics, numerical solver, final stationarity and strategy checks",
+      "verdict": "PASS, including final solver re-audit"
+    },
+    {
+      "agent": "reputation_protocol_audit",
+      "model": "gpt-6-luna",
+      "scope": "Protocol, initialization, all strategy variants, friendship, surprise scale, measurements, README",
+      "verdict": "PASS after source verification; initial Deaf objection retracted"
+    }
+  ],
+  "source_discrepancies": [
+    {
+      "item": "Uncritical confession detection",
+      "source": "Main §4.1 and Table B1 include confessions; Appendix B.1/B13 omit them",
+      "handling": "Explicit ConfessionRule, both versions tested; example selects AppendixEquations"
+    },
+    {
+      "item": "Figure A4 caption versus A40/A41 optimum",
+      "caption": [
+        0,
+        1.5
+      ],
+      "equation_optimum": [
+        -0.123633080311,
+        1.239540628182
+      ],
+      "handling": "Follow exact KL optimum and allowed negative parameter domain, document discrepancy; cause not asserted"
+    }
+  ],
+  "fixes": [
+    {
+      "item": "Extreme flattery caused Newton convergence failure",
+      "change": "Moment-matched initial shapes, followed by exact KL stationary-equation Newton solve with gradient-residual backtracking",
+      "re_audit": "Independent mathematics agent reviewed solver changes and independently reran all checks, PASS"
+    }
+  ],
+  "numerical_substitution": "Analytic Newton minimization of same KL objective replaces published SciPy trust-exact/trust-ncg; positive shape constraints replace penalty; Lanczos/recurrence special functions; bracketed bisection for lie construction. Documented in code and README.",
+  "tests": {
+    "standalone_library_build": "PASS, zero warnings/errors",
+    "script": "PASS, 300 rounds/1800 events",
+    "checks": "PASS, analytic Beta/KL quantities, KL direction, A3 compression, A4 stationarity, signals/confession modes, topic increments/repetition/self-statements, ToM, friendships/Kappa, delayed reciprocal protocol, social-chaos formula and 16 strategies x 2 confession modes x 300 rounds",
+    "shared_project": "Blocked by pre-existing missing source src/psychsim_0/0_Framework.fs; not changed"
+  },
+  "scratch_directory": "models/src/reputation_game_max was not read or modified",
+  "sha256": {
+    "models/src/reputation_game/0_Framework.fs": "08f0c20df2fde323b060ad678f9373f1a0cac487ba13fd7034263f21b9393a44",
+    "models/src/reputation_game/1_Initialisation.fs": "47d34b19acde49bf310d2453dfd5bb95258c5bbf4aebfdd16a00adf2dc0c7ec8",
+    "models/src/reputation_game/2_UpdateRules.fs": "ddd8fc8d45157e5bb2fbc11f494a050f57a5449762246842dd146a5a2b886aad",
+    "models/src/reputation_game/3_Communication.fs": "9aaf2e4f84033ea2635f9acc05f2e18d59f4cf4203ddcee06a10ed25608bda8a",
+    "models/src/reputation_game/4_Measurements.fs": "5194d5a4f80f79b23f51fbf862abcaebcc42de4efa7ac20b5d3ade14d1c32681",
+    "models/src/reputation_game/Checks.fsx": "feb943cd133feb015be220cbac9a306e438624d10ddff7ae047dfda8be0831dd",
+    "models/src/reputation_game/Helpers.fs": "030b268aef8df2faaf7ec0754911ae05837063cd94d2f0dd90148290e4aa36dc",
+    "models/src/reputation_game/README.md": "39adbf48a2c978422d66ace93add1169203d9dbbca65a9bd09e5e8df5ef41000",
+    "models/src/reputation_game/ReputationGame.fsx": "e3d6ebfa1adcebaf8a39ee0e099e2584e9728425a8f15461f9fff341b6485323"
+  },
+  "api_refactor": {
+    "date": "2026-10-06",
+    "change": "Moved game loop into 5_Game.fs, calls communication and receiver functions directly. Parameters are world, rounds, RNG, and confession rule. Completed conversations yielded for external reporting; enumerating advances world.",
+    "validation": "Independent standalone build and example passed; equation/protocol/all-strategy checks rerun. Original independent audit applies to model rules, not this later API change.",
+    "sha256": {
+      "models/src/reputation_game/0_Framework.fs": "9a8025ecb72eb5f2ed6f882648a90ac3a5ad6f1a8a7929ed349dc2b8983fd4f7",
+      "models/src/reputation_game/1_Initialisation.fs": "acf630cfd48019100019a9f82346fc4694ea01d49bd75609a8f04030eb1d497e",
+      "models/src/reputation_game/2_UpdateRules.fs": "99d432b6b1de7ba0c42a3867378c3621ec3e34a9dd02409ffeb3a4785675b0d9",
+      "models/src/reputation_game/3_Communication.fs": "f89d31f2c5356e3651249d25bd6432a0323a70491744a99749f8adbcc34bf0ee",
+      "models/src/reputation_game/4_Measurements.fs": "2f6b5ae8e0a88b5778e3777eed2a32a5a81a2fe9348a872f4591b087ea69ff8a",
+      "models/src/reputation_game/5_Game.fs": "a06c5ec352b8b2ba4dac68fdcfc78e3a89654d38039d92abb767710ee2c51446",
+      "models/src/reputation_game/Checks.fsx": "a0cbd78633387e3053e1d08cdc427eb9d78ec07ee6572990fa4880bb936237b3",
+      "models/src/reputation_game/Helpers.fs": "7ff3c71e142454070def6bf8e74e9cb813f943144b1e9727ef9605dfac1857d0",
+      "models/src/reputation_game/README.md": "b756af7e1ea5a10009c505f0604d54bfbb809b0ef4a0a490d7303c495601280e",
+      "models/src/reputation_game/ReputationGame.fsx": "55df337252885168d5c751c6579cba52d25c9639f47a24c161e3aabda8d33d5e"
+    }
+  }
+}

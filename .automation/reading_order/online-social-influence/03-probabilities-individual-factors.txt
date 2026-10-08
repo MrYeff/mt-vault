@@ -1,0 +1,14 @@
+The probability Pi(t) to select choice i is based on the
+exponential utility:
+Pi(t) =
+exp (Ui(t))
+P
+k exp (Uk(t))
+where Uk(t) is the utility for each possible choice k.
+The utility of a choice is calculated based on a weighted
+sum of influence factor values. They are defined as follows.
+1) Individual Factors: The individual factors in the context
+of Twitter is the information as can be found in the user profile
+that have impact on the behavior of the agent. These factors are
+(relatively) static. Think of the number of friends or followers,
+or the user’s age.

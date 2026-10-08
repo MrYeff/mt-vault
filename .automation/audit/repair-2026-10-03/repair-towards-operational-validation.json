@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-03",
+  "task_type": "source-based repair and bibliography resolution; not an independent audit",
+  "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+  "note_sha256": "93cc1e23d2bfbcd30c3d381f6f80af6f21e8def50dbeb3879db4d9c697db235b",
+  "warning_preserved": "audit failed",
+  "primary_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+  "sources": [
+    {
+      "path": "vault/.automation/sources/files/9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e.html",
+      "sha256": "9ca74657ca28af1fc9c1c7fdf3c1e2cd97843c4c23676b1b302f45e2f720ee1e",
+      "kind": "complete published Springer article HTML"
+    },
+    {
+      "path": "vault/.automation/sources/files/4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab.html",
+      "sha256": "4c1283903846f26cb16081c8bc75793fda9cd335a0dc4ba7b152857c7944cbab",
+      "kind": "separate Table 4 HTML"
+    },
+    {
+      "path": "vault/.automation/sources/files/7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f.txt",
+      "sha256": "7efdd8967c95c2dfa4e7dbebb00bce73aee6863f6ce688a2350b35e5a7bbf35f",
+      "kind": "complete derived text"
+    }
+  ],
+  "source_coverage": [
+    "Publisher metadata and complete abstract",
+    "Introduction and conceptual framing",
+    "§2.3 Y Social platform architecture",
+    "§3.1 calibration data and windows",
+    "§3.2 persona sampling, state, action set and server-side handler",
+    "§3.3 initialization, stochastic menus, budgets, action likelihoods and churn/growth schedule",
+    "Separate Table 4 parameter values",
+    "§3.4 all five validation measures and graph construction",
+    "Results §§4.1–4.5: activity, network, toxicity, topics/embeddings and convergence",
+    "Discussion, limitations, conclusion, data availability and complete references list"
+  ],
+  "repair_scope": [
+    "Replaced all 50 bibliography entries with publisher-provided source titles in exact order, resolving all 30 opaque UnresolvedReference targets and correcting earlier count of 49 to 50.",
+    "Preserved exact source-title display labels; note body and abstract content were unchanged.",
+    "Appended repair event to note Audit Log; kept YAML audit warning unchanged."
+  ],
+  "verification": {
+    "publisher_reference_count": 50,
+    "note_reference_count": 50,
+    "opaque_targets_remaining": 0,
+    "title_to_source_order_check": "PASS: every display title matches the normalized text of the corresponding complete publisher reference entry, sequentially from 1 to 50.",
+    "target_policy": "No filesystem-forbidden characters in new targets; existing-paper target map was preferred where an exact title mapping existed.",
+    "bibliography_boundary": "References section was parsed from the complete publisher HTML li.c-article-references__item list; all 50 items counted.",
+    "claim_and_footnote_review": "Current note’s claims were checked against full source sections cited in r1–r6 and the dedicated Table 4 source; the extraction summary tracks those sections and disclosed unspecified activation/interest-update algorithms and heuristic weights. No model-body change was needed in this pass."
+  },
+  "auditor_status": "Candidate for independent audit; this is not a PASS audit report."
+}

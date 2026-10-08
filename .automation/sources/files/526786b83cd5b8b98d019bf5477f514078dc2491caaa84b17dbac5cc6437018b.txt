@@ -1,0 +1,6 @@
+Derived indexed text returned by source reader, accessed 2026-10-03. Not raw PDF or visual inspection. Coverage: captions and code/data repository pointer only; no figure outcome claims.
+
+Internal Error ()
+citeturn826view0 [wordlim: 200] Source: open({"ref_id":"https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf","lineno":null}); Total lines: 1
+L0: URL https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf is not accessible via this tool.
+

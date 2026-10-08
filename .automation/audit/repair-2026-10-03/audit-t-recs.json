@@ -1,0 +1,93 @@
+{
+  "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+  "note_sha256": "71edb5fb0e04301bbb9f5ec5f37c0ef28e1192cf41c449ee63717d18b841b65e",
+  "source": {
+    "canonical_url": "https://arxiv.org/html/2107.08959v2",
+    "version": "arXiv:2107.08959v2 (2021-07-28)",
+    "availability": "Full primary source read, including all main sections, all appendices A.1-A.4, and complete bibliography.",
+    "paths_read": [
+      "vault/.automation/sources/files/f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9.txt",
+      "vault/.automation/sources/files/abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68.html"
+    ],
+    "sha256": [
+      "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9",
+      "abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68"
+    ],
+    "sections_read": [
+      "Title, abstract, authors, and v2 metadata",
+      "§1 Introduction; §2 Background and related work; §3 case for T-RECS",
+      "§4.1-4.6: simulation dynamics, users, items/creators, model representation, metrics, programmer interface",
+      "§5.1-5.4: all three case studies, methods, settings, controls, measures, and outcomes",
+      "§6 Conclusion",
+      "Complete References section (87 entries)",
+      "Appendix A.1.1-A.1.3 replication details",
+      "Appendix A.2.1-A.2.7 state, metrics, and creator mechanics",
+      "Appendix A.3 dynamic preference updates",
+      "Appendix A.4 start-up mode"
+    ],
+    "scope": "Full text; not abstract-only. Claims and reference list checked against the complete v2 primary source."
+  },
+  "verdict": "PASS",
+  "claims": [
+    {
+      "note_claim": "Configurable user-algorithm framework, distinct actual and predicted preference/score state, actual values hidden from recommender; researcher-configured distributions/scoring/behavior.",
+      "source_locations": "§§4.1-4.5; Appendix A.2.1 and A.2.4",
+      "result": "Supported."
+    },
+    {
+      "note_claim": "Predict/present/feedback/model-update/metrics order; presentation policy configurable; no-interaction events skipped; default one feedback per user per step; parallel user processing; no fixed time duration asserted.",
+      "source_locations": "Fig. 1; §4.1 and §4.4",
+      "result": "Supported; event loop correctly labels its omissions of creator production/adaptation, dynamic user updates, and separate start-up phase."
+    },
+    {
+      "note_claim": "Default independent Bernoulli item attributes and optional production probability; configurable creator adaptation; dynamic preference uses spherical interpolation; default start-up random presentation and end-phase training.",
+      "source_locations": "§§4.3-4.4; Appendix A.2.7, A.3, A.4",
+      "result": "Supported and correctly distinguished from framework-wide mandates."
+    },
+    {
+      "note_claim": "Algorithmic confounding replication settings, matched controls, Jaccard outcome and findings.",
+      "source_locations": "§5.1; Appendix A.1.1",
+      "result": "Supported; note describes conceptual replication and gives the reported setting/outcome without generalizing beyond that metric."
+    },
+    {
+      "note_claim": "Structural-virality network size reduction, alpha/r grids, infection/recovery setup, cascade threshold, simulation count and reported values.",
+      "source_locations": "§5.2; Appendix A.1.2",
+      "result": "Supported; one-million-user replication is distinguished from 25-million-user original."
+    },
+    {
+      "note_claim": "Adaptive creator initialization/distribution, last-step interaction-driven adaptation, six recommenders, 200 trials/500 steps, entropy and distance outcomes, interpretation caveat.",
+      "source_locations": "§5.4; Appendix A.1.3",
+      "result": "Supported as one hypothesized constructive extension; note preserves the source's qualification that within-creator narrowing is not necessarily harmful and differs from between-creator convergence."
+    },
+    {
+      "note_claim": "Scope is conceptual/constructive replication, with operationalization ambiguity; applicability to recommender-mediated systems does not validate real behavior.",
+      "source_locations": "§5 introduction; §§5.1-5.4; §6",
+      "result": "Supported and appropriately bounded."
+    }
+  ],
+  "references": {
+    "source_count": 87,
+    "note_count": 87,
+    "status": "PASS",
+    "check": "Parsed the primary HTML bibliography and compared each title in source order with the note's 87 title aliases. Every title is represented; aliases preserve source title text; targets are meaningful and no opaque unresolved identifier remains."
+  },
+  "frontmatter_and_warning": "Warning/status preserved byte-for-byte; note was not edited during audit. Metadata date discrepancy for root review: note says 2021-07-19; cited primary source version is v2 dated 2021-07-28. No metadata edit made.",
+  "history": [
+    "Prior withdrawn/invalidated audit claims remain documented in the note audit log; this independent audit does not rely on them.",
+    "This report is the source-based independent audit for the repaired exact note hash."
+  ],
+  "conflicts_or_gaps": [
+    "The two first case studies are conceptual replications, and the article reports operationalization ambiguities; the note discloses this scope.",
+    "Adaptive creator behavior is a hypothesized mechanism demonstrated in a case study, not a universal empirically established law.",
+    "Appendix A.1.1 defers some unspecified distribution hyperparameters to Chaney et al.; the note does not invent them.",
+    "The publication date in note frontmatter differs from the date on the audited v2 source; root should review the metadata separately."
+  ],
+  "candidate_for_finalization": true,
+  "root_metadata_review": {
+    "status": "PASS",
+    "source": "https://arxiv.org/abs/2107.08959",
+    "evidence": "arXiv submission history: v1 Mon19Jul2021 15:16:44UTC; v2 Wed28Jul2021 00:52:04UTC. Note publication date correctly uses initial public preprint date; audited source version date belongs in automation. No note metadata change needed.",
+    "publication_date": "2021-07-19",
+    "audited_version_date": "2021-07-28"
+  }
+}

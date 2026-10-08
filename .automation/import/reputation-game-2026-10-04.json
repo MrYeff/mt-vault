@@ -1,0 +1,1228 @@
+{
+  "schema_version": 1,
+  "paper_title": "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory",
+  "entry": "vault/Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+  "imported_at": "2026-10-04",
+  "audit_status": "PASS after independent audit and required corrections/re-audit",
+  "primary_source": {
+    "version": "published final article",
+    "citation": "Annalen der Physik 534 (2022), 2100277; first published 2022-04-05",
+    "doi": "10.1002/andp.202100277",
+    "url": "https://d-nb.info/1255007265/34",
+    "official_html": "https://onlinelibrary.wiley.com/doi/full/10.1002/andp.202100277",
+    "local_pdf": "vault/.automation/sources/files/cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb.pdf",
+    "local_text": "vault/.automation/sources/files/30ad169133f9fccc8875a99fe72827c1b072330a9301e65d7c1065a51e786f4c.txt",
+    "sha256_pdf": "cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb"
+  },
+  "comparison_source": {
+    "version": "arXiv v3",
+    "date": "2022-02-03",
+    "identifier": "arXiv:2106.05414v3",
+    "local_pdf": "vault/.automation/sources/files/82e527f52fe9d4be3d5bc6708cdec2b2ca1dad08f2eadc7007e0c6bee70d97bb.pdf",
+    "local_text": "vault/.automation/sources/files/6e1ca493dab7ca994881106af71a4e3e0b3be874c17afeabe1fb266c71352ba8.txt",
+    "sha256_pdf": "82e527f52fe9d4be3d5bc6708cdec2b2ca1dad08f2eadc7007e0c6bee70d97bb",
+    "note": "Used to compare version only; published final PDF is the source for the entry."
+  },
+  "version_comparison": {
+    "abstract": "Published abstract differs editorially from arXiv v3; entry transcribes published final abstract.",
+    "references": "Published version renumbers and abbreviates references and mixes explanatory numbered notes into the same list; note preserves published numbering and separates explanatory notes in a dedicated subsection.",
+    "model_claims": "No substantive model-rule discrepancy was confirmed in this import pass; defer version-level rule check to independent audit."
+  },
+  "references": {
+    "source_items": [
+      {
+        "number": 1,
+        "raw": "D. M. Lazer, M. A. Baum, Y. Benkler, A. J. Berinsky, K. M. Greenhill, F. Menczer, M. J. Metzger, B. Nyhan, G. Pennycook, D. Rothschild, M. Schudson, S. A. Sloman, C. R. Sunstein, E. A. Thorson, D. J. Watts, J. L. Zittrain, Science 2018, 359, 1094."
+      },
+      {
+        "number": 2,
+        "raw": "S. Aral, D. Eckles, Science 2019, 365, 858."
+      },
+      {
+        "number": 3,
+        "raw": "J. Ratkiewicz, M. Conover, M. Meiss, B. Gonçalves, A. Flammini, F. Menczer, In Proc. of the Int. AAAI Conf. on Web and Social Media, Association for the Advancement of Artiﬁcial Intelligence, Palo Alto, CA 2011."
+      },
+      {
+        "number": 4,
+        "raw": "S. Bradshaw, P. Howard, Troops, trolls and troublemakers: A global inventory of organized social media manipulation, Oxford Inter- net Institute, Oxford 2017. https://fpmag.net/wp-content/uploads/ 2017/11/Troops-Trolls-and-Troublemakers.pdf."
+      },
+      {
+        "number": 5,
+        "raw": "S. Bradshaw, P. N. Howard, The Computational Propaganda Project 2018, 1. https://blogs.oii.ox.ac.uk/wp-content/uploads/sites/93/ 2018/07/ct_appendix.pdf."
+      },
+      {
+        "number": 6,
+        "raw": "L. Wu, F. Morstatter, K. M. Carley, H. Liu, ACM SIGKDD Explorations Newsletter 2019, 21.2, 80."
+      },
+      {
+        "number": 7,
+        "raw": "E. Ferrara, H. Chang, E. Chen, G. Muric, J. Patel, First Monday 2020."
+      },
+      {
+        "number": 8,
+        "raw": "T. Pfeiﬀer, L. Tran, C. Krumme, D. G. Rand, J. Royal Soc. Interface 2012, 9, 2791."
+      },
+      {
+        "number": 9,
+        "raw": "D. M. Kreps, R. Wilson, J. Econ. Theor. 1982, 27, 253."
+      },
+      {
+        "number": 10,
+        "raw": "P. Milgrom, J. Roberts, J. Econ. Theor. 1982, 27, 280."
+      },
+      {
+        "number": 11,
+        "raw": "G. Deﬀuant, D. Neau, F. Amblard, G. Weisbuch, Adv. Complex Syst. 2000, 3, 87."
+      },
+      {
+        "number": 12,
+        "raw": "M. Kitsak, L. K. Gallos, S. Havlin, F. Liljeros, L. Muchnik, H. E. Stan- ley, H. A. Makse, Nat. Phys. 2010, 6, 888."
+      },
+      {
+        "number": 13,
+        "raw": "R. Pastor-Satorras, C. Castellano, P. Van Mieghem, A. Vespignani, Rev. Mod. Phys. 2015, 87, 925."
+      },
+      {
+        "number": 14,
+        "raw": "A. E. F. Clementi, L. Gualà, G. Proietti, G. Scornavacca, arXiv:1705.09566, 2017."
+      },
+      {
+        "number": 15,
+        "raw": "D. Geschke, J. Lorenz, P. Holtz, Br. J. Soc. Psychol. 2019, 58, 129."
+      },
+      {
+        "number": 16,
+        "raw": "J. Tirole, Rev. Econ. Stud. 1996, 63, 1."
+      },
+      {
+        "number": 17,
+        "raw": "S. Tadelis, Am. Econ. Rev. 1999, 89, 548."
+      },
+      {
+        "number": 18,
+        "raw": "R. Conte, M. Paolucci, Reputation in Artiﬁcial Societies: Social Beliefs for Social Order, Vol. 6, Springer Science & Business Media, Berlin 2002."
+      },
+      {
+        "number": 19,
+        "raw": "L. Mui, M. Mohtashemi, C. Ang, P. Szolovits, A. Halberstadt, in Proc. of the Workshop on Information Technologies and Systems (WITS), Association for Computing Machinery New York, NY 2001, pp. 1–7."
+      },
+      {
+        "number": 20,
+        "raw": "L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the First Int. Joint Conf. on Autonomous Agents and Multiagent Systems: Part 1, Associ- ation for Computing Machinery New York, NY 2002, p. 280."
+      },
+      {
+        "number": 21,
+        "raw": "L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the 35th Annual Hawaii Int. Conf. on System Sciences, IEEE, Piscataway, NJ 2002, p. 2431."
+      },
+      {
+        "number": 22,
+        "raw": "G. Iñiguez, T. Govezensky, R. Dunbar, K. Kaski, R. A. Barrio, Proc. R. Soc. Edinburgh, Sect. B: Biol. Sci. 2014, 281, 20141195."
+      },
+      {
+        "number": 23,
+        "raw": "M. Förster, A. Mauleon, V. J. Vannetelbosch, Network Sci. 2016, 4, 216."
+      },
+      {
+        "number": 24,
+        "raw": "A. Babino, H. A. Makse, R. DiTella, M. Sigman, Proc. Natl. Acad. Sci. USA 2018, 115, 8728."
+      },
+      {
+        "number": 25,
+        "raw": "C. Castellano, S. Fortunato, V. Loreto, Rev. Mod. Phys. 2009, 81, 591."
+      },
+      {
+        "number": 26,
+        "raw": "M. Perc, J. J. Jordan, D. G. Rand, Z. Wang, S. Boccaletti, A. Szolnoki, Phys. Rep. 2017, 687, 1."
+      },
+      {
+        "number": 27,
+        "raw": "All messages potentially aﬀect the payoﬀ of the game, as they might change reputations. Therefore there is no cheap talk[28] in our rep- utation game. Cheap talk is characterized by being costless, non- binding, and unveriﬁable.[29] The ﬁrst condition is not fulﬁlled in our reputation game as there communication opportunities are a valuable resource for the agents."
+      },
+      {
+        "number": 28,
+        "raw": "J. Farrell, M. Rabin, J. Econ. Perspect. 1996, 10, 103."
+      },
+      {
+        "number": 29,
+        "raw": "Wikipedia contributors, Cheap talk — Wikipedia, the free ency- clopedia, 2021, https://en.wikipedia.org/w/index.php?title=Cheap_ talk&oldid=1007141321, (accessed: March 2021)."
+      },
+      {
+        "number": 30,
+        "raw": "E. Jaynes, E. Jaynes, G. Bretthorst, Probability Theory: The Logic of Science, Cambridge University Press, Cambridge 2003."
+      },
+      {
+        "number": 31,
+        "raw": "R. Leike, T. Enßlin, Entropy 2017, 19, 402."
+      },
+      {
+        "number": 32,
+        "raw": "D. Premack, G. Woodruﬀ, Behav. Brain Sci. 1978, 1, 515."
+      },
+      {
+        "number": 33,
+        "raw": "W. Steinel, S. Utz, L. Koning, Organ. Behav. Hum. Decis. Proc. 2010, 113, 85."
+      },
+      {
+        "number": 34,
+        "raw": "S. Paasonen, Distinktion: J. Social Theory 2018, 19, 214."
+      },
+      {
+        "number": 35,
+        "raw": "The Cambridge Handbook of Computational Psychology, Cambridge Handbooks in Psychology Cambridge University Press, Cambridge 2008."
+      },
+      {
+        "number": 36,
+        "raw": "J. R. Busemeyer, Z. Wang, J. T. Townsend, A. Eidels, The Oxford Hand- book of Computational and Mathematical Psychology, Oxford Univer- sity Press, Oxford 2015."
+      },
+      {
+        "number": 37,
+        "raw": "R. Sun, Policy Insights Behav. Brain Sci. 2018, 5, 240."
+      },
+      {
+        "number": 38,
+        "raw": "C. E. Shannon, Bell Syst. Tech. J. 1948, 27, 379."
+      },
+      {
+        "number": 39,
+        "raw": "R. T. Cox, Am. J. Phys. 1946, 14, 1."
+      },
+      {
+        "number": 40,
+        "raw": "Y. Wang, J. Vassileva, in Proc. Third Int. Conf. on Peer-to-Peer Comput- ing (P2P2003), IEEE, Piscataway, NJ 2003, p. 150."
+      },
+      {
+        "number": 41,
+        "raw": "T. Huynh, N. R. Jennings, N. Shadbolt, Auton. Agents Multi-Agent Syst. 2006, 13, 119."
+      },
+      {
+        "number": 42,
+        "raw": "H. T. Nguyen, W. Zhao, J. Yang, in 2010 IEEE Int. Conf. on Web Ser- vices, IEEE, Piscataway, NJ 2010, p. 251."
+      },
+      {
+        "number": 43,
+        "raw": "J. J. Jaramillo, R. Srikant, Ad Hoc Networks 2010, 8, 416."
+      },
+      {
+        "number": 44,
+        "raw": "E. Faingold, Y. Sannikov, Econometrica 2011, 79, 773."
+      },
+      {
+        "number": 45,
+        "raw": "G. R. Dowling, Winning the Reputation Game: Creating Stakeholder Value and Competitive Advantage, MIT Press, Cambridge, MA 2016."
+      },
+      {
+        "number": 46,
+        "raw": "D. Waller, R. Younger, The Reputation Game: The Art of Changing How People See You, Simon and Schuster, New York 2017."
+      },
+      {
+        "number": 47,
+        "raw": "C. Johansson, Public Relations Rev. 2007, 33, 275."
+      },
+      {
+        "number": 48,
+        "raw": "J. Hartley, Communication, Cultural and Media Studies: The Key Con- cepts, Routledge, Oxfordshire, England 2019."
+      },
+      {
+        "number": 49,
+        "raw": "C. Boddy, Mark. Rev. 2012, 12, 79."
+      },
+      {
+        "number": 50,
+        "raw": "D. M. Kreps, Game Theory Economic Modelling, Oxford University Press, Cambridge 1990."
+      },
+      {
+        "number": 51,
+        "raw": "R. Axelrod, W. D. Hamilton, Science 1981, 211, 1390."
+      },
+      {
+        "number": 52,
+        "raw": "I. Okada, Games 2020, 11, 27."
+      },
+      {
+        "number": 53,
+        "raw": "J. Xu, J. Garcia, T. Handﬁeld, In Proc. of the 18th Int. Conf. on Au- tonomous Agents and MultiAgent Systems, ACM, New York 2019, p. 269."
+      },
+      {
+        "number": 54,
+        "raw": "T. Röhl, C. Röhl, H. G. Schuster, A. Traulsen, Phys. Rev. E 2007, 76, 026114."
+      },
+      {
+        "number": 55,
+        "raw": "D. Klein, J. Marx, Hist. Social Res. 2018, 43, 234."
+      },
+      {
+        "number": 56,
+        "raw": "P. E. Smaldino, J. Calanchini, C. L. Pickett, Organ. Psychol. Rev. 2015, 5, 300."
+      },
+      {
+        "number": 57,
+        "raw": "R. M. Reynolds, Commun. Methods Meas. 2021, 15, 292."
+      },
+      {
+        "number": 58,
+        "raw": "W. Weaver, Am. Sci. 1948, 36, 536."
+      },
+      {
+        "number": 59,
+        "raw": "S. Shugars, Commun. Methods Meas. 2020, 15, 273."
+      },
+      {
+        "number": 60,
+        "raw": "D. Lim, H. Lee, H. Zo, A. Ciganek, J. Artif. Soc. Social Simul. 2014, 17, 13."
+      },
+      {
+        "number": 61,
+        "raw": "A. Gopnik, E. Bonawitz, WIREs Cognit. Sci. 2015, 6, 75."
+      },
+      {
+        "number": 62,
+        "raw": "S. Kullback, R. A. Leibler, Ann. Math. Statist. 1951, 22, 79."
+      },
+      {
+        "number": 63,
+        "raw": "R. M. Axelrod, R. Axelrod, M. D. Cohen, Harnessing Complexity, Basic books, New York 2001."
+      },
+      {
+        "number": 64,
+        "raw": "S. C. Marsella, D. V. Pynadath, S. J. Read, in Proc. of the Int. Conf. on Cognitive Modeling, Vol. 362004, 243."
+      },
+      {
+        "number": 65,
+        "raw": "D. V. Pynadath, S. C. Marsella, In IJCAI, volume 5. 2005, 1181."
+      },
+      {
+        "number": 66,
+        "raw": "J. Y. Ito, D. V. Pynadath, S. C. Marsella, in AAAI-07 workshop on plan, activity, and intent recognition, Palo Alto, CA, 2007."
+      },
+      {
+        "number": 67,
+        "raw": "C. L. Baker, Ph.D. Thesis, Massachusetts Institute of Technology, Palo Alto, California 2012."
+      },
+      {
+        "number": 68,
+        "raw": "C. L. Baker, J. B. Tenenbaum, Plan, Activity, Intent Recognit.: Theory Pract., Elsevier, New York 2014, 7, 177."
+      },
+      {
+        "number": 69,
+        "raw": "M. S. Thomas, J. L. McClelland, Cambridge Handb. Comput. Psychol. 2008, 23."
+      },
+      {
+        "number": 70,
+        "raw": "T. L. Griﬃths, C. Kemp, J. B. Tenenbaum 2008."
+      },
+      {
+        "number": 71,
+        "raw": "A. C. R. Martins, arXiv: 2106. 00199 [physics.soc-ph], 2021."
+      },
+      {
+        "number": 72,
+        "raw": "D. M. Condon, R. Mõttus, in Measuring and Modeling Persons and Situations (Eds: D. Wood, S. J. Read, P. D. Harms, A. Slaughter), Academic Press, Cambridge, MA 2021."
+      },
+      {
+        "number": 73,
+        "raw": "A. Tversky, D. Kahneman, Science 1974, 185, 1124."
+      },
+      {
+        "number": 74,
+        "raw": "A. Sloman, Cambridge Handb. Comput. Psychol. 2008, 684."
+      },
+      {
+        "number": 75,
+        "raw": "P. Oh, S. Kim, Commun. Methods Measures 2020, 15, 255."
+      },
+      {
+        "number": 76,
+        "raw": "T. J. Bouchard, Am. Political Sci. Rev. 1973, 67, 204."
+      },
+      {
+        "number": 77,
+        "raw": "C. C. Morf, F. Rhodewalt, Psychol. Inq. 2001, 12, 177."
+      },
+      {
+        "number": 78,
+        "raw": "D. L. Paulhus, K. M. Williams, J. Res. Pers. 2002, 36, 556."
+      },
+      {
+        "number": 79,
+        "raw": "S. Jakobwitz, V. Egan, Pers. Individ. Diﬀer. 2006, 40, 331."
+      },
+      {
+        "number": 80,
+        "raw": "P. Babiak, R. D. Hare, T. McLaren, Snakes in Suits: When Psychopaths Go to Work, Regan Books, New York, NY 2006."
+      },
+      {
+        "number": 81,
+        "raw": "M. Thomas, Confessions of a Sociopath: A Life Spent Hiding in Plain Sight, Broadway Books, New York, NY 2014."
+      },
+      {
+        "number": 82,
+        "raw": "M. R. Levenson, Theory Psychol. 1992, 2, 51."
+      },
+      {
+        "number": 83,
+        "raw": "L. Mealey, Behav. Brain Sci. 1995, 18, 579."
+      },
+      {
+        "number": 84,
+        "raw": "L. Penke, J. J. Denissen, G. F. Miller, Eur. J. Pers. 2007, 21, 549."
+      },
+      {
+        "number": 85,
+        "raw": "Human reputation and self-esteem are certainly more complex phenomena."
+      },
+      {
+        "number": 86,
+        "raw": "As agents have unspeciﬁed genders we use the singular they and them to refer to them individually."
+      },
+      {
+        "number": 87,
+        "raw": "We denote probabilities with P and PDFs with . They are related via integration: P(x ∈ [x1, x2]|I) = ∫ x2 x1 dx (x|I). Note that proba- bilities take values in P ∈ [0, 1], whereas PDFs in  ∈ ℝ+ 0 = [0, ∞]. Bayes’ theorem applies to both, so that a strict discrimination be- tween those is not always necessary. We therefore use the word “probability” for both, probabilities and PDFs."
+      },
+      {
+        "number": 88,
+        "raw": "In human psychology, however, additional criteria might be relevant that can lead to deviations from a pure KL based data compres- sion. Recognizing liars might be more essential than diﬀerentiating between mostly honest people. Consequently, a positive-negative asymmetry of diagnosticity of information seems to be used by hu- man minds when deciding how to store morality related information (e.g. honesty-dishonesty).[89] In this ﬁrst incarnation of our reputa- tion game, we ignore such subtleties."
+      },
+      {
+        "number": 89,
+        "raw": "J. J. Skowronski, D. E. Carlston, J. Pers. Soc. Psychol. 1987, 52, 689."
+      },
+      {
+        "number": 90,
+        "raw": "T. A. Enßlin, M. Frommert, F. S. Kitaura, Phys. Rev. Lett. D 2009, 80, 105005."
+      },
+      {
+        "number": 91,
+        "raw": "T. A. Enßlin, C. Weig, Phys. Rev. Lett. E 2010, 82, 051112."
+      },
+      {
+        "number": 92,
+        "raw": "T. A. Enßlin, Ann. Phys. 2019, 531, 1800127."
+      },
+      {
+        "number": 93,
+        "raw": "T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 013308."
+      },
+      {
+        "number": 94,
+        "raw": "T. Ramalho, M. Selig, U. Gerland, T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 022719."
+      },
+      {
+        "number": 95,
+        "raw": "R. H. Leike, T. A. Enßlin, Phys. Rev. Lett. E 2018, 97, 033314."
+      },
+      {
+        "number": 96,
+        "raw": "M. Dupont, T. Enßlin, Phys. Rev. Lett. E 2018, 98, 043307."
+      },
+      {
+        "number": 97,
+        "raw": "M. Sherif, C. I. Hovland, Social Judgment: Assimilation and Contrast eﬀects in Communication and Attitude Change, Yale University Press, New Haven, CT 1961."
+      },
+      {
+        "number": 98,
+        "raw": "The ﬁctional special agent 007, for example, exhibits strategies that resemble the here introduced manipulative and destructive strate- gies, which are both special in our nomenclature."
+      },
+      {
+        "number": 99,
+        "raw": "This saturation eﬀect can be read oﬀ from Equations (A19) and (B32) for a repeated message J with yJ ≈ 1."
+      },
+      {
+        "number": 100,
+        "raw": "To prevent this, agent red would need to constantly increase the propaganda claim."
+      },
+      {
+        "number": 101,
+        "raw": "A negative 𝜇 or 𝜆 creates an integrable singularity (for 𝜇, 𝜆 > −1) in the belief distribution at x = 0 (complete dishonest) or x = 1 (com- plete honest), receptively."
+      },
+      {
+        "number": 102,
+        "raw": "See the horizontally aligned lies of red on cyan in the period t = 200 to 800 in the communication record displayed in Figure D1."
+      },
+      {
+        "number": 103,
+        "raw": "Figure D3 shows a reconstructed density based on the simulation data points as given by the various time snapshots in the hundred simulations. The density is with respect to the plane spanned hori- zontally by black’s (or cyan’s) average reputation (averaged over the other two agents) and vertically by that of red. Details of the used density reconstruction technique can be found in ref. [104]."
+      },
+      {
+        "number": 104,
+        "raw": "M. Guardiani, P. Frank, A. Kostic, G. Edenhofer, J. Roth, B. Uhlmann, T. Enßlin, arXiv:2105.13483, 2021."
+      },
+      {
+        "number": 105,
+        "raw": "Those for the other agents can be found in Figure D3 in Appendix D."
+      },
+      {
+        "number": 106,
+        "raw": "The technique described in ref. [103] was used for this."
+      },
+      {
+        "number": 107,
+        "raw": "L. Festinger, Hum. Relat. 1954, 7, 117."
+      },
+      {
+        "number": 108,
+        "raw": "H. A. Simon, Q. J. Econ. 1955, 69, 99."
+      },
+      {
+        "number": 109,
+        "raw": "S. T. Fiske, S. E. Taylor, Soc. Cognition, Mcgraw-Hill Book Company, New York 1991."
+      },
+      {
+        "number": 110,
+        "raw": "K.-H. Yu, I. S. Kohane, BMJ Qual. Saf. 2019, 28, 238."
+      },
+      {
+        "number": 111,
+        "raw": "R. Challen, J. Denny, M. Pitt, L. Gompels, T. Edwards, K. Tsaneva- Atanasova, BMJ Qual. Saf. 2019, 28, 231."
+      },
+      {
+        "number": 112,
+        "raw": "P. L. Sweet, Am. Sociol. Rev. 2019, 84, 851."
+      },
+      {
+        "number": 113,
+        "raw": "See triangles marking lies in the right panel of Figure 10, which are either extremely positive (being at the top of the reputation range) or extremely negative (being at the bottom of the range) in the period 600 to 1200."
+      },
+      {
+        "number": 114,
+        "raw": "M. Raab, N. Auer, S. Ortlieb, C.-C. Carbon, Front. Psychol. 2013, 4, 453."
+      },
+      {
+        "number": 115,
+        "raw": "Social atmosphere refers here to the ensemble of assumptions agents base their decisions on and the statistical properties of the consequential communications."
+      },
+      {
+        "number": 116,
+        "raw": "R. T. Cox, Am. J. Phys. 1963, 31, 66."
+      },
+      {
+        "number": 117,
+        "raw": "To limit the complexity of the simulation, our agents ignore the pos- sibility that other agents might be misinformed."
+      },
+      {
+        "number": 118,
+        "raw": "In case Δ𝜇+, Δ𝜆+ are not integer numbers, a slightly more sophisticated argumentation leads to exactly the same result: Agent b assumes that a’s past belief, which has lead to ΔJ+, was based on some eﬀective, accumulated data d′ and hap- pened according to Bayes’ rule. This implies (xc|d′, Ibac) = (d′|xc, Ibac)(xc|Ibac)∕(d′|Ibac) and means that the data d′ must have been such that (d′|xc, Ibac) ∝ xΔ𝜇+ c (1 − xc)Δ𝜆+ . This should therefore also be the likelihood (ΔJ+|xc, Ibc) that agent b uses for the update. This leads to Equation (A22 )as well."
+      },
+      {
+        "number": 119,
+        "raw": "Actually, since a self-statement is self-referential with respect to its truth value, a logically fully consistent update would require to solve an implicit self-consistent relation. This can be seen for example in case agent a makes the statement to be a notorious liar, which if true is contradicted by just have made an honest confession. We, as well as our agents, do not invest mental energy in such philosophical calculations, but just use the pragmatic Equation (A28)."
+      },
+      {
+        "number": 120,
+        "raw": "Note that we regard the KL here to be a function of the information sets I′ and I′′ on the quantity x, in contrast to the standard conven- tion to deﬁne KL as a functional of the PDFs implied by those."
+      },
+      {
+        "number": 121,
+        "raw": "The expression in Equation (A41) can be derived using the expecta- tion value ⟨x ln x⟩Beta(x|𝛼,𝛽) = 𝛼 𝛼+𝛽 [𝜓(𝛼 + 1) − 𝜓(𝛼 + 𝛽 + 1)].[122]"
+      },
+      {
+        "number": 122,
+        "raw": "Beta distribution - wikipedia, https://en.wikipedia.org/wiki/Beta_ distribution, (accessed: June 2021)."
+      },
+      {
+        "number": 123,
+        "raw": "P. Virtanen, R. Gommers, T. E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright, S. J. van der Walt, M. Brett, J. Wilson, K. J. Millman, N. Mayorov, A. R. J. Nelson, E. Jones, R. Kern, E. Larson, C. J. Carey, I. Polat, Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde, J. Perktold, R. Cimrman, I. Henriksen, E. A. Quintero, C. R. Harris, et al., Nat. Methods 2020, 17, 261."
+      },
+      {
+        "number": 124,
+        "raw": "A. R. Conn, N. I. M. Gould, P. L. Toint, Trust Region Meth- ods, Society for Industrial and Applied Mathematics, Philadelphia 2000."
+      },
+      {
+        "number": 125,
+        "raw": "J. Nocedal, S. J. Wright, Numerical Optimization, Springer, New york 2006, p. 101."
+      },
+      {
+        "number": 126,
+        "raw": "G. LLC, Jax reference documentation, https://jax.readthedocs.io/ en/latest/, 2019 (accessed: November 2020)."
+      },
+      {
+        "number": 127,
+        "raw": "Non-deceptive agents would even communicate honest statements when they should lie according to their lie-frequencies 1 − xa."
+      },
+      {
+        "number": 128,
+        "raw": "In the current version of our game, this would not be fully exploited by malicious agents, as agents do not infer the character of other agents except for the level of their honesty."
+      },
+      {
+        "number": 129,
+        "raw": "B. Golub, M. O. Jackson, Am. Econ. J.: Microecon. 2010, 2, 112."
+      },
+      {
+        "number": 130,
+        "raw": "A. Jadbabaie, P. Molavi, A. Sandroni, A. Tahbaz-Salehi, Games Econ. Behav. 2012, 76, 210."
+      },
+      {
+        "number": 131,
+        "raw": "M. Mueller-Frank, J. Econ. Theory 2014, 154, 423."
+      },
+      {
+        "number": 132,
+        "raw": "An anti-strategic agent is also “strategic” in the original sense of the word, similar to an anti-particle, which actually is a particle, or an anti-correlation, which is also a correlation."
+      }
+    ],
+    "scholarly_link_targets": [
+      {
+        "number": 1,
+        "target": "D. M. Lazer, M. A. Baum, Y. Benkler, A. J. Berinsky, K. M. Greenhill, F. Menczer, M. J. Metzger, B. Nyhan, G. Pennycook, D. Rothschild, M. Schudson, S. A. Sloman, C. R. Sunstein, E. A. Thorson, D. J. Watts, J. L. Zittrain, Science 2018, 359, 1094.",
+        "source_citation": "D. M. Lazer, M. A. Baum, Y. Benkler, A. J. Berinsky, K. M. Greenhill, F. Menczer, M. J. Metzger, B. Nyhan, G. Pennycook, D. Rothschild, M. Schudson, S. A. Sloman, C. R. Sunstein, E. A. Thorson, D. J. Watts, J. L. Zittrain, Science 2018, 359, 1094."
+      },
+      {
+        "number": 2,
+        "target": "S. Aral, D. Eckles, Science 2019, 365, 858.",
+        "source_citation": "S. Aral, D. Eckles, Science 2019, 365, 858."
+      },
+      {
+        "number": 3,
+        "target": "J. Ratkiewicz, M. Conover, M. Meiss, B. Gonçalves, A. Flammini, F. Menczer, In Proc. of the Int. AAAI Conf. on Web and Social Media, Association for the Advancement of Artiﬁcial Intelligence, Palo Alto, CA 2011.",
+        "source_citation": "J. Ratkiewicz, M. Conover, M. Meiss, B. Gonçalves, A. Flammini, F. Menczer, In Proc. of the Int. AAAI Conf. on Web and Social Media, Association for the Advancement of Artiﬁcial Intelligence, Palo Alto, CA 2011."
+      },
+      {
+        "number": 4,
+        "target": "S. Bradshaw, P. Howard, Troops, trolls and troublemakers: A global inventory of organized social media manipulation, Oxford Inter- net Institute, Oxford 2017. https://fpmag.net/wp-content/uploads/ 2017/11/Troops-Trolls-and-Troublemakers.pdf.",
+        "source_citation": "S. Bradshaw, P. Howard, Troops, trolls and troublemakers: A global inventory of organized social media manipulation, Oxford Inter- net Institute, Oxford 2017. https://fpmag.net/wp-content/uploads/ 2017/11/Troops-Trolls-and-Troublemakers.pdf."
+      },
+      {
+        "number": 5,
+        "target": "S. Bradshaw, P. N. Howard, The Computational Propaganda Project 2018, 1. https://blogs.oii.ox.ac.uk/wp-content/uploads/sites/93/ 2018/07/ct_appendix.pdf.",
+        "source_citation": "S. Bradshaw, P. N. Howard, The Computational Propaganda Project 2018, 1. https://blogs.oii.ox.ac.uk/wp-content/uploads/sites/93/ 2018/07/ct_appendix.pdf."
+      },
+      {
+        "number": 6,
+        "target": "L. Wu, F. Morstatter, K. M. Carley, H. Liu, ACM SIGKDD Explorations Newsletter 2019, 21.2, 80.",
+        "source_citation": "L. Wu, F. Morstatter, K. M. Carley, H. Liu, ACM SIGKDD Explorations Newsletter 2019, 21.2, 80."
+      },
+      {
+        "number": 7,
+        "target": "E. Ferrara, H. Chang, E. Chen, G. Muric, J. Patel, First Monday 2020.",
+        "source_citation": "E. Ferrara, H. Chang, E. Chen, G. Muric, J. Patel, First Monday 2020."
+      },
+      {
+        "number": 8,
+        "target": "T. Pfeiﬀer, L. Tran, C. Krumme, D. G. Rand, J. Royal Soc. Interface 2012, 9, 2791.",
+        "source_citation": "T. Pfeiﬀer, L. Tran, C. Krumme, D. G. Rand, J. Royal Soc. Interface 2012, 9, 2791."
+      },
+      {
+        "number": 9,
+        "target": "D. M. Kreps, R. Wilson, J. Econ. Theor. 1982, 27, 253.",
+        "source_citation": "D. M. Kreps, R. Wilson, J. Econ. Theor. 1982, 27, 253."
+      },
+      {
+        "number": 10,
+        "target": "P. Milgrom, J. Roberts, J. Econ. Theor. 1982, 27, 280.",
+        "source_citation": "P. Milgrom, J. Roberts, J. Econ. Theor. 1982, 27, 280."
+      },
+      {
+        "number": 11,
+        "target": "G. Deﬀuant, D. Neau, F. Amblard, G. Weisbuch, Adv. Complex Syst. 2000, 3, 87.",
+        "source_citation": "G. Deﬀuant, D. Neau, F. Amblard, G. Weisbuch, Adv. Complex Syst. 2000, 3, 87."
+      },
+      {
+        "number": 12,
+        "target": "M. Kitsak, L. K. Gallos, S. Havlin, F. Liljeros, L. Muchnik, H. E. Stan- ley, H. A. Makse, Nat. Phys. 2010, 6, 888.",
+        "source_citation": "M. Kitsak, L. K. Gallos, S. Havlin, F. Liljeros, L. Muchnik, H. E. Stan- ley, H. A. Makse, Nat. Phys. 2010, 6, 888."
+      },
+      {
+        "number": 13,
+        "target": "R. Pastor-Satorras, C. Castellano, P. Van Mieghem, A. Vespignani, Rev. Mod. Phys. 2015, 87, 925.",
+        "source_citation": "R. Pastor-Satorras, C. Castellano, P. Van Mieghem, A. Vespignani, Rev. Mod. Phys. 2015, 87, 925."
+      },
+      {
+        "number": 14,
+        "target": "A. E. F. Clementi, L. Gualà, G. Proietti, G. Scornavacca, arXiv:1705.09566, 2017.",
+        "source_citation": "A. E. F. Clementi, L. Gualà, G. Proietti, G. Scornavacca, arXiv:1705.09566, 2017."
+      },
+      {
+        "number": 15,
+        "target": "D. Geschke, J. Lorenz, P. Holtz, Br. J. Soc. Psychol. 2019, 58, 129.",
+        "source_citation": "D. Geschke, J. Lorenz, P. Holtz, Br. J. Soc. Psychol. 2019, 58, 129."
+      },
+      {
+        "number": 16,
+        "target": "J. Tirole, Rev. Econ. Stud. 1996, 63, 1.",
+        "source_citation": "J. Tirole, Rev. Econ. Stud. 1996, 63, 1."
+      },
+      {
+        "number": 17,
+        "target": "S. Tadelis, Am. Econ. Rev. 1999, 89, 548.",
+        "source_citation": "S. Tadelis, Am. Econ. Rev. 1999, 89, 548."
+      },
+      {
+        "number": 18,
+        "target": "R. Conte, M. Paolucci, Reputation in Artiﬁcial Societies: Social Beliefs for Social Order, Vol. 6, Springer Science & Business Media, Berlin 2002.",
+        "source_citation": "R. Conte, M. Paolucci, Reputation in Artiﬁcial Societies: Social Beliefs for Social Order, Vol. 6, Springer Science & Business Media, Berlin 2002."
+      },
+      {
+        "number": 19,
+        "target": "L. Mui, M. Mohtashemi, C. Ang, P. Szolovits, A. Halberstadt, in Proc. of the Workshop on Information Technologies and Systems (WITS), Association for Computing Machinery New York, NY 2001, pp. 1–7.",
+        "source_citation": "L. Mui, M. Mohtashemi, C. Ang, P. Szolovits, A. Halberstadt, in Proc. of the Workshop on Information Technologies and Systems (WITS), Association for Computing Machinery New York, NY 2001, pp. 1–7."
+      },
+      {
+        "number": 20,
+        "target": "L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the First Int. Joint Conf. on Autonomous Agents and Multiagent Systems: Part 1, Associ- ation for Computing Machinery New York, NY 2002, p. 280.",
+        "source_citation": "L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the First Int. Joint Conf. on Autonomous Agents and Multiagent Systems: Part 1, Associ- ation for Computing Machinery New York, NY 2002, p. 280."
+      },
+      {
+        "number": 21,
+        "target": "L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the 35th Annual Hawaii Int. Conf. on System Sciences, IEEE, Piscataway, NJ 2002, p. 2431.",
+        "source_citation": "L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the 35th Annual Hawaii Int. Conf. on System Sciences, IEEE, Piscataway, NJ 2002, p. 2431."
+      },
+      {
+        "number": 22,
+        "target": "G. Iñiguez, T. Govezensky, R. Dunbar, K. Kaski, R. A. Barrio, Proc. R. Soc. Edinburgh, Sect. B: Biol. Sci. 2014, 281, 20141195.",
+        "source_citation": "G. Iñiguez, T. Govezensky, R. Dunbar, K. Kaski, R. A. Barrio, Proc. R. Soc. Edinburgh, Sect. B: Biol. Sci. 2014, 281, 20141195."
+      },
+      {
+        "number": 23,
+        "target": "M. Förster, A. Mauleon, V. J. Vannetelbosch, Network Sci. 2016, 4, 216.",
+        "source_citation": "M. Förster, A. Mauleon, V. J. Vannetelbosch, Network Sci. 2016, 4, 216."
+      },
+      {
+        "number": 24,
+        "target": "A. Babino, H. A. Makse, R. DiTella, M. Sigman, Proc. Natl. Acad. Sci. USA 2018, 115, 8728.",
+        "source_citation": "A. Babino, H. A. Makse, R. DiTella, M. Sigman, Proc. Natl. Acad. Sci. USA 2018, 115, 8728."
+      },
+      {
+        "number": 25,
+        "target": "C. Castellano, S. Fortunato, V. Loreto, Rev. Mod. Phys. 2009, 81, 591.",
+        "source_citation": "C. Castellano, S. Fortunato, V. Loreto, Rev. Mod. Phys. 2009, 81, 591."
+      },
+      {
+        "number": 26,
+        "target": "M. Perc, J. J. Jordan, D. G. Rand, Z. Wang, S. Boccaletti, A. Szolnoki, Phys. Rep. 2017, 687, 1.",
+        "source_citation": "M. Perc, J. J. Jordan, D. G. Rand, Z. Wang, S. Boccaletti, A. Szolnoki, Phys. Rep. 2017, 687, 1."
+      },
+      {
+        "number": 28,
+        "target": "J. Farrell, M. Rabin, J. Econ. Perspect. 1996, 10, 103.",
+        "source_citation": "J. Farrell, M. Rabin, J. Econ. Perspect. 1996, 10, 103."
+      },
+      {
+        "number": 29,
+        "target": "Wikipedia contributors, Cheap talk — Wikipedia, the free ency- clopedia, 2021, https://en.wikipedia.org/w/index.php?title=Cheap_ talk&oldid=1007141321, (accessed: March 2021).",
+        "source_citation": "Wikipedia contributors, Cheap talk — Wikipedia, the free ency- clopedia, 2021, https://en.wikipedia.org/w/index.php?title=Cheap_ talk&oldid=1007141321, (accessed: March 2021)."
+      },
+      {
+        "number": 30,
+        "target": "E. Jaynes, E. Jaynes, G. Bretthorst, Probability Theory: The Logic of Science, Cambridge University Press, Cambridge 2003.",
+        "source_citation": "E. Jaynes, E. Jaynes, G. Bretthorst, Probability Theory: The Logic of Science, Cambridge University Press, Cambridge 2003."
+      },
+      {
+        "number": 31,
+        "target": "R. Leike, T. Enßlin, Entropy 2017, 19, 402.",
+        "source_citation": "R. Leike, T. Enßlin, Entropy 2017, 19, 402."
+      },
+      {
+        "number": 32,
+        "target": "D. Premack, G. Woodruﬀ, Behav. Brain Sci. 1978, 1, 515.",
+        "source_citation": "D. Premack, G. Woodruﬀ, Behav. Brain Sci. 1978, 1, 515."
+      },
+      {
+        "number": 33,
+        "target": "W. Steinel, S. Utz, L. Koning, Organ. Behav. Hum. Decis. Proc. 2010, 113, 85.",
+        "source_citation": "W. Steinel, S. Utz, L. Koning, Organ. Behav. Hum. Decis. Proc. 2010, 113, 85."
+      },
+      {
+        "number": 34,
+        "target": "S. Paasonen, Distinktion: J. Social Theory 2018, 19, 214.",
+        "source_citation": "S. Paasonen, Distinktion: J. Social Theory 2018, 19, 214."
+      },
+      {
+        "number": 35,
+        "target": "The Cambridge Handbook of Computational Psychology, Cambridge Handbooks in Psychology Cambridge University Press, Cambridge 2008.",
+        "source_citation": "The Cambridge Handbook of Computational Psychology, Cambridge Handbooks in Psychology Cambridge University Press, Cambridge 2008."
+      },
+      {
+        "number": 36,
+        "target": "J. R. Busemeyer, Z. Wang, J. T. Townsend, A. Eidels, The Oxford Hand- book of Computational and Mathematical Psychology, Oxford Univer- sity Press, Oxford 2015.",
+        "source_citation": "J. R. Busemeyer, Z. Wang, J. T. Townsend, A. Eidels, The Oxford Hand- book of Computational and Mathematical Psychology, Oxford Univer- sity Press, Oxford 2015."
+      },
+      {
+        "number": 37,
+        "target": "R. Sun, Policy Insights Behav. Brain Sci. 2018, 5, 240.",
+        "source_citation": "R. Sun, Policy Insights Behav. Brain Sci. 2018, 5, 240."
+      },
+      {
+        "number": 38,
+        "target": "C. E. Shannon, Bell Syst. Tech. J. 1948, 27, 379.",
+        "source_citation": "C. E. Shannon, Bell Syst. Tech. J. 1948, 27, 379."
+      },
+      {
+        "number": 39,
+        "target": "R. T. Cox, Am. J. Phys. 1946, 14, 1.",
+        "source_citation": "R. T. Cox, Am. J. Phys. 1946, 14, 1."
+      },
+      {
+        "number": 40,
+        "target": "Y. Wang, J. Vassileva, in Proc. Third Int. Conf. on Peer-to-Peer Comput- ing (P2P2003), IEEE, Piscataway, NJ 2003, p. 150.",
+        "source_citation": "Y. Wang, J. Vassileva, in Proc. Third Int. Conf. on Peer-to-Peer Comput- ing (P2P2003), IEEE, Piscataway, NJ 2003, p. 150."
+      },
+      {
+        "number": 41,
+        "target": "T. Huynh, N. R. Jennings, N. Shadbolt, Auton. Agents Multi-Agent Syst. 2006, 13, 119.",
+        "source_citation": "T. Huynh, N. R. Jennings, N. Shadbolt, Auton. Agents Multi-Agent Syst. 2006, 13, 119."
+      },
+      {
+        "number": 42,
+        "target": "H. T. Nguyen, W. Zhao, J. Yang, in 2010 IEEE Int. Conf. on Web Ser- vices, IEEE, Piscataway, NJ 2010, p. 251.",
+        "source_citation": "H. T. Nguyen, W. Zhao, J. Yang, in 2010 IEEE Int. Conf. on Web Ser- vices, IEEE, Piscataway, NJ 2010, p. 251."
+      },
+      {
+        "number": 43,
+        "target": "J. J. Jaramillo, R. Srikant, Ad Hoc Networks 2010, 8, 416.",
+        "source_citation": "J. J. Jaramillo, R. Srikant, Ad Hoc Networks 2010, 8, 416."
+      },
+      {
+        "number": 44,
+        "target": "E. Faingold, Y. Sannikov, Econometrica 2011, 79, 773.",
+        "source_citation": "E. Faingold, Y. Sannikov, Econometrica 2011, 79, 773."
+      },
+      {
+        "number": 45,
+        "target": "G. R. Dowling, Winning the Reputation Game: Creating Stakeholder Value and Competitive Advantage, MIT Press, Cambridge, MA 2016.",
+        "source_citation": "G. R. Dowling, Winning the Reputation Game: Creating Stakeholder Value and Competitive Advantage, MIT Press, Cambridge, MA 2016."
+      },
+      {
+        "number": 46,
+        "target": "D. Waller, R. Younger, The Reputation Game: The Art of Changing How People See You, Simon and Schuster, New York 2017.",
+        "source_citation": "D. Waller, R. Younger, The Reputation Game: The Art of Changing How People See You, Simon and Schuster, New York 2017."
+      },
+      {
+        "number": 47,
+        "target": "C. Johansson, Public Relations Rev. 2007, 33, 275.",
+        "source_citation": "C. Johansson, Public Relations Rev. 2007, 33, 275."
+      },
+      {
+        "number": 48,
+        "target": "J. Hartley, Communication, Cultural and Media Studies: The Key Con- cepts, Routledge, Oxfordshire, England 2019.",
+        "source_citation": "J. Hartley, Communication, Cultural and Media Studies: The Key Con- cepts, Routledge, Oxfordshire, England 2019."
+      },
+      {
+        "number": 49,
+        "target": "C. Boddy, Mark. Rev. 2012, 12, 79.",
+        "source_citation": "C. Boddy, Mark. Rev. 2012, 12, 79."
+      },
+      {
+        "number": 50,
+        "target": "D. M. Kreps, Game Theory Economic Modelling, Oxford University Press, Cambridge 1990.",
+        "source_citation": "D. M. Kreps, Game Theory Economic Modelling, Oxford University Press, Cambridge 1990."
+      },
+      {
+        "number": 51,
+        "target": "R. Axelrod, W. D. Hamilton, Science 1981, 211, 1390.",
+        "source_citation": "R. Axelrod, W. D. Hamilton, Science 1981, 211, 1390."
+      },
+      {
+        "number": 52,
+        "target": "I. Okada, Games 2020, 11, 27.",
+        "source_citation": "I. Okada, Games 2020, 11, 27."
+      },
+      {
+        "number": 53,
+        "target": "J. Xu, J. Garcia, T. Handﬁeld, In Proc. of the 18th Int. Conf. on Au- tonomous Agents and MultiAgent Systems, ACM, New York 2019, p. 269.",
+        "source_citation": "J. Xu, J. Garcia, T. Handﬁeld, In Proc. of the 18th Int. Conf. on Au- tonomous Agents and MultiAgent Systems, ACM, New York 2019, p. 269."
+      },
+      {
+        "number": 54,
+        "target": "T. Röhl, C. Röhl, H. G. Schuster, A. Traulsen, Phys. Rev. E 2007, 76, 026114.",
+        "source_citation": "T. Röhl, C. Röhl, H. G. Schuster, A. Traulsen, Phys. Rev. E 2007, 76, 026114."
+      },
+      {
+        "number": 55,
+        "target": "D. Klein, J. Marx, Hist. Social Res. 2018, 43, 234.",
+        "source_citation": "D. Klein, J. Marx, Hist. Social Res. 2018, 43, 234."
+      },
+      {
+        "number": 56,
+        "target": "P. E. Smaldino, J. Calanchini, C. L. Pickett, Organ. Psychol. Rev. 2015, 5, 300.",
+        "source_citation": "P. E. Smaldino, J. Calanchini, C. L. Pickett, Organ. Psychol. Rev. 2015, 5, 300."
+      },
+      {
+        "number": 57,
+        "target": "R. M. Reynolds, Commun. Methods Meas. 2021, 15, 292.",
+        "source_citation": "R. M. Reynolds, Commun. Methods Meas. 2021, 15, 292."
+      },
+      {
+        "number": 58,
+        "target": "W. Weaver, Am. Sci. 1948, 36, 536.",
+        "source_citation": "W. Weaver, Am. Sci. 1948, 36, 536."
+      },
+      {
+        "number": 59,
+        "target": "S. Shugars, Commun. Methods Meas. 2020, 15, 273.",
+        "source_citation": "S. Shugars, Commun. Methods Meas. 2020, 15, 273."
+      },
+      {
+        "number": 60,
+        "target": "D. Lim, H. Lee, H. Zo, A. Ciganek, J. Artif. Soc. Social Simul. 2014, 17, 13.",
+        "source_citation": "D. Lim, H. Lee, H. Zo, A. Ciganek, J. Artif. Soc. Social Simul. 2014, 17, 13."
+      },
+      {
+        "number": 61,
+        "target": "A. Gopnik, E. Bonawitz, WIREs Cognit. Sci. 2015, 6, 75.",
+        "source_citation": "A. Gopnik, E. Bonawitz, WIREs Cognit. Sci. 2015, 6, 75."
+      },
+      {
+        "number": 62,
+        "target": "S. Kullback, R. A. Leibler, Ann. Math. Statist. 1951, 22, 79.",
+        "source_citation": "S. Kullback, R. A. Leibler, Ann. Math. Statist. 1951, 22, 79."
+      },
+      {
+        "number": 63,
+        "target": "R. M. Axelrod, R. Axelrod, M. D. Cohen, Harnessing Complexity, Basic books, New York 2001.",
+        "source_citation": "R. M. Axelrod, R. Axelrod, M. D. Cohen, Harnessing Complexity, Basic books, New York 2001."
+      },
+      {
+        "number": 64,
+        "target": "S. C. Marsella, D. V. Pynadath, S. J. Read, in Proc. of the Int. Conf. on Cognitive Modeling, Vol. 362004, 243.",
+        "source_citation": "S. C. Marsella, D. V. Pynadath, S. J. Read, in Proc. of the Int. Conf. on Cognitive Modeling, Vol. 362004, 243."
+      },
+      {
+        "number": 65,
+        "target": "D. V. Pynadath, S. C. Marsella, In IJCAI, volume 5. 2005, 1181.",
+        "source_citation": "D. V. Pynadath, S. C. Marsella, In IJCAI, volume 5. 2005, 1181."
+      },
+      {
+        "number": 66,
+        "target": "J. Y. Ito, D. V. Pynadath, S. C. Marsella, in AAAI-07 workshop on plan, activity, and intent recognition, Palo Alto, CA, 2007.",
+        "source_citation": "J. Y. Ito, D. V. Pynadath, S. C. Marsella, in AAAI-07 workshop on plan, activity, and intent recognition, Palo Alto, CA, 2007."
+      },
+      {
+        "number": 67,
+        "target": "C. L. Baker, Ph.D. Thesis, Massachusetts Institute of Technology, Palo Alto, California 2012.",
+        "source_citation": "C. L. Baker, Ph.D. Thesis, Massachusetts Institute of Technology, Palo Alto, California 2012."
+      },
+      {
+        "number": 68,
+        "target": "C. L. Baker, J. B. Tenenbaum, Plan, Activity, Intent Recognit.: Theory Pract., Elsevier, New York 2014, 7, 177.",
+        "source_citation": "C. L. Baker, J. B. Tenenbaum, Plan, Activity, Intent Recognit.: Theory Pract., Elsevier, New York 2014, 7, 177."
+      },
+      {
+        "number": 69,
+        "target": "M. S. Thomas, J. L. McClelland, Cambridge Handb. Comput. Psychol. 2008, 23.",
+        "source_citation": "M. S. Thomas, J. L. McClelland, Cambridge Handb. Comput. Psychol. 2008, 23."
+      },
+      {
+        "number": 70,
+        "target": "T. L. Griﬃths, C. Kemp, J. B. Tenenbaum 2008.",
+        "source_citation": "T. L. Griﬃths, C. Kemp, J. B. Tenenbaum 2008."
+      },
+      {
+        "number": 71,
+        "target": "A. C. R. Martins, arXiv: 2106. 00199 [physics.soc-ph], 2021.",
+        "source_citation": "A. C. R. Martins, arXiv: 2106. 00199 [physics.soc-ph], 2021."
+      },
+      {
+        "number": 72,
+        "target": "D. M. Condon, R. Mõttus, in Measuring and Modeling Persons and Situations (Eds: D. Wood, S. J. Read, P. D. Harms, A. Slaughter), Academic Press, Cambridge, MA 2021.",
+        "source_citation": "D. M. Condon, R. Mõttus, in Measuring and Modeling Persons and Situations (Eds: D. Wood, S. J. Read, P. D. Harms, A. Slaughter), Academic Press, Cambridge, MA 2021."
+      },
+      {
+        "number": 73,
+        "target": "A. Tversky, D. Kahneman, Science 1974, 185, 1124.",
+        "source_citation": "A. Tversky, D. Kahneman, Science 1974, 185, 1124."
+      },
+      {
+        "number": 74,
+        "target": "A. Sloman, Cambridge Handb. Comput. Psychol. 2008, 684.",
+        "source_citation": "A. Sloman, Cambridge Handb. Comput. Psychol. 2008, 684."
+      },
+      {
+        "number": 75,
+        "target": "P. Oh, S. Kim, Commun. Methods Measures 2020, 15, 255.",
+        "source_citation": "P. Oh, S. Kim, Commun. Methods Measures 2020, 15, 255."
+      },
+      {
+        "number": 76,
+        "target": "T. J. Bouchard, Am. Political Sci. Rev. 1973, 67, 204.",
+        "source_citation": "T. J. Bouchard, Am. Political Sci. Rev. 1973, 67, 204."
+      },
+      {
+        "number": 77,
+        "target": "C. C. Morf, F. Rhodewalt, Psychol. Inq. 2001, 12, 177.",
+        "source_citation": "C. C. Morf, F. Rhodewalt, Psychol. Inq. 2001, 12, 177."
+      },
+      {
+        "number": 78,
+        "target": "D. L. Paulhus, K. M. Williams, J. Res. Pers. 2002, 36, 556.",
+        "source_citation": "D. L. Paulhus, K. M. Williams, J. Res. Pers. 2002, 36, 556."
+      },
+      {
+        "number": 79,
+        "target": "S. Jakobwitz, V. Egan, Pers. Individ. Diﬀer. 2006, 40, 331.",
+        "source_citation": "S. Jakobwitz, V. Egan, Pers. Individ. Diﬀer. 2006, 40, 331."
+      },
+      {
+        "number": 80,
+        "target": "P. Babiak, R. D. Hare, T. McLaren, Snakes in Suits: When Psychopaths Go to Work, Regan Books, New York, NY 2006.",
+        "source_citation": "P. Babiak, R. D. Hare, T. McLaren, Snakes in Suits: When Psychopaths Go to Work, Regan Books, New York, NY 2006."
+      },
+      {
+        "number": 81,
+        "target": "M. Thomas, Confessions of a Sociopath: A Life Spent Hiding in Plain Sight, Broadway Books, New York, NY 2014.",
+        "source_citation": "M. Thomas, Confessions of a Sociopath: A Life Spent Hiding in Plain Sight, Broadway Books, New York, NY 2014."
+      },
+      {
+        "number": 82,
+        "target": "M. R. Levenson, Theory Psychol. 1992, 2, 51.",
+        "source_citation": "M. R. Levenson, Theory Psychol. 1992, 2, 51."
+      },
+      {
+        "number": 83,
+        "target": "L. Mealey, Behav. Brain Sci. 1995, 18, 579.",
+        "source_citation": "L. Mealey, Behav. Brain Sci. 1995, 18, 579."
+      },
+      {
+        "number": 84,
+        "target": "L. Penke, J. J. Denissen, G. F. Miller, Eur. J. Pers. 2007, 21, 549.",
+        "source_citation": "L. Penke, J. J. Denissen, G. F. Miller, Eur. J. Pers. 2007, 21, 549."
+      },
+      {
+        "number": 89,
+        "target": "J. J. Skowronski, D. E. Carlston, J. Pers. Soc. Psychol. 1987, 52, 689.",
+        "source_citation": "J. J. Skowronski, D. E. Carlston, J. Pers. Soc. Psychol. 1987, 52, 689."
+      },
+      {
+        "number": 90,
+        "target": "T. A. Enßlin, M. Frommert, F. S. Kitaura, Phys. Rev. Lett. D 2009, 80, 105005.",
+        "source_citation": "T. A. Enßlin, M. Frommert, F. S. Kitaura, Phys. Rev. Lett. D 2009, 80, 105005."
+      },
+      {
+        "number": 91,
+        "target": "T. A. Enßlin, C. Weig, Phys. Rev. Lett. E 2010, 82, 051112.",
+        "source_citation": "T. A. Enßlin, C. Weig, Phys. Rev. Lett. E 2010, 82, 051112."
+      },
+      {
+        "number": 92,
+        "target": "T. A. Enßlin, Ann. Phys. 2019, 531, 1800127.",
+        "source_citation": "T. A. Enßlin, Ann. Phys. 2019, 531, 1800127."
+      },
+      {
+        "number": 93,
+        "target": "T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 013308.",
+        "source_citation": "T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 013308."
+      },
+      {
+        "number": 94,
+        "target": "T. Ramalho, M. Selig, U. Gerland, T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 022719.",
+        "source_citation": "T. Ramalho, M. Selig, U. Gerland, T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 022719."
+      },
+      {
+        "number": 95,
+        "target": "R. H. Leike, T. A. Enßlin, Phys. Rev. Lett. E 2018, 97, 033314.",
+        "source_citation": "R. H. Leike, T. A. Enßlin, Phys. Rev. Lett. E 2018, 97, 033314."
+      },
+      {
+        "number": 96,
+        "target": "M. Dupont, T. Enßlin, Phys. Rev. Lett. E 2018, 98, 043307.",
+        "source_citation": "M. Dupont, T. Enßlin, Phys. Rev. Lett. E 2018, 98, 043307."
+      },
+      {
+        "number": 97,
+        "target": "M. Sherif, C. I. Hovland, Social Judgment: Assimilation and Contrast eﬀects in Communication and Attitude Change, Yale University Press, New Haven, CT 1961.",
+        "source_citation": "M. Sherif, C. I. Hovland, Social Judgment: Assimilation and Contrast eﬀects in Communication and Attitude Change, Yale University Press, New Haven, CT 1961."
+      },
+      {
+        "number": 104,
+        "target": "M. Guardiani, P. Frank, A. Kostic, G. Edenhofer, J. Roth, B. Uhlmann, T. Enßlin, arXiv:2105.13483, 2021.",
+        "source_citation": "M. Guardiani, P. Frank, A. Kostic, G. Edenhofer, J. Roth, B. Uhlmann, T. Enßlin, arXiv:2105.13483, 2021."
+      },
+      {
+        "number": 107,
+        "target": "L. Festinger, Hum. Relat. 1954, 7, 117.",
+        "source_citation": "L. Festinger, Hum. Relat. 1954, 7, 117."
+      },
+      {
+        "number": 108,
+        "target": "H. A. Simon, Q. J. Econ. 1955, 69, 99.",
+        "source_citation": "H. A. Simon, Q. J. Econ. 1955, 69, 99."
+      },
+      {
+        "number": 109,
+        "target": "S. T. Fiske, S. E. Taylor, Soc. Cognition, Mcgraw-Hill Book Company, New York 1991.",
+        "source_citation": "S. T. Fiske, S. E. Taylor, Soc. Cognition, Mcgraw-Hill Book Company, New York 1991."
+      },
+      {
+        "number": 110,
+        "target": "K.-H. Yu, I. S. Kohane, BMJ Qual. Saf. 2019, 28, 238.",
+        "source_citation": "K.-H. Yu, I. S. Kohane, BMJ Qual. Saf. 2019, 28, 238."
+      },
+      {
+        "number": 111,
+        "target": "R. Challen, J. Denny, M. Pitt, L. Gompels, T. Edwards, K. Tsaneva- Atanasova, BMJ Qual. Saf. 2019, 28, 231.",
+        "source_citation": "R. Challen, J. Denny, M. Pitt, L. Gompels, T. Edwards, K. Tsaneva- Atanasova, BMJ Qual. Saf. 2019, 28, 231."
+      },
+      {
+        "number": 112,
+        "target": "P. L. Sweet, Am. Sociol. Rev. 2019, 84, 851.",
+        "source_citation": "P. L. Sweet, Am. Sociol. Rev. 2019, 84, 851."
+      },
+      {
+        "number": 114,
+        "target": "M. Raab, N. Auer, S. Ortlieb, C.-C. Carbon, Front. Psychol. 2013, 4, 453.",
+        "source_citation": "M. Raab, N. Auer, S. Ortlieb, C.-C. Carbon, Front. Psychol. 2013, 4, 453."
+      },
+      {
+        "number": 116,
+        "target": "R. T. Cox, Am. J. Phys. 1963, 31, 66.",
+        "source_citation": "R. T. Cox, Am. J. Phys. 1963, 31, 66."
+      },
+      {
+        "number": 122,
+        "target": "Beta distribution - wikipedia, https://en.wikipedia.org/wiki/Beta_ distribution, (accessed: June 2021).",
+        "source_citation": "Beta distribution - wikipedia, https://en.wikipedia.org/wiki/Beta_ distribution, (accessed: June 2021)."
+      },
+      {
+        "number": 123,
+        "target": "P. Virtanen, R. Gommers, T. E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright, S. J. van der Walt, M. Brett, J. Wilson, K. J. Millman, N. Mayorov, A. R. J. Nelson, E. Jones, R. Kern, E. Larson, C. J. Carey, I. Polat, Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde, J. Perktold, R. Cimrman, I. Henriksen, E. A. Quintero, C. R. Harris, et al., Nat. Methods 2020, 17, 261.",
+        "source_citation": "P. Virtanen, R. Gommers, T. E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright, S. J. van der Walt, M. Brett, J. Wilson, K. J. Millman, N. Mayorov, A. R. J. Nelson, E. Jones, R. Kern, E. Larson, C. J. Carey, I. Polat, Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde, J. Perktold, R. Cimrman, I. Henriksen, E. A. Quintero, C. R. Harris, et al., Nat. Methods 2020, 17, 261."
+      },
+      {
+        "number": 124,
+        "target": "A. R. Conn, N. I. M. Gould, P. L. Toint, Trust Region Meth- ods, Society for Industrial and Applied Mathematics, Philadelphia 2000.",
+        "source_citation": "A. R. Conn, N. I. M. Gould, P. L. Toint, Trust Region Meth- ods, Society for Industrial and Applied Mathematics, Philadelphia 2000."
+      },
+      {
+        "number": 125,
+        "target": "J. Nocedal, S. J. Wright, Numerical Optimization, Springer, New york 2006, p. 101.",
+        "source_citation": "J. Nocedal, S. J. Wright, Numerical Optimization, Springer, New york 2006, p. 101."
+      },
+      {
+        "number": 126,
+        "target": "G. LLC, Jax reference documentation, https://jax.readthedocs.io/ en/latest/, 2019 (accessed: November 2020).",
+        "source_citation": "G. LLC, Jax reference documentation, https://jax.readthedocs.io/ en/latest/, 2019 (accessed: November 2020)."
+      },
+      {
+        "number": 129,
+        "target": "B. Golub, M. O. Jackson, Am. Econ. J.: Microecon. 2010, 2, 112.",
+        "source_citation": "B. Golub, M. O. Jackson, Am. Econ. J.: Microecon. 2010, 2, 112."
+      },
+      {
+        "number": 130,
+        "target": "A. Jadbabaie, P. Molavi, A. Sandroni, A. Tahbaz-Salehi, Games Econ. Behav. 2012, 76, 210.",
+        "source_citation": "A. Jadbabaie, P. Molavi, A. Sandroni, A. Tahbaz-Salehi, Games Econ. Behav. 2012, 76, 210."
+      },
+      {
+        "number": 131,
+        "target": "M. Mueller-Frank, J. Econ. Theory 2014, 154, 423.",
+        "source_citation": "M. Mueller-Frank, J. Econ. Theory 2014, 154, 423."
+      }
+    ],
+    "numbered_explanatory_notes": [
+      {
+        "number": 27,
+        "raw": "All messages potentially aﬀect the payoﬀ of the game, as they might change reputations. Therefore there is no cheap talk[28] in our rep- utation game. Cheap talk is characterized by being costless, non- binding, and unveriﬁable.[29] The ﬁrst condition is not fulﬁlled in our reputation game as there communication opportunities are a valuable resource for the agents."
+      },
+      {
+        "number": 85,
+        "raw": "Human reputation and self-esteem are certainly more complex phenomena."
+      },
+      {
+        "number": 86,
+        "raw": "As agents have unspeciﬁed genders we use the singular they and them to refer to them individually."
+      },
+      {
+        "number": 87,
+        "raw": "We denote probabilities with P and PDFs with . They are related via integration: P(x ∈ [x1, x2]|I) = ∫ x2 x1 dx (x|I). Note that proba- bilities take values in P ∈ [0, 1], whereas PDFs in  ∈ ℝ+ 0 = [0, ∞]. Bayes’ theorem applies to both, so that a strict discrimination be- tween those is not always necessary. We therefore use the word “probability” for both, probabilities and PDFs."
+      },
+      {
+        "number": 88,
+        "raw": "In human psychology, however, additional criteria might be relevant that can lead to deviations from a pure KL based data compres- sion. Recognizing liars might be more essential than diﬀerentiating between mostly honest people. Consequently, a positive-negative asymmetry of diagnosticity of information seems to be used by hu- man minds when deciding how to store morality related information (e.g. honesty-dishonesty).[89] In this ﬁrst incarnation of our reputa- tion game, we ignore such subtleties."
+      },
+      {
+        "number": 98,
+        "raw": "The ﬁctional special agent 007, for example, exhibits strategies that resemble the here introduced manipulative and destructive strate- gies, which are both special in our nomenclature."
+      },
+      {
+        "number": 99,
+        "raw": "This saturation eﬀect can be read oﬀ from Equations (A19) and (B32) for a repeated message J with yJ ≈ 1."
+      },
+      {
+        "number": 100,
+        "raw": "To prevent this, agent red would need to constantly increase the propaganda claim."
+      },
+      {
+        "number": 101,
+        "raw": "A negative 𝜇 or 𝜆 creates an integrable singularity (for 𝜇, 𝜆 > −1) in the belief distribution at x = 0 (complete dishonest) or x = 1 (com- plete honest), receptively."
+      },
+      {
+        "number": 102,
+        "raw": "See the horizontally aligned lies of red on cyan in the period t = 200 to 800 in the communication record displayed in Figure D1."
+      },
+      {
+        "number": 103,
+        "raw": "Figure D3 shows a reconstructed density based on the simulation data points as given by the various time snapshots in the hundred simulations. The density is with respect to the plane spanned hori- zontally by black’s (or cyan’s) average reputation (averaged over the other two agents) and vertically by that of red. Details of the used density reconstruction technique can be found in ref. [104]."
+      },
+      {
+        "number": 105,
+        "raw": "Those for the other agents can be found in Figure D3 in Appendix D."
+      },
+      {
+        "number": 106,
+        "raw": "The technique described in ref. [103] was used for this."
+      },
+      {
+        "number": 113,
+        "raw": "See triangles marking lies in the right panel of Figure 10, which are either extremely positive (being at the top of the reputation range) or extremely negative (being at the bottom of the range) in the period 600 to 1200."
+      },
+      {
+        "number": 115,
+        "raw": "Social atmosphere refers here to the ensemble of assumptions agents base their decisions on and the statistical properties of the consequential communications."
+      },
+      {
+        "number": 117,
+        "raw": "To limit the complexity of the simulation, our agents ignore the pos- sibility that other agents might be misinformed."
+      },
+      {
+        "number": 118,
+        "raw": "In case Δ𝜇+, Δ𝜆+ are not integer numbers, a slightly more sophisticated argumentation leads to exactly the same result: Agent b assumes that a’s past belief, which has lead to ΔJ+, was based on some eﬀective, accumulated data d′ and hap- pened according to Bayes’ rule. This implies (xc|d′, Ibac) = (d′|xc, Ibac)(xc|Ibac)∕(d′|Ibac) and means that the data d′ must have been such that (d′|xc, Ibac) ∝ xΔ𝜇+ c (1 − xc)Δ𝜆+ . This should therefore also be the likelihood (ΔJ+|xc, Ibc) that agent b uses for the update. This leads to Equation (A22 )as well."
+      },
+      {
+        "number": 119,
+        "raw": "Actually, since a self-statement is self-referential with respect to its truth value, a logically fully consistent update would require to solve an implicit self-consistent relation. This can be seen for example in case agent a makes the statement to be a notorious liar, which if true is contradicted by just have made an honest confession. We, as well as our agents, do not invest mental energy in such philosophical calculations, but just use the pragmatic Equation (A28)."
+      },
+      {
+        "number": 120,
+        "raw": "Note that we regard the KL here to be a function of the information sets I′ and I′′ on the quantity x, in contrast to the standard conven- tion to deﬁne KL as a functional of the PDFs implied by those."
+      },
+      {
+        "number": 121,
+        "raw": "The expression in Equation (A41) can be derived using the expecta- tion value ⟨x ln x⟩Beta(x|𝛼,𝛽) = 𝛼 𝛼+𝛽 [𝜓(𝛼 + 1) − 𝜓(𝛼 + 𝛽 + 1)].[122]"
+      },
+      {
+        "number": 127,
+        "raw": "Non-deceptive agents would even communicate honest statements when they should lie according to their lie-frequencies 1 − xa."
+      },
+      {
+        "number": 128,
+        "raw": "In the current version of our game, this would not be fully exploited by malicious agents, as agents do not infer the character of other agents except for the level of their honesty."
+      },
+      {
+        "number": 132,
+        "raw": "An anti-strategic agent is also “strategic” in the original sense of the word, similar to an anti-particle, which actually is a particle, or an anti-correlation, which is also a correlation."
+      }
+    ],
+    "mapping_note": "Full source-supplied citation strings retained verbatim after whitespace normalization; publisher often omits article titles, so no titles or external bibliographic metadata were invented. No cited paper files were imported."
+  },
+  "uncertainties": [
+    "Publisher uses a single numbered stream for scholarly references and explanatory notes; source notes are separated by their text content.",
+    "Publisher abbreviates many paper titles; full publisher-supplied citation strings are kept as wiki link targets without external resolution.",
+    "Confession evidence assignment differs between Section 4.1/Table B1 and Appendix B.1 prose/equations; preserved explicitly."
+  ],
+  "reference_resolution": "Skipped at user request; no cited-paper notes imported.",
+  "audit": {
+    "audit_record": "vault/.automation/audit/cognitive-simulations-2026-10-04/reputation-audit.json",
+    "initial_verdict": "FAIL",
+    "corrected": "lie construction; comparison outcomes; destructive-strategy interpretation; equation references; full bibliography strings",
+    "reaudit_status": "pending"
+  },
+  "finalization": {
+    "verdict": "PASS",
+    "audited_sha256": "cfe070f29bc1da4116a05ea49292a8bbad0e69148ce2dc145adf164a672edebd",
+    "report": ".automation/audit/cognitive-simulations-2026-10-04/reputation-final-reaudit.json",
+    "report_sha256": "51a9d4624cfe5e5d30ca7e47e6d40feb160b947cc1ddc54eaf0c7912db7dcc1c",
+    "auditor": "gpt-6-luna",
+    "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded.",
+    "final_sha256": "161a0a61ac7271175cd5db5d358484a17b9eb43689c454a78af8ad5ac89bc3fe",
+    "administrative_only_change": true,
+    "finalized_at": "2026-10-04"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+  "note_sha256": "632ada906842af006ee0a078c6e1b3c8c2eb6809f5fdb5551cdfbe6ceac58213",
+  "verdict": "PASS_CONTENT",
+  "warning_preserved": "audit failed",
+  "note_or_warning_modified": false,
+  "primary_source": {
+    "version": "arXiv:1811.10981v1, 2018-11-27",
+    "html_path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html",
+    "html_sha256": "4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d",
+    "full_text_path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a.txt",
+    "full_text_sha256": "9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a",
+    "full_text_bytes": 90738,
+    "full_text_lines": 2739,
+    "coverage": "Read the full extracted source sequentially in chunks, including title/metadata, abstract, §§1–8, Table 1, Figures and model description, NetLogo/Protégé implementation and verification, commuting use-case/Table 2, Appendix A, endnotes, and all 55 references."
+  },
+  "claim_checks": [
+    {
+      "claim": "Abstract describes computational SoPrA from SPT requirements, UML, NetLogo/Protégé implementation verification, and commuting use case; dynamic SPT and validation are future work.",
+      "result": "PASS exact source substance and wording",
+      "source_location": "Source Abstract; §§1, 6–8."
+    },
+    {
+      "claim": "Activities form a hierarchy with generalization/allOf and parthood/partOf; partOf children all required, while order and simultaneity are unspecified and overlapping activities are not modeled.",
+      "result": "PASS",
+      "source_location": "§5.1; Figures 2–3; §8."
+    },
+    {
+      "claim": "HabitualTrigger links activities to context cues with continuous strength; static SoPrA cue types include object/location/agent/activity, while time cues are deferred; RelatedValue links activity/value with strength.",
+      "result": "PASS",
+      "source_location": "§5.2; Figure 4; Appendix A."
+    },
+    {
+      "claim": "Belief separates personalStrength from sharedStrength and supports multiple views; same identifies activities for the same bodily movement.",
+      "result": "PASS",
+      "source_location": "§5.3; Figure 5; Appendix A."
+    },
+    {
+      "claim": "Agent habitRate models heterogeneity in habit acquisition; AdheredValue strength represents personal valuation supporting intentional choice.",
+      "result": "PASS",
+      "source_location": "§5.4; Figure 6; Appendix A."
+    },
+    {
+      "claim": "Formal rules specify a connected directed tree with unique root; actions are leaves, top action root, other activities abstract; every partOf child requires another sibling partOf child; parent value relation is the mean over children and action/leaf strengths are application-specified; habit relations have no required inheritance; same is an equivalence relation.",
+      "result": "PASS",
+      "source_location": "§5.5 Eqs. (1)–(7) and endnote 3."
+    },
+    {
+      "claim": "The static paper supplies no complete decision/execution loop or dynamic learning transition; time cue and habit learning dynamics are deferred.",
+      "result": "PASS; accurately disclosed scope",
+      "source_location": "§5.2, §5.4, §§6–8."
+    },
+    {
+      "claim": "Use-case model illustrates commuting, household cues, beliefs, values, and implementations but does not establish predictive behavioral validation.",
+      "result": "PASS",
+      "source_location": "§§6–8; Table 2."
+    }
+  ],
+  "bibliography_check": {
+    "source_entries": 55,
+    "note_items": 55,
+    "result": "PASS one-to-one count and source-order match. All 55 source title blocks inspected. 53 note aliases match normalized source titles exactly; two benign title-block parsing differences are the book volume string appended to “Outline of a theory of practice” and the NetLogo URL appended to “Netlogo itself”; both note aliases preserve the actual title and not the incidental volume/URL metadata.",
+    "list_complete": true
+  },
+  "abstract_provenance": "Compared note Abstract against full source Abstract; exact text match.",
+  "gaps_or_conflicts": [],
+  "candidate_for_independent_audit": false
+}

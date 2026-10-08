@@ -1,0 +1,463 @@
+{
+  "date": "2026-10-03",
+  "batch": 2,
+  "policy": "Extraction repairs only; warnings retained pending independent full-source audit.",
+  "papers": [
+    {
+      "note": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "note_sha256_after_repair": "486477cf3022e534f0d488334b86515fd13b1acb2391fc94097b81c768e89321",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "source": {
+        "canonical_url": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+        "availability_and_version": "Full deposited primary PDF, HAL v1; article body cites the 2001 publication, while its archived repository deposit date is 2025-05-20. Primary-source text extraction and rendered pages are available in the index.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1.pdf",
+          "vault/.automation/sources/files/466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562.txt",
+          "vault/.automation/sources/files/ebe21db94158b70a7ecc4de28367d98305c009ef8a045000ae6cb91ff73c9770.png",
+          "vault/.automation/sources/files/e1765b0cb4993ffa6b7fa7bd892829057f8376e1450ed731fb8ed5d089f8dff8.png",
+          "vault/.automation/sources/files/e18f96b3d22567dca9760e47282269a772306eb263a253649e6360c0b97a3740.png",
+          "vault/.automation/sources/files/64d7a42c123b2effbb47061cb0d41979e861244e012c4d8166f78519e49ca911.png"
+        ],
+        "sections_read": [
+          "Abstract",
+          "§1 Introduction",
+          "§2 Complete Mixing (including §§2.1–2.2, equations and figures)",
+          "§3 Social Networks",
+          "§4 Vector Opinions (including §§4.1–4.2, equations, figures and tables)",
+          "§5 Conclusions",
+          "complete References"
+        ],
+        "scope": "Full text, not abstract-only. The text extraction was checked against rendered pages where equations, figure captions, and vector-threshold notation were garbled."
+      },
+      "changes": [
+        "Added the vector-opinion state and encounter sequence: complete-mixing pair selection, qualification by the source's cutoff wording, then a separate random agent choice and probabilistic persuasion for each differing bit.",
+        "Made the paper's inconsistent binary-vector cutoff statements explicit as alternative formulations; did not pick an unsupported boundary interpretation.",
+        "Recorded that continuous complete-mixing time units sample 1,000 random pairs, distinguishing this reporting unit from a lattice encounter step."
+      ],
+      "conflicts_or_gaps": [
+        "The binary-vector description says both agreement on at least m-d subjects and disagreement on at most d-1 subjects; these differ at the boundary, so executable eligibility remains unresolved.",
+        "The source prose and Figure 1 caption report different agent counts; the note retains both as a source conflict.",
+        "The source gives qualitative and figure-specific parameters for experiments rather than one universal run configuration."
+      ],
+      "reference_check": "The note contains the 10 entries in the article's bibliography; the source's bibliography was read in full. No title correction identified.",
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "note_sha256_after_repair": "632ada906842af006ee0a078c6e1b3c8c2eb6809f5fdb5551cdfbe6ceac58213",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "source": {
+        "canonical_url": "https://arxiv.org/html/1811.10981v1",
+        "availability_and_version": "Full arXiv v1 primary HTML and PDF available; arXiv marks v1 2018-11-27. Read full-text body and References section.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/9873e6b1629fa91427ba188041105c42c4169d852c7ab0fa2ac3d6d68e4ff54a.txt",
+          "vault/.automation/sources/files/4cc2d8f7acb9f1d9e41dd8849e775a77d0a6849cd411cc8a30c7558c15da678d.html",
+          "vault/.automation/sources/files/c69bffd38e7b2c9e2ecf0e91c69f1184ae308409208b127761f68079a406bfed.pdf"
+        ],
+        "sections_read": [
+          "Abstract",
+          "§1 Introduction",
+          "§2 Use Case",
+          "§3 Literature and Requirements (including §§3.1–3.3)",
+          "§4 High-level Description",
+          "§5 UML Model (including §§5.1–5.5, Eqs. 1–7)",
+          "§6 Implementation and Verification",
+          "§7 Commuting Use Case",
+          "§8 Conclusion",
+          "§9 Appendix",
+          "complete References"
+        ],
+        "scope": "Full text, not abstract-only. Full source was read with particular attention to UML associations, hierarchy rules, use-case mapping, and every bibliography entry."
+      },
+      "changes": [
+        "Corrected the extracted schema to call the weighted activity–value association `RelatedValue`, matching the paper’s UML association class, instead of implying a separate `Meaning` entity.",
+        "Clarified that the paper models static associations and formal constraints; it supplies no complete agent action-selection or dynamic learning procedure."
+      ],
+      "conflicts_or_gaps": [
+        "The source reports verification of NetLogo and Protégé implementations but defers dynamic mechanisms and empirical validation to future work.",
+        "Time as a habitual cue and overlapping activities are expressly excluded; the activity hierarchy does not state order or simultaneity for part-of children."
+      ],
+      "reference_check": "Compared all 55 source bibliography entries against the note list (55 entries); titles and order are represented. Existing wiki targets are preserved when their displayed titles match; no unresolved placeholders found in this bibliography.",
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "note_sha256_after_repair": "ef6a883df79c3f9f64b516ae9555081ac290d6a0121bf3c317224f8a1ff4bf93",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "source": {
+        "canonical_url": "https://arxiv.org/html/2310.10108v3",
+        "availability_and_version": "Full primary arXiv v3 HTML and text are available; v3 submitted 2024-11-08. Read the complete body, tables/figures, and References.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html",
+          "vault/.automation/sources/files/9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022.txt"
+        ],
+        "source_sha256": {
+          "vault/.automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html": "bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1",
+          "vault/.automation/sources/files/9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022.txt": "9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022"
+        },
+        "sections_read": [
+          "Abstract",
+          "§1 Introduction",
+          "§2 Agent4Rec framework, profile/memory/action modules",
+          "§3 Agent4Rec evaluation (preference alignment, profile fidelity, recommender evaluation)",
+          "§4 Filter bubble and causal analysis",
+          "§5 Discussion and limitations",
+          "complete References"
+        ],
+        "scope": "Full text, not abstract-only; read full HTML and line-preserving text extraction."
+      },
+      "changes": [
+        "Specified profile trait formulas and dataset initialization, historical sample size, rating threshold, item/page setup, memory types, reflection trigger, LLM/framework, and recommender modules from source.",
+        "Added source-grounded alignment/evaluation findings, recommender-feedback results, filter-bubble trend, and boundaries on causal interpretation.",
+        "Replaced opaque/incomplete imported bibliography with all 70 titles in exact source order; source HTML bibliography was read and counted.",
+        "Corrected source provenance to arXiv full HTML and kept source abstract separately identified."
+      ],
+      "conflicts_or_gaps": [
+        "Agent actions depend on prompts and LLM outputs; paper does not specify a numerical transition law or a universal reflection action threshold.",
+        "Evaluation-specific settings are not universal defaults; paper reports metric-dependent algorithm rankings and substantial fidelity limitations.",
+        "The note preserves source terminology and does not reproduce full prompts, memory retrieval implementation, or fitted recommender internals."
+      ],
+      "reference_check": "70 source bibliography entries read in full and represented in source order; no opaque placeholders remain. Primary article HTML is the comparison basis.",
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "note_sha256_after_repair": "5d17ebc8c0754be9c28f35006a4f796725812a33655a20958d0d128c9ac4a473",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "frontmatter_unchanged": true,
+      "source": {
+        "canonical_url": "https://arxiv.org/html/1909.04847v2",
+        "availability_and_version": "Full primary arXiv v2 HTML-derived text read in full; source identifies v2 submitted 2019-09-26. Note publication date 2019-09-11 is the first-submission date for arXiv:1909.04847, not v2 date.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88.txt"
+        ],
+        "source_sha256": "b66154b69a820d0714fce8ef425fe04f411066f5107a046a1e4355b386c0dc88",
+        "sections_read": [
+          "Abstract and title/authors/version metadata",
+          "§§1.1–1.4 platform scope, goals and non-objectives",
+          "§§2–3 problem definition, main component factorization, and SlateQ example",
+          "§§4.1–4.3 simulator order, episode/iteration handling, logging/evaluation, environment API, agent layers and baselines",
+          "§§5.1–5.3 latent-state bandits, slate RL decomposition, and slow-state advantage amplification case studies",
+          "§6 future directions",
+          "complete References (63 entries)"
+        ],
+        "scope": "Full text, not abstract-only; the whole arXiv text extraction including all case-study descriptions and references was read."
+      },
+      "changes": [
+        "Added a source-grounded SlateQ example explaining document/user state, interest and satisfaction, optional budget dynamics, information exposed at choice, and configurable choice models.",
+        "Added all three source case studies and their key outcomes: latent-state bandit exploration, SlateQ decomposition, and temporal aggregation for slow satisfaction dynamics.",
+        "Updated the policy-comparison capability statement to capture those full-text use cases while preserving the distinction between configurable interfaces and a fixed model."
+      ],
+      "conflicts_or_gaps": [
+        "The main paper is a framework description, not a single fixed simulation; component procedures and exact parameters depend on chosen environment implementations.",
+        "The SlateQ section gives alternative satisfaction and transition examples rather than one required transition law; companion case-study papers hold more implementation details.",
+        "Abstract is verbatim and not newly altered."
+      ],
+      "reference_check": "Full source References section read: 63 entries; current note has 63 source-titled entries in matching order.",
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending independent audit after target sanitation",
+      "followup_changes": [
+        "Independent audit requested precise sim_step indentation correction; moved history append and output assignment inside function body. Bibliography #25 already reads the source title “Contextual markov decision processes”.",
+        "Sanitized filename-unsafe bibliography target characters and retained exact source title as link alias."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "note_sha256_after_repair": "614ebfc6cea8e051b3789637e532298e7c17f7b837a8417524794a446bdbc90c",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "source": {
+        "canonical_url": "https://www.jasss.org/27/2/4.html",
+        "availability_and_version": "Full published JASSS article text available as cached HTML-derived text. Publisher metadata says accepted 2024-02-13 and published 2024-03-31; the note date matches.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015.txt"
+        ],
+        "source_sha256": "6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015",
+        "sections_read": [
+          "Publisher title, author list, received/accepted/published dates, abstract",
+          "§1 Introduction and stated contributions",
+          "§2 Rust background, krABMaga engine/visualization, fields, double-buffering, scheduler, monitoring, exploration and optimization",
+          "§3 Wolf-Sheep-Grass tutorial, including agent actions, state update and implementation order",
+          "§4 Related Work and Table 1 tool features",
+          "§5 performance comparisons, benchmark models/configurations/results, SIR calibration procedure, Table 2 and speedup outcomes",
+          "§6 conclusion/future work",
+          "all 50 bibliography entries"
+        ],
+        "scope": "Full published text, not abstract-only. Read all 1,052 lines including complete references. Figures were checked via source captions/text; numeric output absent from article prose is explicitly left unspecified."
+      },
+      "changes": [
+        "Added framework component notation and scheduler/update order, including agent/state hooks, one-shot/repeating schedule behavior and termination conditions.",
+        "Added field variants, read/write double-buffer semantics and update modes.",
+        "Added the Wolf–Sheep–Grass tutorial mechanisms and deferred scheduling operations.",
+        "Added monitoring, reproducibility, parameter-sweep and random/evolutionary/Bayesian optimization functions and available compute backends.",
+        "Added complete performance-test design/outcomes and the SIR calibration setup/control sequence/results.",
+        "Disclosed the paper-internal inverse-density formula, prose-vs-table speedup discrepancy (96× vs 92×), and absent numeric SIR gene bounds/optimized values.",
+        "Replaced 51 incomplete reference bullets (including the self-citation and 11 opaque IDs) with all 50 source-title entries in source order."
+      ],
+      "conflicts_or_gaps": [
+        "The paper describes benchmark density as approximately 10% but prints width×height/agents; listed configurations imply conventional agents/area occupancy, so the displayed definition is inverted.",
+        "Calibration results prose says 96× speedup; Table 2 gives 92× for the 16-node/128-vCPU setting. Both values retained.",
+        "The article does not state numeric search bounds or the fitted beta/gamma pair for SIR in text; these were not inferred from a plotted curve.",
+        "Some WSG parameters appear only in code figures; the summary does not invent a universal WSG parameter configuration."
+      ],
+      "reference_check": "50 full publisher bibliography entries read, 50 note entries now in exact source order with displayed source titles; removed the spurious self-reference and opaque unresolved IDs.",
+      "frontmatter_unchanged": true,
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "note_sha256_after_repair": "31fb11ca15d1a3f744e04a776ea9054f3bec0c5a81c372b31668807b7b920eac",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "frontmatter_unchanged": true,
+      "source": {
+        "canonical_url": "https://par.nsf.gov/servlets/purl/10187146",
+        "availability_and_version": "Complete four-page ACM SIGSPATIAL 2019 paper text extraction read; primary repository copy contains abstract, §§1–4, figures/captions and complete references.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47.txt"
+        ],
+        "source_sha256": "308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47",
+        "sections_read": [
+          "Title, authors, venue and abstract",
+          "§1 Introduction and design requirements",
+          "§2 Concepts and architecture; trigger, behavior, action, goal and competing priorities",
+          "§3 Demonstration; builder, sample model, MASON/GeoMASON setup, visual outputs, stream interface",
+          "§4 Conclusion and future work",
+          "Figures 1–5 captions and complete References [1]–[26]"
+        ],
+        "scope": "Full text, not abstract-only; all four pages and complete source reference list were read."
+      },
+      "changes": [
+        "Expanded trigger/behavior/action/goal semantics, including event sources, multi-step actions, explicit goal termination and action outputs.",
+        "Specified modeler-controlled behavior order without inventing a numeric priority range; Maslow is presented only as an optional hypothesis.",
+        "Described the library/Builder/Encoder/Simulator/Decoder architecture and builder implementation.",
+        "Added the full sample model properties and behaviors, threshold, restaurant path, until-full goal and payment sequence.",
+        "Added stream fields/ZeroMQ and distinguishable visual demonstration outputs from empirical validation; clarified plausible full pattern-of-life model as future work."
+      ],
+      "conflicts_or_gaps": [
+        "The paper supplies a framework and a highly stylized demonstration, not a completed empirically validated pattern-of-life model.",
+        "No universal restaurant-choice function or numeric behavior-priority scale is specified.",
+        "The stream is shown with a Zeppelin/Spark Streaming analysis; the paper does not fully specify a general API schema or all component internals."
+      ],
+      "reference_check": {
+        "source_entry_count": 26,
+        "note_entry_count": 26,
+        "status": "All 26 entries represented in source order; source bibliography [1]–[26] read in full and titles checked against the note."
+      },
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending independent audit after target sanitation",
+      "followup_changes": [
+        "Sanitized filename-unsafe bibliography target characters and retained exact source title as link alias."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "note_sha256_after_repair": "71edb5fb0e04301bbb9f5ec5f37c0ef28e1192cf41c449ee63717d18b841b65e",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "frontmatter_unchanged": true,
+      "source": {
+        "canonical_url": "https://arxiv.org/html/2107.08959v2",
+        "availability_and_version": "Full primary arXiv v2 HTML-derived text read, including main paper, complete references, and appendices A.1–A.4; version header identifies arXiv:2107.08959v2, 2021-07-28.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9.txt"
+        ],
+        "source_sha256": "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9",
+        "sections_read": [
+          "Abstract/title/authors/version metadata",
+          "§1 Introduction",
+          "§2 Background and related work",
+          "§3 case for T-RECS",
+          "§4.1–4.6 simulation dynamics, users, items/creators, model representation, metrics, programmer interface",
+          "§5.1–5.4 all three case studies and reported settings/results",
+          "§6 Conclusion",
+          "complete References section",
+          "Appendix A.1.1–A.1.3 replication details",
+          "Appendix A.2.1–A.2.7 state/metrics/creator mechanics",
+          "Appendix A.3 dynamic user preference updates",
+          "Appendix A.4 start-up mode"
+        ],
+        "scope": "Full text, not abstract-only; full article, references, and all appendices were read."
+      },
+      "changes": [
+        "Added source-backed concrete parameters, controls, outcome definitions and findings for all three case studies, rather than leaving them at broad conceptual summary.",
+        "Clarified the conceptual/constructive-replication scope, 100-user/20-attribute/1,000-item synthetic setup and per-condition training schedule; distinguished relative Jaccard outcome from general claims.",
+        "Specified the million-user SIR study parameter grid, scale reduction, popularity threshold, and key results.",
+        "Added Dirichlet initialization, last-step interaction-driven creator adaptation, entropy and user-distance measures, and non-normative within-creator homogenization caveat.",
+        "Sanitized colon-containing reference targets with exact source titles retained as aliases."
+      ],
+      "conflicts_or_gaps": [
+        "The two first case studies are conceptual replications rather than exact reproductions; authors disclose operationalization ambiguity and differences from original studies.",
+        "The adaptive creator distribution/update is one hypothesized mechanism, not an empirically established general law.",
+        "The SIR network size is 1 million in this replication, versus 25 million in the source study; hardware/performance is documented separately in the appendix.",
+        "Appendix A.1.1 refers parameter omissions back to Chaney et al.; this note does not invent those unspecified distribution hyperparameters."
+      ],
+      "reference_check": {
+        "source_entry_count": 87,
+        "note_entry_count": 87,
+        "status": "All 87 source references were represented in note order; each note title, case/punctuation normalized, was found in full primary source text. No opaque placeholder remains."
+      },
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending independent audit after target sanitation",
+      "followup_changes": [
+        "Sanitized filename-unsafe bibliography targets; retained exact source titles as aliases."
+      ]
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "note_sha256_after_repair": "2ba6e8fb81882823563932ece3c2d5cd3139954393e2a8c0dd4f6397de7324df",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "frontmatter_unchanged": true,
+      "source": {
+        "canonical_url": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+        "availability_and_version": "Current full Cambridge Core article HTML and derived full-text extraction are cached; complete article sections, Appendix B/C, dataset analyses, and reference metadata were accessible.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html",
+          "vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt"
+        ],
+        "source_sha256": {
+          "vault/.automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html": "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59",
+          "vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt": "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+        },
+        "sections_read": [
+          "Abstract and metadata",
+          "§§1–2 motivation and related work",
+          "§3.1–3.5 factor model, variants, optimization and statistical tests",
+          "§4 four CSS datasets and model-selection results",
+          "§5 conclusion",
+          "Appendices B–C algorithms and test details",
+          "Complete References list (71 HTML reference records)"
+        ],
+        "scope": "Full text, not abstract-only; source HTML and full text extraction were read, including appendices and full bibliography."
+      },
+      "changes": [
+        "Rebuilt the References section from all 71 title-bearing publisher reference records in source order, replacing 21 opaque placeholder links and removing 12 unsupported extras. Source titles are retained in links; filename-unsafe punctuation uses aliases.",
+        "Added the source-reported outcomes across four CSS datasets, including which datasets support social-cognitive agreement and the observed change in Hunter relational schemas between weeks one and six."
+      ],
+      "conflicts_or_gaps": [
+        "The agreement fitting algorithm is nonmonotone and has no global-optimum guarantee; the paper explicitly cautions that the maximum-likelihood assumption for tests may not hold.",
+        "The four dataset analyses have limited participant/context metadata; cognitive labels are post-fit interpretation, not directly inferred semantic categories.",
+        "The source does not provide a complete tensor-splitting implementation; this omission remains disclosed in the note."
+      ],
+      "reference_check": {
+        "source_entry_count": 71,
+        "note_entry_count": 71,
+        "status": "PASS; exact publisher article titles mapped from all 71 source records in order. No opaque placeholders or extra entries remain."
+      },
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "note_sha256_after_repair": "673a1d0607bedb24c49aa640ee0c2f82920b6d93e31d896139e278ddd10cf57f",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "frontmatter_unchanged": true,
+      "source": {
+        "canonical_url": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
+        "availability_and_version": "Full 18-page UIST 2022 primary paper PDF and derived text extraction available; version/publication is UIST ’22, October 29–November 2, 2022.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/0f7836dfa2facf3d54aed31499c54fa9d6a114935484cba0729cedc38db1a882.pdf",
+          "vault/.automation/sources/files/2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c.txt"
+        ],
+        "source_sha256": {
+          "vault/.automation/sources/files/0f7836dfa2facf3d54aed31499c54fa9d6a114935484cba0729cedc38db1a882.pdf": "0f7836dfa2facf3d54aed31499c54fa9d6a114935484cba0729cedc38db1a882",
+          "vault/.automation/sources/files/2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c.txt": "2af1bc14493e58d282414fb8e0f65e660ea43236e2c81a3cc166eea4f46d716c"
+        },
+        "sections_read": [
+          "Abstract and §1 introduction",
+          "§§2–3 system/design and Generate/WhatIf/Multiverse behavior",
+          "§4 prompting techniques, persona expansion, post/reply prompts, responder selection, stopping/truncation and GPT-3 settings",
+          "§5 technical evaluation setup, conditions, sample, analysis and outcomes",
+          "§6 designer study procedure, participants, analysis and results",
+          "§7 ethical/societal impact and technical limitations",
+          "§8 conclusion",
+          "Full References [1]–[86]"
+        ],
+        "scope": "Full text, not abstract-only; the entire primary PDF-derived text, including references, was read."
+      },
+      "changes": [
+        "Rebuilt bibliography from the 86 numbered primary PDF references in source order, replacing 93 imported items (including eight opaque placeholders) and preserving source-repeated entries [30] and [31]. All citation titles are shown in link aliases; filename-unsafe characters are sanitized in targets.",
+        "Expanded outcome reporting: technical evaluation contrasts four conditions and reports the source table error rates, omnibus test, and the text/table discrepancy for the no-persona condition. Added designer evaluation outcome without treating output as prediction."
+      ],
+      "conflicts_or_gaps": [
+        "The source table gives 34% error for SimReddit without personas while the prose reports 33%; note explicitly records the discrepancy and uses the table value as table data.",
+        "The thread stop condition is stated as “more than 8 replies”; exact boundary handling is not further specified. Reply probability is sampled from Normal(mean .65, unspecified standard deviation), with no rule given for values outside [0,1].",
+        "The system uses base GPT-3 davinci and a default temperature of 0.7, increased to 0.8 for Multiverse; model/system details are historically specific.",
+        "The authors frame generated interactions as exploratory prototyping rather than reliable future prediction, and warn of bias, harmful outputs, and potential misuse."
+      ],
+      "reference_check": {
+        "source_entry_count": 86,
+        "note_entry_count": 86,
+        "status": "PASS; all 86 numbered source references represented in order with source-derived titles, including the source’s duplicated entries 30–31. No opaque placeholders or unsupported extra items."
+      },
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "note_sha256_after_repair": "d7ea867da5c23898b9c840aa35b30c547d39ccd80ddf13df42ce21826686477a",
+      "warnings_preserved": [
+        "audit failed"
+      ],
+      "frontmatter_unchanged": true,
+      "source": {
+        "canonical_url": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
+        "availability_and_version": "Complete author-hosted 28-page book-chapter PDF, printed pages 75–102, plus derived text. It has an abstract-like chapter summary on the first page but no separate abstract section and ends after acknowledgements without a chapter bibliography.",
+        "fulltext_paths_read": [
+          "vault/.automation/sources/files/54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6.pdf",
+          "vault/.automation/sources/files/732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b.txt"
+        ],
+        "source_sha256": {
+          "vault/.automation/sources/files/54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6.pdf": "54ecf055e54bf7746dbb568003eb4dc74573d0f0fafc0b18396e5e02ad5913b6",
+          "vault/.automation/sources/files/732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b.txt": "732605677ba5ffac7547be2642a575f1cb92653c9c52a8114fac673a9aa92c4b"
+        },
+        "sections_read": [
+          "Chapter opening/summary, printed pp.75–77; common-pool game and payoff",
+          "§6.5 Consumat choice framework, printed pp.87–88",
+          "§6.6 needs, equations 6.1–6.8, neural predictor and choice rules, printed pp.89–92",
+          "§6.7 lab tables and simulation settings/results, printed pp.92–99",
+          "§6.8 discussion, hypotheses, validation and acknowledgements, printed pp.99–102",
+          "Final page checked for references; chapter provides none"
+        ],
+        "scope": "Complete chapter text and final page read; no chapter bibliography is available in the primary copy."
+      },
+      "changes": [
+        "Corrected heterogeneous-need simulation replication count from 25 to the source-reported 1,000 runs per SVO combination.",
+        "Retained explicit disclosures for the printed standard-deviation formula/prose inconsistency and incomplete neural weight-update indexing rather than inventing executable details.",
+        "Retained bibliography as an explicit unavailable-source limitation; no reference titles were inferred from in-text citations."
+      ],
+      "conflicts_or_gaps": [
+        "Equations 6.3/6.5 print an inclusive t−5…t window divided by 4 while prose calls it five rounds; note reports this conflict instead of choosing silently.",
+        "The source prints a Widrow–Hoff weight update with ambiguous scalar/vector indexing and no fully explicit bias-update rule; note does not substitute a standard implementation.",
+        "The chapter source copy has no reference list, so bibliography completeness cannot be audited from this source.",
+        "The source leaves C, initial-history handling, and threshold tie behavior unspecified."
+      ],
+      "reference_check": {
+        "source_entry_count": null,
+        "note_entry_count": 0,
+        "status": "Source chapter contains no bibliography; note explicitly states this limitation and does not invent references."
+      },
+      "candidate_for_independent_audit": true,
+      "independent_audit_status": "pending"
+    }
+  ]
+}

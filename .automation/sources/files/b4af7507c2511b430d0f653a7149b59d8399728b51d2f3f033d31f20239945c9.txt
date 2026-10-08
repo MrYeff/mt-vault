@@ -1,0 +1,428 @@
+Derived text from web tool's indexed publisher page, accessed 2026-10-03.
+URL: https://journals.sagepub.com/doi/10.1177/08944393231213960
+Coverage: public abstract and complete references (overlapping indexed windows); not published model full text.
+
+How Does Facebook Retain Segregated Friendship? An Agent-Based Model Approach - Firman M. Firmansyah, 2024 (https://journals.sagepub.com/doi/10.1177/08944393231213960)
+citeturn820view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: text/html; Source: open({"ref_id":"https://journals.sagepub.com/doi/10.1177/08944393231213960","lineno":0}); Total lines: 837
+L0: cite0†iframe†analytics.sagepub.com L1: 
+L2: cite1†Skip to main content L3: 
+L4: cite2†Open Drawer MenuMenu L5: 
+L6: #### Add email alerts
+L7: 
+L8: You are adding the following journal to your email alerts
+L9: 
+L10: [Input][Input]
+L11:  | New content
+L12: --- | ---
+L13: Social Science Computer Review  | [Input]
+L14: [Button: Create email alert]
+L15: 
+L16: Restricted access
+L17: 
+L18: Research article
+L19: 
+L20: First published online November 22, 2023
+L21: 
+L22: cite3†Re-use permissions†s100.copyright.com L23: # How Does Facebook Retain Segregated Friendship? An Agent-Based Model Approach
+L24: 
+L25: cite4†Firman M. Firmansyah cite5†https://orcid.org/0000-0002-3699-8381†orcid.org cite6†[email protected] cite7†View all authors and affiliations L26: 
+L27: cite8†Volume 42, Issue 3 L28: 
+L29: cite9†https://doi.org/10.1177/08944393231213960†doi.org L30: ## Abstract
+L31: Facebook, the largest social networking site in the world, has overcome the structural barriers that historically constrain individuals to reach out to different others. Through the platform, people from all walks of life and virtually any location can develop diverse friendships online. However, friendships on Facebook have been as segregated as friendships in real life.
+L32: This research sought to understand why the leading social networking site intended to “bring the world closer together” retains segregated friendship. In doing so, I employed a series of agent-based simulations based on the Framework for Intergroup Relations and Multiple Affiliations Networks (FIRMAN).
+L33: As demonstrated, Facebook has primarily enhanced users’ capacity to maintain a larger number of friendships (tie capacity), but it has done little to empower users’ ability to accept diversity and befriend different others (tie outreachability). Facebook must focus on the latter should they truly wish to contribute to the development of a more inclusive society.
+L34: While in this study I focus on ethnically segregated friendship on Facebook, I argue that the same explanation might also hold for racially and ideologically segregated friendships on other bidirectional social networking sites.
+L35: ## Get full access to this article
+L36: 
+L37: View all access and purchase options for this article.
+L38: 
+L39: cite10†Get Access L40: ## References
+L41: 
+L42: Aten K., DiRenzo M., Shatnawi D. (2017). Gender and professional e-networks: Implications of gender heterophily on job search facilitation and outcomes. Computers in Human Behavior, 72, 470–478. cite11†https://doi.org/10.1016/j.chb.2017.02.056†doi.org L43: 
+L44: cite12†Web of Science†gateway.webofknowledge.com L45: 
+L46: cite13†Google Scholar†scholar.google.com L47: Bahns A. J., Springer L. S., The C. (2015). Fostering diverse friendships: The role of beliefs about the value of diversity. Group Processes and Intergroup Relations, 18(4), 475–488. cite14†https://doi.org/10.1177/1368430214566893†doi.org L48: 
+L49: cite15†Web of Science†gateway.webofknowledge.com L50: 
+L51: cite16†Google Scholar†scholar.google.com L52: Barberá P., Jost J. T., Nagler J., Tucker J. A., Bonneau R. (2015). Tweeting from left to right: Is online political communication more than an echo chamber? Psychological Science, 26(10), 1531–1542. cite17†https://doi.org/10.1177/0956797615594620†doi.org L53: 
+L54: cite18†PubMed†pubmed.ncbi.nlm.nih.gov L55: 
+L56: cite19†Web of Science†gateway.webofknowledge.com L57: 
+L58: cite20†Google Scholar†scholar.google.com L59: Barnett G. A., Benefield G. A. (2017). Predicting international Facebook ties through cultural homophily and other factors. New Media and Society, 19(2), 217–239. cite21†https://doi.org/10.1177/1461444815604421†doi.org L60: 
+L61: cite22†Web of Science†gateway.webofknowledge.com L62: 
+L63: cite23†Google Scholar†scholar.google.com L64: 
+L65: Black P. E. (2019). Manhattan distance. Dictionary of algorithms and data structures. NIST. cite24†https://doi.org/10.1007/978-0-387-35973-1_733†doi.org L66: 
+L67: cite25†Google Scholar†scholar.google.com L68: Bonabeau E. (2002). Agent-based modeling: Methods and techniques for simulating human systems. Proceedings of the National Academy of Sciences of the United States of America, 99(Suppl 3), 7280–7287. cite26†https://doi.org/10.1073/pnas.082080899†doi.org L69: 
+L70: cite27†PubMed†pubmed.ncbi.nlm.nih.gov L71: 
+L72: cite28†Web of Science†gateway.webofknowledge.com L73: 
+L74: cite29†Google Scholar†scholar.google.com L75: Boshmaf Y., Muslukhov I., Beznosov K., Ripeanu M. (2011). The socialbot network: When bots socialize for fame and money Proceedings of the 27th Annual Computer Security Applications Conference (pp. 93–102). Association for Computing Machinery. http://137.82.84.194/record/258/files/258.pdf
+L76: 
+L77: cite30†Crossref†doi.org L78: 
+L79: cite31†Google Scholar†scholar.google.com L80: Bouchillon B. C. (2021). Facebooking for good: Online contact to address offline conflict. Social Science Computer Review, 39(3), 353–370. cite32†https://doi.org/10.1177/0894439319874052†doi.org L81: 
+L82: cite33†Web of Science†gateway.webofknowledge.com L83: 
+L84: cite34†Google Scholar†scholar.google.com L85: 
+L86: Boutyline A., Willer R. (2017). The social structure of political echo chambers: Variation in ideological homophily in online networks. Political Psychology, 38(3), 551–569. cite35†https://doi.org/10.1111/pops.12337†doi.org L87: cite36†Web of Science†gateway.webofknowledge.com L88: 
+L89: cite37†Google Scholar†scholar.google.com L90: 
+L91: Campigotto N., Rapallini C., Rustichini A. (2021). School friendship networks, homophily and multiculturalism: Evidence from European countries. Journal of Population Economics, 35(4), 1687–1722. cite38†https://doi.org/10.1007/s00148-020-00819-w†doi.org L92: 
+L93: cite39†Web of Science†gateway.webofknowledge.com L94: 
+L95: cite40†Google Scholar†scholar.google.com L96: Chaudhry I., Gruzd A. (2020). Expressing and challenging racist discourse on Facebook: How social media weaken the “Spiral of Silence’’ theory.”. Policy and Internet, 12(1), 88–108. cite41†https://doi.org/10.1002/poi3.197†doi.org L97: 
+L98: cite42†Web of Science†gateway.webofknowledge.com L99: 
+L100: cite43†Google Scholar†scholar.google.com L101: 
+L102: Csardi G., Nepusz T. (2006). The igraph software package for complex network research. InterJournal, Complex Systems, 1695(5), 1–9.
+L103: 
+L104: cite44†Google Scholar†scholar.google.com L105: Dehghani M., Johnson K., Hoover J., Sagi E., Garten J., Parmar N. J., Vaisey S., Iliev R., Graham J., Dehghani M., Johnson K., Hoover J., Garten J., Parmar N. J., Vaisey S., Graham J. (2016). Purity homophily in social networks. Journal of Experimental Psychology: General, 145(3), 366–375. cite45†https://doi.org/10.1037/xge0000139†doi.org L106: 
+L107: cite46†PubMed†pubmed.ncbi.nlm.nih.gov L108: 
+L109: cite47†Web of Science†gateway.webofknowledge.com L110: 
+L111: cite48†Google Scholar†scholar.google.com L112: Dunbar R. I. M. (2016). Do online social media cut through the constraints that limit the size of offline social networks? Royal Society Open Science, 3(1), 150292. cite49†https://doi.org/10.1098/rsos.150292†doi.org L113: 
+L114: cite50†PubMed†pubmed.ncbi.nlm.nih.gov L115: 
+L116: cite51†Web of Science†gateway.webofknowledge.com L117: 
+L118: cite52†Google Scholar†scholar.google.com L119: 
+L120: Facebook. (2019). FAQs. Facebook investor Relations. Facebook. cite53†https://investor.fb.com/resources/default.aspx†investor.fb.com L121: 
+L122: cite54†Google Scholar†scholar.google.com L123: Feld S. L. (1981). The focused organization of social ties. American Journal of Sociology, 86(5), 1015–1035. cite55†https://www.jstor.org/stable/2778746%0AJSTOR†www.jstor.org L124: 
+L125: cite56†Crossref†doi.org L126: 
+L127: cite57†Web of Science†gateway.webofknowledge.com L128: 
+L129: cite58†Google Scholar†scholar.google.com L130: 
+L131: Fink C. (2018). Dangerous speech, anti-Muslim violence, and Facebook in Myanmar. Journal of International Affairs, 71(15), 43–52. cite59†https://www.jstor.org/stable/26508117†www.jstor.org L132: cite60†Google Scholar†scholar.google.com L133: 
+L134: Firmansyah F. M., Pratama A. R. (2021). Why do homogeneous friendships persist in a diverse population? Making sense of homophily. SocArXiv papers. cite61†https://doi.org/10.31235/osf.io/zr7p3†doi.org L135: 
+L136: cite62†Google Scholar†scholar.google.com L137: 
+L138: Fischer M. J. (2011). Interracial contact and changes in the racial attitudes of white college students. Social Psychology of Education, 14(4), 547–574. cite63†https://doi.org/10.1007/s11218-011-9161-3†doi.org L139: cite64†Web of Science†gateway.webofknowledge.com L140: 
+L141: cite65†Google Scholar†scholar.google.com L142: 
+L143: Hofstra B., Corten R., van Tubergen F. (2021). Beyond the core: Who has larger social networks? Social Forces, 99(3), 1274–1305. cite66†https://doi.org/10.1093/sf/soaa031†doi.org L144: 
+L145: cite67†Google Scholar†scholar.google.com L146: Hofstra B., Corten R., van Tubergen F., Ellison N. B. (2017). Sources of segregation in social networks: A novel approach using Facebook. American Sociological Review, 82(3), 625–656. cite68†https://doi.org/10.1177/0003122417705656†doi.org L147: 
+L148: cite69†Web of Science†gateway.webofknowledge.com L149: 
+L150: cite70†Google Scholar†scholar.google.com L151: 
+L152: Hojjat M., Moyer A., Halpin A. M. (eds), (2017). The psychology of friendship. Oxford University Press.
+L153: 
+L154: cite71†Google Scholar†scholar.google.com L155: Huber G. A., Malhotra N. (2017). Political homophily in social relationships: Evidence from online dating behavior. The Journal of Politics, 79(1), 269–283. cite72†https://doi.org/10.1086/687533†doi.org L156: 
+L157: cite73†Web of Science†gateway.webofknowledge.com L158: 
+L159: cite74†Google Scholar†scholar.google.com L160: 
+L161: Ikeda K. K., Richey S. (2009). The impact of diversity in informal social networks on tolerance in Japan. British Journal of Political Science, 39(3), 655–668. cite75†https://doi.org/10.1017/S0007123408000574†doi.org L162: cite76†Web of Science†gateway.webofknowledge.com L163: 
+L164: cite77†Google Scholar†scholar.google.com L165: 
+L166: Ilmarinen V. J., Lönnqvist J. E., Paunonen S. (2016). Similarity-attraction effects in friendship formation: Honest platoon-mates prefer each other but dishonest do not. Personality and Individual Differences, 92, 153–158. cite78†https://doi.org/10.1016/j.paid.2015.12.040†doi.org L167: 
+L168: cite79†Web of Science†gateway.webofknowledge.com L169: 
+L170: cite80†Google Scholar†scholar.google.com L171: Iyengar S., Westwood S. J. (2015). Fear and loathing across party lines: New evidence on group polarization. American Journal of Political Science, 59(3), 690–707. cite81†https://doi.org/10.1111/ajps.12152†doi.org L172: 
+L173: cite82†Web of Science†gateway.webofknowledge.com L174: 
+L175: cite83†Google Scholar†scholar.google.com L176: Jackson J. C., Rand D., Lewis K., Norton M. I., Gray K. (2017). Agent-based modeling: A guide for social psychologists. Social Psychological and Personality Science, 8(4), 387–395. cite84†https://doi.org/10.1177/1948550617691100†doi.org L177: 
+L178: cite85†Web of Science†gateway.webofknowledge.com L179: 
+L180: cite86†Google Scholar†scholar.google.com L181: 
+L182: Joyner K., Kao G. (2000). School racial composition and adolescent racial homophily. Social Science Quarterly, 81(3), 810–825. cite87†https://www.jstor.org/stable/42864005†www.jstor.org L183: cite88†Web of Science†gateway.webofknowledge.com L184: 
+L185: cite89†Google Scholar†scholar.google.com L186: 
+L187: Karimi F., Génois M., Wagner C., Singer P., Strohmaier M. (2018). Homophily influences ranking of minorities in social networks. Scientific Reports, 8(1), 11077–11112. cite90†https://doi.org/10.1038/s41598-018-29405-7†doi.org L188: 
+L189: cite91†PubMed†pubmed.ncbi.nlm.nih.gov L190: 
+L191: cite92†Web of Science†gateway.webofknowledge.com L192: 
+L193: cite93†Google Scholar†scholar.google.com L194: Korkmaz G., Kuhlman C. J., Goldstein J., Vega-Redondo F. (2020). A computational study of homophily and diffusion of common knowledge on social networks based on a model of Facebook. Social Network Analysis and Mining, 10(1), 5. cite94†https://doi.org/10.1007/s13278-019-0615-5†doi.org L195: 
+L196: cite95†Web of Science†gateway.webofknowledge.com L197: 
+L198: cite96†Google Scholar†scholar.google.com 
+
+How Does Facebook Retain Segregated Friendship? An Agent-Based Model Approach - Firman M. Firmansyah, 2024 (https://journals.sagepub.com/doi/10.1177/08944393231213960)
+citeturn819view0 [wordlim: 200] Crawled: 2 weeks ago; Content type: text/html; Source: open({"ref_id":"https://journals.sagepub.com/doi/10.1177/08944393231213960","lineno":190}); Total lines: 837
+L59: Barnett G. A., Benefield G. A. (2017). Predicting international Facebook ties through cultural homophily and other factors. New Media and Society, 19(2), 217–239. cite21†https://doi.org/10.1177/1461444815604421†doi.org L60: 
+L61: cite22†Web of Science†gateway.webofknowledge.com L62: 
+L63: cite23†Google Scholar†scholar.google.com L64: 
+L65: Black P. E. (2019). Manhattan distance. Dictionary of algorithms and data structures. NIST. cite24†https://doi.org/10.1007/978-0-387-35973-1_733†doi.org L66: 
+L67: cite25†Google Scholar†scholar.google.com L68: Bonabeau E. (2002). Agent-based modeling: Methods and techniques for simulating human systems. Proceedings of the National Academy of Sciences of the United States of America, 99(Suppl 3), 7280–7287. cite26†https://doi.org/10.1073/pnas.082080899†doi.org L69: 
+L70: cite27†PubMed†pubmed.ncbi.nlm.nih.gov L71: 
+L72: cite28†Web of Science†gateway.webofknowledge.com L73: 
+L74: cite29†Google Scholar†scholar.google.com L75: Boshmaf Y., Muslukhov I., Beznosov K., Ripeanu M. (2011). The socialbot network: When bots socialize for fame and money Proceedings of the 27th Annual Computer Security Applications Conference (pp. 93–102). Association for Computing Machinery. http://137.82.84.194/record/258/files/258.pdf
+L76: 
+L77: cite30†Crossref†doi.org L78: 
+L79: cite31†Google Scholar†scholar.google.com L80: Bouchillon B. C. (2021). Facebooking for good: Online contact to address offline conflict. Social Science Computer Review, 39(3), 353–370. cite32†https://doi.org/10.1177/0894439319874052†doi.org L81: 
+L82: cite33†Web of Science†gateway.webofknowledge.com L83: 
+L84: cite34†Google Scholar†scholar.google.com L85: 
+L86: Boutyline A., Willer R. (2017). The social structure of political echo chambers: Variation in ideological homophily in online networks. Political Psychology, 38(3), 551–569. cite35†https://doi.org/10.1111/pops.12337†doi.org L87: cite36†Web of Science†gateway.webofknowledge.com L88: 
+L89: cite37†Google Scholar†scholar.google.com L90: 
+L91: Campigotto N., Rapallini C., Rustichini A. (2021). School friendship networks, homophily and multiculturalism: Evidence from European countries. Journal of Population Economics, 35(4), 1687–1722. cite38†https://doi.org/10.1007/s00148-020-00819-w†doi.org L92: 
+L93: cite39†Web of Science†gateway.webofknowledge.com L94: 
+L95: cite40†Google Scholar†scholar.google.com L96: Chaudhry I., Gruzd A. (2020). Expressing and challenging racist discourse on Facebook: How social media weaken the “Spiral of Silence’’ theory.”. Policy and Internet, 12(1), 88–108. cite41†https://doi.org/10.1002/poi3.197†doi.org L97: 
+L98: cite42†Web of Science†gateway.webofknowledge.com L99: 
+L100: cite43†Google Scholar†scholar.google.com L101: 
+L102: Csardi G., Nepusz T. (2006). The igraph software package for complex network research. InterJournal, Complex Systems, 1695(5), 1–9.
+L103: 
+L104: cite44†Google Scholar†scholar.google.com L105: Dehghani M., Johnson K., Hoover J., Sagi E., Garten J., Parmar N. J., Vaisey S., Iliev R., Graham J., Dehghani M., Johnson K., Hoover J., Garten J., Parmar N. J., Vaisey S., Graham J. (2016). Purity homophily in social networks. Journal of Experimental Psychology: General, 145(3), 366–375. cite45†https://doi.org/10.1037/xge0000139†doi.org L106: 
+L107: cite46†PubMed†pubmed.ncbi.nlm.nih.gov L108: 
+L109: cite47†Web of Science†gateway.webofknowledge.com L110: 
+L111: cite48†Google Scholar†scholar.google.com L112: Dunbar R. I. M. (2016). Do online social media cut through the constraints that limit the size of offline social networks? Royal Society Open Science, 3(1), 150292. cite49†https://doi.org/10.1098/rsos.150292†doi.org L113: 
+L114: cite50†PubMed†pubmed.ncbi.nlm.nih.gov L115: 
+L116: cite51†Web of Science†gateway.webofknowledge.com L117: 
+L118: cite52†Google Scholar†scholar.google.com L119: 
+L120: Facebook. (2019). FAQs. Facebook investor Relations. Facebook. cite53†https://investor.fb.com/resources/default.aspx†investor.fb.com L121: 
+L122: cite54†Google Scholar†scholar.google.com L123: Feld S. L. (1981). The focused organization of social ties. American Journal of Sociology, 86(5), 1015–1035. cite55†https://www.jstor.org/stable/2778746%0AJSTOR†www.jstor.org L124: 
+L125: cite56†Crossref†doi.org L126: 
+L127: cite57†Web of Science†gateway.webofknowledge.com L128: 
+L129: cite58†Google Scholar†scholar.google.com L130: 
+L131: Fink C. (2018). Dangerous speech, anti-Muslim violence, and Facebook in Myanmar. Journal of International Affairs, 71(15), 43–52. cite59†https://www.jstor.org/stable/26508117†www.jstor.org L132: cite60†Google Scholar†scholar.google.com L133: 
+L134: Firmansyah F. M., Pratama A. R. (2021). Why do homogeneous friendships persist in a diverse population? Making sense of homophily. SocArXiv papers. cite61†https://doi.org/10.31235/osf.io/zr7p3†doi.org L135: 
+L136: cite62†Google Scholar†scholar.google.com L137: 
+L138: Fischer M. J. (2011). Interracial contact and changes in the racial attitudes of white college students. Social Psychology of Education, 14(4), 547–574. cite63†https://doi.org/10.1007/s11218-011-9161-3†doi.org L139: cite64†Web of Science†gateway.webofknowledge.com L140: 
+L141: cite65†Google Scholar†scholar.google.com L142: 
+L143: Hofstra B., Corten R., van Tubergen F. (2021). Beyond the core: Who has larger social networks? Social Forces, 99(3), 1274–1305. cite66†https://doi.org/10.1093/sf/soaa031†doi.org L144: 
+L145: cite67†Google Scholar†scholar.google.com L146: Hofstra B., Corten R., van Tubergen F., Ellison N. B. (2017). Sources of segregation in social networks: A novel approach using Facebook. American Sociological Review, 82(3), 625–656. cite68†https://doi.org/10.1177/0003122417705656†doi.org L147: 
+L148: cite69†Web of Science†gateway.webofknowledge.com L149: 
+L150: cite70†Google Scholar†scholar.google.com L151: 
+L152: Hojjat M., Moyer A., Halpin A. M. (eds), (2017). The psychology of friendship. Oxford University Press.
+L153: 
+L154: cite71†Google Scholar†scholar.google.com L155: Huber G. A., Malhotra N. (2017). Political homophily in social relationships: Evidence from online dating behavior. The Journal of Politics, 79(1), 269–283. cite72†https://doi.org/10.1086/687533†doi.org L156: 
+L157: cite73†Web of Science†gateway.webofknowledge.com L158: 
+L159: cite74†Google Scholar†scholar.google.com L160: 
+L161: Ikeda K. K., Richey S. (2009). The impact of diversity in informal social networks on tolerance in Japan. British Journal of Political Science, 39(3), 655–668. cite75†https://doi.org/10.1017/S0007123408000574†doi.org L162: cite76†Web of Science†gateway.webofknowledge.com L163: 
+L164: cite77†Google Scholar†scholar.google.com L165: 
+L166: Ilmarinen V. J., Lönnqvist J. E., Paunonen S. (2016). Similarity-attraction effects in friendship formation: Honest platoon-mates prefer each other but dishonest do not. Personality and Individual Differences, 92, 153–158. cite78†https://doi.org/10.1016/j.paid.2015.12.040†doi.org L167: 
+L168: cite79†Web of Science†gateway.webofknowledge.com L169: 
+L170: cite80†Google Scholar†scholar.google.com L171: Iyengar S., Westwood S. J. (2015). Fear and loathing across party lines: New evidence on group polarization. American Journal of Political Science, 59(3), 690–707. cite81†https://doi.org/10.1111/ajps.12152†doi.org L172: 
+L173: cite82†Web of Science†gateway.webofknowledge.com L174: 
+L175: cite83†Google Scholar†scholar.google.com L176: Jackson J. C., Rand D., Lewis K., Norton M. I., Gray K. (2017). Agent-based modeling: A guide for social psychologists. Social Psychological and Personality Science, 8(4), 387–395. cite84†https://doi.org/10.1177/1948550617691100†doi.org L177: 
+L178: cite85†Web of Science†gateway.webofknowledge.com L179: 
+L180: cite86†Google Scholar†scholar.google.com L181: 
+L182: Joyner K., Kao G. (2000). School racial composition and adolescent racial homophily. Social Science Quarterly, 81(3), 810–825. cite87†https://www.jstor.org/stable/42864005†www.jstor.org L183: cite88†Web of Science†gateway.webofknowledge.com L184: 
+L185: cite89†Google Scholar†scholar.google.com L186: 
+L187: Karimi F., Génois M., Wagner C., Singer P., Strohmaier M. (2018). Homophily influences ranking of minorities in social networks. Scientific Reports, 8(1), 11077–11112. cite90†https://doi.org/10.1038/s41598-018-29405-7†doi.org L188: 
+L189: cite91†PubMed†pubmed.ncbi.nlm.nih.gov L190: 
+L191: cite92†Web of Science†gateway.webofknowledge.com L192: 
+L193: cite93†Google Scholar†scholar.google.com L194: Korkmaz G., Kuhlman C. J., Goldstein J., Vega-Redondo F. (2020). A computational study of homophily and diffusion of common knowledge on social networks based on a model of Facebook. Social Network Analysis and Mining, 10(1), 5. cite94†https://doi.org/10.1007/s13278-019-0615-5†doi.org L195: 
+L196: cite95†Web of Science†gateway.webofknowledge.com L197: 
+L198: cite96†Google Scholar†scholar.google.com L199: Laniado D., Volkovich Y., Kappler K., Kaltenbrunner A. (2016). Gender homophily in online dyadic and triadic relationships. EPJ Data Science, 5(1), 19. cite97†https://doi.org/10.1140/epjds/s13688-016-0080-6†doi.org L200: 
+L201: cite98†Web of Science†gateway.webofknowledge.com L202: 
+L203: cite99†Google Scholar†scholar.google.com L204: Lee C. S., Therriault D. J., Linderholm T. (2012). On the cognitive benefits of cultural experience: Exploring the relationship between studying abroad and creative thinking. Applied Cognitive Psychology, 26(5), 768–778. cite100†https://doi.org/10.1002/acp.2857†doi.org L205: 
+L206: cite101†Web of Science†gateway.webofknowledge.com L207: 
+L208: cite102†Google Scholar†scholar.google.com L209: Lenhart A., Madden M. (2007). Teens, privacy and online social networks: How teens manage their online identities and personal information in the age of MySpace. In Pew Internet American Life Project. Pew Research Center. cite103†http://www.pewinternet.org/Reports/2007/Teens-Privacy-and-Online-Social-Networks.aspx†www.pewinternet.org L210: 
+L211: cite104†Google Scholar†scholar.google.com L212: Li S., Zizzi S. (2018). A case study of international students’ social adjustment, friendship development, and physical activity. Journal of International Students, 8(1), 1134317. cite105†https://doi.org/10.32674/jis.v8i1.171†doi.org L213: 
+L214: cite106†Google Scholar†scholar.google.com L215: 
+L216: Lönnqvist J. E., Itkonen J. V. A. A. (2016). Homogeneity of personal values and personality traits in Facebook social networks. Journal of Research in Personality, 60, 24–35. cite107†https://doi.org/10.1016/j.jrp.2015.11.001†doi.org L217: cite108†Web of Science†gateway.webofknowledge.com L218: 
+L219: cite109†Google Scholar†scholar.google.com L220: 
+L221: Macal C. M. (2016). Everything you need to know about agent-based modelling and simulation. Journal of Simulation, 10(2), 144–156. cite110†https://doi.org/10.1057/jos.2016.7†doi.org L222: 
+L223: cite111†Web of Science†gateway.webofknowledge.com L224: 
+L225: cite112†Google Scholar†scholar.google.com L226: Manago A. M., Taylor T., Greenfield P. M. (2012). Me and my 400 friends: The anatomy of college students' Facebook networks, their communication patterns, and well-being. Developmental Psychology, 48(2), 369–380. cite113†https://doi.org/10.1037/a0026338†doi.org L227: 
+L228: cite114†PubMed†pubmed.ncbi.nlm.nih.gov L229: 
+L230: cite115†Web of Science†gateway.webofknowledge.com L231: 
+L232: cite116†Google Scholar†scholar.google.com L233: Matamoros-Fernández A. (2017). Platformed racism: The mediation and circulation of an Australian race-based controversy on Twitter, Facebook and YouTube. Information, Communication and Society, 20(6), 930–946. cite117†https://doi.org/10.1080/1369118X.2017.1293130†doi.org L234: 
+L235: cite118†Web of Science†gateway.webofknowledge.com L236: 
+L237: cite119†Google Scholar†scholar.google.com L238: McMillan C. (2022). Worth the weight: Conceptualizing and measuring strong versus weak tie homophily. Social Networks, 68(June 2021), 139–147. cite120†https://doi.org/10.1016/j.socnet.2021.06.003†doi.org L239: 
+L240: cite121†PubMed†pubmed.ncbi.nlm.nih.gov L241: 
+L242: cite122†Web of Science†gateway.webofknowledge.com L243: 
+L244: cite123†Google Scholar†scholar.google.com L245: Miškolci J., Kováčová L., Rigová E. (2018). Countering hate speech on Facebook: The case of the Roma Minority in Slovakia. Social Science Computer Review, 38(2), 128–146. cite124†https://doi.org/10.1177/0894439318791786†doi.org L246: 
+L247: cite125†Web of Science†gateway.webofknowledge.com L248: 
+L249: cite126†Google Scholar†scholar.google.com L250: 
+L251: Mouw T., Entwisle B. (2006). Residential segregation and interracial friendship in schools. American Journal of Sociology, 112(2), 394–441. cite127†https://doi.org/10.1086/506415†doi.org L252: cite128†Web of Science†gateway.webofknowledge.com L253: 
+L254: cite129†Google Scholar†scholar.google.com L255: 
+L256: Muscanell N. L., Guadagno R. E. (2012). Make new friends or keep the old: Gender and personality differences in social networking use. Computers in Human Behavior, 28(1), 107–112. cite130†https://doi.org/10.1016/j.chb.2011.08.016†doi.org L257: 
+L258: cite131†Web of Science†gateway.webofknowledge.com L259: 
+L260: cite132†Google Scholar†scholar.google.com L261: Noë N., Whitaker R. M., Allen S. M. (2018). Personality homophily and geographic distance in Facebook. Cyberpsychology, Behavior, and Social Networking, 21(6), 361–366. cite133†https://doi.org/10.1089/cyber.2017.0615†doi.org L262: 
+L263: cite134†PubMed†pubmed.ncbi.nlm.nih.gov L264: 
+L265: cite135†Web of Science†gateway.webofknowledge.com L266: 
+L267: cite136†Google Scholar†scholar.google.com L268: Pachucki M. C., Leal D. F. (2020). Is having an educationally diverse social network good for health? Network Science, 8(3), 418–444. cite137†https://doi.org/10.1017/nws.2020.14†doi.org L269: 
+L270: cite138†PubMed†pubmed.ncbi.nlm.nih.gov L271: 
+L272: cite139†Web of Science†gateway.webofknowledge.com L273: 
+L274: cite140†Google Scholar†scholar.google.com L275: 
+L276: Pariser E. (2011). The filter bubbles: What the internet is hiding from you. Penguin Books.
+L277: 
+L278: cite141†Google Scholar†scholar.google.com L279: Patil S. (2012). Will you be my friend? Responses to friendship requests from strangers. In Proceedings of the 2012 iConference. Association for Computing Machinery, 634–635. cite142†https://doi.org/10.1145/2132176.2132318†doi.org L280: 
+L281: cite143†Google Scholar†scholar.google.com L282: Rashtian H., Boshmaf Y., Jaferian P., Beznosov K. (2014). To befriend or not? A model of friend request acceptance on Facebook. Symposium on usable privacy and security (SOUPS), 285–300. cite144†https://www.usenix.org/system/files/conference/soups2014/soups14-paper-rashtian.pdf†www.usenix.org L283: 
+L284: cite145†Google Scholar†scholar.google.com L285: Seebruck R., Savage S. V. (2014). The differential effects of racially homophilous sponsorship ties on job opportunities in an elite labor market: The case of NCAA basketball coaching. Sociological Inquiry, 84(1), 75–101. cite146†https://doi.org/10.1111/soin.12021†doi.org L286: 
+L287: cite147†Web of Science†gateway.webofknowledge.com L288: 
+L289: cite148†Google Scholar†scholar.google.com L290: Smith J. A., McPherson M., Smith-Lovin L. (2014). Social distance in the United States: Sex, race, religion, age, and education homophily among confidants, 1985 to 2004. American Sociological Review, 79(3), 432–456. cite149†https://doi.org/10.1177/0003122414531776†doi.org L291: 
+L292: cite150†Web of Science†gateway.webofknowledge.com L293: 
+L294: cite151†Google Scholar†scholar.google.com L295: Squazzoni F., Jager W., Edmonds B. (2014). Social simulation in the social sciences: A brief overview. Social Science Computer Review, 32(3), 279–294. cite152†https://doi.org/10.1177/0894439313512975†doi.org L296: 
+L297: cite153†Web of Science†gateway.webofknowledge.com L298: 
+L299: cite154†Google Scholar†scholar.google.com L300: 
+L301: Stecklow S. (2018). Why Facebook is losing the war on hate speech in Myanmar. Reuters. cite155†https://www.reuters.com/investigates/special-report/myanmar-facebook-hate/†www.reuters.com L302: cite156†Google Scholar†scholar.google.com L303: 
+L304: Tankovska H. (2021). Global social networks ranked by number of users 2021. Statista. cite157†https://www.statista.com/statistics/272014/global-social-networks-ranked-by-number-of-users/†www.statista.com L305: 
+L306: cite158†Google Scholar†scholar.google.com L307: Titzmann P. F., Silbereisen R. K., Mesch G. S. (2012). Change in friendship homophily: A German israeli comparison of adolescent immigrants. Journal of Cross-Cultural Psychology, 43(3), 410–428. cite159†https://doi.org/10.1177/0022022111399648†doi.org L308: 
+L309: cite160†Web of Science†gateway.webofknowledge.com L310: 
+L311: cite161†Google Scholar†scholar.google.com L312: van Tubergen F. (2015). Ethnic boundaries in core discussion networks: A multilevel social network study of Turks and Moroccans in The Netherlands. Journal of Ethnic and Migration Studies, 41(1), 101–116. cite162†https://doi.org/10.1080/1369183X.2014.886955†doi.org L313: 
+L314: cite163†Web of Science†gateway.webofknowledge.com L315: 
+L316: cite164†Google Scholar†scholar.google.com L317: Vukčević I. (2021). Facebook Oversight Board’s decision on the indefinite suspension of Donald Trump’s account. Pravni Zapisi, 12(1), 295–311. cite165†https://doi.org/10.5937/pravzap0-32521†doi.org L318: 
+L319: cite166†Google Scholar†scholar.google.com L320: 
+L321: Wimmer A., Lewis K. (2010). Beyond and below racial homophily: ERG models of a friendship network documented on Facebook. AJS; American journal of sociology, 116(2), 583–642. cite167†https://doi.org/10.1086/653658†doi.org L322: 
+L323: cite168†PubMed†pubmed.ncbi.nlm.nih.gov L324: cite169†Web of Science†gateway.webofknowledge.com L325: 
+L326: cite170†Google Scholar†scholar.google.com L327: 
+L328: Yu S., Xie Y. (2017). Preference effects on friendship choice: Evidence from an online field experiment. Social Science Research, 66, 201–210. cite171†https://doi.org/10.1016/j.ssresearch.2017.01.006†doi.org L329: 
+L330: cite172†PubMed†pubmed.ncbi.nlm.nih.gov L331: 
+L332: cite173†Web of Science†gateway.webofknowledge.com L333: 
+L334: cite174†Google Scholar†scholar.google.com L335: Yucel D., Psaltis C. (2020). The effects of direct and indirect contact on prejudice: 2007 and 2017 results among Greek Cypriots and Turkish Cypriots. European Societies, 22(5), 610–635. cite175†https://doi.org/10.1080/14616696.2020.1793211†doi.org L336: 
+L337: cite176†Web of Science†gateway.webofknowledge.com L338: 
+L339: cite177†Google Scholar†scholar.google.com L340: Žeželj I. L., Ioannou M., Franc R., Psaltis C., Martinovic B. (2017). The role of inter-ethnic online friendships in prejudice reduction in post-conflict societies: Evidence from Serbia, Croatia and Cyprus. Computers in Human Behavior, 76, 386–395. cite178†https://doi.org/10.1016/j.chb.2017.07.041†doi.org L341: 
+L342: cite179†Web of Science†gateway.webofknowledge.com L343: 
+L344: cite180†Google Scholar†scholar.google.com L345: ## Biographies
+L346: 
+L347: Firman M. Firmansyah is a computational social scientist with a deep interest in understanding the intricate interplay between technology, human behavior, and the environment. He holds a PhD in Technology, Policy & Innovation from Stony Brook University, where he also earned an Advanced Graduate Certificate in Data & Computational Science.
+L348: ## Supplementary Material
+L349: 
+L350: Please find the following supplemental material available below.
+L351: 
+L352: For Open Access articles published under a cite181†Creative Commons License†creativecommons.org , all supplemental material carries the same license as the article it is associated with.
+L353: For non-Open Access articles published, all supplemental material carries a non-exclusive license, and permission requests for re-use of supplemental material or any part of supplemental material shall be sent directly to the copyright owner as specified in the copyright notice associated with the article.
+L354: 
+L355:   * cite182†sj-pdf-1-ssc-10.1177_08944393231213960.pdf L356:   * 28.77 KB
+L357: ## Cite
+L358: 
+L359: ### Cite
+L360: 
+L361: [Input] [Input]
+L362: 
+L363: #### Cite
+L364: 
+L365: [Button: Copy Citation]
+L366: 
+L367: OR
+L368: 
+L369: #### Download to reference manager
+L370: 
+L371: If you have citation software installed, you can download citation data to the citation manager of your choice
+L372: 
+L373: [Input] [Input] [Input]
+L374: 
+L375: Select your citation manager software: [Select]
+L376: 
+L377: [Input] Direct import
+L378: 
+L379: [Input]
+L380: 
+L381: ## Share options
+L382: 
+L383: ### Share
+L384: 
+L385: #### Share this publication
+L386: 
+L387: ##### Share with email
+L388: 
+L389: cite183†Email Link L390: 
+L391: ##### Share on social media
+L392: #### Share access to this article
+L393: 
+L394: Sharing links are not relevant where the article is open access and not available if you do not have a subscription.
+L395: 
+L396: For more information view the cite184†Sage Journals article sharing page. L397: 
+L398: ## Information, rights and permissions
+L399: 
+L400: ### Information
+L401: 
+L402: #### Published In
+L403: 
+L404: cite8†View L405: 
+L406: cite185†Social Science Computer Review L407: 
+L408: cite8†Volume 42, Issue 3 L409: 
+L410: Pages: 741 - 759
+L411: 
+L412: Article first published online: November 22, 2023
+L413: 
+L414: Issue published: June 2024
+L415: #### Keywords
+L416: 
+L417:   1. cite186†Facebook L418:   2. cite187†friendship L419:   3. cite188†segregation L420:   4. cite189†agent-based model L421:   5. cite190†ethnicity L422: 
+L423: #### Rights and permissions
+L424: 
+L425: © The Author(s) 2023.
+L426: 
+L427: Request permissions for this article.
+L428: 
+L429: cite3†Request Permissions†s100.copyright.com L430: 
+L431: ### Authors
+L432: 
+L433: #### Affiliations
+L434: 
+L435: Firman M. Firmansyah
+L436: 
+L437: Stony Brook University, USA
+L438: 
+L439: cite5†https://orcid.org/0000-0002-3699-8381†orcid.org L440: 
+L441: cite191†[email protected] L442: 
+L443: cite192†View all publications by this author L444: #### Notes
+L445: 
+L446: Firman M. Firmansyah, Department of Technology and Society, Stony Brook University, 1432 Computer Science, Stony Brook, NY 11794-4404, USA. Email: cite193†[email protected] L447: 
+L448: ## Metrics and citations
+L449: 
+L450: ### Metrics
+L451: 
+L452: #### Journals metrics
+L453: 
+L454: This article was published in Social Science Computer Review.
+L455: 
+L456: cite194†View All Journal Metrics L457: 
+L458: * * *
+L459: #### Publication usage^{*}
+L460: 
+L461: Total views and downloads: 258
+L462: 
+L463: ^{*}Usage tracking began in December 2016 or upon migration to Sage Journals, whichever is later. Prior usage data was not transferred.
+L464: 
+L465: * * *
+L466: #### Publications citing this one
+L467: 
+L468: Receive email alerts when this publication is cited
+L469: 
+L470: cite195†Sign up to citation alerts L471: 
+L472: Web of Science: 1 cite196†view articles Opens in new tab†gateway.webofknowledge.com L473: 
+L474: Crossref: 1
+L475: 
+L476:   1. Assessing urban social-ecological health in the Greater Bay Area under the SDGs
+L477: 
+L478: cite197†Go to citation†doi.org cite197†Crossref†doi.org cite198†Google Scholar L479: 
+L480: ## Figures and tables
+L481: 
+L482: ### Figures & Media
+L483: 
+L484: ### Tables
+L485: 
+L486: ## View Options
+L487: #### Access options
+L488: 
+L489: If you have access to journal content via a personal subscription, university, library, employer or society, select from the options below:
+L490: 
+L491: cite199†Image: user icon Sage Journals profile
+L492: 
+L493: I am signed in as:
+L494: 
+L495: cite200†Image L496: 
+L497: cite201†View my profile [Input][Button: Sign out]
+L498: 
+L499: I can access personal subscriptions, purchases, paired institutional access and free tools such as favourite journals, email alerts and saved searches.
+L500: 
+L501: [Input]
+L502: Login failed. Please check you entered the correct user name and password.
+L503: ### Sign in
+L504: 
+L505: Access personal subscriptions, purchases, paired institutional or society access and free tools such as email alerts and saved searches.
+L506: 
+L507: [Input] [Input] [Input]
+L508: 
+L509: Required fields
+L510: 
+L511: The email address and/or password entered does not match our records, please check and try again.
+L512: 
+L513: Email: [Input: Enter email address]
+L514: 
+L515: Password:
+L516: 
+L517: [Input: Enter password]
+L518: 
+L519: [Input] Remember me
+L520: 
+L521: cite202†Forgotten your password? L522: 
+L523: Sign in
+L524: 
+L525: OR
+L526: 
+L527: cite203†Create profile L528: 
+L529: Institution
+L530: 
+L531: [Input]
+L532: Click the button below for the full-text content
+L533: 
+L534: 请点击以下获取该全文
+L535: 
+L536: cite204†Click here to view / 点击获取全文†sage.cnpereading.com L537: 
+L538: Society Chinese Institutions / 中国用户
+L539: 
+L540: * * *
+L541: 
+L542: Alternatively, view purchase options below:
+L543: 
+L544: cite205†Image: cart icon Purchase access
+L545: 
+L546: Purchase 24 hour online access to view and download content.
+L547: 
+L548: [Input] Issue - $372.66
+L549: 
+L550: [Input] Article - $37.50
+L551: 
+L552: [Button: Add To Cart ]
+L553: 
+L554: cite206†Subscribe to this journal†www.sagepub.com L555: 
+

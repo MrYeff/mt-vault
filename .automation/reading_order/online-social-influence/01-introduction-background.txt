@@ -1,0 +1,96 @@
+I. INTRODUCTION
+Agent-based models (ABM) are common in the study of
+complex adaptive systems [1]. Nowadays, human behavior
+itself is a more central theme within agent-based modeling [2].
+Human behavior in (social) networks [3] is an example of
+this. Although systems can be equivalently modeled by either
+System Dynamics and ABM [4], in social networks ABM
+is preferred [5] for a number of reasons: 1) the interactions
+between the agents are complex, nonlinear, discontinuous,
+or discrete; 2) the population is heterogeneous and 3) the
+topology of the interactions is heterogeneous and complex.
+The structure and behavior of ABM have potential to resemble
+reality better than (simplified) mathematical models, especially
+when the underlying real relationships are complex [6]. How-
+ever, the agent-based models are often not based on theory,
+the output of the model is often not validated against real-life
+data, and often no real-life online network structure is used.
+In this paper, we propose a multi-disciplinary approach for
+studying online social influence, that is based on theory, model
+validation, and for which a real-life online network structure
+is used: Twitter. As a basis we use a theoretical framework
+of social influence taken from psychological research and
+implement this framework in an agent-behavior model. The
+online context of social media is captured in a multi-agent
+model, where the individual agents exchange messages and
+may influence each other.
+We apply the agent-based model to a real-world case:
+communication activity through the online social network
+Twitter about talent shows on Dutch television. The behavior
+model uses psychological principles that are quantified for the
+Twitter network. As a means for exploring the best way of
+operationalization of the behavioral theory, different variants
+of the behavioral model have been implemented.
+For the case on talent shows we use empirical data that
+consists of Twitter activity about the specific show. At initial-
+ization the model parameters are fit to the empirical data. After
+running the simulation, we compare the simulation output with
+empirical data for validation. As all variants of the behavior
+model are validated with the empirical data, we can test
+the model variants against each other to determine the best
+performing model.
+II. BACKGROUND
+In this section we describe the theoretical background of
+the model for online social influence. Online social influence
+is related to opinion spread and information flow through
+networks. In the literature of these research areas, two impor-
+tant fundamental models are the threshold model [7] and the
+Susceptible-Infected-Recovered model (SIR model) [8]. The
+threshold model says that a person adopts an innovation or
+opinion if the percentage of persons in his network that have
+adopted already exceeds a certain threshold. SIR models have
+a stochastic approach and are also applied to epidemics: the
+probability of someone getting infected increases by the ratio
+of infected people in his network. Both threshold and SIR
+models have been evaluated mathematically in the context of
+information spread in a social network (e.g., [9]). However, the
+models are very simplified and the psychological foundation
+of these models is limited. Therefore conclusions are based on
+corresponding assumptions.
+Other approaches use theoretically founded models that
+explain cognitive mechanisms. For example, Weng, Flammini,
+Vespignani and Menczer [10] apply the behavior model for
+rational choice introduced by Simon [11] to model information
+diffusion in Twitter networks. The mechanism is based on
+limited attention span of human beings. Although the model
+explains information diffusion through networks, we believe
+that limited attention is not the (most important) underlying
+mechanism for social influence.
+Agent-based modeling allows for more complex reasoning
+models. Several psychological models have been translated
+to computational decision-making modules for agents. The
+belief-desire-intention (BDI) [12] was for instance formalized
+by Rao and Georgeff [13] and is popular for the agent
+reasoning paradigm. The theory of planned behavior [14]
+used in [15] is another popular example. Both models have
+a focus on goal-directed and intentional activity of agents.
+Online social influence, however, is not much goal-directed
+and if so, it concerns a sub-conscious process. A theory that
+better matches this process is presented by Cialdini [16]. In his
+theory he presents six principles that combine into persuasive
+behavior:
+1) Reciprocity: people tend to return a favor.
+2) Commitment and consistency: if people commit they are
+likely to honor that commitment.
+3) Social proof: people will follow what other people do
+(also: conformity).
+4) Authority: people tend to obey authority figures.
+5) Liking: people are easily persuaded by other people that
+they like.
+6) Scarcity: perceived scarcity will generate demand.
+The principles of persuasion are presented by Cialdini in a
+qualitative manner and need to be formalized in order to
+use them in a computational model. Furthermore, we need
+to translate them into an online context, and specifically into
+a Twitter context, leading to a multi-agent model of online
+social influence.

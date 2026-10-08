@@ -1,0 +1,16 @@
+Derived indexed text returned by source reader via publisher supplement hyperlink, accessed 2026-10-03. Not raw PDF or visual inspection. Captions and code/data pointer only; no figure outcome claims.
+
+ (https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf)
+citeturn827view0 [wordlim: 200] Crawled: 3 months ago; Content type: application/pdf; Number of pages: 2; Source: click({"ref_id":"turn819view0","id":182}); Total lines: 11
+L0@P0: Running head: HOW DOES FACEBOOK RETAIN SEGREGATED FRIENDSHIP?
+L1@P0: Supplementary Materials
+L2@P0: Figure 10
+L3@P0: The Percentage of Agent Satisfaction in All Simulations with Threshold = 0.25
+L4@P0: Figure 11
+L5@P0-1: The Percentage of Agent Satisfaction in All Simulations with Threshold = 0.75HOW DOES FACEBOOK RETAIN SEGREGATED FRIENDSHIP?
+L6@P1: 1
+L7@P1: Simulation R Codes
+L8@P1: For review purposes, the source codes and generated data sets can be accessed through
+L9@P1: the following anonymous repository:
+L10@P1: https://www.comses.net/codebase-release/37b39c00-b266-4308-af2d-9d1017f5b7a2/
+

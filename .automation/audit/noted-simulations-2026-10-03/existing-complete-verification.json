@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-03",
+  "scope": "Bounded exact-hash verification of the already finalized T-RECS and Social Relationships notes; no new full-source audit performed.",
+  "method": "Reused prior independent full-source audits only after each current note SHA-256 matched both the repair record's final_sha256 and finalized.json. Checked source artifact hashes, source-read coverage/report scope, bibliography totals and note structure, and documented stale shared-manifest state. Did not edit either note or reread full sources.",
+  "papers": [
+    {
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "current_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+      "repair_final_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+      "finalization_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+      "verdict": "PASS_UNCHANGED_FINALIZED_HASH",
+      "independent_full_source_report": {
+        "path": "vault/.automation/audit/repair-2026-10-03/audit-t-recs.json",
+        "sha256": "1eb5662eeee8ad4a0ab0178473fc653c34ccffab151dbff95e8d409f0424e900",
+        "report_note_sha256": "71edb5fb0e04301bbb9f5ec5f37c0ef28e1192cf41c449ee63717d18b841b65e",
+        "scope": "Full arXiv v2 primary text including §§1-6, all three case studies, appendices A.1-A.4, and all 87 bibliography entries; source-located claims and disclosures reviewed."
+      },
+      "source_artifacts": [
+        {
+          "path": "vault/.automation/sources/files/f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9.txt",
+          "sha256": "f514ca4659db47bce3c578ec37780f907685e72a6ba0279ca7d1acc38437b0e9"
+        },
+        {
+          "path": "vault/.automation/sources/files/abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68.html",
+          "sha256": "abb0740fae47354a6c3f42d1b8769c272b51073ae20aa2448a7254526b0dcf68"
+        }
+      ],
+      "bibliography_check": "PASS: report records 87/87 in source order; current note contains 87 reference items, meaningful wiki targets/title aliases, and no opaque unresolved-reference placeholder.",
+      "metadata_check": "PASS: publication date is the initial arXiv submission date (2021-07-19); separately audited v2 source date is 2021-07-28, as resolved by root metadata review and retained in provenance.",
+      "open_source_gaps": "The prior full-source report records conceptual-replication scope, unspecified distribution parameters deferred to a cited source, and adaptive creator behavior as a hypothesized constructive extension; these are disclosed in the note."
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "current_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+      "repair_final_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+      "finalization_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+      "verdict": "PASS_UNCHANGED_FINALIZED_HASH",
+      "independent_full_source_report": {
+        "path": "vault/.automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+        "sha256": "8050cd094dc7c8af029748bc04f2a229fbb7d59d52638890ef21bf0cdf29c875",
+        "report_note_sha256": "44488790e5e1ace99279bdf34630549c3fdb50727bee894169b62b25eb68a5ca",
+        "scope": "Full JASSS publisher PDF and complete extracted text, §§1-6, all 62 bibliography entries, and PDF p.4 fitness-equation rendering."
+      },
+      "focused_root_review": {
+        "path": "vault/.automation/audit/repair-2026-10-03/root-social-relationships-focused-review.json",
+        "sha256": "f612b955b4e6faa027b1c946b6accbdc6d023cf205ce1dad4433270319518204",
+        "scope": "Focused review of simulation-relevant fitness/trust rules, equation image, source conflict, and corrected citation title; the review explicitly supplements rather than replaces the independent full-source audit."
+      },
+      "source_artifacts": [
+        {
+          "path": "vault/.automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+          "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34"
+        },
+        {
+          "path": "vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+          "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3"
+        }
+      ],
+      "bibliography_check": "PASS: report records 62/62 in source order; current note contains 62 reference items, meaningful wiki targets/title aliases, and no opaque unresolved-reference placeholder. The Reicher et al. source typo is corrected to the publisher-verified title.",
+      "open_source_gaps": "The note retains the §2.4/§2.6/§4.4 trust-rule conflict, leaves inherited partner-search/decay functions unresolved, and discloses undefined zero-denominator fitness cases."
+    }
+  ],
+  "manifest_discrepancy_for_root": {
+    "path": "vault/.automation/import/papers.json",
+    "observation": "For both records the shared manifest still says audit_status=pending and current_warnings=[audit failed], although each current_note.sha256 and repair audit_repair_2026_10_03.final_sha256 equal the finalized exact hash and both independent final reports pass. The paper notes themselves show the finalized state. This report does not edit the shared manifest.",
+    "finalization_record_sha256": "41478f5c86e9c1f1ae688c7ed6ef66ac57cab25eb684567a921041bd03b3a70b",
+    "manifest_sha256": "e108e405c5213311c2f402633d2f66899b8e6c6a34e496d4ec11f3f3b1aa84cd"
+  }
+}

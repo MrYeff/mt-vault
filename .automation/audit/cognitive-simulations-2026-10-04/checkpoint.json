@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-04",
+  "scope": [
+    "PsychSim",
+    "Reputation Game"
+  ],
+  "reading_list": "Simulation Reading List.md",
+  "reference_import": "Skipped at user request; source bibliography retained without resolving cited-paper notes.",
+  "psychsim": "Finalized after independent PASS re-audit.",
+  "reputation": "Finalized after independent PASS re-audit.",
+  "source_manifest": ".automation/import/cognitive-simulations-2026-10-04/sources.json",
+  "status": "complete",
+  "completion": ".automation/audit/cognitive-simulations-2026-10-04/completion.json"
+}

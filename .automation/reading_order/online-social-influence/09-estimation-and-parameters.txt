@@ -1,0 +1,36 @@
+d) Estimating Behavior Parameters: Both the intercept
+coefficients ai for each choice and the parameter weights bj of
+the influence factors are estimated using regression methods on
+the empirical data of the specific talent show. The regression
+method used is based on an Expectation-Maximization (EM)
+Model [20]. The data set contains user decisions per minute.
+As this leads to a very high number of No Tweet decisions,
+selective sampling of the data has been used to estimate
+parameters: 99.5% of the No Tweet decisions were randomly
+left out. This affects the Tweet-No Tweet ratio. In order to
+correct for this effect, the utility of Tweet needs to be written
+as:
+UTweet(t) = τ log
+X
+k
+exp (Uk(t))
+where τ is a correction factor and Uk(t) is the utility for a
+tweet on topic k.
+A detailed mathematical description of this regression
+method including the correction procedure is given by
+Koster [17].
+C. Independent Variable: Model Type
+The single and multiagent models described have been
+implemented in Repast Simphony [21], a java-based multiagent
+simulation framework.
+The Tables II, III and IV describe all parameters that
+resulted from the regression methods for each of the decision
+models [17]. All five models were compared in this study. Note
+that no intercept variables have been calculated for the choice
+Tweet. Those values are not necessary as they are only used
+in the nested choice model, where the probabilities of Tweet
+and No Tweet add up to one. The values of the parameters can
+interpreted as the importance of the related influence factors. In
+the present study, for instance, ’social proof’ is more important
+than ’liking’ and ’consistency’, given that in Table III its
+related weights are always higher.

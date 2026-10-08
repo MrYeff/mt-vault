@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-03",
+  "scope": "Five simulation papers named in goals note; no empirical measurement placeholder imports in this scope",
+  "status": "COMPLETE_FOR_ACCESSIBLE_SOURCE_VERSIONS",
+  "papers": [
+    {
+      "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "sha256": "333f512c8b88d44c4cd3f5087dd027d9ee38955abc4a0ad891e4434ee686ea5c",
+      "status": "PASS",
+      "reference_count": 35,
+      "warnings": [],
+      "audit_report": "vault/.automation/audit/noted-simulations-2026-10-03/prod-independent-reaudit.json",
+      "method": "Independent full-source audit and required correction/re-audit; final edits limited to status/log"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+      "status": "PASS",
+      "reference_count": 87,
+      "warnings": [],
+      "audit_report": "vault/.automation/audit/repair-2026-10-03/audit-t-recs.json",
+      "method": "Previous full-source pass reused after exact final-hash verification"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "sha256": "85a9d5c93ee69a47c675580fd5f856602df4a7894c2b8fcd6aef32380146b17b",
+      "status": "PASS",
+      "reference_count": 71,
+      "warnings": [],
+      "audit_report": "vault/.automation/audit/noted-simulations-2026-10-03/audit-humat-final-reaudit.json",
+      "method": "Independent full-source audit and required correction/re-audit; final edits limited to status/log"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+      "status": "PASS",
+      "reference_count": 62,
+      "warnings": [],
+      "audit_report": "vault/.automation/audit/repair-2026-10-03/audit-social-relationships-final.json",
+      "method": "Previous full-source pass reused after exact final-hash verification"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "sha256": "a9b556231716cd77734d70d0ad51179a8774df4707f68a7f913591921172307e",
+      "status": "PASS",
+      "reference_count": 59,
+      "warnings": [
+        "fulltext unavailable"
+      ],
+      "audit_report": "vault/.automation/audit/noted-simulations-2026-10-03/audit-firman.json",
+      "method": "Independent full-source audit and required correction/re-audit; final edits limited to status/log"
+    }
+  ],
+  "reference_total": 314,
+  "sources_verified": 11,
+  "metadata_manifest_sha256": "71f1d1a2d7f4ab036d80d34d6c1d28cf9b7b8afeb88f8abe48acdfcb4da45f4f",
+  "limitations": [
+    "FIRMAN published full text unavailable; model extraction/audit scoped to full arXiv v1, with public published abstract/bibliography verified separately. The warning remains.",
+    "HUMAT/PROD/Sutcliffe source-defined omissions or contradictions are documented, not filled with mock rules.",
+    "Published FIRMAN supplement captions are cached indexed text, not raw PDF/visual inspection; code/data repository unavailable."
+  ],
+  "other_changes": [
+    "Repaired interleaved goals-note source footnotes; no new empirical measurement notes imported."
+  ]
+}

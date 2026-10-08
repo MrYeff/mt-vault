@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-04",
+  "title": "PsychSim: Modeling Theory of Mind with Decision-Theoretic Agents",
+  "source_file": "vault/.automation/sources/files/1ec4b04a477cf404eac25de4e677c10dcfe4f3a60fad97f12bf7ff3245c94b38.pdf",
+  "source_text_file": "vault/.automation/sources/files/0659966dbdd57b0751ea4a9b064e6b8e1fa918444ce57ce1977aa2530c98284c.txt",
+  "source_text_title": "PsychSim: Modeling Theory of Mind with Decision-Theoretic Agents",
+  "publication": "Proceedings of the 19th International Joint Conference on Artificial Intelligence (IJCAI-05), pp. 1181–1186",
+  "publication_year": 2005,
+  "doi": null,
+  "source_url": "https://www.ijcai.org/Proceedings/05/Papers/1559.pdf",
+  "note": "Imported from the complete six-page paper. Equations and Table 1 visually checked against the PDF. All source bibliography records retained; cited papers not imported and external reference resolution skipped at user request.",
+  "references": [
+    {
+      "source_text": "[Abelson et al., 1968] R.P. Abelson, E. Aronson, W.J. McGuire, T.M. Newcomb, M.J. Rosenberg, and P.H. Tannenbaum, eds. Theories of Cognitive Consistency: A Sourcebook. Rand McNally, Chicago, IL, 1968.",
+      "title": "Theories of Cognitive Consistency: A Sourcebook",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Cialdini, 2001] R. Cialdini. Influence: Science and Practice. Allyn and Bacon, Boston, MA, 2001.",
+      "title": "Influence: Science and Practice",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[de Rosis et al., 2003] F. de Rosis, C. Castelfranchi, V. Carofiglio, and G. Grassano. Can computers deliberately deceive? A simulation tool and its application to Turing’s imitation game. Computational Intelligence, 19(3):253–263, 2003.",
+      "title": "Can Computers Deliberately Deceive? A Simulation Tool and Its Application to Turing’s Imitation Game",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Gmytrasiewicz and Durfee, 1995] P.J. Gmytrasiewicz and E.H. Durfee. A rigorous, operational formalization of recursive modeling. In ICMAS, pp. 125–132, 1995.",
+      "title": "A Rigorous, Operational Formalization of Recursive Modeling",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Liebrand et al., 1998] W. Liebrand, A. Nowak, and R. Hegselmann, editors. Computer Modeling of Social Processes. Sage, London, UK, 1998.",
+      "title": "Computer Modeling of Social Processes",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Marsella et al., 2000] S.C. Marsella, W.L. Johnson, and C. LaBore. Interactive pedagogical drama. In Agents, pp. 301–308, 2000.",
+      "title": "Interactive Pedagogical Drama",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Marsella et al., 2004] S.C. Marsella, D.V. Pynadath, and S.J. Read. PsychSim: Agent-based modeling of social interactions and influence. In ICCM, pp. 243–248, 2004.",
+      "title": "PsychSim: Agent-Based Modeling of Social Interactions and Influence",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Petty and Cacioppo, 1986] R. Petty and J. Cacioppo. Communication and persuasion: Central and peripheral routes to attitude change. Springer, New York, NY, 1986.",
+      "title": "Communication and Persuasion: Central and Peripheral Routes to Attitude Change",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Prietula et al., 1998] M. Prietula, K. Carley, and L. Gasser, eds. Simulating Organizations: Computational Models of Institutions and Groups. AAAI Press, Menlo Park, CA, 1998.",
+      "title": "Simulating Organizations: Computational Models of Institutions and Groups",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Pynadath and Marsella, 2004] D.V. Pynadath and S.C. Marsella. Fitting and compilation of multiagent models through piecewise linear functions. In AAMAS, pp. 1197–1204, 2004.",
+      "title": "Fitting and Compilation of Multiagent Models Through Piecewise Linear Functions",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Pynadath and Tambe, 2002] D.V. Pynadath and M. Tambe. Multiagent teamwork: Analyzing the optimality and complexity of key theories and models. In AAMAS, pp. 873–880, 2002.",
+      "title": "Multiagent Teamwork: Analyzing the Optimality and Complexity of Key Theories and Models",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Schwartz, 2000] D. Schwartz. Subtypes of victims and aggressors in children’s peer groups. Journal of Abnormal Child Psychology, 28:181–192, 2000.",
+      "title": "Subtypes of Victims and Aggressors in Children’s Peer Groups",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Smallwood and Sondik, 1973] R.D. Smallwood and E.J. Sondik. The optimal control of partially observable Markov processes over a finite horizon. Operations Research, 21:1071–1088, 1973.",
+      "title": "The Optimal Control of Partially Observable Markov Processes Over a Finite Horizon",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Taylor et al., 1996] J. Taylor, J. Carletta, and C. Mellish. Requirements for belief models in cooperative dialogue. User Modeling and User-Adapted Interaction, 6:23–68, 1996.",
+      "title": "Requirements for Belief Models in Cooperative Dialogue",
+      "note_mapping": null
+    },
+    {
+      "source_text": "[Whiten, 1991] A. Whiten, editor. Natural Theories of Mind. Basil Blackwell, Oxford, UK, 1991.",
+      "title": "Natural Theories of Mind",
+      "note_mapping": null
+    }
+  ],
+  "reference_resolution": "Skipped at user request; no cited-paper notes imported.",
+  "downloaded_source_url": "https://www.ccs.neu.edu/home/marsella/publications/pdf/PynMarsIJCAI05.pdf",
+  "audit_status": "PASS after independent audit and required corrections/re-audit",
+  "finalization": {
+    "verdict": "PASS",
+    "audited_sha256": "3eb2c17e4a2c7f50702add7fe657ef7049b916b918f8bd9adaabee7655fe416b",
+    "report": ".automation/audit/cognitive-simulations-2026-10-04/psychsim-reaudit.json",
+    "report_sha256": "8c0c1b6539ad6636031ff13d4e1817b7bb594d613d15c449ddf3888749812d81",
+    "auditor": "gpt-6-luna",
+    "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded.",
+    "final_sha256": "b75f29baadc2c57c62515a1d26b4edbdf469bb3fa3acdc983ce314d524dbbdd4",
+    "administrative_only_change": true,
+    "finalized_at": "2026-10-04"
+  }
+}

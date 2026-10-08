@@ -1,0 +1,51 @@
+{
+  "note": "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+  "verdict": "PASS",
+  "note_sha256": "b412af774a0bcb368fd7951b831f9ba07125dbd462a2f350d3a326588eb09128",
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78.html",
+      "sha256": "f05b47f032c94bda7c33821e617946659d160578684c925c932d815697511e78"
+    },
+    {
+      "path": "vault/.automation/sources/files/e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871.txt",
+      "sha256": "e728786d3da7ba565dd67b3d30c37d7c2db57440d02db8636fdcd14e00dc7871"
+    }
+  ],
+  "source_read_coverage": {
+    "primary_version": "Nature publisher subscription-preview page for s41586-026-10536-1; only abstract, metadata and reference metadata are accessible.",
+    "sections": [
+      "Publisher title, author and publication metadata",
+      "Complete accessible publisher abstract",
+      "Preview/access notice",
+      "All 58 citation_reference records and title fields"
+    ],
+    "full_text_not_abstract_only": false,
+    "fulltext_availability": "Unavailable; methods, allocation, algorithm rules, figures, tables and extended data were not inspected and are explicitly skipped in note."
+  },
+  "bibliography_check": {
+    "source_entry_count": 58,
+    "note_entry_count": 58,
+    "status": "PASS; all 58 source records occur in source order. Every one of the 31 publisher records with a citation_title field was compared to the note title (punctuation/case normalized); all match. Remaining records were compared against their full citation strings as recorded in publisher metadata."
+  },
+  "claim_checks": [
+    {
+      "claim": "Abstract wording and provenance",
+      "result": "PASS; note abstract matches accessible publisher abstract in substantive wording; the displayed note retains publisher citation-numbering."
+    },
+    {
+      "claim": "Study design and findings",
+      "result": "PASS within scope; sample size, eight-week period around the 2024 US presidential election, compared feed conditions, and reported abstract outcomes are present. No details beyond the abstract are asserted."
+    },
+    {
+      "claim": "Full-text model/mechanisms/experimental allocation",
+      "result": "PASS by explicit skip; no unsupported model or implementation claims appear. The note states detailed extraction was skipped because full text is inaccessible."
+    },
+    {
+      "claim": "Metadata and warning preservation",
+      "result": "PASS; publisher metadata supports title/DOI/date. Both `audit failed` and `fulltext unavailable` warning values remain in frontmatter."
+    }
+  ],
+  "warning_status": "No note edits; both source-availability and audit warnings remain unchanged.",
+  "reason_for_pass": "Abstract-only note accurately identifies unavailable full text, limits extraction to accessible abstract, and includes all 58 publisher reference records in source order."
+}

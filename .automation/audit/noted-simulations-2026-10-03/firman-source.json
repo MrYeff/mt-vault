@@ -1,0 +1,27 @@
+{
+  "source_version": "arXiv2109.08862v1 submitted2021-09-18",
+  "source_url": "https://arxiv.org/pdf/2109.08862v1",
+  "pdf": "vault/.automation/sources/files/4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3.pdf",
+  "pdf_sha256": "4608e70f778904566086065fd9158aa0e2d15ff1a57d15ef0094a55ccad9d2d3",
+  "text": "vault/.automation/sources/files/a0b737c461f8d294d00138c06c0982cde29d619751465f27bf528715758a1d28.txt",
+  "text_sha256": "a0b737c461f8d294d00138c06c0982cde29d619751465f27bf528715758a1d28",
+  "published_fulltext": "Publisher abstract/bibliography accessible viaweb; full published article restricted access. No claim of reading published fulltext.",
+  "published_public_record": {
+    "path": "vault/.automation/sources/files/b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9.txt",
+    "sha256": "b4af7507c2511b430d0f653a7149b59d8399728b51d2f3f033d31f20239945c9",
+    "kind": "derived web-tool indexed text, not raw HTML",
+    "coverage": "published abstract and all public reference entries; no published model fulltext"
+  },
+  "failed_direct_supplement_fetch": {
+    "path": "vault/.automation/sources/files/526786b83cd5b8b98d019bf5477f514078dc2491caaa84b17dbac5cc6437018b.txt",
+    "sha256": "526786b83cd5b8b98d019bf5477f514078dc2491caaa84b17dbac5cc6437018b",
+    "kind": "failed source-reader direct-URL fetch diagnostic; not paper text",
+    "source_url": "https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf"
+  },
+  "published_supplement_indexed_text": {
+    "path": "vault/.automation/sources/files/f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39.txt",
+    "sha256": "f5e9bbdd26d6ed316a47808f1edf2e3a8f53648b547860b95bb5fcb56b6e4d39",
+    "kind": "derived source-reader indexed caption text retrieved via publisher hyperlink; not rawPDF or visualinspection",
+    "source_url": "https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf"
+  }
+}

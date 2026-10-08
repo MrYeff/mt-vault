@@ -1,0 +1,45 @@
+{
+  "audit_id": "reputation-audit-2026-10-04-final-reaudit",
+  "verdict": "PASS",
+  "audited_note": "vault/Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+  "note_sha256": "cfe070f29bc1da4116a05ea49292a8bbad0e69148ce2dc145adf164a672edebd",
+  "primary_source": "/tmp/reputation2022-published.pdf",
+  "primary_source_sha256": "cf3df8a6ef53f59c46b24adb4a5e7a20c409682f08fcebe4c4a662acc51763eb",
+  "source_read_scope": "Reused the independent full-text read of all 46 pages of the final published source, including Sections 1–8, Appendices A–D, and the bibliography/numbered notes. This final re-audit checked the repaired model claims against that source and specifically rechecked every locator in all 18 LLM Justification footnotes, DOI/date/version metadata, the complete source-numbered reference coverage, and prior findings. External resolution of cited works was intentionally skipped.",
+  "checks": {
+    "metadata": {
+      "status": "PASS",
+      "detail": "Title, authors, DOI 10.1002/andp.202100277, final published PDF URL, and publication date 2022-04-05 are correct. Wiley identifies the first publication date as 05 April 2022."
+    },
+    "model_and_protocol": {
+      "status": "PASS",
+      "detail": "The Beta belief representation and bounds, neutral initialization, honesty sampling, conversation order, delayed receiver updates, product-Beta KL compression, Theory of Mind updates, friend/enemy rule, receiver evidence, and strategy choices remain consistent with Sections 3–5 and Appendices A–C. The noted Uncritical/confession conflict is preserved rather than silently resolved."
+    },
+    "lie_construction": {
+      "status": "PASS",
+      "detail": "The note now reflects Appendix B.2, Eqs. (B23)–(B24): lie baseline from the speaker's estimate of the receiver's belief, friend/enemy direction, target surprise sampling, kappa and caution scaling, KL search for distortion, and neutral white lies."
+    },
+    "simulation_results": {
+      "status": "PASS",
+      "detail": "The receiver and comparative strategy findings are supported by Sections 6.1, 6.2, 6.4, and 7.3, with the tested setup, group-size dependence, chaotic dynamics, and limits on generalization retained."
+    },
+    "strategy_discrepancy": {
+      "status": "PASS",
+      "detail": "The note no longer alleges a disagreement between Section 5.2 and Table C1 about destructive agents. It correctly describes strategic partner selection together with aggressive enemy-topic selection."
+    },
+    "source_locators": {
+      "status": "PASS",
+      "detail": "All 18 justification footnotes now point to supporting section, appendix, table, or equation identifiers in the final published version. Inaccurate printed-page ranges have been removed. I found no locator that points to a different rule or unsupported claim."
+    },
+    "bibliography": {
+      "status": "PASS",
+      "detail": "The note contains 109 bibliography records and 23 numbered source notes, covering all 132 source-numbered items. Spot checks of previously affected entries, including [19]–[21], [26], [40], [42], [53], [123], and [125], match the source text; item [123] includes its continuation. No external reference resolution was performed."
+    },
+    "audit_history": {
+      "status": "PASS",
+      "detail": "Initial FAIL and correction history remain in the note's Audit Log and the earlier audit JSON records. The final re-audit is separately recorded here."
+    }
+  },
+  "remaining_issues": [],
+  "limitations": "Bibliography fidelity was checked against the paper's own printed bibliography only; cited works were not imported or independently resolved, per instruction."
+}

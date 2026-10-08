@@ -1,0 +1,93 @@
+{
+  "note": "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+  "note_sha256": "ef6a883df79c3f9f64b516ae9555081ac290d6a0121bf3c317224f8a1ff4bf93",
+  "status": "PASS",
+  "independent": true,
+  "source_coverage": {
+    "availability": "Full arXiv v3 HTML plus derived full text; all paper sections, tables/results, limitations, and complete References read.",
+    "version": "arXiv:2310.10108v3, submitted 2024-11-08; full source cited in batch-2 repair record.",
+    "sources": [
+      {
+        "path": "vault/.automation/sources/files/bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1.html",
+        "sha256": "bfdcfc78d9269bbbc67a5d94cd665165ff0ebda41e1e34c573d1f2950ffa20c1",
+        "bytes": 200149
+      },
+      {
+        "path": "vault/.automation/sources/files/9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022.txt",
+        "sha256": "9f185fdd1aeb63c9486f5108f5d5eeec3de9ecd96378fd8eaac409ff7c416022",
+        "bytes": 70789
+      }
+    ],
+    "read_sections": [
+      "Abstract and §1",
+      "§2.1.1 Profile Module (trait formulas, tiers, history sampling, like threshold, privacy)",
+      "§2.1.2 Memory Module (factual/emotional memories, storage, retrieval/writing/reflection)",
+      "§2.1.3 Action Module (view/rate/feeling, satisfaction/fatigue/exit, post-exit interview)",
+      "§2.2 Recommendation Environment (item metadata, genre/summary generation, recommendation algorithms)",
+      "§3 and §§3.1–3.5 (all alignment/strategy/page-feedback experiments, tables, metric results, interview)",
+      "§4.1 Filter Bubble and §4.2 Causal Relationships (settings, metrics, DirectLiNGAM, reported results)",
+      "§5 Related Works",
+      "§6 Limitations and Future Work",
+      "all 70 bibliography entries"
+    ]
+  },
+  "claim_checks": [
+    {
+      "note_claim": "Trait definitions, formulas, 3-tier discretization and profile initialization use 25 sampled historical items with rating ≥3 labeled like.",
+      "source_locations": "§2.1.1",
+      "result": "PASS",
+      "detail": "Source formulas agree; note correctly preserves separate >3 threshold for later strategy evaluation."
+    },
+    {
+      "note_claim": "Factual/emotional memory content and operations; emotional reflection after a predefined action count; taste/emotion-driven actions and post-exit interview.",
+      "source_locations": "§§2.1.2–2.1.3",
+      "result": "PASS",
+      "detail": "No unsupported numeric reflection threshold stated."
+    },
+    {
+      "note_claim": "Item quality/popularity sources, LLM-generated 18-genre labels and title summaries, bad-genre item pruning, and replaceable collaborative-filtering algorithms.",
+      "source_locations": "§2.2",
+      "result": "PASS",
+      "detail": "Matches primary source."
+    },
+    {
+      "note_claim": "Profile/data/action controls: 1000 agents, 25 historical profile items, ≥3 profile like threshold, 18 genres, four items per page, max five pages, evaluation likes strictly >3.",
+      "source_locations": "§2.1.1, §3.3",
+      "result": "PASS",
+      "detail": "Boundary distinction and page cap match source."
+    },
+    {
+      "note_claim": "Preference discrimination alignment around 65% accuracy/75% recall; low ratings underrepresented; social traits improve behavioral believability with diversity overlap caveat.",
+      "source_locations": "§3, Table 1, §§3.1–3.2, Figures 3–6",
+      "result": "PASS",
+      "detail": "Approximations and limitations are represented accurately."
+    },
+    {
+      "note_claim": "Strategy metric leaders: LightGCN leads viewing ratio, like ratio and satisfaction; MF leads mean like count and exit page; viewed feedback improves offline/simulated measures and unviewed generally worsens them.",
+      "source_locations": "§3.3 Table 2; §3.4 Table 3",
+      "result": "PASS",
+      "detail": "Note correctly qualifies Table 2 as metric-specific and uses generally for unviewed feedback."
+    },
+    {
+      "note_claim": "Four-round filter-bubble results and DirectLiNGAM learned causal graph are simulator-data findings.",
+      "source_locations": "§§4.1–4.2, Figures 8–9",
+      "result": "PASS",
+      "detail": "Note makes no claim that the fitted graph independently establishes human causal effects."
+    },
+    {
+      "note_claim": "Scope, limitations and omissions; no universal numerical transition law or fully specified prompts/retrieval algorithm.",
+      "source_locations": "§§2–6",
+      "result": "PASS",
+      "detail": "Limitation wording is consistent with source."
+    },
+    {
+      "note_claim": "Abstract and bibliography title/order/count.",
+      "source_locations": "Abstract; complete References at text lines 1624–2153",
+      "result": "PASS",
+      "detail": "Abstract faithfully matches source. Note contains 70 references, same count/order/titles as source list; formerly missing titles replaced in repair; checked title identities against full reference blocks."
+    }
+  ],
+  "warning_status": "audit failed preserved; no edits made.",
+  "gaps_or_conflicts": [],
+  "candidate_for_reaudit": false
+}

@@ -1,0 +1,74 @@
+{
+  "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+  "verdict": "PASS",
+  "note_sha256": "44488790e5e1ace99279bdf34630549c3fdb50727bee894169b62b25eb68a5ca",
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34.pdf",
+      "sha256": "15764df8fe12095925e81cb5caf82ede35ea3cc849b97628a90ea01e7ddd5d34"
+    },
+    {
+      "path": "vault/.automation/sources/files/b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3.txt",
+      "sha256": "b9e55f7da6cfc78793ee57cdd3147a06099cd7398a9b6523af937f6b2cf75bb3"
+    }
+  ],
+  "source_read_coverage": {
+    "primary_version": "Full JASSS publisher PDF and complete HTML-derived text; printed equation rendering inspected on PDF page 4.",
+    "sections": [
+      "Publisher title/authors/abstract/date/DOI",
+      "§§1.1–1.6 framing and research questions",
+      "§§2.1–2.6 trust mechanism, strategies, turn order and source algorithm",
+      "§§3.1–3.6 controls and behavioural-time results",
+      "§§4.1–4.15 fitness equations, parameter controls, kin/defection experiments and outcomes",
+      "§§5.1–5.8 genetic inheritance, selection, crossover/mutation and evolutionary outcomes",
+      "§§6.1–6.10 discussion, scope and limitations",
+      "All 62 bibliography entries",
+      "PDF p.4 fitness equations visually checked"
+    ],
+    "full_text_not_abstract_only": true
+  },
+  "abstract_check": {
+    "status": "PASS",
+    "evidence": "Abstract matches the source verbatim, including its awkward phrase “more less-intense, or fewer more-intense partners.”"
+  },
+  "claim_checks": [
+    {
+      "claim": "Four social strategies and history-based partner choice",
+      "status": "PASS",
+      "evidence": "§§2.1–2.6 describe favour-few, medium, favour-many and staged strategies; exact inherited selection probabilities remain unspecified in the note."
+    },
+    {
+      "claim": "Trust formation/decay and defection treatment",
+      "status": "PASS_WITH_DISCLOSURE",
+      "evidence": "Note preserves §2.4 prose, §2.6 printed algorithm and §4.4 selected log-increase/linear-decrease setting as a source conflict; no unsupported exact transition equation is selected. Prior defections are not used to choose partners (§6.10)."
+    },
+    {
+      "claim": "Wellbeing/resource fitness formulas and selection controls",
+      "status": "PASS",
+      "evidence": "PDF p.4 equation image supports wellbeing = summed ego trust × incoming/outgoing interactions ÷ number of ties and resource = forage turns × ties. Zero-tie/zero-outgoing is disclosed. §4.3 supports the baseline population and selection scheme; focused root review confirms bottom/top 20% selection."
+    },
+    {
+      "claim": "Kin and evolutionary experiments",
+      "status": "PASS",
+      "evidence": "§§4.12–4.15 and 5.1–5.8 support kin carry-over/substitution, FM and defection genotypes, inherited variables, crossover and mutation settings, and outcomes; note keeps findings setting-dependent."
+    },
+    {
+      "claim": "Metadata and note warning",
+      "status": "PASS",
+      "evidence": "Publisher header supports publication date 31-Oct-2012 and DOI. YAML audit-failed warning remains byte-for-byte unchanged."
+    }
+  ],
+  "bibliography_check": {
+    "status": "PASS",
+    "primary_source_entry_count": 62,
+    "note_item_count": 62,
+    "evidence": "All 62 items are in source order with source-title aliases. Titles were compared against all bibliography entries in the full primary text. The source misspells Reicher et al. as “deindividualisation”; the note uses the canonical title “A Social Identity Model of Deindividuation Phenomena,” checked against the work’s publisher/DOI record per source correction review."
+  },
+  "unresolved_or_conflicting_source_details": [
+    "§2.4 trust prose, §2.6 model-control formula and §4.4 selected log/linear setting do not specify one identical rule; note preserves this conflict.",
+    "Detailed inherited trust/search functions are referred to Sutcliffe & Wang (2012) and not reconstructed.",
+    "The fitness equations provide no zero-tie or zero-outgoing behavior; note explicitly leaves those cases undefined."
+  ],
+  "warning_status": "No note/status edits; audit-failed warning remains.",
+  "reason_for_pass": "Latest note hash checked. Previous full-source content checks remain valid; current repair fixes the title alias and restores its source footnote. Source-level trust and equation ambiguities are explicitly retained, and the 62 references are source-based."
+}

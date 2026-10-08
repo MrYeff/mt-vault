@@ -1,0 +1,83 @@
+{
+  "note": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+  "auditor": "batch-1 independent review",
+  "verdict": "PASS_CONTENT_WITH_SOURCE_CONFLICTS_RETAINED",
+  "note_sha256": "486477cf3022e534f0d488334b86515fd13b1acb2391fc94097b81c768e89321",
+  "warning_preserved": "audit failed",
+  "primary_source": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+  "source_version": "HAL-deposited published-paper copy; cover cites 2001; publisher volume/DOI metadata cross-checked in note; source article has 12 pages including cover.",
+  "source_read_coverage": [
+    "PDF text all 549 lines: cover/citation, abstract, §§1–5, all figure captions and conclusions, entire 10-item bibliography.",
+    "Visually inspected cached original PDF page images for Fig. 1 population caption (image hash ebe21...), vector model wording and §4.2 results (image hash 64d7...), and vector threshold statement (image hash 29a2...).",
+    "Parsed the complete cached text in successive ranges 1–250 and 251–549; no source sections omitted."
+  ],
+  "source_files": [
+    {
+      "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1.pdf",
+      "sha256": "a1e2dacef7d4b139a655d72172959baf5603c31c439cf6ff0b263136ec125eb1",
+      "role": "primary full PDF"
+    },
+    {
+      "path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562.txt",
+      "sha256": "466df92a316f7980114bc4f374aa1cb3e9bd87fb71626d0a532475b0e4a11562",
+      "role": "full extracted text"
+    }
+  ],
+  "abstract_provenance": "Abstract in note matches primary abstract wording.",
+  "bibliography_check": {
+    "primary_entries": 10,
+    "note_items": 10,
+    "status": "All ten titles correspond to source bibliography entries; original-order mapping is maintained. Accents/translation-transliteration renderings are consistent with the PDF text; no missing or extra title found."
+  },
+  "claim_checks": [
+    {
+      "claim": "continuous opinion state and transition",
+      "source_locations": "§2.1 Eqs. 1–2, pp. 3–4",
+      "result": "supported; pair update uses pre-encounter values, simultaneous formula, strict |x-y| < d, μ in 0..0.5."
+    },
+    {
+      "claim": "complete-mixing initialization and sampling schedule",
+      "source_locations": "§2.2, Figs. 1–4, pp. 4–6",
+      "result": "supported; initial opinions uniform [0,1]; 1,000 sampled pairs per displayed time unit."
+    },
+    {
+      "claim": "agent-count discrepancy",
+      "source_locations": "§2.2 prose and Fig. 1 caption, p. 4 (visually checked)",
+      "result": "supported; prose N=1,000, Fig. 1 N=2,000; note preserves both."
+    },
+    {
+      "claim": "lattice interaction rule and outcomes",
+      "source_locations": "§3, Figs. 5–7, pp. 6–8",
+      "result": "supported; square-lattice four-neighbor connected-pair interactions, strict confidence rule, equilibrium/percolation outcomes."
+    },
+    {
+      "claim": "binary opinion-vector variant",
+      "source_locations": "§4.1, pp. 9–10; §4.2 and Figs. 8–9, pp. 10–11; page 9 image visually checked",
+      "result": "supported; shared m-bit opinions, complete mixing, Hamming distance, per-differing-subject randomly selected persuader and probability μ; results are scoped as reported."
+    },
+    {
+      "claim": "cutoff boundary discrepancy",
+      "source_locations": "§4.1 p. 10",
+      "result": "supported and correctly flagged: agree on at least m-d is restated as disagree on d-1 or fewer, one-bit mismatch."
+    },
+    {
+      "claim": "outcome/scope summary",
+      "source_locations": "§§2.2–5",
+      "result": "supported; note does not present full density approximation or detailed vector-cluster statistics as extracted rules."
+    }
+  ],
+  "conflicts_or_gaps": [
+    "The vector cutoff’s two source phrasings differ at exactly one disagreement; note preserves both.",
+    "N=1,000 results prose conflicts with N=2,000 Fig. 1 caption; note retains both.",
+    "Primary PDF cover cites 2001 whereas bibliographic registry record used in the note gives print date-parts 2000-01; note discloses this provenance conflict and does not assert an exact day."
+  ],
+  "missing_rules": [
+    "Paper presents three related model variants; note summarizes all three but intentionally omits the small-threshold density approximation and detailed vector-cluster statistics, explicitly noted under “How does it work?”. No defining encounter/update rule missing from the extracted variants."
+  ],
+  "reference_list_edited": false,
+  "candidate_for_independent_audit": true,
+  "audit_findings": [
+    "Current note’s claims are source-supported; no body correction required.",
+    "Recheck source conflicts, no false claims of warning clearance, exact bibliography list and abstract provenance."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+  "note_sha256": "bbcee1130dd8c678f414ef2c71adde117fcb05d2b6e07b832eeb35b1e63347a2",
+  "source": {
+    "path": "vault/.automation/sources/files/d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee.html",
+    "sha256": "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee",
+    "version": "Published JASSS HTML, 28(1), article 4 (2025-01-31), DOI 10.18564/jasss.5611",
+    "coverage": "The primary publication was read in full during the first independent audit. For this exact candidate re-audit, I rechecked the complete note and the affected Appendix A state tables, overview, initialization, interaction narrative, process scheduling, all exchange/update submodels, observation, and citation entries against the cached full HTML. I did not rely on the repair report as evidence."
+  },
+  "verdict": "FAIL_CORRECTIONS_REQUIRED",
+  "summary": "The candidate corrects the original H1-H7 omissions in its prose and disclosures, and the 71-entry bibliography remains complete and ordered. However, the new procedures still do not consistently follow their declared state types, do not implement source-specified exchange-view updates, omit initialization steps, and use a singular gate without an update path. The note also mislocates two narrative rules and asserts stale choice knowledge where the source says all alter choices are observable. Keep the failure flag until these specific issues are corrected and this exact or later hash is re-audited.",
+  "claims_review": [
+    {
+      "claim_group": "Model scope, state, motives, and choice rules",
+      "source_locations": "Appendix A, Overview, Purpose and Patterns, Tables 1-3, Initialisation, Set Basic Choice, Set Initial Choice, Update Dissonances, Choose Alternative",
+      "result": "MOSTLY_SUPPORTED; PROCEDURE_OMISSIONS_REMAIN",
+      "detail": "The two-option ODD instance, three motive groups, per-choice satisfaction/evaluation/dissonance fields, importance distributions, Beta shape pairs, lexicographic threshold choice rule, and narrative/procedure habit conflict are supported. The formal initialization omits the source's first-stage basic choice from the means of experiential and values evaluations (random choice on a tie), then the order of representation/social-motive/dilemma setup followed by the final choice procedure. The per-choice social satisfaction is declared but never assigned in update_dissonances."
+    },
+    {
+      "claim_group": "Knowledge and social-neighbor choices",
+      "source_locations": "Appendix A, Entities, State Variables and Scales / Table 3 introduction; Set Representation List; Set Social Motive; Signal; Inquire",
+      "result": "SOURCE_CONFLICT_NOT_REPORTED; NOTE_ASSERTION_NOT_SUPPORTED_AS_WRITTEN",
+      "detail": "The source explicitly says the chosen alternative of every alter is observable and that egos have perfect knowledge of all alter choices. It also says social-motive proportions are calculated from the alter-representation-list, while exchange procedures refresh selected fields. The note says choices are stored views rather than an omniscient read and may be stale until selected fields refresh, without disclosing this tension. Do not silently choose either live network choice or stale-cache semantics; report the perfect-knowledge assumption alongside the procedure's representation/update mechanics."
+    },
+    {
+      "claim_group": "Activation criteria and social-need criteria",
+      "source_locations": "Appendix A, Design Concepts > Interaction versus Appendix A, Submodels > Signal or inquire / Set Social Motive / Identify Dilemmas",
+      "result": "CONFLICT_DISCLOSED_BUT_SOURCE_LOCATION_WRONG",
+      "detail": "The note now preserves both the narrative and ODD criteria, but attributes the narrative negligible satisfaction/dissonance-gap and social-importance-threshold criteria to Section 2. The relevant statements are in Appendix A Design Concepts > Interaction. Section 2's discussion of dilemmas is not the passage that supplies the quoted negligible-gap and importance-threshold rules. The current footnote r16 should cite the correct Appendix A narrative section, then contrast it with the Appendix A operational submodels."
+    },
+    {
+      "claim_group": "Exchange selection, cached representations, and asymmetric update order",
+      "source_locations": "Appendix A, Table 3 and Set Alter Representations, Signal, Inquire",
+      "result": "SOURCE_DISCLOSURES_PRESENT; STATE_PATHS_AND_ORDER_INCOMPLETE",
+      "detail": "The full-list ranking, contacted-first ordering, missing filter/exhaustion rule, per-agent stored alter information, literal item-30 self-sum, and distinct signal/inquire participant updates are disclosed. But signal/inquire select an AgentId from a list typed [AgentId] and then use it as an Agent without retrieving world.agents[id]. The Inquire source updates the initiator's view of the selected alter before using the received data; that refresh is not represented in the procedure, which reads the alter's live alternatives directly. The declared AlterView/Alternative paths do not define several fields the procedures read or the stored fields they refresh. Add explicit ID lookup and view/state-path updates while retaining the disclosed source uncertainties."
+    },
+    {
+      "claim_group": "Loop scheduling and mutation notation",
+      "source_locations": "Appendix A, Process Overview and Scheduling; Signal or Inquire; Signal; Inquire; Set Dissonances",
+      "result": "PROCEDURES_NOT_VALIDLY_TYPED_TO_MODEL_NOTATION",
+      "detail": "The guide specifies mutation on parameters (`mut world: World` / `mut agent: Agent`), not as a `mut` function prefix. signal_or_inquire is called with world but changes state; signal and inquire are likewise called from a non-mutating context. `update_dissonances` is written `mut update_dissonances(...)` and its mutable inputs are not marked. The code also omits any update/derivation path for Agent.dissonance_strength even though sim_loop uses that field as the interaction gate and update_dissonances only writes per-choice strengths. Table 1 says the singular strength is that of the chosen alternative, while Table 2 stores per-choice values; the source leaves their synchronization after choice changes unclear, a conflict the note correctly discloses but the code does not operationalize without an unstated assumption."
+    },
+    {
+      "claim_group": "Source parameter and application findings",
+      "source_locations": "Appendix A, Stochasticity/Initialisation/Create Agents/Create Networks/Tables 3-4; §§3.1-3.3 and Figures 1-5",
+      "result": "SUPPORTED_WITH_KNOWN_SOURCE_CONFLICTS",
+      "detail": "The aspiration range conflict, importance and tolerance Normal distributions, Beta shape pairs, random heading then movement, radius-35 network construction, nearest-agent random tie break, output measures, case examples, reported Groningen figures, and COVID case additions/findings remain supported. The note appropriately bounds case results to those applications and keeps the aspiration, habit, zero-denominator, and generic network-update limitations visible. Initialization still needs the basic-choice and subsequent setup order described above."
+    },
+    {
+      "claim_group": "References",
+      "source_locations": "Primary HTML References section",
+      "result": "PASS_71_OF_71_SOURCE_ORDER_AND_TITLE_ALIASES",
+      "detail": "Parsed the 71 primary bibliography records and independently confirmed 71 note entries. Each alias matches its corresponding source title in sequence (including two title strings that also occur as substrings in adjacent longer titles). A vault-wide exact-stem scan found no target stem matching any of these reference titles, so the natural filename-safe targets are appropriate for unimported works."
+    },
+    {
+      "claim_group": "Case outputs and applicability",
+      "source_locations": "§2.5; §3.1 Dialogue Tool; §3.2 Groningen; §3.3 COVID-19; Appendix A Observation/Input Data",
+      "result": "SUPPORTED",
+      "detail": "The current summary of basic outputs, dialogue result, Groningen population and run count/result, COVID extension/result, absence of time-series inputs, and limits on generic network modification agrees with the primary paper and keeps the examples bounded."
+    }
+  ],
+  "required_corrections": [
+    {
+      "id": "R1",
+      "severity": "major_procedure_state_path",
+      "source_locations": "Note Model types and `signal`/`inquire` pseudocode; Appendix A Signal and Inquire",
+      "finding": "The lists are declared `[AgentId]`, but `receiver = first(sender.signalling_list)` and `alter = first(initiator.inquiring_list)` are then used as full Agent records (`receiver.alternatives`, `alter.importance`). Several fields read or updated are also absent from the declared Agent/AlterView paths. Table 3 initializes alter importance and satisfaction fields to numeric 0, while AlterView makes these fields optional; the type therefore contradicts the source's defined defaults.",
+      "required_action": "Separate selected IDs from agent records and explicitly resolve them through world.agents. Make all state reads/writes follow the declared types. Represent Table 3's cached importance/satisfaction fields with their numeric-zero defaults, without adding an unsupported knowledge flag. Preserve per-ego AlterView as the source of cached attributes and show the refreshes specified by Signal/Inquire."
+    },
+    {
+      "id": "R2",
+      "severity": "major_procedure_order",
+      "source_locations": "Appendix A, Table 3 introduction, Set Representation List, Set Social Motive, Signal and Inquire",
+      "finding": "The source states that choices of all alters are observable and egos have perfect knowledge of all alter choices, but the note says views may be stale until selected fields refresh and presents stored-choice calculation as the only knowledge path. In addition, the Inquire procedure uses the selected alter's live state instead of explicitly refreshing and then reading the initiator's stored representation, as the source describes.",
+      "required_action": "State the source's perfect-knowledge assumption and the separate stored-representation mechanics side by side, explicitly expose their synchronization ambiguity, and show the specified inquiry-view refresh before use. Do not silently assume either stale or globally live choice values."
+    },
+    {
+      "id": "R3",
+      "severity": "major_procedure_mutation_and_gate",
+      "source_locations": "Note sim_loop/signal_or_inquire/update_dissonances/signal/inquire; Appendix A Process Overview, Signal or Inquire, Set Dissonances",
+      "finding": "Mutations are not expressed using Model Notation's mutable parameter syntax, and the singular dissonance_strength read by the gate has no setter/derivation in the pseudocode. The note correctly identifies the singular chosen-alternative field versus per-choice storage, but does not leave the unresolved mapping out of executable-looking code.",
+      "required_action": "Use `mut` on state parameters that are changed. Keep the singular/per-choice mismatch explicit and avoid an invented aggregation or synchronization rule; make clear that the source does not supply a complete runnable gate update when its own state definitions diverge."
+    },
+    {
+      "id": "R4",
+      "severity": "implementation_omission",
+      "source_locations": "Appendix A, Initialisation > Set Basic Choice and Set Initial Choice",
+      "finding": "The initialization summary omits the first basic choice from the average of experiential and values evaluations, random tie-breaking, and the subsequent sequence that builds alter representations/social motives/dilemmas before running the final choice procedure.",
+      "required_action": "Add the source-defined initialization order and initial-choice rule."
+    },
+    {
+      "id": "R5",
+      "severity": "implementation_omission",
+      "source_locations": "Appendix A, Set Social Motive and Table 2; note update_dissonances",
+      "finding": "The type declares Alternative.social_satisfaction, but update_dissonances computes a local social_sat and never stores it on the alternative. The source sets social-satisfaction-X to the linearly rescaled proportion before computing social-evaluation-X.",
+      "required_action": "Represent the source's stored social-satisfaction state and assignment in the procedure."
+    },
+    {
+      "id": "R6",
+      "severity": "citation_location_error",
+      "source_locations": "Note conflicts bullet and footnote r16; Appendix A, Design Concepts > Interaction and Appendix A Submodels",
+      "finding": "The narrative negligible-gap exchange rule and social-importance matching threshold are attributed to Section 2. The corresponding narrative rules are in Appendix A Design Concepts > Interaction; the operational criterion is in Appendix A Submodels.",
+      "required_action": "Correct the bullet and r16 to point to the exact narrative subsection and contrast it with the operational Appendix A submodels."
+    }
+  ],
+  "corrected_original_findings": [
+    "The note now records the narrative-vs-ODD exchange trigger and social-satisfaction criterion rather than silently choosing the ODD version; their precise source locus is still misstated (R6).",
+    "Partner ranking is explicitly described as ordering the whole list, with filtering and exhausted-list behavior left unspecified; it records cached-view use and item-30 self-inclusion.",
+    "The separate signalling and inquiry participant-update sequences are included in both pseudocode comments and prose, though selected-agent dereferencing and inquiry-view refresh need explicit typed paths (R1-R2).",
+    "Random heading, movement distance and random nearest-distance tie break have been restored.",
+    "The singular chosen-alternative dissonance strength versus per-choice values is explicitly disclosed, though the pseudocode currently reads the singular without a corresponding update path (R3).",
+    "The 71 source titles are in order with readable targets; no exact existing vault stems were present."
+  ],
+  "process_checks": {
+    "note_sha256_rechecked_after_review": "bbcee1130dd8c678f414ef2c71adde117fcb05d2b6e07b832eeb35b1e63347a2",
+    "frontmatter_flags": "The note still has `audit failed`; this report makes no flag change.",
+    "audit_log": "The note records the first audit failure and says the current candidate awaits independent re-audit.",
+    "reference_method": "Compared all visible note title aliases to the 71 source reference blocks in source sequence; checked current vault stems without creating any references.",
+    "edits": "No paper note, manifest, shared status flag, or source artifact was edited."
+  }
+}

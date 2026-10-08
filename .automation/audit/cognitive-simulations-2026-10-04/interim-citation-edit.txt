@@ -1,0 +1,331 @@
+---
+title: "A Reputation Game Simulation: Emergent Social Phenomena from Information Theory"
+tags:
+  - model
+  - simulation
+  - reputation
+  - information_theory
+authors:
+  - "[[Literature/Authors/Torsten Enßlin|Torsten Enßlin]]"
+  - "[[Literature/Authors/Viktoria Kainz|Viktoria Kainz]]"
+  - "[[Literature/Authors/Céline Bœhm|Céline Bœhm]]"
+publication date: 2022-04-05
+source: https://d-nb.info/1255007265/34
+doi: 10.1002/and
+read status: Todo
+⚠️:
+  - audit failed
+---
+## Abstract
+
+Reputation is a central element of social communications, be it with human or artificial intelligence (AI), and as such can be the primary target of malicious communication strategies. There is already a vast amount of literature on trust networks and their dynamics using Bayesian principles and involving Theory of Mind models. An issue for these simulations can be the amount of information that can be stored and managed using discretizing variables and hard thresholds. Here a novel approach to the way information is updated that accounts for knowledge uncertainty and is closer to reality is proposed. Agents use information compression techniques to capture their complex environment and store it in their finite memories. The loss of information that results from this leads to emergent phenomena, such as echo chambers, self-deception, deception symbiosis, and freezing of group opinions. Various malicious strategies of agents are studied for their impact on group sociology, like sycophancy, egocentricity, pathological lying, and aggressiveness. Our set-up already provides insights into social interactions and can be used to investigate the effects of various communication strategies and find ways to counteract malicious ones. Eventually this work should help to safeguard the design of non-abusive AI systems.[^r1]
+
+## Research Questions
+> Research Questions extracted via LLM
+- How do finite-memory, information-theoretic belief updates shape reputation dynamics and emergent group phenomena?[^r2]
+- How do specified receiver and communication strategies alter reputation, self-esteem, and group opinion in the simulated settings?[^r3]
+- Which defensive receiver behaviors resist the modeled propaganda and deception strategies?[^r4]
+
+## Model
+> Model extracted via LLM according to [[Model Notation]]
+
+### What does it represent?
+
+A proof-of-concept agent-based game about perceived honesty. Agents choose conversation partners and a topic, exchange a pair of statements about that topic, and update beliefs about the speakers and topic. “Reputation” is perceived honesty; the model omits other dimensions of human reputation.[^r2]
+
+Friend and enemy lists are the paper-specific directional designation of how an agent has recently been spoken about relative to peer reports. They are model state labels, not validated human relationships or evidence of real friendship.[^r5]
+
+### How does it work?
+
+The compact notation describes shared state and protocol; the mechanics below focus on ordinary/critical reception, with specialized strategies summarized afterward. It is an explanatory condensation, not executable reproduction of all variants.[^r6]
+
+```yml
+World:
+  agents: [Agent]
+  rounds_left: 0..
+  event_time: 0..
+
+AgentId: ()
+ReceiverStrategy: Naive | Deaf | Uncritical | Critical | Smart
+CommunicationStrategy: Ordinary | Strategic | AntiStrategic | Flattering |
+                       Egocentric | Aggressive | Shameless | Deceptive |
+                       Clever | Manipulative | Dominant | Destructive
+
+Agent:
+  honesty: 0..1                   # fixed true frequency x_a
+  receiver: ReceiverStrategy
+  communication: CommunicationStrategy
+  beliefs: [AgentId -> Belief]    # including self
+  friends: [AgentId]              # unique directional labels
+  enemies: [AgentId]               # unique directional labels
+  ToM: [AgentId -> AgentId -> ModelOfOther] # speaker -> agent-topic
+  surprise_history: [0..]          # latest nonzero surprises, at most N_k
+
+Belief:
+  mu: (-1, MAX_EVIDENCE]
+  lambda: (-1, MAX_EVIDENCE]
+  # Beta(x | mu+1, lambda+1)
+  # mu/lambda are effective honest/lie evidence counts
+
+ModelOfOther:
+  believed_belief: Belief
+  believed_intention: Belief
+
+Message:
+  sender: AgentId
+  receiver: AgentId
+  topic: AgentId
+  content: Belief
+  blush_observed: bool
+
+Conversation:
+  initiator: AgentId
+  partner: AgentId
+  topic: AgentId
+  first_message: Message
+  reply: Message
+```
+
+Topics are agents in A, including either conversation participant. Each agent’s true honesty x_a is its fixed probability of an honest communication. The internal belief about any agent c uses I=(mu,lambda), with density Beta(x|mu+1,lambda+1), mean (mu+1)/(mu+lambda+2), and allowed parameters (-1,MAX_EVIDENCE], where MAX_EVIDENCE=10^6 is the numerical cap. Initial beliefs are I0=(0,0) absent a stated alternative.[^r7]
+
+The shared protocol is:
+
+```
+MAX_EVIDENCE = 1_000_000
+F_BLUSH = 0.1
+N_KAPPA = 10
+F_CAUTION = 0.3
+I0 = (0, 0)
+INITIAL_KAPPA = 1
+
+sim_round(mut world: World):
+  for a in world.agents:                 # one initiating turn each
+    b = choose_partner(a)
+    c = choose_topic(a, b)                # c is an AgentId
+    J_ab = make_message(a, b, c)
+    J_ba = make_message(b, a, c)          # response, same topic
+    observe_and_update_self(a, J_ab)
+    observe_and_update_self(b, J_ba)
+    receive(b, J_ab)                      # only after the pair exchanged
+    receive(a, J_ba)
+    world.event_time += 2
+  world.rounds_left -= 1
+```
+
+Each event samples honesty with probability x_a, except strategies that fix this choice. Honest J is the speaker’s current belief I_ac; lies follow its configured deception rule. A lie can cause an observed blush with probability F_BLUSH=0.1, except shameless agents (zero). Speaker self-observation adds one to mu after honesty or lambda after lying. A round has |A| initiators and 2|A| communication events.[^r8][^r9]
+
+The common credibility calculation is:
+
+```
+y_J = 1 / (1 + R(d) * (1 / x_ba - 1))
+R(d) = product of configured feature likelihood ratios
+```
+
+Here x_ba is b’s prior mean belief that speaker a is honest. A blush gives y_J=0; absent blush has lie-to-honest ratio 1-F_BLUSH. A non-blushing disadvantageous self-confession gets y_J=1. Critical receivers also use surprise s_J=KL(J,I_bc), normalized by kappa_b; naive always trust, deaf ignore content, uncritical use basic signals, and smart receivers add Theory-of-Mind expectation matching. Section 4.1 and Table B1 assign confession detection to uncritical as well as critical/smart receivers, while Appendix B.1’s introductory prose and explicit likelihood equations B13 and B22 assign confession only to critical/smart; this source conflict is preserved.[^r10]
+
+For an ordinary/critical receiver b, one message is processed as follows:
+
+```
+receive(b, J):
+  y = credibility(J, b)               # equation above
+  DeltaJ = J.content - ToM[b][J.sender][J.topic].believed_belief
+  if DeltaJ.mu < 0 or DeltaJ.lambda < 0:
+    DeltaJ = I0                       # discard whole increment
+  # Form two joint posteriors over xa and xc from the same prior.
+  honest_state: I_ba += (1, 0)
+  if J.topic != J.sender:
+    honest_state: I_bc += DeltaJ
+  else:
+    honest_state: I_ba += DeltaJ
+  lie_state: I_ba += (0, 1)             # leave topic belief unchanged
+  exact_posterior = y * honest_state + (1-y) * lie_state
+  stored_product = argmin KL(exact_posterior || product_beta(I_ba, I_bc))
+  update ToM, friends/enemies, surprise history
+```
+
+If the topic equals the speaker, the honest evidence and topic increment merge in I_ba. The stored product-Beta parameters minimize KL(exact posterior || product-Beta approximation); this cannot retain non-Beta shape or dependence between speaker honesty and topic honesty. ToM, friendship labels, and surprise history update after the compressed belief update.[^r11]
+
+Theory of Mind stores separate estimates of another’s belief and intended message: I_bac ← y_J J+(1-y_J)I_bac; I^e_bac ← (1-y_J)J+y_J I^e_bac. The critical receiver’s surprise scale starts at kappa=1; it keeps the latest N_KAPPA=10 nonzero surprises and sets kappa=median(history)/sqrt(pi), initializing the history consistently with kappa=1. For reports about b itself, compare that speaker’s latest expressed honesty with the median last report from peers: above means friend, below enemy, tie leaves the lists unchanged. These are directional, relative labels.[^r12]
+
+For a targeted lie to a friend or enemy, the sender starts from I_abc, its estimate of receiver b’s belief about topic c, and chooses direction D=(1,0) for a friend or D=(0,1) for an enemy. It samples target normalized surprise S_J from the honest-message surprise distribution, then numerically searches alpha >= 0 so KL_xc(I_abc + alpha D, I_abc) = kappa_a * F_CAUTION * S_J. Here F_CAUTION=0.3 and kappa_a substitutes for the receiver’s unknown surprise scale. A neutral topic gets a white lie J=I_abc: this hides the sender’s actual belief without shifting the recipient’s stated belief.[^r17]
+
+Configured strategies alter the shared protocol; they are fixed personality settings, not learned behaviors. Ordinary selects other partner and any topic uniformly; it lies positively about friends, negatively about enemies, and gives white lies about neutral agents. Strategic weights partners by perceived honesty; anti-strategic by 1−perceived honesty. Flattering makes the partner the topic and lies positively; egocentric chooses self with probability 1/2, otherwise chooses uniformly from all agents (net self probability (1+1/|A|)/2); aggressive selects an enemy topic; shameless never blushes; deceptive always lies. Clever = smart receiver plus deceptive communication. Special compositions are manipulative = clever + flattering + anti-strategic; dominant = clever + egocentric + strategic; destructive = clever + strategic + aggressive + shameless. Destructive agents choose reputed partners through the strategic rule and enemy topics through the aggressive rule.[^r13]
+
+### What can it answer?
+
+The simulations explore whether these stipulated mechanisms can produce echo chambers, self-deception, deception symbiosis, opinion freezing, propaganda effects, and changes in reputation, self-esteem, friendships, and social chaos. They do not establish that these patterns arise in people or platforms.[^r14]
+
+The receiver-comparison runs use 300 conversation rounds; the default intrinsic honesty vector is (x_red,x_cyan,x_black)=(0.27,0.80,0.97). In the tested propaganda setup, a smart receiver eventually identifies exaggerated propaganda and helps other agents distrust it, while critical receivers remain more vulnerable as propaganda inflates their surprise scale; honest cross-communication mitigates impact in some runs (Sections 6.1.1 and 6.2.4–6.2.5, 14–15). Across the three-agent, 100-run ensembles, manipulative agents most often achieve the highest relative reputation within small groups, while dominant agents most often reach the highest absolute reputation; in larger groups destructive agents gain higher average reputation than manipulative/dominant, though the latter remain more effective at reaching the very highest values (Sections 6.4 and 7.3, 26–27).[^r18]
+
+The results are conditional on the chosen group composition and fixed parameterization. The authors describe the dynamics as stochastic and chaotic; single runs are illustrative and the strategy ranking is not a general proof. They show selected four- and five-agent checks, but do not broadly vary the population’s honesty or strategy mix.[^r15][^r18]
+
+### Where does it apply?
+
+This is a deliberately minimalist, ad-hoc proof of concept with fixed character strategies, a single topic type (honesty of an agent), small networks, and simplified cognitive state. The authors say assumptions and strategies need revision, calibration against real-world data, larger networks, and richer language/memory. It should be read as a framework for exploring mechanisms under stated rules, not as validated human psychology or an operational detector for deception.[^r16]
+
+## Metadata
+### References
+
+- [[D. M. Lazer, M. A. Baum, Y. Benkler, A. J. Berinsky, K. M. Greenhill, F. Menczer, M. J. Metzger, B. Nyhan, G. Pennycook, D. Rothschild, M. Schudson, S. A. Sloman, C. R. Sunstein, E. A. Thorson, D. J. Watts, J. L. Zittrain, Science 2018, 359, 1094.]] (source item [1])
+- [[S. Aral, D. Eckles, Science 2019, 365, 858.]] (source item [2])
+- [[J. Ratkiewicz, M. Conover, M. Meiss, B. Gonçalves, A. Flammini, F. Menczer, In Proc. of the Int. AAAI Conf. on Web and Social Media, Association for the Advancement of Artiﬁcial Intelligence, Palo Alto, CA 2011.]] (source item [3])
+- [[S. Bradshaw, P. Howard, Troops, trolls and troublemakers: A global inventory of organized social media manipulation, Oxford Inter- net Institute, Oxford 2017. https://fpmag.net/wp-content/uploads/ 2017/11/Troops-Trolls-and-Troublemakers.pdf.]] (source item [4])
+- [[S. Bradshaw, P. N. Howard, The Computational Propaganda Project 2018, 1. https://blogs.oii.ox.ac.uk/wp-content/uploads/sites/93/ 2018/07/ct_appendix.pdf.]] (source item [5])
+- [[L. Wu, F. Morstatter, K. M. Carley, H. Liu, ACM SIGKDD Explorations Newsletter 2019, 21.2, 80.]] (source item [6])
+- [[E. Ferrara, H. Chang, E. Chen, G. Muric, J. Patel, First Monday 2020.]] (source item [7])
+- [[T. Pfeiﬀer, L. Tran, C. Krumme, D. G. Rand, J. Royal Soc. Interface 2012, 9, 2791.]] (source item [8])
+- [[D. M. Kreps, R. Wilson, J. Econ. Theor. 1982, 27, 253.]] (source item [9])
+- [[P. Milgrom, J. Roberts, J. Econ. Theor. 1982, 27, 280.]] (source item [10])
+- [[G. Deﬀuant, D. Neau, F. Amblard, G. Weisbuch, Adv. Complex Syst. 2000, 3, 87.]] (source item [11])
+- [[M. Kitsak, L. K. Gallos, S. Havlin, F. Liljeros, L. Muchnik, H. E. Stan- ley, H. A. Makse, Nat. Phys. 2010, 6, 888.]] (source item [12])
+- [[R. Pastor-Satorras, C. Castellano, P. Van Mieghem, A. Vespignani, Rev. Mod. Phys. 2015, 87, 925.]] (source item [13])
+- [[A. E. F. Clementi, L. Gualà, G. Proietti, G. Scornavacca, arXiv:1705.09566, 2017.]] (source item [14])
+- [[D. Geschke, J. Lorenz, P. Holtz, Br. J. Soc. Psychol. 2019, 58, 129.]] (source item [15])
+- [[J. Tirole, Rev. Econ. Stud. 1996, 63, 1.]] (source item [16])
+- [[S. Tadelis, Am. Econ. Rev. 1999, 89, 548.]] (source item [17])
+- [[R. Conte, M. Paolucci, Reputation in Artiﬁcial Societies: Social Beliefs for Social Order, Vol. 6, Springer Science & Business Media, Berlin 2002.]] (source item [18])
+- [[L. Mui, M. Mohtashemi, C. Ang, P. Szolovits, A. Halberstadt, in Proc. of the Workshop on Information Technologies and Systems (WITS), Association for Computing Machinery New York, NY 2001.]] (source item [19])
+- [[L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the First Int. Joint Conf. on Autonomous Agents and Multiagent Systems: Part 1, Associ- ation for Computing Machinery New York, NY 2002.]] (source item [20])
+- [[L. Mui, M. Mohtashemi, A. Halberstadt, in Proc. of the 35th Annual Hawaii Int. Conf. on System Sciences, IEEE, Piscataway, NJ 2002.]] (source item [21])
+- [[G. Iñiguez, T. Govezensky, R. Dunbar, K. Kaski, R. A. Barrio, Proc. R. Soc. Edinburgh, Sect. B: Biol. Sci. 2014, 281, 20141195.]] (source item [22])
+- [[M. Förster, A. Mauleon, V. J. Vannetelbosch, Network Sci. 2016, 4, 216.]] (source item [23])
+- [[A. Babino, H. A. Makse, R. DiTella, M. Sigman, Proc. Natl. Acad. Sci. USA 2018, 115, 8728.]] (source item [24])
+- [[C. Castellano, S. Fortunato, V. Loreto, Rev. Mod. Phys. 2009, 81, 591.]] (source item [25])
+- [[M. Perc, J. J. Jordan, D. G. Rand, Z. Wang, S. Boccaletti, A. Szolnoki, Phys. Re, 687, 1.]] (source item [26])
+- [[J. Farrell, M. Rabin, J. Econ. Perspect. 1996, 10, 103.]] (source item [28])
+- [[Wikipedia contributors, Cheap talk — Wikipedia, the free ency- clopedia, 2021, https://en.wikipedia.org/w/index.php?title=Cheap_ talk&oldid=1007141321, (accessed: March 2021).]] (source item [29])
+- [[E. Jaynes, E. Jaynes, G. Bretthorst, Probability Theory: The Logic of Science, Cambridge University Press, Cambridge 2003.]] (source item [30])
+- [[R. Leike, T. Enßlin, Entropy 2017, 19, 402.]] (source item [31])
+- [[D. Premack, G. Woodruﬀ, Behav. Brain Sci. 1978, 1, 515.]] (source item [32])
+- [[W. Steinel, S. Utz, L. Koning, Organ. Behav. Hum. Decis. Proc. 2010, 113, 85.]] (source item [33])
+- [[S. Paasonen, Distinktion: J. Social Theory 2018, 19, 214.]] (source item [34])
+- [[The Cambridge Handbook of Computational Psychology, Cambridge Handbooks in Psychology Cambridge University Press, Cambridge 2008.]] (source item [35])
+- [[J. R. Busemeyer, Z. Wang, J. T. Townsend, A. Eidels, The Oxford Hand- book of Computational and Mathematical Psychology, Oxford Univer- sity Press, Oxford 2015.]] (source item [36])
+- [[R. Sun, Policy Insights Behav. Brain Sci. 2018, 5, 240.]] (source item [37])
+- [[C. E. Shannon, Bell Syst. Tech. J. 1948, 27, 379.]] (source item [38])
+- [[R. T. Cox, Am. J. Phys. 1946, 14, 1.]] (source item [39])
+- [[Y. Wang, J. Vassileva, in Proc. Third Int. Conf. on Peer-to-Peer Comput- ing (P2P2003), IEEE, Piscataway, NJ 2003.]] (source item [40])
+- [[T. Huynh, N. R. Jennings, N. Shadbolt, Auton. Agents Multi-Agent Syst. 2006, 13, 119.]] (source item [41])
+- [[H. T. Nguyen, W. Zhao, J. Yang, in 2010 IEEE Int. Conf. on Web Ser- vices, IEEE, Piscataway, NJ 2010.]] (source item [42])
+- [[J. J. Jaramillo, R. Srikant, Ad Hoc Networks 2010, 8, 416.]] (source item [43])
+- [[E. Faingold, Y. Sannikov, Econometrica 2011, 79, 773.]] (source item [44])
+- [[G. R. Dowling, Winning the Reputation Game: Creating Stakeholder Value and Competitive Advantage, MIT Press, Cambridge, MA 2016.]] (source item [45])
+- [[D. Waller, R. Younger, The Reputation Game: The Art of Changing How People See You, Simon and Schuster, New York 2017.]] (source item [46])
+- [[C. Johansson, Public Relations Rev. 2007, 33, 275.]] (source item [47])
+- [[J. Hartley, Communication, Cultural and Media Studies: The Key Con- cepts, Routledge, Oxfordshire, England 2019.]] (source item [48])
+- [[C. Boddy, Mark. Rev. 2012, 12, 79.]] (source item [49])
+- [[D. M. Kreps, Game Theory Economic Modelling, Oxford University Press, Cambridge 1990.]] (source item [50])
+- [[R. Axelrod, W. D. Hamilton, Science 1981, 211, 1390.]] (source item [51])
+- [[I. Okada, Games 2020, 11, 27.]] (source item [52])
+- [[J. Xu, J. Garcia, T. Handﬁeld, In Proc. of the 18th Int. Conf. on Au- tonomous Agents and MultiAgent Systems, ACM, New York 2019.]] (source item [53])
+- [[T. Röhl, C. Röhl, H. G. Schuster, A. Traulsen, Phys. Rev. E 2007, 76, 026114.]] (source item [54])
+- [[D. Klein, J. Marx, Hist. Social Res. 2018, 43, 234.]] (source item [55])
+- [[P. E. Smaldino, J. Calanchini, C. L. Pickett, Organ. Psychol. Rev. 2015, 5, 300.]] (source item [56])
+- [[R. M. Reynolds, Commun. Methods Meas. 2021, 15, 292.]] (source item [57])
+- [[W. Weaver, Am. Sci. 1948, 36, 536.]] (source item [58])
+- [[S. Shugars, Commun. Methods Meas. 2020, 15, 273.]] (source item [59])
+- [[D. Lim, H. Lee, H. Zo, A. Ciganek, J. Artif. Soc. Social Simul. 2014, 17, 13.]] (source item [60])
+- [[A. Gopnik, E. Bonawitz, WIREs Cognit. Sci. 2015, 6, 75.]] (source item [61])
+- [[S. Kullback, R. A. Leibler, Ann. Math. Statist. 1951, 22, 79.]] (source item [62])
+- [[R. M. Axelrod, R. Axelrod, M. D. Cohen, Harnessing Complexity, Basic books, New York 2001.]] (source item [63])
+- [[S. C. Marsella, D. V. Pynadath, S. J. Read, in Proc. of the Int. Conf. on Cognitive Modeling, Vol. 362004, 243.]] (source item [64])
+- [[D. V. Pynadath, S. C. Marsella, In IJCAI, volume 5. 2005, 1181.]] (source item [65])
+- [[J. Y. Ito, D. V. Pynadath, S. C. Marsella, in AAAI-07 workshop on plan, activity, and intent recognition, Palo Alto, CA, 2007.]] (source item [66])
+- [[C. L. Baker, Ph.D. Thesis, Massachusetts Institute of Technology, Palo Alto, California 2012.]] (source item [67])
+- [[C. L. Baker, J. B. Tenenbaum, Plan, Activity, Intent Recognit.: Theory Pract., Elsevier, New York 2014, 7, 177.]] (source item [68])
+- [[M. S. Thomas, J. L. McClelland, Cambridge Handb. Comput. Psychol. 2008, 23.]] (source item [69])
+- [[T. L. Griﬃths, C. Kemp, J. B. Tenenbaum 2008.]] (source item [70])
+- [[A. C. R. Martins, arXiv: 2106. 00199 [physics.soc-ph], 2021.]] (source item [71])
+- [[D. M. Condon, R. Mõttus, in Measuring and Modeling Persons and Situations (Eds: D. Wood, S. J. Read, P. D. Harms, A. Slaughter), Academic Press, Cambridge, MA 2021.]] (source item [72])
+- [[A. Tversky, D. Kahneman, Science 1974, 185, 1124.]] (source item [73])
+- [[A. Sloman, Cambridge Handb. Comput. Psychol. 2008, 684.]] (source item [74])
+- [[P. Oh, S. Kim, Commun. Methods Measures 2020, 15, 255.]] (source item [75])
+- [[T. J. Bouchard, Am. Political Sci. Rev. 1973, 67, 204.]] (source item [76])
+- [[C. C. Morf, F. Rhodewalt, Psychol. Inq. 2001, 12, 177.]] (source item [77])
+- [[D. L. Paulhus, K. M. Williams, J. Res. Pers. 2002, 36, 556.]] (source item [78])
+- [[S. Jakobwitz, V. Egan, Pers. Individ. Diﬀer. 2006, 40, 331.]] (source item [79])
+- [[P. Babiak, R. D. Hare, T. McLaren, Snakes in Suits: When Psychopaths Go to Work, Regan Books, New York, NY 2006.]] (source item [80])
+- [[M. Thomas, Confessions of a Sociopath: A Life Spent Hiding in Plain Sight, Broadway Books, New York, NY 2014.]] (source item [81])
+- [[M. R. Levenson, Theory Psychol. 1992, 2, 51.]] (source item [82])
+- [[L. Mealey, Behav. Brain Sci. 1995, 18, 579.]] (source item [83])
+- [[L. Penke, J. J. Denissen, G. F. Miller, Eur. J. Pers. 2007, 21, 549.]] (source item [84])
+- [[J. J. Skowronski, D. E. Carlston, J. Pers. Soc. Psychol. 1987, 52, 689.]] (source item [89])
+- [[T. A. Enßlin, M. Frommert, F. S. Kitaura, Phys. Rev. Lett. D 2009, 80, 105005.]] (source item [90])
+- [[T. A. Enßlin, C. Weig, Phys. Rev. Lett. E 2010, 82, 051112.]] (source item [91])
+- [[T. A. Enßlin, Ann. Phys. 2019, 531, 1800127.]] (source item [92])
+- [[T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 013308.]] (source item [93])
+- [[T. Ramalho, M. Selig, U. Gerland, T. A. Enßlin, Phys. Rev. Lett. E 2013, 87, 022719.]] (source item [94])
+- [[R. H. Leike, T. A. Enßlin, Phys. Rev. Lett. E 2018, 97, 033314.]] (source item [95])
+- [[M. Dupont, T. Enßlin, Phys. Rev. Lett. E 2018, 98, 043307.]] (source item [96])
+- [[M. Sherif, C. I. Hovland, Social Judgment: Assimilation and Contrast eﬀects in Communication and Attitude Change, Yale University Press, New Haven, CT 1961.]] (source item [97])
+- [[M. Guardiani, P. Frank, A. Kostic, G. Edenhofer, J. Roth, B. Uhlmann, T. Enßlin, arXiv:2105.13483, 2021.]] (source item [104])
+- [[L. Festinger, Hum. Relat. 1954, 7, 117.]] (source item [107])
+- [[H. A. Simon, Q. J. Econ. 1955, 69, 99.]] (source item [108])
+- [[S. T. Fiske, S. E. Taylor, Soc. Cognition, Mcgraw-Hill Book Company, New York 1991.]] (source item [109])
+- [[K.-H. Yu, I. S. Kohane, BMJ Qual. Saf. 2019, 28, 238.]] (source item [110])
+- [[R. Challen, J. Denny, M. Pitt, L. Gompels, T. Edwards, K. Tsaneva- Atanasova, BMJ Qual. Saf. 2019, 28, 231.]] (source item [111])
+- [[P. L. Sweet, Am. Sociol. Rev. 2019, 84, 851.]] (source item [112])
+- [[M. Raab, N. Auer, S. Ortlieb, C.-C. Carbon, Front. Psychol. 2013, 4, 453.]] (source item [114])
+- [[R. T. Cox, Am. J. Phys. 1963, 31, 66.]] (source item [116])
+- [[Beta distribution - wikipedia, https://en.wikipedia.org/wiki/Beta_ distribution, (accessed: June 2021).]] (source item [122])
+- [[P. Virtanen, R. Gommers, T. E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright, S. J.]] (source item [123])
+- [[A. R. Conn, N. I. M. Gould, P. L. Toint, Trust Region Meth- ods, Society for Industrial and Applied Mathematics, Philadelphia 2000.]] (source item [124])
+- [[J. Nocedal, S. J. Wright, Numerical Optimization, Springer, New york 2006.]] (source item [125])
+- [[G. LLC, Jax reference documentation, https://jax.readthedocs.io/ en/latest/, 2019 (accessed: November 2020).]] (source item [126])
+- [[B. Golub, M. O. Jackson, Am. Econ. J.: Microecon. 2010, 2, 112.]] (source item [129])
+- [[A. Jadbabaie, P. Molavi, A. Sandroni, A. Tahbaz-Salehi, Games Econ. Behav. 2012, 76, 210.]] (source item [130])
+- [[M. Mueller-Frank, J. Econ. Theory 2014, 154, 423.]] (source item [131])
+
+### Numbered source notes
+
+- [27] All messages potentially aﬀect the payoﬀ of the game, as they might change reputations. Therefore there is no cheap talk[28] in our rep- utation game. Cheap talk is characterized by being costless, non- binding, and unveriﬁable.[29] The ﬁrst condition is not fulﬁlled in our reputation game as there communication opportunities are a valuable resource for the agents.
+- [85] Human reputation and self-esteem are certainly more complex phenomena.
+- [86] As agents have unspeciﬁed genders we use the singular they and them to refer to them individually.
+- [87] We denote probabilities with P and PDFs with . They are related via integration: P(x ∈ [x1, x2]|I) = ∫ x2 x1 dx (x|I). Note that proba- bilities take values in P ∈ [0, 1], whereas PDFs in  ∈ ℝ+ 0 = [0, ∞]. Bayes’ theorem applies to both, so that a strict discrimination be- tween those is not always necessary. We therefore use the word “probability” for both, probabilities and PDFs.
+- [88] In human psychology, however, additional criteria might be relevant that can lead to deviations from a pure KL based data compres- sion. Recognizing liars might be more essential than diﬀerentiating between mostly honest people. Consequently, a positive-negative asymmetry of diagnosticity of information seems to be used by hu- man minds when deciding how to store morality related information (e.g. honesty-dishonesty).[89] In this ﬁrst incarnation of our reputa- tion game, we ignore such subtleties.
+- [98] The ﬁctional special agent 007, for example, exhibits strategies that resemble the here introduced manipulative and destructive strate- gies, which are both special in our nomenclature.
+- [99] This saturation eﬀect can be read oﬀ from Equations (A19) and (B32) for a repeated message J with yJ ≈ 1.
+- [100] To prevent this, agent red would need to constantly increase the propaganda claim.
+- [101] A negative 𝜇 or 𝜆 creates an integrable singularity (for 𝜇, 𝜆 > −1) in the belief distribution at x = 0 (complete dishonest) or x = 1 (com- plete honest), receptively.
+- [102] See the horizontally aligned lies of red on cyan in the period t = 200 to 800 in the communication record displayed in Figure D1.
+- [103] Figure D3 shows a reconstructed density based on the simulation data points as given by the various time snapshots in the hundred simulations. The density is with respect to the plane spanned hori- zontally by black’s (or cyan’s) average reputation (averaged over the other two agents) and vertically by that of red. Details of the used density reconstruction technique can be found in ref. [104].
+- [105] Those for the other agents can be found in Figure D3 in Appendix D.
+- [106] The technique described in ref. [103] was used for this.
+- [113] See triangles marking lies in the right panel of Figure 10, which are either extremely positive (being at the top of the reputation range) or extremely negative (being at the bottom of the range) in the period 600 to 1200.
+- [115] Social atmosphere refers here to the ensemble of assumptions agents base their decisions on and the statistical properties of the consequential communications.
+- [117] To limit the complexity of the simulation, our agents ignore the pos- sibility that other agents might be misinformed.
+- [118] In case Δ𝜇+, Δ𝜆+ are not integer numbers, a slightly more sophisticated argumentation leads to exactly the same result: Agent b assumes that a’s past belief, which has lead to ΔJ+, was based on some eﬀective, accumulated data d′ and hap- pened according to Bayes’ rule. This implies (xc|d′, Ibac) = (d′|xc, Ibac)(xc|Ibac)∕(d′|Ibac) and means that the data d′ must have been such that (d′|xc, Ibac) ∝ xΔ𝜇+ c (1 − xc)Δ𝜆+ . This should therefore also be the likelihood (ΔJ+|xc, Ibc) that agent b uses for the update. This leads to Equation (A22 )as well.
+- [119] Actually, since a self-statement is self-referential with respect to its truth value, a logically fully consistent update would require to solve an implicit self-consistent relation. This can be seen for example in case agent a makes the statement to be a notorious liar, which if true is contradicted by just have made an honest confession. We, as well as our agents, do not invest mental energy in such philosophical calculations, but just use the pragmatic Equation (A28).
+- [120] Note that we regard the KL here to be a function of the information sets I′ and I′′ on the quantity x, in contrast to the standard conven- tion to deﬁne KL as a functional of the PDFs implied by those.
+- [121] The expression in Equation (A41) can be derived using the expecta- tion value ⟨x ln x⟩Beta(x|𝛼,𝛽) = 𝛼 𝛼+𝛽 [𝜓(𝛼 + 1) − 𝜓(𝛼 + 𝛽 + 1)].[122]
+- [127] Non-deceptive agents would even communicate honest statements when they should lie according to their lie-frequencies 1 − xa.
+- [128] In the current version of our game, this would not be fully exploited by malicious agents, as agents do not infer the character of other agents except for the level of their honesty.
+- [132] An anti-strategic agent is also “strategic” in the original sense of the word, similar to an anti-particle, which actually is a particle, or an anti-correlation, which is also a correlation.
+
+## Audit Log
+
+- Independent source-first audit failed on 2026-10-04: lie-construction rule and comparative ensemble outcomes were omitted; destructive strategy was incorrectly flagged as a source conflict; equation references were inaccurate; and bibliography citation strings were truncated. See [[vault/.automation/audit/cognitive-simulations-2026-10-04/reputation-audit.json]].
+- Corrected lie construction from Appendix B.2 Eqs. (B23)–(B24), added tested comparative outcomes and limitations, corrected destructive composition, fixed equation references, and restored full source citation strings. Re-audit pending.
+
+- Re-audit found incorrect page locators. Removed them; exact section/equation citations retained and source links added. Final re-audit pending.
+
+## LLM Justification
+
+[^r1]: Exact abstract transcribed from the published final article, publisher PDF, unnumbered abstract on article page 1; official HTML abstract at https://onlinelibrary.wiley.com/doi/full/10.1002/and. The automation record identifies the text as the published version, distinct from arXiv v3.
+[^r2]: Published article, Sections 1 and 3.1; defines purpose, perceived honesty, and scope of reputation. Primary source: https://d-nb.info/1255007265/34
+[^r3]: Published article, Sections 3–6; game and strategy comparisons. Primary source: https://d-nb.info/1255007265/34
+[^r4]: Published article, Sections 6.2 and 7.5, 30–31; propaganda setups, defenses, and robustness limits. Primary source: https://d-nb.info/1255007265/34
+[^r5]: Published article, Section 4.2 and Appendix B.4.1, 34–35; friendship/enemy assignment based on relative statements. The term is a directional model label only. Primary source: https://d-nb.info/1255007265/34
+[^r6]: Published article, Sections 3–5, Appendices A–C, 25–38; the notation condenses shared protocol and a reference receiver while listing strategy families separately. Primary source: https://d-nb.info/1255007265/34
+[^r7]: Published article, Section 3.1 and Appendix A.2, 26–27; Beta parameterization, mean, parameter bounds, and neutral prior. Primary source: https://d-nb.info/1255007265/34
+[^r8]: Published article, Sections 3.1 and 3.5; partner/topic, reciprocal exchange, update ordering, round schedule, and product-belief limitation. Primary source: https://d-nb.info/1255007265/34
+[^r9]: Published article, Sections 3.3 and 3.5; Appendix A.2, Equations (A5)–(A9), and Appendix A.3; honesty sampling, blush setting, self-observation update. Primary source: https://d-nb.info/1255007265/34
+[^r10]: Published article, Section 4.1; Appendix B.1, Equations (B1)–(B22), especially Eqs. (B13), (B17), and (B22); Table B1. Section 4.1 and Table B1 include confession for uncritical receivers, while Appendix B.1 prose and Eqs. (B13), (B22) assign confession only to critical/smart receivers; conflict preserved. Primary source: https://d-nb.info/1255007265/34
+[^r11]: Published article, Sections 3.2–3.3; Appendix A.3–A.5, Equations (A16)–(A44), especially Eq. (A20) whole-increment reset when either Delta component is negative; mixture update and KL compression. Primary source: https://d-nb.info/1255007265/34
+[^r12]: Published article, Section 4.2; Appendix B.4, Equations (B32)–(B34); ToM blending, surprise-scale update, and friendship/enemy median rule. Primary source: https://d-nb.info/1255007265/34
+[^r13]: Published article, Sections 5.1–5.2; Appendix C and Table C1; strategy selection rules and special-strategy compositions. Primary source: https://d-nb.info/1255007265/34
+[^r14]: Published article, Abstract; Sections 6–7; listed emergent phenomena and measured quantities. Primary source: https://d-nb.info/1255007265/34
+[^r15]: Published article, Section 6; Section 7.5; 100-run ensembles, chaotic trajectories, agent-count robustness, and authors’ stated evidential limitation. Primary source: https://d-nb.info/1255007265/34
+[^r16]: Published article, Sections 2.2 and 7.5–7.6, 30–31; explicitly ad-hoc assumptions, proof-of-concept status, and future directions. Primary source: https://d-nb.info/1255007265/34
+[^r17]: Published article, Appendix B.2, Equations (B23)–(B24); direction, target surprise sampling, caution factor, KL distortion search, and neutral white lie. Primary source: https://d-nb.info/1255007265/34
+[^r18]: Published article, Section 6 opening setup, Section 6.1.1, Sections 6.2.4–6.2.5; Sections 6.4 and 7.3, 26–27; tested receiver resilience and comparative results with stated ensemble/group-size qualifications. Primary source: https://d-nb.info/1255007265/34

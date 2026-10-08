@@ -1,0 +1,68 @@
+{
+  "note": "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+  "note_sha256": "614ebfc6cea8e051b3789637e532298e7c17f7b837a8417524794a446bdbc90c",
+  "verdict": "PASS",
+  "warning_status": "audit failed preserved",
+  "note_or_warning_edited": false,
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015.txt",
+      "sha256": "6da2a0840985c889ff0b983c8a2c7aafaaae8be2a597be5820ab63e1a0d13015",
+      "role": "complete cached publisher JASSS text; 1,052 lines including full references"
+    }
+  ],
+  "source_coverage": [
+    "Publisher metadata and abstract",
+    "\u00a7\u00a71\u20132: objectives, Rust safety framing, agents/state/fields, buffer semantics, scheduling, monitoring, visualization, optimization",
+    "\u00a73 tutorial: WSG agent behavior, state and field synchronization, experiments and visualization",
+    "\u00a74 comparison table",
+    "\u00a75 benchmark design/results and SIR calibration design, search settings, cluster results/table",
+    "\u00a76 conclusion",
+    "all 50 references"
+  ],
+  "claim_checks": [
+    {
+      "claim": "Framework components and Safe Rust reliability/performance purpose",
+      "source_location": "\u00a7\u00a71\u20132",
+      "status": "PASS",
+      "detail": "Note frames this as framework capability/goal rather than a behavioral theory or proof of application validity."
+    },
+    {
+      "claim": "Agent/state/field abstractions and simulation update order",
+      "source_location": "\u00a72, field and scheduler subsections; Fig. 3",
+      "status": "PASS",
+      "detail": "Hooks, discrete event priority queue, per-agent lifecycle, state hooks, end condition, and double-buffer semantics agree with the source."
+    },
+    {
+      "claim": "WSG tutorial mechanisms and deferred additions/removals",
+      "source_location": "\u00a73, Figs. 4\u201314",
+      "status": "PASS",
+      "detail": "The note correctly scopes the model example and reports movement/feeding/reproduction, step-deferred lifecycle changes and field update in state update."
+    },
+    {
+      "claim": "Monitoring, sweeps, optimizers and execution backends",
+      "source_location": "\u00a72 monitoring and high-performance model exploration/optimization",
+      "status": "PASS",
+      "detail": "Simulation/reproducibility macros, TUI data, parameter sweep repeats, optimization methods and sequential/parallel/distributed/cloud modes align."
+    },
+    {
+      "claim": "Benchmark and calibration controls/outcomes",
+      "source_location": "\u00a75, Figs. 15\u201317 and Table 2",
+      "status": "PASS_WITH_SOURCE_CONFLICTS_DISCLOSED",
+      "detail": "Benchmark machine, models, 8 workloads, 10 repeats, runtime exclusions and relative outcomes align. Source density formula conflicts with its listed configurations; note discloses. SIR values and search protocol align; source prose gives 96\u00d7 and Table 2 gives 92\u00d7, both retained."
+    },
+    {
+      "claim": "Metadata, abstract and bibliography",
+      "source_location": "Publisher heading, abstract, References; note frontmatter and References",
+      "status": "PASS",
+      "detail": "Date/title/authors/DOI and abstract align. Complete 50 reference entries appear in source order with titles."
+    }
+  ],
+  "actionable_fixes": [],
+  "source_gaps": [
+    "Source text does not state numeric SIR gene search bounds or best fitted beta/gamma values; note leaves them unspecified.",
+    "Some WSG parameter details appear only in code figures and note appropriately avoids asserting one canonical setup.",
+    "Graph results are figure-only; note uses qualitative outcomes reported in text and does not invent raw values."
+  ],
+  "independent_audit": true
+}

@@ -1,0 +1,524 @@
+{
+  "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/html/1908.05437",
+    "current_doi": "10.1007/978-3-030-24209-1_1",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "94c869705ddd0348f08d6975c4d8a92959b967458fd9a9333df507871dac9546",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/1908.05437",
+      "doi": "10.1007/978-3-030-24209-1_1"
+    }
+  },
+  "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+    "current_doi": "10.1142/S0219525900000078",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "f3cf298efb54d9e6b27c7360bad7bf71cf5933cefcfbd42e28d0ac4f870c87aa",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf",
+      "doi": "10.1142/S0219525900000078"
+    }
+  },
+  "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.jasss.org/24/4/6.html",
+    "current_doi": "10.18564/jasss.4699",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "663a30bbba6c53fa0d3a7337ab50eecf30180578b862a832c1502e13ea444293",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.jasss.org/24/4/6.html",
+      "doi": "10.18564/jasss.4699"
+    }
+  },
+  "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11",
+    "current_doi": "10.1007/978-3-032-01373-6_11",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "cc0d5ce745bda19d5911b843e422326b4f3cab1c532d2edf3e1387477a86c417",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11",
+      "doi": "10.1007/978-3-032-01373-6_11"
+    }
+  },
+  "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/html/1811.10981v1",
+    "current_doi": "10.48550/arXiv.1811.10981",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "95727c281b4049eb3dd1c2c559f996596792b958b56434f0289107cc34009d54",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/1811.10981v1",
+      "doi": "10.48550/arXiv.1811.10981"
+    }
+  },
+  "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4948869/",
+    "current_doi": "10.1371/journal.pone.0158605",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "974459afe864f230483efabd10be9d51aa5fd9d6ab8d19946f7425f14de34348",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605",
+      "doi": "10.1371/journal.pone.0158605"
+    }
+  },
+  "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/abs/2411.11581",
+    "current_doi": "10.48550/arXiv.2411.11581",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "6de79794ea2e007125db27f00a90cd096fa83087b6844e7adda76f5d68dfba4c",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/2411.11581",
+      "doi": "10.48550/arXiv.2411.11581"
+    }
+  },
+  "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://openreview.net/pdf/7c22be0db1de6ae7283850c35cbae6289e27413f.pdf",
+    "current_doi": "10.1145/3626772.3657844",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "bb2014bafe82373132029b49fb73a27d2ef1e5260a4e74955f0085e027b36917",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/2310.10108",
+      "doi": "10.1145/3626772.3657844"
+    }
+  },
+  "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
+    "current_doi": "10.1093/pnasnexus/pgae258",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "97e64d0e7b2d9715cb079963a03a68e6a1478c1c0a4a8dcb3c51af4074d9f22e",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371",
+      "doi": "10.1093/pnasnexus/pgae258"
+    }
+  },
+  "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/abs/2103.08057",
+    "current_doi": "10.48550/arXiv.2103.08057",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "21e7fe6a4b77f12d393ee2c8b6351d194165fe3a2ad13eba85a3a16199a35f17",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/2103.08057",
+      "doi": "10.48550/arXiv.2103.08057"
+    }
+  },
+  "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "passed",
+    "current_read_source": "https://arxiv.org/html/1909.04847",
+    "current_doi": "10.48550/arxiv.1909.04847 - \"model\"",
+    "current_warnings": [],
+    "current_note": {
+      "sha256": "72635b0ba81244eea0c5e108623308efc3236a83be5239b1bca9867f8f312a5b",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/1909.04847",
+      "doi": "10.48550/arxiv.1909.04847"
+    }
+  },
+  "vault/Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/abs/2007.16120",
+    "current_doi": "10.1016/j.inffus.2020.12.001 - \"model\" - \"simulation\"",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "63deb00f9811953f92c6f37e4efaca51095a996b53c0927b64e8f76a40f46b72",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/pdf/2007.16120v2",
+      "doi": "10.1016/j.inffus.2020.12.001"
+    }
+  },
+  "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.nature.com/articles/s41586-026-10536-1",
+    "current_doi": "10.1038/s41586-026-10536-1",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "38a250c4faf09fe9e043636020acf3e87b08d4a49dfd61c864de6192f5ba9006",
+      "warnings": [
+        "audit failed",
+        "fulltext unavailable"
+      ],
+      "source": "https://www.nature.com/articles/s41586-026-10536-1",
+      "doi": "10.1038/s41586-026-10536-1"
+    }
+  },
+  "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.jasss.org/27/2/4/4.pdf",
+    "current_doi": "10.18564/jasss.5300",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "4c2177daf9aeb07acc96e5efcd429336db8088bd35c52a919915b51f931530bb",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.jasss.org/27/2/4.html",
+      "doi": "10.18564/jasss.5300"
+    }
+  },
+  "vault/Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "passed",
+    "current_read_source": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
+    "current_doi": "10.1126/science.adu5584",
+    "current_warnings": [],
+    "current_note": {
+      "sha256": "13742f2494f6ebf7335e2f87dfbc4a45fc6f8f378a3d68f90571dc4067be51da",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf",
+      "doi": "10.1126/science.adu5584"
+    }
+  },
+  "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/html/2311.16586",
+    "current_doi": "10.1145/3656481 - \"model\"",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "e8d9285fb1145b2adb1bf294364c6f4f6529ced405be19e935632607a80e6ff5",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/2311.16586",
+      "doi": "10.1145/3656481"
+    }
+  },
+  "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://par.nsf.gov/servlets/purl/10187146",
+    "current_doi": "10.1145/3347146.3359106",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "621fde3294f985310c71a7afaf668035327bff5a3e528bc038fe1d39a56ea7c7",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://par.nsf.gov/servlets/purl/10187146",
+      "doi": "10.1145/3347146.3359106"
+    }
+  },
+  "vault/Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.jasss.org/26/2/6/6.pdf",
+    "current_doi": "10.18564/jasss.5066",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "c9f5cdce8a5586e95e35aa91b15570823102f056fc1877e3d40b03b615762c9b",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.jasss.org/26/2/6.html",
+      "doi": "10.18564/jasss.5066"
+    }
+  },
+  "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.jasss.org/15/4/3/3.pdf",
+    "current_doi": "10.18564/jasss.2059 - \"model\"",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "faf624cb09f041a984e091008ad29aa25b9038cb07b7e6f7c3a7c22b08805c49",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.jasss.org/15/4/3/3.pdf",
+      "doi": "10.18564/jasss.2059"
+    }
+  },
+  "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
+    "current_doi": "10.1145/3526113.3545616 - \"model\" - \"simulation\"",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "16ad946fcf54248a8d735f0e48a4e83e29c7db2c5f36b434bc3eff06eb58ef6c",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf",
+      "doi": "10.1145/3526113.3545616"
+    }
+  },
+  "vault/Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "passed",
+    "current_read_source": "https://www.nature.com/articles/s41586-022-04997-3",
+    "current_doi": "10.1038/s41586-022-04997-3",
+    "current_warnings": [],
+    "current_note": {
+      "sha256": "c61c22ee4b9dc436caef2860b3c1688b06154688b1e908e6c8caf206651d8aa2",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.nature.com/articles/s41586-022-04997-3",
+      "doi": "10.1038/s41586-022-04997-3"
+    }
+  },
+  "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
+    "current_doi": "10.1146/annurev-statistics-060116-054035 - \"model\"",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "aded677376e599fc8c5c5eab44255ce38f32dad10ea9a07a73f57d97a14b85c3",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf",
+      "doi": "10.1146/annurev-statistics-060116-054035"
+    }
+  },
+  "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/html/2107.08959",
+    "current_doi": "10.48550/arxiv.2107.08959 - \"model\" - \"simulation\"",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "17c2651f22784d5e0017876c5adf647a8fd6fd29641c4d1fadc4844388920e38",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/2107.08959",
+      "doi": "10.48550/arxiv.2107.08959"
+    }
+  },
+  "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf",
+    "current_doi": "10.1086/227352",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "e29fe0c54277954f8681c13e791d7876299545d2707b037a67b74a2b63545cc7",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://smg.media.mit.edu/library/Feld.SocialTies.pdf",
+      "doi": "10.1086/227352"
+    }
+  },
+  "vault/Literature/Papers/Entries/The Power of Social Cognition.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf",
+    "current_doi": "10.21307/joss-2018-002",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "6571ee09ad129714e7965d229f9b080a60650e73f2dfd5858a21b63033a6f027",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf",
+      "doi": "10.21307/joss-2018-002"
+    }
+  },
+  "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+    "current_doi": "10.1017/nws.2024.7",
+    "current_warnings": [
+      "not audited"
+    ],
+    "current_note": {
+      "sha256": "391077b7e17c14266818579ab1da97b59245a3d19026b74a4a25dfe826b77902",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+      "doi": "10.1017/nws.2024.7"
+    }
+  },
+  "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+    "current_doi": "10.1140/epjds/s13688-026-00674-x",
+    "current_warnings": [
+      "not audited"
+    ],
+    "current_note": {
+      "sha256": "3c8698c945deeca0c77ddab2b1cff3cc9189cc33513e58fc6ec4ed7844ef08a6",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x",
+      "doi": "10.1140/epjds/s13688-026-00674-x"
+    }
+  },
+  "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/abs/2306.02552",
+    "current_doi": "10.48550/arxiv.2306.02552",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "8b713425c5125593cb9c74c4f118c54d1d13cda25307c1f9d8a7383144c75d18",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/html/2306.02552v3",
+      "doi": "10.48550/arxiv.2306.02552"
+    }
+  },
+  "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
+    "current_doi": "10.4337/9781781957240.00014",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "e2c2d881335227dcb2f11bb28ff3f85191265bc1e4285d4c1b9b2e8e94ac3904",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf",
+      "doi": "10.4337/9781781957240.00014"
+    }
+  },
+  "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://www.jasss.org/26/3/9.html",
+    "current_doi": "10.18564/jasss.5146",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "5d5463c41d1f8e3f7ae5a81f9942c94b4a6309d29b16ee185ad7eb7600931786",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://www.jasss.org/26/3/9.html",
+      "doi": "10.18564/jasss.5146"
+    }
+  },
+  "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md": {
+    "reimport_started_at": "2026-09-30",
+    "audit_status": "pending",
+    "current_read_source": "https://arxiv.org/pdf/2408.00818",
+    "current_doi": "10.48550/arXiv.2408.00818",
+    "current_warnings": [
+      "audit failed"
+    ],
+    "current_note": {
+      "sha256": "e22f471c37d953b5534db3243855b96c2c03798d2489c4ce9dbf838ed40a4e59",
+      "warnings": [
+        "audit failed"
+      ],
+      "source": "https://arxiv.org/pdf/2408.00818",
+      "doi": "10.48550/arXiv.2408.00818"
+    }
+  }
+}

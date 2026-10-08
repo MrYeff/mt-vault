@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-04",
+  "notes": [
+    {
+      "note": "Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
+      "audit": {
+        "verdict": "PASS",
+        "audited_sha256": "3eb2c17e4a2c7f50702add7fe657ef7049b916b918f8bd9adaabee7655fe416b",
+        "report": ".automation/audit/cognitive-simulations-2026-10-04/psychsim-reaudit.json",
+        "report_sha256": "8c0c1b6539ad6636031ff13d4e1817b7bb594d613d15c449ddf3888749812d81",
+        "auditor": "gpt-6-luna",
+        "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded."
+      },
+      "final_sha256": "b75f29baadc2c57c62515a1d26b4edbdf469bb3fa3acdc983ce314d524dbbdd4",
+      "warnings": []
+    },
+    {
+      "note": "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+      "audit": {
+        "verdict": "PASS",
+        "audited_sha256": "cfe070f29bc1da4116a05ea49292a8bbad0e69148ce2dc145adf164a672edebd",
+        "report": ".automation/audit/cognitive-simulations-2026-10-04/reputation-final-reaudit.json",
+        "report_sha256": "51a9d4624cfe5e5d30ca7e47e6d40feb160b947cc1ddc54eaf0c7912db7dcc1c",
+        "auditor": "gpt-6-luna",
+        "scope": "Independent source audit and re-audit; external cited-reference imports/resolution excluded."
+      },
+      "final_sha256": "161a0a61ac7271175cd5db5d358484a17b9eb43689c454a78af8ad5ac89bc3fe",
+      "warnings": []
+    }
+  ]
+}

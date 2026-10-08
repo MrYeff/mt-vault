@@ -1,0 +1,37 @@
+{
+  "note": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+  "verdict": "PASS",
+  "note_sha256": "3a3e28fbd97fe7934006dee4c221433a8c78e9ae76f7faf36e459a118cc40a65",
+  "source_files": [
+    {"path": "vault/.automation/sources/files/575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf.html", "sha256": "575225c8e962b8ad1da9bbad2935d9a1b7427af619697f3cdd5b208182c8e9cf"}
+  ],
+  "source_read_coverage": {
+    "primary_version": "Complete arXiv HTML for arXiv:1908.05437 (2019); source notes DOI 10.1007/978-3-030-24209-1_1. Read abstract, §§1–7, acknowledgements and all 22 references.",
+    "sections": ["Abstract and metadata", "§1 challenge framing", "§2 event/data/forecast specification", "§3 FARM/DASH framework, hub state, partitioning and runtime", "§4.1 stationary variants", "§4.2 event-specific link prediction and model selection", "§4.3 Bayesian selection order and recency/ownership/rank mechanisms", "§4.4 S3D new-user/repository extension", "§5 six candidates, metrics and comparative results", "§§6–7 related work and limitations/conclusions", "complete references [1]–[22]"],
+    "full_text_not_abstract_only": true
+  },
+  "bibliography_check": {
+    "source_entry_count": 22,
+    "note_entry_count": 22,
+    "result": "PASS: note entries match source references [1]–[22] in order. The book/container title 'Agents for Games and Simulations' in [17] is not a separate bibliography item. New source-derived titles for [10] and [15] are supported by the bibliography."
+  },
+  "claim_checks": [
+    {"claim": "Abstract provenance and challenge scale.", "result": "PASS: note Abstract matches source. The challenge forecast is February 2018 from 30 months of data plus profiles across the gap; source describes approximately 3 million agents, 30 million actions and 6 million repositories."},
+    {"claim": "Shared implementation and update mechanism.", "result": "PASS: FARM/DASH division, users as agents, repositories as hubs, multi-host shared state and communication partitioning are represented consistently with §3."},
+    {"claim": "All six evaluated model candidates and the S3D distinction.", "result": "PASS: Null, Baseline, GroundEvent, PreferentialAttachment, LinkPrediction and Bayesian match §5. S3D is represented as the §4.4 new-pair extension rather than a seventh §5 candidate."},
+    {"claim": "Stationary baseline variants and preferential attachment mechanism.", "result": "PASS: per-user event rate and historical distributions, independent event/repository sampling, joint event-repository sampling, and watch/fork selection through popularity-weighted neighboring users/repositories match §4.1."},
+    {"claim": "Link prediction and Bayesian procedures.", "result": "PASS: source describes event-specific weighted user–repository networks excluding create/delete, Graph Factorization selected for scalability/performance, a 100-repository per-user tail truncation, and the note captures these. Bayesian order, 30-day half-life, one-time/repeat split, watch/fork rank models, ownership weighting and mean-2 random walk are supported by §4.3/Fig. 1."},
+    {"claim": "S3D extension and unresolved new-entity scope.", "result": "PASS: 124 candidate features, sequential largest-remaining-variation selection and λ regularization are source-grounded; latent features/new-entity generalization are described as ongoing work, not completed tested behavior."},
+    {"claim": "Event-type/network/model counts.", "result": "PASS: note correctly preserves the source’s distinct statements: §2 ten event types, §4.2 twelve event networks excluding create/delete, §4.4 fourteen event-count models. It does not collapse them into an invented single count."},
+    {"claim": "Outcomes and scope.", "result": "PASS: note reports no universal best model; Bayesian user-popularity strengths and stationary models’ contributor/event-count performance agree with §§5 and 7. It discloses the learned internals it omits."}
+  ],
+  "warning_status": "No note or warning edits; audit-failed warning remains for root-only finalization.",
+  "reason_for_pass": "The latest note hash at the content re-audit matched the repaired note. All defining mechanisms, source-stated conflicts, evaluation conclusions and the complete source bibliography were independently checked.",
+  "metadata_reaudit": {
+    "note_sha256": "d6cb7596e3919b1d4660b223b55698827624add05fbe55dee67c9adc5445cd17",
+    "verdict": "PASS",
+    "publisher_source": "https://link.springer.com/chapter/10.1007/978-3-030-24209-1_1",
+    "claim_check": "PASS: Springer metadata identifies this conference paper as First Online 26 June 2019. Latest note publication date 2019-06-26 is supported; the prior 2019-01-01 import was not.",
+    "body_review": "Only publication date changed since the independently audited content hash; source-reviewed body, 22 references and warning remain unchanged."
+  }
+}

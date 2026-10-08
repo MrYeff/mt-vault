@@ -1,0 +1,31 @@
+{
+  "note": "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+  "verdict": "PASS",
+  "note_sha256": "97a58fbe97b29112702b7b84579fe15b6fb2905162a3541ffb011e16e00ba41c",
+  "source_files": [
+    {"path": "vault/.automation/sources/files/7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39.html", "sha256": "7bdbdb5c785e332fbef8fd908c4ee4b4254e68b3f29b27657984ee6148dcde39"},
+    {"path": "vault/.automation/sources/files/54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be.txt", "sha256": "54135e56dc4723038a1478efcd5787007dcadbbcef4b6f4186e780aa6a9e18be"}
+  ],
+  "source_read_coverage": {
+    "primary_version": "Full arXiv HTML v5 (2411.11581), version dated 2025-03-23; full body, appendices A–I, and all references were independently read. Abstract compared directly.",
+    "sections": ["Abstract and metadata", "§1", "§§2.1–2.6 including workflow, database, X and Reddit recommendation, 21 actions, hourly activation and scalable design", "§§3.1–3.5 including all experiment settings, controls, metrics and outcomes", "§4 ablations", "Appendices A–I including prompts, database schema, recommendation equations, user/data-generation procedures, experimental details and limitations/ethics", "full 59-item References"],
+    "full_text_not_abstract_only": true
+  },
+  "bibliography_check": {
+    "source_entry_count": 59,
+    "note_entry_count": 59,
+    "result": "PASS: compared the final primary-source list in order against the note. All 59 source titles are represented once in the same order; no opaque placeholders, extras, or title mismatches found."
+  },
+  "claim_checks": [
+    {"claim": "Abstract provenance and framework components.", "result": "PASS: abstract matches arXiv v5. Five components and their responsibilities are accurately described; the note distinguishes server, RecSys, agent, time engine, and scalable inference."},
+    {"claim": "Action, memory, ranking, and update mechanics.", "result": "PASS: source defines 21 actions; note states these are scenario subsets. Hourly 24-vector activation and 3-minute steps are sourced. X feed distinction and Appendix D.3 multiplicative score components are correct; Reddit score expression and top-k cache are correct. Random subset sampling on refresh is accurately represented."},
+    {"claim": "X propagation setup and findings.", "result": "PASS: 198 Twitter15/Twitter16 cascades (100–700 users), four-action subset, up-to-50 three-minute steps, scale/depth/max-breadth metrics and average NRMSE near 30% are supported. Note correctly reports lower simulated depth while scale and breadth broadly align."},
+    {"claim": "X polarization and agent-scale study.", "result": "PASS: dilemma interactions among 196 core users, questionnaire every 10 steps for 80 steps, comparison between uncensored and aligned Llama-3-8B, and separate 30-step scale comparison (196/10,196/100,196) match the source. Larger-scale opinion diversity/helpfulness finding is accurately qualified."},
+    {"claim": "Reddit herd settings and counterfactual scale controls.", "result": "PASS: 116,932 comments/seven topics/3,600 agents/40 steps; controlled 200-post-per-step design, 1–10 comments, 0.1 activation, top-300 cache; separate counterfactual source dataset of 21,919 entries, 30 steps, 0.1 activation, five sampled posts, and scale-specific caches 50/500/5,000 are supported. The note keeps the two experiments distinct and reports larger-scale response to initial dislikes."},
+    {"claim": "Scope and limitations.", "result": "PASS: note discloses omission of full database, prompts, generation sampling, and scenario action details; Appendix H limitations confirm abstracted user data, simplified recommendations, text-only actions, and multi-day million-agent runtime. It does not overstate fidelity as universal."},
+    {"claim": "Source-version/source-note match.", "result": "PASS: exact note hash is the one in the repair record; arXiv v5 full source was used."
+    }
+  ],
+  "warning_status": "No note or warning edits; warning remains audit failed for root-only finalization.",
+  "reason_for_pass": "All substantive claims, model equations, scenario parameters and reported outcomes checked against the complete current primary text and appendices; references match 59/59."
+}

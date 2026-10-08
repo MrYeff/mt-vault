@@ -1,0 +1,19 @@
+{
+  "scope": "Reference target filename compatibility, not source-title rewriting",
+  "forbidden_characters": [
+    "/",
+    "\\",
+    ":",
+    "*",
+    "?",
+    "\"",
+    "<",
+    ">",
+    "|",
+    "control characters"
+  ],
+  "allowed": "Other printable characters including spaces, commas, parentheses, apostrophes and Unicode; existing vault filenames already use these. No ASCII-only requirement is imposed.",
+  "canonical_existing_note": "Match verified source title via existing-paper-targets.json, use exact existing filename stem; retain source display title as alias when needed.",
+  "unimported_reference": "Filename-safe source-title-derived target, exact source title as display alias. Missing note is allowed.",
+  "audit_scope": "One-to-one titles and order from source bibliography; source bibliography typos can be corrected with authoritative DOI publisher evidence in automation."
+}

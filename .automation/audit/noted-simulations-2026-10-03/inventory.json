@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-03",
+  "scope": "Five simulation papers named in goals note; no empirical measurement placeholder imports in this scope",
+  "policy": "No flag removal until independent exact-hash full-source audit and any required re-audit pass. No blanket clearing.",
+  "papers": [
+    {
+      "note": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+      "initial_sha256": "b36f68274368f5a4414014b6b698f03b44f721637e4a4770060f00c9de948f36",
+      "initial_frontmatter": "\ntitle: \"The Effect of People Recommenders on Echo Chambers and Polarization\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Federico Cinus|Federico Cinus]]\"\n  - \"[[Literature/Authors/Marco Minici|Marco Minici]]\"\n  - \"[[Literature/Authors/Corrado Monti|Corrado Monti]]\"\n  - \"[[Literature/Authors/Francesco Bonchi|Francesco Bonchi]]\"\npublication date: 2022-05-31\nsource: https://arxiv.org/pdf/2112.00626\ndoi: 10.1609/icwsm.v16i1.19275\nread status: Todo\n",
+      "status": "reopened_complete_import_pending_audit"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "initial_sha256": "8c141c09190c03d803d7ec2e826d72320918b7c90c8d921360c791acdde2299f",
+      "initial_frontmatter": "\ntitle: \"T-RECS: A Simulation Tool to Study the Societal Impact of Recommender Systems\"\ntags:\n  - recommender_system\n  - simulation_framework\n  - \"model\"\n  - \"simulation\"\nauthors:\n  - \"[[Literature/Authors/Eli Lucherini|Eli Lucherini]]\"\n  - \"[[Literature/Authors/Matthew Sun|Matthew Sun]]\"\n  - \"[[Literature/Authors/Amy Winecoff|Amy Winecoff]]\"\n  - \"[[Literature/Authors/Arvind Narayanan|Arvind Narayanan]]\"\npublication date: 2021-07-19 \nsource: \"https://arxiv.org/html/2107.08959\"\ndoi: 10.48550/arxiv.2107.08959\nread status: Todo\n",
+      "status": "verify_existing_full_source_pass"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+      "initial_sha256": "61fbee14902c4d8f6d2021a9195e54bcd212ba1bbdc6b16f8bc3de7cf2742bbf",
+      "initial_frontmatter": "\n\ntitle: \"HUMAT: An Integrated Framework for Modelling Individual Motivations, Social Exchange and Network Dynamics\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Wander Jager|Wander Jager]]\"\n  - \"[[Literature/Authors/Patrycja Antosz|Patrycja Antosz]]\"\n  - \"[[Literature/Authors/Loes Bouman|Loes Bouman]]\"\n  - \"[[Literature/Authors/Teng Li|Teng Li]]\"\n  - \"[[Literature/Authors/J. Gareth Polhill|J. Gareth Polhill]]\"\n  - \"[[Literature/Authors/Timo Szczepanska|Timo Szczepanska]]\"\n  - \"[[Literature/Authors/Shaoni Wang|Shaoni Wang]]\"\npublication date: 2025-01-31\nsource:\n  - https://doi.org/10.18564/jasss.5611\n  - https://www.jasss.org/28/1/4.html\ndoi: 10.18564/jasss.5611\nread status: Todo\n⚠️: []\n",
+      "status": "reopened_complete_import_pending_audit"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "initial_sha256": "c6ed9730dc6e06b527f105bad3bec09abcc73e38ed12351d14a18938e7326cd8",
+      "initial_frontmatter": "\ntitle: \"Social Relationships and the Emergence of Social Networks\"\ntags:\n  - social_network\n  - simulation\n  - \"model\"\nauthors:\n  - \"[[Literature/Authors/Alistair Sutcliffe|Alistair Sutcliffe]]\"\n  - \"[[Literature/Authors/Di Wang|Di Wang]]\"\n  - \"[[Literature/Authors/Robin Dunbar|Robin Dunbar]]\"\npublication date: 2012-10-31 \nsource: \"https://www.jasss.org/15/4/3/3.pdf\"\ndoi: 10.18564/jasss.2059\nread status: Todo\n",
+      "status": "verify_existing_full_source_pass"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+      "initial_sha256": "d0285881145f4731e7cb39f07b6b076c5f75034f234016a4bcead8fc40d9de85",
+      "initial_frontmatter": "\n\ntitle: \"How Does Facebook Retain Segregated Friendship? An Agent-Based Model Approach\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Firman M. Firmansyah|Firman M. Firmansyah]]\"\npublication date: 2023-11-22\nsource:\n  - https://doi.org/10.1177/08944393231213960\n  - https://arxiv.org/abs/2109.08862\ndoi: 10.1177/08944393231213960\nread status: Todo\n⚠️: []\n",
+      "status": "reopened_complete_import_pending_audit"
+    }
+  ]
+}

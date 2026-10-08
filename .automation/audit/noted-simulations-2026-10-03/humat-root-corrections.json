@@ -1,0 +1,25 @@
+{
+  "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+  "note_sha256": "893fd0c4345a9553ccda09cb69d13cea3824df508ff0f5d0e38cdb6ac538e5d5",
+  "status": "awaiting independent re-audit",
+  "corrections": [
+    "R1 ID lookups, consistent typed numeric view fields",
+    "R2 perfect-knowledge narrative vs stored-view synchronization; inquiry refresh before reading",
+    "R3 mutable parameters and explicitly partial gate",
+    "R4 complete ordered initialization including basic/final choice",
+    "R5 stored social satisfaction assignment",
+    "R6 correct Appendix A Interaction narrative source location"
+  ],
+  "source": "full cached JASSS publication",
+  "scientific_limits": "Source gaps are exposed, not filled with mock rules.",
+  "previous_candidate_sha256": "bbb8b550a56924c135d65bf61dc9037bf0409898a8f3bb3dae230561acb92523",
+  "followup_corrections": [
+    "Disclosed radius35 vs distance<36 source discrepancy",
+    "Defined inquiry score sum of four persuasion weights and exact stored-list sort directions",
+    "Declared/reset indicators, set Signal indicator, left missing Inquire setter explicit",
+    "Stored interaction lists avoid inventing a fresh global re-sort at each selection",
+    "Table3 per-neighbor contact flag records completed inquiry; globalinquiringindicatorsetter still flaggedunspecified",
+    "Initialization explicitly invokeschoose(initializing=true)",
+    "Heading andforwarddistance explicitlyintegerdraws"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "checks": "PASS",
+  "scope": "Structure and new direct links only; bibliography targets intentionally not imported.",
+  "notes": [
+    {
+      "note": "Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
+      "sha256": "b75f29baadc2c57c62515a1d26b4edbdf469bb3fa3acdc983ce314d524dbbdd4",
+      "footnotes": 37,
+      "warnings": []
+    },
+    {
+      "note": "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+      "sha256": "161a0a61ac7271175cd5db5d358484a17b9eb43689c454a78af8ad5ac89bc3fe",
+      "footnotes": 18,
+      "warnings": []
+    }
+  ]
+}

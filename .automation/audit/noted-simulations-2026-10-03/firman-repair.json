@@ -1,0 +1,24 @@
+{
+  "note": "vault/Literature/Papers/Entries/How Does Facebook Retain Segregated Friendship- An Agent-Based Model Approach.md",
+  "sha256": "e4a5a546f54b142020819c49f63277a8b8427e5d540485d48cc5391ab362dfd5",
+  "status": "awaiting independent audit",
+  "primary_source": "arXiv 2109.08862v1",
+  "coverage": "all 23 pages / 885 text lines; Figure 3 visually inspected",
+  "published_fulltext": "unavailable; retained warning",
+  "references": 59,
+  "bibliography_source": "published public publisher bibliography; separately auditable from preprint",
+  "source_manifest": "firman-source.json",
+  "changes": [
+    "explicit state/procedure/constants",
+    "parameter and diagram contradictions",
+    "observable state and omissions",
+    "source-version separation",
+    "natural wiki targets"
+  ],
+  "supplement": {
+    "url": "https://journals.sagepub.com/doi/suppl/10.1177/08944393231213960/suppl_file/sj-pdf-1-ssc-10.1177_08944393231213960.pdf",
+    "coverage": "2-page indexed text incl captions threshold.25/.75 and code/data link; figuregraphics unavailable via screenshot cachemiss, no figureoutcomeclaims",
+    "code_data_url": "https://www.comses.net/codebase-release/37b39c00-b266-4308-af2d-9d1017f5b7a2/",
+    "code_data_status": "source-reader inaccessible; no implementationrule inferred"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "audit_date": "2026-10-03",
+  "audit_type": "independent content audit; reference resolution explicitly out of scope",
+  "source_read": "vault/.automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt (all 669 lines)",
+  "rules_read": [
+    "vault/Guides/LLM Extraction Rules.md",
+    "vault/Guides/Model Notation.md"
+  ],
+  "overall": "FAIL: substantial claims and main simulation schedule are supported, but the extracted model still leaves epistemological state evolution incomplete and hides recommendation selection details; an RWC boundary case is unassigned.",
+  "scope": "Compared every model claim and procedure in the paper entry with the supplied primary text. Checked the newly added limitation bullets in vault/What are my goal - LLM Asisted.md for claims about PROD only. Did not resolve references or audit claims about other papers. Did not edit notes or change status properties.",
+  "findings": [
+    {
+      "status": "PASS",
+      "claim": "PROD models directed follows, where (u,v) means u follows v; recommendations target absent edges and return an acceptance probability.",
+      "note_location": "Paper entry, Model / What does it represent?",
+      "source_location": "§3 Input, pp. 2–3; Algorithm 1",
+      "detail": "The note's listener-to-source description and non-edge recommendation statement match the source."
+    },
+    {
+      "status": "PASS",
+      "claim": "Core interaction schedule: random node order per step; S interactions per node; recommendation attempt at rate alpha; rejection does not increment the interaction counter; accepted recommendation rewires a random outgoing edge, applies the update, and increments accepted recommendation count; alpha is set to zero at Rmax.",
+      "note_location": "Paper entry, Interaction schedule",
+      "source_location": "Algorithm 1, lines 1–23; §3 discussion immediately following Algorithm 1",
+      "detail": "The implementation sequence matches the pseudocode, including update after edge replacement and the acceptance-based cutoff. The note's alpha expression is the printed formula Rmax / ((Tmax/2)·S·|V|). The paper describes the two regimes as approximately half the run, not an exact elapsed-time guarantee."
+    },
+    {
+      "status": "PASS",
+      "claim": "Reported simulation settings and LFR opinion initialization: 400 nodes, about 5500 edges, S=2, Tmax=5000 for BCM and 100 for epistemological, BCM parameters 0.2/0.2, epistemological gain 0.005 and n=15, K=500, eta grid 0.2–0.8, mu grid 0.05–0.95; community opinions are uniform and a node copies its community opinion with probability eta.",
+      "note_location": "Paper entry, Settings and Initialization and recommendation",
+      "source_location": "§4.1 pp. 5–6; §5 Results, p. 6",
+      "detail": "The values and initialization rule are accurate. Reported link budget is 0.4|E| after increasing Rmax in small steps to the last value before the graph becomes disconnected; the note captures this. The note's 0..1 notation is a range shorthand for the source's U(0,1), whose endpoints have probability zero."
+    },
+    {
+      "status": "PASS",
+      "claim": "BCM updates only the listener/follower and only when opinion distance is strictly below the confidence threshold, moving by the convergence parameter.",
+      "note_location": "Paper entry, Variant: bounded confidence",
+      "source_location": "§3.1, Bounded Confidence Model, p. 3",
+      "detail": "Formula and strict inequality match the paper. Note settings correctly assign both parameters the value 0.2."
+    },
+    {
+      "status": "PARTIAL",
+      "claim": "Epistemological agents hold belief about whether the new action is better, select an action based on belief, and update from the observed agent's experiment outcome using the Bayesian equation.",
+      "note_location": "Paper entry, Variant: epistemological learning",
+      "source_location": "§3.1, Epistemological model, pp. 3–4, Eq. (1); Algorithm 1",
+      "detail": "The belief meaning, old/new success probabilities, fixed n/2 old-action successes, binomial new-action outcomes, and Bayesian update are accurately represented. However, World has no action/evidence state beyond an optional successes field, and the procedure does not define how/when the observing agent's own action and evidence are generated or refreshed. The note correctly says Algorithm 1 gives no refresh schedule, but this means the extracted procedure is not a full executable account of this variant. Keep that limitation explicit."
+    },
+    {
+      "status": "FAIL",
+      "claim": "The recommendation algorithm can be called through recommend(u, world) with the described scores and CDF transformed acceptance probabilities.",
+      "note_location": "Paper entry, Initialization and recommendation; Interaction schedule",
+      "source_location": "§3.2 pp. 4–5; Algorithm 1",
+      "detail": "The note correctly transcribes the printed score equations and empirical CDF transformation, and acknowledges candidate-ranking details are omitted. But recommend(u, world) is the central procedure selecting candidate v and returning its probability; candidate eligibility/order, how the candidate is selected from ranked scores, and behavior for exhausted/undefined candidates are not specified in the model. This is a defining transition rule, not a routine helper that Model Notation permits leaving implicit. The black-box framing in the source permits a general recommender interface, but the note also purports to model the specific named recommenders, so the gap must remain visible."
+    },
+    {
+      "status": "PASS_WITH_SOURCE_CONFLICT_RETAINED",
+      "claim": "Directed Jaccard numerator and denominator, and OBA normalization over existing edges, are transcribed literally and flagged as source conflicts.",
+      "note_location": "Paper entry, Initialization and recommendation (source-conflicts bullet)",
+      "source_location": "§3.2, displayed Directed Jaccard Index and displayed OBA probability, p. 4",
+      "detail": "The source literally uses N_out(u)∩N_in(u) in both places in the Jaccard expression, although the score is parameterized by u,v, and the OBA denominator sums over (u,v) in E despite the recommendation input being absent edges. The note appropriately records rather than silently repairs both conflicts."
+    },
+    {
+      "status": "PASS_WITH_UNDEFINED_DETAILS_RETAINED",
+      "claim": "PPR, SALSA, OBA, and the score-distribution transformation are summarized with their source equations and caveats.",
+      "note_location": "Paper entry, Initialization and recommendation",
+      "source_location": "§3.2, Eqs. (2)–(4), displayed OBA formula, and Normalization of recommenders, pp. 4–5",
+      "detail": "The equations and monotone empirical-CDF transformation are substantively accurate. The paper does not provide all parameter values for SALSA k/damping or OBA gamma in the cited definition, and does not settle zero opinion distance; the note marks these omissions. Recommendation candidate construction/ranking still remains an explicit gap (see FAIL above)."
+    },
+    {
+      "status": "FAIL",
+      "claim": "RWC partitions opinions into values below and above 0.5.",
+      "note_location": "Paper entry, What can it answer? / RWC bullet",
+      "source_location": "§4.2, Random Walk Controversy score, pp. 5–6",
+      "detail": "The source defines X by o_v<0.5 and Y by o_v>0.5. Values exactly equal to 0.5 are in neither partition. The note repeats the strict inequalities but does not flag the resulting unassigned boundary case. Because opinion updates can produce exact values at 0.5, this is not necessarily unreachable. Preserve the source definition and state that boundary handling is unspecified."
+    },
+    {
+      "status": "PASS",
+      "claim": "NCI is Pearson correlation between node opinions and mean opinions of outgoing neighbors; RWC is PXX·PYY−PXY·PYX with low/high opinion partitions and high-degree restart rule; treatment comparison uses paired initial graphs and a KS test.",
+      "note_location": "Paper entry, What can it answer?",
+      "source_location": "§4 steps 3–7 and Eq. (5), pp. 4–5; §4.2, pp. 5–6",
+      "detail": "The main outcome definitions and paired comparison are correct. The exact 0.5 partition boundary omission is reported separately."
+    },
+    {
+      "status": "PASS_WITH_QUALIFICATION",
+      "claim": "Findings describe greater echo-chamber effects for eta>0.5 and mu<0.3, weaker effects in already polarized networks, and three probabilistic interventions based on uniform choice, opinion distance, or degree.",
+      "note_location": "Paper entry, What can it answer?",
+      "source_location": "§5.1 pp. 6–7; §5.4 pp. 9–10",
+      "detail": "This is a fair concise summary. Qualify as reported simulation findings, not general empirical/causal proof; the paper's §6 explicitly says there is no direct quantitative comparison with real-world data. The entry does so in Where does it apply?"
+    },
+    {
+      "status": "PASS",
+      "claim": "The paper models a scalar opinion and directed follow rewiring under an approximately fixed population and edge/contact budget, and has no direct quantitative real-world validation.",
+      "note_location": "Paper entry, Where does it apply?",
+      "source_location": "§3 framework; §6 Discussion, pp. 10–11",
+      "detail": "The scope and validation limitations are supported. Relationship quality, belonging, and shared activities are not outcomes or state variables in the described model; this is a fair absence/scope characterization."
+    },
+    {
+      "status": "PASS_FOR_PROD_ONLY; OTHER_MODEL_CLAIMS_NOT_AUDITED",
+      "claim": "New goal-note limitation bullets say PROD's opinion agreement/low segregation do not measure relationship quality or belonging; its follow tie replaces an existing tie; it has scalar opinions and no feed, shared-activity, or nested-belief mechanism; it lacks direct quantitative real-world validation.",
+      "note_location": "What are my goal - LLM Asisted.md, new limitation bullets and [^limits_metrics]/[^limits_prod]",
+      "source_location": "PROD §§3–4.2 and §6 Discussion",
+      "detail": "These PROD-specific statements are supported. Claims about bounded confidence, Schelling, FIRMAN, SAOM, relational-event models, and cognitive social structures were not source-audited in this task; the note labels [^limits_scope] as a scope comparison and does not present this audit as validation of those other papers."
+    },
+    {
+      "status": "PASS_WITH_SCOPE_NOTE",
+      "claim": "Transformed model text carries extraction annotation, claim footnotes, and relevant source section/equation locations; publisher abstract is explicitly distinguished from manuscript abstract.",
+      "note_location": "Paper entry, abstract, Model, and LLM Justification",
+      "source_location": "LLM Extraction Rules items 1, 2, 6–10; publisher/manuscript abstracts",
+      "detail": "The footnotes support the audited claims and point to paper sections. The different publisher abstract is disclosed. This does not repair the substantive FAIL items."
+    }
+  ],
+  "required_follow_up": [
+    "Specify or explicitly bound the missing epistemological action/evidence generation and refresh behavior; do not imply a complete update procedure while it remains unspecified.",
+    "Make candidate selection and undefined/exhausted candidate behavior visible for recommend(u, world), or explicitly mark the algorithm-specific recommendation step as omitted from the extracted procedure.",
+    "Flag RWC handling for opinions exactly equal to 0.5 as unspecified by the source."
+  ],
+  "status_property": "Not changed. Paper entry remains audit failed; this audit does not authorize clearing the status because content findings fail.",
+  "re_audit": {
+    "date": "2026-10-03",
+    "scope": "Re-audited the corrected paper entry against the same full primary text. Focused on the three prior gaps and checked that they are described as source omissions rather than filled with invented rules. No flag edits; references and unrelated papers remain out of scope.",
+    "result": "PASS for the three corrections and the previously checked substantive paper content, with the source conflicts and omissions retained. The original audit findings and overall FAIL above are preserved as requested; the earlier FAIL judgments on omissions are superseded for the corrected note because the note now states the limits explicitly and does not claim a complete executable model.",
+    "findings": [
+      {
+        "status": "PASS",
+        "claim": "Epistemological belief-to-action selection and experiment refresh are explicitly marked incomplete; the procedure is limited to the source-stated Bayesian update.",
+        "note_location": "Paper entry, Variant: epistemological learning",
+        "source_location": "§3.1, Epistemological model, pp. 3–4, Eq. (1); Algorithm 1",
+        "detail": "The primary text says belief drives action and describes conditional old/new action outcomes, but Algorithm 1 does not specify an action-selection function or when experiments refresh. The note accurately reports those statements and gaps, without inventing the missing schedule. Its pseudocode is explicitly framed as a partial account rather than a complete simulation."
+      },
+      {
+        "status": "PASS",
+        "claim": "Candidate choice and no-candidate handling for recommend(u, world) are explicitly disclosed as unspecified; the note limits its claim to a framework-level account.",
+        "note_location": "Paper entry, Initialization and recommendation, score-CDF bullet",
+        "source_location": "§3 Input and Algorithm 1; §3.2 pp. 4–5",
+        "detail": "The source defines a recommender interface returning a recommended absent edge and a probability, and describes ranked scores/CDF normalization, but does not state candidate exhaustion behavior or a complete selection procedure. The correction reports the gap directly. Given the extraction goal and Model Notation's pseudolang convention, these explicitly disclosed omissions are not grounds to require invented executable rules."
+      },
+      {
+        "status": "PASS",
+        "claim": "RWC's strict below/above 0.5 partition and unspecified treatment of exact 0.5 opinions are both stated.",
+        "note_location": "Paper entry, What can it answer? / RWC bullet",
+        "source_location": "§4.2, Random Walk Controversy score, pp. 5–6",
+        "detail": "The note mirrors X={v:o_v<0.5} and Y={v:o_v>0.5}, then clearly says equality cases are excluded and their treatment is unspecified. It does not silently assign those nodes."
+      },
+      {
+        "status": "PASS",
+        "claim": "The remaining checked model claims, schedule, settings, metrics, printed DJI/OBA conflicts, and PROD-specific project limitation bullets remain supported and accurately qualified.",
+        "note_location": "Paper entry; What are my goal - LLM Asisted.md, PROD limitation bullets",
+        "source_location": "Algorithm 1; §§3–6 of primary text",
+        "detail": "No new content discrepancy was found in the corrected entry. The explicit publisher-abstract distinction remains. This is not an audit of bibliography/reference resolution or claims about other papers."
+      }
+    ],
+    "status_property": "Unchanged. No note status or warning flags were edited."
+  },
+  "current_status": {
+    "result": "PASS",
+    "basis": "Independent re-audit supersedes initial failure for corrected content",
+    "reference_resolution": "Excluded at user request; not claimed audited",
+    "note_warning": "Removed after passing re-audit on 2026-10-03"
+  }
+}

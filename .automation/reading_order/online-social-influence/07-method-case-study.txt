@@ -1,0 +1,46 @@
+IV. METHOD
+In Fig. 2 the method used for studying online social influ-
+ence is shown. As can be seen from this figure, in order to
+simulate online social influence in the real world, a specific
+case study has been used to implement a simulation environ-
+ment. Within this simulation environment, human behavior is
+simulated using a multi-agent system, which contains an agent
+behavior model with specific input parameters, representing
+Fig. 2. The multi-disciplinary method used for studying online social
+influence.
+certain properties of the previously described behavior theory.
+By means of comparing the simulation data with actual
+empirical data, the multi-agent system validation can occur,
+which can be used to optimize the model. At initiation the
+empirical data is used to tune the parameters. Because the
+validation of a model is always against empirical data, we can
+compare different models with this method.
+A. Case Study
+In this study we apply modeling and simulation to Twitter
+behavior around the talent show The Voice Kids [19]. In this
+television show, the public votes on the best singing child.
+During the show, viewers are encouraged to tweet using the
+show’s hashtag (i.e., #thevoicekids).
+For modeling and simulation of the case we use as much
+empirical data as input as possible in order to argue the
+validation of the model. For this purpose we have reused
+the data gathered by Koster [17]. It contains the twitter
+data of the show’s finals with a short period in advance.
+Koster used the Twitter API to gather 93, 404 tweets, sent by
+20, 822 individuals, who are were connected by a network with
+102, 638 connections.
+To summarize, the data set used consists of the following
+data types:
+• List of topics: Candidate1, ..., Candidate6, or a
+General Tweet about the show.
+• Schedule of final show and candidate performances
+within the show timed per minute.
+• All tweets about the show from several weeks before the
+final show until and including the final show.
+• User profile data of twitter users from the above tweet
+list:
+– Nr. of friends (in all of Twitter).
+– Nr. of followers (in all of Twitter).
+• Network structure of twitter users from the above tweet
+list: Friends-follower connections within this case net-
+work.

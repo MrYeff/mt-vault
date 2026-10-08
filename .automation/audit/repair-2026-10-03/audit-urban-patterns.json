@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+  "note_sha256": "f4bab3a7edea67ecd29420f8e5e3bb5af1c208c4e9d601cd3d72865ec424fe95",
+  "verdict": "PASS_CONTENT",
+  "warning_preserved": "audit failed",
+  "note_or_warning_modified": false,
+  "primary_source": {
+    "version": "Kim et al., SIGSPATIAL 2019, four-page conference paper; NSF Public Access Repository copy.",
+    "canonical_url": "https://par.nsf.gov/servlets/purl/10187146",
+    "text_path": "/home/max/Documents/Projects/master-thesis/vault/.automation/sources/files/308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47.txt",
+    "text_sha256": "308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47",
+    "text_bytes": 27901,
+    "text_lines": 240,
+    "coverage": "Read full four-page source sequentially: title/authors/venue/abstract; §1 motivation and requirements; §2 trigger/behavior/action/goal semantics, competing priority, library/builder/encoder/simulator/decoder; §3 demonstration, model fields and HUNGRY example, MASON/GeoMASON setup, visual results, streaming and Spark/Zeppelin; §4 conclusion/future work; all five figure captions and the full 26-entry bibliography."
+  },
+  "claim_checks": [
+    {
+      "claim": "Abstract describes privacy/cost/quality motivations, richer agent behaviors in realistic geo-social worlds, configurable drag-and-drop modeling, scalable trajectory generation and real-time API streaming.",
+      "result": "PASS; note abstract faithfully matches the primary abstract.",
+      "source_location": "Abstract."
+    },
+    {
+      "claim": "Trigger responds to internal/external changes; behavior is initiated by trigger and contains actions; action has one or more steps and produces output upon goal completion; outputs may feed subsequent actions.",
+      "result": "PASS; matches the paper definitions and Fig. 1.",
+      "source_location": "§2, Concepts and Architecture; Fig. 1."
+    },
+    {
+      "claim": "Competing behavior priority is modeler-defined; Maslow is an example hypothesis, not a universal algorithm or numerical scale.",
+      "result": "PASS; appropriately avoids inventing a priority rule.",
+      "source_location": "§2, behavior-priority paragraph."
+    },
+    {
+      "claim": "Architecture comprises shared component library, drag-and-drop Model Builder/Encoder and Simulator/Decoder; generated check-ins, transactions and meetings can go to file or stream; builder implementation uses Java/JGraphX.",
+      "result": "PASS.",
+      "source_location": "§2, architecture bullets; §3 Model Builder."
+    },
+    {
+      "claim": "Demonstration model includes food/sleep triggers; eight listed properties and eating/sleeping/working/doNothing behaviors; food need threshold >50; restaurant choice, shortest-path travel, eating until the full goal, then bill payment.",
+      "result": "PASS; note scopes these mechanics to the demonstration model. The 100% food-level interpretation is consistent with the source’s general goal example and untilFULL action goal, but the source does not provide a richer universal goal semantics.",
+      "source_location": "§2, goal example; §3, sample model."
+    },
+    {
+      "claim": "Demonstration runs MASON/GeoMASON with 10,000 agents over synthetic spatial data of 14,181 road segments; daily routine screenshots are visual output and do not establish empirical validation.",
+      "result": "PASS; note preserves authors’ distinction between visual display and possible trace validation.",
+      "source_location": "§3 Simulation and Data Generation; Fig. 3; trace-validation paragraph."
+    },
+    {
+      "claim": "Streaming includes agent ID, simulation timestamp/tick, current location and status; ZeroMQ is used; Zeppelin/Spark Streaming is the illustrated consumer.",
+      "result": "PASS.",
+      "source_location": "§3 Streaming Interface; Fig. 5."
+    },
+    {
+      "claim": "Applicability is framework-level and modeler-configured; conclusion treats a plausible general pattern-of-life model and further scalability work as future work.",
+      "result": "PASS; note does not overstate the stylized demonstration as an empirically validated general behavior model.",
+      "source_location": "§4 Conclusion."
+    }
+  ],
+  "bibliography_check": {
+    "source_entries": 26,
+    "note_items": 26,
+    "result": "PASS: all 26 source references were checked in source order. Titles and ordering match the note list, including the NYC TLC record-data, software/framework, books, and article entries. No opaque unresolved target or surplus entry found.",
+    "list_complete": true
+  },
+  "abstract_provenance": "Compared note Abstract with the full source Abstract; wording and claims match.",
+  "metadata_and_source_access": "Note source URL resolves to the same NSF Public Access Repository copy used for this review. Title, seven authors, DOI 10.1145/3347146.3359106, and SIGSPATIAL 2019 publication month agree with the source citation.",
+  "gaps_or_conflicts": [],
+  "note_or_status_edits_by_auditor": false,
+  "target_only_reaudits": [
+    {
+      "date": "2026-10-03",
+      "verdict": "PASS_TARGET_ONLY",
+      "note_sha256": "31fb11ca15d1a3f744e04a776ea9054f3bec0c5a81c372b31668807b7b920eac",
+      "scope": "Bounded recheck after root sanitized eight targets: all 26 bibliography entries remain in source order with original source titles visible; all targets are filename-safe. The prior full-source audit verified title correspondence and order for all 26 entries.",
+      "source_file": {
+        "path": "vault/.automation/sources/files/308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47.txt",
+        "sha256": "308b9c06bb05c326c4d630a1d40846145c3ee050f4c9cdf77f8a124e3bec3e47"
+      },
+      "bibliography_check": {
+        "source_entries": 26,
+        "note_entries": 26,
+        "source_titles_and_order": "PASS",
+        "all_targets_filename_safe": true,
+        "changed_target_count": 8,
+        "all_original_titles_preserved_as_visible_labels": true
+      },
+      "note_or_status_edits_by_auditor": false
+    }
+  ]
+}

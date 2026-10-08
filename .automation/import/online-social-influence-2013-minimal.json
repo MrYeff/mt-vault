@@ -1,0 +1,16 @@
+{
+  "title": "An Agent-Based Approach to Modeling Online Social Influence",
+  "doi": "10.1145/2492517.2492564",
+  "entry": "vault/Literature/Papers/Entries/An Agent-Based Approach to Modeling Online Social Influence.md",
+  "captured_at": "2026-10-06",
+  "scope": "Bibliographic fields and abstract summary only; model, research questions and references omitted at user request.",
+  "sources": [
+    "https://dl.acm.org/doi/10.1145/2492517.2492564",
+    "https://repository.tno.nl/SingleDoc?docId=39417",
+    "https://publications.tno.nl/publication/34613618/ak4IzY/maanen-2013-agent.pdf"
+  ],
+  "publication": "ASONAM 2013: Proceedings of the 2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining",
+  "pages": "600\u2013607",
+  "publication_date_precision": "year",
+  "audit_status": "not audited"
+}

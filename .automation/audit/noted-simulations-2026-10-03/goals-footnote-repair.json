@@ -1,0 +1,6 @@
+{
+  "file": "vault/What are my goal - LLM Asisted.md",
+  "sha256": "7d1f15a256f01cbf1adb1d78abfe3b29c8a91876f6fce6df010b422107a369ff",
+  "changes": "Restored accidentally interleaved goals-note source footnotes swls, metrics, prod and removed dangling fragment. No goal content or paper scope changed.",
+  "missing_footnote_definitions": []
+}

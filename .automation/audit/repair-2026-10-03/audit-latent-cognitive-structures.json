@@ -1,0 +1,91 @@
+{
+  "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+  "note_sha256": "2ba6e8fb81882823563932ece3c2d5cd3139954393e2a8c0dd4f6397de7324df",
+  "verdict": "PASS",
+  "warning_status": "audit failed preserved",
+  "note_or_warning_edited": false,
+  "source": {
+    "canonical_url": "https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C",
+    "availability_and_version": "Current full Cambridge Core article HTML and extracted full text; complete article, Appendices B/C, four dataset analyses, and full publisher bibliography accessible.",
+    "paths_read": [
+      "vault/.automation/sources/files/c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59.html",
+      "vault/.automation/sources/files/4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31.txt"
+    ],
+    "sha256": [
+      "c3b36dac461b6aff0fb74255c4aebbd97ff0facbe692c494be52592b6f83db59",
+      "4d01e69a88a2e945d41d267dd359714a1d81696b60843bf983998774817cdf31"
+    ],
+    "sections_read": [
+      "Abstract, title, authors and publication metadata",
+      "§§1–2 motivation and related work",
+      "§3.1–3.6 model, definitions 1–8, optimization, tests and limitations",
+      "§4 model-selection procedure and all four dataset analyses (Krackhardt advice/friendship, Hunter week 1/week 6)",
+      "§5 conclusion",
+      "Appendix A metadata and affect matrix",
+      "Appendix B algorithms 1–2 and alternative SCA methods",
+      "Appendix C standard/split-LRT comparison and power caveats",
+      "Appendix D latent core examples",
+      "Complete 71-entry bibliography"
+    ],
+    "scope": "Full text, not abstract-only; full article, appendices, empirical sections, and bibliography read."
+  },
+  "claim_checks": [
+    {
+      "claim": "CSS is represented as N×N×L adjacency tensor; nonnegative Poisson Tucker rate with outgoing U, incoming V, layer/cognitive Y memberships, and K×K×C core G; these are weights not normalized probabilities.",
+      "source_location": "§3.1, Eq. (1); §§3.2–3.3",
+      "result": "Supported; note dimensions and interpretation are accurate."
+    },
+    {
+      "claim": "Independent (C=L,Y=I), dependent (C<L), redundant (C=1,Y=ones), and SCA (C<L,U=Y) variants; SCA equates structures/generative models, not identical perceptions.",
+      "source_location": "Definitions 1–4, §§3.2–3.3",
+      "result": "Supported."
+    },
+    {
+      "claim": "KL multiplicative updates and Algorithm 2 constrained fit order, averaging U/Y, best-iterate termination; standard Algorithm 1 local optimum while SCA heuristic is nonmonotonic without convergence guarantee; 20 standard and 50 SCA restarts.",
+      "source_location": "§3.4; Appendices B.1–B.2; Fig. C1",
+      "result": "Supported; note does not assert global optimization."
+    },
+    {
+      "claim": "Nonidentifiability/global-max concerns invalidate ordinary Wilks LRT assumptions; split-LRT avoids identifiability/nesting assumptions but is lower powered, random split may be suboptimal, and still needs maximized null likelihood.",
+      "source_location": "§3.5, Definitions 5–8; Appendix C",
+      "result": "Supported; limitations appropriately retained."
+    },
+    {
+      "claim": "Five tubular masks, best training-likelihood among 20 starts, average test AUC; comparisons and dimensions; final fitting/interpretation pipeline.",
+      "source_location": "§4 model-selection procedure",
+      "result": "Supported."
+    },
+    {
+      "claim": "Four CSS datasets and SCA test outcomes: agreement for Krackhardt friendship and Hunter week six; distinct social/cognitive spaces better for Krackhardt advice and Hunter week one; week-one gender alignment becomes less evident by week six.",
+      "source_location": "§4, Table 1, §§4.1–4.3, Figs. 3–9, Appendix A",
+      "result": "Supported; note gives scoped observations and does not treat inferred cognitive labels as directly measured semantics."
+    },
+    {
+      "claim": "Limitations: coarse SBM may miss schemas such as triadic closure; limited context metadata constrains interpretation; no complete tensor-splitting implementation is specified.",
+      "source_location": "§3.6; §4.2; §3.5/Appendix C",
+      "result": "Supported."
+    }
+  ],
+  "references": {
+    "source_count": 71,
+    "note_count": 71,
+    "opaque_unresolved_count": 0,
+    "unsafe_target_count": 0,
+    "status": "PASS",
+    "check": "Independently normalized each source title (case/diacritics/punctuation-insensitive) and searched the complete publisher bibliography sequentially in note order; all 71/71 titles matched and order was preserved. Also checked count and targets: no opaque IDs or forbidden filename characters.",
+    "title_order_comparison": {
+      "method": "Normalized each note alias and searched sequentially through full source bibliography text, preserving order; title labels compared case/diacritics/punctuation-insensitively.",
+      "matched": 71,
+      "source_entries": 71,
+      "note_entries": 71,
+      "ordered": true,
+      "unmatched": []
+    }
+  },
+  "conflicts_or_gaps": [
+    "The split-LRT has lower power and an arbitrary tensor split may be suboptimal; these limitations are explicit in source and note.",
+    "The NNTuck does not semantically identify the schema; fitted spaces receive contextual interpretation and dataset metadata is limited.",
+    "No full tensor splitting implementation is specified in the paper; note discloses the missing implementation details."
+  ],
+  "candidate_for_finalization": true
+}

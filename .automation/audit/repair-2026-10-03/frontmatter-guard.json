@@ -1,0 +1,12 @@
+{
+  "finalized": 10,
+  "unfinished": 21,
+  "changed_unfinished_frontmatter": [
+    {
+      "note": "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "warnings_preserved": true,
+      "initial": "\ntitle: \"Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics\"\nauthors:\n  - \"[[Literature/Authors/Bao Tran Truong|Bao Tran Truong]]\"\n  - \"[[Literature/Authors/Xiaodan Lou|Xiaodan Lou]]\"\n  - \"[[Literature/Authors/Alessandro Flammini|Alessandro Flammini]]\"\n  - \"[[Literature/Authors/Filippo Menczer|Filippo Menczer]]\"\nsource: \"https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371\"\ndoi: \"10.1093/pnasnexus/pgae258\"\npublication date: \"2024-06-28\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"social_media\"\nread status: Todo\n⚠️:\n  - audit failed\n",
+      "current": "\ntitle: \"Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics\"\nauthors:\n  - \"[[Literature/Authors/Bao Tran Truong|Bao Tran Truong]]\"\n  - \"[[Literature/Authors/Xiaodan Lou|Xiaodan Lou]]\"\n  - \"[[Literature/Authors/Alessandro Flammini|Alessandro Flammini]]\"\n  - \"[[Literature/Authors/Filippo Menczer|Filippo Menczer]]\"\nsource: \"https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371\"\ndoi: \"10.1093/pnasnexus/pgae258\"\npublication date: \"2024-06-29\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"social_media\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    }
+  ]
+}

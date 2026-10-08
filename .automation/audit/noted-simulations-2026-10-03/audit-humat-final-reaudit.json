@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-03",
+  "note": "vault/Literature/Papers/Entries/HUMAT- An Integrated Framework for Modelling Individual Motivations- Social Exchange and Network Dynamics.md",
+  "note_sha256": "893fd0c4345a9553ccda09cb69d13cea3824df508ff0f5d0e38cdb6ac538e5d5",
+  "candidate_hashes_reviewed": [
+    {
+      "sha256": "c2b28218847c8f8a52ceb24158701563be9fe881644a4e7c412f67d194ca4a1c",
+      "scope": "Initial candidate for this re-audit; followed by source-alignment corrections."
+    },
+    {
+      "sha256": "fcb1aa8c6d82aaacac9a9eb39b7718b6a0586655ea7fcdf8957669b21664a724",
+      "scope": "Reviewed intermediate candidate; identified the missing integer movement details and explicit initialization-mode call."
+    },
+    {
+      "sha256": "893fd0c4345a9553ccda09cb69d13cea3824df508ff0f5d0e38cdb6ac538e5d5",
+      "scope": "Frozen final candidate rechecked after those two corrections; verdict applies only to this exact hash."
+    }
+  ],
+  "source": {
+    "path": "vault/.automation/sources/files/d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee.html",
+    "sha256": "d879778061ac9e570ca87fb8ac1b722530d9077a4b45f23cb23eccfc15a781ee",
+    "version": "Published JASSS HTML, 28(1), article 4 (2025-01-31), DOI 10.18564/jasss.5611",
+    "coverage": "The full primary HTML was independently read during the first audit. This re-audit checked the entire candidate model and all changed procedures/types against the source sections, equations, tables and process schedule, including initialization and interaction order. All three application summaries and source conflicts were checked against that reading. All 71 references were checked for count, title aliases and order against the complete reference blocks."
+  },
+  "verdict": "PASS_EXACT_HASH_WITH_SOURCE_LIMITS_RETAINED",
+  "summary": "The frozen note accurately represents the basic HUMAT ODD instance, source-defined initialization and choice rules, motive/dissonance update, exchange direction and ordering, partner ranking, observations, and bounded application results. The previous audit findings are corrected. The paper itself leaves several rules incomplete or inconsistent; the note now states these limits rather than inventing executable resolutions. Bibliography passes 71/71 titles in source order.",
+  "resolved_findings": [
+    {
+      "finding": "IDs from ordered interaction lists were previously used as agent records without resolving them.",
+      "verification": "The current exchange procedure takes an AgentId and retrieves the corresponding record through world.agents."
+    },
+    {
+      "finding": "Neighbor importance and satisfaction defaults and inquiry refresh ordering needed explicit state paths.",
+      "verification": "View types document numeric-zero defaults; inquiry refreshes the selected ego view and marks it inquired before blending. The note retains the source's perfect-knowledge assumption alongside its stored-view mechanics and unsynchronized-choice ambiguity."
+    },
+    {
+      "finding": "Mutation syntax, social-satisfaction storage, initialization order, radius wording, inquiry score, and contact indicators were incomplete.",
+      "verification": "Mutation is on parameters; social satisfaction is stored; initialization order is stated with integer heading/distance and calls `choose(agent, initializing=true)`; both source radius wordings are preserved; inquiry score is the sum of four weights; sort directions are explicit; Signal's indicator is set while the source's missing Inquire setter is left under-specified."
+    },
+    {
+      "finding": "Narrative conflict locations and the singular/per-choice dissonance gate needed source precision.",
+      "verification": "Narrative activation/social-importance rules are located in Appendix A Design Concepts > Interaction. The chosen-alternative singular strength versus per-choice values remains an explicit partial helper, without an invented synchronization rule."
+    }
+  ],
+  "claims_review": [
+    {
+      "claim_group": "Model state and initialization",
+      "source_locations": "Appendix A, Overview and Tables 1-4; Initialisation; Create Agents; Create Networks; Setup Humats",
+      "result": "PASS",
+      "detail": "The note distinguishes compact type state from omitted positions, counters, cached social satisfaction and bookkeeping; states numeric-zero alter defaults; includes aspiration conflict, truncated Normal and Beta parameters, integer heading/movement, 35-vs-<36 radius conflict, random tie-breaking in nearest-agent fallback, and the source's exact initialization order including basic choice followed by the initializing choice procedure."
+    },
+    {
+      "claim_group": "Choice, motives, dissonance, and dilemmas",
+      "source_locations": "Appendix A, Set Basic Choice, Set Social Motive, Update Dissonances, Identify Dilemmas, Choose Alternative",
+      "result": "PASS_WITH_SOURCE_GAPS_DISCLOSED",
+      "detail": "Per-option motive satisfaction/evaluation, social fraction rescaling, averaging, the P/N dissonance formula, tolerance-adjusted strengths, chosen-option dilemma flags, and satisfaction/dissonance/experiential choice comparisons align with the source. The zero denominator and singular chosen-strength/per-choice synchronization gap remain explicit. Initialization randomization and runtime habit behavior are correctly distinguished."
+    },
+    {
+      "claim_group": "Social exchange, selection, and state updates",
+      "source_locations": "Appendix A, Table 3; Process Overview and Scheduling; Signal or Inquire; Signal; Inquire",
+      "result": "PASS_WITH_SOURCE_LIMITS_DISCLOSED",
+      "detail": "Signal and Inquire now resolve selected IDs, refresh the specified view before use, use the correct aspiration direction, apply similarity-weighted blends, update the right participants in source order, and sort stored neighbor IDs using source flags/match priorities and descending persuasion. The inquiring score sums items 21-24; the signalling score's item 30 self-sum remains unresolved. Exhausted-list behavior, global choice synchronization, and the missing Inquire indicator setter are explicitly identified as source omissions."
+    },
+    {
+      "claim_group": "Narrative/model conflicts and knowledge assumptions",
+      "source_locations": "Appendix A, Design Concepts > Interaction; Table 3 introduction; Submodels > Signal or Inquire / Set Social Motive",
+      "result": "PASS",
+      "detail": "The note correctly contrasts the narrative negligible-gap and social-importance-threshold rules with operational ODD rules, and accurately states the perfect-knowledge assumption alongside stored-view refresh behavior without resolving the source's synchronization tension."
+    },
+    {
+      "claim_group": "Outputs, applications, and scope",
+      "source_locations": "Appendix A Observation/Input Data; §§2.3, 2.5, 3.1-3.3 and Figures 1-5",
+      "result": "PASS",
+      "detail": "The outputs, dialogue example, Groningen population and run count/results, COVID extension and directional findings, lack of time-series inputs, absence of a generic tie-update procedure, and framework scope are accurately bounded. The missing Inquire indicator setter is flagged where output observability is described."
+    },
+    {
+      "claim_group": "Bibliography",
+      "source_locations": "Complete primary HTML References section",
+      "result": "PASS_71_OF_71_SOURCE_ORDER_AND_TITLE_ALIASES",
+      "detail": "The current note has 71 entries. Independent ordered matching of every displayed title against source reference blocks produced no missing or out-of-order entries. The current vault contains no exact reference-title stems, so readable filename-safe targets are appropriate for unimported sources."
+    }
+  ],
+  "retained_source_gaps": [
+    "The source uses [0,1] for aspiration in Table 1/Create Agents and 0 to <3 in Stochasticity.",
+    "The source describes neighbor distance as both within 35 cells and <36 patches.",
+    "The narrative and ODD exchange activation and social-satisfaction criteria disagree.",
+    "Table 3 assumes perfect knowledge of all neighbor choices while the procedures calculate from stored representations and do not explain global synchronization.",
+    "The singular chosen-alternative dissonance strength has no specified synchronization with per-choice strengths after choices change.",
+    "Signal item 30 sums items 25-30 including itself; its non-circular meaning is undefined.",
+    "The source does not specify a candidate-list exhaustion/filter rule or an inquiring-indicator setter, despite declaring/observing that indicator.",
+    "The P+N dissonance expression is undefined when both sums are zero."
+  ],
+  "process_checks": {
+    "current_note_sha256_rechecked_after_review": "893fd0c4345a9553ccda09cb69d13cea3824df508ff0f5d0e38cdb6ac538e5d5",
+    "frontmatter_flags": "The note retains `audit failed`; this independent pass report does not edit or clear it.",
+    "previous_failed_reports": "Preserved. This report is a new exact-hash re-audit.",
+    "edits": "No paper note, manifest, source artifact, or shared flag was edited."
+  }
+}

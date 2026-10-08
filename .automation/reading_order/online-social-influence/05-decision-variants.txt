@@ -1,0 +1,37 @@
+B. Decision Models
+In the context of Twitter, again following [17], there are
+two versions of the single-agent behavior model: The Single
+Choice model: the agent makes one decision between No
+Tweet, Tweet on Topic1, ..., Tweet on Topicn. The Nested
+Choice model: first the choice between either Tweet or No
+Tweet is made. If the agent decides on a tweet then the second
+choice is between Tweet on Topic1, ..., Tweet on Topicn.
+The above leads to the following five models, where two
+are single choice and three of nested choice models:
+• CLNC: Single choice with only external factors. The
+agents make a single choice between No Tweet or a
+Topicn Tweet. The population is homogeneous, meaning
+that all agents have the same behaviour parameters. This
+is our base line model.
+• CL: Single choice with external factors and persuasion
+factors. The agents make a single choice between No
+Tweet, or a Topicn Tweet. The population is homogeneous
+• NCL: Nested choice with homogeneous population. The
+agents make a first choice between Tweet and No Tweet
+based on individual factors. If they choose to Tweet they
+choose which topic to tweet about based on external
+factors and persuasion factors.
+• NCLLC: Nested choice with heterogeneous population
+divided in classes. The decision model is similar to NCL.
+Each class of agents has its own behavior parameters.
+• NCLLC+: Similar to NCLLC but extended with a cool
+down period after a tweet of 4 time steps. This ex-
+tension on the NCLLC was constructed, because first
+runs demonstrated an recursive influence effect that made
+agents tweet continuously. The cool down period reflects
+the number of time steps the agent is forced not to tweet
+after sending a tweet.
+In Table I an overview is given of the separate models indi-
+cating which influence factors are used to calculate the utilities
+and indicating whether the population is heterogeneous and
+whether a cool down period is applied.

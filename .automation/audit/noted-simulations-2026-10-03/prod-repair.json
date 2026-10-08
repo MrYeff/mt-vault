@@ -1,0 +1,32 @@
+{
+  "task": "Complete PROD paper-note simulation import and references reconciliation",
+  "paper": "The Effect of People Recommenders on Echo Chambers and Polarization",
+  "note_path": "vault/Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+  "note_sha256": "ab9efbd2d1d97a75205898750a5c4bbc758238c16762c117cdeb75d7ba32211a",
+  "sources": [
+    {
+      "path": "vault/.automation/sources/files/b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4.pdf",
+      "sha256": "b03dfb9f068e30004f5d356363d27d8a333d39b4257607d5c04a683e97b41ec4",
+      "coverage": "Primary paper read across all 12 pages, including diagrams/figures, displayed equations, algorithm, tables, model definitions, results, discussion, and bibliography."
+    },
+    {
+      "path": "vault/.automation/sources/files/53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60.txt",
+      "sha256": "53de56c2c7a8538954c6f981f4a72db1257bfbd62f4e06464492b4968d4e7a60",
+      "coverage": "Full extracted text, lines 1-669; cross-checked source sections 3-6, equations 1-5, Algorithm 1, Figures 1-5, Table 1, and all 35 bibliography entries against the PDF."
+    }
+  ],
+  "repair": {
+    "references": "Replaced incomplete/placeholder list with all 35 references in the primary source's bibliography order. Each entry displays its source title; existing note stems are used where known, including the actual note Mixing beliefs among interacting agents. No cited-paper notes were created.",
+    "content": "Retained existing model import and explicit disclosures of under-specified procedures and source equation conflicts. Updated stale audit-log wording about a reference-skip authorization that has since been revoked.",
+    "audit_state": "Awaiting independent cross-audit; note retains not audited flag."
+  },
+  "process": {
+    "rules_read": [
+      "vault/Guides/LLM Extraction Rules.md",
+      "vault/Guides/Model Notation.md",
+      "vault/Literature/Papers/Template.md"
+    ],
+    "date": "2026-10-03",
+    "agent": "Codex subagent /root/import_prod_complete"
+  }
+}

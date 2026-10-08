@@ -1,0 +1,31 @@
+2) Persuasion Factors: The persuasion parameters in the
+model are based on Cialdini’s principles of persuasion. At this
+point three of the principles have been operationalized for the
+Twitter context: liking, social proof and consistency.
+• Liking: We assume a person likes the people in his direct
+environment. On Twitter this means that someone likes
+the people he or she follows. The preferences of these
+people are reflected in the messages the person receives.
+Liking is the number of messages about a certain topic
+an agent receives in the last hour.
+• Social proof: Think of the trending topics on Twitter that
+are published continuously. These topics are popular and
+therefore a person is more likely to send a message about
+it. Social proof reflects the trends in the whole network.
+Social proof is the percentage of tweets about a certain
+topic during the last hour.
+• Consistency: The consistency factor is defined as the total
+number of tweets about a topic a user has sent. The
+factor ensures that people demonstrate some consistent
+behavior.
+As we wanted to limit the complexity of the behavior
+models, we have only quantified a subset of the original
+six Cialdini principles. Though, from the three remaining
+principles we believe that only authority of a sender might
+have significant impact on people’s choices to react to a
+message, and reciprocity and scarcity are less relevant in the
+Twitter context.
+3) External Factors: For a topic, influence parameters may
+exist that follow from external events. News events or user
+experiences are examples of this. These factors are considered
+to be case specific.

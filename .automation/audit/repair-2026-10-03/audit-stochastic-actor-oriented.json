@@ -1,0 +1,85 @@
+{
+  "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+  "note_sha256": "5b9c607a4b3ebee2299d7b5de41d48c5293de3bf5d4726dfcae9483b3be0045c",
+  "verdict": "PASS",
+  "warning_status": "audit failed preserved",
+  "note_or_warning_edited": false,
+  "source_files": [
+    {
+      "path": "vault/.automation/sources/files/c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707.pdf",
+      "sha256": "c91ffc9bda1f1d7d46f05b9e106eb88dc7115c32d48b56f8d7e2accae2026707",
+      "role": "full accepted Annual Review manuscript PDF, 44 pages"
+    },
+    {
+      "path": "vault/.automation/sources/files/43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222.txt",
+      "sha256": "43481ee846edbe4d4bb9b4243a21911ee519745526ba346d1cf55cb382bf4222",
+      "role": "complete derived text extraction, 2,168 lines / 80,722 bytes"
+    }
+  ],
+  "source_coverage": [
+    "Publisher title, author, DOI and publication date; manuscript abstract",
+    "§1 Introduction and model context",
+    "§2 and §§2.1–2.2: continuous-time Markov network state, single-tie actor changes, rate equations (1)–(3), options (4a–b), multinomial choice (5), objective effects (6)–(10), intensity matrix (11), observation periods and simulation algorithm",
+    "§3 and §§3.1–3.3: moments, Hamming/rate/effect statistics, three-phase RSiena Robbins–Monro, generalized moments, likelihood/data augmentation",
+    "§4.1–4.3: joint network/ordinal behavior event process, social selection/influence, multivariate-network dependencies and extensions",
+    "§5: Scottish school example, sample/waves, effects, estimation, constraint, estimates and interpretation",
+    "§6 model comparisons and §7 discussion/assumptions/limitations",
+    "All 70 bibliography entries, source pp. 36–44"
+  ],
+  "claim_checks": [
+    {
+      "claim": "Abstract, title and scope",
+      "source_location": "Publisher/manuscript title and abstract; §1",
+      "status": "PASS",
+      "detail": "Abstract is faithful: continuous-time Markov model observed at discrete waves, generalized-linear/missing-data perspective, estimation methods, coevolution and model comparisons."
+    },
+    {
+      "claim": "Core network state, rates, opportunities, permitted options, choice distribution and objective effects",
+      "source_location": "§2, Eqs. (1)–(10)",
+      "status": "PASS",
+      "detail": "Fixed directed actor network, no self-ties, single outgoing tie change at an actor opportunity, exponential total waiting time and rate-weighted actor selection, Keep/toggle alternatives, softmax choice and example structural effects are source-supported. Custom rate statistics/effects are explicitly application-specific."
+    },
+    {
+      "claim": "Transition/event order and panel boundary",
+      "source_location": "§2.1–2.2, Eq. (11) and algorithm steps 1–8",
+      "status": "PASS",
+      "detail": "Pseudocode represents the same CTMC event: derive rates from the current state, sample an exponential waiting time, stop at the wave boundary or choose actor and admissible next network state and apply it. Its clock assignment is placed before actor/choice sampling whereas the printed algorithm assigns time after sampling the next state; this is an equivalent event ordering for this time-homogeneous event calculation, and no within-event side effect is asserted. The note uses >= at the boundary while the source says >; equality has probability zero for the continuous exponential wait and does not alter the transition law."
+    },
+    {
+      "claim": "Moment estimation and coevolution",
+      "source_location": "§§3.1–3.3; §§4.1–4.2",
+      "status": "PASS",
+      "detail": "Hamming/rate statistics, structural and objective-effect moments, RSiena three phases, generalized moments and data-augmentation likelihood are correctly scoped. Coevolution statement captures alternating network/behavior opportunities with ordinal behavior ±1 changes; cross-dependence represents selection and influence."
+    },
+    {
+      "claim": "Scottish friendship example and results",
+      "source_location": "§5, Table 1",
+      "status": "PASS",
+      "detail": "Three waves; 160 participants with 129 present at all waves; up to six nominated friends; outdegree constraint of six; negative distance and indegree effects and positive reciprocity, GWESP and same-gender effects match source. It appropriately frames values as application results rather than defaults."
+    },
+    {
+      "claim": "Applicability, abstract provenance, metadata and bibliography",
+      "source_location": "Publisher/manuscript heading and abstract; §7; References pp. 36–44",
+      "status": "PASS",
+      "detail": "Date/title/author/DOI align with the source record and abstract. The note has all 70 numbered bibliography entries in source order with human-readable source titles; no opaque placeholders or missing source entries found."
+    }
+  ],
+  "bibliography_check": {
+    "source_entries": 70,
+    "note_items": 70,
+    "order": "source order verified",
+    "title_check": "titles checked against complete source bibliography; note retains source title wording and normalizes typographic artifacts only",
+    "status": "PASS"
+  },
+  "source_gaps": [
+    "This is a methodological review; there are no universal default rates/effects. The note explicitly leaves RATE_STATISTICS and EFFECTS application-specific.",
+    "The current pseudocode is notation, not a fully executable implementation; it does not define a universal estimator or effect catalogue, consistent with the source."
+  ],
+  "independent_audit": true,
+  "target_only_reaudit": {
+    "note_sha256": "67eab7ed6a19ac03fde4250154017e6e0b3d92bb7862093e7b89d872950b2ed0",
+    "verdict": "PASS",
+    "checked": "70 bibliography entries remain in the previously verified exact source order; 12 repaired targets contain no filename-forbidden characters; each preserves the exact source title as display alias; no body, order, title or warning changes.",
+    "change_record": "vault/.automation/audit/repair-2026-10-03/saom-reference-target-fix.json"
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-03",
+  "policy": "Only root clears a per-note failure after independent full-source audit and re-audit of any fixes. Missing fulltext retains warning. No batch flag clearing.",
+  "papers": [
+    {
+      "note": "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "initial_sha256": "94c869705ddd0348f08d6975c4d8a92959b967458fd9a9333df507871dac9546",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem\"\nauthors:\n  - \"[[Literature/Authors/Jim Blythe|Jim Blythe]]\"\n  - \"[[Literature/Authors/John Bollenbacher|John Bollenbacher]]\"\n  - \"[[Literature/Authors/Di Huang|Di Huang]]\"\n  - \"[[Literature/Authors/Pik-Mai Hui|Pik-Mai Hui]]\"\n  - \"[[Literature/Authors/Rachel Krohn|Rachel Krohn]]\"\n  - \"[[Literature/Authors/Diogo Pacheco|Diogo Pacheco]]\"\n  - \"[[Literature/Authors/Goran Muric|Goran Muric]]\"\n  - \"[[Literature/Authors/Anna Sapienza|Anna Sapienza]]\"\n  - \"[[Literature/Authors/Alexey Tregubov|Alexey Tregubov]]\"\n  - \"[[Literature/Authors/Yong-Yeol Ahn|Yong-Yeol Ahn]]\"\n  - \"[[Literature/Authors/Alessandro Flammini|Alessandro Flammini]]\"\n  - \"[[Literature/Authors/Kristina Lerman|Kristina Lerman]]\"\n  - \"[[Literature/Authors/Filippo Menczer|Filippo Menczer]]\"\n  - \"[[Literature/Authors/Tim Weninger|Tim Weninger]]\"\n  - \"[[Literature/Authors/Emilio Ferrara|Emilio Ferrara]]\"\nsource: \"https://arxiv.org/html/1908.05437\"\ndoi: \"10.1007/978-3-030-24209-1_1\"\npublication date: \"2019-01-01\"\ntags:\n  - \"model\"\n  - \"simulation\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "initial_sha256": "f3cf298efb54d9e6b27c7360bad7bf71cf5933cefcfbd42e28d0ac4f870c87aa",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Mixing beliefs among interacting agents\"\nauthors:\n  - \"[[Literature/Authors/Guillaume Deffuant|Guillaume Deffuant]]\"\n  - \"[[Literature/Authors/David B. Neau|David Neau]]\"\n  - \"[[Literature/Authors/Frédéric Amblard|Frédéric Amblard]]\"\n  - \"[[Literature/Authors/Gérard Weisbuch|Gérard Weisbuch]]\"\nsource: \"https://hal.inrae.fr/hal-02580278v1/file/Deffuant2001.pdf\"\ndoi: \"10.1142/S0219525900000078\"\npublication date: \"2000-01\"\ntags:\n  - \"model\"\n  - \"simulation\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "initial_sha256": "663a30bbba6c53fa0d3a7337ab50eecf30180578b862a832c1502e13ea444293",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Modeling Interaction in Collaborative Groups: Affect Control Within Social Structure\"\nauthors:\n  - \"[[Literature/Authors/Nikolas Zöller|Nikolas Zöller]]\"\n  - \"[[Literature/Authors/Jonathan Howard Morgan|Jonathan Howard Morgan]]\"\n  - \"[[Literature/Authors/Tobias Schröder|Tobias Schröder]]\"\nsource: \"https://www.jasss.org/24/4/6.html\"\ndoi: \"10.18564/jasss.4699\"\npublication date: \"2021-10-31\"\ntags:\n  - \"model\"\n  - \"simulation\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "initial_sha256": "cc0d5ce745bda19d5911b843e422326b4f3cab1c532d2edf3e1387477a86c417",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Modeling Social Cohesion: The Influence of Memory and Learning in Simulated Networks\"\nauthors:\n  - \"[[Literature/Authors/Yara Khaluf|Yara Khaluf]]\"\n  - \"[[Literature/Authors/Bernd Wurpts|Bernd Wurpts]]\"\n  - \"[[Literature/Authors/Till Hovestadt|Till Hovestadt]]\"\n  - \"[[Literature/Authors/Nikolas Zöller|Nikolas Zöller]]\"\n  - \"[[Literature/Authors/Gert Jan Hofstede|Gert Jan Hofstede]]\"\nsource: \"https://link.springer.com/chapter/10.1007/978-3-032-01373-6_11\"\ndoi: \"10.1007/978-3-032-01373-6_11\"\npublication date: \"2026-02-08\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"social_cohesion\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "initial_sha256": "95727c281b4049eb3dd1c2c559f996596792b958b56434f0289107cc34009d54",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Modelling Agents Endowed with Social Practices: Static Aspects\"\nauthors:\n  - \"[[Literature/Authors/Rijk Mercuur|Rijk Mercuur]]\"\n  - \"[[Literature/Authors/Virginia Dignum|Virginia Dignum]]\"\n  - \"[[Literature/Authors/Catholijn M. Jonker|Catholijn M. Jonker]]\"\nsource: \"https://arxiv.org/html/1811.10981v1\"\ndoi: \"10.48550/arXiv.1811.10981\"\npublication date: \"2018-11-27\"\ntags:\n  - \"model\"\n  - \"social_practice\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "initial_sha256": "974459afe864f230483efabd10be9d51aa5fd9d6ab8d19946f7425f14de34348",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Modelling the Evolution of Social Structure\"\nauthors:\n  - \"[[Literature/Authors/Alistair Sutcliffe|Alistair Sutcliffe]]\"\n  - \"[[Literature/Authors/Robin Dunbar|Robin Dunbar]]\"\n  - \"[[Literature/Authors/D. Wang|D. Wang]]\"\nsource: \"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0158605\"\ndoi: \"10.1371/journal.pone.0158605\"\npublication date: \"2016-07-18\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"social_structure\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "initial_sha256": "6de79794ea2e007125db27f00a90cd096fa83087b6844e7adda76f5d68dfba4c",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"OASIS: Open Agent Social Interaction Simulations with One Million Agents\"\nauthors:\n  - \"[[Literature/Authors/Ziyi Yang|Ziyi Yang]]\"\n  - \"[[Literature/Authors/Zaibin Zhang|Zaibin Zhang]]\"\n  - \"[[Literature/Authors/Zirui Zheng|Zirui Zheng]]\"\n  - \"[[Literature/Authors/Jiang, Yuxian|Jiang, Yuxian]]\"\n  - \"[[Literature/Authors/Gan, Ziyue|Gan, Ziyue]]\"\n  - \"[[Literature/Authors/Zhiyu Wang|Zhiyu Wang]]\"\n  - \"[[Literature/Authors/Ling, Zijian|Ling, Zijian]]\"\n  - \"[[Literature/Authors/Jinsong Chen|Jinsong Chen]]\"\n  - \"[[Literature/Authors/Martz Ma|Martz Ma]]\"\n  - \"[[Literature/Authors/Bowen Dong|Bowen Dong]]\"\n  - \"[[Literature/Authors/Gupta, Prateek|Gupta, Prateek]]\"\n  - \"[[Literature/Authors/Shanshan Hu|Shanshan Hu]]\"\n  - \"[[Literature/Authors/Zhenfei Yin|Zhenfei Yin]]\"\n  - \"[[Literature/Authors/Guohao Li|Guohao Li]]\"\n  - \"[[Literature/Authors/Jia Yue Xu|Jia Yue Xu]]\"\n  - \"[[Literature/Authors/Lijun Wang|Lijun Wang]]\"\n  - \"[[Literature/Authors/Bernard Ghanem|Bernard Ghanem]]\"\n  - \"[[Literature/Authors/Huchuan Lu|Huchuan Lu]]\"\n  - \"[[Literature/Authors/Lu, Chaochao|Lu, Chaochao]]\"\n  - \"[[Literature/Authors/Wanli Ouyang|Wanli Ouyang]]\"\n  - \"[[Literature/Authors/Yushan Qiao|Yushan Qiao]]\"\n  - \"[[Literature/Authors/Philip H. S. Torr|Philip H. S. Torr]]\"\n  - \"[[Literature/Authors/Jing Fan Shao|Jing Fan Shao]]\"\nsource: \"https://arxiv.org/html/2411.11581\"\ndoi: \"10.48550/arXiv.2411.11581\"\npublication date: \"2024-11-18\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"social_media\"\n  - \"llm_agents\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "initial_sha256": "bb2014bafe82373132029b49fb73a27d2ef1e5260a4e74955f0085e027b36917",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"On Generative Agents in Recommendation\"\nauthors:\n  - \"[[Literature/Authors/An Zhang|An Zhang]]\"\n  - \"[[Literature/Authors/Yuxin Chen|Yuxin Chen]]\"\n  - \"[[Literature/Authors/Leheng Sheng|Leheng Sheng]]\"\n  - \"[[Literature/Authors/Xiang Wang|Xiang Wang]]\"\n  - \"[[Literature/Authors/Tat‐Seng Chua|Tat‐Seng Chua]]\"\nsource: \"https://arxiv.org/html/2310.10108\"\ndoi: \"10.1145/3626772.3657844\"\npublication date: \"2024-07-10\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"recommender_systems\"\n  - \"llm_agents\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "initial_sha256": "97e64d0e7b2d9715cb079963a03a68e6a1478c1c0a4a8dcb3c51af4074d9f22e",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics\"\nauthors:\n  - \"[[Literature/Authors/Bao Tran Truong|Bao Tran Truong]]\"\n  - \"[[Literature/Authors/Xiaodan Lou|Xiaodan Lou]]\"\n  - \"[[Literature/Authors/Alessandro Flammini|Alessandro Flammini]]\"\n  - \"[[Literature/Authors/Filippo Menczer|Filippo Menczer]]\"\nsource: \"https://academic.oup.com/pnasnexus/article/3/7/pgae258/7701371\"\ndoi: \"10.1093/pnasnexus/pgae258\"\npublication date: \"2024-06-28\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"social_media\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "initial_sha256": "21e7fe6a4b77f12d393ee2c8b6351d194165fe3a2ad13eba85a3a16199a35f17",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"RecSim NG: Toward Principled Uncertainty Modeling for Recommender Ecosystems\"\nauthors:\n  - \"[[Literature/Authors/Martin Mladenov|Martin Mladenov]]\"\n  - \"[[Literature/Authors/Chih‐Wei Hsu|Chih‐Wei Hsu]]\"\n  - \"[[Literature/Authors/Vihan Jain|Vihan Jain]]\"\n  - \"[[Literature/Authors/Eugene Ie|Eugene Ie]]\"\n  - \"[[Literature/Authors/Christopher Colby|Christopher Colby]]\"\n  - \"[[Literature/Authors/Nicolas Mayoraz|Nicolas Mayoraz]]\"\n  - \"[[Literature/Authors/Hubert Pham|Hubert Pham]]\"\n  - \"[[Literature/Authors/Dustin Tran|Dustin Tran]]\"\n  - \"[[Literature/Authors/Ivan Vendrov|Ivan Vendrov]]\"\n  - \"[[Literature/Authors/Craig E. Boutilier|Craig E. Boutilier]]\"\nsource: \"https://arxiv.org/html/2103.08057\"\ndoi: \"10.48550/arXiv.2103.08057\"\npublication date: \"2021-03-14\"\ntags:\n  - \"model\"\n  - \"simulation\"\n  - \"recommender_systems\"\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "initial_sha256": "72635b0ba81244eea0c5e108623308efc3236a83be5239b1bca9867f8f312a5b",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"RecSim: A Configurable Simulation Platform for Recommender Systems\"\ntags:\n  - recommender_system\n  - simulation\n  - \"model\"\nauthors:\n  - \"[[Literature/Authors/Eugene Ie|Eugene Ie]]\"\n  - \"[[Literature/Authors/Chih‐Wei Hsu|Chih‐Wei Hsu]]\"\n  - \"[[Literature/Authors/Martin Mladenov|Martin Mladenov]]\"\n  - \"[[Literature/Authors/Vihan Jain|Vihan Jain]]\"\n  - \"[[Literature/Authors/Sanmit Narvekar|Sanmit Narvekar]]\"\n  - \"[[Literature/Authors/Jing Wang|Jing Wang]]\"\n  - \"[[Literature/Authors/Rui Wu|Rui Wu]]\"\n  - \"[[Literature/Authors/Craig E. Boutilier|Craig E. Boutilier]]\"\npublication date: 2019-09-11 \nsource: \"https://arxiv.org/html/1909.04847\"\ndoi: 10.48550/arxiv.1909.04847\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+      "initial_sha256": "63deb00f9811953f92c6f37e4efaca51095a996b53c0927b64e8f76a40f46b72",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Reciprocal Recommender Systems: Analysis of state-of-art literature, challenges and opportunities towards social recommendation\"\ntags:\n  - reciprocal_recommender_system\n  - literature_review\n  - \"model\"\nauthors:\n  - \"[[Literature/Authors/Iván Palomares|Iván Palomares]]\"\n  - \"[[Literature/Authors/Carlos Porcel|Carlos Porcel]]\"\n  - \"[[Literature/Authors/Luiz Augusto Sangoi Pizzato|Luiz Augusto Sangoi Pizzato]]\"\n  - \"[[Literature/Authors/Ido Guy|Ido Guy]]\"\n  - \"[[Literature/Authors/Enrique Herrera‐Viedma|Enrique Herrera‐Viedma]]\"\npublication date: 2020-12-07 \nsource: \"https://arxiv.org/pdf/2007.16120v2\"\ndoi: 10.1016/j.inffus.2020.12.001\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "initial_sha256": "38a250c4faf09fe9e043636020acf3e87b08d4a49dfd61c864de6192f5ba9006",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Redesigning algorithms to intervene on social norm misperceptions during a national election\"\ntags:\n  - social_media\n  - field_experiment\nauthors:\n  - \"[[Literature/Authors/William J. Brady|William J. Brady]]\"\n  - \"[[Literature/Authors/Meriel Doyle|Meriel Doyle]]\"\n  - \"[[Literature/Authors/Abdo Elnakouri|Abdo Elnakouri]]\"\n  - \"[[Literature/Authors/Eli J. Finkel|Eli J. Finkel]]\"\n  - \"[[Literature/Authors/Joshua Conrad Jackson|Joshua Conrad Jackson]]\"\n  - \"[[Literature/Authors/Nour Kteily|Nour Kteily]]\"\n  - \"[[Literature/Authors/Victoria Parker|Victoria Parker]]\"\n  - \"[[Literature/Authors/Curtis Puryear|Curtis Puryear]]\"\n  - \"[[Literature/Authors/Trevor Spelman|Trevor Spelman]]\"\n  - \"[[Literature/Authors/Jacob Teeny|Jacob Teeny]]\"\n  - \"[[Literature/Authors/Mark Torres|Mark Torres]]\"\npublication date: 2026-05-27 \nsource: \"https://www.nature.com/articles/s41586-026-10536-1\"\ndoi: 10.1038/s41586-026-10536-1\nread status: Todo\n⚠️:\n  - audit failed\n  - fulltext unavailable\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "initial_sha256": "4c2177daf9aeb07acc96e5efcd429336db8088bd35c52a919915b51f931530bb",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Reliable and Efficient Agent-Based Modeling and Simulation\"\ntags:\n  - agent_based_model\n  - simulation_framework\nauthors:\n  - \"[[Literature/Authors/Alessia Antelmi|Alessia Antelmi]]\"\n  - \"[[Literature/Authors/Pasquale Caramante|Pasquale Caramante]]\"\n  - \"[[Literature/Authors/Gennaro Cordasco|Gennaro Cordasco]]\"\n  - \"[[Literature/Authors/Giuseppe D’Ambrosio|Giuseppe D’Ambrosio]]\"\n  - \"[[Literature/Authors/Daniele De Vinco|Daniele De Vinco]]\"\n  - \"[[Literature/Authors/Francesco Foglia|Francesco Foglia]]\"\n  - \"[[Literature/Authors/Luca Postiglione|Luca Postiglione]]\"\n  - \"[[Literature/Authors/Carmine Spagnuolo|Carmine Spagnuolo]]\"\npublication date: 2024-03-31 \nsource: \"https://www.jasss.org/27/2/4.html\"\ndoi: 10.18564/jasss.5300\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+      "initial_sha256": "13742f2494f6ebf7335e2f87dfbc4a45fc6f8f378a3d68f90571dc4067be51da",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Reranking partisan animosity in algorithmic social media feeds alters affective polarization\"\ntags:\n  - social_media\n  - field_experiment\nauthors:\n  - \"[[Literature/Authors/Tiziano Piccardi|Tiziano Piccardi]]\"\n  - \"[[Literature/Authors/Martin Saveski|Martin Saveski]]\"\n  - \"[[Literature/Authors/Chenyan Jia|Chenyan Jia]]\"\n  - \"[[Literature/Authors/Jeffrey T. Hancock|Jeffrey T. Hancock]]\"\n  - \"[[Literature/Authors/Jeanne L. Tsai|Jeanne L. Tsai]]\"\n  - \"[[Literature/Authors/Michael S. Bernstein|Michael S. Bernstein]]\"\npublication date: 2025-11-27 \nsource: \"https://culture-emotion-lab.stanford.edu/sites/culture_emotion_lab/files/media/file/science.adu5584.pdf\"\ndoi: 10.1126/science.adu5584\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "initial_sha256": "e8d9285fb1145b2adb1bf294364c6f4f6529ced405be19e935632607a80e6ff5",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"SARDINE: Simulator for Automated Recommendation in Dynamic and Interactive Environments\"\ntags:\n  - recommender_system\n  - simulation\n  - \"model\"\nauthors:\n  - \"[[Literature/Authors/Romain Deffayet|Romain Deffayet]]\"\n  - \"[[Literature/Authors/Thibaut Thonet|Thibaut Thonet]]\"\n  - \"[[Literature/Authors/Dongyoon Hwang|Dongyoon Hwang]]\"\n  - \"[[Literature/Authors/Vassilissa Lehoux‐Lebacque|Vassilissa Lehoux‐Lebacque]]\"\n  - \"[[Literature/Authors/Jean-Michel Renders|Jean-Michel Renders]]\"\n  - \"[[Literature/Authors/Maarten de Rijke|Maarten de Rijke]]\"\npublication date: 2024-04-08 \nsource: \"https://arxiv.org/html/2311.16586\"\ndoi: 10.1145/3656481\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "initial_sha256": "621fde3294f985310c71a7afaf668035327bff5a3e528bc038fe1d39a56ea7c7",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Simulating Urban Patterns of Life: A Geo-Social Data Generation Framework\"\ntags:\n  - urban_simulation\n  - synthetic_data\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Joon-Seok Kim|Joon-Seok Kim]]\"\n  - \"[[Literature/Authors/Hamdi Kavak|Hamdi Kavak]]\"\n  - \"[[Literature/Authors/Umar Manzoor|Umar Manzoor]]\"\n  - \"[[Literature/Authors/Andrew Crooks|Andrew Crooks]]\"\n  - \"[[Literature/Authors/Dieter Pfoser|Dieter Pfoser]]\"\n  - \"[[Literature/Authors/Carola Wenk|Carola Wenk]]\"\n  - \"[[Literature/Authors/Andreas Züfle|Andreas Züfle]]\"\npublication date: 2019-11\nsource: \"https://par.nsf.gov/servlets/purl/10187146\"\ndoi: 10.1145/3347146.3359106\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+      "initial_sha256": "c9f5cdce8a5586e95e35aa91b15570823102f056fc1877e3d40b03b615762c9b",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Social Agents? A Systematic Review of Social Identity Formalizations\"\ntags:\n  - social_identity\n  - literature_review\nauthors:\n  - \"[[Literature/Authors/Geeske Scholz|Geeske Scholz]]\"\n  - \"[[Literature/Authors/Nanda Wijermans|Nanda Wijermans]]\"\n  - \"[[Literature/Authors/Rocco Paolillo|Rocco Paolillo]]\"\n  - \"[[Literature/Authors/Martín Neumann|Martín Neumann]]\"\n  - \"[[Literature/Authors/Torsten Masson|Torsten Masson]]\"\n  - \"[[Literature/Authors/Emile J. L. Chappin|Emile J. L. Chappin]]\"\n  - \"[[Literature/Authors/Anne Templeton|Anne Templeton]]\"\n  - \"[[Literature/Authors/Geo Kocheril|Geo Kocheril]]\"\npublication date: 2023-03-31 \nsource: \"https://www.jasss.org/26/2/6.html\"\ndoi: 10.18564/jasss.5066\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "initial_sha256": "faf624cb09f041a984e091008ad29aa25b9038cb07b7e6f7c3a7c22b08805c49",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Social Relationships and the Emergence of Social Networks\"\ntags:\n  - social_network\n  - simulation\n  - \"model\"\nauthors:\n  - \"[[Literature/Authors/Alistair Sutcliffe|Alistair Sutcliffe]]\"\n  - \"[[Literature/Authors/Di Wang|Di Wang]]\"\n  - \"[[Literature/Authors/Robin Dunbar|Robin Dunbar]]\"\npublication date: 2012-10-31 \nsource: \"https://www.jasss.org/15/4/3/3.pdf\"\ndoi: 10.18564/jasss.2059\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "initial_sha256": "16ad946fcf54248a8d735f0e48a4e83e29c7db2c5f36b434bc3eff06eb58ef6c",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Social Simulacra: Creating Populated Prototypes for Social Computing Systems\"\ntags:\n  - social_computing\n  - llm_simulation\n  - \"model\"\n  - \"simulation\"\nauthors:\n  - \"[[Literature/Authors/Joon-Sung Park|Joon-Sung Park]]\"\n  - \"[[Literature/Authors/Lindsay Popowski|Lindsay Popowski]]\"\n  - \"[[Literature/Authors/Carrie Jun Cai|Carrie Jun Cai]]\"\n  - \"[[Literature/Authors/Meredith Ringel Morris|Meredith Ringel Morris]]\"\n  - \"[[Literature/Authors/Percy Liang|Percy Liang]]\"\n  - \"[[Literature/Authors/Michael S. Bernstein|Michael S. Bernstein]]\"\npublication date: 2022-10-28 \nsource: \"https://hci.stanford.edu/publications/2022/Park_SocialSimulacra_UIST22.pdf\"\ndoi: 10.1145/3526113.3545616\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+      "initial_sha256": "c61c22ee4b9dc436caef2860b3c1688b06154688b1e908e6c8caf206651d8aa2",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Social capital II: determinants of economic connectedness\"\ntags:\n  - social_capital\n  - empirical_study\nauthors:\n  - \"[[Literature/Authors/Raj Chetty|Raj Chetty]]\"\n  - \"[[Literature/Authors/Matthew O. Jackson|Matthew O. Jackson]]\"\n  - \"[[Literature/Authors/Theresa Kuchler|Theresa Kuchler]]\"\n  - \"[[Literature/Authors/Johannes Stroebel|Johannes Stroebel]]\"\n  - \"[[Literature/Authors/Nathaniel Hendren|Nathaniel Hendren]]\"\n  - \"[[Literature/Authors/Robert B. Fluegge|Robert B. Fluegge]]\"\n  - \"[[Literature/Authors/Sara Gong|Sara Gong]]\"\n  - \"[[Literature/Authors/Federico Zertuche González|Federico Zertuche González]]\"\n  - \"[[Literature/Authors/Armelle Grondin|Armelle Grondin]]\"\n  - \"[[Literature/Authors/Matthew Jacob|Matthew Jacob]]\"\n  - \"[[Literature/Authors/Drew M. Johnston|Drew M. Johnston]]\"\n  - \"[[Literature/Authors/Martin Koenen|Martin Koenen]]\"\n  - \"[[Literature/Authors/Eduardo Laguna-Muggenburg|Eduardo Laguna-Muggenburg]]\"\n  - \"[[Literature/Authors/Florian Mudekereza|Florian Mudekereza]]\"\n  - \"[[Literature/Authors/Tom Rutter|Tom Rutter]]\"\n  - \"[[Literature/Authors/Nicolaj Thor|Nicolaj Thor]]\"\n  - \"[[Literature/Authors/Wilbur Townsend|Wilbur Townsend]]\"\n  - \"[[Literature/Authors/Ruby Zhang|Ruby Zhang]]\"\n  - \"[[Literature/Authors/Mike Bailey|Mike Bailey]]\"\n  - \"[[Literature/Authors/Pablo Barberá|Pablo Barberá]]\"\n  - \"[[Literature/Authors/Monica Bhole|Monica Bhole]]\"\n  - \"[[Literature/Authors/Nils Wernerfelt|Nils Wernerfelt]]\"\npublication date: 2022-08-01 \nsource: \"https://www.nature.com/articles/s41586-022-04997-3\"\ndoi: 10.1038/s41586-022-04997-3\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "initial_sha256": "aded677376e599fc8c5c5eab44255ce38f32dad10ea9a07a73f57d97a14b85c3",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Stochastic Actor-Oriented Models for Network Dynamics\"\ntags:\n  - social_network\n  - statistical_model\n  - \"model\"\nauthors:\n  - \"[[Literature/Authors/Tom A. B. Snijders|Tom A. B. Snijders]]\"\npublication date: 2017-01-06\nsource: \"https://www.stats.ox.ac.uk/~snijders/SAOM_ARStat1.pdf\"\ndoi: 10.1146/annurev-statistics-060116-054035\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "initial_sha256": "17c2651f22784d5e0017876c5adf647a8fd6fd29641c4d1fadc4844388920e38",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"T-RECS: A Simulation Tool to Study the Societal Impact of Recommender Systems\"\ntags:\n  - recommender_system\n  - simulation_framework\n  - \"model\"\n  - \"simulation\"\nauthors:\n  - \"[[Literature/Authors/Eli Lucherini|Eli Lucherini]]\"\n  - \"[[Literature/Authors/Matthew Sun|Matthew Sun]]\"\n  - \"[[Literature/Authors/Amy Winecoff|Amy Winecoff]]\"\n  - \"[[Literature/Authors/Arvind Narayanan|Arvind Narayanan]]\"\npublication date: 2021-07-19 \nsource: \"https://arxiv.org/html/2107.08959\"\ndoi: 10.48550/arxiv.2107.08959\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "initial_sha256": "e29fe0c54277954f8681c13e791d7876299545d2707b037a67b74a2b63545cc7",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"The Focused Organization of Social Ties\"\ntags:\n  - social_network\n  - social_theory\n  - model\nauthors:\n  - \"[[Literature/Authors/Scott L. Feld|Scott L. Feld]]\"\npublication date: 1981-03-01\nsource: https://smg.media.mit.edu/library/Feld.SocialTies.pdf\ndoi: 10.1086/227352\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+      "initial_sha256": "6571ee09ad129714e7965d229f9b080a60650e73f2dfd5858a21b63033a6f027",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"The Power of Social Cognition\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Geoffrey P. Morgan|Geoffrey P. Morgan]]\"\n  - \"[[Literature/Authors/Kenneth Joseph|Kenneth Joseph]]\"\n  - \"[[Literature/Authors/Kathleen M. Carley|Kathleen M. Carley]]\"\npublication date: 2017-01-01\nsource: https://www.cmu.edu/joss/content/articles/volume18/MorganJosephCarley2017.pdf\ndoi: 10.21307/joss-2018-002\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "initial_sha256": "391077b7e17c14266818579ab1da97b59245a3d19026b74a4a25dfe826b77902",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"The latent cognitive structures of social networks\"\ntags:\n  - model\nauthors:\n  - \"[[Literature/Authors/Izabel Aguiar|Izabel Aguiar]]\"\n  - \"[[Literature/Authors/Johan Ugander|Johan Ugander]]\"\npublication date: 2024-04-25\nsource: https://www.cambridge.org/core/journals/network-science/article/latent-cognitive-structures-of-social-networks/5C675C255AB9B9FE5A6A9F2E39E4909C\ndoi: 10.1017/nws.2024.7\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "initial_sha256": "3c8698c945deeca0c77ddab2b1cff3cc9189cc33513e58fc6ec4ed7844ef08a6",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Towards operational validation of LLM-agent social simulations: a replicated study of a Reddit-like technology forum\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Aleksandar Tomašević|Aleksandar Tomašević]]\"\n  - \"[[Literature/Authors/Darja Cvetković|Darja Cvetković]]\"\n  - \"[[Literature/Authors/Sara Major|Sara Major]]\"\n  - \"[[Literature/Authors/Slobodan Maletić|Slobodan Maletić]]\"\n  - \"[[Literature/Authors/Miroslav Anđelković|Miroslav Anđelković]]\"\n  - \"[[Literature/Authors/Ana Vranić|Ana Vranić]]\"\n  - \"[[Literature/Authors/Boris Stupovski|Boris Stupovski]]\"\n  - \"[[Literature/Authors/D. Vudragović|D. Vudragović]]\"\n  - \"[[Literature/Authors/Aleksandar Bogojević|Aleksandar Bogojević]]\"\n  - \"[[Literature/Authors/Marija Mitrović Dankulov|Marija Mitrović Dankulov]]\"\npublication date: 2026-06-11\nsource: https://link.springer.com/article/10.1140/epjds/s13688-026-00674-x\ndoi: 10.1140/epjds/s13688-026-00674-x\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "initial_sha256": "8b713425c5125593cb9c74c4f118c54d1d13cda25307c1f9d8a7383144c75d18",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"User Behavior Simulation with Large Language Model based Agents\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Lei Wang|Lei Wang]]\"\n  - \"[[Literature/Authors/Jingsen Zhang|Jingsen Zhang]]\"\n  - \"[[Literature/Authors/Yang, Hao|Yang, Hao]]\"\n  - \"[[Literature/Authors/Chen, Zhiyuan|Chen, Zhiyuan]]\"\n  - \"[[Literature/Authors/Tang, Jiakai|Tang, Jiakai]]\"\n  - \"[[Literature/Authors/Zhang, Zeyu|Zhang, Zeyu]]\"\n  - \"[[Literature/Authors/Xu Chen|Xu Chen]]\"\n  - \"[[Literature/Authors/Yankai Lin|Yankai Lin]]\"\n  - \"[[Literature/Authors/Hao Sun|Hao Sun]]\"\n  - \"[[Literature/Authors/Ruihua Song|Ruihua Song]]\"\n  - \"[[Literature/Authors/Wayne Xin Zhao|Wayne Xin Zhao]]\"\n  - \"[[Literature/Authors/Xu, Jun|Xu, Jun]]\"\n  - \"[[Literature/Authors/Dou, Zhicheng|Dou, Zhicheng]]\"\n  - \"[[Literature/Authors/Wang, Jun|Wang, Jun]]\"\n  - \"[[Literature/Authors/Ji-Rong Wen|Ji-Rong Wen]]\"\npublication date: 2024-02-15\nsource: https://arxiv.org/html/2306.02552v3\ndoi: 10.48550/arxiv.2306.02552\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md",
+      "initial_sha256": "e2c2d881335227dcb2f11bb28ff3f85191265bc1e4285d4c1b9b2e8e94ac3904",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Using artificial agents to understand laboratory experiments of common-pool resources with real agents\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Wander Jager|Wander Jager]]\"\n  - \"[[Literature/Authors/Marco A. Janssen|Marco A. Janssen]]\"\npublication date: 2002\nsource: https://marcojanssen.info/wp-content/uploads/2016/08/2002_Using_artificial_agents_to_understand_laboratory_experiments_of_common_pool_resources_with_real-agents.pdf\ndoi: 10.4337/9781781957240.00014\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+      "initial_sha256": "5d5463c41d1f8e3f7ae5a81f9942c94b4a6309d29b16ee185ad7eb7600931786",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"When \\\"I\\\" Becomes \\\"We\\\": Modelling Dynamic Identity on Autonomous Agents\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Inês Lobo|Inês Lobo]]\"\n  - \"[[Literature/Authors/Joana Dimas|Joana Dimas]]\"\n  - \"[[Literature/Authors/Samuel F. Mascarenhas|Samuel F. Mascarenhas]]\"\n  - \"[[Literature/Authors/Diogo Rato|Diogo Rato]]\"\n  - \"[[Literature/Authors/Rui Prada|Rui Prada]]\"\npublication date: 2023-06-30\nsource: https://www.jasss.org/26/3/9.html\ndoi: 10.18564/jasss.5146\nread status: Todo\n⚠️:\n  - audit failed\n"
+    },
+    {
+      "note": "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md",
+      "initial_sha256": "e22f471c37d953b5534db3243855b96c2c03798d2489c4ce9dbf838ed40a4e59",
+      "warnings": [
+        "audit failed"
+      ],
+      "initial_frontmatter": "\ntitle: \"Y Social: an LLM-powered Social Media Digital Twin\"\ntags:\n  - model\n  - simulation\nauthors:\n  - \"[[Literature/Authors/Giulio Rossetti|Giulio Rossetti]]\"\n  - \"[[Literature/Authors/Massimo Stella|Massimo Stella]]\"\n  - \"[[Literature/Authors/Rémy Cazabet|Rémy Cazabet]]\"\n  - \"[[Literature/Authors/Katherine Abramski|Katherine Abramski]]\"\n  - \"[[Literature/Authors/Erica Cau|Erica Cau]]\"\n  - \"[[Literature/Authors/Salvatore Citraro|Salvatore Citraro]]\"\n  - \"[[Literature/Authors/Andrea Failla|Andrea Failla]]\"\n  - \"[[Literature/Authors/Riccardo Improta|Riccardo Improta]]\"\n  - \"[[Literature/Authors/Virginia Morini|Virginia Morini]]\"\n  - \"[[Literature/Authors/Valentina Pansanella|Valentina Pansanella]]\"\npublication date: 2024-08-01\nsource: https://arxiv.org/pdf/2408.00818\ndoi: 10.48550/arXiv.2408.00818\nread status: Todo\n⚠️:\n  - audit failed\n"
+    }
+  ],
+  "batches": {
+    "1": [
+      "vault/Literature/Papers/Entries/Massive Multi-agent Data-Driven Simulations of the GitHub Ecosystem.md",
+      "vault/Literature/Papers/Entries/Modeling Social Cohesion- The Influence of Memory and Learning in Simulated Networks.md",
+      "vault/Literature/Papers/Entries/OASIS- Open Agent Social Interaction Simulations with One Million Agents.md",
+      "vault/Literature/Papers/Entries/RecSim NG- Toward Principled Uncertainty Modeling for Recommender Ecosystems.md",
+      "vault/Literature/Papers/Entries/Redesigning algorithms to intervene on social norm misperceptions during a national election.md",
+      "vault/Literature/Papers/Entries/SARDINE- Simulator for Automated Recommendation in Dynamic and Interactive Environments.md",
+      "vault/Literature/Papers/Entries/Social Relationships and the Emergence of Social Networks.md",
+      "vault/Literature/Papers/Entries/Stochastic Actor-Oriented Models for Network Dynamics.md",
+      "vault/Literature/Papers/Entries/The Power of Social Cognition.md",
+      "vault/Literature/Papers/Entries/User Behavior Simulation with Large Language Model based Agents.md",
+      "vault/Literature/Papers/Entries/Y Social- an LLM-powered Social Media Digital Twin.md"
+    ],
+    "2": [
+      "vault/Literature/Papers/Entries/Mixing beliefs among interacting agents.md",
+      "vault/Literature/Papers/Entries/Modelling Agents Endowed with Social Practices- Static Aspects.md",
+      "vault/Literature/Papers/Entries/On Generative Agents in Recommendation.md",
+      "vault/Literature/Papers/Entries/RecSim- A Configurable Simulation Platform for Recommender Systems.md",
+      "vault/Literature/Papers/Entries/Reliable and Efficient Agent-Based Modeling and Simulation.md",
+      "vault/Literature/Papers/Entries/Simulating Urban Patterns of Life- A Geo-Social Data Generation Framework.md",
+      "vault/Literature/Papers/Entries/Social Simulacra- Creating Populated Prototypes for Social Computing Systems.md",
+      "vault/Literature/Papers/Entries/T-RECS- A Simulation Tool to Study the Societal Impact of Recommender Systems.md",
+      "vault/Literature/Papers/Entries/The latent cognitive structures of social networks.md",
+      "vault/Literature/Papers/Entries/Using artificial agents to understand laboratory experiments of common-pool resources with real agents.md"
+    ],
+    "3": [
+      "vault/Literature/Papers/Entries/Modeling Interaction in Collaborative Groups- Affect Control Within Social Structure.md",
+      "vault/Literature/Papers/Entries/Modelling the Evolution of Social Structure.md",
+      "vault/Literature/Papers/Entries/Quantifying the vulnerabilities of the online public square to adversarial manipulation tactics.md",
+      "vault/Literature/Papers/Entries/Reciprocal Recommender Systems- Analysis of state-of-art literature- challenges and opportunities towards social recommendation.md",
+      "vault/Literature/Papers/Entries/Reranking partisan animosity in algorithmic social media feeds alters affective polarization.md",
+      "vault/Literature/Papers/Entries/Social Agents- A Systematic Review of Social Identity Formalizations.md",
+      "vault/Literature/Papers/Entries/Social capital II- determinants of economic connectedness.md",
+      "vault/Literature/Papers/Entries/The Focused Organization of Social Ties.md",
+      "vault/Literature/Papers/Entries/Towards operational validation of LLM-agent social simulations- a replicated study of a Reddit-like technology forum.md",
+      "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md"
+    ]
+  }
+}

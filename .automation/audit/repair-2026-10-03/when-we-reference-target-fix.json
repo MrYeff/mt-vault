@@ -1,0 +1,38 @@
+{
+  "note": "vault/Literature/Papers/Entries/When -I- Becomes -We- Modelling Dynamic Identity on Autonomous Agents.md",
+  "old_final_sha256": "a05ec28668f11a08c43afbb11178a670303527a8c3cc375d8903a1d81f310a71",
+  "current_sha256": "d34bf5968c2c3a553b4f00085dd3e5eb4a35acea4b036449577ad9029e478060",
+  "changes": [
+    {
+      "old_target": "Comparing human and synthetic group behaviors: A model based on social psychology",
+      "new_target": "Comparing human and synthetic group behaviors- A model based on social psychology",
+      "title": "Comparing human and synthetic group behaviors: A model based on social psychology"
+    },
+    {
+      "old_target": "Intergroup behavior in organizations: A field test of social identity theory",
+      "new_target": "Intergroup behavior in organizations- A field test of social identity theory",
+      "title": "Intergroup behavior in organizations: A field test of social identity theory"
+    },
+    {
+      "old_target": "Culture consequences: Comparing values, behaviors, intitutions, and organizations across nations",
+      "new_target": "Culture consequences- Comparing values, behaviors, intitutions, and organizations across nations",
+      "title": "Culture consequences: Comparing values, behaviors, intitutions, and organizations across nations"
+    },
+    {
+      "old_target": "Social identity modeling: past work and relevant issues for socio-cultural modeling",
+      "new_target": "Social identity modeling- past work and relevant issues for socio-cultural modeling",
+      "title": "Social identity modeling: past work and relevant issues for socio-cultural modeling"
+    },
+    {
+      "old_target": "Optimal distinctiveness theory: A framework for social identity, social cognition, and intergroup relations",
+      "new_target": "Optimal distinctiveness theory- A framework for social identity, social cognition, and intergroup relations",
+      "title": "Optimal distinctiveness theory: A framework for social identity, social cognition, and intergroup relations"
+    },
+    {
+      "old_target": "Too close for comfort? Adapting to the user’s cultural background",
+      "new_target": "Too close for comfort- Adapting to the user’s cultural background",
+      "title": "Too close for comfort? Adapting to the user’s cultural background"
+    }
+  ],
+  "scope": "Only six reference targets; original source display titles unchanged. Warning restored pending independent re-audit."
+}
