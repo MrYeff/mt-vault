@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What are my goal - LLM.md",
+                "file": "Simulation Reading List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "What are my goal - LLM"
+              "title": "Simulation Reading List"
             }
           }
         ],
@@ -207,6 +207,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Open format converter": false,
       "switcher:Open quick switcher": true,
       "graph:Open graph view": true,
       "canvas:Create new canvas": true,
@@ -222,15 +223,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d910f61147ab2936",
+  "active": "2525b9bca50734b8",
   "lastOpenFiles": [
-    "Simulation Reading List.md",
-    "Todo.md",
     "Model.md",
     "Expose.md",
-    "What are my goal - LLM.md",
-    "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+    "Simulation Reading List.md",
     "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+    "Literature/Papers/Index.base",
+    "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
+    "What are my goal - LLM.md",
+    "Todo.md",
+    "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
     "Guides/LLM Extraction Rules.md",
     "Guides/Model Notation.md",
     "Guides/Paper Model to FSharp.md",
@@ -239,7 +242,6 @@
     "Literature/Authors/Peter-Paul van Maanen.md",
     "Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
     "Questions/What is the foundation for the next meeting?.md",
-    "Literature/Papers/Index.base",
     "PsychsimModelingTheoryOfMindWithDecisionTheoreticAgents.md",
     "Literature/Papers/Entries/XXkyjikU",
     "Literature/Papers/Entries/XXdcId0i",
@@ -250,11 +252,9 @@
     "Literature/Authors/David V. Pynadath.md",
     "Questions/_index.base",
     "Wiki/People Recomender Systems.md",
-    "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
     "Questions/How is the thesis structured?.md",
     "Wiki",
     "Questions/What are my goals?.md",
-    "Questions/What do i need to befor the expose?.md",
     "_Attachments/Pasted image 20260614132119.png",
     "Guides",
     "Literature/Models",
