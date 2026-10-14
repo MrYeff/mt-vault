@@ -1,0 +1,70 @@
+{
+  "captured_at": "2026-10-10",
+  "scope": "Minimal bibliographic import only for four screenshot items; no model extraction or reference import. Existing notes and status flags preserved.",
+  "items": [
+    {
+      "title": "An Agent-Based Approach to Modeling Online Social Influence",
+      "entry": "vault/Literature/Papers/Entries/An Agent-Based Approach to Modeling Online Social Influence.md",
+      "status": "existing; not modified",
+      "identity_sources": [
+        "https://dl.acm.org/doi/10.1145/2492517.2492564",
+        "https://publications.tno.nl/publication/34613618/ak4IzY/maanen-2013-agent.pdf"
+      ],
+      "relevance": "HIGH",
+      "summary": "Models how persuasion factors, profile counts and external events affect topic-message choices on a fixed follower network. Directly relevant to communication and exposure; it does not implement an opinion-state update or changing friendships."
+    },
+    {
+      "title": "An agent-based model of the development of friendship links within Facebook",
+      "entry": "vault/Literature/Papers/Entries/An agent-based model of the development of friendship links within Facebook.md",
+      "authors": [
+        "Syed Muhammad Ali Abbas"
+      ],
+      "publication_date": "2013-03-13",
+      "doi": "10.1007/s10588-013-9156-z",
+      "source": "https://link.springer.com/article/10.1007/s10588-013-9156-z",
+      "identity_sources": [
+        "https://link.springer.com/article/10.1007/s10588-013-9156-z"
+      ],
+      "access": "Publisher abstract available; full text is subscription restricted on publisher page.",
+      "relevance": "HIGH",
+      "summary": "Uses Caltech Facebook friendship data and competing agent-based network-growth processes to assess student preferences and structural constraints. Personal preference plus social structure best matches the observed network. Direct overlap with evolving social ties; does not directly model recommender algorithms or integration outcomes."
+    },
+    {
+      "title": "An Agent-Based Model of Urgent Diffusion in Social Media",
+      "entry": "vault/Literature/Papers/Entries/An Agent-Based Model of Urgent Diffusion in Social Media.md",
+      "authors": [
+        "William Rand",
+        "Jeffrey Herrmann",
+        "Brandon Schein",
+        "Neža Vodopivec"
+      ],
+      "publication_date": "2015-03-31",
+      "doi": "10.18564/jasss.2616",
+      "source": "https://www.jasss.org/18/2/1.html",
+      "identity_sources": [
+        "https://www.jasss.org/18/2/1.html"
+      ],
+      "access": "Full article and abstract openly readable at JASSS.",
+      "relevance": "MEDIUM",
+      "summary": "Presents Bass and independent-cascade agent-based models of urgent information adoption, fit to four Twitter events. Network ties mediate peer diffusion while external shocks can dominate; useful for exposure/diffusion mechanisms, though it studies adoption rather than social integration or friendship formation."
+    },
+    {
+      "title": "Dynamic Social Networks in Agent-based Modelling: Increasingly Detailed Approaches of Network Initialisation and Network Dynamics",
+      "entry": "vault/Literature/Papers/Entries/Dynamic Social Networks in Agent-based Modelling- Increasingly Detailed Approaches of Network Initialisation and Network Dynamics.md",
+      "authors": [
+        "Sascha Holzhauer"
+      ],
+      "publication_date": "2017",
+      "doi": "10.19211/KUP9783737602631",
+      "source": "https://www.uni-kassel.de/upress/online/OpenAccess/978-3-7376-0262-4.OpenAccess.pdf",
+      "identity_sources": [
+        "https://www.uni-kassel.de/upress/online/OpenAccess/978-3-7376-0262-4.OpenAccess.pdf",
+        "https://www.uni-kassel.de/forschung/cesr/publikationen.html",
+        "https://www.uni-kassel.de/eecs/en/ines/team/sascha-holzhauer-phd.html"
+      ],
+      "access": "Open access dissertation PDF; browser retrieval returned a content-size error, but direct PDF URL and university bibliographic records are available.",
+      "relevance": "HIGH",
+      "summary": "A dissertation focused on progressively detailed network initialization and dynamics in agent-based modelling, including social network structure and changing ties. Strong methodological and mechanism overlap for representing evolving social ties; it is not itself an evaluation of social-media recommendation algorithms."
+    }
+  ]
+}

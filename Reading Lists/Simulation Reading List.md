@@ -1,12 +1,3 @@
-# Simulation reading list
-## Prof empfehlung
-- Birds of aFeather: Homophiliy in Social Networks
-- Agent-Based modeling: Methodes and techniches for ...
-- Strength of Weak Ties 
-- A Dsign Science Research Methodology for Information System Research
-- Design Science in Information System Research
-
-
 > Reading priorities proposed via LLM for [[What are my goal - LLM]] and [[Model]].
 
 The original five were examples, not an exhaustive list or a ranking. This list ranks candidates already in the vault by usefulness for testing information algorithms that improve social integration. It is a reading order, not a ranking of scientific quality or a complete survey.[^scope]

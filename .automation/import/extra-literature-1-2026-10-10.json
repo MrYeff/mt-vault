@@ -1,0 +1,89 @@
+{
+  "captured_at": "2026-10-10",
+  "scope": "Minimal bibliographic import only; no extraction or references imported.",
+  "audit_status": "not audited",
+  "items": [
+    {
+      "title": "A framework of multilayer social networks for communication behavior with agent-based modeling",
+      "filename": "A framework of multilayer social networks for communication behavior with agent-based modeling.md",
+      "authors": [
+        "Yuanzheng Ge",
+        "Liang Liu",
+        "Xiaogang Qiu",
+        "Hongbin Song",
+        "Yong Wang",
+        "Kedi Huang"
+      ],
+      "year": "2013",
+      "source": [
+        "https://journals.sagepub.com/doi/10.1177/0037549713477682"
+      ],
+      "doi": "10.1177/0037549713477682",
+      "publication": "SIMULATION, 89(7), 810–828",
+      "summary": "Proposes an agent-based framework combining multilayer social networks, a demographic-based population, and schedule-based behavior. It evaluates the framework by simulating H1N1 transmission in an artificial classroom and comparing it with a 2009 university outbreak; this is a general communication/network simulation rather than a social-media algorithm study.",
+      "relevance": "MEDIUM",
+      "reason": "Directly models communication behavior over multilayer social ties, but the application is classroom influenza transmission and does not address platform algorithms, belief models, or social integration.",
+      "entry": "vault/Literature/Papers/Entries/A framework of multilayer social networks for communication behavior with agent-based modeling.md",
+      "publication_date_precision": "year"
+    },
+    {
+      "title": "Agent-Based Modeling and Simulation of Collaborative Social Networks",
+      "filename": "Agent-Based Modeling and Simulation of Collaborative Social Networks.md",
+      "authors": [
+        "Gregory Madey",
+        "Yongqin Gao",
+        "Vincent Freeh",
+        "Renee Tynan",
+        "Chris Hoffman"
+      ],
+      "year": "2003",
+      "source": [
+        "https://aisel.aisnet.org/amcis2003/237/"
+      ],
+      "doi": null,
+      "publication": "AMCIS 2003 Proceedings, paper 237",
+      "summary": "Models open-source software developers as agents in a collaborative social network, where developers may create, join, or abandon projects or continue collaborations. The application concerns collaborative software development, not social-media feed algorithms.",
+      "relevance": "MEDIUM",
+      "reason": "Agent-based simulation of collaborative social ties and their evolution offers a relevant network modeling precedent, though its agents and setting are developer-project collaborations.",
+      "entry": "vault/Literature/Papers/Entries/Agent-Based Modeling and Simulation of Collaborative Social Networks.md",
+      "publication_date_precision": "year"
+    },
+    {
+      "title": "Agent-based modeling: Methods and techniques for simulating human systems",
+      "filename": "Agent-based modeling - Methods and techniques for simulating human systems.md",
+      "authors": [
+        "Eric Bonabeau"
+      ],
+      "year": "2002",
+      "source": [
+        "https://www.pnas.org/doi/10.1073/pnas.082080899",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC128598/"
+      ],
+      "doi": "10.1073/pnas.082080899",
+      "publication": "Proceedings of the National Academy of Sciences, 99(suppl 3), 7280–7287",
+      "summary": "A methodological overview of agent-based modeling for human systems. It discusses when ABM is useful, including heterogeneous agents, complex interactions, heterogeneous network topology, and adaptation, alongside issues of purpose, calibration, validation, and interpretation.",
+      "relevance": "LOW",
+      "reason": "General ABM methods provide background but do not directly simulate social-media algorithms or the thesis's specific integration mechanisms.",
+      "entry": "vault/Literature/Papers/Entries/Agent-based modeling - Methods and techniques for simulating human systems.md",
+      "publication_date_precision": "year"
+    },
+    {
+      "title": "Agent-Based Simulation Models in Organization Science",
+      "filename": "Agent-Based Simulation Models in Organization Science.md",
+      "authors": [
+        "Guido Fioretti"
+      ],
+      "year": "2013",
+      "source": [
+        "https://journals.sagepub.com/doi/10.1177/1094428112470006"
+      ],
+      "doi": "10.1177/1094428112470006",
+      "publication": "Organizational Research Methods, 16(2), 227–242",
+      "summary": "Discusses agent-based simulation of interactions between members of organizations or between organizations, including applications to organization science and an introductory guide to simulation platforms.",
+      "relevance": "LOW",
+      "reason": "General methodological introduction with organizational applications; no direct treatment of online platforms, algorithmic recommendations, or social integration.",
+      "entry": "vault/Literature/Papers/Entries/Agent-Based Simulation Models in Organization Science.md",
+      "publication_date_precision": "year"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "batch": "extra-literature-3-2026-10-10",
+  "scope": "minimal bibliographic imports only; no abstract/model/reference extraction",
+  "items": [
+    {
+      "title": "Emergence of Power Laws in Online Communities: The Role of Social Mechanisms and Preferential Attachment",
+      "entry": "vault/Literature/Papers/Entries/Emergence of Power Laws in Online Communities- The Role of Social Mechanisms and Preferential Attachment.md",
+      "identity_status": "verified against primary publisher/repository record",
+      "source_candidates": [
+        "https://aisel.aisnet.org/misq/vol38/iss3/10/"
+      ],
+      "doi": "10.25300/MISQ/2014/38.3.08",
+      "publication_date": "2014",
+      "note": "metadata-only; no substantive sections added",
+      "citation": "Johnson, Steven L.; Faraj, Samer; Kudaravalli, Sri. 2014. MIS Quarterly 38(3), 795–808. DOI 10.25300/MISQ/2014/38.3.08.",
+      "primary_evidence": "AIS eLibrary publisher-hosted MISQ article page provides full title/byline, year/citation and abstract.",
+      "uncertainty": "None material for bibliographic identity.",
+      "relevance": "MEDIUM",
+      "summary": "Tests network formation mechanisms behind unequal online-community popularity; useful for tie-formation rules, rather than integration interventions."
+    },
+    {
+      "title": "Social Network Analysis and Agent-Based Modeling in Social Epidemiology",
+      "entry": "vault/Literature/Papers/Entries/Social Network Analysis and Agent-Based Modeling in Social Epidemiology.md",
+      "identity_status": "verified against primary publisher/repository record",
+      "source_candidates": [
+        "https://link.springer.com/article/10.1186/1742-5573-9-1"
+      ],
+      "doi": "10.1186/1742-5573-9-1",
+      "publication_date": "2012-02-01",
+      "note": "metadata-only; no substantive sections added",
+      "citation": "El-Sayed, Abdulrahman M.; Scarborough, Peter; Seemann, Lars; Galea, Sandro. 2012. Epidemiologic Perspectives & Innovations 9, article 1. DOI 10.1186/1742-5573-9-1.",
+      "primary_evidence": "Springer publisher page provides title/byline/date/abstract and DOI.",
+      "uncertainty": "None material for bibliographic identity.",
+      "relevance": "MEDIUM",
+      "summary": "Explains network analysis and ABM for social epidemiology; useful for intervention methodology and feedback, with a different substantive domain."
+    },
+    {
+      "title": "The Triple-Filter Bubble: Using Agent-Based Modelling to Test a Meta-Theoretical Framework for the Emergence of Filter Bubbles and Echo Chambers",
+      "entry": "vault/Literature/Papers/Entries/The Triple-Filter Bubble- Using Agent-Based Modelling to Test a Meta-Theoretical Framework for the Emergence of Filter Bubbles and Echo Chambers.md",
+      "identity_status": "verified against primary publisher/repository record",
+      "source_candidates": [
+        "https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjso.12286"
+      ],
+      "doi": "10.1111/bjso.12286",
+      "publication_date": "2018-10-12",
+      "note": "metadata-only; no substantive sections added",
+      "citation": "Geschke, Daniel; Lorenz, Jan; Holtz, Peter. First published 2018-10-12; British Journal of Social Psychology 58(1), 129–149 (2019). DOI 10.1111/bjso.12286.",
+      "primary_evidence": "Wiley publisher page provides full title, byline, first publication date, journal issue/pages, DOI, and abstract.",
+      "uncertainty": "Recorded first online publication date; issue citation is 2019.",
+      "relevance": "HIGH",
+      "summary": "Combines cognitive, social and technological filters in ABM scenarios; directly relevant to separating algorithmic filtering from human selection biases."
+    },
+    {
+      "title": "Tutorial on Agent-Based Modeling and Simulation",
+      "entry": "vault/Literature/Papers/Entries/Tutorial on Agent-Based Modeling and Simulation.md",
+      "identity_status": "pending identification among multiple Macal/North works",
+      "source_candidates": [
+        "https://doi.org/10.1109/WSC.2005.1574234",
+        "https://doi.org/10.1057/jos.2010.3",
+        "https://doi.org/10.1057/9781137453648_2"
+      ],
+      "doi": null,
+      "publication_date": null,
+      "note": "metadata-only; no substantive sections added",
+      "citation": null,
+      "primary_evidence": "Candidate primary publication records: 2005 Winter Simulation Conference DOI 10.1109/WSC.2005.1574234; 2010 Journal of Simulation DOI 10.1057/jos.2010.3 (UK spelling “modelling”); 2014 Palgrave chapter DOI 10.1057/9781137453648_2.",
+      "uncertainty": "Screenshot title uses US spelling, which matches the 2005 WSC paper and 2014 Palgrave chapter, while the related 2010 Journal of Simulation tutorial uses UK spelling and has overlapping content. Title and authors alone do not distinguish the two US-spelling works. The note intentionally has no date or DOI until identity is resolved.",
+      "relevance": "LOW",
+      "summary": "General ABM introduction rather than a specific social integration model; exact tutorial edition remains unresolved."
+    }
+  ]
+}

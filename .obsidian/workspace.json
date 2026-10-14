@@ -4,49 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "5d34648a440cf9ac",
+        "id": "3c8a08f0bb978504",
         "type": "tabs",
         "children": [
           {
-            "id": "552e3719de3838ac",
+            "id": "99e700c6c48f69bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
+                "file": "Notes/2026-10-14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Effect of People Recommenders on Echo Chambers and Polarization"
+              "title": "2026-10-14"
             }
           },
           {
-            "id": "3d180917aed56897",
+            "id": "90165f13b5d61696",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
+                "file": "Notes/2026-10-13.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A Reputation Game Simulation- Emergent Social Phenomena from Information Theory"
+              "title": "2026-10-13"
             }
           },
           {
-            "id": "2525b9bca50734b8",
+            "id": "d756c22aeed52b92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Simulation Reading List.md",
+                "file": "Notes/2026-10-14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Simulation Reading List"
+              "title": "2026-10-14"
             }
           }
         ],
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "PROD",
+                "query": "tag:#todo",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -207,7 +207,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "markdown-importer:Open format converter": false,
       "switcher:Open quick switcher": true,
       "graph:Open graph view": true,
       "canvas:Create new canvas": true,
@@ -223,44 +222,47 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2525b9bca50734b8",
+  "active": "d756c22aeed52b92",
   "lastOpenFiles": [
-    "Model.md",
+    "Notes/2026-10-10.md",
+    "Notes/2026-10-12.md",
+    "Notes/2026-10-13.md",
+    "Notes/2026-10-14.md",
+    "Reading Lists/Prof Empfehlung.md",
     "Expose.md",
-    "Simulation Reading List.md",
-    "Literature/Papers/Entries/The Effect of People Recommenders on Echo Chambers and Polarization.md",
     "Literature/Papers/Index.base",
-    "Literature/Papers/Entries/4. A Relational Event Framework for Social Action.md",
-    "What are my goal - LLM.md",
-    "Todo.md",
-    "Literature/Papers/Entries/A Reputation Game Simulation- Emergent Social Phenomena from Information Theory.md",
-    "Guides/LLM Extraction Rules.md",
+    "Literature/Papers/Template.md",
+    "LLM Output/Keyes vs SDT.md",
+    "LLM Output",
+    "Literature/Translations/assets/granovetter73-abbildung-1.png",
+    "Literature/Translations/assets/granovetter73-abbildung-2.png",
+    "Literature/Papers/Entries/The Strength of Weak Ties.md",
+    "Wiki/Ties.md",
+    "Questions/_index.base",
+    "Literature/Translations/Granovetter - Die Stärke schwacher Bindungen.md",
+    "Todos.md",
+    "Literature/Authors/Mark S. Granovetter.md",
+    "Literature/Translations/assets",
+    "Literature/Translations",
+    "Notes",
+    "Literature/Papers/Entries/Dynamic Social Networks in Agent-based Modelling- Increasingly Detailed Approaches of Network Initialisation and Network Dynamics.md",
     "Guides/Model Notation.md",
-    "Guides/Paper Model to FSharp.md",
-    "Literature/Papers/Entries/An Agent-Based Approach to Modeling Online Social Influence.md",
-    "Literature/Authors/Bob van der Vecht.md",
-    "Literature/Authors/Peter-Paul van Maanen.md",
-    "Literature/Papers/Entries/PsychSim- Modeling Theory of Mind with Decision-Theoretic Agents.md",
-    "Questions/What is the foundation for the next meeting?.md",
-    "PsychsimModelingTheoryOfMindWithDecisionTheoreticAgents.md",
+    "Literature/Authors/Michael J. North.md",
+    "Literature/Authors/Charles M. Macal.md",
+    "Literature/Papers/Entries/Tutorial on Agent-Based Modeling and Simulation.md",
+    "Literature/Authors/Peter Holtz.md",
+    "Literature/Authors/Jan Lorenz.md",
+    "Literature/Authors/Daniel Geschke.md",
+    "Literature/Papers/Entries/The Triple-Filter Bubble- Using Agent-Based Modelling to Test a Meta-Theoretical Framework for the Emergence of Filter Bubbles and Echo Chambers.md",
+    "Literature/Authors/Sandro Galea.md",
+    "Literature/Authors/Lars Seemann.md",
+    "Literature/Authors/Peter Scarborough.md",
+    "Literature/Authors/Abdulrahman M El-Sayed.md",
+    "Reading Lists",
     "Literature/Papers/Entries/XXkyjikU",
     "Literature/Papers/Entries/XXdcId0i",
-    "Literature/Authors/Céline Bœhm.md",
-    "Literature/Authors/Viktoria Kainz.md",
-    "Literature/Authors/Torsten Enßlin.md",
-    "Literature/Authors/Stacy C. Marsella.md",
-    "Literature/Authors/David V. Pynadath.md",
-    "Questions/_index.base",
-    "Wiki/People Recomender Systems.md",
-    "Questions/How is the thesis structured?.md",
     "Wiki",
-    "Questions/What are my goals?.md",
     "_Attachments/Pasted image 20260614132119.png",
-    "Guides",
-    "Literature/Models",
-    "Literature/Authors/Index.base",
-    "Literature/Authors/Entries",
-    "Literature/Papers/Entries",
     "Pasted image 20260614131652.png",
     "Pasted image 20260506134947.png",
     "Untitled.canvas",

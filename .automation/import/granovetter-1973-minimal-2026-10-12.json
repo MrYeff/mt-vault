@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-12",
+  "scope": "Minimal bibliographic entry requested for reading notes. No content extraction, reference resolution or independent audit performed. Pending flags retained.",
+  "papers": [
+    {
+      "title": "The Strength of Weak Ties",
+      "authors": ["Mark S. Granovetter"],
+      "publication_date": "1973-05-01",
+      "source": "https://snap.stanford.edu/class/cs224w-readings/granovetter73weakties.pdf",
+      "doi": "10.1086/225469",
+      "journal": "American Journal of Sociology",
+      "volume": 78,
+      "issue": 6,
+      "pages": "1360–1380",
+      "local_source": "/home/max/Downloads/granovetter73weakties.pdf",
+      "verified": ["https://www.journals.uchicago.edu/doi/10.1086/225469", "User-provided PDF title and first article page"],
+      "entry": "vault/Literature/Papers/Entries/The Strength of Weak Ties.md"
+    }
+  ]
+}
