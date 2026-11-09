@@ -1,0 +1,11 @@
+{
+  "id": "foldable-frontmatter-groups",
+  "name": "Foldable Frontmatter Groups",
+  "version": "1.6.1",
+  "minAppVersion": "1.5.0",
+  "description": "Adds collapsible group headers, canonical key ordering, folder-scoped templates, and cleanup tools to the native Properties panel.",
+  "author": "Chris Wagner",
+  "authorUrl": "https://github.com/cwagner223355",
+  "fundingUrl": "https://ko-fi.com/S6S6Z9TE1",
+  "isDesktopOnly": false
+}

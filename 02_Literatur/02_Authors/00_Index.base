@@ -1,0 +1,15 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("02_Literatur/02_Authors/01_Entries")
+properties:
+  file.name:
+    displayName: Author
+views:
+  - type: table
+    name: Authors
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC

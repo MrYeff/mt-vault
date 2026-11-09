@@ -1,3 +1,0 @@
----
-name: "Renee J. Bator"
----

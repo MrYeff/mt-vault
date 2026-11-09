@@ -1,3 +1,0 @@
----
-name: "Tianshu Sun"
----

@@ -1,3 +1,0 @@
----
-name: "Sean J. Taylor"
----

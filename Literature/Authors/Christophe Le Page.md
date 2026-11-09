@@ -1,3 +1,0 @@
----
-name: "Christophe Le Page"
----

@@ -1,0 +1,16 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("03_Definitions/01_Entries")
+properties:
+  file.name:
+    displayName: Term
+views:
+  - type: table
+    name: Definitions
+    order:
+      - file.name
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC

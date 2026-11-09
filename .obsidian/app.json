@@ -10,5 +10,6 @@
   "attachmentFolderPath": "_Attachments",
   "newLinkFormat": "shortest",
   "readableLineLength": true,
-  "showUnsupportedFiles": false
+  "showUnsupportedFiles": false,
+  "foldHeading": true
 }

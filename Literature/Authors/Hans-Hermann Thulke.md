@@ -1,3 +1,0 @@
----
-name: "Hans-Hermann Thulke"
----

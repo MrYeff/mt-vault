@@ -1,3 +1,0 @@
----
-name: "Robert S. Horton"
----

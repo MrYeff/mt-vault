@@ -1,3 +1,0 @@
----
-name: "Cristina Montañola-Sales"
----

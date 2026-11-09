@@ -1,3 +1,0 @@
----
-name: "Leslie A. DeChurch"
----

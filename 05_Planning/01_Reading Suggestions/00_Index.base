@@ -1,0 +1,28 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("05_Planning/01_Reading Suggestions/01_Entries")
+properties:
+  file.name:
+    displayName: Reading suggestion
+  note.recomender:
+    displayName: Recommender
+  note.question to answer:
+    displayName: Question
+  note.category:
+    displayName: Category
+views:
+  - type: table
+    name: Reading suggestions
+    groupBy:
+      property: category
+      direction: ASC
+    order:
+      - file.name
+      - category
+      - recomender
+      - question to answer
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC

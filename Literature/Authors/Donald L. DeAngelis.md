@@ -1,3 +1,0 @@
----
-name: "Donald L. DeAngelis"
----

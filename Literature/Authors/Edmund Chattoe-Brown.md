@@ -1,3 +1,0 @@
----
-name: "Edmund Chattoe-Brown"
----

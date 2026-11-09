@@ -1,3 +1,0 @@
----
-name: "Noshir S. Contractor"
----

@@ -1,3 +1,0 @@
----
-name: "Elaine N. Aron"
----

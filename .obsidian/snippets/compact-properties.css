@@ -1,0 +1,44 @@
+/* Match the Properties heading to the theme's level-two headings. */
+.metadata-container .metadata-properties-heading {
+    font-family: var(--h2-font, var(--font-text)) !important;
+    font-size: var(--h2-size) !important;
+    font-weight: var(--h2-weight) !important;
+    font-style: var(--h2-style, normal) !important;
+    color: var(--h2-color) !important;
+    line-height: var(--h2-line-height, var(--line-height-normal));
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+/* Inherit the size instead of applying the relative H2 size a second time. */
+.metadata-container .metadata-properties-heading .metadata-properties-title {
+    font: inherit !important;
+    color: inherit !important;
+}
+
+/* Keep Add property unobtrusive, but accessible when interacting or empty. */
+.metadata-container .metadata-add-button {
+    display: none;
+}
+
+.metadata-container:hover .metadata-add-button,
+.metadata-container:focus-within .metadata-add-button,
+.metadata-container[data-property-count="0"] .metadata-add-button,
+.metadata-container:not(:has(.metadata-property)) .metadata-add-button {
+    display: flex;
+}
+
+/* Use normal paragraph spacing below Properties instead of the large gap. */
+.metadata-container {
+    margin-block-end: var(--p-spacing, 1rem);
+    padding-block-end: 0;
+}
+
+/* Hide datatype icons and indent fields beneath their group headings. */
+.metadata-container .metadata-property[data-property-key]:not([data-property-key=""]) .metadata-property-icon {
+    display: none;
+}
+
+.metadata-container .metadata-property {
+    padding-inline-start: 1.75rem;
+}

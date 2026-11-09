@@ -1,0 +1,92 @@
+{
+  "groupFoldingEnabled": true,
+  "reconcileOnLeave": false,
+  "reconcileExcludedFiles": [],
+  "excludeFolderNotes": true,
+  "folderNoteWhitelist": [],
+  "folderNoteWhitelistFolders": [],
+  "scrubOrphanNulls": false,
+  "fillIndicatorEnabled": true,
+  "topZone": {
+    "fieldOrder": []
+  },
+  "groups": [
+    {
+      "id": "mw99vpoqyt77r42hai",
+      "name": "Tags",
+      "matcherType": "unified",
+      "matcherValues": [
+        "category",
+        "tags"
+      ],
+      "defaultFolded": true,
+      "fieldOrder": [],
+      "showFillIndicator": false
+    },
+    {
+      "id": "ai",
+      "name": "Paper Info",
+      "matcherType": "unified",
+      "matcherValues": [
+        "original title",
+        "authors",
+        "publication date"
+      ],
+      "defaultFolded": true,
+      "fieldOrder": [],
+      "showFillIndicator": false
+    },
+    {
+      "id": "mw99400wzthx800mfyn",
+      "name": "Paper Source",
+      "matcherType": "unified",
+      "matcherValues": [
+        "source",
+        "doi",
+        "pdf"
+      ],
+      "defaultFolded": true,
+      "fieldOrder": [],
+      "showFillIndicator": false
+    },
+    {
+      "id": "mw994re6kuuzlvmv52p",
+      "name": "Paper Status",
+      "matcherType": "unified",
+      "matcherValues": [
+        "import date",
+        "read status"
+      ],
+      "defaultFolded": true,
+      "fieldOrder": [],
+      "showFillIndicator": false
+    },
+    {
+      "id": "mw9aavasvcq6s7n5ra8",
+      "name": "Recomendation",
+      "matcherType": "unified",
+      "matcherValues": [
+        "recomender",
+        "question to answer"
+      ],
+      "defaultFolded": true,
+      "fieldOrder": [],
+      "showFillIndicator": false
+    },
+    {
+      "id": "hidden",
+      "name": "-- Misc --",
+      "matcherType": "regex",
+      "matcherValues": [
+        "_*"
+      ],
+      "defaultFolded": true,
+      "fieldOrder": [],
+      "showFillIndicator": false
+    }
+  ],
+  "iconOverrides": [],
+  "folderTemplates": [],
+  "cleanupAdHocFields": [],
+  "globalLintFields": []
+}

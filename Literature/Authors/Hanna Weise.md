@@ -1,3 +1,0 @@
----
-name: "Hanna Weise"
----

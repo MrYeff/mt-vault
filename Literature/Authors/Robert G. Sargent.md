@@ -1,3 +1,0 @@
----
-name: "Robert G. Sargent"
----

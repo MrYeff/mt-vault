@@ -1,3 +1,0 @@
----
-name: "Wolf M. Mooij"
----

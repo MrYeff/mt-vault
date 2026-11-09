@@ -1,3 +1,0 @@
----
-name: "Norman Makoto Su"
----

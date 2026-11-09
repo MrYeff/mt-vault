@@ -1,3 +1,0 @@
----
-name: "Loren Terveen"
----

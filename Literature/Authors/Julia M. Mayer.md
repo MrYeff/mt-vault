@@ -1,3 +1,0 @@
----
-name: "Julia M. Mayer"
----

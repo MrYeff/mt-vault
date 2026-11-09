@@ -1,0 +1,46 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("02_Literatur/01_Papers/01_Entries")
+properties:
+  file.name:
+    displayName: Paper
+  note.original title:
+    displayName: Original title
+  note.read status:
+    displayName: Read status
+  note.publication date:
+    displayName: Publication date
+  note.authors:
+    displayName: Authors
+  note.category:
+    displayName: Category
+views:
+  - type: table
+    name: All papers
+    groupBy:
+      property: read status
+      direction: ASC
+    order:
+      - category
+      - file.name
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 490
+  - type: table
+    name: By read status
+    groupBy:
+      property: read status
+      direction: ASC
+    order:
+      - file.name
+      - category
+      - authors
+      - publication date
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC
