@@ -1,29 +1,22 @@
-## Thema 1: Simulation bauen
-- **Ausgangssituation und Problemstellung**: Was ist der aktuelle Zustand und welches Problem ergibt sich daraus?
-	- Der intensive gebrauch von social media platformen ist mittlerweile allgegenwertig. Aber trotz der erhöhten Vernetztheit über diese gibt es mehr Menschen die von Einsamkeit berichten als vor der breiten verbreitung von social media. umfragen zufolge hat der durchschnittliche mensch in XYZ so X% weniger freunde und nimmt im durchschnitt an X% wheniger sozialen events pro woche teil. mehrere studien haben gezeigt das social media stark mit ... effekten cooreliert.
-	- Es gibt bereits einen beträchtlichen bestand an Agent Based Simulationes die verschiedene effekte in sozialen netzen erfolgreich moddelieren, allerdings gibt es noch keine ABS die ausreichend die effekte der existenz verschiedener social media platformen auf die soziale vernetzung der gesamtgeselschaft modeliert 
-    
-- **Forschungsfrage**: Welche konkrete Forschungsfrage möchten Sie im Rahmen der Arbeit beantworten, um das Problem zu adressieren?
-	- Wie lässt sich die auswirkung von social media auf reale soziale vernetzung akkurat modelieren?
-    
-- **Methodik**: Mit welcher Methodik möchten Sie die Forschungsfrage untersuchen, beispielsweise quantitativ, qualitativ oder mithilfe einer Simulation bzw. [agentenbasierten Modellierung (ABM)](https://dl.acm.org/doi/10.1145/2492517.2492564 "https://dl.acm.org/doi/10.1145/2492517.2492564")?
-	- Entwicklung einer ABS 
-	- Ewaluierung dieser anhand bestehender modelle und ergebnissen vopn studien. werden bekannte reale effekte ordnungsgemäß abgebildet?
-	
-- **Mehrwert für Forschung und Praxis**: Welchen Beitrag kann die Beantwortung der Forschungsfrage zur bestehenden Literatur und zur Praxis leisten?
-	- Es existiert eine simulation die die auswirkung von social media auf soziale vernetzung abbildet
-	
-## Thema 2: Simulation existiert bereits
-- **Ausgangssituation und Problemstellung**: Was ist der aktuelle Zustand und welches Problem ergibt sich daraus?
-	- Der intensive gebrauch von social media platformen ist mittlerweile allgegenwertig. Aber trotz der erhöhten Vernetztheit über diese gibt es mehr Menschen die von Einsamkeit berichten als vor der breiten verbreitung von social media. umfragen zufolge hat der durchschnittliche mensch in XYZ so X% weniger freunde und nimmt im durchschnitt an X% wheniger sozialen events pro woche teil. mehrere studien haben gezeigt das social media stark mit ... effekten cooreliert.
-	- In Folge dessen wirft sich die frage auf ob dies eine inherente eigensschaft von social media platformen ist oder lediglich ein implementierungsdetail der bestehenden platformen.
-    
-- **Forschungsfrage**: Welche konkrete Forschungsfrage möchten Sie im Rahmen der Arbeit beantworten, um das Problem zu adressieren?
-	- Hieraus ergibt sich die kernfrage der Arbeit: kann ein social media algorithmus zentrale soziale kennzahlen verbessern?
+Social-Media-Plattformen nutzen Empfehlungsalgorithmen, um die den Nutzern angezeigten Informationen zu priorisieren. Diese unterscheiden sich darin, welche Inhalte, beispielsweise Nutzer, Gruppen oder Videos, vorgeschlagen werden und nach welchen Kriterien dies erfolgt, etwa Gemeinsamkeiten oder frühere Annahmeraten. In dieser Arbeit soll es um das Vorschlagen neu zusammengestellter Freizeitgruppen anhand geteilter Interessen der potenziellen Gruppenteilnehmer gehen.
 
-- **Methodik**: Mit welcher Methodik möchten Sie die Forschungsfrage untersuchen, beispielsweise quantitativ, qualitativ oder mithilfe einer Simulation bzw. [agentenbasierten Modellierung (ABM)](https://dl.acm.org/doi/10.1145/2492517.2492564 "https://dl.acm.org/doi/10.1145/2492517.2492564")?
-	- Entwicklung eines matchmaking algorithmuses um oben genante kennzahlen zu stärken
-	- Test dieses algorithmuese auf einer ABM Simulation
+Verfahren zur Gruppenbildung berücksichtigen bereits gemeinsame Interessen und soziale Beziehungen. So kombinieren [De Meo et al., 2017](https://iris.unirc.it/bitstream/20.500.12318/4700/4/DeMeo_2017_FGCS_forming_post.pdf) Ähnlichkeit und Vertrauen, während [Valcarce et al., 2018](https://openportal.isti.cnr.it/data/2018/401222/2018_401222.preprint.pdf) zu einer Aktivität passende Gruppen aus bestehenden Freunden zusammenstellen. Dabei berücksichtigen sie sowohl das Interesse an der Aktivität als auch die Beziehungen innerhalb der Gruppe. Diese Arbeiten beantworten jedoch nicht, ob Nutzer wenige seltene Gemeinsamkeiten gegenüber mehreren häufigeren Gemeinsamkeiten bevorzugen.
 
-- **Mehrwert für Forschung und Praxis**: Welchen Beitrag kann die Beantwortung der Forschungsfrage zur bestehenden Literatur und zur Praxis leisten?
-	- Dieser Arbeit liefert ein fundament für eine Social media platform die nachhaltige soziale verbindungen schafft.
+Einen Anhaltspunkt liefern [Vélez et al., 2019](https://sll.stanford.edu/docs/2019_Velez_Bridgers_Gweon_Cognition.pdf): In experimentellen Auswahlaufgaben bevorzugten Teilnehmende Personen, mit denen sie eine seltene statt einer häufigen Präferenz teilten. Diese Bevorzugung nahm mit der relativen Seltenheit zu. Bei den Vergleichen zur Seltenheit wurde jeder potenzielle Partner durch eine einzelne Präferenz beschrieben. Wie Kombinationen aus mehreren unterschiedlich seltenen Gemeinsamkeiten die Auswahl beeinflussen und ob der Befund auf Gruppenvorschläge übertragbar ist, wurde dabei nicht untersucht. 
+
+Daran setzt die Arbeit an: Werden bei der Bildung interessenbasierter Freizeitgruppen Vorschläge eines Verfahrens bevorzugt, das seltene Gemeinsamkeiten stärker gewichtet, oder solche eines Verfahrens, das die Anzahl der Gemeinsamkeiten stärker gewichtet? Damit soll eine empirische Grundlage für die Gewichtung gemeinsamer Interessen geschaffen werden.
+
+Um diese Frage zu beantworten, werden im Rahmen eines Design-Science-Ansatzes zwei Varianten eines Gruppen-Vorschlagsalgorithmus entwickelt und durch eine zweistufige Umfrage evaluiert. Die Varianten unterscheiden sich in der Gewichtung der Gemeinsamkeiten; Teilnehmerpool, Gruppengröße und organisatorische Voraussetzungen bleiben gleich. Das Ziel ist, Vorschläge zu erzeugen, denen Nutzer eher beitreten möchten. [Peffers et al., 2007](https://www.jmis-web.org/articles/765)
+
+Phase 1 besteht aus der Erfassung der Interessen der Probanden anhand einer gemeinsamen Themenstruktur. Als Gemeinsamkeit gilt ein Interesse, das alle vorgeschlagenen Gruppenmitglieder einschließlich der befragten Person teilen. Ihre Seltenheit wird anhand seines Anteils im Teilnehmerpool bestimmt. Phase 2 stellt den Probanden jeweils zwei Vorschläge der beiden Varianten gegenüber. Sie wählen, welcher Gruppe sie eher beitreten würden, oder lehnen beide ab. Zudem können sie betonen welche Eigenschaft ihre Entscheidung besonders beeinflusst hat. Die Vorschläge werden einheitlich dargestellt, ihre Position wird zufällig zugewiesen und die erzeugende Variante bleibt verborgen.
+
+Auf Basis der gesammelten Datenpunkte werden Auswahl- und Ablehnungsanteile verglichen. Wiederholte Entscheidungen derselben Person werden in der Auswertung berücksichtigt. Ergänzend werden die Entscheidungsgründe ausgewertet, um zu beschreiben, unter welchen Umständen welche Variante bevorzugt wird. Der Beitrag liegt in der Entwicklung und empirischen Bewertung zweier Gewichtungsstrategien für Gruppenempfehlungen. Die Ergebnisse sollen eine Entscheidungshilfe für deren Gestaltung liefern; sie beziehen sich auf geäußerte Teilnahmepräferenzen, nicht auf tatsächliche Teilnahme oder spätere Bindungsentstehung.
+
+## Notes
+
+1. **Problem bestimmen:**  Bei der Bildung interessenbasierter Freizeitgruppen ist unklar, ob Gruppen mit einer selten auftretenden Gemeinsamkeit oder Gruppen mit mehreren aber häufiger auftretenden Gemeinsamkeiten von Nutzern beforzugt werden. Diese Entscheidung bestimmt, welche Gruppen ein Matchingverfahren vorschlägt. Ihre Untersuchung soll eine empirische Grundlage für die Gewichtung gemeinsamer Interessen schaffen.
+2. **Ziele festlegen:** Gruppenvorschläge erzeugen, denen Nutzer eher beitreten möchten.
+3. **Lösung entwickeln:** Zwei Matchingvarianten entwickeln: Eine gewichtet seltene Gemeinsamkeiten stärker, die andere mehrere häufigere Gemeinsamkeiten.
+4. **Anwendung demonstrieren:** Mit erhobenen Interessenprofilen konkrete Gruppenvorschläge für die Teilnehmenden erzeugen.
+5. **Evaluieren:** Teilnehmende wählen zwischen Vorschlägen beider Varianten oder lehnen beide ab. Auswahlanteile und Entscheidungsgründe vergleichen.
+6. **Erkenntnisse vermitteln:** Beschreiben, welche Gewichtungsstrategie im untersuchten Kontext bevorzugte Vorschläge erzeugt und welche Grenzen die Übertragung auf andere Kontexte hat.
